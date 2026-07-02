@@ -1,0 +1,574 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Painel de peça</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TRUMPF Praxis Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Bem-vindo ao TRUMPF Praxis</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Instalação</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Requisitos de hardware</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Formatos de arquivo suportados</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Pré-requisitos</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Instalação do servidor</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Instalação do cliente</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Alterar licença</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configuração</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Adicionar/Remover máquina</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Configurar ferramentas</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Configurar usuários</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Idioma</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Adicionar novo material e chapa</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Exportar/Importar material</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Substituir material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mapear material</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mapear páginas CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mapear campos do CAD (chaves de consulta)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">A interface do usuário</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Fluxo de Trabalho</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Library</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Importar peças</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Importar pedidos</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Importar trabalhos</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Importar montagens</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Visualização da biblioteca</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Peças</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Montagem</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Status da peça</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partvalidation.html">Validação de peça</a></li>
+      <li><button class="tree blank"></button><a class="active" href="partpanel.html">Painel de peça</a></li>
+      <li><button class="tree blank"></button><a href="partfilters.html">Filtros de peças</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Status de ferramentas</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Validação de ferramentas</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Validação de ferramentas de dobra</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Validação de ferramentas de corte</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Validação de ferramentas de dobra de painel</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Painel de ferramentas</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Salvar filtros</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Pedidos</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Visualização de pedidos</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Criar trabalho</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Visualização do trabalho</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Painel do trabalho</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Planejamento automático</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Nesting interativo</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Reempacotamento</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Gerenciamento de nests</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Visualização de nest</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Painel de layout</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Remetente de relatório</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Gerenciamento de remanescentes</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Gerenciamento automático de remanescentes</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Gerenciamento manual de remanescentes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Nesting Twinline</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Desatualizado</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtros de trabalho</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Rotas</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Chapas</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Usuários</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Editar</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Clientes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Configurações</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Ambiente</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Importação</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Dobra</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Corte</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notificações</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Monitoramento</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Trabalho</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Relatórios</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Extensões CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Etapas de instalação</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Salvar no TRUMPF Praxis</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Salvar montagem</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Verificar viabilidade</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Configurações da fábrica</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Melhorias diversas</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Library</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Status da peça</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="partpanel.html">Painel de peça</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Painel de peça</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Esta seção explica ações relacionadas à peça como
+<strong>Re-import</strong>, <strong>Re-tool</strong>,
+<strong>Rename</strong>, <strong>Export outputs</strong>, etc.,
+usadas para gerenciar instâncias de peças.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/partpanel.png" alt="Part panel" width="150">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Open in read-only mode for viewing</strong><br>
+Abre a peça selecionada em modo somente leitura.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Habilita a edição da peça selecionada.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Delete</strong><br>
+Exclui a peça selecionada.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/newui.png" alt="Read-only" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>New&#8230;&#8203;</strong><br>
+A peça selecionada pode ser convertida em um novo pedido, trabalho ou montagem.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Export Outputs</strong><br>
+Exporta a saída da peça para o destino configurado.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/importui.png" alt="Import" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Re-import&#8230;&#8203;</strong><br>
+Permite importar a peça selecionada novamente.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/toolui.png" alt="Retool" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Re-tool&#8230;&#8203;</strong><br>
+Permite reprocessar a peça selecionada.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/renameui.png" alt="Rename" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rename&#8230;&#8203;</strong><br>
+Para alterar o nome da peça selecionada.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/materialui.png" alt="Material" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Assign Material&#8230;&#8203;</strong><br>
+Especifica o material associado à peça selecionada.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/customerui.png" alt="Customer" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Assign Customer&#8230;&#8203;</strong><br>
+Especifica o cliente associado à peça selecionada.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/rollingui.png" alt="Rolling" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rolling direction</strong><br>
+Define a orientação (horizontal ou vertical) ao longo da qual o material é laminado.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Prev</strong> / <strong>Next</strong> / <strong>Toolings</strong><br>
+Navega para a peça ou ferramentas anterior ou próxima.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sortui.png" alt="Filters" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Classificar e filtrar</strong><br>
+Use estes filtros para visualizar outras peças que compartilham o mesmo atributo
+que a peça selecionada: Mesmo Material, Mesmo Cliente, Mesma contagem de Dobras ou
+Mesmo Estado.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_re_import">Re-import</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Clique com o botão direito em qualquer peça e clique em <strong>Re-import&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/reimport.png" alt="Re-import" width="503">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Todas as instâncias de ferramentas da peça selecionada em todas as máquinas são
+limpas, incluindo instâncias com ferramentas automáticas e manuais.</p>
+</li>
+<li>
+<p>Arquivos de saída existentes (CAD, Dobra e Corte) são removidos.</p>
+</li>
+<li>
+<p>As peças são reimportadas e validação CAD e ferramentas novas são aplicadas para
+todas as máquinas.</p>
+</li>
+<li>
+<p>Novos arquivos de saída são criados com base no resultado de ferramentas atualizado.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_re_tool">Re-tool</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Clique com o botão direito em qualquer peça e clique em <strong>Re-tool&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/retool.png" alt="Re-tool" width="504">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Todas as máquinas são marcadas por padrão e agrupadas como Laser, Punch, Panel
+e Press brake.</p>
+</li>
+<li>
+<p>Clique em <strong>OK</strong> para prosseguir. Isso remove instâncias com ferramentas
+automáticas e manuais para as máquinas selecionadas e exclui arquivos de saída
+relacionados.</p>
+</li>
+<li>
+<p>Quando a caixa de seleção <strong>Retain existing outputs</strong>
+é marcada, apenas peças cujas saídas foram removidas anteriormente serão
+reprocessadas, outras saídas permanecem intocadas. Se desmarcada, todos os arquivos
+de saída para máquinas selecionadas são removidos e regenerados durante o
+reprocessamento.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Se as configurações CAM mudaram para qualquer máquina, selecione essa máquina e
+faça Re-tool nas peças.</p>
+</li>
+<li>
+<p>Se uma ferramenta (LTT, punção ou dobra) foi alterada ou está ausente, atualize
+a máquina e faça Re-tool apenas nas peças afetadas.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rename">Rename</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Esta seção explica como renomear uma ou múltiplas peças no TRUMPF Praxis.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Clique com o botão direito na peça e clique em <strong>Rename&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/rename1.png" alt="Rename1" width="503">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Um diálogo de confirmação de renomeação aparece mostrando o nome atual da peça.</p>
+</li>
+<li>
+<p>Insira o novo nome e clique no ícone de marca <strong>✓</strong> para confirmar, ou clique no
+ícone de cruz <strong>✗</strong> para cancelar a operação de renomeação.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/rename2.png" alt="Rename2" width="451">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Para renomear múltiplas peças, selecione todas as peças desejadas, clique com o
+botão direito em qualquer uma delas e clique em <strong>Rename&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Um diálogo de confirmação aparece com o número total de peças selecionadas.</p>
+</li>
+<li>
+<p>Para cada peça, insira o novo nome e clique no ícone de marca <strong>✓</strong> para confirmar
+uma por uma.</p>
+</li>
+<li>
+<p>Se qualquer peça foi selecionada por engano, clique no ícone de cruz <strong>✗</strong> para
+cancelar. Alternativamente, você pode clicar com o botão direito na peça e clicar em
+<strong>Cancel Rename</strong> para pular a renomeação.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_export_outputs">Export outputs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Esta opção exporta a saída da peça para o destino configurado em
+<strong>Factory Settings</strong>. (Consulte
+<a href="../../factory/settings/bend.html">Configurações de Dobra</a> e
+<a href="../../factory/settings/cut.html">Configurações de Corte</a>)</p>
+</div>
+<div class="paragraph">
+<p>O local de saída é definido separadamente para Dobra, Dobra de painel e Corte em
+suas respectivas configurações de saída. Todas as ferramentas associadas às
+operações de dobra, dobra de painel e corte são exportadas para a peça inteira.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput.png" alt="Export Output" width="451">
+</div>
+</div>
+<div class="paragraph">
+<p>Como mostrado abaixo, os arquivos exportados são salvos na pasta especificada
+(por exemplo, <code>C:\PraxData\Out\Reports</code>).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportout.png" alt="Export Output Location" width="451">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Os arquivos exportados dependem do tipo de operação. Para operações de Dobra
+e Dobra de painel, arquivos NC e relatórios são gerados. Para operações de Corte e
+Punção, apenas os arquivos de peça são exportados.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_re_import">Re-import</a>
+  </li>
+  <li level="1">
+   <a href="#_re_tool">Re-tool</a>
+  </li>
+  <li level="1">
+   <a href="#_rename">Rename</a>
+  </li>
+  <li level="1">
+   <a href="#_export_outputs">Export outputs</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partvalidation.html">Validação de peça</a></span>
+ <span class="next"><a href="partfilters.html">Filtros de peças</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

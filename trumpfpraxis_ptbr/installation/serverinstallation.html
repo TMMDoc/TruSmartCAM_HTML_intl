@@ -1,0 +1,774 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Instalação do servidor</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TRUMPF Praxis Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Bem-vindo ao TRUMPF Praxis</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Instalação</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="hardwarerequirement.html">Requisitos de hardware</a></li>
+    <li><button class="tree blank"></button><a href="importformats.html">Formatos de arquivo suportados</a></li>
+    <li><button class="tree blank"></button><a href="prerequisites.html">Pré-requisitos</a></li>
+    <li><button class="tree blank"></button><a class="active" href="serverinstallation.html">Instalação do servidor</a></li>
+    <li><button class="tree blank"></button><a href="clientinstallation.html">Instalação do cliente</a></li>
+    <li><button class="tree blank"></button><a href="changelic.html">Alterar licença</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Configuração</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Adicionar/Remover máquina</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Configurar ferramentas</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Configurar usuários</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Idioma</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Adicionar novo material e chapa</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Exportar/Importar material</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Substituir material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Mapear material</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Mapear páginas CAM</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Mapear campos do CAD (chaves de consulta)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">A interface do usuário</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Fluxo de Trabalho</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Library</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Importar peças</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Importar pedidos</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Importar trabalhos</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Importar montagens</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Visualização da biblioteca</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Peças</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Montagem</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Status da peça</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Validação de peça</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Painel de peça</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Filtros de peças</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Status de ferramentas</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Validação de ferramentas</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Validação de ferramentas de dobra</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Validação de ferramentas de corte</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Validação de ferramentas de dobra de painel</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Painel de ferramentas</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Salvar filtros</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Pedidos</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Visualização de pedidos</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../jobs/jobcreation.html">Criar trabalho</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobview.html">Visualização do trabalho</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobpanel.html">Painel do trabalho</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobautoplan.html">Planejamento automático</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobinteractplan.html">Nesting interativo</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/repacking.html">Reempacotamento</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/layoutcommands/index.html">Gerenciamento de nests</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/nestview.html">Visualização de nest</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/layoutpanel.html">Painel de layout</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/reportsender.html">Remetente de relatório</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/remnantmanagement/index.html">Gerenciamento de remanescentes</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/autoremnant.html">Gerenciamento automático de remanescentes</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/manualremnant.html">Gerenciamento manual de remanescentes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../jobs/twinlinenesting.html">Nesting Twinline</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/outdate.html">Desatualizado</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobfilters.html">Filtros de trabalho</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Rotas</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Chapas</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Usuários</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Editar</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Clientes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Configurações</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Ambiente</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Importação</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Dobra</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Corte</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notificações</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Monitoramento</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Trabalho</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Relatórios</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">Extensões CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Etapas de instalação</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Salvar no TRUMPF Praxis</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Salvar montagem</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Verificar viabilidade</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Configurações da fábrica</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Melhorias diversas</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Instalação</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="serverinstallation.html">Instalação do servidor</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Instalação do servidor</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Siga as instruções para instalar o Servidor TRUMPF Praxis juntamente com o SQL.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">Direitos de Administrador</div>
+<div class="paragraph">
+<p><strong>Para executar esta instalação, o usuário deve ter privilégios administrativos.</strong></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Execute <strong>Setup.TRUMPF Praxis.&lt;versão&gt;.exe</strong> para iniciar a instalação.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Versão é um número.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Leia o contrato de licença e escolha <strong>I accept the agreement</strong> e então clique em
+<strong>Next</strong>
+.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s02praxislicenseagreement.png" alt="Praxis License Agreement">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_etapa_1_local_de_instalação">Etapa 1 : Local de Instalação</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Informe o diretório de instalação ou aceite o padrão de instalação
+<code>C:\Program Files\Metamation\Praxis</code> e clique em <strong>Next</strong>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>C:\Program Files\Metamation\Praxis</code> - A pasta de instalação conterá as
+seguintes pastas: Bin, MetaCAM, Samples e Tracker.</p>
+</li>
+<li>
+<p><code>C:\Program Data\Metamation</code> - A pasta de Dados conterá as seguintes pastas:
+TRUMPF Praxis, TecZone e MetaCAM.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s03installationpath.png" alt="Installation Path">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_etapa_2_seleção_de_componentes">Etapa 2 : Seleção de Componentes</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Tipo de Instalação</th>
+<th class="tableblock halign-left valign-top">Componentes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Servidor + Cliente Desktop + Motor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Client</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cliente Desktop</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Servidor + Cliente Desktop</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Station</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Seleciona todos os Terminais de Estação como TecZone, MetaCAM, RightAngle(Controlador de Dobra),
+Vulcan(Controlador de Máquina a Laser)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Seleção pelo usuário.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Escolha Instalação Full. Selecione <strong>Code Senders</strong> e <strong>Bend Code Senders</strong> em
+TRUMPF Praxis Tools. Agora o tipo de Instalação muda para <strong>Custom</strong>. Clique em
+<strong>Next</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s04serverinstallation.png" alt="Server Installation">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_etapa_3_escolher_instalar_sql_server">Etapa 3 : Escolher Instalar SQL Server</h2>
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A instalação do SQL Express 2022 é necessária apenas para o Servidor TRUMPF Praxis.
+Esta opção não está disponível para instalações Client e Sync. Além disso, é
+marcada como ON e instalada pela primeira vez e pode ser ignorada posteriormente.
+Se o SQL já estiver instalado no servidor TRUMPF Praxis, o usuário pode ignorar a
+Etapa 3.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Em Select Additional Tasks: Clique em <strong>Install SQL Express</strong> e clique em
+Next.</p>
+</li>
+<li>
+<p>Em Ready to Install: Resume todos os recursos de instalação e clique em Install.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s05sqlinstall.png" alt="Install SQL">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_etapa_4_instalação_do_sql_server">Etapa 4 : Instalação do SQL Server</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Uma vez que os componentes do TRUMPF Praxis são instalados, o instalador prossegue
+com a instalação do SQL Server. Aceite o Contrato de Licença para prosseguir e
+instale o SQL Express com as opções padrão.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s06sqlserver.png" alt="SQLServer Install">
+</div>
+</div>
+<div class="paragraph">
+<p>Uma vez que a instalação estiver concluída, clique em Close e finalize a instalação.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s07sqlservercomplete.png" alt="SQL Server Complete">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Dependendo da versão do Windows, fechar a instalação do SQL pode solicitar
+uma reinicialização.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_etapa_5_atalhos_na_área_de_trabalho_do_windows">Etapa 5 : Atalhos na Área de Trabalho do Windows</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Após a instalação do SQL, se o Sistema não reiniciar, selecione a caixa de
+seleção <strong>Launch TRUMPF Praxis</strong> e clique em <strong>Finish</strong>.</p>
+</li>
+<li>
+<p>Se o Sistema reiniciar, inicie pelo ícone de atalho TRUMPF Praxis na Área de
+Trabalho ou digite TRUMPF Praxis no Menu Iniciar do Windows e <strong>Execute como administrador</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<em>Instalação do Servidor</em>: Os ícones de atalho TRUMPF Praxis e TRUMPF Praxis License
+estão disponíveis na Área de Trabalho. + <em>Instalação Client/SYNC</em>: Apenas o ícone
+de atalho TRUMPF Praxis está disponível na Área de Trabalho.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s08launchpraxis.png" alt="Launch TRUMPF Praxis">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_etapa_6_registro_de_licença">Etapa 6 : Registro de Licença</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>No campo <em>Serial Number</em>, digite a <em>chave Serial do TRUMPF Praxis</em> fornecida pela
+Equipe de Serviço da Trumpf Metamation. Digite <strong>&lt;Nome da Empresa&gt;</strong> no campo
+"Registered to" e E-Mail. Clique em <strong>OK</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s09praxisregister.png" alt="TRUMPF Praxis Register">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Caso o firewall da rede bloqueie o registro de licença ou não haja internet no
+PC do Servidor TRUMPF Praxis, a licença do TRUMPF Praxis é feita por ativação Offline.
+Envie por e-mail o <strong><em>Prax.request</em></strong> da pasta <em>C:\ProgramData\Metamation\Praxis</em>
+para a Equipe de Serviço da Trumpf Metamation. A equipe Trumpf Metamation
+fornecerá o <strong><em>Prax.lock</em></strong> que precisa ser colocado nesta pasta.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_etapa_7_configuração_inicial_única">Etapa 7 : Configuração Inicial Única</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Digite o Nome do Banco de Dados e Defina o Local de Armazenamento de Dados.
+Selecione a caixa de seleção <strong>Use SQL Server</strong> e selecione
+o nome do SQL Server para conectar ao Banco de Dados. Clique em <strong>OK</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s10usedatabase.png" alt="Use Database">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>O Cliente Desktop TRUMPF Praxis abre mostrando <strong>Database Connection Succeeded</strong> na
+parte inferior.</p>
+</li>
+<li>
+<p>Os arquivos de configuração do TRUMPF Praxis, TecZone e MetaCAM foram criados
+com máquinas de configuração padrão ou contra as máquinas de licença do TRUMPF Praxis.
+A mesma configuração será compartilhada entre todos os Clientes TRUMPF Praxis.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s11databaseconnectionsuccess.png" alt="Database Connection Success">
+</div>
+</div>
+<div class="paragraph">
+<p>A tela de boas-vindas é exibida com o Nome de Login do Usuário Windows como Login
+e Nome do TRUMPF Praxis. O primeiro Usuário TRUMPF Praxis é considerado como
+<strong>Site Admin</strong>. Forneça Email e Senha. Clique em <strong>OK</strong>
+.</p>
+</div>
+<div class="paragraph">
+<p>Selecione a caixa de seleção <strong>Remember me</strong>
+para salvar as credenciais de login para a próxima vez.
+Desmarque a caixa de seleção <strong>Remember me</strong> para solicitar o
+diálogo de login e senha sempre que o aplicativo TRUMPF Praxis for iniciado.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s12welcomepraxis.png" alt="Welcome TRUMPF Praxis">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_etapa_8_login_no_trumpf_praxis">Etapa 8 : Login no TRUMPF Praxis</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Feche o TRUMPF Praxis e reabra-o. O sistema solicita que você insira as
+credenciais de login do TRUMPF Praxis.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/signprompt.png" alt="Sign Prompt" width="450">
+</div>
+</div>
+</li>
+<li>
+<p>O nome de usuário conectado é exibido ao lado do ícone do usuário no
+cabeçalho do aplicativo TRUMPF Praxis.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/userid.png" alt="User ID" width="228">
+</div>
+</div>
+</li>
+<li>
+<p>Quando você passa o mouse sobre o ícone do usuário, o sistema exibe:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/hover.png" alt="Hover" width="108">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A função do usuário (por exemplo: Programador, Admin).</p>
+</li>
+<li>
+<p>Um atalho para sair: <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>L</kbd></span>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Clicar no ícone do usuário abre um menu que permite:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/information.png" alt="Information" width="160">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Edit information&#8230;&#8203;</strong> - Atualizar os detalhes do seu perfil.</p>
+</li>
+<li>
+<p><strong>Change password&#8230;&#8203;</strong> - Alterar a senha da sua conta.</p>
+</li>
+<li>
+<p><strong>Sign out</strong> - Sair do aplicativo.</p>
+</li>
+<li>
+<p><strong>Cancel</strong> - Fechar o menu sem fazer alterações.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_etapa_9_configuração_de_máquinas_da_fábrica">Etapa 9 : Configuração de Máquinas da Fábrica</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Licença TRUMPF Praxis [Todas as máquinas habilitam bit de licença]: Máquina e
+Material padrão do TRUMPF Praxis são considerados como Configuração da Fábrica.</p>
+</li>
+<li>
+<p>Licença TRUMPF Praxis [Sem demo e poucos bits de máquina habilitados]: Essas poucas
+máquinas e Material padrão são considerados como Configuração da Fábrica.</p>
+</li>
+<li>
+<p>(Open &#8594; Import) uma nova Peça de <code>C:\Program
+Files\Metamation\Praxis\Samples\Parts</code> e verifique se a Peça foi importada
+com sucesso.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s14praxiswelcomescreen.png" alt="Praxis Welcome screen">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nota_1_monitor_trumpf_praxis">Nota 1 : Monitor TRUMPF Praxis</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Monitor TRUMPF Praxis com Instalação de Motor (direitos de Site admin):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>O Monitor TRUMPF Praxis com Motor juntamente com direitos de Site Admin do
+TRUMPF Praxis terá as seguintes opções:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Enviar configuração do TRUMPF Praxis, TecZone, MetaCAM para todos os
+Clientes TRUMPF Praxis. Também tem direitos para criar Novo Login de Usuário TRUMPF Praxis.</p>
+</li>
+<li>
+<p>Show Agents mostrará o total de motores disponíveis para realizar tarefas de
+automação que estão contra a Licença TRUMPF Praxis.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s15pmonitor.png" alt="Praxis Monitor Status">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Monitor TRUMPF Praxis sem Instalação de Motor (direitos de Site admin):</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_etapa_1_local_de_instalação">Etapa 1 : Local de Instalação</a>
+  </li>
+  <li level="1">
+   <a href="#_etapa_2_seleção_de_componentes">Etapa 2 : Seleção de Componentes</a>
+  </li>
+  <li level="1">
+   <a href="#_etapa_3_escolher_instalar_sql_server">Etapa 3 : Escolher Instalar SQL Server</a>
+  </li>
+  <li level="1">
+   <a href="#_etapa_4_instalação_do_sql_server">Etapa 4 : Instalação do SQL Server</a>
+  </li>
+  <li level="1">
+   <a href="#_etapa_5_atalhos_na_área_de_trabalho_do_windows">Etapa 5 : Atalhos na Área de Trabalho do Windows</a>
+  </li>
+  <li level="1">
+   <a href="#_etapa_6_registro_de_licença">Etapa 6 : Registro de Licença</a>
+  </li>
+  <li level="1">
+   <a href="#_etapa_7_configuração_inicial_única">Etapa 7 : Configuração Inicial Única</a>
+  </li>
+  <li level="1">
+   <a href="#_etapa_8_login_no_trumpf_praxis">Etapa 8 : Login no TRUMPF Praxis</a>
+  </li>
+  <li level="1">
+   <a href="#_etapa_9_configuração_de_máquinas_da_fábrica">Etapa 9 : Configuração de Máquinas da Fábrica</a>
+  </li>
+  <li level="1">
+   <a href="#_nota_1_monitor_trumpf_praxis">Nota 1 : Monitor TRUMPF Praxis</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="prerequisites.html">Pré-requisitos</a></span>
+ <span class="next"><a href="clientinstallation.html">Instalação do cliente</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

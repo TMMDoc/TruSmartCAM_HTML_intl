@@ -1,0 +1,528 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Teile speichern</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TRUMPF Praxis Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Willkommen bei TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardware-Anforderung</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Unterstützte Dateiformate</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Voraussetzungen</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Serverinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Client-Installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Lizenz ändern</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfiguration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Maschine hinzufügen/entfernen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Rüsten einrichten</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Benutzer konfigurieren</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Sprache</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Neues Material und Blech hinzufügen</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Material exportieren/importieren</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Material ersetzen</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Material zuordnen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAM-Seiten zuordnen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Felder aus CAD zuordnen (Schlüsselwörter)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Die Benutzeroberfläche</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Bibliothek</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Öffnen</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Teile importieren</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Aufträge importieren</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Jobs importieren</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Baugruppen importieren</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Bibliotheksansicht</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Teile</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Baugruppe</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Teilestatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Teilevalidierung</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Teile-Panel</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Teilefilter</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Bearbeitungsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Bearbeitungsvalidierung</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Biege-Bearbeitungsvalidierung</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Schneide-Bearbeitungsvalidierung</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Falt-Bearbeitungsvalidierung</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Tooling-Bedienfeld</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Filter speichern</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Bestellungen</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Bestellungsansicht</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Aufträge</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Auftrag erstellen</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Auftragsansicht</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Job-Bedienfeld</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatische Planung</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktive Verschachtelung</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Umpacken</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Verschachtelungsverwaltung</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Layout-Ansicht</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Layout-Panel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Berichtsversand</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Restblechverwaltung</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatische Reststückverwaltung</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manuelle Reststückverwaltung</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Twinline-Verschachtelung</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Veraltet</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Auftragsfilter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routen</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Bleche</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Benutzer</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Kunden</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Einstellungen</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Umgebung</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Biegen</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Schneiden</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Benachrichtigungen</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Überwachung</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Auftrag</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Berichte</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">CAD-Erweiterungen</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">SolidWorks Addin</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a class="active" href="savetopraxis.html">Teile speichern</a></li>
+      <li><button class="tree blank"></button><a href="saveassembly.html">Baugruppe speichern</a></li>
+      <li><button class="tree blank"></button><a href="partfeasibility.html">Machbarkeit prüfen</a></li>
+      <li><button class="tree blank"></button><a href="factorysettings.html">Fabrikeinstellungen</a></li>
+      <li><button class="tree blank"></button><a href="miscenhancements.html">Verschiedene Verbesserungen</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">CAD-Erweiterungen</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">SolidWorks Addin</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="savetopraxis.html">Teile speichern</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Teile speichern</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Starten Sie SolidWorks und öffnen Sie ein Blechbauteil (.sldprt).</p>
+</div>
+<div class="paragraph">
+<p>Befolgen Sie dann diese Schritte:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Wechseln Sie zum TruSmartCAM-Tab in SolidWorks, um auf die
+TruSmartCAM-Werkzeugleiste zuzugreifen.</p>
+</li>
+<li>
+<p>Klicken Sie auf <strong>Save to TruSmartCAM</strong> in der
+<strong>TruSmartCAM</strong>-Werkzeugleiste.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Wählen Sie im Dialog <strong>Save to TruSmartCAM</strong> das entsprechende
+TruSmartCAM-Rohmaterial aus und klicken Sie auf <strong>OK</strong>, um das Teil in die
+TruSmartCAM-Teilebibliothek hochzuladen und zu speichern.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/savepraxis.png" alt="Save Praxis" width="850">
+</div>
+</div>
+<div class="paragraph">
+<p>Das Teil wird nun in TruSmartCAM gespeichert.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/part.png" alt="Part" width="372">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+TruSmartCAM enthält einige Beispielteile unter <code>C:\Program
+Files\Metamation\ TruSmartCAM \Samples\Parts</code>. Sie können diese bei Bedarf zu
+Testzwecken verwenden.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_automatische_materialauflösung">Automatische Materialauflösung</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Diese Funktion konvertiert SolidWorks-Materialien und Teiledicken automatisch
+in die entsprechenden TruSmartCAM-Rohmaterialien beim Upload.</p>
+</div>
+<div class="paragraph">
+<p>So konfigurieren Sie die Materialzuordnung:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Klicken Sie auf <strong>Options</strong> in der <strong>TruSmartCAM</strong>-Werkzeugleiste,
+um den Dialog <strong>Options</strong> zu öffnen.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/mapmaterial.png" alt="Map Material" width="850">
+</div>
+</div>
+</li>
+<li>
+<p>Navigieren Sie zur Seite <strong>Material Mapping</strong>.</p>
+</li>
+<li>
+<p>Wählen Sie im linken Bereich ein SolidWorks-Material aus.</p>
+</li>
+<li>
+<p>Wählen Sie im rechten Bereich das entsprechende TruSmartCAM-Material aus.</p>
+</li>
+<li>
+<p>Klicken Sie auf <strong>Map</strong>, um die Zuordnung zu erstellen.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Das zugeordnete Paar erscheint in der Zuordnungsliste unten.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Um eine Zuordnung zu entfernen, wählen Sie diese aus und klicken Sie auf
+<strong>Un-map</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dickentoleranz_einstellung">Dickentoleranz-Einstellung</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Der Dickentoleranzwert definiert den Toleranzbereich, innerhalb dessen
+TruSmartCAM die Blechmodelldicke aus SolidWorks mit einer vorhandenen
+Rohmaterialdicke in der TruSmartCAM-Datenbank abgleicht. Er kompensiert kleine
+Abweichungen in der Modelldicke, die durch Designrundungen,
+Einheitenumrechnungen usw. verursacht werden.</p>
+</div>
+<div class="paragraph">
+<p>Wenn die SolidWorks-Teiledicke nicht exakt mit einem Material in TruSmartCAM
+übereinstimmt, stellt der Toleranzwert sicher, dass automatisch ein
+nächstliegendes verfügbares Material ausgewählt wird.</p>
+</div>
+<div class="paragraph">
+<div class="title">Beispiel</div>
+<p>Bei einem nominalen 2,0 mm Material und einem Toleranzwert von 0,05 mm:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM akzeptiert jede SolidWorks-Modelldicke zwischen 1,95 mm und
+2,05 mm als gültige Übereinstimmung.</p>
+</li>
+<li>
+<p>Abweichungen über diesen Bereich hinaus lösen beim Teil-Upload eine
+manuelle Materialauswahl-Aufforderung aus.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>So können Sie den Toleranzwert anzeigen oder ändern:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klicken Sie auf <strong>Options</strong> in der <strong>TruSmartCAM</strong>-Werkzeugleiste
+und navigieren Sie dann zu <strong>Misc. settings</strong>, um den
+Toleranzwert anzuzeigen. Klicken Sie anschließend auf
+<strong>Save to TruSmartCAM</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/thicknessfudge.png" alt="Thickness Fudge" width="850">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klicken Sie im Dialog <strong>Save to TruSmartCAM</strong> auf <strong>OK</strong>,
+das Teil wird in TruSmartCAM gespeichert.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/configuration.png" alt="Configuration" width="428">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_benutzerdefinierte_teileigenschaften_lesen">Benutzerdefinierte Teileigenschaften lesen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Diese Einstellung ermöglicht es TruSmartCAM, benutzerdefinierte
+Teileinformationen – wie <strong>Material</strong>, <strong>Revision</strong> und andere benutzerdefinierte
+Attribute – direkt aus SolidWorks-Teiledateien automatisch auszulesen.</p>
+</div>
+<div class="paragraph">
+<p>So richten Sie es ein:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klicken Sie auf <strong>Options</strong> in der <strong>TruSmartCAM</strong>-Werkzeugleiste,
+um den Dialog <strong>Options</strong> zu öffnen, und navigieren Sie dann zu
+<strong>Custom Fields</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/custompart.png" alt="Custom Part" width="850">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Verwenden Sie die Schaltflächen <strong>Map</strong> und <strong>Un-map</strong>,
+um die erforderlichen TruSmartCAM-Felder mit den entsprechenden benutzerdefinierten
+SolidWorks- oder Konfigurationsfeldern zu verknüpfen.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Die angezeigten Werte werden aus dem aktuell aktiven SolidWorks-Teil
+geladen.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sobald die Zuordnung abgeschlossen ist, werden die ausgewählten
+benutzerdefinierten Eigenschaften automatisch aus SolidWorks gelesen, wenn
+Teile in TruSmartCAM importiert oder aktualisiert werden. Klicken Sie nun auf
+<strong>Save to TruSmartCAM</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Die hier definierten Zuordnungen werden im TruSmartCAM-Repository gespeichert
+und automatisch über alle TruSmartCAM SolidWorks-Installationen im Netzwerk
+synchronisiert.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klicken Sie im Dialog <strong>Save to TruSmartCAM</strong> auf <strong>OK</strong>,
+das Teil wird in TruSmartCAM gespeichert.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/default.png" alt="Default" width="428">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_automatische_materialauflösung">Automatische Materialauflösung</a>
+  </li>
+  <li level="1">
+   <a href="#_dickentoleranz_einstellung">Dickentoleranz-Einstellung</a>
+  </li>
+  <li level="1">
+   <a href="#_benutzerdefinierte_teileigenschaften_lesen">Benutzerdefinierte Teileigenschaften lesen</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="installationsteps.html">Installation</a></span>
+ <span class="next"><a href="saveassembly.html">Baugruppe speichern</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

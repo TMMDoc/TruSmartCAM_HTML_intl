@@ -1,0 +1,540 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Job panel</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TRUMPF Praxis Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Welcome to TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Change license</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Add/Remove machine</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Setup tooling</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Configure users</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Language</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Add new material and sheet</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Export/Import material</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Replace material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Map material</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Map CAM pages</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Map fields from CAD (lookup keys)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">The user interface</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Library</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Tooling panel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Orders</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Orders view</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Jobs</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">Create job</a></li>
+    <li><button class="tree blank"></button><a href="jobview.html">Job view</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobpanel.html">Job panel</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">Auto plan</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">Interactive nesting</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">Repacking</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">Nest management</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">Layout view</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">Layout panel</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">Report sender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">Remnant management</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">Auto remnant management</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">Manual remnant management</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">Twinline nesting</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">Out-of-date</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">Job filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD extensions</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Save parts</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Save assembly</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Check feasibility</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Factory settings</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Misc enhancements</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Jobs</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobpanel.html">Job panel</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Job panel</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section explains job-related actions such as
+<strong>Export outputs</strong>, <strong>Reset job&#8230;&#8203;</strong>,
+<strong>Mark complete&#8230;&#8203;</strong>, <strong>Export job&#8230;&#8203;</strong>,
+and other options used to manage job instances.</p>
+</div>
+<table class="tableblock frame-none grid-none fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/jobpanel.png" alt="JobPanel" width="200">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Open in read-only mode for viewing</strong><br>
+Opens the selected job in read-only mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Enables editing of the selected job.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Delete</strong><br>
+Deletes the selected job.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/openreport.png" alt="Report" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>View Report</strong><br>
+Opens the production report for the selected job.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Export outputs</strong><br>
+Exports the machine-ready output files (NC files and reports) generated
+for the selected job.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/planui.png" alt="Plan" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Plan job</strong><br>
+Generates nested layouts for the parts in the selected job.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/resetui.png" alt="Reset" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Reset job&#8230;&#8203;</strong><br>
+Removes all generated layouts for the job and resets its parts to the
+plannable state.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/markui.png" alt="Mark" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Mark complete&#8230;&#8203;</strong><br>
+Marks the job and all its nests as complete after production.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/jobui.png" alt="Job" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Export job&#8230;&#8203;</strong><br>
+Exports the complete job as a package that can be reused or imported into
+another system.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Prev</strong> / <strong>Next</strong> / <strong>Layout</strong><br>
+Navigates to the previous or next layout within the selected job.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sort.png" alt="Filters" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort and filter</strong><br>
+Use these filters to view other jobs that share the same material, customer,
+due date, or priority.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_export_outputs">Export outputs</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Select the required job.</p>
+</li>
+<li>
+<p>Click <strong>Export outputs</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput.png" alt="Export outputs dialog" width="585">
+</div>
+</div>
+</li>
+<li>
+<p>This exports the machine-ready output files generated for the selected
+job.</p>
+</li>
+<li>
+<p>Export Outputs can be saved either to the default location configured in
+<strong>Factory Settings</strong> or to a custom location by using
+<strong>Browse&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>It exports only machine output files (such as NC and reports) for the
+job.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/output.png" alt="Exported output files" width="725">
+</div>
+</div>
+</li>
+<li>
+<p>These files are used directly for production and can be sent to the
+machine.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reset_job">Reset job&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Resets the selected job by removing all generated layouts and making the parts
+available for planning again.</p>
+</div>
+<div class="paragraph">
+<p>To reset a job:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Right-click the job and select <strong>Reset job&#8230;&#8203;</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/resetjob1.png" alt="Reset job" width="820">
+</div>
+</div>
+</li>
+<li>
+<p>This deletes all existing nested layouts for the selected job and resets
+all its parts to the plannable state.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/resetjob2.png" alt="Reset job" width="820">
+</div>
+</div>
+</li>
+<li>
+<p>If the layouts contain parts from other jobs, those parts are also reset.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_export_job">Export job&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Select the required job.</p>
+</li>
+<li>
+<p>Click <strong>Export job&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>This option exports the complete job as a package that can be reused or
+imported into another system.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/outputview.png" alt="Output view" width="785">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The exported data includes all information required to recreate the job:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Part details and quantities (CSV files).</p>
+</li>
+<li>
+<p>Layout and nesting data (CSV / FXYLT files).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The exported files are saved as a job folder in the configured export
+location.</p>
+</li>
+<li>
+<p>This option is used for transferring, sharing, or backing up the entire job.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mark_complete">Mark complete&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Once the job is processed on the machine, open the Job panel and select
+<strong>Mark complete&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/mark.png" alt="Mark complete dialog" width="845">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>When a job is marked as complete:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>All nests under the job are marked as complete.</p>
+</li>
+<li>
+<p>The job is greyed out, moved to the end of the list, and shown with a
+green tick mark.</p>
+</li>
+<li>
+<p>All layouts under the job are removed from the active layouts list.</p>
+</li>
+<li>
+<p>Part and job statuses are updated, and processed quantities move to the
+completed state.</p>
+</li>
+<li>
+<p>Output files for all layouts in the job are removed from the machine
+output location to avoid duplicate use.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_export_outputs">Export outputs</a>
+  </li>
+  <li level="1">
+   <a href="#_reset_job">Reset job&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_export_job">Export job&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_mark_complete">Mark complete&#8230;&#8203;</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobview.html">Job view</a></span>
+ <span class="next"><a href="jobautoplan.html">Auto plan</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

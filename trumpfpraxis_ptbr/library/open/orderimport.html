@@ -1,0 +1,462 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Importar pedidos</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TRUMPF Praxis Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Bem-vindo ao TRUMPF Praxis</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Instalação</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Requisitos de hardware</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Formatos de arquivo suportados</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Pré-requisitos</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Instalação do servidor</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Instalação do cliente</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Alterar licença</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configuração</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Adicionar/Remover máquina</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Configurar ferramentas</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Configurar usuários</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Idioma</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Adicionar novo material e chapa</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Exportar/Importar material</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Substituir material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mapear material</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mapear páginas CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mapear campos do CAD (chaves de consulta)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">A interface do usuário</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Fluxo de Trabalho</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Library</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Open</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partimport.html">Importar peças</a></li>
+      <li><button class="tree blank"></button><a class="active" href="orderimport.html">Importar pedidos</a></li>
+      <li><button class="tree blank"></button><a href="jobimport.html">Importar trabalhos</a></li>
+      <li><button class="tree blank"></button><a href="assembliesimport.html">Importar montagens</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Visualização da biblioteca</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Peças</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Montagem</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Status da peça</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Validação de peça</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Painel de peça</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Filtros de peças</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Status de ferramentas</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Validação de ferramentas</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Validação de ferramentas de dobra</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Validação de ferramentas de corte</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Validação de ferramentas de dobra de painel</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Painel de ferramentas</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Salvar filtros</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Pedidos</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Visualização de pedidos</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Criar trabalho</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Visualização do trabalho</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Painel do trabalho</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Planejamento automático</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Nesting interativo</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Reempacotamento</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Gerenciamento de nests</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Visualização de nest</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Painel de layout</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Remetente de relatório</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Gerenciamento de remanescentes</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Gerenciamento automático de remanescentes</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Gerenciamento manual de remanescentes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Nesting Twinline</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Desatualizado</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtros de trabalho</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Rotas</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Chapas</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Usuários</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Editar</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Clientes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Configurações</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Ambiente</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Importação</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Dobra</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Corte</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notificações</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Monitoramento</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Trabalho</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Relatórios</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Extensões CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Etapas de instalação</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Salvar no TRUMPF Praxis</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Salvar montagem</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Verificar viabilidade</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Configurações da fábrica</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Melhorias diversas</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Library</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Open</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="orderimport.html">Importar pedidos</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Importar pedidos</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pedidos podem ser criados ou importados usando os seguintes métodos:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Importar pedidos de arquivos de planilha.</p>
+</li>
+<li>
+<p>Importar pedidos automaticamente através das configurações de monitoramento.</p>
+</li>
+<li>
+<p>Criar pedidos a partir de peças existentes na biblioteca de peças.</p>
+</li>
+<li>
+<p>Criar pedidos a partir de nests estáticos de montagem.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_importar_pedidos_de_planilha">Importar pedidos de planilha</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Navegue até <strong>Open</strong> &#8594;
+<strong>Import Orders&#8230;&#8203;</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/orders.png" alt="Orders" width="259">
+</div>
+</div>
+</li>
+<li>
+<p>Os formatos de planilha suportados incluem CSV, XLSX e XML.</p>
+</li>
+<li>
+<p>Selecione o arquivo de planilha desejado e clique em <strong>Open</strong>.</p>
+</li>
+<li>
+<p>O processo de importação é semelhante ao fluxo de trabalho de importação de Job/Assembly.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importorder.png" alt="Import Order" width="591">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Você também pode arrastar e soltar a planilha diretamente na página de Pedidos
+para importar pedidos.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_importar_pedidos_usando_configurações_de_monitoramento">Importar pedidos usando configurações de monitoramento</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Habilite a opção
+<strong>Import spreadsheet from 'Live Folder'</strong> em
+<strong>Watch settings</strong>.</p>
+</li>
+<li>
+<p>Selecione <strong>Import Orders</strong> na
+<strong>Spreadsheet import option</strong>.</p>
+</li>
+<li>
+<p>Configure o local da pasta de onde os pedidos devem ser importados.</p>
+</li>
+<li>
+<p>O sistema monitora continuamente a pasta configurada.</p>
+</li>
+<li>
+<p>Arquivos de planilha recém-adicionados são importados automaticamente em Pedidos.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/spreadsheetorder.png" alt="Spreadsheet Order" width="715">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Para etapas detalhadas de configuração, consulte a documentação
+<a href="../../factory/settings/watch.html"><strong>Watch Settings</strong></a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_criar_pedidos_a_partir_da_biblioteca_de_peças">Criar pedidos a partir da biblioteca de peças</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Selecione as peças desejadas da Biblioteca de Peças.</p>
+</li>
+<li>
+<p>Clique com o botão direito e escolha <strong>New&#8230;&#8203;</strong> &#8594; <strong>Order</strong>
+para abrir o diálogo <strong>New Orders</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/partorder.png" alt="Part Order" width="617">
+</div>
+</div>
+</li>
+<li>
+<p>Insira os detalhes necessários como quantidade, data de vencimento e prioridade.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/orderwindow.png" alt="Order Window" width="570">
+</div>
+</div>
+</li>
+<li>
+<p>Clique em <strong>OK</strong> para criar os pedidos.</p>
+</li>
+<li>
+<p>O sistema muda automaticamente para a página de Pedidos.</p>
+</li>
+<li>
+<p>Os pedidos criados são exibidos na página Orders Ready para criação de trabalho.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_criar_pedidos_a_partir_de_montagem">Criar pedidos a partir de montagem</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Clique com o botão direito na Montagem desejada.</p>
+</li>
+<li>
+<p>Selecione <strong>New&#8230;&#8203;</strong> &#8594; <strong>Order</strong> para abrir o diálogo
+<strong>New Orders</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/rooforder.png" alt="Roof Order" width="561">
+</div>
+</div>
+</li>
+<li>
+<p>Insira a <strong>Assembly count</strong> necessária.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyorder.png" alt="Assembly Order" width="367">
+</div>
+</div>
+</li>
+<li>
+<p>Clique em <strong>OK</strong> para criar os pedidos.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_importar_pedidos_de_planilha">Importar pedidos de planilha</a>
+  </li>
+  <li level="1">
+   <a href="#_importar_pedidos_usando_configurações_de_monitoramento">Importar pedidos usando configurações de monitoramento</a>
+  </li>
+  <li level="1">
+   <a href="#_criar_pedidos_a_partir_da_biblioteca_de_peças">Criar pedidos a partir da biblioteca de peças</a>
+  </li>
+  <li level="1">
+   <a href="#_criar_pedidos_a_partir_de_montagem">Criar pedidos a partir de montagem</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partimport.html">Importar peças</a></span>
+ <span class="next"><a href="jobimport.html">Importar trabalhos</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

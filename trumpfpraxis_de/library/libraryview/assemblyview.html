@@ -1,0 +1,621 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Baugruppe</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TRUMPF Praxis Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Willkommen bei TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardware-Anforderung</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Unterstützte Dateiformate</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Voraussetzungen</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Serverinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Client-Installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Lizenz ändern</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfiguration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Maschine hinzufügen/entfernen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Rüsten einrichten</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Benutzer konfigurieren</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Sprache</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Neues Material und Blech hinzufügen</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Material exportieren/importieren</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Material ersetzen</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Material zuordnen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAM-Seiten zuordnen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Felder aus CAD zuordnen (Schlüsselwörter)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Die Benutzeroberfläche</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Bibliothek</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Öffnen</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Teile importieren</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Aufträge importieren</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Jobs importieren</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Baugruppen importieren</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Bibliotheksansicht</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partview.html">Teile</a></li>
+      <li><button class="tree blank"></button><a class="active" href="assemblyview.html">Baugruppe</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Teilestatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Teilevalidierung</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Teile-Panel</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Teilefilter</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Bearbeitungsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Bearbeitungsvalidierung</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Biege-Bearbeitungsvalidierung</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Schneide-Bearbeitungsvalidierung</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Falt-Bearbeitungsvalidierung</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Tooling-Bedienfeld</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Filter speichern</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Bestellungen</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Bestellungsansicht</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Aufträge</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Auftrag erstellen</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Auftragsansicht</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Job-Bedienfeld</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatische Planung</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktive Verschachtelung</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Umpacken</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Verschachtelungsverwaltung</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Layout-Ansicht</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Layout-Panel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Berichtsversand</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Restblechverwaltung</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatische Reststückverwaltung</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manuelle Reststückverwaltung</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Twinline-Verschachtelung</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Veraltet</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Auftragsfilter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routen</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Bleche</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Benutzer</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Kunden</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Einstellungen</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Umgebung</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Biegen</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Schneiden</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Benachrichtigungen</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Überwachung</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Auftrag</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Berichte</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD-Erweiterungen</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks Addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Teile speichern</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Baugruppe speichern</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Machbarkeit prüfen</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Fabrikeinstellungen</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Verschiedene Verbesserungen</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Bibliothek</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Bibliotheksansicht</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="assemblyview.html">Baugruppe</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Baugruppe</h1>
+<div class="sect1">
+<h2 id="_statische_verschachtelungen_aus_einer_baugruppe_erstellen">Statische Verschachtelungen aus einer Baugruppe erstellen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Statische Verschachtelungen können für eine Baugruppe mit dem Assistenten für
+interaktive Verschachtelung generiert werden.
+Diese Verschachtelungen sind feste Layouts, die nur der ausgewählten Baugruppe
+zugeordnet sind.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wechseln Sie zur Ansicht <strong>assys</strong>.</p>
+</li>
+<li>
+<p>Klicken Sie mit der rechten Maustaste auf die gewünschte Baugruppe und
+wählen Sie <strong>Create Nests&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Der Assistent für interaktive Verschachtelung wird geöffnet.</p>
+</li>
+<li>
+<p>Standardmäßig wechselt der Assistent für interaktive Verschachtelung zur
+Seite <strong>Select Machine &amp; Material</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyinteractive.png" alt="Machine and material" width="950">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Maschinen werden mit Farbbalken angezeigt, die die verfügbare
+Produktionsauslastung angeben:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Grüner Balken: Geplante Stunden</p>
+</li>
+<li>
+<p>Grauer Balken: Verfügbare Stunden (von einer 8-Stunden-Schicht)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Unter jeder Maschine werden ausgewählte Teile mit ihrem Rohmaterial
+gruppiert (Teile/Gesamtmenge).</p>
+</li>
+<li>
+<p>Wenn ein Teil keine gültige Bearbeitungslösung für eine Maschine hat, werden
+dieses Teil und Material für die Verarbeitung auf dieser Maschine ignoriert.</p>
+</li>
+<li>
+<p>Wenn ein Rohmaterial für eine Maschine ausgewählt ist, steht es für andere
+Maschinen nicht zur Verfügung.</p>
+</li>
+<li>
+<p>Sobald der Maschinen-Verschachtelungsplan festgelegt ist, wählen Sie das
+bevorzugte Blech aus und überschreiben Sie Blechparameter wie
+<strong>Priority</strong>, <strong>Quantity</strong>,
+<strong>Margins</strong> usw.</p>
+</li>
+<li>
+<p>Sie können Bleche filtern, um <strong>All Sheets</strong>,
+<strong>Standard Sheets</strong> oder
+<strong>Remnant Sheets</strong> anzuzeigen. Klicken Sie auf
+<strong>next</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Es ist nicht möglich, die Mengen in dieser Phase zu erhöhen. Sie können
+entweder die gleiche Menge wie im Blechbestand beibehalten oder sie reduzieren
+und die Verschachtelungsergebnisse überprüfen.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Update Qty</strong> erscheint im Fenster des interaktiven
+Verschachtelungsplans.</p>
+</li>
+<li>
+<p>Standardmäßig schließt <strong>Pick All (F5)</strong> alle Teile für
+die Verschachtelung ein, oder Sie können manuell Prioritätsteile auswählen und
+Teilemengen anpassen. Klicken Sie auf <strong>next</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyquantity.png" alt="Update quantity">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Die Verschachtelung beginnt und auf dem Blech verschachtelte Teile werden mit
+blauem Farbstatus aktualisiert.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyresult.png" alt="Nesting result">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Die Produktionsauslastung der Maschine wird basierend auf dem
+Verschachtelungsergebnis aktualisiert.</p>
+</li>
+<li>
+<p>Wenn einige Teile unverschachtelt bleiben, erscheint die Meldung
+<strong>Some parts remain unnested</strong> – diese Teile verbleiben
+im ursprünglichen Auftrag.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ein Teil kann unverschachtelt bleiben, wenn kein geeignetes Blech verfügbar
+ist.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Statische Verschachtelungen können bearbeitet werden, um unverschachtelte
+Teile einzufügen:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Wählen Sie das Layout, in das Sie unverschachtelte Teile einfügen möchten,
+und checken Sie es zur Bearbeitung aus.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblylayout.png" alt="Selected layout">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TecZone wird geöffnet. Klicken Sie auf <strong>Pick</strong> oder
+<strong>Pick All</strong>, um unverschachtelte Teile aus der
+übergeordneten Baugruppe auszuwählen.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/addnest.png" alt="Add unnested parts" width="864">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ordnen Sie das Teil im Layout nach Bedarf an.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unnest.png" alt="Unnested part placement" width="715">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Generierte Verschachtelungen werden automatisch nach der übergeordneten
+Baugruppe benannt, um die Identifizierung zu erleichtern.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Statische Verschachtelungen können keine Teile aus anderen Baugruppen
+enthalten. Das Mischen von Baugruppen-Verschachtelungen würde verhindern, dass
+eine Baugruppe ohne die anderen freigegeben wird, daher ist das Mischen
+konstruktionsbedingt nicht erlaubt.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nicht_blechkomponenten">Nicht-Blechkomponenten</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Wenn eine Baugruppe importiert wird, werden Blechteile extrahiert und den
+Baugruppen in der Teilebibliothek hinzugefügt.</p>
+</li>
+<li>
+<p>Nicht-Blechkomponenten werden getrennt und den
+<strong>Components</strong> hinzugefügt.</p>
+</li>
+<li>
+<p>Die Baugruppe wird der Baugruppenbibliothek hinzugefügt und ihre
+Stückliste (BOM) enthält sowohl Teile als auch Komponenten.</p>
+</li>
+<li>
+<p>Wenn ein Teil bereits als Blechteil importiert wurde, aktualisiert das
+System den vorhandenen Eintrag und entfernt Duplikate aus der Teilebibliothek.</p>
+</li>
+<li>
+<p>Die Auswahl einer Baugruppe zeigt sowohl Teile als auch Komponenten an, wobei
+Komponentenmengen unter dem Komponentenbild angezeigt werden (Anzahl der
+ausgewählten Baugruppenkomponenten und Gesamtkomponentenanzahl).</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/components.png" alt="Assembly components" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Komponenten-Tooltips zeigen Name, Material und Größe an.
+Komponenten werden während der Produktion ausgeschlossen – sie werden nicht
+verschachtelt und es werden keine Bleche für Komponenten generiert.</p>
+</li>
+<li>
+<p>Beispiel-Baugruppen und -Komponenten sind verfügbar unter:
+C:\Program Files\Metamation\Praxis\Samples\Assys\Components, die zum Testen
+des Komponentenimports und der Baugruppen-Workflows verwendet werden können.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_auftrag_aus_baugruppe_erstellen">Auftrag aus Baugruppe erstellen</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Klicken Sie mit der rechten Maustaste auf die Baugruppe, klicken Sie auf
+<strong>New&#8230;&#8203;</strong> und dann auf <strong>Job</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/newassemblyjob.png" alt="Create new job" width="760">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Legen Sie im Dialog „Neuer Auftrag" die Baugruppenmenge fest, klicken Sie
+auf <strong>OK</strong> und aktualisieren Sie dann die Auftragsdetails (wie
+Fälligkeitsdatum und Priorität) nach Bedarf.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/riegelwindow.png" alt="New job dialog" width="369">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Das System erstellt einen Auftrag aus der Baugruppe und kopiert statische
+Verschachtelungen als Auftragsverschachtelungen, wobei die Blechanzahlen
+aktualisiert werden. Kopierte Verschachtelungen erhalten das Präfix der
+Auftrags-ID.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblycreated.png" alt="Assembly job created" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Auftragsverschachtelungen können bearbeitet oder gelöscht werden, ohne die
+ursprünglichen statischen Verschachtelungen zu beeinflussen.</p>
+</li>
+<li>
+<p>Auftragsverschachtelungen können mit <strong>Adapt/Compact&#8230;&#8203;</strong> oder
+<strong>Add parts&#8230;&#8203;</strong> umgepackt werden.</p>
+</li>
+<li>
+<p>Detaillierte Schritte finden Sie unter
+<a href="../../jobs/layoutcommands/layoutpanel.html#adapt-compact">Adapt/Compact</a> und
+<a href="../../jobs/layoutcommands/layoutpanel.html#add-parts">Teile hinzufügen</a>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Wenn ein Teil nicht in einer Verschachtelung erscheint, überprüfen Sie den
+Verschachtelungs-Bearbeitungsdialog – Sie können unverschachtelte Teile manuell
+einfügen.</p>
+</div>
+<div class="paragraph">
+<p>Verwenden Sie gespeicherte Suchen und Filter, um Teile schnell über mehrere
+Baugruppen hinweg zu finden.</p>
+</div>
+<div class="paragraph">
+<p>Verwenden Sie klare, beschreibende Baugruppen- und Verschachtelungsnamen, um
+Verwechslungen beim Kopieren von Verschachtelungen in Aufträge zu vermeiden.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_statische_verschachtelungen_aus_einer_baugruppe_erstellen">Statische Verschachtelungen aus einer Baugruppe erstellen</a>
+  </li>
+  <li level="1">
+   <a href="#_nicht_blechkomponenten">Nicht-Blechkomponenten</a>
+  </li>
+  <li level="1">
+   <a href="#_auftrag_aus_baugruppe_erstellen">Auftrag aus Baugruppe erstellen</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partview.html">Teile</a></span>
+ <span class="next"><a href="../partstate/index.html">Teilestatus</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

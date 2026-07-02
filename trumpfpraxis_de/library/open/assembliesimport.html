@@ -1,0 +1,395 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Baugruppen importieren</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TRUMPF Praxis Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Willkommen bei TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardware-Anforderung</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Unterstützte Dateiformate</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Voraussetzungen</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Serverinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Client-Installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Lizenz ändern</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfiguration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Maschine hinzufügen/entfernen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Rüsten einrichten</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Benutzer konfigurieren</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Sprache</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Neues Material und Blech hinzufügen</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Material exportieren/importieren</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Material ersetzen</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Material zuordnen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAM-Seiten zuordnen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Felder aus CAD zuordnen (Schlüsselwörter)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Die Benutzeroberfläche</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Bibliothek</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Öffnen</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partimport.html">Teile importieren</a></li>
+      <li><button class="tree blank"></button><a href="orderimport.html">Aufträge importieren</a></li>
+      <li><button class="tree blank"></button><a href="jobimport.html">Jobs importieren</a></li>
+      <li><button class="tree blank"></button><a class="active" href="assembliesimport.html">Baugruppen importieren</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Bibliotheksansicht</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Teile</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Baugruppe</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Teilestatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Teilevalidierung</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Teile-Panel</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Teilefilter</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Bearbeitungsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Bearbeitungsvalidierung</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Biege-Bearbeitungsvalidierung</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Schneide-Bearbeitungsvalidierung</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Falt-Bearbeitungsvalidierung</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Tooling-Bedienfeld</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Filter speichern</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Bestellungen</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Bestellungsansicht</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Aufträge</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Auftrag erstellen</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Auftragsansicht</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Job-Bedienfeld</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatische Planung</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktive Verschachtelung</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Umpacken</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Verschachtelungsverwaltung</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Layout-Ansicht</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Layout-Panel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Berichtsversand</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Restblechverwaltung</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatische Reststückverwaltung</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manuelle Reststückverwaltung</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Twinline-Verschachtelung</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Veraltet</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Auftragsfilter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routen</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Bleche</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Benutzer</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Kunden</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Einstellungen</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Umgebung</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Biegen</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Schneiden</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Benachrichtigungen</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Überwachung</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Auftrag</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Berichte</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD-Erweiterungen</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks Addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Teile speichern</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Baugruppe speichern</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Machbarkeit prüfen</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Fabrikeinstellungen</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Verschiedene Verbesserungen</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Bibliothek</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Öffnen</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="assembliesimport.html">Baugruppen importieren</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Baugruppen importieren</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Baugruppen sind Gruppen verwandter Teile, die zu einer einzelnen Einheit zusammengefasst sind, sodass Sie mehrere Teile gemeinsam als eine Entität verwalten können.</p>
+</div>
+<div class="paragraph">
+<p>Sie können Baugruppen mit folgenden Methoden importieren:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Import über Datei</p>
+</li>
+<li>
+<p>Drag and Drop</p>
+</li>
+<li>
+<p>Import aus Tabelle</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_import_über_datei">Import über Datei</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Eine Baugruppe kann mit der Option
+<strong>Import Assemblies&#8230;&#8203;</strong> in die Teilebibliothek
+importiert werden.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klicken Sie auf das Öffnen-Symbol in der Befehlsleiste und wählen Sie
+<strong>Import Assemblies&#8230;&#8203;</strong>, oder verwenden Sie
+<strong>File</strong> → <strong>Open</strong> →
+<strong>Import Assemblies&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/importassembly.png" alt="Import assembly" width="337">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Der Öffnen-Dialog erscheint. Wählen Sie die gewünschte(n) Baugruppendatei(en).</p>
+</li>
+<li>
+<p>Eine Vorschau der ausgewählten Baugruppe wird angezeigt.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyview.png" alt="AssemblyView">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klicken Sie auf Öffnen, um die Baugruppe zu importieren.</p>
+</li>
+<li>
+<p>Importierte Baugruppen werden in der Baugruppenansicht in der Teilebibliothek aufgelistet.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyparts.png" alt="AssemblyParts">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_drag_and_drop">Drag and Drop</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Ziehen Sie eine Baugruppe direkt in die TruSmartCAM-Teilebibliothek.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_import_aus_tabelle">Import aus Tabelle</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Verwenden Sie <strong>File</strong> → <strong>Open</strong> →
+<strong>Import Assemblies&#8230;&#8203;</strong> und wählen Sie eine CSV-,
+XLSX- oder XML-Datei, oder ziehen Sie die Datei per Drag and Drop.</p>
+</li>
+<li>
+<p>Überprüfen und aktualisieren Sie Baugruppendetails und Mengen vor dem Import.
+Verwenden Sie <strong>Add&#8230;&#8203;</strong> oder <strong>Remove&#8230;&#8203;</strong> zum
+Ändern.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/newassembly.png" alt="NewAssembly" width="408">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nach dem Import können Baugruppen vorbereitet und statischen Verschachtelungen zugewiesen werden.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_import_über_datei">Import über Datei</a>
+  </li>
+  <li level="2">
+   <a href="#_drag_and_drop">Drag and Drop</a>
+  </li>
+  <li level="1">
+   <a href="#_import_aus_tabelle">Import aus Tabelle</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobimport.html">Jobs importieren</a></span>
+ <span class="next"><a href="../libraryview/index.html">Bibliotheksansicht</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

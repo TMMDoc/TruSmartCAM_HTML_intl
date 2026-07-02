@@ -1,0 +1,698 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Teile-Panel</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TRUMPF Praxis Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Willkommen bei TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardware-Anforderung</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Unterstützte Dateiformate</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Voraussetzungen</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Serverinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Client-Installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Lizenz ändern</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfiguration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Maschine hinzufügen/entfernen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Rüsten einrichten</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Benutzer konfigurieren</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Sprache</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Neues Material und Blech hinzufügen</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Material exportieren/importieren</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Material ersetzen</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Material zuordnen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAM-Seiten zuordnen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Felder aus CAD zuordnen (Schlüsselwörter)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Die Benutzeroberfläche</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Bibliothek</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Öffnen</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Teile importieren</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Aufträge importieren</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Jobs importieren</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Baugruppen importieren</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Bibliotheksansicht</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Teile</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Baugruppe</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Teilestatus</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partvalidation.html">Teilevalidierung</a></li>
+      <li><button class="tree blank"></button><a class="active" href="partpanel.html">Teile-Panel</a></li>
+      <li><button class="tree blank"></button><a href="partfilters.html">Teilefilter</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Bearbeitungsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Bearbeitungsvalidierung</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Biege-Bearbeitungsvalidierung</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Schneide-Bearbeitungsvalidierung</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Falt-Bearbeitungsvalidierung</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Tooling-Bedienfeld</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Filter speichern</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Bestellungen</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Bestellungsansicht</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Aufträge</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Auftrag erstellen</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Auftragsansicht</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Job-Bedienfeld</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatische Planung</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktive Verschachtelung</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Umpacken</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Verschachtelungsverwaltung</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Layout-Ansicht</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Layout-Panel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Berichtsversand</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Restblechverwaltung</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatische Reststückverwaltung</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manuelle Reststückverwaltung</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Twinline-Verschachtelung</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Veraltet</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Auftragsfilter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routen</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Bleche</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Benutzer</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Kunden</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Einstellungen</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Umgebung</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Biegen</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Schneiden</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Benachrichtigungen</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Überwachung</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Auftrag</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Berichte</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD-Erweiterungen</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks Addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Teile speichern</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Baugruppe speichern</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Machbarkeit prüfen</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Fabrikeinstellungen</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Verschiedene Verbesserungen</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Bibliothek</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Teilestatus</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="partpanel.html">Teile-Panel</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Teile-Panel</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dieser Abschnitt erläutert teilebezogene Aktionen wie
+<strong>Re-import</strong>, <strong>Re-tool</strong>,
+<strong>Rename</strong>, <strong>Export outputs</strong> usw.,
+die zur Verwaltung von Teileinstanzen verwendet werden.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/partpanel.png" alt="Part panel" width="150">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Open in read-only mode for viewing</strong><br>
+Öffnet das ausgewählte Teil im schreibgeschützten Modus.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Ermöglicht die Bearbeitung des ausgewählten Teils.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Delete</strong><br>
+Löscht das ausgewählte Teil.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/newui.png" alt="Read-only" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>New&#8230;&#8203;</strong><br>
+Das ausgewählte Teil kann in einen neuen Auftrag, Job oder eine Baugruppe umgewandelt werden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Export Outputs</strong><br>
+Exportiert die Teileausgabe an das konfigurierte Ziel.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/importui.png" alt="Import" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Re-import&#8230;&#8203;</strong><br>
+Ermöglicht den erneuten Import des ausgewählten Teils.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/toolui.png" alt="Retool" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Re-tool&#8230;&#8203;</strong><br>
+Ermöglicht die erneute Bearbeitung des ausgewählten Teils.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/renameui.png" alt="Rename" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rename&#8230;&#8203;</strong><br>
+Zum Ändern des Namens des ausgewählten Teils.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/materialui.png" alt="Material" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Assign Material&#8230;&#8203;</strong><br>
+Legt das dem ausgewählten Teil zugeordnete Material fest.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/customerui.png" alt="Customer" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Assign Customer&#8230;&#8203;</strong><br>
+Legt den dem ausgewählten Teil zugeordneten Kunden fest.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/rollingui.png" alt="Rolling" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rolling direction</strong><br>
+Definiert die Ausrichtung (horizontal oder vertikal), in der das Material gewalzt wird.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Prev</strong> / <strong>Next</strong> / <strong>Toolings</strong><br>
+Navigiert zum vorherigen oder nächsten Teil oder zur Werkzeugbearbeitung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sortui.png" alt="Filters" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sortieren und Filtern</strong><br>
+Verwenden Sie diese Filter, um andere Teile anzuzeigen, die dasselbe Attribut wie das
+ausgewählte Teil haben: Gleiches Material, Gleicher Kunde, Gleiche Biegeanzahl oder
+Gleicher Status.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_re_import">Re-import</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Klicken Sie mit der rechten Maustaste auf ein beliebiges Teil und wählen Sie <strong>Re-import&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/reimport.png" alt="Re-import" width="503">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Alle Werkzeugbearbeitungsinstanzen des ausgewählten Teils auf allen Maschinen werden gelöscht, einschließlich
+automatisch und manuell erstellter Instanzen.</p>
+</li>
+<li>
+<p>Vorhandene Ausgabedateien (CAD, Biegen und Schneiden) werden entfernt.</p>
+</li>
+<li>
+<p>Die Teile werden erneut importiert, und eine neue CAD-Validierung sowie Werkzeugbearbeitung werden für
+alle Maschinen angewendet.</p>
+</li>
+<li>
+<p>Neue Ausgabedateien werden basierend auf dem aktualisierten Werkzeugbearbeitungsergebnis erstellt.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_re_tool">Re-tool</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Klicken Sie mit der rechten Maustaste auf ein beliebiges Teil und wählen Sie <strong>Re-tool&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/retool.png" alt="Re-tool" width="504">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Alle Maschinen sind standardmäßig aktiviert und nach Laser, Stanzen, Panel und
+Abkantpresse gruppiert.</p>
+</li>
+<li>
+<p>Klicken Sie auf <strong>OK</strong>, um fortzufahren. Dadurch werden sowohl automatisch als auch manuell
+erstellte Instanzen für die ausgewählten Maschinen entfernt und die zugehörigen Ausgabedateien gelöscht.</p>
+</li>
+<li>
+<p>Wenn das Kontrollkästchen <strong>Retain existing outputs</strong> aktiviert ist,
+werden nur Teile erneut bearbeitet, deren Ausgaben zuvor entfernt wurden.
+Andere Ausgaben bleiben unverändert. Wenn es deaktiviert ist, werden alle Ausgabedateien für die
+ausgewählten Maschinen entfernt und während der erneuten Werkzeugbearbeitung neu generiert.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Wenn sich die CAM-Einstellungen für eine Maschine geändert haben, wählen Sie diese Maschine aus und
+führen Sie die erneute Werkzeugbearbeitung der Teile durch.</p>
+</li>
+<li>
+<p>Wenn ein Werkzeug (LTT, Stanz- oder Biegewerkzeug) geändert wurde oder fehlt, aktualisieren Sie die Maschine und
+führen Sie die erneute Werkzeugbearbeitung nur für die betroffenen Teile durch.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rename">Rename</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dieser Abschnitt erläutert, wie Sie ein oder mehrere Teile in TruSmartCAM umbenennen.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klicken Sie mit der rechten Maustaste auf das Teil und wählen Sie <strong>Rename&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/rename1.png" alt="Rename1" width="503">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ein Bestätigungsdialog zur Umbenennung erscheint und zeigt den aktuellen Teilenamen an.</p>
+</li>
+<li>
+<p>Geben Sie den neuen Namen ein und klicken Sie auf das Häkchen-Symbol <strong>✓</strong> zur Bestätigung, oder klicken Sie auf
+das Kreuz-Symbol <strong>✗</strong>, um den Umbenennungsvorgang abzubrechen.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/rename2.png" alt="Rename2" width="451">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Um mehrere Teile umzubenennen, wählen Sie alle gewünschten Teile aus, klicken Sie dann mit der rechten
+Maustaste auf eines davon und wählen Sie <strong>Rename&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Ein Bestätigungsdialog erscheint mit der Gesamtanzahl der ausgewählten Teile.</p>
+</li>
+<li>
+<p>Geben Sie für jedes Teil den neuen Namen ein und klicken Sie auf das Häkchen-Symbol <strong>✓</strong>,
+um einzeln zu bestätigen.</p>
+</li>
+<li>
+<p>Wenn ein Teil versehentlich ausgewählt wurde, klicken Sie auf das Kreuz-Symbol <strong>✗</strong> zum Abbrechen.
+Alternativ können Sie mit der rechten Maustaste auf das Teil klicken und
+<strong>Cancel Rename</strong> wählen, um die Umbenennung zu überspringen.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_export_outputs">Export outputs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Diese Option exportiert die Teileausgabe an das in
+<strong>Factory Settings</strong> konfigurierte Ziel. (Siehe
+<a href="../../factory/settings/bend.html">Bend Settings</a> und
+<a href="../../factory/settings/cut.html">Cut Settings</a>)</p>
+</div>
+<div class="paragraph">
+<p>Der Ausgabeort wird separat für Biegen, Falten und Schneiden in den
+jeweiligen Ausgabeeinstellungen festgelegt. Alle mit Biege-, Falz- und
+Schneidvorgängen verbundenen Werkzeugbearbeitungen werden für das gesamte Teil exportiert.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput.png" alt="Export Output" width="451">
+</div>
+</div>
+<div class="paragraph">
+<p>Wie unten dargestellt, werden die exportierten Dateien im angegebenen Ordner
+gespeichert (z. B. <code>C:\PraxData\Out\Reports</code>).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportout.png" alt="Export Output Location" width="451">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Die exportierten Dateien hängen vom Vorgangstyp ab. Für Biege- und
+Falzvorgänge werden NC-Dateien und Berichte generiert. Für Schneid- und Stanzvorgänge
+werden nur die Teiledateien exportiert.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_material_zuweisen">Material zuweisen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Teile mit dem Status <strong>Material not assigned</strong> müssen
+aktualisiert werden, bevor sie weiterverarbeitet werden können. Die folgenden Schritte erläutern,
+wie Sie Material zuweisen.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klicken Sie mit der rechten Maustaste auf das Teil, das den Status
+<strong>Material not assigned</strong> anzeigt, und wählen Sie
+<strong>Assign Material&#8230;&#8203;</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/asignmaterial.png" alt="Assign Material" width="442">
+</div>
+</div>
+</li>
+<li>
+<p>Das Fenster <strong>Assign Material</strong> wird geöffnet.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/dialogue.png" alt="Dialogue" width="600">
+</div>
+</div>
+</li>
+<li>
+<p>Der Dialog enthält vier Bereiche:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Suggestions</strong> - Schlägt automatisch Rohmaterialien
+basierend auf der Materialstärke des importierten Teils vor.</p>
+</li>
+<li>
+<p><strong>All Materials</strong> - Listet alle in TruSmartCAM definierten
+Materialtypen auf.</p>
+</li>
+<li>
+<p><strong>All Raw-Materials</strong> - Zeigt alle im System verfügbaren
+Rohmaterialien an.</p>
+</li>
+<li>
+<p><strong>Used Raw-Materials</strong> - Zeigt die zuletzt verwendeten
+Rohmaterialien für einen schnellen Zugriff an.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Sie können das Feld <strong>Search</strong> oben verwenden, um Materialien schnell zu finden.
+Geben Sie beispielsweise „steel" ein, um alle passenden Materialien in den
+drei Bereichen anzuzeigen.</p>
+</li>
+<li>
+<p>Wählen Sie aus der gefilterten Liste das gewünschte Material (z. B. Steel-25) aus
+der Rohmaterial-Liste aus.</p>
+</li>
+<li>
+<p>Das ausgewählte Material wird dem Teil zugewiesen.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rolling_direction">Rolling direction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Rolling direction</strong> bezieht sich auf die Ausrichtung der
+Walzrichtung in einem Teil, die beeinflussen kann, wie das Teil geschnitten und verarbeitet wird.
+Mit dieser Option können Sie die
+<strong>Rolling direction</strong> für ein Teil in der Teilebibliothek festlegen.
+Basierend auf der ausgewählten
+Richtung wird das Teil in der korrekten Ausrichtung zum Schneiden auf den
+verfügbaren Maschinen platziert.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klicken Sie mit der rechten Maustaste auf eine beliebige Teilekachel in der Teilebibliothek oder im Job-Fenster.</p>
+</li>
+<li>
+<p>Wählen Sie die bevorzugte Walzrichtung:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>None</strong></p>
+</li>
+<li>
+<p><strong>Horizontal</strong></p>
+</li>
+<li>
+<p><strong>Vertical</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/rollingdirection1.png" alt="Rolling direction" width="514">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Das Teil wird automatisch für alle verfügbaren Schneidmaschinen basierend auf
+der ausgewählten Walzrichtung erneut bearbeitet.</p>
+</li>
+<li>
+<p>Die Teilekachel zeigt die ausgewählte Walzrichtung wie unten dargestellt an:</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/none.png" alt="None" width="270"></span> <span class="image"><img src="img/horizontal.png" alt="Horizontal" width="270"></span>
+<span class="image"><img src="img/vertical.png" alt="Vertical" width="270"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_re_import">Re-import</a>
+  </li>
+  <li level="1">
+   <a href="#_re_tool">Re-tool</a>
+  </li>
+  <li level="1">
+   <a href="#_rename">Rename</a>
+  </li>
+  <li level="1">
+   <a href="#_export_outputs">Export outputs</a>
+  </li>
+  <li level="1">
+   <a href="#_material_zuweisen">Material zuweisen</a>
+  </li>
+  <li level="1">
+   <a href="#_rolling_direction">Rolling direction</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partvalidation.html">Teilevalidierung</a></span>
+ <span class="next"><a href="partfilters.html">Teilefilter</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="res/bento.css">
+  <link rel="stylesheet" href="res/site.css">
+  <link rel="stylesheet" href="res/tree.css">
+  <link rel="stylesheet" href="res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="img/praxis-icon.png">
+  <title>Fluxo de Trabalho</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="img/logo.png" width="120" height="34" /></div>
+        <div><p>TRUMPF Praxis Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="index.html">Bem-vindo ao TRUMPF Praxis</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="installation/index.html">Instalação</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="installation/hardwarerequirement.html">Requisitos de hardware</a></li>
+    <li><button class="tree blank"></button><a href="installation/importformats.html">Formatos de arquivo suportados</a></li>
+    <li><button class="tree blank"></button><a href="installation/prerequisites.html">Pré-requisitos</a></li>
+    <li><button class="tree blank"></button><a href="installation/serverinstallation.html">Instalação do servidor</a></li>
+    <li><button class="tree blank"></button><a href="installation/clientinstallation.html">Instalação do cliente</a></li>
+    <li><button class="tree blank"></button><a href="installation/changelic.html">Alterar licença</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="configuration/index.html">Configuração</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="configuration/setupmachine.html">Adicionar/Remover máquina</a></li>
+    <li><button class="tree blank"></button><a href="configuration/setuptooling.html">Configurar ferramentas</a></li>
+    <li><button class="tree blank"></button><a href="configuration/configureusers.html">Configurar usuários</a></li>
+    <li><button class="tree blank"></button><a href="configuration/language.html">Idioma</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="configuration/addmaterial/addnew.html">Adicionar novo material e chapa</a></li>
+      <li><button class="tree blank"></button><a href="configuration/addmaterial/exportimport.html">Exportar/Importar material</a></li>
+      <li><button class="tree blank"></button><a href="configuration/addmaterial/replacematerial.html">Substituir material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="configuration/mapbendpages.html">Mapear material</a></li>
+    <li><button class="tree blank"></button><a href="configuration/mapcampages.html">Mapear páginas CAM</a></li>
+    <li><button class="tree blank"></button><a href="configuration/cadmapfields.html">Mapear campos do CAD (chaves de consulta)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="userinterface.html">A interface do usuário</a></li>
+  <li><button class="tree blank"></button><a class="active" href="workflow.html">Fluxo de Trabalho</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="library/index.html">Library</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="library/open/partimport.html">Importar peças</a></li>
+      <li><button class="tree blank"></button><a href="library/open/orderimport.html">Importar pedidos</a></li>
+      <li><button class="tree blank"></button><a href="library/open/jobimport.html">Importar trabalhos</a></li>
+      <li><button class="tree blank"></button><a href="library/open/assembliesimport.html">Importar montagens</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/libraryview/index.html">Visualização da biblioteca</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="library/libraryview/partview.html">Peças</a></li>
+      <li><button class="tree blank"></button><a href="library/libraryview/assemblyview.html">Montagem</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/partstate/index.html">Status da peça</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="library/partstate/partvalidation.html">Validação de peça</a></li>
+      <li><button class="tree blank"></button><a href="library/partstate/partpanel.html">Painel de peça</a></li>
+      <li><button class="tree blank"></button><a href="library/partstate/partfilters.html">Filtros de peças</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/toolingstatus/index.html">Status de ferramentas</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="library/toolingstatus/toolingvalidation/index.html">Validação de ferramentas</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="library/toolingstatus/toolingvalidation/bendtooling.html">Validação de ferramentas de dobra</a></li>
+        <li><button class="tree blank"></button><a href="library/toolingstatus/toolingvalidation/cuttooling.html">Validação de ferramentas de corte</a></li>
+        <li><button class="tree blank"></button><a href="library/toolingstatus/toolingvalidation/foldtooling.html">Validação de ferramentas de dobra de painel</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="library/toolingstatus/toolingpanel.html">Painel de ferramentas</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="library/savingfilters.html">Salvar filtros</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="orders/index.html">Pedidos</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="orders/ordersview.html">Visualização de pedidos</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="jobs/jobcreation.html">Criar trabalho</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobview.html">Visualização do trabalho</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobpanel.html">Painel do trabalho</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobautoplan.html">Planejamento automático</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobinteractplan.html">Nesting interativo</a></li>
+    <li><button class="tree blank"></button><a href="jobs/repacking.html">Reempacotamento</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="jobs/layoutcommands/index.html">Gerenciamento de nests</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="jobs/layoutcommands/nestview.html">Visualização de nest</a></li>
+      <li><button class="tree blank"></button><a href="jobs/layoutcommands/layoutpanel.html">Painel de layout</a></li>
+      <li><button class="tree blank"></button><a href="jobs/layoutcommands/reportsender.html">Remetente de relatório</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="jobs/remnantmanagement/index.html">Gerenciamento de remanescentes</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="jobs/remnantmanagement/autoremnant.html">Gerenciamento automático de remanescentes</a></li>
+      <li><button class="tree blank"></button><a href="jobs/remnantmanagement/manualremnant.html">Gerenciamento manual de remanescentes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="jobs/twinlinenesting.html">Nesting Twinline</a></li>
+    <li><button class="tree blank"></button><a href="jobs/outdate.html">Desatualizado</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobfilters.html">Filtros de trabalho</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="factory/routes.html">Rotas</a></li>
+    <li><button class="tree blank"></button><a href="factory/sheets.html">Chapas</a></li>
+    <li><button class="tree blank"></button><a href="factory/users.html">Usuários</a></li>
+    <li><button class="tree blank"></button><a href="factory/edit.html">Editar</a></li>
+    <li><button class="tree blank"></button><a href="factory/customers.html">Clientes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="factory/settings/index.html">Configurações</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="factory/settings/environment.html">Ambiente</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/import.html">Importação</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/bend.html">Dobra</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/cut.html">Corte</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/notification.html">Notificações</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/watch.html">Monitoramento</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/job.html">Trabalho</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/reports.html">Relatórios</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="cadextensions/index.html">Extensões CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/installationsteps.html">Etapas de instalação</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/savetopraxis.html">Salvar no TRUMPF Praxis</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/saveassembly.html">Salvar montagem</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/partfeasibility.html">Verificar viabilidade</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/factorysettings.html">Configurações da fábrica</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/miscenhancements.html">Melhorias diversas</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="workflow.html">Fluxo de Trabalho</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Fluxo de Trabalho</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>TRUMPF Praxis é um Sistema de Execução de Manufatura que gerencia e otimiza processos
+de fabricação de chapas metálicas. Um fluxo de trabalho no TRUMPF Praxis consiste em
+uma série de etapas que você segue para concluir uma tarefa ou processo específico.
+Você pode personalizar o fluxo de trabalho para se adequar a diferentes processos
+de fabricação e adaptá-lo às suas necessidades específicas. O fluxo de trabalho
+no TRUMPF Praxis normalmente inclui as seguintes etapas:</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_configurar_o_sistema">1. Configurar o sistema</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Configure o TRUMPF Praxis para corresponder ao seu ambiente de fabricação. Esta etapa
+fundamental inclui definir máquinas com suas capacidades e parâmetros, adicionar
+materiais disponíveis e faixas de espessura, configurar bibliotecas de ferramentas
+com punções e matrizes, criar folhas de configuração para diferentes configurações
+de máquina e gerenciar contas de usuários com permissões apropriadas. Um sistema
+adequadamente configurado garante processamento preciso e previne erros em etapas
+posteriores. Esta configuração é tipicamente realizada uma vez durante a implantação
+inicial, com atualizações periódicas conforme sua fábrica evolui.</p>
+</div>
+<div class="paragraph">
+<p>Para mais informações, consulte <a href="configuration/setupmachine.html">Adicionar/Remover
+máquina</a>, <a href="configuration/addmaterial/index.html">Material</a>,
+<a href="factory/sheets.html">Chapas</a>, <a href="configuration/setuptooling.html">Configurar
+ferramentas</a> e <a href="configuration/configureusers.html">Configurar usuários</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/setup.png" alt="Setup" width="817">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_adicionar_peças_à_biblioteca">2. Adicionar peças à biblioteca</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Importe peças CAD 2D ou 3D para a Biblioteca de Peças usando formatos suportados
+como arquivos DXF, DWG ou STEP. Durante a importação, o TRUMPF Praxis analisa
+automaticamente a geometria da peça, valida a fabricabilidade, atribui a tecnologia
+de chapa metálica necessária (laser, punção ou combinação) e gera miniaturas de
+visualização. As peças importadas aparecem como blocos na visualização da biblioteca,
+onde ícones codificados por cores indicam o status da peça, tipo de tecnologia,
+requisitos de material e quaisquer problemas detectados. Este sistema visual permite
+avaliação rápida da prontidão das peças em um relance.</p>
+</div>
+<div class="paragraph">
+<p>Para mais informações, consulte <a href="library/index.html">Library</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/importparts.png" alt="Import" width="476">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_verificar_peças_e_ferramentas">3. Verificar peças e ferramentas</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Revise cada peça importada quanto a possíveis problemas de produção. Verifique se
+a geometria da peça é válida e fabricável, se as atribuições de ferramentas estão
+corretas e disponíveis, se as seleções de material e espessura correspondem ao
+inventário e se as sequências de dobra estão devidamente definidas para peças
+conformadas. Se problemas forem detectados, abra a peça no TecZone para
+modificar a geometria, reatribuir ou otimizar ferramentas, ajustar parâmetros de
+processamento ou corrigir especificações de material. Resolver problemas nesta
+etapa previne atrasos na produção e reduz refugo durante a fabricação.</p>
+</div>
+<div class="paragraph">
+<p>Para mais informações, consulte <a href="library/partstate/index.html">Estado da peça</a>
+e <a href="library/toolingstatus/index.html">Status de ferramentas</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingcheck.png" alt="Tooling" width="1078">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_organizar_peças_em_trabalhos">4. Organizar peças em trabalhos</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Agrupe peças validadas em trabalhos com base nos requisitos de produção. Um trabalho
+representa uma unidade de produção lógica que pode incluir peças de um único pedido
+de cliente, peças que compartilham materiais e espessura comuns, peças com prazos
+de entrega semelhantes ou uma combinação baseada em sua estratégia de produção.
+Trabalhos fornecem um contêiner para planejamento, permitem processamento em lote
+de peças relacionadas, possibilitam utilização eficiente de material através do
+nesting e simplificam rastreamento e relatórios. Trabalhos podem ser criados
+manualmente selecionando peças ou automaticamente com base em regras predefinidas
+e filtros.</p>
+</div>
+<div class="paragraph">
+<p>Para mais informações, consulte <a href="jobs/index.html">Jobs</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobs.png" alt="Jobs" width="578">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_5_planejar_trabalhos_para_máquinas_de_produção">5. Planejar trabalhos para máquinas de produção</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Uma vez que um trabalho é criado, atribua-o a uma máquina de produção apropriada.
+Considere as capacidades da máquina incluindo tecnologias suportadas (laser, punção,
+torre), capacidade de material e espessura, ferramentas disponíveis e carga de
+trabalho atual. Se existirem múltiplas máquinas adequadas, selecione com base na
+prioridade de produção, disponibilidade da máquina, requisitos de configuração ou
+otimização de custos. A atribuição pode ser manual para flexibilidade ou automática
+com base em regras pré-configuradas e algoritmos de programação de máquina.</p>
+</div>
+<div class="paragraph">
+<p>Para mais informações, consulte <a href="jobs/jobautoplan.html">Planejar trabalho</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/machineselect.png" alt="MachineSelect" width="695">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_6_liberar_nc_para_trabalhos">6. Liberar NC para trabalhos</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nesta etapa, os layouts de corte são gerados. Você ainda pode editar layouts e
+adicionar tecnologias de corte ao layout usando TecZone. Em seguida, exporte
+a saída NC e transfira-a para o controlador da máquina ou um local de rede
+designado. O trabalho é então bloqueado para evitar modificações adicionais, e
+seu status é atualizado para "Liberado" para rastreamento de produção.</p>
+</div>
+<div class="paragraph">
+<p>Para mais informações, consulte <a href="jobs/layoutcommands/layoutpanel.html#send-to-machine">Enviar/Recuperar NC</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/production.png" alt="Production" width="444">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_7_concluir_produção_e_finalizar_trabalhos">7. Concluir produção e finalizar trabalhos</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Execute o trabalho liberado na máquina atribuída. Durante a produção, o operador
+da máquina segue o programa NC, verifica a qualidade das peças durante o corte,
+gerencia o carregamento e descarregamento de material e resolve quaisquer alarmes
+ou problemas da máquina. Após a conclusão da produção, marque peças individuais ou
+o trabalho inteiro como concluído no TRUMPF Praxis. Esta etapa final atualiza os
+registros de inventário, registra o tempo real de produção e uso de material,
+arquiva dados do trabalho para relatórios e análise e completa o ciclo do fluxo
+de trabalho.</p>
+</div>
+<div class="paragraph">
+<p>Para mais informações, consulte <a href="jobs/layoutcommands/layoutpanel.html#mark-complete">Marcar
+como concluído</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/complete.png" alt="Complete" width="435">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_1_configurar_o_sistema">1. Configurar o sistema</a>
+  </li>
+  <li level="1">
+   <a href="#_2_adicionar_peças_à_biblioteca">2. Adicionar peças à biblioteca</a>
+  </li>
+  <li level="1">
+   <a href="#_3_verificar_peças_e_ferramentas">3. Verificar peças e ferramentas</a>
+  </li>
+  <li level="1">
+   <a href="#_4_organizar_peças_em_trabalhos">4. Organizar peças em trabalhos</a>
+  </li>
+  <li level="1">
+   <a href="#_5_planejar_trabalhos_para_máquinas_de_produção">5. Planejar trabalhos para máquinas de produção</a>
+  </li>
+  <li level="1">
+   <a href="#_6_liberar_nc_para_trabalhos">6. Liberar NC para trabalhos</a>
+  </li>
+  <li level="1">
+   <a href="#_7_concluir_produção_e_finalizar_trabalhos">7. Concluir produção e finalizar trabalhos</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="userinterface.html">A interface do usuário</a></span>
+ <span class="next"><a href="library/index.html">Library</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="res/index.js"></script>
+    <script src="res/files.js"></script>
+    <script src="res/site.js"></script>
+
+    
+</body>
+</html>

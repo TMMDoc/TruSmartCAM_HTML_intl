@@ -1,0 +1,391 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Import assemblies</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TRUMPF Praxis Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Welcome to TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Change license</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Add/Remove machine</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Setup tooling</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Configure users</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Language</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Add new material and sheet</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Export/Import material</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Replace material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Map material</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Map CAM pages</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Map fields from CAD (lookup keys)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">The user interface</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Library</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Open</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a class="active" href="assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Tooling panel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Orders</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Orders view</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Create job</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Job view</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Job panel</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Auto plan</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interactive nesting</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Repacking</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Nest management</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Layout view</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Layout panel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Report sender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Remnant management</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Auto remnant management</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manual remnant management</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Twinline nesting</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Out-of-date</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Job filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD extensions</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Save parts</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Save assembly</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Check feasibility</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Factory settings</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Misc enhancements</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Library</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Open</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="assembliesimport.html">Import assemblies</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Import assemblies</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Assemblies are groups of related parts combined into a single unit, allowing you to manage multiple parts together as one entity.</p>
+</div>
+<div class="paragraph">
+<p>You can import assemblies using the following methods:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Import via file</p>
+</li>
+<li>
+<p>Drag and drop</p>
+</li>
+<li>
+<p>Import from spreadsheet</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_import_via_file">Import via file</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An assembly can be imported into the Part Library using the
+<strong>Import Assemblies&#8230;&#8203;</strong> option.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click the Open icon in the command bar and select
+<strong>Import Assemblies&#8230;&#8203;</strong>, or use <strong>File</strong> →
+<strong>Open</strong> → <strong>Import Assemblies&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/importassembly.png" alt="Import assembly" width="337">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The Open dialog appears. Select the required assembly file(s).</p>
+</li>
+<li>
+<p>A preview of the selected assembly is displayed.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyview.png" alt="AssemblyView">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click Open to import the assembly.</p>
+</li>
+<li>
+<p>Imported assemblies are listed under the Assemblies view in the Part Library.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyparts.png" alt="AssemblyParts">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_drag_and_drop">Drag and drop</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Drag and drop a assembly directly into the TruSmartCAM Part Library.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_import_from_spreadsheet">Import from spreadsheet</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Use <strong>File</strong> → <strong>Open</strong> →
+<strong>Import Assemblies&#8230;&#8203;</strong> and select a CSV, XLSX, or XML file, or drag and drop the file.</p>
+</li>
+<li>
+<p>Review and update assembly details and quantities before import. Use
+<strong>Add&#8230;&#8203;</strong> or <strong>Remove&#8230;&#8203;</strong> to modify.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/newassembly.png" alt="NewAssembly" width="408">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>After import, assemblies can be prepared and assigned Static Nests.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_import_via_file">Import via file</a>
+  </li>
+  <li level="2">
+   <a href="#_drag_and_drop">Drag and drop</a>
+  </li>
+  <li level="1">
+   <a href="#_import_from_spreadsheet">Import from spreadsheet</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobimport.html">Import jobs</a></span>
+ <span class="next"><a href="../libraryview/index.html">Library view</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,429 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Auftragsfilter</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TRUMPF Praxis Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Willkommen bei TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Hardware-Anforderung</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Unterstützte Dateiformate</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Voraussetzungen</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Serverinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Client-Installation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Lizenz ändern</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Konfiguration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Maschine hinzufügen/entfernen</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Rüsten einrichten</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Benutzer konfigurieren</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Sprache</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Neues Material und Blech hinzufügen</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Material exportieren/importieren</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Material ersetzen</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Material zuordnen</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">CAM-Seiten zuordnen</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Felder aus CAD zuordnen (Schlüsselwörter)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">Die Benutzeroberfläche</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Bibliothek</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Öffnen</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Teile importieren</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Aufträge importieren</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Jobs importieren</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Baugruppen importieren</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Bibliotheksansicht</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Teile</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Baugruppe</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Teilestatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Teilevalidierung</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Teile-Panel</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Teilefilter</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Bearbeitungsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Bearbeitungsvalidierung</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Biege-Bearbeitungsvalidierung</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Schneide-Bearbeitungsvalidierung</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Falt-Bearbeitungsvalidierung</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Tooling-Bedienfeld</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Filter speichern</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Bestellungen</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Bestellungsansicht</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Aufträge</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">Auftrag erstellen</a></li>
+    <li><button class="tree blank"></button><a href="jobview.html">Auftragsansicht</a></li>
+    <li><button class="tree blank"></button><a href="jobpanel.html">Job-Bedienfeld</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">Automatische Planung</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">Interaktive Verschachtelung</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">Umpacken</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">Verschachtelungsverwaltung</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">Layout-Ansicht</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">Layout-Panel</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">Berichtsversand</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">Restblechverwaltung</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">Automatische Reststückverwaltung</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">Manuelle Reststückverwaltung</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">Twinline-Verschachtelung</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">Veraltet</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobfilters.html">Auftragsfilter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routen</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Bleche</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Benutzer</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Bearbeiten</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Kunden</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Einstellungen</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Umgebung</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Biegen</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Schneiden</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Benachrichtigungen</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Überwachung</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Auftrag</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Berichte</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD-Erweiterungen</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks Addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Teile speichern</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Baugruppe speichern</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Machbarkeit prüfen</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Fabrikeinstellungen</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Verschiedene Verbesserungen</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Aufträge</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobfilters.html">Auftragsfilter</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Auftragsfilter</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Die Filter auf der Auftragsseite helfen Ihnen, Aufträge, aktive Teile und
+Schachtelungen zu finden, indem nur Elemente angezeigt werden, die den
+ausgewählten Bedingungen entsprechen. Sie vereinfachen das Suchen, Sortieren
+und Verwalten von Aufträgen oder Teilen und verbessern die Gesamteffizienz im
+Arbeitsablauf.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/filter.png" alt="Filter" width="726">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_beispiele_der_verfügbaren_filter">Beispiele der verfügbaren Filter</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_priority_und_due_on">Priority und Due on</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Der Filter <strong>Priority</strong> ermöglicht es Ihnen, Teile oder
+Aufträge basierend auf ihrer zugewiesenen Priorität zu suchen und anzuzeigen
+(<strong>Urgent</strong>, <strong>High</strong>,
+<strong>Low</strong>, <strong>Normal</strong>).</p>
+</li>
+<li>
+<p>Wenn Sie eine bestimmte Prioritätsstufe auswählen, werden nur die Teile mit
+dieser spezifischen Priorität hervorgehoben oder in den Ergebnissen angezeigt.</p>
+</li>
+<li>
+<p>Wenn Sie beispielsweise <strong>High</strong> Priorität wählen, filtert
+und hebt das System nur die Teile hervor, die auf der Schachtelung als hohe
+Priorität markiert sind.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/priority.png" alt="Priorität" width="1307">
+</div>
+</div>
+</li>
+<li>
+<p>Der Filter <strong>Due on</strong> ermöglicht es Ihnen, Teile oder Aufträge
+basierend auf ihren zugewiesenen Terminen zu suchen und anzuzeigen.</p>
+</li>
+<li>
+<p>Wenn Sie ein bestimmtes Fälligkeitsdatum auswählen, werden nur die Teile mit
+diesem spezifischen Fälligkeitsdatum hervorgehoben oder in den Ergebnissen
+angezeigt.</p>
+</li>
+<li>
+<p>Neben vordefinierten Fälligkeitsdatumsfiltern wie <strong>Today</strong>,
+<strong>Yesterday</strong>, <strong>Tomorrow</strong> usw. können Sie auch
+benutzerdefinierte Datumswerte/Bereiche im Format <strong>yymmdd</strong> in das Suchfeld
+eingeben.</p>
+</li>
+<li>
+<p>Sie können auch Ausdrücke mit Vergleichsoperatoren (&lt;, &lt;=, &gt;, &gt;=, =) gefolgt
+vom Datumswert verwenden. Beispiel: &gt;=250901 sucht alle Elemente, die am oder
+nach dem 1. September 2025 fällig sind.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/dueon.png" alt="Fällig am" width="1121">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Wenn die Filterliste den Suchinhalt verdeckt, können Sie sie mit dem
+Befehl <strong>Toggle opacity</strong>
+<span class="image"><img src="img/toggleopacity.png" alt="Transparenz umschalten" width="15"></span> transparent machen.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_part_name_layout_name">Part name/ Layout name</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Der Filter <strong>Part name</strong> ist auf der Auftrags- und
+Schachtelungsseite verfügbar.</p>
+</li>
+<li>
+<p>Während Sie den Teilenamen eingeben, wird eine Vorschlagsliste angezeigt, die
+Ihnen hilft, das richtige Teil schnell auszuwählen.</p>
+</li>
+<li>
+<p>Durch Auswahl eines oder mehrerer Elemente aus der Vorschlagsliste werden die
+Suchergebnisse auf die ausgewählten Teile eingegrenzt.</p>
+</li>
+<li>
+<p>Auf der Auftragsseite wird dieses Verhalten auf Layoutnamen erweitert,
+sodass Benutzer entweder nach Teilename oder Layoutname suchen können.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/partname.png" alt="Teilename" width="1453">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_remnant">Remnant</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Verwenden Sie den Filter <strong>Remnant</strong>, um Layouts basierend auf
+der Reststückverfügbarkeit zu suchen.</p>
+</li>
+<li>
+<p>Das Dropdown-Menü zeigt folgende Optionen an:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>No Remnant</strong> - listet Layouts auf, bei denen
+kein Reststück erstellt wird.</p>
+</li>
+<li>
+<p><strong>Exists</strong> - listet Layouts auf, bei denen
+bereits ein Reststück vorhanden ist.</p>
+</li>
+<li>
+<p><strong>Added</strong> - listet Layouts auf, bei denen ein
+neues Reststück hinzugefügt wurde.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Hilft bei der effizienten Identifizierung und Verwaltung von übrig
+gebliebenem Blechmaterial.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/remnant.png" alt="Reststück" width="990">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_beispiele_der_verfügbaren_filter">Beispiele der verfügbaren Filter</a>
+  </li>
+  <li level="2">
+   <a href="#_priority_und_due_on">Priority und Due on</a>
+  </li>
+  <li level="2">
+   <a href="#_part_name_layout_name">Part name/ Layout name</a>
+  </li>
+  <li level="2">
+   <a href="#_remnant">Remnant</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="outdate.html">Veraltet</a></span>
+ <span class="next"><a href="../factory/index.html">Factory</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

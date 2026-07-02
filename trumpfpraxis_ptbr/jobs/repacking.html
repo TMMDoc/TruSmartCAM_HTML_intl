@@ -1,0 +1,474 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Reempacotamento</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TRUMPF Praxis Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Bem-vindo ao TRUMPF Praxis</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Instalação</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Requisitos de hardware</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Formatos de arquivo suportados</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Pré-requisitos</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Instalação do servidor</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Instalação do cliente</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Alterar licença</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Configuração</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Adicionar/Remover máquina</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Configurar ferramentas</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Configurar usuários</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Idioma</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Adicionar novo material e chapa</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Exportar/Importar material</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Substituir material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Mapear material</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Mapear páginas CAM</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Mapear campos do CAD (chaves de consulta)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">A interface do usuário</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Fluxo de Trabalho</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Library</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Importar peças</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Importar pedidos</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Importar trabalhos</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Importar montagens</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Visualização da biblioteca</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Peças</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Montagem</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Status da peça</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Validação de peça</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Painel de peça</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Filtros de peças</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Status de ferramentas</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Validação de ferramentas</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Validação de ferramentas de dobra</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Validação de ferramentas de corte</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Validação de ferramentas de dobra de painel</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Painel de ferramentas</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Salvar filtros</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Pedidos</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Visualização de pedidos</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Jobs</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">Criar trabalho</a></li>
+    <li><button class="tree blank"></button><a href="jobview.html">Visualização do trabalho</a></li>
+    <li><button class="tree blank"></button><a href="jobpanel.html">Painel do trabalho</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">Planejamento automático</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">Nesting interativo</a></li>
+    <li><button class="tree blank"></button><a class="active" href="repacking.html">Reempacotamento</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">Gerenciamento de nests</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">Visualização de nest</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">Painel de layout</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">Remetente de relatório</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">Gerenciamento de remanescentes</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">Gerenciamento automático de remanescentes</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">Gerenciamento manual de remanescentes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">Nesting Twinline</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">Desatualizado</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">Filtros de trabalho</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Rotas</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Chapas</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Usuários</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Editar</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Clientes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Configurações</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Ambiente</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Importação</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Dobra</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Corte</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notificações</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Monitoramento</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Trabalho</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Relatórios</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">Extensões CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Etapas de instalação</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Salvar no TRUMPF Praxis</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Salvar montagem</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Verificar viabilidade</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Configurações da fábrica</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Melhorias diversas</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Jobs</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="repacking.html">Reempacotamento</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Reempacotamento</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>TRUMPF Praxis não possui um módulo de Reempacotamento separado. Em vez disso, o
+reempacotamento é tratado através de opções em nível de trabalho que oferecem
+flexibilidade em como as peças são combinadas.</p>
+</div>
+<div class="paragraph">
+<p>Existem três formas pelas quais o reempacotamento pode ser feito.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reempacotamento com
+<strong>Mix parts from multiple Jobs</strong>.</p>
+</li>
+<li>
+<p>Reempacotamento Manual Usando o Assistente Interativo <strong>Add Parts</strong>.</p>
+</li>
+<li>
+<p>Reempacotamento Manual Usando TecZone.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reempacotamento_com_mix_parts_from_multiple_jobs">Reempacotamento com mix parts from multiple Jobs</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Para habilitar esta opção vá para <strong>factory</strong> &#8594;
+<strong>settings</strong> &#8594; <strong>Job</strong> &#8594;
+<strong>Nest settings</strong> &#8594;
+<strong>Mix parts from multiple Jobs</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/mixparts.png" alt="Mix Parts" width="735">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Quando habilitada, esta opção permite que peças de diferentes trabalhos sejam
+agrupadas durante o auto nesting ou nesting interativo, resultando em um
+empacotamento ou nesting combinado.</p>
+</li>
+<li>
+<p>Por exemplo:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Job-1 tem 1 peça, Job-2 tem 1 peça.</p>
+</li>
+<li>
+<p>Com <strong>Mix parts from multiple Jobs</strong>
+habilitado, o TRUMPF Praxis pode reempacotar essas 2 peças em um único nest otimizado.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/mixnest1.png" alt="Mix Nest1" width="415"></span> <span class="image"><img src="img/mixnest2.png" alt="Mix Nest2" width="400"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sem esta opção, peças de cada trabalho permanecem separadas durante o
+nesting/empacotamento com nomes de layout diferentes.</p>
+</li>
+<li>
+<p>O reempacotamento também pode ser realizado manualmente sem habilitar esta opção.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reempacotamento_manual_usando_assistente_interativo_de_adicionar_peças">Reempacotamento manual usando assistente interativo de adicionar peças</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Na visualização de layout, selecione as peças que deseja reempacotar.</p>
+</li>
+<li>
+<p>Clique com o botão direito na peça e escolha <strong>Add Parts&#8230;&#8203;</strong>
+no painel de layout.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/addparts.png" alt="Add Parts" width="740">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Siga as instruções no assistente para concluir o processo de reempacotamento.</p>
+</li>
+<li>
+<p>Escolha <strong>Show other job parts</strong> e adicione-os ao
+trabalho atual.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/manualrepacking2.png" alt="Manual Repacking2" width="1846">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Revise as alterações e confirme o reempacotamento.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/manualrepacking1.png" alt="Manual Repacking1" width="1846">
+</div>
+</div>
+<div class="paragraph">
+<p>Para mais detalhes consulte <a href="./layoutcommands/addparts.html">Add Parts</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reempacotamento_manual_usando_teczone">Reempacotamento manual usando TecZone</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Abra o TecZone clicando em <span class="image"><img src="img/editicon.png" alt="Edit" width="18"></span>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/fluxlayout.png" alt="Flux Layout" width="741">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Na interface do TecZone, clique em Add.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/fluxadd.png" alt="Add" width="544">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Uma nova janela aparece onde você pode selecionar as peças a serem reempacotadas.
+Clique em <strong>Show&#8230;&#8203;</strong> e selecione <strong>Other job parts</strong>.
+Após fazer sua seleção, clique em <strong>Pick</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/pick.png" alt="Pick" width="838">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Uma nova janela aparece onde você pode definir onde a peça precisa ser
+reempacotada.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/selection.png" alt="Selection" width="408">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Clique em <strong>Save changes to TRUMPF Praxis</strong> e o
+layout reempacotado estará disponível no TRUMPF Praxis.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/fluxrepack1.png" alt="Flux Repack1" width="410"></span> <span class="image"><img src="img/fluxrepack2.png" alt="Flux Repack2" width="418"></span></p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_reempacotamento_com_mix_parts_from_multiple_jobs">Reempacotamento com mix parts from multiple Jobs</a>
+  </li>
+  <li level="1">
+   <a href="#_reempacotamento_manual_usando_assistente_interativo_de_adicionar_peças">Reempacotamento manual usando assistente interativo de adicionar peças</a>
+  </li>
+  <li level="1">
+   <a href="#_reempacotamento_manual_usando_teczone">Reempacotamento manual usando TecZone</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobinteractplan.html">Nesting interativo</a></span>
+ <span class="next"><a href="layoutcommands/index.html">Gerenciamento de nests</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

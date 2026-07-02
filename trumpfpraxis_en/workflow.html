@@ -1,0 +1,452 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="res/bento.css">
+  <link rel="stylesheet" href="res/site.css">
+  <link rel="stylesheet" href="res/tree.css">
+  <link rel="stylesheet" href="res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="img/praxis-icon.png">
+  <title>Workflow</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="img/logo.png" width="120" height="34" /></div>
+        <div><p>TRUMPF Praxis Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="index.html">Welcome to TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="installation/changelic.html">Change license</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="configuration/index.html">Configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="configuration/setupmachine.html">Add/Remove machine</a></li>
+    <li><button class="tree blank"></button><a href="configuration/setuptooling.html">Setup tooling</a></li>
+    <li><button class="tree blank"></button><a href="configuration/configureusers.html">Configure users</a></li>
+    <li><button class="tree blank"></button><a href="configuration/language.html">Language</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="configuration/addmaterial/addnew.html">Add new material and sheet</a></li>
+      <li><button class="tree blank"></button><a href="configuration/addmaterial/exportimport.html">Export/Import material</a></li>
+      <li><button class="tree blank"></button><a href="configuration/addmaterial/replacematerial.html">Replace material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="configuration/mapbendpages.html">Map material</a></li>
+    <li><button class="tree blank"></button><a href="configuration/mapcampages.html">Map CAM pages</a></li>
+    <li><button class="tree blank"></button><a href="configuration/cadmapfields.html">Map fields from CAD (lookup keys)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="userinterface.html">The user interface</a></li>
+  <li><button class="tree blank"></button><a class="active" href="workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="library/index.html">Library</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="library/open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="library/open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="library/open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="library/partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="library/partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="library/partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="library/toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="library/toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="library/toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="library/toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="library/toolingstatus/toolingpanel.html">Tooling panel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="library/savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="orders/index.html">Orders</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="orders/ordersview.html">Orders view</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="jobs/jobcreation.html">Create job</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobview.html">Job view</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobpanel.html">Job panel</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobautoplan.html">Auto plan</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobinteractplan.html">Interactive nesting</a></li>
+    <li><button class="tree blank"></button><a href="jobs/repacking.html">Repacking</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="jobs/layoutcommands/index.html">Nest management</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="jobs/layoutcommands/nestview.html">Layout view</a></li>
+      <li><button class="tree blank"></button><a href="jobs/layoutcommands/layoutpanel.html">Layout panel</a></li>
+      <li><button class="tree blank"></button><a href="jobs/layoutcommands/reportsender.html">Report sender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="jobs/remnantmanagement/index.html">Remnant management</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="jobs/remnantmanagement/autoremnant.html">Auto remnant management</a></li>
+      <li><button class="tree blank"></button><a href="jobs/remnantmanagement/manualremnant.html">Manual remnant management</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="jobs/twinlinenesting.html">Twinline nesting</a></li>
+    <li><button class="tree blank"></button><a href="jobs/outdate.html">Out-of-date</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobfilters.html">Job filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="cadextensions/index.html">CAD extensions</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/savetopraxis.html">Save parts</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/saveassembly.html">Save assembly</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/partfeasibility.html">Check feasibility</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/factorysettings.html">Factory settings</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/miscenhancements.html">Misc enhancements</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="workflow.html">Workflow</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Workflow</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>TruSmartCAM is a Manufacturing Execution System that manages and optimizes sheet
+metal manufacturing processes. A workflow in TruSmartCAM consists of a series of
+steps that you follow to complete a specific task or process. You can customize
+the workflow to fit different manufacturing processes and adapt it to your
+specific needs. The workflow in TruSmartCAM typically includes the
+following steps:</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_configure_the_system">1. Configure the system</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Configure TruSmartCAM to match your manufacturing environment. This foundational
+step includes defining machines with their capabilities and parameters, adding
+available materials and thickness ranges, configuring tooling libraries with
+punches and dies, creating setup sheets for different machine configurations,
+and managing user accounts with appropriate permissions. A properly configured
+system ensures accurate processing and prevents errors in later stages. This
+setup is typically performed once during initial deployment, with periodic
+updates as your factory evolves.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see <a href="configuration/setupmachine.html">Add/Remove
+machine</a>, <a href="configuration/addmaterial/index.html">Material</a>,
+<a href="factory/sheets.html">Sheets</a>, <a href="configuration/setuptooling.html">Setup
+tooling</a>, and <a href="configuration/configureusers.html">Configure users</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/setup.png" alt="Setup" width="817">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_add_parts_to_the_library">2. Add parts to the library</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Import 2D or 3D CAD parts into the Part Library using supported formats such as
+DXF, DWG, or STEP files. During import, TruSmartCAM automatically analyzes the
+part geometry, validates manufacturability, assigns required sheet metal
+technology (laser, punch, or combination), and generates preview thumbnails.
+Imported parts appear as tiles in the library view, where color-coded icons
+indicate part status, technology type, material requirements, and any detected
+issues. This visual system allows quick assessment of part readiness at a
+glance.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see <a href="library/index.html">Library</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/importparts.png" alt="Import" width="476">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_verify_parts_and_tooling">3. Verify parts and tooling</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Review each imported part for potential production issues. Verify that part
+geometry is valid and manufacturable, tooling assignments are correct and
+available, material and thickness selections match inventory, and bending
+sequences are properly defined for formed parts. If problems are detected, open
+the part in TecZone to modify geometry, reassign or optimize tooling, adjust
+processing parameters, or correct material specifications. Resolving issues at
+this stage prevents production delays and reduces scrap during manufacturing.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see <a href="library/partstate/index.html">Part state</a>
+and <a href="library/toolingstatus/index.html">Tooling status</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingcheck.png" alt="Tooling" width="1078">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_organize_parts_into_jobs">4. Organize parts into jobs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Group validated parts into jobs based on production requirements. A job
+represents a logical production unit that may include parts from a single
+customer order, parts sharing common materials and thickness, parts with
+similar delivery deadlines, or a combination based on your production strategy.
+Jobs provide a container for planning, allow batch processing of related parts,
+enable efficient material utilization through nesting, and simplify tracking
+and reporting. Jobs can be created manually by selecting parts, or
+automatically based on predefined rules and filters.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see <a href="jobs/index.html">Jobs</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobs.png" alt="Jobs" width="578">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_5_plan_jobs_to_production_machines">5. Plan jobs to production machines</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Once a job is created, assign it to an appropriate production machine. Consider
+machine capabilities including supported technologies (laser, punch, turret),
+material and thickness capacity, available tooling, and current workload. If
+multiple suitable machines exist, select based on production priority, machine
+availability, setup requirements, or cost optimization. Assignment can be
+manual for flexibility or automatic based on pre-configured rules and machine
+scheduling algorithms.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see <a href="jobs/jobautoplan.html">Plan job</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/machineselect.png" alt="MachineSelect" width="695">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_6_release_nc_for_jobs">6. Release NC for jobs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>At this stage, cut layouts are generated. You can still edit layouts and add
+cutting technologies to the layout using TecZone. Afterward, export the NC
+output and transfer it to the machine controller or a designated network
+location. The job is then locked to prevent further modifications, and its
+status is updated to "Released" for production tracking.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see <a href="jobs/layoutcommands/layoutpanel.html#send-to-machine">Send/Recall NC</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/production.png" alt="Production" width="444">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_7_complete_production_and_finalize_jobs">7. Complete production and finalize jobs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Execute the released job on the assigned machine. During production, the
+machine operator follows the NC program, verifies part quality during cutting,
+manages material loading and unloading, and addresses any machine alarms or
+issues. After production is finished, mark individual parts or the entire job
+as complete in TruSmartCAM. This final step updates inventory records, records
+actual production time and material usage, archives job data for reporting and
+analysis, and completes the workflow cycle.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see <a href="jobs/layoutcommands/layoutpanel.html#mark-complete">Mark
+complete</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/complete.png" alt="Complete" width="435">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_1_configure_the_system">1. Configure the system</a>
+  </li>
+  <li level="1">
+   <a href="#_2_add_parts_to_the_library">2. Add parts to the library</a>
+  </li>
+  <li level="1">
+   <a href="#_3_verify_parts_and_tooling">3. Verify parts and tooling</a>
+  </li>
+  <li level="1">
+   <a href="#_4_organize_parts_into_jobs">4. Organize parts into jobs</a>
+  </li>
+  <li level="1">
+   <a href="#_5_plan_jobs_to_production_machines">5. Plan jobs to production machines</a>
+  </li>
+  <li level="1">
+   <a href="#_6_release_nc_for_jobs">6. Release NC for jobs</a>
+  </li>
+  <li level="1">
+   <a href="#_7_complete_production_and_finalize_jobs">7. Complete production and finalize jobs</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="userinterface.html">The user interface</a></span>
+ <span class="next"><a href="library/index.html">Library</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="res/index.js"></script>
+    <script src="res/files.js"></script>
+    <script src="res/site.js"></script>
+
+    
+</body>
+</html>
