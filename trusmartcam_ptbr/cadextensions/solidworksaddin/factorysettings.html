@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../../res/sibling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
-  <title>Configurações da fábrica</title>
+  <title>Configurações de fábrica</title>
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
@@ -121,7 +121,7 @@
    <a href="../../jobs/index.html">Trabalho</a>
    <ul class="hide">
     <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Criar trabalho</a></li>
-    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Visualização do trabalho</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Visualização de job</a></li>
     <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Painel do trabalho</a></li>
     <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Planejamento automático</a></li>
     <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Nesting interativo</a></li>
@@ -130,7 +130,7 @@
      <button class="tree closed"></button>
      <a href="../../jobs/layoutcommands/index.html">Gerenciamento de nests</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Visualização de nest</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Visualização de layout</a></li>
       <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Painel de layout</a></li>
      </ul>
     </li>
@@ -138,11 +138,11 @@
      <button class="tree closed"></button>
      <a href="../../jobs/remnantmanagement/index.html">Gerenciamento de remanescentes</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Gerenciamento automático de remanescentes</a></li>
-      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Gerenciamento manual de remanescentes</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Gerenciamento automático de retalhos</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Gerenciamento manual de retalhos</a></li>
      </ul>
     </li>
-    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Nesting Twinline</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Nesting twin-line</a></li>
     <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Desatualizado</a></li>
     <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtros de trabalho</a></li>
    </ul>
@@ -165,8 +165,8 @@
       <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Dobra</a></li>
       <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Corte</a></li>
       <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notificações</a></li>
-      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Monitoramento</a></li>
-      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Trabalho</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
       <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Relatórios</a></li>
      </ul>
     </li>
@@ -180,11 +180,11 @@
      <button class="tree open"></button>
      <a href="index.html">SolidWorks addin</a>
      <ul>
-      <li><button class="tree blank"></button><a href="installationsteps.html">Etapas de instalação</a></li>
-      <li><button class="tree blank"></button><a href="savetopraxis.html">Salvar no TruSmartCAM</a></li>
+      <li><button class="tree blank"></button><a href="installationsteps.html">Instalação</a></li>
+      <li><button class="tree blank"></button><a href="savetopraxis.html">Salvar peças</a></li>
       <li><button class="tree blank"></button><a href="saveassembly.html">Salvar montagem</a></li>
       <li><button class="tree blank"></button><a href="partfeasibility.html">Verificar viabilidade</a></li>
-      <li><button class="tree blank"></button><a class="active" href="factorysettings.html">Configurações da fábrica</a></li>
+      <li><button class="tree blank"></button><a class="active" href="factorysettings.html">Configurações de fábrica</a></li>
       <li><button class="tree blank"></button><a href="miscenhancements.html">Melhorias diversas</a></li>
      </ul>
     </li>
@@ -211,17 +211,68 @@
  </div>
  <div>/</div>
  <div>
-  <a href="factorysettings.html">Configurações da fábrica</a>
+  <a href="factorysettings.html">Configurações de fábrica</a>
  </div>
 </nav>
 
             <div id="site-crumb-below">
                 <div id="site-toc-left">
                     <article id="article">
-                        <h1>Configurações da fábrica</h1>
+                        <h1>Configurações de fábrica</h1>
 <div class="paragraph">
-<p>Esta seção explica as configurações de fábrica disponíveis no Add-in TruSmartCAM
-para SolidWorks.</p>
+<p>Esta configuração permite que os usuários visualizem e atualizem tanto as configurações de fábrica
+do TruSmartCAM quanto as configurações do TecZone diretamente do SolidWorks. Isso inclui parâmetros como
+materiais do TecZone, catálogos de dobra, deduções de dobra personalizadas e outras
+configurações relacionadas à máquina que influenciam a viabilidade da peça e a prontidão
+para produção.</p>
+</div>
+<div class="paragraph">
+<p>O recurso fornece uma maneira conveniente de revisar ou ajustar configurações de
+fabricação sem sair do ambiente CAD — especialmente ao realizar
+verificações de viabilidade ou correções de projeto que dependem de
+configurações específicas da fábrica.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/factory.png" alt="factory" width="682">
+</div>
+</div>
+<div class="paragraph">
+<p>Acessar as <strong>Ajustes de fábrica</strong> de dentro do SolidWorks é especialmente útil quando:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Uma verificação de viabilidade falha devido a configurações de material/dobra
+desatualizadas ou incorretas.</p>
+</li>
+<li>
+<p>Engenheiros de projeto precisam verificar raios de dobra, tolerâncias ou limites da máquina
+sem alternar entre múltiplos aplicativos.</p>
+</li>
+<li>
+<p>A colaboração entre as equipes CAD e CAM requer verificação cruzada rápida
+de parâmetros de produção.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Permissões administrativas são necessárias para modificar ou salvar configurações de
+máquina ou fábrica.</p>
+</div>
+<div class="paragraph">
+<p>Usuários sem direitos de administrador ainda podem visualizar todas as configurações como referência.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 
                     </article>

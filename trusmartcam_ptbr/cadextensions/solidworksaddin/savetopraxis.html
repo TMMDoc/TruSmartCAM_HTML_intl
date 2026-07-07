@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../../res/sibling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
-  <title>Salvar no TruSmartCAM</title>
+  <title>Salvar peças</title>
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
@@ -121,7 +121,7 @@
    <a href="../../jobs/index.html">Trabalho</a>
    <ul class="hide">
     <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Criar trabalho</a></li>
-    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Visualização do trabalho</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Visualização de job</a></li>
     <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Painel do trabalho</a></li>
     <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Planejamento automático</a></li>
     <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Nesting interativo</a></li>
@@ -130,7 +130,7 @@
      <button class="tree closed"></button>
      <a href="../../jobs/layoutcommands/index.html">Gerenciamento de nests</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Visualização de nest</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Visualização de layout</a></li>
       <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Painel de layout</a></li>
      </ul>
     </li>
@@ -138,11 +138,11 @@
      <button class="tree closed"></button>
      <a href="../../jobs/remnantmanagement/index.html">Gerenciamento de remanescentes</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Gerenciamento automático de remanescentes</a></li>
-      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Gerenciamento manual de remanescentes</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Gerenciamento automático de retalhos</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Gerenciamento manual de retalhos</a></li>
      </ul>
     </li>
-    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Nesting Twinline</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Nesting twin-line</a></li>
     <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Desatualizado</a></li>
     <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtros de trabalho</a></li>
    </ul>
@@ -165,8 +165,8 @@
       <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Dobra</a></li>
       <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Corte</a></li>
       <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notificações</a></li>
-      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Monitoramento</a></li>
-      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Trabalho</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
       <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Relatórios</a></li>
      </ul>
     </li>
@@ -180,11 +180,11 @@
      <button class="tree open"></button>
      <a href="index.html">SolidWorks addin</a>
      <ul>
-      <li><button class="tree blank"></button><a href="installationsteps.html">Etapas de instalação</a></li>
-      <li><button class="tree blank"></button><a class="active" href="savetopraxis.html">Salvar no TruSmartCAM</a></li>
+      <li><button class="tree blank"></button><a href="installationsteps.html">Instalação</a></li>
+      <li><button class="tree blank"></button><a class="active" href="savetopraxis.html">Salvar peças</a></li>
       <li><button class="tree blank"></button><a href="saveassembly.html">Salvar montagem</a></li>
       <li><button class="tree blank"></button><a href="partfeasibility.html">Verificar viabilidade</a></li>
-      <li><button class="tree blank"></button><a href="factorysettings.html">Configurações da fábrica</a></li>
+      <li><button class="tree blank"></button><a href="factorysettings.html">Configurações de fábrica</a></li>
       <li><button class="tree blank"></button><a href="miscenhancements.html">Melhorias diversas</a></li>
      </ul>
     </li>
@@ -211,27 +211,275 @@
  </div>
  <div>/</div>
  <div>
-  <a href="savetopraxis.html">Salvar no TruSmartCAM</a>
+  <a href="savetopraxis.html">Salvar peças</a>
  </div>
 </nav>
 
             <div id="site-crumb-below">
                 <div id="site-toc-left">
                     <article id="article">
-                        <h1>Salvar no TruSmartCAM</h1>
+                        <h1>Salvar peças</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>Esta seção explica como salvar peças do SolidWorks diretamente na biblioteca de
-peças do TruSmartCAM.</p>
+<p>Inicie o SolidWorks e abra uma peça de chapa metálica (.sldprt).</p>
+</div>
+<div class="paragraph">
+<p>Em seguida, siga estas etapas:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Mude para a aba TruSmartCAM no SolidWorks para acessar a barra de ferramentas do TruSmartCAM.</p>
+</li>
+<li>
+<p>Clique em <strong>Salvar no Praxis</strong> na barra de ferramentas do <strong>TruSmartCAM</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>No diálogo <strong>Salvar no Praxis</strong>, selecione o material bruto apropriado do TruSmartCAM, então
+clique em <strong>OK</strong> para fazer upload e salvar a peça na biblioteca de peças do TruSmartCAM.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/savepraxis.png" alt="Save Praxis" width="850">
+</div>
+</div>
+<div class="paragraph">
+<p>A peça será salva no TruSmartCAM.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/part.png" alt="Part" width="372">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+O TruSmartCAM inclui algumas peças de exemplo localizadas em <code>C:\Program
+Files\Metamation\ TruSmartCAM \Samples\Parts</code>. Você pode usá-las para fins de teste, se
+necessário.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_resolução_automática_de_material">Resolução automática de material</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Este recurso converte automaticamente materiais do SolidWorks e valores de espessura
+da peça nos materiais brutos correspondentes do TruSmartCAM durante o upload.</p>
+</div>
+<div class="paragraph">
+<p>Para configurar o mapeamento de material:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Clique em <strong>Opções</strong> na barra de ferramentas do <strong>TruSmartCAM</strong> para abrir o diálogo <strong>Opções</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/mapmaterial.png" alt="Map Material" width="850">
+</div>
+</div>
+</li>
+<li>
+<p>Navegue até a página <strong>Mapeamento do material</strong>.</p>
+</li>
+<li>
+<p>No painel esquerdo, selecione um material do SolidWorks.</p>
+</li>
+<li>
+<p>No painel direito, selecione o material correspondente do TruSmartCAM.</p>
+</li>
+<li>
+<p>Clique em <strong>Mapear</strong> para criar o mapeamento.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>O par mapeado aparece na lista de mapeamento na parte inferior.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Para remover um mapeamento, selecione-o e clique em <strong>Cancelar mapeamento</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuração_de_tolerância_de_espessura">Configuração de tolerância de espessura</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>O valor de tolerância de espessura define a faixa de tolerância dentro da qual o TruSmartCAM
+corresponde a espessura do modelo de chapa metálica do SolidWorks a um material bruto
+existente no banco de dados do TruSmartCAM. Ele compensa pequenas variações
+na espessura do modelo causadas por arredondamento de projeto, conversões de unidade, etc&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Quando a espessura da peça do SolidWorks não corresponde exatamente a um material no TruSmartCAM,
+o valor de tolerância garante que o material disponível mais próximo seja selecionado
+automaticamente.</p>
+</div>
+<div class="paragraph">
+<div class="title">Exemplo</div>
+<p>Com um material nominal de 2,0 mm e um valor de tolerância de 0,05 mm:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>O TruSmartCAM aceita qualquer espessura de modelo do SolidWorks entre 1,95 mm e 2,05 mm como
+uma correspondência válida.</p>
+</li>
+<li>
+<p>Desvios além desta faixa acionarão uma solicitação de seleção manual de material
+durante o upload da peça.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Para visualizar ou modificar o valor de tolerância:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Clique em <strong>Opções</strong> na barra de ferramentas do <strong>TruSmartCAM</strong> e então navegue até <strong>Ajustes div.</strong> para visualizar
+o valor de tolerância, agora clique em <strong>Salvar no Praxis</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/thicknessfudge.png" alt="Thickness Fudge" width="850">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>No diálogo <strong>Salvar no Praxis</strong> clique em <strong>OK</strong>, a peça será salva no TruSmartCAM.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/configuration.png" alt="Configuration" width="428">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_leitura_de_propriedades_personalizadas_da_peça">Leitura de propriedades personalizadas da peça</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Esta configuração permite que o TruSmartCAM leia automaticamente informações personalizadas da peça — como
+<strong>Material</strong>, <strong>Revision</strong> e outros atributos definidos pelo usuário — diretamente dos
+arquivos de peça do SolidWorks.</p>
+</div>
+<div class="paragraph">
+<p>Para configurar:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Clique em <strong>Opções</strong> na barra de ferramentas do <strong>TruSmartCAM</strong> para abrir o diálogo <strong>Opções</strong> e então
+navegue até <strong>Campos personalizados</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/custompart.png" alt="Custom Part" width="850">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use os botões <strong>Mapear</strong> e <strong>Cancelar mapeamento</strong> para vincular os campos necessários do TruSmartCAM com os
+campos Custom ou Configuration correspondentes do SolidWorks.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Os valores exibidos são carregados da peça do SolidWorks atualmente ativa.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Uma vez que o mapeamento esteja completo, as propriedades personalizadas selecionadas serão
+automaticamente lidas do SolidWorks sempre que peças forem importadas ou atualizadas no
+TruSmartCAM, agora clique em <strong>Salvar no Praxis</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Os mapeamentos definidos aqui são salvos no repositório do TruSmartCAM e
+automaticamente sincronizados em todas as instalações do TruSmartCAM SolidWorks dentro
+da rede.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>No diálogo <strong>Salvar no Praxis</strong> clique em <strong>OK</strong>, a peça será salva no TruSmartCAM.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/default.png" alt="Default" width="428">
+</div>
+</div>
+</div>
 </div>
 
                     </article>
                 </div>
                 <div id="site-toc-holder">
-                    <aside id="site-toc"></aside>
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_resolução_automática_de_material">Resolução automática de material</a>
+  </li>
+  <li level="1">
+   <a href="#_configuração_de_tolerância_de_espessura">Configuração de tolerância de espessura</a>
+  </li>
+  <li level="1">
+   <a href="#_leitura_de_propriedades_personalizadas_da_peça">Leitura de propriedades personalizadas da peça</a>
+  </li>
+ </ul>
+</aside>
+
                 </div>
             </div>
             <nav class="pagination">
- <span class="prev"><a href="installationsteps.html">Etapas de instalação</a></span>
+ <span class="prev"><a href="installationsteps.html">Instalação</a></span>
  <span class="next"><a href="saveassembly.html">Salvar montagem</a></span>
 </nav>
 

@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../../res/sibling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
-  <title>Monitoramento</title>
+  <title>Watch</title>
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
@@ -121,7 +121,7 @@
    <a href="../../jobs/index.html">Trabalho</a>
    <ul class="hide">
     <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Criar trabalho</a></li>
-    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Visualização do trabalho</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Visualização de job</a></li>
     <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Painel do trabalho</a></li>
     <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Planejamento automático</a></li>
     <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Nesting interativo</a></li>
@@ -130,7 +130,7 @@
      <button class="tree closed"></button>
      <a href="../../jobs/layoutcommands/index.html">Gerenciamento de nests</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Visualização de nest</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Visualização de layout</a></li>
       <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Painel de layout</a></li>
      </ul>
     </li>
@@ -138,11 +138,11 @@
      <button class="tree closed"></button>
      <a href="../../jobs/remnantmanagement/index.html">Gerenciamento de remanescentes</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Gerenciamento automático de remanescentes</a></li>
-      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Gerenciamento manual de remanescentes</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Gerenciamento automático de retalhos</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Gerenciamento manual de retalhos</a></li>
      </ul>
     </li>
-    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Nesting Twinline</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Nesting twin-line</a></li>
     <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Desatualizado</a></li>
     <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtros de trabalho</a></li>
    </ul>
@@ -165,8 +165,8 @@
       <li><button class="tree blank"></button><a href="bend.html">Dobra</a></li>
       <li><button class="tree blank"></button><a href="cut.html">Corte</a></li>
       <li><button class="tree blank"></button><a href="notification.html">Notificações</a></li>
-      <li><button class="tree blank"></button><a class="active" href="watch.html">Monitoramento</a></li>
-      <li><button class="tree blank"></button><a href="job.html">Trabalho</a></li>
+      <li><button class="tree blank"></button><a class="active" href="watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="job.html">Job</a></li>
       <li><button class="tree blank"></button><a href="reports.html">Relatórios</a></li>
      </ul>
     </li>
@@ -180,11 +180,11 @@
      <button class="tree closed"></button>
      <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Etapas de instalação</a></li>
-      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Salvar no TruSmartCAM</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Instalação</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Salvar peças</a></li>
       <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Salvar montagem</a></li>
       <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Verificar viabilidade</a></li>
-      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Configurações da fábrica</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Configurações de fábrica</a></li>
       <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Melhorias diversas</a></li>
      </ul>
     </li>
@@ -211,27 +211,150 @@
  </div>
  <div>/</div>
  <div>
-  <a href="watch.html">Monitoramento</a>
+  <a href="watch.html">Watch</a>
  </div>
 </nav>
 
             <div id="site-crumb-below">
                 <div id="site-toc-left">
                     <article id="article">
-                        <h1>Monitoramento</h1>
+                        <h1>Watch</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>Configurações de monitoramento de pasta para o TruSmartCAM.</p>
+<p>As configurações de Watch permitem que o TruSmartCAM monitore uma pasta designada e importe automaticamente arquivos no sistema. Isso ajuda a automatizar a importação de Peças, Jobs, Montagens e Pedidos sem intervenção manual.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/watch.png" alt="Watch settings" width="814">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configurações_de_monitoramento">Configurações de monitoramento</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Habilitar "Pasta ao vivo"</strong> - Habilita o monitoramento automático da pasta especificada.</p>
+</div>
+<div class="paragraph">
+<p><strong>Monitorar esta pasta</strong> - Especifica a pasta a ser monitorada para arquivos de entrada.</p>
+</div>
+<div class="paragraph">
+<p><strong>Monitorar também subpastas</strong> - Inclui todas as subpastas no processo de monitoramento.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_após_a_importação_do_arquivo">Após a importação do arquivo</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Após importação</strong> - Após o arquivo ser importado, o usuário tem duas opções. O arquivo pode ser excluído do local ou movido para um local diferente.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Delete imported file</strong> - Remove o arquivo de origem após uma importação bem-sucedida.</p>
+</li>
+<li>
+<p><strong>Move imported file</strong> - Move o arquivo de origem para a pasta especificada em <strong>Move files to this folder</strong> após uma importação bem-sucedida.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Mover arquivos para esta pasta</strong> - Especifica a pasta de destino para onde os arquivos importados com sucesso devem ser movidos quando <strong>After import</strong> está definido como <strong>Move imported file</strong>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Mover planilhas com erros para esta pasta</strong> - Move importações com falha para a pasta de erro especificada.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ajustes_de_importação_da_planilha">Ajustes de importação da planilha</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Importar planilha da "Pasta ao vivo"</strong> - Importa automaticamente arquivos de planilha detectados na pasta watch.</p>
+</div>
+<div class="paragraph">
+<p><strong>Não importar planilhas com erros</strong> - Impede que arquivos contendo erros de validação sejam importados.</p>
+</div>
+<div class="paragraph">
+<p><strong>Opção de importação de planilha</strong> - Seleciona o tipo de dados a importar do menu suspenso. Os formatos de planilha suportados podem incluir CSV, XLSX ou XML. As opções disponíveis são:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Importar tarefas</strong> - Importa dados de job da planilha.</p>
+</li>
+<li>
+<p><strong>Importar pedidos</strong> - Importa dados de pedido da planilha.</p>
+</li>
+<li>
+<p><strong>Importar conjuntos</strong> - Importa dados de montagem da planilha.</p>
+</li>
+<li>
+<p><strong>Importar peças</strong> - Importa dados de peça da planilha.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_informações_adicionais">Informações adicionais</h2>
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Use um caminho UNC <code>(\\ServerName\FolderPath)</code> ou uma unidade mapeada <code>(M:\FolderPath)</code> ao configurar a pasta watch. Não use caminhos locais como <code>C:\FolderPath</code>.</p>
+</li>
+<li>
+<p>O computador executando o serviço Engine do TruSmartCAM deve ter acesso de leitura e gravação à pasta watch configurada. Sem permissões suficientes, os arquivos podem não ser detectados, importados, movidos ou excluídos com sucesso.</p>
+</li>
+<li>
+<p>O mapeamento de planilha deve ser configurado antes de habilitar as Watch Settings. Caso contrário, o TruSmartCAM não será capaz de processar arquivos de planilha detectados na pasta watch.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
 </div>
 
                     </article>
                 </div>
                 <div id="site-toc-holder">
-                    <aside id="site-toc"></aside>
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_configurações_de_monitoramento">Configurações de monitoramento</a>
+  </li>
+  <li level="1">
+   <a href="#_após_a_importação_do_arquivo">Após a importação do arquivo</a>
+  </li>
+  <li level="1">
+   <a href="#_ajustes_de_importação_da_planilha">Ajustes de importação da planilha</a>
+  </li>
+  <li level="1">
+   <a href="#_informações_adicionais">Informações adicionais</a>
+  </li>
+ </ul>
+</aside>
+
                 </div>
             </div>
             <nav class="pagination">
  <span class="prev"><a href="notification.html">Notificações</a></span>
- <span class="next"><a href="job.html">Trabalho</a></span>
+ <span class="next"><a href="job.html">Job</a></span>
 </nav>
 
         </div>

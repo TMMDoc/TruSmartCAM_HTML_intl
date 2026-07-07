@@ -121,7 +121,7 @@
    <a href="../jobs/index.html">Trabalho</a>
    <ul class="hide">
     <li><button class="tree blank"></button><a href="../jobs/jobcreation.html">Criar trabalho</a></li>
-    <li><button class="tree blank"></button><a href="../jobs/jobview.html">Visualização do trabalho</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobview.html">Visualização de job</a></li>
     <li><button class="tree blank"></button><a href="../jobs/jobpanel.html">Painel do trabalho</a></li>
     <li><button class="tree blank"></button><a href="../jobs/jobautoplan.html">Planejamento automático</a></li>
     <li><button class="tree blank"></button><a href="../jobs/jobinteractplan.html">Nesting interativo</a></li>
@@ -130,7 +130,7 @@
      <button class="tree closed"></button>
      <a href="../jobs/layoutcommands/index.html">Gerenciamento de nests</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/nestview.html">Visualização de nest</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/nestview.html">Visualização de layout</a></li>
       <li><button class="tree blank"></button><a href="../jobs/layoutcommands/layoutpanel.html">Painel de layout</a></li>
      </ul>
     </li>
@@ -138,11 +138,11 @@
      <button class="tree closed"></button>
      <a href="../jobs/remnantmanagement/index.html">Gerenciamento de remanescentes</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/autoremnant.html">Gerenciamento automático de remanescentes</a></li>
-      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/manualremnant.html">Gerenciamento manual de remanescentes</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/autoremnant.html">Gerenciamento automático de retalhos</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/manualremnant.html">Gerenciamento manual de retalhos</a></li>
      </ul>
     </li>
-    <li><button class="tree blank"></button><a href="../jobs/twinlinenesting.html">Nesting Twinline</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/twinlinenesting.html">Nesting twin-line</a></li>
     <li><button class="tree blank"></button><a href="../jobs/outdate.html">Desatualizado</a></li>
     <li><button class="tree blank"></button><a href="../jobs/jobfilters.html">Filtros de trabalho</a></li>
    </ul>
@@ -165,8 +165,8 @@
       <li><button class="tree blank"></button><a href="settings/bend.html">Dobra</a></li>
       <li><button class="tree blank"></button><a href="settings/cut.html">Corte</a></li>
       <li><button class="tree blank"></button><a href="settings/notification.html">Notificações</a></li>
-      <li><button class="tree blank"></button><a href="settings/watch.html">Monitoramento</a></li>
-      <li><button class="tree blank"></button><a href="settings/job.html">Trabalho</a></li>
+      <li><button class="tree blank"></button><a href="settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="settings/job.html">Job</a></li>
       <li><button class="tree blank"></button><a href="settings/reports.html">Relatórios</a></li>
      </ul>
     </li>
@@ -180,11 +180,11 @@
      <button class="tree closed"></button>
      <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Etapas de instalação</a></li>
-      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Salvar no TruSmartCAM</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Instalação</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Salvar peças</a></li>
       <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Salvar montagem</a></li>
       <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Verificar viabilidade</a></li>
-      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Configurações da fábrica</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Configurações de fábrica</a></li>
       <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Melhorias diversas</a></li>
      </ul>
     </li>
@@ -215,15 +215,163 @@
                 <div id="site-toc-left">
                     <article id="article">
                         <h1>Rotas</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>As rotas definem o caminho de processamento que as peças seguem através das máquinas
-disponíveis na fábrica.</p>
+<p>Com base em sua licença, o TruSmartCAM terá um conjunto padrão de máquinas CAM e
+configurações de roteamento. Você pode personalizar essas configurações para se adequar aos seus
+fluxos de trabalho de fabricação específicos.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/station.png" alt="Station" width="882">
+</div>
+</div>
+<div class="paragraph">
+<p>Na página de rotas, as máquinas são representadas como estações de processamento, cada uma
+identificada por uma imagem e um nome.</p>
+</div>
+<div class="paragraph">
+<p>As rotas conectam as estações, mostrando os possíveis caminhos de fluxo de trabalho que uma peça pode
+seguir do início ao fim. Você pode visualizar as propriedades da estação passando o mouse sobre uma
+estação.</p>
+</div>
+<div class="paragraph">
+<p>Clicar em uma estação abre um painel com informações detalhadas sobre essa
+estação, incluindo seu nome, tipo e status de disponibilidade.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Para editar a disponibilidade da estação, clique na estação e
+alterne a caixa de seleção <strong>_Habilitado</strong> no painel.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exportarimportar_configurações_de_roteamento">Exportar/Importar configurações de roteamento</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>O recurso <strong>Export/Import</strong> permite que os usuários salvem suas configurações de roteamento
+atuais e as apliquem a outros projetos ou instâncias.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/export.png" alt="Export" width="335">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exportar_rotas_cad">Exportar rotas CAD</h3>
+<div class="paragraph">
+<p>Clique em <strong>Export CAD routes&#8230;&#8203;</strong> para salvar todas as regras de condição de rota atuais em um arquivo CSV.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportroutes.png" alt="ExportRoutes">
+</div>
+</div>
+<div class="paragraph">
+<p>O CSV lista materiais e suas condições de roteamento.
+As colunas representam nomes de máquinas e condições (ex: Material, SpecialTool, HasBend, MaxBendLength).
+Um valor de 1 indica roteamento para uma máquina; uma célula em branco significa sem roteamento.</p>
+</div>
+<div class="paragraph">
+<p>Você pode modificar este CSV e reimportá-lo no sistema.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_importar_rotas_cad">Importar rotas CAD</h3>
+<div class="paragraph">
+<p>Use <strong>Import CAD routes&#8230;&#8203;</strong> para aplicar um arquivo CSV modificado.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Antes de importar, execute <strong>Reset CAD routes</strong> para limpar as configurações existentes.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>O sistema lê o arquivo e atualiza as condições de rota. As regras podem incluir
+condições como HasBend e MaxBendLength.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/hasbend.png" alt="HasBend">
+</div>
+</div>
+<div class="paragraph">
+<p>Se <code>HasBend = 1</code>, a regra se aplica a peças com dobras.<br>
+Se <code>MaxBendLength =1</code>, a regra limita ainda mais com base no comprimento da maior dobra da peça.</p>
+</div>
+<div class="paragraph">
+<div class="title">Exemplo 1</div>
+<p>A peça 00.13 tem uma dobra mais longa de 500 mm. Ela corresponde à primeira regra, então TBC-5030-V2 é excluída.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/supressed.png" alt="Suppressed" width="580">
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Exemplo 2</div>
+<p>A peça 00.20 tem uma dobra mais longa de 600 mm. Ela não corresponde à primeira regra e segue a segunda regra, roteando para todas as máquinas.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/notsupressed.png" alt="Not Suppressed" width="573">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_redefinir_rotas_cad">Redefinir rotas CAD</h3>
+<div class="paragraph">
+<p>Use <strong>Reset CAD routes</strong> para limpar todas as configurações existentes antes de importar um novo CSV.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Se você importar sem redefinir, regras antigas podem conflitar com as novas.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
 </div>
 
                     </article>
                 </div>
                 <div id="site-toc-holder">
-                    <aside id="site-toc"></aside>
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_exportarimportar_configurações_de_roteamento">Exportar/Importar configurações de roteamento</a>
+  </li>
+  <li level="2">
+   <a href="#_exportar_rotas_cad">Exportar rotas CAD</a>
+  </li>
+  <li level="2">
+   <a href="#_importar_rotas_cad">Importar rotas CAD</a>
+  </li>
+  <li level="2">
+   <a href="#_redefinir_rotas_cad">Redefinir rotas CAD</a>
+  </li>
+ </ul>
+</aside>
+
                 </div>
             </div>
             <nav class="pagination">

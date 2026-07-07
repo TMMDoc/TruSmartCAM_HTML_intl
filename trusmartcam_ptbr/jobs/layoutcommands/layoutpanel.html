@@ -121,7 +121,7 @@
    <a href="../index.html">Trabalho</a>
    <ul>
     <li><button class="tree blank"></button><a href="../jobcreation.html">Criar trabalho</a></li>
-    <li><button class="tree blank"></button><a href="../jobview.html">Visualização do trabalho</a></li>
+    <li><button class="tree blank"></button><a href="../jobview.html">Visualização de job</a></li>
     <li><button class="tree blank"></button><a href="../jobpanel.html">Painel do trabalho</a></li>
     <li><button class="tree blank"></button><a href="../jobautoplan.html">Planejamento automático</a></li>
     <li><button class="tree blank"></button><a href="../jobinteractplan.html">Nesting interativo</a></li>
@@ -130,7 +130,7 @@
      <button class="tree open"></button>
      <a href="index.html">Gerenciamento de nests</a>
      <ul>
-      <li><button class="tree blank"></button><a href="nestview.html">Visualização de nest</a></li>
+      <li><button class="tree blank"></button><a href="nestview.html">Visualização de layout</a></li>
       <li><button class="tree blank"></button><a class="active" href="layoutpanel.html">Painel de layout</a></li>
      </ul>
     </li>
@@ -138,11 +138,11 @@
      <button class="tree closed"></button>
      <a href="../remnantmanagement/index.html">Gerenciamento de remanescentes</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../remnantmanagement/autoremnant.html">Gerenciamento automático de remanescentes</a></li>
-      <li><button class="tree blank"></button><a href="../remnantmanagement/manualremnant.html">Gerenciamento manual de remanescentes</a></li>
+      <li><button class="tree blank"></button><a href="../remnantmanagement/autoremnant.html">Gerenciamento automático de retalhos</a></li>
+      <li><button class="tree blank"></button><a href="../remnantmanagement/manualremnant.html">Gerenciamento manual de retalhos</a></li>
      </ul>
     </li>
-    <li><button class="tree blank"></button><a href="../twinlinenesting.html">Nesting Twinline</a></li>
+    <li><button class="tree blank"></button><a href="../twinlinenesting.html">Nesting twin-line</a></li>
     <li><button class="tree blank"></button><a href="../outdate.html">Desatualizado</a></li>
     <li><button class="tree blank"></button><a href="../jobfilters.html">Filtros de trabalho</a></li>
    </ul>
@@ -165,8 +165,8 @@
       <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Dobra</a></li>
       <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Corte</a></li>
       <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notificações</a></li>
-      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Monitoramento</a></li>
-      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Trabalho</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
       <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Relatórios</a></li>
      </ul>
     </li>
@@ -180,11 +180,11 @@
      <button class="tree closed"></button>
      <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Etapas de instalação</a></li>
-      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Salvar no TruSmartCAM</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Instalação</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Salvar peças</a></li>
       <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Salvar montagem</a></li>
       <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Verificar viabilidade</a></li>
-      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Configurações da fábrica</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Configurações de fábrica</a></li>
       <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Melhorias diversas</a></li>
      </ul>
     </li>
@@ -219,19 +219,502 @@
                 <div id="site-toc-left">
                     <article id="article">
                         <h1>Painel de layout</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>O painel de layout fornece acesso a comandos de gerenciamento de nest para layouts
-individuais dentro de um trabalho.</p>
+<p>Esta seção explica ações relacionadas ao layout como
+<strong>Enviar para a máquina&#8230;&#8203;</strong>,
+<strong>Recuperar da máquina&#8230;&#8203;</strong>,
+<strong>Exportar saídas</strong>,
+<strong>Marcar como concluído&#8230;&#8203;</strong>, <strong>Adicionar peças&#8230;&#8203;</strong>,
+<strong>Adaptar/compactar&#8230;&#8203;</strong>,
+<strong>Dividir layouts&#8230;&#8203;</strong>, e outras opções usadas para gerenciar
+instâncias de layout.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/layout.png" alt="Layout panel" width="181">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Abrir em modo somente leitura para visualização</strong><br>
+Abre o layout selecionado no modo somente leitura.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Habilita a edição do layout selecionado.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Excluir</strong><br>
+Exclui o layout selecionado.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/openreport.png" alt="Report" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ver relatório</strong><br>
+Abre o relatório padrão do layout e o relatório específico de etiquetas para o
+layout selecionado.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sendui.png" alt="Send" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Enviar para a máquina&#8230;&#8203;</strong><br>
+Envia o layout selecionado para a máquina e exporta os arquivos de saída
+(fxlyt, NC, report, csv) para o local de saída do job.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/addui.png" alt="Add" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Adicionar peças&#8230;&#8203;</strong><br>
+Adiciona mais peças a um layout mal empacotado usando o assistente de reempacotamento.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/adaptui.png" alt="Adapt" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Adaptar/compactar&#8230;&#8203;</strong><br>
+Re-aninha o layout selecionado para compactar as peças e liberar área utilizável.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/changeui.png" alt="Change" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Alterar TTL&#8230;&#8203;</strong><br>
+Altera a chapa atribuída ao layout selecionado.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/splitui.png" alt="Split"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Dividir layouts&#8230;&#8203;</strong><br>
+Divide o layout selecionado em dois ou mais layouts separados.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/renameui.png" alt="RenameUi" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rename layout&#8230;&#8203;</strong><br>
+Renomeia o layout selecionado.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tarefa</strong> / <strong>Anterior</strong> / <strong>Próximo</strong> / <strong>Peças</strong><br>
+Navega para o job pai, para o layout anterior ou próximo dentro do
+job selecionado, ou para baixo até as peças contidas no layout.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sort.png" alt="Filters" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ordenar e filtrar</strong><br>
+Use estes filtros para visualizar outros layouts que compartilham o mesmo atributo que
+o layout selecionado: Same Machine, Same Material, Same LTT, Same Priority,
+Same State, Same Sheet, Same Part, Same Remnant State, ou Same Rolling
+direction.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="send-to-machine">Enviar para a máquina&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Quando um nesting está pronto (preenchido ou necessário com urgência), você pode enviá-lo para a
+máquina.</p>
+</li>
+<li>
+<p>Clique com o botão direito no nesting e selecione <strong>Enviar para a máquina&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Uma pasta é criada automaticamente, nomeada conforme o nesting.</p>
+</li>
+<li>
+<p>Arquivos de saída (fxlyt, NC, report, csv) são exportados para o local de saída do JOB.</p>
+</li>
+<li>
+<p>Nestings enviados para a máquina são mostrados com marca de verificação azul.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/sendtomachine.png" alt="Send to machines" width="1180">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Uma vez liberados, esses nestings não são mais tentados para reempacotamento.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_recuperar_da_máquina">Recuperar da máquina&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Se a saída precisar de validação ou atualização (por exemplo, adicionar mais peças):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Clique com o botão direito no layout exportado.</p>
+</li>
+<li>
+<p>Selecione <strong>Recuperar da máquina&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Os arquivos de saída e a pasta (fxlyt, NC, report, csv) são excluídos.</p>
+</li>
+<li>
+<p>O nesting se torna editável novamente.</p>
+</li>
+<li>
+<p>Você pode fazer alterações e enviá-lo para a máquina novamente.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/recallfrommachine.png" alt="Recall from machines" width="1153">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exportar_saídas">Exportar saídas</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Clique com o botão direito em qualquer layout (nesting) que foi enviado para a máquina e clique em
+<strong>Exportar saídas</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput1.png" alt="Export outputs" width="447">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A opção Export Outputs exporta os arquivos NC, Report e Layout para as respectivas
+pastas de saída da máquina.</p>
+</li>
+<li>
+<p>Esta opção regenera o arquivo NC com as configurações de unidade atuais para o
+layout.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Export Outputs não está disponível para Layouts que estão Completos e
+Layouts que estão aguardando na fila para reempacotamento.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mark-complete">Marcar como completo</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Uma vez que o nesting é processado na máquina, clique com o botão direito no nesting e
+selecione <strong>Marcar como concluído&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Você pode selecionar múltiplos nestings e marcá-los como completos ao mesmo tempo.</p>
+</li>
+<li>
+<p>Quando um nesting é marcado como completo:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ele fica acinzentado, é movido para o final da lista e mostrado com uma marca de verificação
+verde.</p>
+</li>
+<li>
+<p>O layout é removido da lista de layouts ativos.</p>
+</li>
+<li>
+<p>Os status da peça e do job são atualizados, e as quantidades processadas passam para
+o estado concluído.</p>
+</li>
+<li>
+<p>Os arquivos de saída desse layout são removidos do local de saída da máquina
+para evitar uso duplicado.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/markcomplete1.png" alt="Mark complete" width="1101">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="add-parts">Adicionar peças&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart1.png" alt="Add parts" width="997">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use esta opção para adicionar mais peças a um layout relativamente mal empacotado. Assim como o
+Nesting Interativo, esta é uma opção orientada por assistente e pode ser usada
+em um único ou múltiplos layouts ao mesmo tempo.</p>
+</li>
+<li>
+<p>O TruSmartCAM monta o assistente de reempacotamento de Layout na área de trabalho principal
+quando esta opção é usada. Mantenha a tecla <kbd>Ctrl</kbd> pressionada e selecione uma ou mais
+peças para serem empacotadas no(s) layout(s) e pressione <strong>Próximo</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart2.png" alt="Part selection" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>As peças selecionadas são exibidas na próxima etapa com uma coluna de quantidade editável. Atualize as quantidades de peças se necessário no campo
+<strong>Update Qty</strong>. Clique em <strong>Próximo</strong> para prosseguir para o nesting. Note que
+as quantidades só podem ser aumentadas, não diminuídas.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart3.png" alt="Update quantity" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>Todos os layouts são aninhados separadamente, e os resultados aninhados são exibidos
+com as peças recém-empacotadas colocadas neles. Selecionar o layout exibe todas
+as peças existentes do layout. O resultado é descartado automaticamente se nenhuma peça nova for
+colocada durante o reempacotamento. Um layout com múltiplas cópias pode resultar em
+padrões diferentes após o reempacotamento.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart4.png" alt="Repack result" width="2200">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="adapt-compact">Adaptar/compactar&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Este comando baseado em assistente pode ser usado para adaptar um layout de uma
+máquina para outra quando a máquina original está indisponível ou quando a carga de trabalho
+da máquina precisa ser balanceada.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt1.png" alt="Adapt compact" width="737">
+</div>
+</div>
+</li>
+<li>
+<p>Pode ser usado quando a chapa planejada está fora de estoque e o layout
+precisa ser replanejado em outra chapa disponível.</p>
+</li>
+<li>
+<p>Você pode mesclar layouts empacotados em chapas menores em chapas maiores para usar
+o material de forma mais eficiente.</p>
+</li>
+<li>
+<p>Você pode dividir layouts empacotados em chapas maiores em chapas menores se estoques de chapas
+grandes não estiverem disponíveis.</p>
+</li>
+<li>
+<p>Você pode melhorar a eficiência de empacotamento de múltiplos layouts (mesmo de
+máquinas diferentes) mesclando-os.</p>
+</li>
+<li>
+<p>Para usá-lo, selecione um ou mais layouts e clique em
+<strong>Adaptar/compactar&#8230;&#8203;</strong> para abrir o assistente na área de trabalho.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt2.png" alt="Layouts window" width="1902">
+</div>
+</div>
+</li>
+<li>
+<p>O painel esquerdo mostra todos os layouts selecionados e o painel Parts mostra as peças
+do layout.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt3.png" alt="Layouts window" width="1910">
+</div>
+</div>
+</li>
+<li>
+<p>Selecione a máquina alvo e o material da chapa, então clique em
+<strong>Próximo</strong> para realizar o re-nesting.</p>
+</li>
+<li>
+<p>Os novos resultados de nesting são mostrados no painel de resultados.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt4.png" alt="Layouts window" width="1901">
+</div>
+</div>
+</li>
+<li>
+<p>Clique em <strong>Próximo</strong> para salvar o layout adaptado ou compactado.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt5.png" alt="Layouts window" width="1902">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dividir_um_layout">Dividir um layout</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A opção <strong>Dividir layouts&#8230;&#8203;</strong> permite dividir um layout existente em múltiplos layouts modificando quantidades,
+sem a necessidade de refazer ferramentaria ou nesting.</p>
+</div>
+<div class="paragraph">
+<p>Este recurso é particularmente útil nos seguintes cenários:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Quando você precisa produzir uma parte da quantidade total imediatamente enquanto
+agenda a quantidade restante para produção posterior.</p>
+</li>
+<li>
+<p>Quando os requisitos de produção precisam ser distribuídos em múltiplos turnos ou
+dias para otimizar o fluxo de trabalho e a utilização de recursos.</p>
+</li>
+<li>
+<p>Quando uma máquina específica está temporariamente indisponível ou ocupada, e você precisa
+ajustar o layout para acomodar as restrições de produção atuais.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Para dividir um layout, execute as seguintes etapas:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Na visualização de Layouts, selecione o layout desejado.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/splitlayout.png" alt="Split layout" width="264">
+</div>
+</div>
+</li>
+<li>
+<p>Clique em <strong>Dividir layouts&#8230;&#8203;</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/layoutpanel.png" alt="Layout panel" width="155">
+</div>
+</div>
+</li>
+<li>
+<p>Insira o valor desejado em <strong>Novas cópias</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/newcopies.png" alt="New copies" width="389">
+</div>
+</div>
+</li>
+<li>
+<p>Clique em <strong>OK</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/twolayout.png" alt="Two layouts" width="547">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>O layout selecionado agora está dividido em dois layouts com quantidades ajustadas.</p>
+</div>
+</div>
 </div>
 
                     </article>
                 </div>
                 <div id="site-toc-holder">
-                    <aside id="site-toc"></aside>
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#send-to-machine">Enviar para a máquina&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_recuperar_da_máquina">Recuperar da máquina&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_exportar_saídas">Exportar saídas</a>
+  </li>
+  <li level="1">
+   <a href="#mark-complete">Marcar como completo</a>
+  </li>
+  <li level="1">
+   <a href="#add-parts">Adicionar peças&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#adapt-compact">Adaptar/compactar&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_dividir_um_layout">Dividir um layout</a>
+  </li>
+ </ul>
+</aside>
+
                 </div>
             </div>
             <nav class="pagination">
- <span class="prev"><a href="nestview.html">Visualização de nest</a></span>
+ <span class="prev"><a href="nestview.html">Visualização de layout</a></span>
  <span class="next"><a href="../remnantmanagement/index.html">Gerenciamento de remanescentes</a></span>
 </nav>
 
