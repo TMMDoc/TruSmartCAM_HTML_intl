@@ -230,38 +230,38 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_ajustes_de_saída">Ajustes de saída</h2>
+<h2 id="_output_settings">Output settings</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>Salvar padrão de planificação</strong> - Habilite esta opção para que o padrão
+<p><strong>Save flat pattern</strong> - Habilite esta opção para que o padrão
 planificado de uma peça importada seja salvo.</p>
 </div>
 <div class="paragraph">
-<p><strong>Formato para padrão de planificação</strong> - Esta opção é usada para escolher
+<p><strong>Format for flat pattern</strong> - Esta opção é usada para escolher
 entre os formatos de arquivo DXF ou GEO.</p>
 </div>
 <div class="paragraph">
-<p><strong>Destino do padrão de planificação</strong> - Este é o local onde o padrão
+<p><strong>Flat pattern destination</strong> - Este é o local onde o padrão
 planificado será salvo.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_ajustes_de_importação">Ajustes de importação</h2>
+<h2 id="_import_settings">Import settings</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>Unidades para arquivos DXF</strong> - Esta é a unidade de medida com a qual um
+<p><strong>Units for DXF files</strong> - Esta é a unidade de medida com a qual um
 arquivo DXF será importado. O usuário pode escolher entre mm ou polegada.</p>
 </div>
 <div class="paragraph">
-<p><strong>Teclas de pesquisa de material</strong> - Múltiplas entradas de consulta podem
+<p><strong>Material lookup keys</strong> - Múltiplas entradas de consulta podem
 ser atribuídas usando um separador de vírgula entre elas. Quando uma peça é importada,
 o TruSmartCAM usa essas chaves para buscar valores de material. Os valores encontrados são
 então usados para resolver a matéria-prima. Os valores originais são armazenados nas
 propriedades diversas da peça.</p>
 </div>
 <div class="paragraph">
-<p><strong>Teclas de pesquisa de revisão</strong> - Quando uma peça é importada, o valor
+<p><strong>Revision lookup keys</strong> - Quando uma peça é importada, o valor
 de revisão do arquivo de peça bruto (o arquivo de peça sendo importado) é comparado
 com o valor de revisão existente no repositório. A importação é abandonada se a
 revisão for a mesma. O mapeamento de campos personalizados agora também é suportado
@@ -269,38 +269,38 @@ para arquivos DXF. Para arquivos DXF, os dados de campo personalizado são extra
 da camada de texto no desenho ou de um anexo PPI.</p>
 </div>
 <div class="paragraph">
-<p><strong>Usar comparação de geometria na mesma revisão CAD</strong> -
+<p><strong>Use geometry comparison on same CAD revision</strong> -
 Compara a geometria ao importar uma peça com a mesma revisão CAD e solicita ao
 usuário substituir ou pular a importação se diferenças forem detectadas. Consulte
 <a href="../../library/open/partimport.html#import-configuration">Import configuration</a>
 para mais detalhes.</p>
 </div>
 <div class="paragraph">
-<p><strong>Teclas de nome de peça</strong> - Esta opção funciona de forma semelhante às
-chaves de material e Teclas de pesquisa de revisão. Defina uma ou mais
-Teclas de nome de peça para usar o Nome da peça do PPI
+<p><strong>Part name keys</strong> - Esta opção funciona de forma semelhante às
+chaves de material e Revision lookup keys. Defina uma ou mais
+Part name keys para usar o Part name do PPI
 em vez do nome do arquivo como nome da peça.</p>
 </div>
 <div class="paragraph">
-<p><strong>Teclas de pesquisa de espessura</strong> - Múltiplas entradas de consulta podem
+<p><strong>Thickness lookup keys</strong> - Múltiplas entradas de consulta podem
 ser atribuídas usando um separador de vírgula entre elas. Quando uma peça é importada,
 o TruSmartCAM usa essas chaves para buscar valores de espessura. Os valores encontrados
 são então usados para resolver a espessura. Os valores originais são armazenados nas
 propriedades diversas da peça.</p>
 </div>
 <div class="paragraph">
-<p><strong>Tolerância de comparação da espessura</strong> - Isso é usado na consulta da
+<p><strong>Thickness comparison fudge</strong> - Isso é usado na consulta da
 matéria-prima quando uma peça é importada. O TruSmartCAM tenta resolver a matéria-prima
 após o nome do material e a espessura serem analisados. Para mais informações,
 consulte o tópico <a href="#_tolerância_de_espessura">Tolerância de espessura</a> abaixo.</p>
 </div>
 <div class="paragraph">
-<p><strong>Identificar formas após importar uma planificação</strong> - Quando uma
+<p><strong>Identify shapes after a flat is imported</strong> - Quando uma
 peça é importada, formas internas dentro da peça podem ser automaticamente
 reconhecidas e identificadas.</p>
 </div>
 <div class="paragraph">
-<p><strong>Ajuste de tolerância para identificação de formas</strong> - O valor de tolerância
+<p><strong>Shape identification fudge</strong> - O valor de tolerância
 de identificação de forma pode ser definido em:</p>
 </div>
 <div class="olist arabic">
@@ -317,22 +317,22 @@ como 0 e o valor global padrão é usado para essas formas.</p>
 </ol>
 </div>
 <div class="paragraph">
-<p><strong>Girar plano na horizontal</strong> - Geralmente as mesas de máquinas
+<p><strong>Rotate flat horizontally</strong> - Geralmente as mesas de máquinas
 de corte são retangulares e mais largas. Para melhorar a viabilidade do ferramental,
 rotacione a peça ao longo da largura da peça após a importação.</p>
 </div>
 <div class="paragraph">
-<p><strong>Limite de rotação da peça</strong> - Defina este como o número
+<p><strong>Part rotation threshold</strong> - Defina este como o número
 mínimo para permitir a rotação. Qualquer peça menor que o valor definido não será
 rotacionada.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_ajustes_div">Ajustes div.</h2>
+<h2 id="_misc_settings">Misc settings</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>Habilitar pré-importação de ferramentas externas</strong> - Habilite a opção
+<p><strong>Enable pre-import external tools</strong> - Habilite a opção
 de ferramentas externas de pré-importação para habilitar o Creo Reader. O TruSmartCAM
 envia as instâncias de família pré-extraídas da peça arrastada. Observe que a
 extração de instâncias é realizada durante o upload da peça (como uma operação de
@@ -340,12 +340,12 @@ pré-importação), portanto o software Creo deve estar instalado no computador 
 a peça está sendo enviada.</p>
 </div>
 <div class="paragraph">
-<p><strong>Ignorar as cores do desenho nas miniaturas de planificação para maior clareza</strong> -
+<p><strong>Ignore drawing colors in Flat thumbnails for clarity</strong> -
 Habilite esta opção para gerar miniaturas em escala de cinza mais nítidas.
 As cores de camada e entidades de texto são ignoradas em prol da clareza da imagem.</p>
 </div>
 <div class="paragraph">
-<p><strong>Usar apenas um mecanismo para todas as tarefas de importação</strong> -
+<p><strong>Use only one Engine for all import tasks</strong> -
 Quando habilitada, apenas um núcleo de engine é usado para tarefas de importação.</p>
 </div>
 </div>
@@ -354,7 +354,7 @@ Quando habilitada, apenas um núcleo de engine é usado para tarefas de importa�
 <h2 id="_tolerância_de_espessura">Tolerância de espessura</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>O <strong>Tolerância de comparação da espessura</strong> escolhe o valor de espessura
+<p>O <strong>Thickness comparison fudge</strong> escolhe o valor de espessura
 de chapa mais próximo quando uma espessura de chapa desejada não está disponível no
 inventário, comparando o valor de espessura das chapas no inventário.</p>
 </div>
@@ -372,7 +372,7 @@ inventário, comparando o valor de espessura das chapas no inventário.</p>
 </div>
 </li>
 <li>
-<p>O valor de <strong>Tolerância de comparação da espessura</strong> é 0,1 mm.</p>
+<p>O valor de <strong>Thickness comparison fudge</strong> é 0,1 mm.</p>
 <div class="imageblock">
 <div class="content">
 <img src="img/thickcomfudge.png" alt="Thickness comparison fudge" width="821">
@@ -391,7 +391,7 @@ inventário, comparando o valor de espessura das chapas no inventário.</p>
 </div>
 <div class="paragraph">
 <p>O TruSmartCAM escolhe uma chapa com o valor de espessura mais próximo após comparar o
-valor de <strong>Tolerância de comparação da espessura</strong> (0,1 mm) com o item
+valor de <strong>Thickness comparison fudge</strong> (0,1 mm) com o item
 importado (medindo 1,6 mm). Neste caso, 1,55 mm será a seleção.</p>
 </div>
 <div class="imageblock">
@@ -409,13 +409,13 @@ importado (medindo 1,6 mm). Neste caso, 1,55 mm será a seleção.</p>
  <h3>Contents</h3>
  <ul>
   <li level="1">
-   <a href="#_ajustes_de_saída">Ajustes de saída</a>
+   <a href="#_output_settings">Output settings</a>
   </li>
   <li level="1">
-   <a href="#_ajustes_de_importação">Ajustes de importação</a>
+   <a href="#_import_settings">Import settings</a>
   </li>
   <li level="1">
-   <a href="#_ajustes_div">Ajustes div.</a>
+   <a href="#_misc_settings">Misc settings</a>
   </li>
   <li level="1">
    <a href="#_tolerância_de_espessura">Tolerância de espessura</a>
@@ -438,7 +438,7 @@ importado (medindo 1,6 mm). Neste caso, 1,55 mm será a seleção.</p>
     </div>
     <footer id="site-footer">
         <div class="left">
-            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by TRUMPF SE + Co.KG. All rights reserved.</p>
         </div>
         <div class="middle"></div>
         <div class="right">
