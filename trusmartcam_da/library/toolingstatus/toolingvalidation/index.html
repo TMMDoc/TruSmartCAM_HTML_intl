@@ -1,0 +1,373 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../../img/praxis-icon.png">
+  <title>Værktøjsvalidering</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Velkommen til TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../installation/hardwarerequirement.html">Hardwarekrav</a></li>
+    <li><button class="tree blank"></button><a href="../../../installation/importformats.html">Understøttede filformater</a></li>
+    <li><button class="tree blank"></button><a href="../../../installation/prerequisites.html">Forudsætninger</a></li>
+    <li><button class="tree blank"></button><a href="../../../installation/serverinstallation.html">Serverinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../../../installation/clientinstallation.html">Klientinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../../../installation/changelic.html">Skift licens</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../configuration/index.html">Konfiguration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../configuration/setupmachine.html">Tilføj/fjern maskine</a></li>
+    <li><button class="tree blank"></button><a href="../../../configuration/setuptooling.html">Opsæt værktøj</a></li>
+    <li><button class="tree blank"></button><a href="../../../configuration/configureusers.html">Konfigurer brugere</a></li>
+    <li><button class="tree blank"></button><a href="../../../configuration/language.html">Sprog</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../configuration/addmaterial/index.html">Materiale</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../configuration/addmaterial/addnew.html">Tilføj nyt materiale og plade</a></li>
+      <li><button class="tree blank"></button><a href="../../../configuration/addmaterial/exportimport.html">Eksporter/Importer materiale</a></li>
+      <li><button class="tree blank"></button><a href="../../../configuration/addmaterial/replacematerial.html">Erstat materiale</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../configuration/mapbendpages.html">Kortlæg materiale</a></li>
+    <li><button class="tree blank"></button><a href="../../../configuration/mapcampages.html">Kortlæg CAM-sider</a></li>
+    <li><button class="tree blank"></button><a href="../../../configuration/cadmapfields.html">Kortlæg felter fra CAD (opslagnøgler)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../userinterface.html">Brugergrænsefladen</a></li>
+  <li><button class="tree blank"></button><a href="../../../workflow.html">Arbejdsgang</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">Bibliotek</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../open/index.html">Åbn</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../open/partimport.html">Importer dele</a></li>
+      <li><button class="tree blank"></button><a href="../../open/orderimport.html">Importer ordrer</a></li>
+      <li><button class="tree blank"></button><a href="../../open/jobimport.html">Importer jobs</a></li>
+      <li><button class="tree blank"></button><a href="../../open/assembliesimport.html">Importer samlinger</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../libraryview/index.html">Biblioteksvisning</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../libraryview/partview.html">Dele</a></li>
+      <li><button class="tree blank"></button><a href="../../libraryview/assemblyview.html">Samling</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../partstate/index.html">Delstatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../partstate/partvalidation.html">Delvalidering</a></li>
+      <li><button class="tree blank"></button><a href="../../partstate/partpanel.html">Delpanel</a></li>
+      <li><button class="tree blank"></button><a href="../../partstate/partfilters.html">Dele filtre</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">Værktøjsstatus</a>
+     <ul>
+      <li>
+       <button class="tree open"></button>
+       <a class="active" href="index.html">Værktøjsvalidering</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="bendtooling.html">Bukkeværktøjsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="cuttooling.html">Skæreværktøjsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="foldtooling.html">Foldeværktøjsvalidering</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingpanel.html">Værktøjspanel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../savingfilters.html">Gem filtre</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../orders/index.html">Ordrer</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../orders/ordersview.html">Ordrevisning</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../jobs/jobcreation.html">Opret job</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/jobview.html">Job visning</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/jobpanel.html">Job panel</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/jobautoplan.html">Auto plan</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/jobinteractplan.html">Interaktiv nesting</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/repacking.html">Ompakning</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../jobs/layoutcommands/index.html">Nest management</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../jobs/layoutcommands/nestview.html">Layout visning</a></li>
+      <li><button class="tree blank"></button><a href="../../../jobs/layoutcommands/layoutpanel.html">Layout panel</a></li>
+      <li><button class="tree blank"></button><a href="../../../jobs/layoutcommands/reportsender.html">Report sender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../jobs/remnantmanagement/index.html">Restmaterialestyring</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../jobs/remnantmanagement/autoremnant.html">Auto restmaterialestyring</a></li>
+      <li><button class="tree blank"></button><a href="../../../jobs/remnantmanagement/manualremnant.html">Manuel restmaterialestyring</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../jobs/twinlinenesting.html">Twinline nesting</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/outdate.html">Forældet</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/jobfilters.html">Job filtre</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../cadextensions/index.html">CAD-udvidelser</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../../../cadextensions/solidworksaddin/savetopraxis.html">Gem dele</a></li>
+      <li><button class="tree blank"></button><a href="../../../cadextensions/solidworksaddin/saveassembly.html">Gem samling</a></li>
+      <li><button class="tree blank"></button><a href="../../../cadextensions/solidworksaddin/partfeasibility.html">Kontroller gennemførlighed</a></li>
+      <li><button class="tree blank"></button><a href="../../../cadextensions/solidworksaddin/factorysettings.html">Fabriksindstillinger</a></li>
+      <li><button class="tree blank"></button><a href="../../../cadextensions/solidworksaddin/miscenhancements.html">Diverse forbedringer</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">Bibliotek</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">Værktøjsstatus</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Værktøjsvalidering</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Værktøjsvalidering</h1>
+<div class="paragraph">
+<p>Dette afsnit beskriver, hvordan De får adgang til og ændrer værktøjsinformationen for
+dele i TruSmartCAM.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Højreklik på en delflise for at åbne delpanelet og få adgang til værktøjs-
+indstillinger.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/tooling.png" alt="Tooling" width="511">
+</div>
+</div>
+</li>
+<li>
+<p>Klik på <strong>Klargøringer</strong> for at skifte til den første tilgængelige værktøjede
+instans.</p>
+</li>
+<li>
+<p>Alternativt kan De klikke direkte på en værktøjet instans for at se maskindetaljer
+og værktøjsindstillinger.</p>
+</li>
+<li>
+<p>Brug <span class="image"><img src="img/document.png" alt="View" width="18"></span> til at
+<strong>Åbn i skrivebeskyttet tilstand til visning</strong>.</p>
+</li>
+<li>
+<p>Brug <span class="image"><img src="img/edit.png" alt="Edit" width="18"></span> til at
+<strong>Tjek dokumentet ud til redigering</strong>.</p>
+</li>
+<li>
+<p>Den valgte værktøjede instans åbner i TecZone eller MetaCAM.</p>
+</li>
+<li>
+<p>Udfør manuelle værktøjskontroller og foretag nødvendige ændringer.</p>
+</li>
+<li>
+<p>Når De forsøger at gemme, beder en <strong>Unsaved Changes</strong> dialog Dem om at bekræfte
+Deres redigeringer.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/unsave.png" alt="Unsave" width="368">
+</div>
+</div>
+</li>
+<li>
+<p>Klik på <strong>Yes</strong> for at fortsætte med at gemme.</p>
+</li>
+<li>
+<p>Systemet udfører værktøjsvalidering igen efter gemning.</p>
+</li>
+<li>
+<p>Hvis der ikke er fejl, vises indstillingen til at gemme ændringer i TruSmartCAM.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/save.png" alt="Save" width="436">
+</div>
+</div>
+</li>
+<li>
+<p>Hvis værktøjsfejl findes, vises en fejlmeddelelse:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/errorsave.png" alt="Error Save" width="436">
+</div>
+</div>
+</li>
+<li>
+<p>Efter gemning opdateres delens værktøjsstatus i delebiblioteket.</p>
+</li>
+<li>
+<p>En grøn farve på den værktøjede instans angiver, at den er tjekket ind.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/checkedout.png" alt="Checkout" width="256">
+</div>
+</div>
+</li>
+<li>
+<p>Værktøjet instans-forfatteren opdateres til den sidste person, der redigerede den.</p>
+</li>
+<li>
+<p>Feltet <strong>Brugerredigeret</strong> angiver, om den værktøjede
+instans er blevet manuelt ændret. Når en bruger tjekker instansen ud og
+foretager ændringer, indstilles dette felt automatisk til Yes ved gemning.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/useredit.png" alt="User edit" width="379">
+</div>
+</div>
+</li>
+<li>
+<p>Hvis en del i øjeblikket redigeres, vises et brugerikon på dens flise.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/checkout.png" alt="check" width="265">
+</div>
+</div>
+</li>
+<li>
+<p>Når De fører musen over flisen, vises hvem der tjekkede den ud og tidspunktet for udtjekning.</p>
+</li>
+<li>
+<p>Mens delen er tjekket ud, er <span class="image"><img src="img/edit.png" alt="Edit" width="18"></span>
+<strong>Tjek dokumentet ud til redigering</strong> indstillingen deaktiveret
+for den samme værktøjede instans, og <span class="image"><img src="img/canceledit.png" alt="Cancel" width="18"></span>
+<strong>Annullér checkout</strong> indstillingen bliver aktiveret.</p>
+</li>
+</ul>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="../index.html">Værktøjsstatus</a></span>
+ <span class="next"><a href="bendtooling.html">Bukkeværktøjsvalidering</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

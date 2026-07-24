@@ -1,0 +1,416 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Saving filters</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">TruSmartCAM에 오신 것을 환영합니다</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">설치</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">하드웨어 요구 사항</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">지원되는 파일 형식</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">사전 요구 사항</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">서버 설치</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">클라이언트 설치</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">라이선스 변경</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">구성</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">기계 추가/제거</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">툴링 설정</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">사용자 구성</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">언어</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">재료</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">새 재료 및 시트 추가</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">재료 내보내기/가져오기</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">재료 교체</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">재료 매핑</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">CAM 페이지 매핑</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">CAD에서 필드 매핑 (조회 키)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">사용자 인터페이스</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">워크플로우</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Library</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="toolingstatus/toolingpanel.html">Tooling panel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a class="active" href="savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">주문</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">주문 보기</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../jobs/jobcreation.html">작업 생성</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobview.html">작업 보기</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobpanel.html">작업 패널</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobautoplan.html">자동 계획</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobinteractplan.html">대화형 네스팅</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/repacking.html">재포장</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/layoutcommands/index.html">네스트 관리</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/nestview.html">레이아웃 보기</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/layoutpanel.html">레이아웃 패널</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/reportsender.html">보고서 발신자</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/remnantmanagement/index.html">잔재 관리</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/autoremnant.html">자동 잔재 관리</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/manualremnant.html">수동 잔재 관리</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../jobs/twinlinenesting.html">트윈라인 네스팅</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/outdate.html">구식</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobfilters.html">작업 필터</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD 확장 기능</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks 추가 기능</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">설치</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">부품 저장</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">어셈블리 저장</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">실행 가능성 확인</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">공장 설정</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">기타 개선 사항</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">법적 고지</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Library</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="savingfilters.html">Saving filters</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Saving filters</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>저장된 필터를 사용하면 Parts, Jobs 및 Layouts에서 자주 적용되는 조건을 재사용하여 워크플로우를 간소화할 수 있습니다. 각 모듈에는 기본 필터가 제공되지만 필요에 따라 Site Admins 또는 Programmers가 추가 필터 목록을 생성할 수 있습니다. 저장된 필터를 재사용하면 시간을 절약하고 검색 전반에 걸쳐 일관성을 유지하는 데 도움이 됩니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="img/menu.png" alt="menu" width="20"></span> 아이콘을 클릭하여 기본 필터를 확인합니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/before.png" alt="Before" width="215">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_필터_저장_단계">필터 저장 단계</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="img/ficon.png" alt="ficon" width="20"></span>아이콘을 클릭하고 필터 항목을 선택합니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/selectfilter.png" alt="Select Filter" width="431">
+</div>
+</div>
+</li>
+<li>
+<p>선택한 필터 항목의 드롭다운 메뉴에서 옵션을 선택합니다. 선택한 조건 옆에 체크 표시가 나타납니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/selectoption.png" alt="Select Option" width="415">
+</div>
+</div>
+</li>
+<li>
+<p>조건을 적용하려면 <span class="image"><img src="img/ficon.png" alt="ficon" width="20"></span> 아이콘을 클릭한 다음
+<strong>조건 추가 (Ctrl+PLUS)]</strong> 을 선택합니다. 이 단계를 반복하여 여러 조건을 추가할 수 있습니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addcondition.png" alt="Add Condition" width="447">
+</div>
+</div>
+</li>
+<li>
+<p>조건과 함께 선택한 필터를 저장하려면
+<strong>필터 저장&#8230;&#8203; (Ctrl+S)]</strong> 를 클릭합니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/savefilter1.png" alt="Save Filter" width="561">
+</div>
+</div>
+</li>
+<li>
+<p>이름을 입력한 다음 <strong>_Save</strong> 를 클릭합니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/savedialoge.png" alt="Save Dialog" width="300">
+</div>
+</div>
+</li>
+<li>
+<p><strong>필터 저장</strong> 대화 상자에서 이전에 저장된 필터를 삭제할 수도 있습니다.</p>
+</li>
+<li>
+<p>이러한 필터는 Default filter 목록에 저장됩니다. 여기서 <strong>재료</strong> 은 기본 목록에 저장됩니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/after.png" alt="After" width="179">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+SiteAdmin 및 Admin이 생성한 필터는 모든 사용자에게 공유됩니다.
+Programmer 및 Operator가 생성한 필터는 Programmers 및 Operators 사용자 역할에만 공유됩니다.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_필터_명령">필터 명령</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">명령</th>
+<th class="tableblock halign-left valign-top">아이콘</th>
+<th class="tableblock halign-left valign-top">단축키</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Clear Selection</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/clear.png" alt="Clear" width="16"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Ctrl</kbd>+<kbd>X</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">선택한 모든 항목을 해제하고 필터 항목 보기를 새로 고칩니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Select Highlighted</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/checked.png" alt="Highlighted" width="16"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Ctrl</kbd>+<kbd>A</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">강조 표시된 모든 항목을 선택합니다. 선택한 필드에 항목 강조 표시가 적용되지 않으면 이 명령은 비활성화된 상태로 유지됩니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Match All</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/and.png" alt="Match All" width="16"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>&amp;</kbd></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">선택한 모든 조건을 충족하는 항목만 표시합니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Pin In/Out Menu</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/pin-out.png" alt="Pin out" width="16"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Ctrl</kbd>+<kbd>Down/Up</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">고정되면 현재 포커스가 다른 창으로 이동해도 드롭다운 메뉴가 열린 상태로 유지됩니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Close Menu</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/close.png" alt="close" width="16"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>Esc</kbd></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">드롭다운 메뉴를 닫습니다.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_필터_저장_단계">필터 저장 단계</a>
+  </li>
+  <li level="1">
+   <a href="#_필터_명령">필터 명령</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="toolingstatus/toolingpanel.html">Tooling panel</a></span>
+ <span class="next"><a href="../orders/index.html">주문</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

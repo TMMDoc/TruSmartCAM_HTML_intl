@@ -1,0 +1,564 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Összeszerelés</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Üdvözöljük a TruSmartCAM rendszerben</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Telepítés</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardverkövetelmények</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Támogatott fájlformátumok</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Előfeltételek</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Szervertelepítés</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Klienstelepítés</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Licenc módosítása</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfiguráció</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Gép hozzáadása/eltávolítása</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Szerszámozás beállítása</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Felhasználók konfigurálása</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Nyelv</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Anyag</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Új anyag és lemez hozzáadása</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Anyag exportálása/importálása</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Anyag cseréje</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Anyag leképezése</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAM oldalak leképezése</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mezők leképezése CAD-ből (keresési kulcsok)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">A felhasználói felület</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Munkafolyamat</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Könyvtár</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Megnyitás</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Alkatrészek importálása</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Rendelések importálása</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Munkák importálása</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Összeszerelések importálása</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Könyvtár nézet</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partview.html">Alkatrészek</a></li>
+      <li><button class="tree blank"></button><a class="active" href="assemblyview.html">Összeszerelés</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Alkatrész állapot</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Alkatrész validálás</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Alkatrész panel</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Alkatrész szűrők</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Szerszámozási állapot</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Szerszámozás validálás</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Hajlítási szerszámozás validálás</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Vágási szerszámozás validálás</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Hajtogatási szerszámozás validálás</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Szerszámozási panel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Szűrők mentése</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Rendelések</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Rendelések nézet</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Munkák</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Munka létrehozása</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Munkanézet</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Munkapanel</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatikus tervezés</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktív fészkelés</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Újracsomagolás</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Fészekkezelés</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Elrendezésnézet</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Elrendezéspanel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Jelentésküldő</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Maradékkezelés</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatikus maradékkezelés</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manuális maradékkezelés</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Ikervonalas fészkelés</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Elavult</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Munka szűrők</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Gyár</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Útvonalak</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Lapok</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Felhasználók</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Szerkesztés</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Ügyfelek</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Beállítások</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Környezet</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Importálás</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Hajlítás</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Vágás</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Értesítések</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Figyelés</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Munkarendelés</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Jelentések</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD bővítmények</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks bővítmény</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Telepítés</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Alkatrészek mentése</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Szerelvény mentése</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Megvalósíthatóság ellenőrzése</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Gyártási beállítások</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Egyéb fejlesztések</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impresszum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Könyvtár</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Könyvtár nézet</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="assemblyview.html">Összeszerelés</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Összeszerelés</h1>
+<div class="sect1">
+<h2 id="_statikus_fészkek_létrehozása_összeszerelésből">Statikus fészkek létrehozása összeszerelésből</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Statikus fészkek hozhatók létre egy összeszereléshez az Interaktív fészkelési varázsló segítségével. Ezek a fészkek fix elrendezések, amelyek csak a kiválasztott összeszereléshez kapcsolódnak.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Váltson a <strong>részegys.</strong> nézetre.</p>
+</li>
+<li>
+<p>Kattintson jobb gombbal a kívánt összeszerelésre, és válassza a <strong>Táblatervek létrehozása&#8230;&#8203;</strong> lehetőséget.</p>
+</li>
+<li>
+<p>Megnyílik az Interaktív fészkelési varázsló.</p>
+</li>
+<li>
+<p>Alapértelmezés szerint az interaktív fészkelési varázsló a <strong>Válasszon gépet és anyagot</strong> oldalra vált.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyinteractive.png" alt="Machine and material" width="950">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A gépek rendelkezésre álló termelési terhelést jelző színes sávokkal jelennek meg:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Zöld sáv: Ütemezett órák</p>
+</li>
+<li>
+<p>Szürke sáv: Rendelkezésre álló órák (8 órás műszakból)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Minden gép alatt a kiválasztott Alkatrészek csoportosítva vannak a Nyersanyagukkal (Alkatrészek/Teljes mennyiség).</p>
+</li>
+<li>
+<p>Ha egy alkatrészhez nincs érvényes szerszámozási megoldás egy géphez, az az alkatrész és anyag figyelmen kívül marad a feldolgozás során az adott gép esetében.</p>
+</li>
+<li>
+<p>Ha egy nyersanyag egy géphez van kiválasztva, az nem lesz elérhető más gépekhez.</p>
+</li>
+<li>
+<p>Miután a gép fészkelési terv elkészült, válassza ki a preferált lapot és írja felül a lap paramétereit, mint például <strong>Prioritás</strong>, <strong>Mennyiség</strong>, <strong>Táblaszél</strong>, stb.</p>
+</li>
+<li>
+<p>Szűrheti a lapokat, hogy megjelenítse az <strong>Minden lemeztábla</strong>, <strong>Standard lemeztábla</strong> vagy <strong>Maradék lemeztábla</strong> opciókat. Kattintson a <strong>Következő</strong> gombra.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Ebben a fázisban nem lehetséges a mennyiségek növelése. Megtarthatja ugyanazt, mint a lap készlet mennyisége, vagy csökkentheti azt és ellenőrizheti a fészkelési eredményeket.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Az <strong>Menny. frissítése</strong> megjelenik az Interaktív fészkelési terv ablakban.</p>
+</li>
+<li>
+<p>Alapértelmezés szerint a <strong>Összes kiválasztása (F5)</strong> minden alkatrészt tartalmaz a fészkeléshez, vagy manuálisan is kiválaszthatja a prioritási alkatrészeket és beállíthatja az alkatrész mennyiségeket. Kattintson a <strong>Következő</strong> gombra.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyquantity.png" alt="Update quantity">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Elindul a fészkelés, és a lapokba fészkelt alkatrészek kék színű állapottal frissülnek.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyresult.png" alt="Nesting result">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A gép termelési terhelése frissül a fészkelési eredmény alapján.</p>
+</li>
+<li>
+<p>Ha néhány alkatrész fészkeletlen marad, megjelenik a <strong>Néhány alkatrész beágyazatlan marad</strong> üzenet - ezek az alkatrészek az eredeti munkában maradnak.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Egy alkatrész fészkeletlen maradhat, ha nincs megfelelő lap elérhető.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>A Statikus Fészkek szerkeszthetők a fészkeletlen alkatrészek befoglalásához:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Válassza ki azt az elrendezést, ahová be szeretné illeszteni a fészkeletlen alkatrészeket, és vegye ki szerkesztésre.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblylayout.png" alt="Selected layout">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A TecZone megnyílik. Kattintson a <strong>_koppint</strong> vagy <strong>koppint_mind</strong> lehetőségre a fészkeletlen alkatrészek kiválasztásához a szülő összeszerelésből.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/addnest.png" alt="Add unnested parts" width="864">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Rendezze el az alkatrészt az elrendezésben szükség szerint.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unnest.png" alt="Unnested part placement" width="715">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A generált fészkek automatikusan a szülő összeszerelés nevét kapják a könnyű azonosítás érdekében.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A statikus fészkek nem tartalmazhatnak más összeszerelésekből származó alkatrészeket. A vegyes összeszerelési fészkek engedélyezése megakadályozná, hogy az egyik összeszerelést a többiek kiadása nélkül lehessen kiadni, ezért a keverés tervezés szerint tiltott.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nem_lemezfém_alkatrészek">Nem lemezfém alkatrészek</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Amikor egy összeszerelés importálásra kerül, a lemezfém alkatrészek kinyerésre kerülnek és hozzáadódnak az összeszerelésekhez az Alkatrész Könyvtárban.</p>
+</li>
+<li>
+<p>A nem lemezfém alkatrészek elkülönítésre kerülnek és hozzáadódnak a <strong>alkatrészek</strong> elemhez.</p>
+</li>
+<li>
+<p>Az összeszerelés hozzáadódik az Összeszerelési Könyvtárhoz, és a BOM (Anyagjegyzék) alkatrészeket és komponenseket is tartalmaz.</p>
+</li>
+<li>
+<p>Ha egy alkatrész már korábban importálásra került lemezfém alkatrészként, a rendszer frissíti a meglévő bejegyzést és eltávolítja a duplikátumokat az Alkatrész Könyvtárból.</p>
+</li>
+<li>
+<p>Egy összeszerelés kiválasztása mind az alkatrészeket, mind a komponenseket megjeleníti, a komponens mennyiségek a komponens kép alatt láthatók (kiválasztott összeszerelési komponens darabszám és teljes komponens darabszám).</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/components.png" alt="Assembly components" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A komponens eszköztippek a nevet, anyagot és méretet jelenítik meg. A komponensek kizárásra kerülnek a gyártás során - nem kerülnek fészkelésre, és nem generálódnak lapok a komponensek számára.</p>
+</li>
+<li>
+<p>Példa összeszerelések és komponensek elérhetők itt: C:\Program Files\Metamation\Praxis\Samples\Assys\Components, amelyek használhatók a komponens import és összeszerelési munkafolyamatok teszteléséhez.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_munka_létrehozása_összeszerelésből">Munka létrehozása összeszerelésből</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Kattintson jobb gombbal az összeszerelésre, kattintson a <strong>Új&#8230;&#8203;</strong>, majd a <strong>Feladat</strong> lehetőségre.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/newassemblyjob.png" alt="Create new job" width="760">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Az Új munka párbeszédablakban állítsa be az összeszerelési darabszámot, kattintson az <strong>OK</strong> gombra, majd frissítse a munka részleteit (például ahatáridőt és prioritást) szükség szerint.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/riegelwindow.png" alt="New job dialog" width="369">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A rendszer létrehoz egy munkát az összeszerelésből, és átmásolja a statikus fészkeket munka fészkekkent, frissítve a lap darabszámot. A másolt fészkek a munka azonosítóval vannak ellátva előtagként.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblycreated.png" alt="Assembly job created" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A munka fészkek szerkeszthetők vagy törölhetők anélkül, hogy befolyásolnák az eredeti statikus fészkeket.</p>
+</li>
+<li>
+<p>A munka fészkek újracsomagolhatók a <strong>Alkalmazás/kompakt&#8230;&#8203;</strong> vagy <strong>Alkatrészek hozzáadása&#8230;&#8203;</strong> használatával.</p>
+</li>
+<li>
+<p>A részletes lépésekért lásd: <a href="../../jobs/layoutcommands/layoutpanel.html#adapt-compact">Adapt/Compact</a> és <a href="../../jobs/layoutcommands/layoutpanel.html#add-parts">Add parts</a>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Ha egy alkatrész nem jelenik meg egy fészekben, ellenőrizze a fészek szerkesztési párbeszédablakot - manuálisan beillesztheti a fészkeletlen alkatrészeket.</p>
+</div>
+<div class="paragraph">
+<p>Használjon mentett kereséseket és szűrőket az alkatrészek gyors megtalálásához több összeszerelés között.</p>
+</div>
+<div class="paragraph">
+<p>Használjon egyértelmű, leíró összeszerelési és fészek neveket a fészkek munkákba történő másolásakor fellépő zavarodottság elkérülése érdekében.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_statikus_fészkek_létrehozása_összeszerelésből">Statikus fészkek létrehozása összeszerelésből</a>
+  </li>
+  <li level="1">
+   <a href="#_nem_lemezfém_alkatrészek">Nem lemezfém alkatrészek</a>
+  </li>
+  <li level="1">
+   <a href="#_munka_létrehozása_összeszerelésből">Munka létrehozása összeszerelésből</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partview.html">Alkatrészek</a></span>
+ <span class="next"><a href="../partstate/index.html">Alkatrész állapot</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

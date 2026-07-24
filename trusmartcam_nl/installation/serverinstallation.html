@@ -1,0 +1,902 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Serverinstallatie</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Welkom bij TruSmartCAM</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Installatie</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="hardwarerequirement.html">Hardwarevereisten</a></li>
+    <li><button class="tree blank"></button><a href="importformats.html">Ondersteunde bestandsformaten</a></li>
+    <li><button class="tree blank"></button><a href="prerequisites.html">Vereisten</a></li>
+    <li><button class="tree blank"></button><a class="active" href="serverinstallation.html">Serverinstallatie</a></li>
+    <li><button class="tree blank"></button><a href="clientinstallation.html">Clientinstallatie</a></li>
+    <li><button class="tree blank"></button><a href="changelic.html">Licentie wijzigen</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Configuratie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Machine toevoegen/verwijderen</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Gereedschap instellen</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Gebruikers configureren</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Taal</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Materiaal</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Nieuw materiaal en plaat toevoegen</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Materiaal exporteren/importeren</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Materiaal vervangen</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Materiaal toewijzen</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">CAM-pagina's toewijzen</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Velden uit CAD toewijzen (zoeksleutels)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">De gebruikersinterface</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Bibliotheek</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Openen</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Onderdelen importeren</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Orders importeren</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Jobs importeren</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Assemblages importeren</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Bibliotheekweergave</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Onderdelen</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Assemblage</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Onderdeelstatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Onderdeelvalidatie</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Onderdeelpaneel</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Onderdeelfilters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Gereedschapsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Gereedschapsvalidatie</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Buiggereedschapsvalidatie</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Snijgereedschapsvalidatie</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Vouwgereedschapsvalidatie</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Gereedschapspaneel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Filters opslaan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Orders</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Orders weergave</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../jobs/jobcreation.html">Job aanmaken</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobview.html">Job weergave</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobpanel.html">Job paneel</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobautoplan.html">Automatisch plannen</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobinteractplan.html">Interactief nesten</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/repacking.html">Opnieuw verpakken</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/layoutcommands/index.html">Nestbeheer</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/nestview.html">Layout weergave</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/layoutpanel.html">Layout paneel</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/reportsender.html">Rapportverzender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/remnantmanagement/index.html">Restmateriaal beheer</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/autoremnant.html">Automatisch restmateriaal beheer</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/manualremnant.html">Handmatig restmateriaal beheer</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../jobs/twinlinenesting.html">Twinline nesten</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/outdate.html">Verouderd</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobfilters.html">Job filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD extensies</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Installatie</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Onderdelen opslaan</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Assemblage opslaan</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Haalbaarheid controleren</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Fabrieksinstellingen</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Diverse verbeteringen</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Installatie</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="serverinstallation.html">Serverinstallatie</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Serverinstallatie</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Volg de instructies om de TruSmartCAM Server-installatie samen met
+SQL te installeren.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">Administratorrechten</div>
+<div class="paragraph">
+<p><strong>Om deze installatie uit te voeren, moet de gebruiker administratieve rechten hebben.</strong></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Voer <strong>Setup.TruSmartCAM.&lt;version&gt;.exe</strong> uit om de installatie te starten.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Version is een nummer.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Lees de licentieovereenkomst en kies <strong>I accept the agreement</strong> en klik vervolgens op
+Volgende
+.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s02praxislicenseagreement.png" alt="Praxis License Agreement">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_stap_1_installatielocatie">Stap 1 : Installatielocatie</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Geef de installatiemap op of accepteer de standaardinstallatie
+<code>C:\Program Files\Metamation\Praxis</code> en klik op Volgende.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>C:\Program Files\Metamation\Praxis</code> - De installatiemap bevat de volgende
+mappen : Bin, MetaCAM, Samples en Tracker.</p>
+</li>
+<li>
+<p><code>C:\Program Data\Metamation</code> - De gegevensmap bevat de volgende mappen :
+TruSmartCAM, TecZone en MetaCAM.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s03installationpath.png" alt="Installation Path">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_stap_2_componentenselectie">Stap 2 : Componentenselectie</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Installatietype</th>
+<th class="tableblock halign-left valign-top">Componenten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Desktop client + Engine</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Client</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Desktop Client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Desktop client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Station</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kiest alle Stations Terminal zoals TecZone, MetaCAM, RightAngle(Bend Controller),
+Vulcan(Laser Machine Controller)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kiest naar gebruikerskeuze.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Kies Full Installation. Kies <strong>Code Senders</strong> en <strong>Bend Code Senders</strong> uit
+TruSmartCAM Tools. Nu verandert het installatietype in <strong>Aangepast</strong>. Klik op
+Volgende.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s04serverinstallation.png" alt="Server Installation">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_stap_3_sql_server_installeren_kiezen">Stap 3 : SQL Server installeren kiezen</h2>
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>SQL Express 2022-installatie is alleen nodig voor de TruSmartCAM Server. Deze
+optie is niet beschikbaar voor Client- en Sync-installaties. Ook is deze
+standaard aangevinkt en wordt deze voor de eerste keer geïnstalleerd en kan daarna worden genegeerd. Als
+SQL al is geïnstalleerd op de TruSmartCAM-server, kan de gebruiker Stap 3 negeren.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In Select Additional Tasks : Klik op <strong>Install SQL Express</strong> en klik op
+Volgende.</p>
+</li>
+<li>
+<p>In Ready to Install : Vat alle installatiekenmerken samen en klik op Install.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s05sqlinstall.png" alt="Install SQL">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_stap_4_sql_server_installatie">Stap 4 : SQL Server-installatie</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Zodra TruSmartCAM-componenten zijn geïnstalleerd, gaat het installatieprogramma verder met de
+SQL Server-installatie. Accepteer de licentieovereenkomst om door te gaan en installeer SQL
+Express met de standaardopties.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s06sqlserver.png" alt="SQLServer Install">
+</div>
+</div>
+<div class="paragraph">
+<p>Zodra de installatie is voltooid, klikt u op Close en voltooit u de installatie.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s07sqlservercomplete.png" alt="SQL Server Complete">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Afhankelijk van de Windows-versie kan het sluiten van de SQL-installatie om
+een herstart vragen.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_stap_5_windows_desktop_snelkoppelingen">Stap 5 : Windows Desktop-snelkoppelingen</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Na de SQL-installatie, als het systeem niet opnieuw opstart, selecteert u het selectievakje <strong>Launch TruSmartCAM</strong>
+en klikt u op <strong>Finish</strong>.</p>
+</li>
+<li>
+<p>Als het systeem opnieuw opstart, start u de TruSmartCAM-snelkoppeling op het bureaublad of typ
+TruSmartCAM in Windows Start Programma en <strong>Uitvoeren als administrator</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<em>Serverinstallatie</em> : TruSmartCAM en TruSmartCAM License snelkoppelingspictogrammen zijn
+beschikbaar op het bureaublad. + <em>Client/SYNC-installatie</em> : Alleen TruSmartCAM-snelkoppeling
+pictogram beschikbaar op het bureaublad.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s08launchpraxis.png" alt="Launch TruSmartCAM">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_stap_6_licentieregistratie">Stap 6 : Licentieregistratie</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Typ in het veld <em>Serial Number</em> de <em>TruSmartCAM Serial key</em> die is verstrekt door Trumpf
+Metamation Service Team. Typ <strong>&lt;Company Name&gt;</strong> in het veld "Registered to" en
+E-Mail. Klik op <strong>OK</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s09praxisregister.png" alt="TruSmartCAM Register">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In het geval dat de netwerkfirewall de licentieregistratie blokkeert of er geen internet is op
+de TruSmartCAM Server-PC, wordt de TruSmartCAM-licentie uitgevoerd via offline activering. E-mail
+de <strong><em>Prax.request</em></strong> uit de map <em>C:\ProgramData\Metamation\Praxis</em> naar het Trumpf
+Metamation Service Team. Het Trumpf Metamation Team zal de <strong><em>Prax.lock</em></strong> verstrekken
+die in deze map moet worden geplaatst.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_stap_7_initiële_eenmalige_configuratie">Stap 7 : Initiële eenmalige configuratie</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Typ de databasenaam en stel de gegevensopslaglocatie in. Selecteer het
+selectievakje SQL-server gebruiken en selecteer de SQL Server-naam
+om verbinding te maken met de database. Klik op <strong>OK</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s10usedatabase.png" alt="Use Database">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Desktop Client opent en toont <strong>Database Connection Succeeded</strong> linksonder
+aan de onderkant.</p>
+</li>
+<li>
+<p>TruSmartCAM-, TecZone- en MetaCAM-configuratiebestanden zijn aangemaakt met standaardconfiguratiebestanden
+machines of tegen TruSmartCAM-licentiemachines. Dezelfde configuratie wordt gedeeld
+tussen alle TruSmartCAM-clients.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s11databaseconnectionsuccess.png" alt="Database Connection Success">
+</div>
+</div>
+<div class="paragraph">
+<p>Het welkomstscherm toont Windows-gebruiker LoginName als TruSmartCAM-aanmelding en -naam.
+De eerste TruSmartCAM-gebruiker wordt beschouwd als <strong>Sitebeheerder</strong>. Geef e-mail en
+wachtwoord op. Klik op <strong>OK</strong>
+.</p>
+</div>
+<div class="paragraph">
+<p>Selecteer het selectievakje <strong>Onthoud mij</strong>
+om de aanmeldingsgegevens voor de volgende keer op te slaan.
+Het uitvinken van het selectievakje <strong>Onthoud mij</strong> zal vragen om het aanmeldings- en
+wachtwoorddialoogvenster telkens wanneer de TruSmartCAM-applicatie wordt gestart.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s12welcomepraxis.png" alt="Welcome TruSmartCAM">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_stap_8_trusmartcam_aanmelding">Stap 8 : TruSmartCAM-aanmelding</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Sluit TruSmartCAM en open het opnieuw. Het systeem vraagt u om de TruSmartCAM-
+aanmeldingsgegevens in te voeren.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/signprompt.png" alt="Sign Prompt" width="450">
+</div>
+</div>
+</li>
+<li>
+<p>De aangemelde gebruikersnaam wordt weergegeven naast het gebruikerspictogram in de TruSmartCAM-
+applicatiekoptekst.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/userid.png" alt="User ID" width="228">
+</div>
+</div>
+</li>
+<li>
+<p>Wanneer u over het gebruikerspictogram beweegt, toont het systeem:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/hover.png" alt="Hover" width="108">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>De gebruikersrol (bijvoorbeeld: Programmer, Admin).</p>
+</li>
+<li>
+<p>Een snelkoppeling om af te melden: <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>L</kbd></span>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Door op het gebruikerspictogram te klikken, opent u een menu waarmee u kunt:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/information.png" alt="Information" width="160">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Informatie bewerken…</strong> - Werk uw profielgegevens bij.</p>
+</li>
+<li>
+<p><strong>Wachtwoord wijzigen…</strong> - Wijzig uw accountwachtwoord.</p>
+</li>
+<li>
+<p><strong>Uitloggen</strong> - Meld u af bij de applicatie.</p>
+</li>
+<li>
+<p><strong>Annuleren</strong> - Sluit het menu zonder wijzigingen aan te brengen.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_stap_9_configuratie_van_fabrieksmachines">Stap 9 : Configuratie van fabrieksmachines</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM License [Alle machines met ingeschakelde licentiebit] : Standaard TruSmartCAM-machine
+en -materiaal worden beschouwd als fabrieksconfiguratie.</p>
+</li>
+<li>
+<p>TruSmartCAM License [Geen demo en enkele machinebit ingeschakeld] : Die enkele machines en
+standaardmateriaal worden beschouwd als fabrieksconfiguratie.</p>
+</li>
+<li>
+<p>(Open &#8594; Import) een nieuw onderdeel uit <code>C:\Program
+Files\Metamation\Praxis\Samples\Parts</code> en controleer of het onderdeel succesvol is geïmporteerd.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s14praxiswelcomescreen.png" alt="Praxis Welcome screen">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_opmerking_1_trusmartcam_monitor">Opmerking 1 : TruSmartCAM Monitor</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor met Engine-installatie (Site admin-rechten):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor met Engine samen met Site Admin TruSmartCAM-rechten heeft de
+volgende opties:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Push TruSmartCAM-configuratie, TecZone-, MetaCAM-configuratie naar alle TruSmartCAM-
+clients. Heeft ook rechten om een nieuwe TruSmartCAM-gebruikersaanmelding te maken.</p>
+</li>
+<li>
+<p>Show Agents toont het totale aantal beschikbare engines om automatiseringstaken uit te voeren die
+overeenkomen met de TruSmartCAM-licentie.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s15pmonitor.png" alt="Praxis Monitor Status">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor zonder Engine-installatie (Site admin-rechten):</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s16pmonitorwithoutengine.png" alt="Praxis Monitor without Engine">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor zonder Engine-installatie (Niet-site admin-rechten):</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s17pmonitorwithprogrammerlogin.png" alt="Praxis with Progrmmer login">
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>PC waarop de TruSmartCAM-applicatie draait, moet de Engine TruSmartCAM-component hebben geïnstalleerd
+[Server-PC of in elke clientinstallatie]. De PC met geïnstalleerde Engine TruSmartCAM-component
+moet 24/7 draaien om alle automatiseringstaken uit te voeren.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_opmerking_2_lock_tracker">Opmerking 2 : Lock Tracker</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Klik op de snelkoppeling <strong>TruSmartCAM License</strong> die beschikbaar is op het TruSmartCAM Server-bureaublad.
+U kunt ook <a href="http://localhost:7171/metamation/locktrack" class="bare">http://localhost:7171/metamation/locktrack</a> openen in een webbrowser.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Dit opent de Lock Tracker-module met licentie-informatie, TruSmartCAM-
+huidige sessie-informatie en Log.</p>
+</div>
+<div class="paragraph">
+<p>LockTracker HOME Page : Dit toont het TruSmartCAM-serienummer, serienummer vervaldag-
+informatie en beschikbare serienummer bit-informatie.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s18locktrack01.png" alt="Lock Track License Home page">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker SESSIONS Page : Huidige verbonden TruSmartCAM Server-informatie zoals
+TruSmartCAM Desktop-client-PC, PMonitor, PEngine-status.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s19locktrack02.png" alt="Lock Track Session information">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker LOGs Page : TruSmartCAM-client start en log off | Pmonitor start en
+PEngine connect/disconnect-status etc., kunnen worden bekeken op deze Logs-pagina.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s20locktrack03.png" alt="Praxis Monitor Status">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_opmerking_3_opengl">Opmerking 3 : OpenGL</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM-applicatie die tijdens het openen onmiddellijk wordt gesloten en ook
+pmonitor wordt niet weergegeven in de taakbalk.</p>
+</li>
+<li>
+<p>Dit vertegenwoordigt een OpenGl-probleem.</p>
+</li>
+<li>
+<p>Een andere manier om dit te bevestigen: Open C:\Program
+Files\Metamation\Praxis\Bin\Flux.exe die een foutdialoog toont over het
+OpenGL-probleem.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s21opengl.png" alt="OpenGL Issue">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Update <em>C:\ProgramData\Metamation\Praxis\Prax.ini</em>, optiesectie met
+<strong>GLVersion=1</strong> zorgt ervoor dat de TruSmartCAM-applicatie succesvol wordt geopend.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ini hljs" data-lang="ini">[Options]
+GLVersion=1.0</code></pre>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_stap_1_installatielocatie">Stap 1 : Installatielocatie</a>
+  </li>
+  <li level="1">
+   <a href="#_stap_2_componentenselectie">Stap 2 : Componentenselectie</a>
+  </li>
+  <li level="1">
+   <a href="#_stap_3_sql_server_installeren_kiezen">Stap 3 : SQL Server installeren kiezen</a>
+  </li>
+  <li level="1">
+   <a href="#_stap_4_sql_server_installatie">Stap 4 : SQL Server-installatie</a>
+  </li>
+  <li level="1">
+   <a href="#_stap_5_windows_desktop_snelkoppelingen">Stap 5 : Windows Desktop-snelkoppelingen</a>
+  </li>
+  <li level="1">
+   <a href="#_stap_6_licentieregistratie">Stap 6 : Licentieregistratie</a>
+  </li>
+  <li level="1">
+   <a href="#_stap_7_initiële_eenmalige_configuratie">Stap 7 : Initiële eenmalige configuratie</a>
+  </li>
+  <li level="1">
+   <a href="#_stap_8_trusmartcam_aanmelding">Stap 8 : TruSmartCAM-aanmelding</a>
+  </li>
+  <li level="1">
+   <a href="#_stap_9_configuratie_van_fabrieksmachines">Stap 9 : Configuratie van fabrieksmachines</a>
+  </li>
+  <li level="1">
+   <a href="#_opmerking_1_trusmartcam_monitor">Opmerking 1 : TruSmartCAM Monitor</a>
+  </li>
+  <li level="1">
+   <a href="#_opmerking_2_lock_tracker">Opmerking 2 : Lock Tracker</a>
+  </li>
+  <li level="1">
+   <a href="#_opmerking_3_opengl">Opmerking 3 : OpenGL</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="prerequisites.html">Vereisten</a></span>
+ <span class="next"><a href="clientinstallation.html">Clientinstallatie</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>
+    if (!hljs.initHighlighting.called) {
+      hljs.initHighlighting.called = true
+      ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+    }
+  </script>
+</body>
+</html>

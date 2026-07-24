@@ -1,0 +1,414 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Notifications</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">TruSmartCAMへようこそ</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">インストール</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">ハードウェア要件</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">サポートされているファイル形式</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">前提条件</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">サーバーインストール</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">クライアントインストール</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">ライセンスの変更</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">設定</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">機械の追加/削除</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">工具設定</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">ユーザー設定</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">言語</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">材料</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">新しい材料とシートの追加</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">材料のエクスポート/インポート</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">材料の置換</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">材料のマッピング</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAMページのマッピング</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">CADからのフィールドマッピング（検索キー）</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">ユーザーインターフェース</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">ワークフロー</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Library</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">パートパネル</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">ツーリングパネル</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">注文</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">注文ビュー</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">ジョブ</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">ジョブの作成</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">ジョブビュー</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">ジョブパネル</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">自動計画</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">インタラクティブネスティング</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">リパッキング</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">ネスト管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">レイアウトビュー</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">レイアウトパネル</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">レポート送信者</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">端材管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">自動端材管理</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">手動端材管理</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">ツインラインネスティング</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">期限切れ</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">ジョブフィルター</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Factory</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../customers.html">Customers</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Settings</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a class="active" href="notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD拡張機能</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">インストール</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">パーツの保存</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">アセンブリの保存</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">実行可能性の確認</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">工場設定</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">その他の機能強化</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">奥付</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Factory</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Settings</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="notification.html">Notifications</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Notifications</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>通知は、システム内で発生するCADおよびツーリングエラーについてユーザーに通知します。問題が迅速に伝達され、適切な措置を講じることができるようにします。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_email_notification">Email notification</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Email notification機能を使用すると、ユーザーはCADおよびツーリングエラーに対する自動メールアラートを設定および受信できます。設定が完了すると、関連するイベントが発生するたびに、システムが指定された受信者に自動的にメールを送信し、問題が迅速に対処されるようにします。</p>
+</div>
+<div class="paragraph">
+<p>メール通知を設定するには、次の場所に移動します：
+<strong>ファクトリー</strong> &gt; <strong>設定</strong> &gt;
+<strong>通知</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/notification.png" alt="Notification settings" width="814">
+</div>
+</div>
+<div class="paragraph">
+<p>*通知*ページは、以下のセクションで構成されています：</p>
+</div>
+<div class="sect2">
+<h3 id="_notification_settings">Notification settings</h3>
+<div class="paragraph">
+<p>*通知設定*セクションは、メールアラートがどのように生成され、受信者に配信されるかを制御します。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Eメール通知を有効にする</strong> - 設定された条件に基づいて、システムが通知を送信できるようにします。</p>
+</li>
+<li>
+<p><strong>通知受信者</strong> - 受信者のメールアドレスを指定します。複数の受信者をカンマ（<code>,</code>）またはスペースで区切って追加できます。</p>
+</li>
+<li>
+<p><strong>メッセージをバッチで送信する</strong> - 複数の通知を1つのメールにまとめます。定義された時間間隔内に生成されたメッセージがグループ化され、メール量を削減し、混雑を防ぎます。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/batch.png" alt="Batch" width="608">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>適用可能であればツーリングシミュレーションプレビューを添付します +</strong> -
+利用可能な場合、ツーリングシミュレーションプレビューを通知メールに添付します。これは、メールから直接ツーリング関連の問題を確認するのに役立ちます。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/warning.png" alt="Warning" width="395">
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+シミュレーションプレビューを含めると、メールのサイズが大幅に増加する可能性があります。
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_メール設定">メール設定</h3>
+<div class="paragraph">
+<p>*メール設定*セクションは、システムがメール通知を配信するために使用する送信メールサーバーの設定を定義します。これらの設定は、通知が正常に送信されるように正しく構成する必要があります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>SMTPサーバ</strong> - 送信メールの送信に使用されるSMTPサーバーアドレスを指定します（例：<code>smtp.gmail.com</code>）。この情報は通常、ユーザーのメールクライアントのアカウントまたは設定セクションで入手できます。</p>
+</li>
+<li>
+<p><strong>SMTPポート</strong> - メールサーバーがインターネット経由でメールを送信するために使用するポート番号を定義します。一般的な値には、<code>465</code>（SSL）と`587`（TLS）があります。</p>
+</li>
+<li>
+<p><strong>転送プロトコル</strong> - アプリケーションからメールサーバーにメールを安全に送信するために使用されるプロトコルを指定します（例：SSLまたはTLS）。</p>
+</li>
+<li>
+<p><strong>サーバで認証が必要</strong> - SMTPサーバーの認証を有効にします。有効にすると、メールが送信される前に、ユーザー名とパスワードがサーバーによって検証されます。</p>
+</li>
+<li>
+<p><strong>ユーザー名</strong> - SMTPサーバーで認証し、通知を送信するために使用されるメールアカウントを指定します。</p>
+</li>
+<li>
+<p><strong>パスワード</strong> - 認証に使用されるメールアカウントに関連付けられたパスワードを指定します。</p>
+</li>
+<li>
+<p><strong>Sender address</strong> - 通知が受信されたときに受信者に表示される送信者のメールアドレスを指定します。</p>
+</li>
+<li>
+<p><strong>テスト…</strong> - テストメールを送信して、メールサーバーの設定を確認します。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>*テスト…*をクリックして、設定を検証します。テストが成功した場合は確認メッセージが表示されます。それ以外の場合は、失敗の原因を示すエラーメッセージが表示されます。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>メール通知は、インタラクティブモード（編集中やパーツの手動保存中など）ではトリガーされません。</p>
+</li>
+<li>
+<p>メール配信はバックグラウンドで処理され、遅延する場合があります。</p>
+</li>
+<li>
+<p>処理が完了する前にシステムまたはエンジンが停止した場合、通知が配信されない場合があります。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_email_notification">Email notification</a>
+  </li>
+  <li level="2">
+   <a href="#_notification_settings">Notification settings</a>
+  </li>
+  <li level="2">
+   <a href="#_メール設定">メール設定</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="cut.html">Cut</a></span>
+ <span class="next"><a href="watch.html">Watch</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

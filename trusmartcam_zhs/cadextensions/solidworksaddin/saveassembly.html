@@ -1,0 +1,435 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>保存装配体</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">欢迎使用 TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">安装</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">硬件要求</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">支持的文件格式</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">先决条件</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">客户端安装</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">更改许可证</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">配置</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">添加/删除设备</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">设置工具</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">配置用户</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">语言</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">材料</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">添加新材料和板材</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">导出/导入材料</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">替换材料</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">映射材料</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">映射 CAM 页面</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">从 CAD 映射字段（查找键）</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">用户界面</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">工作流程</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">库</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">打开</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">导入零件</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">导入订单</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">导入作业</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">导入装配体</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">库视图</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">零件</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">装配体</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">零件状态</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">零件验证</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">零件面板</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">零件筛选器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">工装状态</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">工装验证</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">折弯工装验证</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">切割工装验证</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">折边工装验证</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">工装面板</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">保存筛选器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">订单</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">订单视图</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">作业</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">创建作业</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">作业视图</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">作业面板</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">自动规划</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">交互式排样</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">重新打包</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">排样管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">布局视图</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">布局面板</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">报告发送器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">余料管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">自动余料管理</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">手动余料管理</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">双线排样</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">过期</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">作业过滤器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">工厂</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">路线</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">板材</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">用户</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">编辑</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">客户</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">设置</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">环境</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">导入</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">折弯</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">切割</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">通知</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">监视</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">作业</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">报告</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">CAD 扩展</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">SolidWorks 插件</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="installationsteps.html">安装</a></li>
+      <li><button class="tree blank"></button><a href="savetopraxis.html">保存零件</a></li>
+      <li><button class="tree blank"></button><a class="active" href="saveassembly.html">保存装配体</a></li>
+      <li><button class="tree blank"></button><a href="partfeasibility.html">检查可行性</a></li>
+      <li><button class="tree blank"></button><a href="factorysettings.html">工厂设置</a></li>
+      <li><button class="tree blank"></button><a href="miscenhancements.html">其他增强功能</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">版本说明</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">CAD 扩展</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">SolidWorks 插件</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="saveassembly.html">保存装配体</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>保存装配体</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>保存装配体功能允许用户将 SolidWorks 装配体及其组件零件直接导出到 TruSmartCAM 零件库。这可确保所有钣金零件、原材料信息和零件数量准确传输，以便进行下游计划、工装和作业创建。</p>
+</div>
+<div class="paragraph">
+<p>此功能对于管理完整的装配体特别有用，例如机柜、外壳或涉及多个钣金组件的结构制件。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_保存装配体的步骤">保存装配体的步骤</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>启动 SolidWorks 并打开所需的装配体文件。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/saveassembly.png" alt="Save Assembly" width="682">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>在 TruSmartCAM 工具栏上，单击 <strong>Save Assembly</strong>。将出现 <strong>将组件图纸保存到 Praxis</strong> 对话框，汇总装配体详细信息。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/praxisassembly.png" alt="Praxis Assembly" width="350">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>装配体对话框提供以下信息：</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Assembly Name</strong> - 显示当前活动的 SolidWorks 装配体的名称。此名称用作 TruSmartCAM 中装配体的默认引用。</p>
+</li>
+<li>
+<p><strong>零件总数</strong> - 指示 SolidWorks 装配体中存在的组件实例总数。这包括钣金和非钣金零件。</p>
+</li>
+<li>
+<p><strong>钣金零件</strong> - 显示装配体中的钣金组件总数以及唯一钣金零件的数量。</p>
+</li>
+<li>
+<p><strong>非钣金零件</strong> - 列出装配体中检测到的非钣金组件的总数和唯一数量。</p>
+</li>
+<li>
+<p><strong>待生产单位</strong> - 指定要生产的装配体（成品）数量。输入的数量用于计算 TruSmartCAM 中结果作业或装配体的零件总需求量。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>验证详细信息后，单击 <strong>OK</strong>。</p>
+</li>
+<li>
+<p>TruSmartCAM 将表中列出的所有零件及其关联的材料信息保存到零件库。（有关材料映射的详细信息，请参阅
+<a href="../../cadextensions/solidworksaddin/savetopraxis.html#_auto_material_resolution">自动材料解析</a>）</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/backcover.png" alt="Back Cover" width="800">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_其他选项">其他选项</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_创建作业">创建作业</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>启用此选项可直接从所选装配体创建新的 TruSmartCAM 作业，从而允许立即进行作业计划和套料操作。</p>
+</li>
+<li>
+<p>启用后，将显示新作业对话框，允许您指定：</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Job Reference</strong> 名称（默认值：装配体名称）。</p>
+</li>
+<li>
+<p><strong>Customer</strong> 和 <strong>Comments</strong>（可选）。</p>
+</li>
+<li>
+<p>每个零件的 <strong>Due Date</strong>、<strong>Priority</strong> 和 <strong>Quantity</strong>。</p>
+</li>
+<li>
+<p>其他参数，例如每个零件的客户特定设置或旋转值。</p>
+</li>
+<li>
+<p>单击 <strong>确定</strong> 以在 TruSmartCAM 中创建并打开新作业。</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyview.png" alt="AssemblyView" width="800">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_创建装配体">创建装配体</h3>
+<div class="paragraph">
+<p>启用此选项可将装配体及其正确的零件数量保存到 TruSmartCAM 装配体页面。与创建作业选项不同，此选项在处理过程中不会打开新作业对话框。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/makeassembly.png" alt="Make Assembly" width="682">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblycover.png" alt="Assembly Cover" width="980">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>仅处理这些钣金零件并将其导入 TruSmartCAM 零件库。</p>
+</li>
+<li>
+<p>非钣金零件将显示以供参考，但不会导入 TruSmartCAM，因为仅考虑可制造的钣金零件用于生产计划。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_保存装配体的步骤">保存装配体的步骤</a>
+  </li>
+  <li level="1">
+   <a href="#_其他选项">其他选项</a>
+  </li>
+  <li level="2">
+   <a href="#_创建作业">创建作业</a>
+  </li>
+  <li level="2">
+   <a href="#_创建装配体">创建装配体</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="savetopraxis.html">保存零件</a></span>
+ <span class="next"><a href="partfeasibility.html">检查可行性</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

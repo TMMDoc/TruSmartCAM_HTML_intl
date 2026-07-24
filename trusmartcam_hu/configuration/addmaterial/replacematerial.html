@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Anyag cseréje</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Üdvözöljük a TruSmartCAM rendszerben</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Telepítés</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardverkövetelmények</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Támogatott fájlformátumok</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Előfeltételek</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Szervertelepítés</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Klienstelepítés</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Licenc módosítása</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Konfiguráció</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../setupmachine.html">Gép hozzáadása/eltávolítása</a></li>
+    <li><button class="tree blank"></button><a href="../setuptooling.html">Szerszámozás beállítása</a></li>
+    <li><button class="tree blank"></button><a href="../configureusers.html">Felhasználók konfigurálása</a></li>
+    <li><button class="tree blank"></button><a href="../language.html">Nyelv</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Anyag</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="addnew.html">Új anyag és lemez hozzáadása</a></li>
+      <li><button class="tree blank"></button><a href="exportimport.html">Anyag exportálása/importálása</a></li>
+      <li><button class="tree blank"></button><a class="active" href="replacematerial.html">Anyag cseréje</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../mapbendpages.html">Anyag leképezése</a></li>
+    <li><button class="tree blank"></button><a href="../mapcampages.html">CAM oldalak leképezése</a></li>
+    <li><button class="tree blank"></button><a href="../cadmapfields.html">Mezők leképezése CAD-ből (keresési kulcsok)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">A felhasználói felület</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Munkafolyamat</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Könyvtár</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Megnyitás</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Alkatrészek importálása</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Rendelések importálása</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Munkák importálása</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Összeszerelések importálása</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Könyvtár nézet</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Alkatrészek</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Összeszerelés</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Alkatrész állapot</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Alkatrész validálás</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Alkatrész panel</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Alkatrész szűrők</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Szerszámozási állapot</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Szerszámozás validálás</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Hajlítási szerszámozás validálás</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Vágási szerszámozás validálás</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Hajtogatási szerszámozás validálás</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Szerszámozási panel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Szűrők mentése</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Rendelések</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Rendelések nézet</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Munkák</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Munka létrehozása</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Munkanézet</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Munkapanel</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatikus tervezés</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktív fészkelés</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Újracsomagolás</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Fészekkezelés</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Elrendezésnézet</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Elrendezéspanel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Jelentésküldő</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Maradékkezelés</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatikus maradékkezelés</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manuális maradékkezelés</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Ikervonalas fészkelés</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Elavult</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Munka szűrők</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Gyár</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Útvonalak</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Lapok</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Felhasználók</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Szerkesztés</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Ügyfelek</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Beállítások</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Környezet</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Importálás</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Hajlítás</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Vágás</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Értesítések</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Figyelés</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Munkarendelés</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Jelentések</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD bővítmények</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks bővítmény</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Telepítés</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Alkatrészek mentése</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Szerelvény mentése</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Megvalósíthatóság ellenőrzése</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Gyártási beállítások</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Egyéb fejlesztések</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impresszum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Konfiguráció</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Anyag</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="replacematerial.html">Anyag cseréje</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Anyag cseréje</h1>
+<div class="paragraph">
+<p>Rendszergazda &#8594; csere Anyag&#8230;&#8203;, mutasson a létrehozott TXT vagy CSV fájlra a mappából. A teljes anyaglista a Factory-ban lecserélődik.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/08replacematerial.png" alt="Replace Material">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A csere Anyag opció akkor érhető el, amikor az
+alkatrészkönyvtár üres.
+</td>
+</tr>
+</table>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="exportimport.html">Anyag exportálása/importálása</a></span>
+ <span class="next"><a href="../mapbendpages.html">Anyag leképezése</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

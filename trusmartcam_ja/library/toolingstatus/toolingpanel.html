@@ -1,0 +1,785 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>ツーリングパネル</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">TruSmartCAMへようこそ</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">インストール</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">ハードウェア要件</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">サポートされているファイル形式</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">前提条件</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">サーバーインストール</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">クライアントインストール</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">ライセンスの変更</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">設定</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">機械の追加/削除</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">工具設定</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">ユーザー設定</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">言語</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">材料</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">新しい材料とシートの追加</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">材料のエクスポート/インポート</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">材料の置換</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">材料のマッピング</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAMページのマッピング</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">CADからのフィールドマッピング（検索キー）</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">ユーザーインターフェース</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">ワークフロー</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Library</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">パートパネル</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Tooling status</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a class="active" href="toolingpanel.html">ツーリングパネル</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">注文</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">注文ビュー</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">ジョブ</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">ジョブの作成</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">ジョブビュー</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">ジョブパネル</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">自動計画</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">インタラクティブネスティング</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">リパッキング</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">ネスト管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">レイアウトビュー</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">レイアウトパネル</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">レポート送信者</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">端材管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">自動端材管理</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">手動端材管理</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">ツインラインネスティング</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">期限切れ</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">ジョブフィルター</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD拡張機能</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">インストール</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">パーツの保存</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">アセンブリの保存</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">実行可能性の確認</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">工場設定</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">その他の機能強化</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">奥付</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Library</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Tooling status</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="toolingpanel.html">ツーリングパネル</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>ツーリングパネル</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>このセクションでは、ツーリングインスタンスの管理に使用される、
+<strong>アウトプットのエクスポート</strong>、
+<strong>Check Tooling</strong>、<strong>ツーリングをスキップする</strong>、
+<strong>ベース平面として設定する…</strong>、<strong>ツーリングのコピー…</strong>、
+およびその他のオプションなど、ツーリング関連のアクションについて説明します。</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/toolingpanel.png" alt="Tooling panel" width="150">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>読み取り専用モードで開いて見ます</strong><br>
+選択したツーリングを読み取り専用モードで開きます。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+選択したツーリングの編集を有効にします。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>アウトプットのエクスポート</strong><br>
+設定された送信先に選択したツーリング出力をエクスポートします。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/checkui.png" alt="Check Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check Tooling</strong><br>
+変更を加えずに既存のツーリングを検証し、検証が失敗した場合は
+ステータスを更新します。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/copyui.png" alt="Copy Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ツーリングのコピー…</strong><br>
+選択した参照ツーリングからpunch、シーケンス、およびback gaugeセットアップを
+コピーし、実行可能な場合は他のソリューションに適用します。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/baseui.png" alt="Set as Base-Flat" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ベース平面として設定する…</strong><br>
+選択したbendまたはfoldツーリングを、切断ソリューション生成の
+参照フラットサイズとしてマークします。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/retoolui.png" alt="Re-tool" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Re-tool&#8230;&#8203;</strong><br>
+他のツーリングに影響を与えずに、パートの選択したツーリングを再処理します。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/supressui.png" alt="Suppress Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ツーリングをスキップする</strong><br>
+選択したツーリングを抑制して、さらなる処理と出力生成から除外します。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prevui.png" alt="Prev Next" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>前へ</strong> / <strong>次へ</strong> / <strong>パーツ</strong><br>
+前または次のツーリング、または親パートに移動します。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sortui.png" alt="Similar Toolings" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>並べ替えとフィルタ</strong><br>
+クイックリファレンスのために、選択したツーリングと似た特性を共有する
+他のツーリングを表示します。</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_アウトプットのエクスポート">アウトプットのエクスポート</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>このオプションは、*ファクトリー設定*で設定された送信先に
+パート出力をエクスポートします。(<a href="../../factory/settings/bend.html">Bend Settings</a>および
+<a href="../../factory/settings/cut.html">Cut Settings</a>を参照)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingoutput.png" alt="Tooling Output" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>選択したツーリング操作に関連付けられたツーリングのみがエクスポートされ、
+パート全体はエクスポートされません。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+エクスポートされるファイルは操作タイプによって異なります。BendおよびFold操作の場合、
+NCファイルとレポートが生成されます。CutおよびPunch操作の場合は、パートファイルのみが
+エクスポートされます。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_check_tooling">Check Tooling</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>CAM Settingsまたはベンドツールのいずれかに変更があった場合、パートを
+Re-toolする必要はありません。</p>
+</li>
+<li>
+<p>代わりに、Check Toolingを使用して、変更を加えずに既存のツーリングを検証します。</p>
+</li>
+<li>
+<p>検証が失敗した場合、そのインスタンスのツーリングステータスが更新され、
+関連する出力ファイルが削除されます。</p>
+</li>
+<li>
+<p>Check Toolingは、*エラーを無視する*を使用して手動で
+エラーが上書きされたパートも検出し、必要に応じてそれらのステータスを
+エラーに更新します。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/checktooling.png" alt="Check Tooling" width="456">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ツーリングのコピー">ツーリングのコピー…</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Copy toolingを使用すると、1つのソリューションから他のソリューションに
+ベンドツーリングをすばやく適用でき、時間と労力を節約できます。</p>
+</div>
+<div class="paragraph">
+<p>これにより、選択した参照ツーリング(ソリューション)からpunch、シーケンス、および
+back gaugeセットアップがコピーされ、同じ設定をすべての他のソリューションに
+適用しようとします。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>コピーされたセットアップがターゲットマシンに実行可能な場合は、保存されて使用されます。</p>
+</li>
+<li>
+<p>セットアップが実行可能でない場合は、そのマシンの元のツーリングがそのまま残ります。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>たとえば、異なるマシンに対して異なるツーリングがある場合があります:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ここでは、Machine 5230SX 6AがGooseneck punchを使用し、Machine 5085X 6A B23が
+Pointed punchを使用しています。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check3.png" alt="Before tooling" width="724">
+</div>
+</div>
+<div class="paragraph">
+<p>Machine 5230SX 6Aで*ツーリングのコピー…*を使用すると、
+Gooseneckセットアップをすべての他のマシンにコピーしようとします。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check4.png" alt="Copy tooling" width="664">
+</div>
+</div>
+<div class="paragraph">
+<p>可能な場合は、同じpunch、シーケンス、およびback gaugeの設定が適用されます。
+コピーされたセットアップを使用できない場合は、元のツーリングがそのまま残ります。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/copytooling3.png" alt="After tooling" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>Copy toolingを適用した後、Gooseneckセットアップは実行可能なすべての他のマシンに
+正常に適用されています。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ベース平面として設定する">ベース平面として設定する…</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>*ベース平面として設定する…*機能は、切断ソリューションの生成に
+参照フラットサイズとして使用されるbendまたはfoldツーリングを定義します。
+ツーリングがBase-Flatとしてマークされると、TruSmartCAMはそのマシンに基づいて
+パートのフラットサイズを更新し、それに応じて切断ソリューションを再生成します。
+Base-FlatツーリングはUIで青い枠線で表示されます。</p>
+</div>
+<div class="paragraph">
+<p>異なるベンドマシンでは、同じパートに対してわずかにフラットサイズが異なる場合があります。
+ツーリングをBase-Flatとして設定すると、TruSmartCAMはそのマシンのフラットサイズを
+マスター参照として使用し、切断ソリューションを自動的に再計算します。</p>
+</div>
+<div class="paragraph">
+<p>ここでは、さまざまなマシンで同じパートに対して異なるフラットサイズが表示されています:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat1.png" alt="Base flat1" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>この例では、*5130X 6A B23*ツーリングがBase-Flatとして設定され、
+更新されたフラットサイズがパートプロパティに適用されています:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat2.png" alt="Base flat2" width="663">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_自動base_flat選択">自動base flat選択</h3>
+<div class="paragraph">
+<p>ファクトリ設定の
+*曲げ加工中に平面修正を適用する*が有効になっている場合:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autobase.png" alt="Auto Base" width="806">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAMは、パートインポート時に(最大ベンド長テーブルを含む)bendツーリングを
+自動的にBase-Flatとして設定します。</p>
+</li>
+<li>
+<p>選択したbendツーリングにエラーが発生した場合、または実行できない場合、
+TruSmartCAMはインテリジェントに切り替わり、別の有効なbendツーリングをBase-Flatとして
+設定します。これにより、手動介入なしでフラットサイズ参照と切断ソリューションが
+常に一貫性があり有効であることが保証されます。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_拡張されたbase_flat管理">拡張されたbase flat管理</h3>
+<div class="paragraph">
+<p>TruSmartCAMは、bendまたはfoldツーリングの編集を保存する際に、
+*Praxisに保存する*ダイアログでBase-Flatオプションを提供します。
+これらのオプションは、OKステータスのツーリングに対してのみ表示され、
+フラットサイズと切断ソリューションが正確に保たれるようにします。</p>
+</div>
+<div class="sect3">
+<h4 id="_ベース平面として設定して切断ソリューションを計算します">ベース平面として設定して、切断ソリューションを計算します</h4>
+<div class="paragraph">
+<p>このオプションは、ツーリングをBase-Flatとして初めてマークし、
+対応する切断ソリューションを自動的に生成するために使用されます。</p>
+</div>
+<div class="paragraph">
+<p>表示される条件:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ツーリングが現在Base-Flatとしてマークされていない。</p>
+</li>
+<li>
+<p>ユーザーが編集のためにツーリングをチェックアウトし、変更を保存している。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/setbase.png" alt="Set Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>このオプションを使用するには、bendまたはfoldツーリングをチェックアウトし、
+ベンドパラメータやフラットサイズの変更など、必要な変更を行います。
+<span class="keyseq"><kbd>Ctrl</kbd>+<kbd>S</kbd></span>を押して変更を保存します。<strong>Praxisに保存する</strong>
+ダイアログで、
+*ベース平面として設定して、切断ソリューションを計算します*を選択し、
+*OK*をクリックします。TruSmartCAMは、ツーリングをBase-Flatとして設定し、
+更新されたフラットサイズを使用して切断ソリューションを生成します。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ベース平面を更新して切断ソリューションを再計算します">ベース平面を更新して、切断ソリューションを再計算します</h4>
+<div class="paragraph">
+<p>このオプションは、ツーリングがすでにBase-Flatとしてマークされており、
+編集されていて、フラットサイズと切断ソリューションを再生成する必要がある場合に使用されます。</p>
+</div>
+<div class="paragraph">
+<p>表示される条件:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ツーリングがすでにBase-Flatとしてマークされている。</p>
+</li>
+<li>
+<p>ユーザーがチェックアウトし、編集し、変更を保存している。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/updatebase.png" alt="Update Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>既存のBase-Flatツーリングを編集する場合、必要に応じてベンドパラメータまたは
+フラットサイズのジオメトリを更新します。*Praxisに保存する*ダイアログで、
+*ベース平面を更新して、切断ソリューションを再計算します*を選択します。
+TruSmartCAMは、Base-Flatツーリングを更新し、関連するすべての切断ソリューションを
+再生成して最新の変更を反映します。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>一度に1つのbendツーリングのみをBase-Flatとして設定できます。</p>
+</div>
+<div class="paragraph">
+<p>Base-Flatが変更されると、既存の切断ソリューションは自動的に再処理されます。</p>
+</div>
+<div class="paragraph">
+<p>この機能は、TruSmartCAM内のbendおよびfoldツーリングの両方で使用できます。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_再ツーリング">再ツーリング…</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>このオプションは、パートの選択したツーリングを再処理します。</p>
+</div>
+<div class="paragraph">
+<p>Toolingパネルで必要なツーリングを右クリックし、
+*再ツーリング…*をクリックします。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingretool.png" alt="ToolingRetool" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>続行する前に確認ダイアログが表示されます。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingconfirm.png" alt="ToolingConfirm" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>*はい*をクリックして再ツーリングを続行するか、*いいえ*をクリックして
+操作をキャンセルします。</p>
+</div>
+<div class="paragraph">
+<p>選択したツーリングのみが再ツーリングされます。パートに関連付けられた他のツーリングは
+影響を受けません。選択したツーリングに関連する既存の出力は削除され、
+再ツーリングプロセス中に再生成されます。</p>
+</div>
+<div class="paragraph">
+<p>ツーリングデータが古い、不正確な場合、またはマシンやツーリング構成に変更が加えられた場合に
+このオプションを使用します。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_エラーを無視する">エラーを無視する</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>ツールされたインスタンスに警告が表示され、それでも続行したい場合は、
+*エラーを無視する*をクリックして警告を上書きできます。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/ignore.png" alt="Ignore errors" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>これにより、ツーリングの問題があった場合でも、システムはそのインスタンスの
+出力ファイルをエクスポートできるようになります。</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+*Ignore Errors*は、警告を安全に無視できることが確実な場合にのみ使用してください。
+実際のエラーを上書きすると、マシンの損傷や安全上のリスクにつながる可能性があります。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ツーリングの抑制抑制解除">ツーリングの抑制/抑制解除</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>マシンが非アクティブであるか、特定のパートを特定のマシンで処理したくない場合は、
+*ツーリングをスキップする*を使用して、そのマシンでのネスティングから
+そのパートを除外します。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/supress.png" alt="Supress Tooling" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>抑制後、ツールされたインスタンスにマウスを合わせると、次のようなメッセージが
+表示されます:「Tooling suppressed by &lt;User name&gt; on &lt;Date Time&gt;」。</p>
+</li>
+<li>
+<p>Suppress toolingは、そのマシンとパートの出力ファイルを削除します。</p>
+</li>
+<li>
+<p>*ツーリングをスキップしない*を使用して、そのマシンでのパートの
+ツーリングステータスを復元します。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unsupress.png" alt="Unsupress Tooling" width="495">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>抑制解除されると、それぞれの出力ファイルが再度生成されます。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_アウトプットのエクスポート">アウトプットのエクスポート</a>
+  </li>
+  <li level="1">
+   <a href="#_check_tooling">Check Tooling</a>
+  </li>
+  <li level="1">
+   <a href="#_ツーリングのコピー">ツーリングのコピー…</a>
+  </li>
+  <li level="1">
+   <a href="#_ベース平面として設定する">ベース平面として設定する…</a>
+  </li>
+  <li level="2">
+   <a href="#_自動base_flat選択">自動base flat選択</a>
+  </li>
+  <li level="2">
+   <a href="#_拡張されたbase_flat管理">拡張されたbase flat管理</a>
+  </li>
+  <li level="1">
+   <a href="#_再ツーリング">再ツーリング…</a>
+  </li>
+  <li level="1">
+   <a href="#_エラーを無視する">エラーを無視する</a>
+  </li>
+  <li level="1">
+   <a href="#_ツーリングの抑制抑制解除">ツーリングの抑制/抑制解除</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="toolingvalidation/foldtooling.html">Fold tooling validation</a></span>
+ <span class="next"><a href="../savingfilters.html">Saving filters</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

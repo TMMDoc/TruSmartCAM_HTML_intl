@@ -1,0 +1,678 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Vista de trabajos</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Bienvenido a TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Change license</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Configuración</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Agregar/Eliminar máquina</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Configurar herramientas</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Configurar usuarios</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Idioma</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Agregar nuevo material y lámina</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Exportar/Importar material</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Reemplazar material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Mapear material</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Mapear páginas CAM</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Mapear campos desde CAD (claves de búsqueda)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">La interfaz de usuario</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Flujo de trabajo</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Biblioteca</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Abrir</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Importar piezas</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Importar pedidos</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Importar trabajos</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Importar ensamblajes</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Vista de biblioteca</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Piezas</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Estado de pieza</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Validación de pieza</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Estado de herramientas</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Validación de herramientas</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Validación de herramientas de plegado</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Validación de herramientas de corte</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Validación de herramientas de doblado</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Tooling panel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Pedidos</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Vista de pedidos</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Trabajos</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">Crear trabajo</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobview.html">Vista de trabajos</a></li>
+    <li><button class="tree blank"></button><a href="jobpanel.html">Panel de trabajos</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">Planificación automática</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">Interactive nesting</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">Reempaquetado</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">Gestión de anidamientos</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">Vista de disposiciones</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">Panel de disposiciones</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">Enviador de informes</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">Gestión de retales</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">Gestión automática de retazos</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">Gestión manual de retales</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">Anidamiento de línea gemelar</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">Desactualizado</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">Filtros de trabajos</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">Extensiones CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Instalación</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Guardar piezas</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Guardar ensamblaje</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Verificar viabilidad</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Configuración de fábrica</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Mejoras diversas</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Aviso legal</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Trabajos</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobview.html">Vista de trabajos</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Vista de trabajos</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Esta sección explica las diferentes vistas disponibles en la vista de trabajos, incluyendo
+Jobs, Parts, Nests, Edit, Simulate y Export.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jobs">Jobs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Al seleccionar la opción <strong>tareas</strong> se muestra una lista de todos los trabajos actualmente
+configurados en el software. Puede hacer doble clic en un trabajo para ver sus detalles o
+hacer clic derecho para acceder a opciones adicionales.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Los trabajos se muestran en vista de mosaicos, donde cada trabajo se muestra con
+propiedades básicas como ID de trabajo, Ref de trabajo, Nombre del cliente, Total de piezas, Fecha de vencimiento, Barra de
+estado del trabajo, etc.</p>
+</li>
+<li>
+<p>Cada mosaico de trabajo también muestra imágenes de piezas en formato de tarjetas apiladas. Puede
+desplazarse por todas las piezas en un trabajo usando la rueda del ratón.<br></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobview1.png" alt="Página de trabajo" width="1489">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_detalles_del_trabajo">Detalles del trabajo</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Hacer doble clic en un mosaico o presionar la tecla <kbd>Enter</kbd> después de seleccionar un mosaico
+cambia la vista al Modo de Detalle.</p>
+</li>
+<li>
+<p>La página de detalles muestra la lista de piezas junto con las hojas anidadas
+(disposiciones), si las hay.</p>
+</li>
+<li>
+<p>Use las teclas de flecha Arriba/Abajo para cambiar entre trabajos en la página de detalles.</p>
+</li>
+<li>
+<p>Desplazar la rueda del ratón sobre la pila de piezas resalta la pieza tanto en la
+lista de piezas como en las disposiciones.</p>
+</li>
+<li>
+<p>Seleccionar una disposición resalta la disposición y todas las piezas anidadas en ella en la
+lista de piezas. Los resaltados se desactivan automáticamente después de un minuto.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobview2.png" alt="Detalles del trabajo" width="1908">
+</div>
+</div>
+</li>
+<li>
+<p><strong>Resumen de nesting</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Piezas</strong>: Muestra el número total de elementos de pedido y la
+cantidad total en el trabajo.</p>
+</li>
+<li>
+<p><strong>chapas</strong>: Muestra el número total de hojas anidadas junto
+con la cantidad total de hojas.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Pasos de trabajo</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Plegado</strong>: Muestra la máquina asignada y su cantidad de pedido
+a procesar.</p>
+</li>
+<li>
+<p><strong>Corte</strong>: Muestra la máquina asignada y su cantidad de pedido
+a procesar.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_prioridad">Prioridad</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Primero, haga clic en el icono <strong>Jobs</strong> en el lado izquierdo de la pantalla, seleccione el trabajo que
+desea editar y luego haga clic en <strong>edit</strong> en el lado derecho de la pantalla (asegúrese de que
+la opción Jobs esté seleccionada).</p>
+</li>
+<li>
+<p>Alternativamente, haga clic derecho en el trabajo seleccionado y haga clic en el
+icono <strong>Comprobar el documento para su edición</strong>.</p>
+</li>
+<li>
+<p>Cuando hace clic en <strong>edit</strong>, aparece la ventana de edición de trabajo. En esta ventana, puede establecer
+o cambiar la prioridad del trabajo.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/priority1.png" alt="Priority1" width="1207">
+</div>
+</div>
+</li>
+<li>
+<p>Según la prioridad de la pieza del trabajo, la Referencia del trabajo en el mosaico del trabajo tiene
+sombreado de color correspondiente.</p>
+</li>
+<li>
+<p>Las piezas del trabajo se ordenan primero por prioridad y luego por fecha de vencimiento. También tienen
+sombreado de color según su prioridad.</p>
+</li>
+<li>
+<p>Al anidar, las piezas <strong>Urgent</strong> se consideran primero, seguidas de <strong>High</strong>, luego
+<strong>Normal</strong>, y finalmente las piezas de prioridad <strong>Low</strong> se colocan en el espacio restante en
+las hojas de anidamiento.</p>
+</li>
+<li>
+<p>Las hojas de anidamiento también se ordenan y tienen sombreado de color según la prioridad.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Prioridad del trabajo</th>
+<th class="tableblock halign-left valign-top">Descripción del color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/urgent.png" alt="Urgent" width="50"></span> (Naranja)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Urgente</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/normal1.png" alt="Normal" width="50"></span> (Sin color)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Normal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/high.png" alt="High" width="50"></span> (Amarillo)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alto</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/low.png" alt="Low" width="50"></span> (Gris oscuro)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bajo</p></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock">
+<div class="content">
+<img src="img/priority2.png" alt="Priority2" width="1158">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_estado">Estado</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>La barra de estado del trabajo usa códigos de color para indicar el progreso o condición del
+trabajo según la cantidad procesada o restante.</p>
+</li>
+<li>
+<p>Las piezas dentro del trabajo y las hojas de anidamiento también se resaltan con
+colores coincidentes para reflejar su estado individual dentro del trabajo general.</p>
+</li>
+<li>
+<p>La codificación de colores mejora el seguimiento y garantiza que los operadores puedan ver fácilmente el
+estado de producción de un vistazo.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/status1.png" alt="Estado del trabajo" width="1114">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/status2.png" alt="Estado del trabajo" width="1360">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Estado del trabajo</th>
+<th class="tableblock halign-left valign-top">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/notready.png" alt="Not Ready" width="100"></span> (Gris claro)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No listo</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/nesting.png" alt="Nesting" width="100"></span> (Magenta)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nesting</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/ready.png" alt="Ready" width="100"></span> (Blanco)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Listo</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/cuttingqueue.png" alt="Bend planned" width="100"></span> (Amarillo claro)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Plegado planificado</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/sheetmissing.png" alt="Sheet Missing" width="100"></span> (Gris oscuro)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Falta chapa</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/bendingqueue.png" alt="Bending Queue" width="100"></span> (Amarillo oscuro)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cola de plegado</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/bendplanned.png" alt="Bend Planned" width="100"></span> (Amarillo)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cola de corte</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/completed.png" alt="Completed" width="100"></span> (Verde oscuro)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hecho</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_parts">Parts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La vista Active Parts muestra todas las piezas que están actualmente en progreso dentro de
+trabajos activos.</p>
+</div>
+<div class="paragraph">
+<p>Cada pieza se representa como un mosaico que muestra detalles clave como nombre de pieza,
+dimensiones, material, espesor, cantidad y fecha de vencimiento. También se muestra una vista previa visual de la
+pieza.</p>
+</div>
+<div class="paragraph">
+<p>Esta vista ayuda a los usuarios a monitorear el estado de procesamiento de piezas individuales y
+rastrear su progreso a través de trabajos en curso.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/activeparts.png" alt="Active">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nests">Nests</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La vista Active Nests muestra todos los anidamientos que están actualmente en progreso dentro de
+trabajos activos.</p>
+</div>
+<div class="paragraph">
+<p>Cada anidamiento se representa con detalles relevantes como número de piezas y
+estado de procesamiento. También se muestra un diseño visual de las piezas anidadas.</p>
+</div>
+<div class="paragraph">
+<p>Esta vista ayuda a los usuarios a monitorear el progreso del anidamiento y rastrear cómo se organizan
+y procesan las piezas en las hojas.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/activenest.png" alt="Nest">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_edit">Edit</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La opción Edit le permite modificar el elemento seleccionado.</p>
+</div>
+<div class="paragraph">
+<p>Según la vista actual, la instancia seleccionada se abre para edición:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>En la vista Jobs, el trabajo seleccionado se abre para edición.</p>
+</li>
+<li>
+<p>En la vista Active Parts, la pieza seleccionada se abre para edición.</p>
+</li>
+<li>
+<p>En la vista Active Nests, el anidamiento seleccionado se abre para edición.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobviewedit.png" alt="Edit" width="980">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_export_csv">Export csv</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La opción Export le permite seleccionar información del trabajo y exportarla a un archivo CSV.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Haga clic en el icono <strong>jobs</strong>.</p>
+</li>
+<li>
+<p>Haga clic en la opción <strong>export</strong> en el lado derecho de la pantalla.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importexport1.png" alt="Export" width="700">
+</div>
+</div>
+</li>
+<li>
+<p>Aparece un cuadro de diálogo que muestra los campos disponibles:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importexport2.png" alt="Export CSV" width="174">
+</div>
+</div>
+</li>
+<li>
+<p>Seleccione las casillas de verificación de los campos que desea exportar.</p>
+</li>
+<li>
+<p>Use la opción <strong>Group By</strong> si desea agrupar los datos por un
+campo seleccionado.</p>
+</li>
+<li>
+<p>Haga clic en Export para generar el archivo CSV.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_información_adicional">Información adicional</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>También hay tres iconos adicionales en el lado derecho de la pantalla que son
+<strong>simular</strong>, <strong>Goto</strong> y <strong>atrás</strong>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Simulate abrirá el elemento seleccionado para una vista más detallada.</p>
+</li>
+<li>
+<p>Goto cambiará el enfoque y la visualización a la pieza o el anidamiento que está
+seleccionado.</p>
+</li>
+<li>
+<p>Back retrocederá un nivel desde donde se encuentra actualmente, por ejemplo,
+al hacer clic en <strong>atrás</strong> mientras está en simulación lo llevará de vuelta al
+trabajo principal y desde un trabajo lo llevará de vuelta a la pantalla principal de trabajos.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_jobs">Jobs</a>
+  </li>
+  <li level="2">
+   <a href="#_detalles_del_trabajo">Detalles del trabajo</a>
+  </li>
+  <li level="2">
+   <a href="#_prioridad">Prioridad</a>
+  </li>
+  <li level="2">
+   <a href="#_estado">Estado</a>
+  </li>
+  <li level="1">
+   <a href="#_parts">Parts</a>
+  </li>
+  <li level="1">
+   <a href="#_nests">Nests</a>
+  </li>
+  <li level="1">
+   <a href="#_edit">Edit</a>
+  </li>
+  <li level="1">
+   <a href="#_export_csv">Export csv</a>
+  </li>
+  <li level="1">
+   <a href="#_información_adicional">Información adicional</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobcreation.html">Crear trabajo</a></span>
+ <span class="next"><a href="jobpanel.html">Panel de trabajos</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

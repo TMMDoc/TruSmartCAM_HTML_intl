@@ -1,0 +1,427 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Saving filters</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Bienvenido a TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Change license</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Configuración</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Agregar/Eliminar máquina</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Configurar herramientas</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Configurar usuarios</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Idioma</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Agregar nuevo material y lámina</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Exportar/Importar material</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Reemplazar material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Mapear material</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Mapear páginas CAM</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Mapear campos desde CAD (claves de búsqueda)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">La interfaz de usuario</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Flujo de trabajo</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Biblioteca</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="open/index.html">Abrir</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="open/partimport.html">Importar piezas</a></li>
+      <li><button class="tree blank"></button><a href="open/orderimport.html">Importar pedidos</a></li>
+      <li><button class="tree blank"></button><a href="open/jobimport.html">Importar trabajos</a></li>
+      <li><button class="tree blank"></button><a href="open/assembliesimport.html">Importar ensamblajes</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="libraryview/index.html">Vista de biblioteca</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="libraryview/partview.html">Piezas</a></li>
+      <li><button class="tree blank"></button><a href="libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="partstate/index.html">Estado de pieza</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="partstate/partvalidation.html">Validación de pieza</a></li>
+      <li><button class="tree blank"></button><a href="partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="toolingstatus/index.html">Estado de herramientas</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="toolingstatus/toolingvalidation/index.html">Validación de herramientas</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="toolingstatus/toolingvalidation/bendtooling.html">Validación de herramientas de plegado</a></li>
+        <li><button class="tree blank"></button><a href="toolingstatus/toolingvalidation/cuttooling.html">Validación de herramientas de corte</a></li>
+        <li><button class="tree blank"></button><a href="toolingstatus/toolingvalidation/foldtooling.html">Validación de herramientas de doblado</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="toolingstatus/toolingpanel.html">Tooling panel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a class="active" href="savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Pedidos</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Vista de pedidos</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../jobs/index.html">Trabajos</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../jobs/jobcreation.html">Crear trabajo</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobview.html">Vista de trabajos</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobpanel.html">Panel de trabajos</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobautoplan.html">Planificación automática</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobinteractplan.html">Interactive nesting</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/repacking.html">Reempaquetado</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/layoutcommands/index.html">Gestión de anidamientos</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/nestview.html">Vista de disposiciones</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/layoutpanel.html">Panel de disposiciones</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/reportsender.html">Enviador de informes</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/remnantmanagement/index.html">Gestión de retales</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/autoremnant.html">Gestión automática de retazos</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/manualremnant.html">Gestión manual de retales</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../jobs/twinlinenesting.html">Anidamiento de línea gemelar</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/outdate.html">Desactualizado</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobfilters.html">Filtros de trabajos</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">Extensiones CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Instalación</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Guardar piezas</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Guardar ensamblaje</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Verificar viabilidad</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Configuración de fábrica</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Mejoras diversas</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Aviso legal</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Biblioteca</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="savingfilters.html">Saving filters</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Saving filters</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Saved filters allow you to reuse frequently applied criteria in Parts, Jobs,
+and Layouts, streamlining your workflow. Each module comes with default
+filters, but additional filter lists can be created by Site Admins or
+Programmers as needed. Reusing saved filters saves time and helps maintain
+consistency across searches.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on <span class="image"><img src="img/menu.png" alt="menu" width="20"></span> icon to view the default filters.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/before.png" alt="Before" width="215">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_steps_to_save_filters">Steps to save filters</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Click on <span class="image"><img src="img/ficon.png" alt="ficon" width="20"></span>icon, Select any filter item.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/selectfilter.png" alt="Select Filter" width="431">
+</div>
+</div>
+</li>
+<li>
+<p>From the dropdown menu of the selected filter  item, choose an option. A tick
+mark will appear next to the selected condition.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/selectoption.png" alt="Select Option" width="415">
+</div>
+</div>
+</li>
+<li>
+<p>To apply the condition, click on <span class="image"><img src="img/ficon.png" alt="ficon" width="20"></span> icon and then select
+<strong>Añadir requisito previo (Ctrl+PLUS)]</strong>. You can repeat this
+step to add multiple conditions.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addcondition.png" alt="Add Condition" width="447">
+</div>
+</div>
+</li>
+<li>
+<p>To save these selected filters with conditions, click on
+<strong>Guardar filtro&#8230;&#8203; (Ctrl+S)]</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/savefilter1.png" alt="Save Filter" width="561">
+</div>
+</div>
+</li>
+<li>
+<p>Enter the name and then click on <strong>_Guardar</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/savedialoge.png" alt="Save Dialog" width="300">
+</div>
+</div>
+</li>
+<li>
+<p>From the <strong>Guardar filtro</strong> dialog, you can also delete any
+previously saved filters.</p>
+</li>
+<li>
+<p>These filters will be saved in the Default filter list, Here
+<strong>Material</strong> is saved to the default list.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/after.png" alt="After" width="179">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Filters created by SiteAdmin &amp; Admin are shared across all users.
+Filters created by Programmer &amp; Operator are shared across only to Programmers
+and Operators user roles.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_filter_commands">Filter commands</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Icon</th>
+<th class="tableblock halign-left valign-top">Shortcuts</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Clear Selection</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/clear.png" alt="Clear" width="16"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Ctrl</kbd>+<kbd>X</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unselects all selected choices and refreshes the filter items view.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Select Highlighted</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/checked.png" alt="Highlighted" width="16"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Ctrl</kbd>+<kbd>A</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selects all highlighted choices. This command stays disabled if item
+highlighting is not applicable for the selected field.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Match All</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/and.png" alt="Match All" width="16"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>&amp;</kbd></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays only items that meet all selected conditions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Pin In/Out Menu</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/pin-out.png" alt="Pin out" width="16"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Ctrl</kbd>+<kbd>Down/Up</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When pinned, the dropdown menu stays open even when the current focus moves
+to another window.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Close Menu</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/close.png" alt="close" width="16"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>Esc</kbd></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Closes the dropdown menu.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_steps_to_save_filters">Steps to save filters</a>
+  </li>
+  <li level="1">
+   <a href="#_filter_commands">Filter commands</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="toolingstatus/toolingpanel.html">Tooling panel</a></span>
+ <span class="next"><a href="../orders/index.html">Pedidos</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

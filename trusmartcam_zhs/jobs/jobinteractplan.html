@@ -1,0 +1,379 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>交互式排样</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">欢迎使用 TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">安装</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">硬件要求</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">支持的文件格式</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">先决条件</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">客户端安装</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">更改许可证</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">配置</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">添加/删除设备</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">设置工具</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">配置用户</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">语言</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">材料</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">添加新材料和板材</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">导出/导入材料</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">替换材料</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">映射材料</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">映射 CAM 页面</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">从 CAD 映射字段（查找键）</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">用户界面</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">工作流程</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">库</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">打开</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">导入零件</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">导入订单</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">导入作业</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">导入装配体</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">库视图</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">零件</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">装配体</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">零件状态</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">零件验证</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">零件面板</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">零件筛选器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">工装状态</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">工装验证</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">折弯工装验证</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">切割工装验证</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">折边工装验证</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">工装面板</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">保存筛选器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">订单</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">订单视图</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">作业</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">创建作业</a></li>
+    <li><button class="tree blank"></button><a href="jobview.html">作业视图</a></li>
+    <li><button class="tree blank"></button><a href="jobpanel.html">作业面板</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">自动规划</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobinteractplan.html">交互式排样</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">重新打包</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">排样管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">布局视图</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">布局面板</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">报告发送器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">余料管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">自动余料管理</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">手动余料管理</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">双线排样</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">过期</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">作业过滤器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">工厂</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">路线</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">板材</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">用户</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">编辑</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">客户</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">设置</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">环境</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">导入</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">折弯</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">切割</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">通知</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">监视</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">作业</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">报告</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD 扩展</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks 插件</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">安装</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">保存零件</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">保存装配体</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">检查可行性</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">工厂设置</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">其他增强功能</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">版本说明</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">作业</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobinteractplan.html">交互式排样</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>交互式排样</h1>
+<div class="paragraph">
+<p>交互式排样可用于为单个零件、作业中的几个零件、单个作业或多个作业创建排样计划。它允许您选择机床和材料、设置板材参数并以交互方式查看排样结果。</p>
+</div>
+<div class="paragraph">
+<p>右键单击零件或作业，然后选择 <strong>规划零件…&#8230;&#8203;/规划套料…&#8230;&#8203;</strong> &#8594; <strong>运行交互式排样…</strong> 选项。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/interactive1.png" alt="Interactive nesting" width="1142">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>交互式排样</strong> 窗口打开。</p>
+</li>
+<li>
+<p>默认情况下，交互式排样窗口切换到 <strong>选择机床和材料</strong> 页面。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/interactive2.png" alt="Interactive nesting window" width="1908">
+</div>
+</div>
+</li>
+<li>
+<p>机床显示为彩色条，指示可用的生产负荷：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>绿色条：计划小时数</p>
+</li>
+<li>
+<p>灰色条：可用小时数（8 小时班次之外）</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>在每台机床下，选定的零件按其原材料分组（零件/总数量）。</p>
+</li>
+<li>
+<p>如果零件没有适用于机床的有效工具解决方案，则该零件和材料将被忽略，不进行处理。</p>
+</li>
+<li>
+<p>如果为一台机床选择了原材料，则该材料将不再可用于其他机床。</p>
+</li>
+<li>
+<p>设置好机床排样计划后，选择首选板材并覆盖板材参数，如 <strong>优先级</strong>、<strong>数量</strong>、<strong>边距</strong> 等。</p>
+</li>
+<li>
+<p>您可以过滤板材以显示 <strong>所有板材</strong>、<strong>标准板材</strong> 或 <strong>残留板材</strong>。单击 <strong>下一页</strong>。</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+在此阶段无法增加数量。您可以保持与板材库存数量相同，也可以减少数量并检查排样结果。
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>更新数量</strong> 显示在交互式排样计划窗口中。</p>
+</li>
+<li>
+<p>默认情况下，<strong>全选 (F5)</strong> 包括所有零件进行排样，或者您可以手动选择优先零件并调整零件数量。单击 <strong>下一页</strong>。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/interactive3.png" alt="Update part quantity" width="1908">
+</div>
+</div>
+</li>
+<li>
+<p>排样开始，板材中排样的零件更新为蓝色状态。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/interactive4.png" alt="Review interactive nesting" width="1911">
+</div>
+</div>
+</li>
+<li>
+<p>机床的生产负荷根据排样结果更新。</p>
+</li>
+<li>
+<p>排样的布局按比例绘制，并显示在排样结果选项卡中。</p>
+</li>
+<li>
+<p>如果某些零件仍未排样，将显示消息 <strong>一些零件仍未排样</strong> — 这些零件保留在原始作业中。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>未排样的原因可能是没有可用于排样的板材</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>交互式排样结果的前缀为：<strong>出厂</strong> &#8594; <strong>设置</strong> &#8594; <strong>套料</strong> &#8594; <strong>排样设置</strong>、<strong>交互式板料名称前缀</strong>。</p>
+</li>
+<li>
+<p>交互式排样布局以字母 <strong>L</strong> 作为前缀。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/interactive6.png" alt="Factory settings" width="754">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/interactive5.png" alt="Interactive nest layout" width="857">
+</div>
+</div>
+</li>
+</ul>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobautoplan.html">自动规划</a></span>
+ <span class="next"><a href="repacking.html">重新打包</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

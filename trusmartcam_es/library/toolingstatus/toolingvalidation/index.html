@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../../img/praxis-icon.png">
+  <title>Validación de herramientas</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Bienvenido a TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../../../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../../../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../../../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../../../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../../../installation/changelic.html">Change license</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../configuration/index.html">Configuración</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../configuration/setupmachine.html">Agregar/Eliminar máquina</a></li>
+    <li><button class="tree blank"></button><a href="../../../configuration/setuptooling.html">Configurar herramientas</a></li>
+    <li><button class="tree blank"></button><a href="../../../configuration/configureusers.html">Configurar usuarios</a></li>
+    <li><button class="tree blank"></button><a href="../../../configuration/language.html">Idioma</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../configuration/addmaterial/addnew.html">Agregar nuevo material y lámina</a></li>
+      <li><button class="tree blank"></button><a href="../../../configuration/addmaterial/exportimport.html">Exportar/Importar material</a></li>
+      <li><button class="tree blank"></button><a href="../../../configuration/addmaterial/replacematerial.html">Reemplazar material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../configuration/mapbendpages.html">Mapear material</a></li>
+    <li><button class="tree blank"></button><a href="../../../configuration/mapcampages.html">Mapear páginas CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../../configuration/cadmapfields.html">Mapear campos desde CAD (claves de búsqueda)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../userinterface.html">La interfaz de usuario</a></li>
+  <li><button class="tree blank"></button><a href="../../../workflow.html">Flujo de trabajo</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">Biblioteca</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../open/index.html">Abrir</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../open/partimport.html">Importar piezas</a></li>
+      <li><button class="tree blank"></button><a href="../../open/orderimport.html">Importar pedidos</a></li>
+      <li><button class="tree blank"></button><a href="../../open/jobimport.html">Importar trabajos</a></li>
+      <li><button class="tree blank"></button><a href="../../open/assembliesimport.html">Importar ensamblajes</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../libraryview/index.html">Vista de biblioteca</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../libraryview/partview.html">Piezas</a></li>
+      <li><button class="tree blank"></button><a href="../../libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../partstate/index.html">Estado de pieza</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../partstate/partvalidation.html">Validación de pieza</a></li>
+      <li><button class="tree blank"></button><a href="../../partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../../partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">Estado de herramientas</a>
+     <ul>
+      <li>
+       <button class="tree open"></button>
+       <a class="active" href="index.html">Validación de herramientas</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="bendtooling.html">Validación de herramientas de plegado</a></li>
+        <li><button class="tree blank"></button><a href="cuttooling.html">Validación de herramientas de corte</a></li>
+        <li><button class="tree blank"></button><a href="foldtooling.html">Validación de herramientas de doblado</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingpanel.html">Tooling panel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../orders/index.html">Pedidos</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../orders/ordersview.html">Vista de pedidos</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../jobs/index.html">Trabajos</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../jobs/jobcreation.html">Crear trabajo</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/jobview.html">Vista de trabajos</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/jobpanel.html">Panel de trabajos</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/jobautoplan.html">Planificación automática</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/jobinteractplan.html">Interactive nesting</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/repacking.html">Reempaquetado</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../jobs/layoutcommands/index.html">Gestión de anidamientos</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../jobs/layoutcommands/nestview.html">Vista de disposiciones</a></li>
+      <li><button class="tree blank"></button><a href="../../../jobs/layoutcommands/layoutpanel.html">Panel de disposiciones</a></li>
+      <li><button class="tree blank"></button><a href="../../../jobs/layoutcommands/reportsender.html">Enviador de informes</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../jobs/remnantmanagement/index.html">Gestión de retales</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../jobs/remnantmanagement/autoremnant.html">Gestión automática de retazos</a></li>
+      <li><button class="tree blank"></button><a href="../../../jobs/remnantmanagement/manualremnant.html">Gestión manual de retales</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../jobs/twinlinenesting.html">Anidamiento de línea gemelar</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/outdate.html">Desactualizado</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/jobfilters.html">Filtros de trabajos</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../cadextensions/index.html">Extensiones CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../cadextensions/solidworksaddin/installationsteps.html">Instalación</a></li>
+      <li><button class="tree blank"></button><a href="../../../cadextensions/solidworksaddin/savetopraxis.html">Guardar piezas</a></li>
+      <li><button class="tree blank"></button><a href="../../../cadextensions/solidworksaddin/saveassembly.html">Guardar ensamblaje</a></li>
+      <li><button class="tree blank"></button><a href="../../../cadextensions/solidworksaddin/partfeasibility.html">Verificar viabilidad</a></li>
+      <li><button class="tree blank"></button><a href="../../../cadextensions/solidworksaddin/factorysettings.html">Configuración de fábrica</a></li>
+      <li><button class="tree blank"></button><a href="../../../cadextensions/solidworksaddin/miscenhancements.html">Mejoras diversas</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../impressum.html">Aviso legal</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">Biblioteca</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">Estado de herramientas</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Validación de herramientas</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Validación de herramientas</h1>
+<div class="paragraph">
+<p>Esta sección describe cómo acceder y modificar la información de herramientas para
+piezas en TruSmartCAM.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Haga clic derecho en cualquier mosaico de pieza para abrir el panel de piezas y acceder a las opciones
+de herramientas.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/tooling.png" alt="Herramientas" width="511">
+</div>
+</div>
+</li>
+<li>
+<p>Haga clic en <strong>Utillajes</strong> para cambiar a la primera instancia con herramientas disponible.</p>
+</li>
+<li>
+<p>Alternativamente, haga clic directamente en una instancia con herramientas para ver los detalles de la máquina
+y las opciones de herramientas.</p>
+</li>
+<li>
+<p>Use <span class="image"><img src="img/document.png" alt="Ver" width="18"></span> para
+<strong>Abrir en modo solo lectura para su visualización</strong>.</p>
+</li>
+<li>
+<p>Use <span class="image"><img src="img/edit.png" alt="Editar" width="18"></span> para
+<strong>Comprobar el documento para su edición</strong>.</p>
+</li>
+<li>
+<p>La instancia con herramientas seleccionada se abre en TecZone o MetaCAM.</p>
+</li>
+<li>
+<p>Realice verificaciones manuales de herramientas y haga los cambios necesarios.</p>
+</li>
+<li>
+<p>Cuando intente guardar, un diálogo de <strong>Unsaved Changes</strong> le solicita que confirme
+sus ediciones.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/unsave.png" alt="Sin guardar" width="368">
+</div>
+</div>
+</li>
+<li>
+<p>Haga clic en <strong>Yes</strong> para proceder a guardar.</p>
+</li>
+<li>
+<p>El sistema realiza la Validación de Herramientas nuevamente después de guardar.</p>
+</li>
+<li>
+<p>Si no hay errores, aparece la opción para guardar los cambios en TruSmartCAM.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/save.png" alt="Guardar" width="436">
+</div>
+</div>
+</li>
+<li>
+<p>Si se encuentran errores de herramientas, se muestra un mensaje de error:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/errorsave.png" alt="Error al guardar" width="436">
+</div>
+</div>
+</li>
+<li>
+<p>Después de guardar, el estado de herramientas de la pieza se actualiza en la biblioteca de piezas.</p>
+</li>
+<li>
+<p>Un color verde en la instancia con herramientas indica que está archivada.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/checkedout.png" alt="Extraída" width="256">
+</div>
+</div>
+</li>
+<li>
+<p>El Autor de la Instancia con Herramientas se actualiza a la última persona que la editó.</p>
+</li>
+<li>
+<p>El campo <strong>Editado por el usuario</strong> indica si la instancia con herramientas
+ha sido modificada manualmente. Cuando un usuario extrae la instancia y
+realiza algún cambio, este campo se establece automáticamente en Sí al guardar.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/useredit.png" alt="Edición de usuario" width="379">
+</div>
+</div>
+</li>
+<li>
+<p>Si una pieza está siendo editada actualmente, aparece un icono de usuario en su mosaico.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/checkout.png" alt="Extraída" width="265">
+</div>
+</div>
+</li>
+<li>
+<p>Al pasar el cursor sobre el mosaico se muestra quién la extrajo y la hora en que fue extraída.</p>
+</li>
+<li>
+<p>Mientras la pieza está extraída, la opción <span class="image"><img src="img/edit.png" alt="Editar" width="18"></span>
+<strong>Comprobar el documento para su edición</strong> está deshabilitada
+para la misma instancia con herramientas, y la opción <span class="image"><img src="img/canceledit.png" alt="Cancelar" width="18"></span>
+<strong>Cancelar comprobación</strong> se habilita.</p>
+</li>
+</ul>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="../index.html">Estado de herramientas</a></span>
+ <span class="next"><a href="bendtooling.html">Validación de herramientas de plegado</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

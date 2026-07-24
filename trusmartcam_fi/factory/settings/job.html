@@ -1,0 +1,456 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Job</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Tervetuloa TruSmartCAM-järjestelmään</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Asennus</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Laitteistovaatimukset</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Tuetut tiedostomuodot</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Ennakkovaatimukset</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Palvelimen asennus</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Asiakkaan asennus</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Lisenssin vaihto</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfigurointi</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Koneen lisääminen/poistaminen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Työkalujen asetukset</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Käyttäjien määrittäminen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Kieli</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiaali</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Uuden materiaalin ja arkin lisääminen</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Materiaalin vienti/tuonti</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Materiaalin korvaaminen</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Materiaalin kartoitus</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAM-sivujen kartoitus</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Kenttien kartoitus CAD:sta (hakuavaimet)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Käyttöliittymä</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Työnkulku</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Kirjasto</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Avaa</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Osien tuonti</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Tilausten tuonti</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Töiden tuonti</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Kokoonpanojen tuonti</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Kirjastonäkymä</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Osat</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Kokoonpano</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Osan tila</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Osan validointi</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Osapaneeli</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Osasuodattimet</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Työkalutila</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Työkalutuksen validointi</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Taivutustyökalun validointi</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Leikkaustyökalun validointi</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Paneelitaivutuksen validointi</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Työkalutuspaneeli</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Suodattimien tallentaminen</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Tilaukset</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Tilausnäkymät</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Työt</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Luo työ</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Työnäkymä</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Työpaneeli</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automaattinen suunnittelu</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktiivinen sisäkkäisyys</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Uudelleenpakkaus</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Sisäkkäisyyden hallinta</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Asettelunäkymä</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Asettelupaneeli</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Raportin lähettäjä</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Jäännösarkkien hallinta</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automaattinen jäännösarkkien hallinta</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manuaalinen jäännösarkkien hallinta</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Twinline-sisäkkäisyys</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Vanhentunut</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Työsuodattimet</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Factory</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../customers.html">Customers</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Settings</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a class="active" href="job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD-laajennukset</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Asennus</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Tallenna osat</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Tallenna kokoonpano</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Tarkista toteutettavuus</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Tehtaan asetukset</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Muut parannukset</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Factory</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Settings</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="job.html">Job</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Job</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/job.png" alt="Job settings" width="814">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tulostetietojen_asetukset">Tulostetietojen asetukset</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Tallenna sijoittelun NC-tiedosto</strong> - Ota tämä vaihtoehto käyttöön, jotta asettelun
+NC ja raportit tallennetaan.</p>
+</div>
+<div class="paragraph">
+<p><strong>Tallenna sijoittelun tiedosto ja raportit</strong> - Ota tämä vaihtoehto käyttöön, jotta asettelutiedosto
+tallennetaan.</p>
+</div>
+<div class="paragraph">
+<p><strong>Tulosta simuloinnin esikatselu raporteissa</strong> - Ota tämä
+vaihtoehto käyttöön luodaksesi työkalujen simulaation esikatselun muiden
+tulosten kanssa. Tämä on lyhyt GIF-animaatio laser/punch-työkalulle.</p>
+</div>
+<div class="paragraph">
+<p><strong>Älä poista ohjelman tulostetietoja sijoittelun/työn valmistumisen jälkeen</strong> - Tämän vaihtoehdon käyttöönotto ohittaa ohjelman tulosten poistamisen,
+kun työ/asettelu on merkitty valmiiksi.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nestauksen_asetukset">Nestauksen asetukset</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Sekoita eri töistä peräisin olevat osat keskenään</strong> - Tukee sekoitetun
+tilan asettelua. Useiden töiden osat tulisi asetella yhteen parempaa
+pakkaustehokkuutta varten.</p>
+</div>
+<div class="paragraph">
+<p><strong>Älä vapauta sijoitteluja automaattisesti</strong> - Tämä estää
+asettelujen saatavuuden tuotantoa varten, kunnes kaikki asettelut ovat julkaistussa
+tilassa.</p>
+</div>
+<div class="paragraph">
+<p><strong>Osien uudelleennestauksen hyväksyntäraja</strong> - Tätä arvoa
+käytetään päättämään, pidetäänkö asetettu asettelu hyväksymisjonossa ja
+asetellaan uudelleen, kun uusia osia suunnitellaan vai julkaistaanko ne tuotantoon
+ja viedään liittyvät tulosteet tulostekansioon.</p>
+</div>
+<div class="paragraph">
+<p><strong>Levyn nimen etuliite interaktiivisissa nestauksissa</strong> - Tätä
+osiota käytetään tukemaan interaktiivista asettelua, jossa käyttäjällä on enemmän hallintaa
+aseteltaviin osiin ja asettelun tulokseen. Käytä nimeämiskaaviota, joka eroaa
+automaattisesta asettelusta, interaktiivisesti asetelltuihin asetteluihin.</p>
+</div>
+<div class="paragraph">
+<p><strong>Päivitä levyvarasto nestauksen vapautuksen (vapautuksen poistamisen) jälkeen</strong> - Jos
+tämä vaihtoehto on käytössä, levyn varasto päivittyy, kun asettelu lähetetään
+koneelle. Myös asettelun palauttaminen koneelta palauttaa levyn
+varastoon.</p>
+</div>
+<div class="paragraph">
+<p><strong>Suorita jäännöspalojen varastonhallinta automaattisesti</strong> - Kun tämä kytkin
+on valittu, ohjelmisto automatisoi jäännöksen varastonhallinnan. Jos se ei ole
+valittu, jäännöksen hallinta muuttuu interaktiiviseksi.</p>
+</div>
+<div class="paragraph">
+<p><strong>Päivitä vanhentuneet sijoittelut automaattisesti</strong> - Kun
+valittu, ohjelmisto päivittää kaikki ui:EGTag.SelectOutOfDate[Out-of-date
+Layouts] -asettelut, jotka liittyvät osaan sen leikkausratkaisujen laskennan jälkeen.</p>
+</div>
+<div class="paragraph">
+<p><strong>Suorita Twin-line-nestaus automaattisesti</strong> - Valitse tämä vaihtoehto ottaaksesi
+twin-line-automaation käyttöön.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hakuun_perustuvan_työnkulun_asetukset">Hakuun perustuvan työnkulun asetukset</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Käytä hakuun perustuvaa työnkulkua</strong> - Tämä vaihtoehto on hyödyllinen
+käyttäjille, jotka tarvitsevat erittäin autonomisen suunnittelun ja asettelun järjestelmän. Kun se on käytössä,
+TruSmartCAM suunnittelee asettelun kysynnän mukaan.</p>
+</div>
+<div class="paragraph">
+<p><strong>Nestauksia asemaa kohti</strong> - Tämä arvo määrittää, kuinka monta
+asettelua asemaa kohti tulisi luoda.</p>
+</div>
+<div class="paragraph">
+<p><strong>Levyjen enimmäismäärä nestausta kohti</strong> - Tätä arvoa käytetään
+hallitsemaan maksimilevymäärää yksilöllistä asettelua vastaan. Esimerkiksi, jos
+tilaus sisältää suuren osan (joka täyttää koko levyn) ja sitä tarvitaan
+suurina määrinä (esim. 500) - TruSmartCAM ei enää luo yhtä asettelua, jossa on 500
+kopiota pull-tilassa. Sen sijaan se luo 10 kopiota asettelua kohti, kun 10 on
+maksimi.</p>
+</div>
+<div class="paragraph">
+<p><strong>Taivutusohjelmia asemaa kohti</strong> - Tämä arvo määrittää, kuinka monta taivutusohjelmaa asemaa kohti tulisi luoda.</p>
+</div>
+<div class="paragraph">
+<p><strong>Merkitse työtehtävä valmiiksi ohjelman tulostetietojen poistamisen yhteydessä</strong> -
+Ota tämä vaihtoehto käyttöön, jotta asettelu merkitään valmiiksi, kun
+tulosteet poistetaan kohdetulostepolusta.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_laskentataulukoiden_tuonnin_asetukset">Laskentataulukoiden tuonnin asetukset</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>CAD-hakujen hakemistot</strong> - TruSmartCAM yrittää
+ladata tuodussa CSV:ssä mainitun osamerkinnän osakirjastosta.
+Jos osaa ei kuitenkaan ole saatavilla osakirjastossa, se yrittää
+hakea osat hakuhakemistoista hakemistojen järjestyksen perusteella, joka on asetettu
+tässä dialogissa.</p>
+</div>
+<div class="paragraph">
+<p><strong>Käytä rekursiivista CAD-hakua</strong> - Ota tämä vaihtoehto käyttöön, jotta
+haku toistetaan peräkkäisille tuloksille.</p>
+</div>
+<div class="paragraph">
+<p><strong>Luo tyhjä osa puuttuvien CAD-tiedostojen tilalle</strong> - Jos
+osia ei ole TruSmartCAM-kirjastossa tai hakuhakemistoissa, TruSmartCAM
+luo tyhjän osan näille puuttuville osille.</p>
+</div>
+<div class="paragraph">
+<p><strong>Älä näytä valintaikkunaa 'Uusi työ", jos laskentataulukossa ei ole virheitä</strong> -
+Jos CSV-merkinnät ovat puhtaita eli tietokannasta ei ole epäsuhta
+tietoja tai kaikki kentät on lueteltu oikein, TruSmartCAM ei näytä työn
+yleiskatsausikkunaa ja käsittelee työn heti, kun CSV tuodaan tai
+pudotetaan.</p>
+</div>
+<div class="paragraph">
+<p><strong>Aseta sarake 'Raakamateriaali' etusijalle sarakkeeseen 'Materiaali + paksuus' nähden</strong> -
+ Tuetut laskentataulukon tyypit:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Malli 1: PartName, Quantity, DueDate, Priority, RawMaterial</p>
+</li>
+<li>
+<p>Malli 2: PartName, Quantity, DueDate, Priority, Material, Thickness</p>
+</li>
+<li>
+<p>Malli 3: PartName, Quantity, DueDate, Priority, Material, Thickness,
+RawMaterial</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Jos tätä vaihtoehtoa ei ole valittu, Malli 1 katsotaan oletuksena
+laskentataulukon tyypiksi. Tuemme myös Mallia 3 siinä tapauksessa, että CSV-muoto on tyyppiä
+Malli 3.</p>
+</div>
+<div class="paragraph">
+<p>Jos tämä vaihtoehto on valittu ja CSV on tyyppiä Malli 2, niin TruSmartCAM
+selvittää raaka-aineen CSV:n Material- ja Thickness-kentistä.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_laskentataulukoiden_tulostetietojen_asetukset">Laskentataulukoiden tulostetietojen asetukset</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Vie työn/sijoittelun valmistumista koskeva raportti (</strong>.csv)* -
+Valitse tämä vaihtoehto ottaaksesi CSV-viennin käyttöön, kun asettelu tai työ on valmis.
+Valmiit raportit tallennetaan Reports-kohteeseen, joka on määritetty Factory
+&#8594; Settings &#8594; Reports -asetuksissa.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_tulostetietojen_asetukset">Tulostetietojen asetukset</a>
+  </li>
+  <li level="1">
+   <a href="#_nestauksen_asetukset">Nestauksen asetukset</a>
+  </li>
+  <li level="1">
+   <a href="#_hakuun_perustuvan_työnkulun_asetukset">Hakuun perustuvan työnkulun asetukset</a>
+  </li>
+  <li level="1">
+   <a href="#_laskentataulukoiden_tuonnin_asetukset">Laskentataulukoiden tuonnin asetukset</a>
+  </li>
+  <li level="1">
+   <a href="#_laskentataulukoiden_tulostetietojen_asetukset">Laskentataulukoiden tulostetietojen asetukset</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="watch.html">Watch</a></span>
+ <span class="next"><a href="reports.html">Reports</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

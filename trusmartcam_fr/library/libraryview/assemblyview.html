@@ -1,0 +1,567 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Assemblage</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Bienvenue dans TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Configuration matérielle requise</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Formats de fichiers pris en charge</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Prérequis</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Installation du serveur</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Installation du client</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Changer de licence</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Ajouter/Supprimer une machine</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Configuration de l'outillage</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Configurer les utilisateurs</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Langue</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Matériau</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Ajouter un nouveau matériau et une feuille</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Exporter/Importer le matériau</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Remplacer le matériau</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Associer le matériau</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Associer les pages CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Associer les champs depuis CAD (clés de recherche)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">L'interface utilisateur</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Flux de travail</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Bibliothèque</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Ouvrir</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Importer des pièces</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Importer des commandes</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Importer des tâches</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Importer des assemblages</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Vue de bibliothèque</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partview.html">Pièces</a></li>
+      <li><button class="tree blank"></button><a class="active" href="assemblyview.html">Assemblage</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Statut de la pièce</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Validation de pi\u00e8ce</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Panneau de pièces</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Filtres de pièces</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Statut de l'outillage</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Validation d'outillage</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Validation d'outillage de pliage</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Validation d'outillage de découpe</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Validation d'outillage de pliure</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Panneau d'outillage</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Enregistrer les filtres</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Commandes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Vue des commandes</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Travaux</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Créer un travail</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Vue du travail</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Panneau de travail</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Planification automatique</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Imbrication interactive</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Réemballage</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Gestion de l'imbrication</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Vue de mise en page</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Panneau de mise en page</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Expéditeur de rapport</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Gestion des chutes</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Gestion automatique des chutes</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Gestion manuelle des chutes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Imbrication en ligne double</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Obsolète</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtres de travail</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Feuilles</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Utilisateurs</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Modifier</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Clients</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Paramètres</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environnement</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Importation</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Pliage</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Découpe</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Surveillance</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Tâche</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Rapports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Extensions CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">Extension SolidWorks</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Enregistrer les pièces</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Enregistrer l'assemblage</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Vérifier la faisabilité</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Paramètres de l'usine</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Améliorations diverses</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Mentions légales</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Bibliothèque</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Vue de bibliothèque</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="assemblyview.html">Assemblage</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Assemblage</h1>
+<div class="sect1">
+<h2 id="_créer_des_imbrications_statiques_à_partir_dun_assemblage">Créer des imbrications statiques à partir d&#8217;un assemblage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Des imbrications statiques peuvent être générées pour un assemblage en utilisant l&#8217;assistant d&#8217;imbrication interactive.
+Ces imbrications sont des mises en page fixes associées uniquement à l&#8217;assemblage sélectionné.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Basculez vers la vue <strong>assys.</strong>.</p>
+</li>
+<li>
+<p>Faites un clic droit sur l&#8217;assemblage requis et sélectionnez <strong>Créer imbrications&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>L&#8217;assistant d&#8217;imbrication interactive s&#8217;ouvre.</p>
+</li>
+<li>
+<p>Par défaut, l&#8217;assistant d&#8217;imbrication interactive bascule vers la page <strong>Sélectionner machine et matériau</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyinteractive.png" alt="Machine and material" width="950">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Les machines sont affichées avec des barres de couleur indiquant la charge de production disponible :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Barre verte : Heures planifiées</p>
+</li>
+<li>
+<p>Barre grise : Heures disponibles (sur un quart de travail de 8 heures)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Sous chaque machine, les pièces sélectionnées sont regroupées avec leur matière première (Pièces/Quantité totale).</p>
+</li>
+<li>
+<p>Si une pièce n&#8217;a pas de solution d&#8217;outillage valide pour une machine, cette pièce et ce matériau sont ignorés pour le traitement sur une machine donnée.</p>
+</li>
+<li>
+<p>Si une matière première est sélectionnée pour une machine, elle ne sera pas disponible pour d&#8217;autres machines.</p>
+</li>
+<li>
+<p>Une fois le plan d&#8217;imbrication de la machine défini, sélectionnez la feuille préférée et remplacez les paramètres de feuille comme <strong>Priorité</strong>, <strong>Quantité</strong>, <strong>Bords de la tôle</strong>, etc.</p>
+</li>
+<li>
+<p>Vous pouvez filtrer les feuilles pour afficher <strong>Toutes les tôles</strong>, <strong>Tôles standards</strong> ou <strong>Tôles restantes</strong>. Cliquez sur <strong>Suivant</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Il n&#8217;est pas possible d&#8217;augmenter les quantités à ce stade. Vous pouvez soit conserver la même quantité que l&#8217;inventaire des feuilles, soit la réduire et vérifier les résultats d&#8217;imbrication.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Mettre à jour qté.</strong> apparaît dans la fenêtre de plan d&#8217;imbrication interactive.</p>
+</li>
+<li>
+<p>Par défaut, <strong>Choisir tous (F5)</strong> inclut toutes les pièces pour l&#8217;imbrication, ou vous pouvez manuellement sélectionner les pièces prioritaires et ajuster les quantités de pièces. Cliquez sur <strong>Suivant</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyquantity.png" alt="Update quantity">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>L&#8217;imbrication commence et les pièces imbriquées dans la feuille sont mises à jour avec un statut de couleur bleue.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyresult.png" alt="Nesting result">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>La charge de production de la machine se met à jour en fonction du résultat de l&#8217;imbrication.</p>
+</li>
+<li>
+<p>Si certaines pièces restent non imbriquées, le message <strong>Certaines pièces ne sont pas imbriquées</strong> apparaît - ces pièces restent dans le travail d&#8217;origine.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Une pièce peut rester non imbriquée si aucune feuille appropriée n&#8217;est disponible.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Les imbrications statiques peuvent être modifiées pour inclure des pièces non imbriquées :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Sélectionnez la mise en page où vous souhaitez insérer des pièces non imbriquées et vérifiez-la pour modification.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblylayout.png" alt="Selected layout">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TecZone s&#8217;ouvre. Cliquez sur <strong>_Choisir</strong> ou <strong>Choisir _tous</strong> pour sélectionner les pièces non imbriquées de l&#8217;assemblage parent.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/addnest.png" alt="Add unnested parts" width="864">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Disposez la pièce dans la mise en page selon vos besoins.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unnest.png" alt="Unnested part placement" width="715">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Les imbrications générées sont automatiquement nommées d&#8217;après l&#8217;assemblage parent pour une identification facile.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Les imbrications statiques ne peuvent pas contenir de pièces d&#8217;autres assemblages. Autoriser des imbrications d&#8217;assemblage mixtes empêcherait de libérer un assemblage sans libérer les autres, donc le mélange est interdit par conception.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_composants_non_métalliques">Composants non métalliques</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Lorsqu&#8217;un assemblage est importé, les pièces en tôle sont extraites et ajoutées aux assemblages dans la bibliothèque de pièces.</p>
+</li>
+<li>
+<p>Les composants non métalliques sont séparés et ajoutés aux <strong>Composants</strong>.</p>
+</li>
+<li>
+<p>L&#8217;assemblage est ajouté à la bibliothèque d&#8217;assemblages et sa nomenclature (Bill of Materials) contient à la fois des pièces et des composants.</p>
+</li>
+<li>
+<p>Si une pièce a déjà été importée en tant que pièce en tôle, le système met à jour l&#8217;entrée existante et supprime les doublons de la bibliothèque de pièces.</p>
+</li>
+<li>
+<p>La sélection d&#8217;un assemblage affiche à la fois les pièces et les composants, avec les quantités de composants affichées sous l&#8217;image du composant (nombre de composants d&#8217;assemblage sélectionnés et nombre total de composants).</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/components.png" alt="Assembly components" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Les info-bulles des composants affichent le nom, le matériau et la taille.
+Les composants sont exclus pendant la production - ils ne sont pas imbriqués et aucune feuille n&#8217;est générée pour les composants.</p>
+</li>
+<li>
+<p>Des assemblages et des composants d&#8217;exemple sont disponibles à :
+C:\Program Files\Metamation\Praxis\Samples\Assys\Components, qui peuvent être utilisés pour tester l&#8217;importation de composants et les flux de travail d&#8217;assemblage.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_créer_un_travail_à_partir_dun_assemblage">Créer un travail à partir d&#8217;un assemblage</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Faites un clic droit sur l&#8217;assemblage, cliquez sur <strong>Nouveau&#8230;&#8203;</strong>, puis sur <strong>Tâche</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/newassemblyjob.png" alt="Create new job" width="760">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Dans la boîte de dialogue Nouveau travail, définissez le nombre d&#8217;assemblages, cliquez sur <strong>OK</strong>, puis mettez à jour les détails du travail (tels que la date d&#8217;échéance et la priorité) selon les besoins.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/riegelwindow.png" alt="New job dialog" width="369">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Le système crée un travail à partir de l&#8217;assemblage et copie les imbrications statiques en tant qu&#8217;imbrications de travail, en mettant à jour le nombre de feuilles. Les imbrications copiées sont préfixées par l&#8217;ID du travail.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblycreated.png" alt="Assembly job created" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Les imbrications de travail peuvent être modifiées ou supprimées sans affecter les imbrications statiques d&#8217;origine.</p>
+</li>
+<li>
+<p>Les imbrications de travail peuvent être réemballées en utilisant <strong>Adaptation/compactage&#8230;&#8203;</strong> ou <strong>Ajout de pièces&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Pour des étapes détaillées, consultez <a href="../../jobs/layoutcommands/layoutpanel.html#adapt-compact">Adapt/Compact</a> et <a href="../../jobs/layoutcommands/layoutpanel.html#add-parts">Add parts</a>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Si une pièce n&#8217;apparaît pas dans une imbrication, vérifiez la boîte de dialogue de modification de l&#8217;imbrication - vous pouvez insérer manuellement des pièces non imbriquées.</p>
+</div>
+<div class="paragraph">
+<p>Utilisez les recherches et filtres enregistrés pour trouver rapidement des pièces dans plusieurs assemblages.</p>
+</div>
+<div class="paragraph">
+<p>Utilisez des noms d&#8217;assemblage et d&#8217;imbrication clairs et descriptifs pour éviter toute confusion lors de la copie d&#8217;imbrications dans des travaux.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_créer_des_imbrications_statiques_à_partir_dun_assemblage">Créer des imbrications statiques à partir d&#8217;un assemblage</a>
+  </li>
+  <li level="1">
+   <a href="#_composants_non_métalliques">Composants non métalliques</a>
+  </li>
+  <li level="1">
+   <a href="#_créer_un_travail_à_partir_dun_assemblage">Créer un travail à partir d&#8217;un assemblage</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partview.html">Pièces</a></span>
+ <span class="next"><a href="../partstate/index.html">Statut de la pièce</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

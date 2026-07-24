@@ -1,0 +1,509 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Import jobs</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">TruSmartCAM에 오신 것을 환영합니다</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">설치</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">하드웨어 요구 사항</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">지원되는 파일 형식</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">사전 요구 사항</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">서버 설치</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">클라이언트 설치</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">라이선스 변경</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">구성</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">기계 추가/제거</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">툴링 설정</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">사용자 구성</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">언어</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">재료</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">새 재료 및 시트 추가</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">재료 내보내기/가져오기</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">재료 교체</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">재료 매핑</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAM 페이지 매핑</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">CAD에서 필드 매핑 (조회 키)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">사용자 인터페이스</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">워크플로우</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Library</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Open</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a class="active" href="jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Tooling panel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">주문</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">주문 보기</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">작업 생성</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">작업 보기</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">작업 패널</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">자동 계획</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">대화형 네스팅</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">재포장</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">네스트 관리</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">레이아웃 보기</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">레이아웃 패널</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">보고서 발신자</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">잔재 관리</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">자동 잔재 관리</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">수동 잔재 관리</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">트윈라인 네스팅</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">구식</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">작업 필터</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD 확장 기능</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks 추가 기능</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">설치</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">부품 저장</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">어셈블리 저장</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">실행 가능성 확인</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">공장 설정</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">기타 개선 사항</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">법적 고지</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Library</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Open</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobimport.html">Import jobs</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Import jobs</h1>
+<div class="sect1">
+<h2 id="_csv_또는_xlsx에서_가져오기">csv 또는 xlsx에서 가져오기</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>일반 텍스트 형식으로 작업을 가져올 수도 있습니다</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>File &#8594; Open &#8594; 통합 작업들 가져오기</strong> 를 클릭하면 Open Folder
+대화 상자가 나타납니다. `C:\Program
+Files\Metamation\Praxis\Samples\Jobs\C0\C0.csv`를 선택합니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv.png" alt="CSV import" width="426">
+</div>
+</div>
+</li>
+<li>
+<p>csv 위치 또는 조회 폴더 디렉터리에 모든 부품이 존재하면
+csv 필드와 일치하는 모든 부품을 나열하는 <strong>새 통합 작업</strong> 창이 나타납니다.</p>
+</li>
+<li>
+<p>누락된 부품은 무시되며 <strong>새 통합 작업</strong> 창에 표시되지 않습니다.</p>
+</li>
+<li>
+<p>처음에 Part 상태는 Nascent입니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv2.png" alt="CSV import" width="908">
+</div>
+</div>
+</li>
+<li>
+<p><strong>OK</strong> 를 클릭하면 부품이 Part Library로 가져옵니다. CAD
+검증, bend 및 cut 툴링 인스턴스에 대한 툴링이 수행되며 <strong>Pmonitor</strong> 화면에서 모니터링할 수 있습니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv3.png" alt="CSV import" width="1438">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_누락된_cad_파일들에_대한_빈_파트_생성">누락된 CAD 파일들에 대한 빈 파트 생성</h3>
+<div class="paragraph">
+<p>스프레드시트(.csv 또는 .xlsx)를 사용하여 작업을 가져올 때 시스템에서 사용할 수 없는 CAD 파일을 참조하는 행이 있을 수 있습니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>이를 처리하려면 <strong>공장</strong>
+ &#8594; <strong>설정</strong> &#8594; <strong>통합 작업*로 이동하고
+*스프레드시트 가져오기</strong> 에서
+<strong>누락된 CAD 파일들에 대한 빈 파트 생성</strong> 를 활성화합니다</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv6.png" alt="Spreadsheet import" width="801">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>이 옵션을 선택하면:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>작업 가져오기 중에 CAD 파일이 누락된 경우 시스템은 누락된 CAD 파일 대신 빈 부품을 자동으로 생성합니다.</p>
+</li>
+<li>
+<p><strong>새 통합 작업</strong> 창에서 이러한 누락된 부품은 관련 CAD 파일이 누락되었음을 나타내기 위해 노란색으로 시각적으로 강조 표시됩니다.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/csv4.png" alt="Edit jobs" width="578"></span></p>
+</div>
+</li>
+<li>
+<p>누락된 부품에는 CSV의 매핑된 필드(예: 부품 이름, 재료, 두께, 수량 등)가 여전히 있습니다. 그러나 부품 상태는 Nascent로 표시되며 이는 실제 형상이 없는 빈 자리 표시자임을 의미합니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv5.png" alt="Nascent parts" width="1110">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>이렇게 하면 CAD 파일 누락으로 인한 오류 없이 작업 가져오기를 계속 진행할 수 있습니다 — 나중에 올바른 CAD 파일을 사용할 수 있게 되면 빈 부품을 업데이트하거나 교체할 수 있습니다.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_스프레드시트에_오류가_없는_경우_새_통합_작업_대화상자_표시_안_함">스프레드시트에 오류가 없는 경우 새 통합 작업 대화상자 표시 안 함</h3>
+<div class="paragraph">
+<p><strong>공장</strong> &#8594; <strong>설정</strong> &#8594;
+<strong>통합 작업</strong> → <strong>스프레드시트 가져오기</strong>→
+<strong>스프레드시트에 오류가 없는 경우 새 통합 작업 대화상자 표시 안 함</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>이 확인란을 선택하면 스프레드시트에 오류가 없는 경우(누락된 부품, 누락된 날짜 또는 잘못된 데이터 없음) 시스템이 New Job 대화 상자를 표시하지 않고 자동으로 새 작업을 생성합니다.</p>
+</li>
+<li>
+<p>이 확인란의 선택을 취소하면 스프레드시트에 오류가 없는 경우에도 사용자 검토 및 확인을 위해 New Job 대화 상자가 항상 나타납니다.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_prefer_raw_material_column_over_material_thickness">Prefer raw-material column over material + thickness</h3>
+<div class="paragraph">
+<p><strong>공장</strong> &#8594; <strong>설정</strong> &#8594;
+<strong>통합 작업</strong>→<strong>Prefer Raw-Material column over Material + Thickness</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>이 확인란을 선택하면 시스템은 스프레드시트가 Raw-Material 열을 사용할 것으로 예상합니다(예: Steel-20). 이는 재료 유형과 두께를 하나의 열에 하나의 값으로 결합해야 함을 의미합니다.</p>
+</li>
+<li>
+<p>이 확인란의 선택을 취소하면 시스템은 스프레드시트에 Material 및 Thickness에 대한 별도의 열이 있을 것으로 예상합니다(예: Steel 및 2.00). 시스템은 가져오기 중에 내부적으로 결합합니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csvmaterial.png" alt="CSV Raw Material and Material+Thickness">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_csvxlsx를_사용한_watch_folder">CSV/XLSX를 사용한 Watch folder</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>공장</strong> &#8594; <strong>설정</strong>&#8594;
+<strong>감시</strong> 에서 <strong>'라이브 폴더' 활성화</strong> 및 <strong>하위 폴더들도 감시</strong> 를 확인합니다.</p>
+</li>
+<li>
+<p>watch folder 경로(UNC 또는 매핑된 드라이브)를 설정합니다.</p>
+</li>
+<li>
+<p><strong>스프레드시트 가져오기</strong> 에서
+<strong>'라이브 폴더&#8217;에서 스프레드시트 가져오기</strong> 를 확인합니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/watchfolder.png" alt="Watch folder" width="702">
+</div>
+</div>
+</li>
+<li>
+<p>Spreadsheet Import 옵션에서 <strong>통합 작업들 가져오기</strong> 를 선택합니다.</p>
+</li>
+<li>
+<p>`C:\Program Files\Metamation\Praxis\Samples\Jobs\C0\C0.csv`를 복사하여 Watch Folder에 붙여넣습니다.</p>
+</li>
+<li>
+<p>시스템은 CSV를 확인하고 자동으로 작업을 생성하려고 시도합니다.</p>
+</li>
+<li>
+<p>CAD 파일이 누락된 경우 필요한 CAD 데이터를 찾을 수 없으므로 작업이 생성되지 않습니다.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_cad_lookup_directory_및_recursive_cad_search_구성되지_않음">CAD lookup directory 및 recursive CAD search - 구성되지 않음</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>공장</strong> &#8594; <strong>설정</strong> &#8594;
+<strong>통합 작업</strong> &#8594; <strong>스프레드시트 가져오기*에서
+*CAD lookup directories</strong> 가 설정되지 않고
+<strong>재귀적 CAD 검색 사용</strong> 가 사용되지 않으면 시스템은 CAD 파일을 자동으로 검색하지 않습니다.</p>
+</li>
+<li>
+<p><strong>누락된 CAD 파일들에 대한 빈 파트 생성</strong> 확인란이 선택되어 있으면 CAD 파일이 누락되어도 작업이 생성됩니다.</p>
+</li>
+<li>
+<p>이 경우 작업의 모든 부품은 nascent(빈) 부품으로 생성됩니다 —
+CAD 파일을 찾을 수 없어서 형상이 없음을 의미합니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/notconfigured.png" alt="Create blank parts" width="867">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cad_lookup_directory_및_recursive_cad_search_구성됨">CAD lookup directory 및 recursive CAD search - 구성됨</h3>
+<div class="paragraph">
+<p><strong>CAD 조회 디렉터리</strong> 가
+(C:\Program Files\Metamation\Praxis\Samples)로 설정되고
+<strong>재귀적 CAD 검색 사용</strong> 가
+<strong>공장</strong> &#8594; <strong>설정</strong> &#8594; <strong>통합 작업</strong>
+&#8594; *스프레드시트 가져오기*에서 활성화된 경우:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>시스템은 스프레드시트에 언급된 필요한 CAD 파일에 대해 지정된 폴더 및 모든 하위 폴더를 자동으로 검색합니다.</p>
+</li>
+<li>
+<p><strong>누락된 CAD 파일들에 대한 빈 파트 생성</strong> 도 활성화되어 있으므로 CAD 파일을 찾을 수 없는 경우 시스템은 자리 표시자로 빈 부품을 생성합니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/configured.png" alt="Create blank parts" width="861">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_csv_또는_xlsx에서_가져오기">csv 또는 xlsx에서 가져오기</a>
+  </li>
+  <li level="2">
+   <a href="#_누락된_cad_파일들에_대한_빈_파트_생성">누락된 CAD 파일들에 대한 빈 파트 생성</a>
+  </li>
+  <li level="2">
+   <a href="#_스프레드시트에_오류가_없는_경우_새_통합_작업_대화상자_표시_안_함">스프레드시트에 오류가 없는 경우 새 통합 작업 대화상자 표시 안 함</a>
+  </li>
+  <li level="2">
+   <a href="#_prefer_raw_material_column_over_material_thickness">Prefer raw-material column over material + thickness</a>
+  </li>
+  <li level="1">
+   <a href="#_csvxlsx를_사용한_watch_folder">CSV/XLSX를 사용한 Watch folder</a>
+  </li>
+  <li level="2">
+   <a href="#_cad_lookup_directory_및_recursive_cad_search_구성되지_않음">CAD lookup directory 및 recursive CAD search - 구성되지 않음</a>
+  </li>
+  <li level="2">
+   <a href="#_cad_lookup_directory_및_recursive_cad_search_구성됨">CAD lookup directory 및 recursive CAD search - 구성됨</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="orderimport.html">Import orders</a></span>
+ <span class="next"><a href="assembliesimport.html">Import assemblies</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

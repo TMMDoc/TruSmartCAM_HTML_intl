@@ -1,0 +1,850 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>伺服器安裝</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">歡迎使用 TruSmartCAM</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">安裝</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="hardwarerequirement.html">硬體需求</a></li>
+    <li><button class="tree blank"></button><a href="importformats.html">支援的檔案格式</a></li>
+    <li><button class="tree blank"></button><a href="prerequisites.html">先決條件</a></li>
+    <li><button class="tree blank"></button><a class="active" href="serverinstallation.html">伺服器安裝</a></li>
+    <li><button class="tree blank"></button><a href="clientinstallation.html">用戶端安裝</a></li>
+    <li><button class="tree blank"></button><a href="changelic.html">變更授權</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">配置</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">新增/移除機器</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">設定工具</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">配置使用者</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">語言</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">材料</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">新增材料和板材</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">匯出/匯入材料</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">取代材料</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">對應材料</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">對應 CAM 頁面</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">對應 CAD 欄位（查詢鍵）</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">使用者介面</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">工作流程</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">資料庫</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">開啟</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">匯入零件</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">匯入訂單</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">匯入工作</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">匯入組件</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">資料庫視圖</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">零件</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">組件</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">零件狀態</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">零件驗證</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">零件面板</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">零件篩選器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">工具狀態</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">工具驗證</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">折彎工具驗證</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">切割工具驗證</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">折邊工具驗證</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">工具面板</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">儲存篩選器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">訂單</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">訂單檢視</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../jobs/jobcreation.html">建立工作</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobview.html">工作檢視</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobpanel.html">工作面板</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobautoplan.html">自動規劃</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobinteractplan.html">互動式排版</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/repacking.html">重新包裝</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/layoutcommands/index.html">排版管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/nestview.html">佈局檢視</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/layoutpanel.html">佈局面板</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/reportsender.html">報告傳送器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/remnantmanagement/index.html">餘料管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/autoremnant.html">自動餘料管理</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/manualremnant.html">手動餘料管理</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../jobs/twinlinenesting.html">雙線排版</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/outdate.html">過期</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobfilters.html">工作篩選器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD 擴充功能</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks 增益集</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">安裝</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">儲存零件</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">儲存組件</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">檢查可行性</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">工廠設定</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">其他增強功能</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">版權聲明</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">安裝</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="serverinstallation.html">伺服器安裝</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>伺服器安裝</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>按照說明安裝 TruSmartCAM 伺服器以及 SQL。</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">管理員權限</div>
+<div class="paragraph">
+<p><strong>若要執行此安裝，使用者必須具有管理員權限。</strong></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>執行 <strong>Setup.TruSmartCAM.&lt;version&gt;.exe</strong> 以開始安裝。</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+版本是一個數字。
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>閱讀授權協議，選擇 <strong>I accept the agreement</strong>，然後點擊 下一個
+。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s02praxislicenseagreement.png" alt="Praxis License Agreement">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_步驟_1安裝位置">步驟 1：安裝位置</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>提及安裝目錄或接受安裝預設值 <code>C:\Program Files\Metamation\Praxis</code>，然後點擊 下一個。</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>C:\Program Files\Metamation\Praxis</code> - 安裝資料夾將包含以下資料夾：Bin、MetaCAM、Samples 和 Tracker。</p>
+</li>
+<li>
+<p><code>C:\Program Data\Metamation</code> - 資料資料夾將包含以下資料夾：TruSmartCAM、TecZone 和 MetaCAM。</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s03installationpath.png" alt="Installation Path">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_步驟_2元件選擇">步驟 2：元件選擇</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">安裝類型</th>
+<th class="tableblock halign-left valign-top">元件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Desktop client + Engine</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Client</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Desktop Client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Desktop client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Station</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">選擇所有工作站終端機，如 TecZone、MetaCAM、RightAngle（折彎控制器）、Vulcan（雷射機器控制器）</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">由使用者選擇。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>選擇 Full Installation。從 TruSmartCAM Tools 中選擇 <strong>Code Senders</strong> 和 <strong>Bend Code Senders</strong>。現在安裝類型變更為 <strong>定制</strong>。點擊 下一個。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s04serverinstallation.png" alt="Server Installation">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_步驟_3選擇安裝_sql_server">步驟 3：選擇安裝 SQL Server</h2>
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>SQL Express 2022 安裝僅適用於 TruSmartCAM 伺服器。此選項不適用於 Client 和 Sync 安裝。此外，這在首次安裝時會勾選並安裝，之後可以忽略。如果 TruSmartCAM 伺服器中已安裝 SQL，使用者可以忽略步驟 3。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>在 Select Additional Tasks：點擊 <strong>Install SQL Express</strong>，然後點擊 下一個。</p>
+</li>
+<li>
+<p>在 Ready to Install：總結所有安裝功能，然後點擊 Install。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s05sqlinstall.png" alt="Install SQL">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_步驟_4sql_server_安裝">步驟 4：SQL Server 安裝</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>安裝完 TruSmartCAM 元件後，安裝程式會繼續進行 SQL 伺服器安裝。接受授權協議以繼續，並使用預設選項安裝 SQL Express。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s06sqlserver.png" alt="SQLServer Install">
+</div>
+</div>
+<div class="paragraph">
+<p>安裝完成後，點擊 Close 並完成安裝。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s07sqlservercomplete.png" alt="SQL Server Complete">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+根據 Windows 版本，關閉 SQL 安裝可能會提示重新啟動。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_步驟_5windows_桌面捷徑">步驟 5：Windows 桌面捷徑</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>SQL 安裝後，如果系統未重新啟動，則選擇 <strong>Launch TruSmartCAM</strong> 核取方塊，然後點擊 <strong>Finish</strong>。</p>
+</li>
+<li>
+<p>如果系統重新啟動，則啟動桌面上的 TruSmartCAM 捷徑圖示，或在 Windows 開始程式中輸入 TruSmartCAM，然後 <strong>以系統管理員身分執行</strong>。</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<em>伺服器安裝</em>：桌面上有 TruSmartCAM 和 TruSmartCAM License 捷徑圖示。 + <em>用戶端/SYNC 安裝</em>：桌面上僅有 TruSmartCAM 捷徑圖示。
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s08launchpraxis.png" alt="Launch TruSmartCAM">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_步驟_6授權註冊">步驟 6：授權註冊</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>在 <em>Serial Number</em> 欄位中，輸入 Trumpf Metamation Service Team 提供的 <em>TruSmartCAM Serial key</em>。在「Registered to」欄位中輸入 <strong>&lt;Company Name&gt;</strong> 和電子郵件。點擊 <strong>OK</strong>。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s09praxisregister.png" alt="TruSmartCAM Register">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>如果網路防火牆阻止授權註冊或 TruSmartCAM 伺服器電腦沒有網際網路，則透過離線啟動完成 TruSmartCAM 授權。將 <em>C:\ProgramData\Metamation\Praxis</em> 資料夾中的 <strong><em>Prax.request</em></strong> 以電子郵件傳送給 Trumpf Metamation Service Team。Trumpf Metamation Team 將提供 <strong><em>Prax.lock</em></strong>，需要將其放到此資料夾中。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_步驟_7初始一次性配置">步驟 7：初始一次性配置</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>輸入資料庫名稱並設定資料儲存位置。選擇 使用 SQL 伺服器 核取方塊，並選擇要連接到資料庫的 SQL 伺服器名稱。點擊 <strong>OK</strong>。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s10usedatabase.png" alt="Use Database">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM 桌面用戶端開啟，在左下方顯示 <strong>Database Connection Succeeded</strong>。</p>
+</li>
+<li>
+<p>TruSmartCAM、TecZone 和 MetaCAM 配置檔案會使用預設配置機器或根據 TruSmartCAM 授權機器建立。所有 TruSmartCAM 用戶端都將共用相同的配置。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s11databaseconnectionsuccess.png" alt="Database Connection Success">
+</div>
+</div>
+<div class="paragraph">
+<p>歡迎畫面顯示 Windows 使用者 LoginName 作為 TruSmartCAM 登入和名稱。第一個 TruSmartCAM 使用者被視為 <strong>現場管理員</strong>。提供電子郵件和密碼。點擊 <strong>確定</strong>
+。</p>
+</div>
+<div class="paragraph">
+<p>選擇 <strong>記住我</strong>
+核取方塊以儲存下次使用的登入憑證。
+清除 <strong>記住我</strong> 核取方塊將在每次啟動 TruSmartCAM 應用程式時提示登入和密碼對話方塊。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s12welcomepraxis.png" alt="Welcome TruSmartCAM">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_步驟_8trusmartcam_登入">步驟 8：TruSmartCAM 登入</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>關閉 TruSmartCAM 並重新開啟。系統會提示您輸入 TruSmartCAM 登入憑證。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/signprompt.png" alt="Sign Prompt" width="450">
+</div>
+</div>
+</li>
+<li>
+<p>登入的使用者名稱顯示在 TruSmartCAM 應用程式標題中使用者圖示旁邊。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/userid.png" alt="User ID" width="228">
+</div>
+</div>
+</li>
+<li>
+<p>當您將滑鼠游標停留在使用者圖示上時，系統會顯示：</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/hover.png" alt="Hover" width="108">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>使用者角色（例如：Programmer、Admin）。</p>
+</li>
+<li>
+<p>登出的快捷鍵：<span class="keyseq"><kbd>Ctrl</kbd>+<kbd>L</kbd></span>。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>點擊使用者圖示會開啟一個選單，讓您可以：</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/information.png" alt="Information" width="160">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>編輯資訊&#8230;&#8203;</strong> - 更新您的個人資料詳細資訊。</p>
+</li>
+<li>
+<p><strong>更改密碼…</strong> - 變更您的帳戶密碼。</p>
+</li>
+<li>
+<p><strong>登出</strong> - 登出應用程式。</p>
+</li>
+<li>
+<p><strong>取消</strong> - 關閉選單而不做任何變更。</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_步驟_9工廠機器配置">步驟 9：工廠機器配置</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM 授權 [所有機器啟用授權位元]：預設的 TruSmartCAM 機器和材料被視為工廠配置。</p>
+</li>
+<li>
+<p>TruSmartCAM 授權 [無演示且啟用少數機器位元]：這些少數機器和預設材料被視為工廠配置。</p>
+</li>
+<li>
+<p>（Open &#8594; Import）從 <code>C:\Program Files\Metamation\Praxis\Samples\Parts</code> 匯入新零件，並驗證零件是否成功匯入。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s14praxiswelcomescreen.png" alt="Praxis Welcome screen">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_注意_1trusmartcam_monitor">注意 1：TruSmartCAM Monitor</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>安裝 Engine 的 TruSmartCAM Monitor（Site admin 權限）：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>具有 Engine 和 Site Admin TruSmartCAM 權限的 TruSmartCAM Monitor 將具有以下選項：</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>將 TruSmartCAM 配置、TecZone、MetaCAM 配置推送到所有 TruSmartCAM 用戶端。還有權限建立新的 TruSmartCAM 使用者登入。</p>
+</li>
+<li>
+<p>Show Agents 將顯示可用於執行自動化任務的總引擎數量，這與 TruSmartCAM 授權相關。</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s15pmonitor.png" alt="Praxis Monitor Status">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>未安裝 Engine 的 TruSmartCAM Monitor（Site admin 權限）：</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s16pmonitorwithoutengine.png" alt="Praxis Monitor without Engine">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>未安裝 Engine 的 TruSmartCAM Monitor（非 Site Admin 權限）：</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s17pmonitorwithprogrammerlogin.png" alt="Praxis with Progrmmer login">
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>執行 TruSmartCAM 應用程式的電腦必須安裝 Engine TruSmartCAM 元件 [伺服器電腦或任何用戶端安裝]。安裝 Engine TruSmartCAM 元件的電腦應全天候執行以執行所有自動化任務。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_注意_2lock_tracker">注意 2：Lock Tracker</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>點擊 TruSmartCAM 伺服器桌面上可用的 <strong>TruSmartCAM License</strong> 捷徑。或者，在任何網頁瀏覽器中開啟 <a href="http://localhost:7171/metamation/locktrack" class="bare">http://localhost:7171/metamation/locktrack</a> 網址。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>這將開啟 Lock Tracker 模組，其中包含授權資訊、TruSmartCAM 目前會話資訊和記錄。</p>
+</div>
+<div class="paragraph">
+<p>LockTracker HOME 頁面：這顯示 TruSmartCAM 序號、序號到期資訊和可用的序號位元資訊。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s18locktrack01.png" alt="Lock Track License Home page">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker SESSIONS 頁面：目前 TruSmartCAM 伺服器連接資訊，如 TruSmartCAM 桌面用戶端電腦、PMonitor、PEngine 狀態。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s19locktrack02.png" alt="Lock Track Session information">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker LOGs 頁面：TruSmartCAM 用戶端啟動和登出 | Pmonitor 啟動和 PEngine 連接/斷開狀態等，可以在此記錄頁面中查看。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s20locktrack03.png" alt="Praxis Monitor Status">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_注意_3opengl">注意 3：OpenGL</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM 應用程式在開啟時立即關閉，並且 pmonitor 未在工作列中顯示。</p>
+</li>
+<li>
+<p>這表示 OpenGl 問題。</p>
+</li>
+<li>
+<p>另一種確認方法：開啟 C:\Program Files\Metamation\Praxis\Bin\Flux.exe，會顯示有關 OpenGL 問題的錯誤對話方塊。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s21opengl.png" alt="OpenGL Issue">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>更新 <em>C:\ProgramData\Metamation\Praxis\Prax.ini</em>，options 區段使用 <strong>GLVersion=1</strong>，使 TruSmartCAM 應用程式成功開啟。</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ini hljs" data-lang="ini">[Options]
+GLVersion=1.0</code></pre>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_步驟_1安裝位置">步驟 1：安裝位置</a>
+  </li>
+  <li level="1">
+   <a href="#_步驟_2元件選擇">步驟 2：元件選擇</a>
+  </li>
+  <li level="1">
+   <a href="#_步驟_3選擇安裝_sql_server">步驟 3：選擇安裝 SQL Server</a>
+  </li>
+  <li level="1">
+   <a href="#_步驟_4sql_server_安裝">步驟 4：SQL Server 安裝</a>
+  </li>
+  <li level="1">
+   <a href="#_步驟_5windows_桌面捷徑">步驟 5：Windows 桌面捷徑</a>
+  </li>
+  <li level="1">
+   <a href="#_步驟_6授權註冊">步驟 6：授權註冊</a>
+  </li>
+  <li level="1">
+   <a href="#_步驟_7初始一次性配置">步驟 7：初始一次性配置</a>
+  </li>
+  <li level="1">
+   <a href="#_步驟_8trusmartcam_登入">步驟 8：TruSmartCAM 登入</a>
+  </li>
+  <li level="1">
+   <a href="#_步驟_9工廠機器配置">步驟 9：工廠機器配置</a>
+  </li>
+  <li level="1">
+   <a href="#_注意_1trusmartcam_monitor">注意 1：TruSmartCAM Monitor</a>
+  </li>
+  <li level="1">
+   <a href="#_注意_2lock_tracker">注意 2：Lock Tracker</a>
+  </li>
+  <li level="1">
+   <a href="#_注意_3opengl">注意 3：OpenGL</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="prerequisites.html">先決條件</a></span>
+ <span class="next"><a href="clientinstallation.html">用戶端安裝</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>
+    if (!hljs.initHighlighting.called) {
+      hljs.initHighlighting.called = true
+      ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+    }
+  </script>
+</body>
+</html>

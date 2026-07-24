@@ -1,0 +1,533 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Impor job</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Selamat Datang di TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Change license</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfigurasi</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Tambah/Hapus mesin</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Setup tooling</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Konfigurasi pengguna</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Bahasa</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Tambah material dan sheet baru</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Export/Import material</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Ganti material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Petakan material</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Petakan halaman CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Petakan field dari CAD (lookup keys)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Antarmuka pengguna</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Perpustakaan</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Open</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partimport.html">Impor part</a></li>
+      <li><button class="tree blank"></button><a href="orderimport.html">Impor order</a></li>
+      <li><button class="tree blank"></button><a class="active" href="jobimport.html">Impor job</a></li>
+      <li><button class="tree blank"></button><a href="assembliesimport.html">Impor assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Tampilan perpustakaan</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Bagian</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Rakitan</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Status part</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Validasi part</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Panel part</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Filter part</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Status tooling</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Validasi tooling</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Validasi tooling bend</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Validasi tooling cut</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Validasi tooling fold</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Panel tooling</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Menyimpan filter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Pesanan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Tampilan pesanan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Pekerjaan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Buat pekerjaan</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Tampilan pekerjaan</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Panel pekerjaan</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Rencana otomatis</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Nesting interaktif</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Pengepakan ulang</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Manajemen nest</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Tampilan tata letak</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Panel tata letak</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Pengirim laporan</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Manajemen sisa</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Manajemen sisa otomatis</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manajemen sisa manual</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Nesting twinline</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Kedaluwarsa</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filter pekerjaan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Ekstensi CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Instalasi</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Simpan part</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Simpan assembly</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Periksa kelayakan</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Pengaturan factory</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Peningkatan lain-lain</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Perpustakaan</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Open</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobimport.html">Impor job</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Impor job</h1>
+<div class="sect1">
+<h2 id="_impor_dari_csv_atau_xlsx">Impor dari csv atau xlsx</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Anda juga dapat mengimpor job dalam format teks umum</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klik <strong>File &#8594; Open &#8594; Impor Pekerjaan</strong>, dialog Open Folder
+muncul. Pilih <code>C:\Program
+Files\Metamation\Praxis\Samples\Jobs\C0\C0.csv</code>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv.png" alt="CSV import" width="426">
+</div>
+</div>
+</li>
+<li>
+<p>Jika semua Part ada di lokasi csv atau di direktori folder lookup,
+jendela <strong>pekerjaan baru</strong> muncul dengan mencantumkan semua part yang cocok dengan field
+csv.</p>
+</li>
+<li>
+<p>Part yang hilang diabaikan dan tidak muncul di jendela <strong>pekerjaan baru</strong>.</p>
+</li>
+<li>
+<p>Awalnya status Part adalah Nascent.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv2.png" alt="CSV import" width="908">
+</div>
+</div>
+</li>
+<li>
+<p>Klik <strong>OK</strong>, sekarang part diimpor ke dalam Part Library. Validasi
+CAD, tooling untuk bend dan cut tooling instance dilakukan yang dapat
+dipantau di layar <strong>Pmonitor</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv3.png" alt="CSV import" width="1438">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_buatlah_komponen_lembaran_kosong_untuk_file_cad_yang_tidak_ada">Buatlah komponen lembaran kosong untuk file CAD yang tidak ada</h3>
+<div class="paragraph">
+<p>Saat mengimpor job menggunakan spreadsheet (.csv atau .xlsx), Anda terkadang mungkin memiliki
+baris yang merujuk file CAD yang tidak tersedia di sistem.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Untuk menangani ini, buka <strong>pabrik</strong>
+ &#8594; <strong>Pengaturan</strong> &#8594; <strong>Pekerjaan</strong>,
+ di bawah <strong>Impor spreadsheet</strong> aktifkan
+<strong>Buatlah komponen lembaran kosong untuk file CAD yang tidak ada</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv6.png" alt="Spreadsheet import" width="801">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ketika opsi ini dipilih:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Jika file CAD hilang untuk setiap baris selama impor job, sistem akan
+secara otomatis membuat part kosong sebagai pengganti file CAD yang hilang.</p>
+</li>
+<li>
+<p>Di jendela <strong>pekerjaan baru</strong>, part yang hilang ini secara visual
+disorot dengan warna kuning untuk menunjukkan bahwa file CAD terkait hilang.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/csv4.png" alt="Edit jobs" width="578"></span></p>
+</div>
+</li>
+<li>
+<p>Part yang hilang masih akan memiliki field yang dipetakan (seperti nama part, material,
+ketebalan, jumlah, dll.) dari CSV. Namun, status part akan ditampilkan
+sebagai Nascent, yang berarti ini hanya placeholder kosong tanpa geometri aktual
+belum.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv5.png" alt="Nascent parts" width="1110">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ini memastikan bahwa impor job masih dapat dilanjutkan tanpa kesalahan karena
+file CAD yang hilang — Anda dapat memperbarui atau mengganti part kosong dengan
+file CAD yang benar ketika tersedia nanti.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_jangan_tampilkan_kotak_dialog_pekerjaan_baru_jika_spreadsheet_tidak_memiliki_kondisi_kegagalan">Jangan tampilkan kotak dialog Pekerjaan Baru jika spreadsheet tidak memiliki kondisi kegagalan</h3>
+<div class="paragraph">
+<p><strong>pabrik</strong> &#8594; <strong>Pengaturan</strong> &#8594;
+<strong>Pekerjaan</strong> → <strong>Impor spreadsheet</strong>→
+<strong>Jangan tampilkan kotak dialog Pekerjaan Baru jika spreadsheet tidak memiliki kondisi kegagalan</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ketika checkbox ini dipilih, sistem secara otomatis membuat job baru tanpa
+menampilkan dialog New Job jika spreadsheet tidak memiliki kesalahan (tidak ada part yang hilang,
+tanggal yang hilang, atau data yang tidak valid).</p>
+</li>
+<li>
+<p>Ketika checkbox ini dikosongkan, dialog New Job selalu muncul untuk tinjauan pengguna
+dan konfirmasi, bahkan jika spreadsheet tidak memiliki kesalahan.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_prefer_raw_material_column_over_material_thickness">Prefer raw-material column over material + thickness</h3>
+<div class="paragraph">
+<p><strong>pabrik</strong> &#8594; <strong>Pengaturan</strong> &#8594;
+<strong>Pekerjaan</strong>→<strong>Prefer Raw-Material column over Material + Thickness</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ketika checkbox ini dipilih, sistem mengharapkan spreadsheet menggunakan
+kolom Raw-Material (misalnya, Steel-20). Ini berarti tipe material dan
+ketebalan harus digabungkan dalam satu nilai dalam satu kolom.</p>
+</li>
+<li>
+<p>Ketika checkbox ini dikosongkan, sistem mengharapkan spreadsheet memiliki
+kolom terpisah untuk Material dan Thickness (misalnya, Steel dan 2.00). Sistem
+menggabungkannya secara internal selama impor.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csvmaterial.png" alt="CSV Raw Material and Material+Thickness">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_watch_folder_menggunakan_csvxlsx">Watch folder menggunakan CSV/XLSX</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Di <strong>pabrik</strong> &#8594; <strong>Pengaturan</strong>&#8594;
+<strong>Pantau</strong> centang <strong>Aktifkan 'Folder Langsung'</strong>
+dan <strong>Pantau juga subfolder</strong>.</p>
+</li>
+<li>
+<p>Tetapkan path watch folder (UNC atau mapped drive).</p>
+</li>
+<li>
+<p>Di <strong>Impor spreadsheet</strong>, centang
+<strong>Impor spreadsheet dari 'Folder Langsung'</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/watchfolder.png" alt="Watch folder" width="702">
+</div>
+</div>
+</li>
+<li>
+<p>Pilih <strong>Impor Pekerjaan</strong> dari opsi Spreadsheet Import.</p>
+</li>
+<li>
+<p>Salin <code>C:\Program Files\Metamation\Praxis\Samples\Jobs\C0\C0.csv</code> dan paste
+ke dalam Watch Folder.</p>
+</li>
+<li>
+<p>Sistem memeriksa CSV dan mencoba membuat job secara otomatis.</p>
+</li>
+<li>
+<p>Jika file CAD hilang, tidak ada job yang dibuat karena data CAD yang diperlukan tidak ditemukan.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_cad_lookup_directory_recursive_cad_search_tidak_dikonfigurasi">CAD lookup directory &amp; recursive CAD search - tidak dikonfigurasi</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Di <strong>pabrik</strong> &#8594; <strong>Pengaturan</strong> &#8594;
+<strong>Pekerjaan</strong> &#8594; <strong>Impor spreadsheet</strong>,
+jika tidak ada <strong>CAD lookup directories</strong> yang diatur dan
+<strong>Gunakan pencarian CAD rekursif</strong> tidak digunakan, sistem
+tidak mencari file CAD secara otomatis.</p>
+</li>
+<li>
+<p>Jika checkbox <strong>Buatlah komponen lembaran kosong untuk file CAD yang tidak ada</strong>
+dipilih, job masih akan dibuat bahkan ketika file CAD hilang.</p>
+</li>
+<li>
+<p>Dalam hal ini, semua part dalam job akan dibuat sebagai part nascent (kosong) —
+yang berarti mereka tidak memiliki geometri karena file CAD tidak dapat ditemukan.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/notconfigured.png" alt="Create blank parts" width="867">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cad_lookup_directory_recursive_cad_search_dikonfigurasi">CAD lookup directory &amp; recursive CAD search - dikonfigurasi</h3>
+<div class="paragraph">
+<p>Ketika <strong>Direktori pencarian CAD</strong> diatur ke
+(C:\Program Files\Metamation\Praxis\Samples) dan
+<strong>Gunakan pencarian CAD rekursif</strong> diaktifkan di bawah
+<strong>pabrik</strong> &#8594; <strong>Pengaturan</strong> &#8594; <strong>Pekerjaan</strong>
+&#8594; <strong>Impor spreadsheet</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sistem secara otomatis mencari folder yang ditentukan dan semua subfolder-nya
+untuk file CAD yang diperlukan yang disebutkan dalam spreadsheet.</p>
+</li>
+<li>
+<p><strong>Buatlah komponen lembaran kosong untuk file CAD yang tidak ada</strong> juga
+diaktifkan, jadi jika ada file CAD yang masih tidak ditemukan, sistem akan membuat
+part kosong sebagai placeholder.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/configured.png" alt="Create blank parts" width="861">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_impor_dari_csv_atau_xlsx">Impor dari csv atau xlsx</a>
+  </li>
+  <li level="2">
+   <a href="#_buatlah_komponen_lembaran_kosong_untuk_file_cad_yang_tidak_ada">Buatlah komponen lembaran kosong untuk file CAD yang tidak ada</a>
+  </li>
+  <li level="2">
+   <a href="#_jangan_tampilkan_kotak_dialog_pekerjaan_baru_jika_spreadsheet_tidak_memiliki_kondisi_kegagalan">Jangan tampilkan kotak dialog Pekerjaan Baru jika spreadsheet tidak memiliki kondisi kegagalan</a>
+  </li>
+  <li level="2">
+   <a href="#_prefer_raw_material_column_over_material_thickness">Prefer raw-material column over material + thickness</a>
+  </li>
+  <li level="1">
+   <a href="#_watch_folder_menggunakan_csvxlsx">Watch folder menggunakan CSV/XLSX</a>
+  </li>
+  <li level="2">
+   <a href="#_cad_lookup_directory_recursive_cad_search_tidak_dikonfigurasi">CAD lookup directory &amp; recursive CAD search - tidak dikonfigurasi</a>
+  </li>
+  <li level="2">
+   <a href="#_cad_lookup_directory_recursive_cad_search_dikonfigurasi">CAD lookup directory &amp; recursive CAD search - dikonfigurasi</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="orderimport.html">Impor order</a></span>
+ <span class="next"><a href="assembliesimport.html">Impor assembly</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

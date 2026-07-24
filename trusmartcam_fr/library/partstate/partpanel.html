@@ -1,0 +1,698 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Panneau de pièces</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Bienvenue dans TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Configuration matérielle requise</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Formats de fichiers pris en charge</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Prérequis</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Installation du serveur</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Installation du client</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Changer de licence</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Ajouter/Supprimer une machine</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Configuration de l'outillage</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Configurer les utilisateurs</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Langue</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Matériau</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Ajouter un nouveau matériau et une feuille</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Exporter/Importer le matériau</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Remplacer le matériau</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Associer le matériau</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Associer les pages CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Associer les champs depuis CAD (clés de recherche)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">L'interface utilisateur</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Flux de travail</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Bibliothèque</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Ouvrir</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Importer des pièces</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Importer des commandes</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Importer des tâches</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Importer des assemblages</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Vue de bibliothèque</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Pièces</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assemblage</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Statut de la pièce</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partvalidation.html">Validation de pi\u00e8ce</a></li>
+      <li><button class="tree blank"></button><a class="active" href="partpanel.html">Panneau de pièces</a></li>
+      <li><button class="tree blank"></button><a href="partfilters.html">Filtres de pièces</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Statut de l'outillage</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Validation d'outillage</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Validation d'outillage de pliage</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Validation d'outillage de découpe</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Validation d'outillage de pliure</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Panneau d'outillage</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Enregistrer les filtres</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Commandes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Vue des commandes</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Travaux</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Créer un travail</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Vue du travail</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Panneau de travail</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Planification automatique</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Imbrication interactive</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Réemballage</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Gestion de l'imbrication</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Vue de mise en page</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Panneau de mise en page</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Expéditeur de rapport</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Gestion des chutes</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Gestion automatique des chutes</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Gestion manuelle des chutes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Imbrication en ligne double</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Obsolète</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtres de travail</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Feuilles</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Utilisateurs</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Modifier</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Clients</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Paramètres</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environnement</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Importation</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Pliage</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Découpe</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Surveillance</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Tâche</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Rapports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Extensions CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">Extension SolidWorks</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Enregistrer les pièces</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Enregistrer l'assemblage</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Vérifier la faisabilité</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Paramètres de l'usine</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Améliorations diverses</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Mentions légales</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Bibliothèque</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Statut de la pièce</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="partpanel.html">Panneau de pièces</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Panneau de pièces</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cette section explique les actions liées aux pièces telles que
+<strong>Réimporter&#8230;&#8203;</strong>, <strong>Réoutillage&#8230;&#8203;</strong>,
+<strong>Renommer&#8230;&#8203;</strong>, <strong>Exporter sorties</strong>, etc.,
+utilisées pour gérer les instances de pièces.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/partpanel.png" alt="Part panel" width="150">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ouvrir en mode lecture seule pour la visualisation</strong><br>
+Opens the selected part in read-only mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Enables editing of the selected part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Supprimer</strong><br>
+Deletes the selected part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/newui.png" alt="Read-only" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Nouveau&#8230;&#8203;</strong><br>
+Selected part can be converted to a new order, job or assembly.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Exporter sorties</strong><br>
+Exports the part output to the destination configured.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/importui.png" alt="Import" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Réimporter&#8230;&#8203;</strong><br>
+Allows to import the selected part again.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/toolui.png" alt="Retool" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Réoutillage&#8230;&#8203;</strong><br>
+Allows to reprocess the selected part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/renameui.png" alt="Rename" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Renommer&#8230;&#8203;</strong><br>
+To change the name of selected part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/materialui.png" alt="Material" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribuer matériau&#8230;&#8203;</strong><br>
+Specifies the material associated with the selected part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/customerui.png" alt="Customer" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Assigner le client&#8230;&#8203;</strong><br>
+Specifies the customer associated with the selected part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/rollingui.png" alt="Rolling" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sens de laminage</strong><br>
+Defines the orientation (horizontal or vertical) along which the material is rolled.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Préc</strong> / <strong>Suivant</strong> / <strong>Outillages</strong><br>
+Navigates to the previous or next part or tooling.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sortui.png" alt="Filters" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort and filter</strong><br>
+Use these filters to view other parts that share the same attribute as the
+selected part: Same Material, Same Customer, Same Bend count, or
+Same State.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_réimporter">Réimporter&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Cliquez avec le bouton droit sur n&#8217;importe quelle pièce et cliquez sur <strong>Réimporter&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/reimport.png" alt="Re-import" width="503">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Toutes les instances d&#8217;outillage de pièces sélectionnées sur toutes les machines sont effacées, y compris
+les instances outillées automatiquement et manuellement.</p>
+</li>
+<li>
+<p>Les fichiers de sortie existants (CAD, Bend et Cut) sont supprimés.</p>
+</li>
+<li>
+<p>Les pièces sont réimportées et une nouvelle validation CAD et un nouvel outillage sont appliqués pour
+toutes les machines.</p>
+</li>
+<li>
+<p>De nouveaux fichiers de sortie sont créés en fonction du résultat de l&#8217;outillage mis à jour.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_réoutillage">Réoutillage&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Cliquez avec le bouton droit sur n&#8217;importe quelle pièce et cliquez sur <strong>Réoutillage&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/retool.png" alt="Re-tool" width="504">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Toutes les machines sont cochées par défaut et groupées par Laser, Punch, Panel,
+et Press brake.</p>
+</li>
+<li>
+<p>Cliquez sur <strong>OK</strong> pour continuer. Cela supprime les instances outillées automatiquement et manuellement
+pour les machines sélectionnées, et supprime les fichiers de sortie associés.</p>
+</li>
+<li>
+<p>Lorsque la case <strong>Conserver les sorties existantes</strong> est
+cochée, seules les pièces dont les sorties ont été supprimées précédemment seront réoutillées,
+les autres sorties restent intactes. Si elle est décochée, tous les fichiers de sortie pour les machines sélectionnées
+sont supprimés et regénérés lors du réoutillage.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Si les paramètres CAM ont changé pour une machine, sélectionnez cette machine et réoutillez les
+pièces.</p>
+</li>
+<li>
+<p>Si un outil (LTT, punch ou bend) est modifié ou manquant, mettez à jour la machine et
+réoutillez uniquement les pièces affectées.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_renommer">Renommer&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cette section explique comment renommer une ou plusieurs pièces dans TruSmartCAM.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Cliquez avec le bouton droit sur la pièce et cliquez sur <strong>Renommer&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/rename1.png" alt="Rename1" width="503">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Une boîte de dialogue de confirmation de renommage apparaît affichant le nom actuel de la pièce.</p>
+</li>
+<li>
+<p>Entrez le nouveau nom et cliquez sur l&#8217;icône coche <strong>✓</strong> pour confirmer, ou cliquez sur l&#8217;icône
+croix <strong>✗</strong> pour annuler l&#8217;opération de renommage.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/rename2.png" alt="Rename2" width="451">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pour renommer plusieurs pièces, sélectionnez toutes les pièces requises, puis cliquez avec le bouton droit
+sur l&#8217;une d&#8217;entre elles et cliquez sur <strong>Renommer&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Une boîte de dialogue de confirmation apparaît avec le nombre total de pièces sélectionnées.</p>
+</li>
+<li>
+<p>Pour chaque pièce, entrez le nouveau nom et cliquez sur l&#8217;icône coche <strong>✓</strong> pour
+confirmer une par une.</p>
+</li>
+<li>
+<p>Si une pièce a été sélectionnée par erreur, cliquez sur l&#8217;icône croix <strong>✗</strong> pour annuler.
+Alternativement, vous pouvez cliquer avec le bouton droit sur la pièce et cliquer sur
+<strong>Annuler Renommer</strong> pour ignorer le renommage.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exporter_sorties">Exporter sorties</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cette option exporte la sortie de la pièce vers la destination configurée dans
+<strong>Réglages usine</strong>. (Voir
+<a href="../../factory/settings/bend.html">Paramètres de pliage</a> et
+<a href="../../factory/settings/cut.html">Paramètres de coupe</a>)</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;emplacement de sortie est défini séparément pour Bend, Fold et Cut dans
+leurs paramètres de sortie respectifs. Tous les outillages associés aux opérations de pliage,
+de pliure et de coupe sont exportés pour la pièce entière.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput.png" alt="Export Output" width="451">
+</div>
+</div>
+<div class="paragraph">
+<p>Comme indiqué ci-dessous, les fichiers exportés sont enregistrés dans le dossier spécifié
+(par exemple, <code>C:\PraxData\Out\Reports</code>).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportout.png" alt="Export Output Location" width="451">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Les fichiers exportés dépendent du type d&#8217;opération. Pour les opérations Bend et
+Fold, des fichiers NC et des rapports sont générés. Pour les opérations Cut et Punch,
+seuls les fichiers de pièces sont exportés.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_attribution_de_matériau_à_la_pièce">Attribution de matériau à la pièce</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les pièces avec le statut <strong>Matériau non attribué</strong> doivent être
+mises à jour avant tout traitement ultérieur. Les étapes ci-dessous expliquent comment attribuer
+un matériau.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Cliquez avec le bouton droit sur la pièce qui affiche le statut
+<strong>Matériau non attribué</strong> et sélectionnez
+<strong>Attribuer matériau</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/asignmaterial.png" alt="Assign Material" width="442">
+</div>
+</div>
+</li>
+<li>
+<p>La fenêtre <strong>Attribuer matériau</strong> s&#8217;ouvre.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/dialogue.png" alt="Dialogue" width="600">
+</div>
+</div>
+</li>
+<li>
+<p>La boîte de dialogue comporte quatre sections :</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Suggestions</strong> - Suggère automatiquement des matériaux bruts
+bruts en fonction de l&#8217;épaisseur de la pièce importée.</p>
+</li>
+<li>
+<p><strong>Tous les matériaux</strong> - Liste tous les types de matériaux définis dans
+TruSmartCAM.</p>
+</li>
+<li>
+<p><strong>Toutes les matières brutes</strong> - Affiche tous les matériaux bruts
+disponibles dans le système.</p>
+</li>
+<li>
+<p><strong>Matières brutes utilisées</strong> - Affiche les matériaux bruts les plus
+récemment utilisés pour un accès rapide.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Vous pouvez utiliser le champ <strong>Rechercher&#8230;&#8203; (Ctrl+F)</strong> en haut pour trouver rapidement
+des matériaux. Par exemple, tapez "steel" pour afficher tous les matériaux correspondants dans
+les trois sections.</p>
+</li>
+<li>
+<p>Dans la liste filtrée, sélectionnez le matériau requis (par exemple, Steel-25) dans
+la liste Raw-Material.</p>
+</li>
+<li>
+<p>Le matériau sélectionné sera attribué à la pièce.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sens_de_laminage">Sens de laminage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Sens de laminage</strong> fait référence à l&#8217;orientation du
+grain dans une pièce, ce qui peut affecter la façon dont la pièce est coupée et traitée.
+Cette option vous permet de spécifier la
+<strong>Sens de laminage</strong> pour une pièce dans la bibliothèque de pièces.
+En fonction de la direction sélectionnée,
+la pièce sera placée dans la bonne orientation pour la coupe sur les
+machines disponibles.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Cliquez avec le bouton droit sur n&#8217;importe quelle vignette de pièce dans la bibliothèque de pièces ou la fenêtre Job.</p>
+</li>
+<li>
+<p>Sélectionnez la direction de laminage préférée :</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Aucun</strong></p>
+</li>
+<li>
+<p><strong>Horizontal</strong></p>
+</li>
+<li>
+<p><strong>Vertical</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/rollingdirection1.png" alt="Rolling direction" width="514">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>La pièce est réoutillée automatiquement pour toutes les machines de coupe disponibles en fonction
+de la direction de laminage sélectionnée.</p>
+</li>
+<li>
+<p>La vignette de la pièce affichera la direction de laminage sélectionnée comme indiqué ci-dessous :</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/none.png" alt="None" width="270"></span> <span class="image"><img src="img/horizontal.png" alt="Horizontal" width="270"></span>
+<span class="image"><img src="img/vertical.png" alt="Vertical" width="270"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_réimporter">Réimporter&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_réoutillage">Réoutillage&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_renommer">Renommer&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_exporter_sorties">Exporter sorties</a>
+  </li>
+  <li level="1">
+   <a href="#_attribution_de_matériau_à_la_pièce">Attribution de matériau à la pièce</a>
+  </li>
+  <li level="1">
+   <a href="#_sens_de_laminage">Sens de laminage</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partvalidation.html">Validation de pi\u00e8ce</a></span>
+ <span class="next"><a href="partfilters.html">Filtres de pièces</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

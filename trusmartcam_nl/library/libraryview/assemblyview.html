@@ -1,0 +1,607 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Assemblage</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Welkom bij TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installatie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardwarevereisten</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Ondersteunde bestandsformaten</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Vereisten</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Serverinstallatie</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Clientinstallatie</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Licentie wijzigen</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configuratie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Machine toevoegen/verwijderen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Gereedschap instellen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Gebruikers configureren</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Taal</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiaal</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Nieuw materiaal en plaat toevoegen</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Materiaal exporteren/importeren</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Materiaal vervangen</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Materiaal toewijzen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAM-pagina's toewijzen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Velden uit CAD toewijzen (zoeksleutels)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">De gebruikersinterface</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Bibliotheek</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Openen</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Onderdelen importeren</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Orders importeren</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Jobs importeren</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Assemblages importeren</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Bibliotheekweergave</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partview.html">Onderdelen</a></li>
+      <li><button class="tree blank"></button><a class="active" href="assemblyview.html">Assemblage</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Onderdeelstatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Onderdeelvalidatie</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Onderdeelpaneel</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Onderdeelfilters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Gereedschapsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Gereedschapsvalidatie</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Buiggereedschapsvalidatie</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Snijgereedschapsvalidatie</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Vouwgereedschapsvalidatie</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Gereedschapspaneel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Filters opslaan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Orders</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Orders weergave</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Job aanmaken</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Job weergave</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Job paneel</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatisch plannen</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interactief nesten</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Opnieuw verpakken</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Nestbeheer</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Layout weergave</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Layout paneel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Rapportverzender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Restmateriaal beheer</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatisch restmateriaal beheer</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Handmatig restmateriaal beheer</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Twinline nesten</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Verouderd</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Job filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD extensies</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installatie</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Onderdelen opslaan</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Assemblage opslaan</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Haalbaarheid controleren</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Fabrieksinstellingen</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Diverse verbeteringen</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Bibliotheek</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Bibliotheekweergave</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="assemblyview.html">Assemblage</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Assemblage</h1>
+<div class="sect1">
+<h2 id="_statische_nesten_maken_vanuit_een_assemblage">Statische nesten maken vanuit een assemblage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Statische nesten kunnen voor een assemblage worden gegenereerd met behulp van de Interactieve
+nesting wizard.
+Deze nesten zijn vaste layouts die alleen aan de geselecteerde assemblage zijn gekoppeld.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Schakel over naar de <strong>assys.</strong> weergave.</p>
+</li>
+<li>
+<p>Klik met de rechtermuisknop op de vereiste assemblage en selecteer
+<strong>Nestingen maken…</strong>.</p>
+</li>
+<li>
+<p>De Interactieve Nesting wizard opent.</p>
+</li>
+<li>
+<p>Standaard schakelt de interactieve nesting wizard over naar de
+<strong>Machine en materiaal selecteren</strong> pagina.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyinteractive.png" alt="Machine and material" width="950">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Machines worden weergegeven met gekleurde balken die de beschikbare productiebelasting aangeven:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Groene balk: Geplande uren</p>
+</li>
+<li>
+<p>Grijze balk: Beschikbare uren (van een 8-uurs dienst)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Onder elke machine zijn geselecteerde Onderdelen gegroepeerd met hun Grondmateriaal
+(Onderdelen/Totaal Aantal).</p>
+</li>
+<li>
+<p>Als een onderdeel geen geldige gereedschapsoplossing heeft voor een machine, worden dat onderdeel en
+materiaal genegeerd voor verwerking voor die machine.</p>
+</li>
+<li>
+<p>Als een grondmateriaal voor één machine is geselecteerd, is het niet beschikbaar voor andere
+machines.</p>
+</li>
+<li>
+<p>Zodra het machine nestplan is ingesteld, selecteert u de gewenste plaat en
+overschrijft u plaatparameters zoals <strong>Prioriteit</strong>,
+<strong>Aantal</strong>, <strong>Plaatranden</strong>, enz.</p>
+</li>
+<li>
+<p>U kunt platen filteren om <strong>Alle platen</strong>,
+<strong>Standaard platen</strong> of
+<strong>Restplaten</strong> weer te geven. Klik op <strong>Volgende</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Het is niet mogelijk om de hoeveelheden in deze fase te verhogen. U kunt
+deze gelijk houden aan de plaatvoorraad hoeveelheid of verlagen en
+nestingresultaten controleren.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Aantal bijwerken</strong> verschijnt in het Interactieve nestingplan venster.</p>
+</li>
+<li>
+<p>Standaard omvat <strong>Alles pakken (F5)</strong> alle onderdelen voor
+nesting, of u kunt handmatig prioritaire onderdelen kiezen en onderdeelhoeveelheden aanpassen.
+Klik op <strong>Volgende</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyquantity.png" alt="Update quantity">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nesting start en onderdelen die in de plaat zijn genest, worden bijgewerkt met blauwe kleurstatus.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyresult.png" alt="Nesting result">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>De productiebelasting van de machine wordt bijgewerkt op basis van het nestresultaat.</p>
+</li>
+<li>
+<p>Als sommige onderdelen niet genest blijven, verschijnt het bericht
+<strong>Sommige stukken zijn niet genest</strong> - deze onderdelen blijven
+in de oorspronkelijke job.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Een onderdeel kan niet genest blijven als er geen geschikte plaat beschikbaar is.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Statische Nesten kunnen worden bewerkt om niet-geneste onderdelen op te nemen:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Selecteer de layout waarin u niet-geneste onderdelen wilt invoegen en check deze
+uit voor bewerking.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblylayout.png" alt="Selected layout">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TecZone opent. Klik op <strong>_Ophalen</strong> of
+<strong>_Alles ophalen</strong> om niet-geneste onderdelen te selecteren uit de
+bovenliggende assemblage.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/addnest.png" alt="Add unnested parts" width="864">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Rangschik het onderdeel in de layout zoals gewenst.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unnest.png" alt="Unnested part placement" width="715">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Gegenereerde nesten worden automatisch genoemd naar de bovenliggende assemblage voor gemakkelijke
+identificatie.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Statische nesten kunnen geen onderdelen uit andere assemblages bevatten. Het toestaan van gemengde
+assemblage nesten zou voorkomen dat één assemblage vrijgegeven wordt zonder de
+andere, dus vermenging is bij ontwerp niet toegestaan.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_niet_plaatmetalen_componenten">Niet-plaatmetalen componenten</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Wanneer een assemblage wordt geïmporteerd, worden plaatmetalen onderdelen geëxtraheerd en toegevoegd aan
+assemblages in de Onderdelenbibliotheek.</p>
+</li>
+<li>
+<p>Niet-plaatmetalen componenten worden gescheiden en toegevoegd aan de
+<strong>Componenten</strong>.</p>
+</li>
+<li>
+<p>De assemblage wordt toegevoegd aan de Assemblagebibliotheek en de BOM
+(Bill of Materials) bevat zowel onderdelen als componenten.</p>
+</li>
+<li>
+<p>Als een onderdeel al is geïmporteerd als een plaatmetalen onderdeel, werkt het systeem de
+bestaande invoer bij en verwijdert duplicaten uit de Onderdelenbibliotheek.</p>
+</li>
+<li>
+<p>Bij het selecteren van een assemblage worden zowel onderdelen als componenten weergegeven, met component
+hoeveelheden onder de componentafbeelding (geselecteerde assemblage componentaantal
+en totaal componentaantal).</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/components.png" alt="Assembly components" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Component tooltips tonen de naam, materiaal en grootte.
+Componenten worden uitgesloten tijdens productie - ze worden niet genest en er worden geen
+platen gegenereerd voor componenten.</p>
+</li>
+<li>
+<p>Voorbeeldassemblages en componenten zijn beschikbaar op:
+C:\Program Files\Metamation\Praxis\Samples\Assys\Components, die kunnen
+worden gebruikt om component import en assemblage workflows te testen.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_job_maken_vanuit_assemblage">Job maken vanuit assemblage</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Klik met de rechtermuisknop op de assemblage, klik op <strong>Nieuw…</strong> en vervolgens op
+<strong>Job</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/newassemblyjob.png" alt="Create new job" width="760">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Stel in het dialoogvenster Nieuwe Job het assemblageaantal in, klik op <strong>OK</strong>,
+en werk vervolgens indien nodig jobdetails bij (zoals vervaldatum en prioriteit).</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/riegelwindow.png" alt="New job dialog" width="369">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Het systeem maakt een job van de assemblage en kopieert statische nesten als
+jobnesten, waarbij plaataantallen worden bijgewerkt. Gekopieerde nesten krijgen het voorvoegsel
+job-ID.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblycreated.png" alt="Assembly job created" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Jobnesten kunnen worden bewerkt of verwijderd zonder de oorspronkelijke
+statische nesten te beïnvloeden.</p>
+</li>
+<li>
+<p>Jobnesten kunnen opnieuw worden verpakt met behulp van <strong>Aanpassen/compacteren…</strong> of
+<strong>Stukken toevoegen…</strong>.</p>
+</li>
+<li>
+<p>Voor gedetailleerde stappen, zie
+<a href="../../jobs/layoutcommands/layoutpanel.html#adapt-compact">Adapt/Compact</a> en
+<a href="../../jobs/layoutcommands/layoutpanel.html#add-parts">Add parts</a>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Als een onderdeel niet in een nest verschijnt, controleer dan het dialoogvenster voor nestbewerking - u kunt
+niet-geneste onderdelen handmatig invoegen.</p>
+</div>
+<div class="paragraph">
+<p>Gebruik opgeslagen zoekopdrachten en filters om snel onderdelen te vinden in meerdere assemblages.</p>
+</div>
+<div class="paragraph">
+<p>Gebruik duidelijke, beschrijvende assemblage- en nestnamen om verwarring te voorkomen bij
+het kopiëren van nesten naar jobs.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_statische_nesten_maken_vanuit_een_assemblage">Statische nesten maken vanuit een assemblage</a>
+  </li>
+  <li level="1">
+   <a href="#_niet_plaatmetalen_componenten">Niet-plaatmetalen componenten</a>
+  </li>
+  <li level="1">
+   <a href="#_job_maken_vanuit_assemblage">Job maken vanuit assemblage</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partview.html">Onderdelen</a></span>
+ <span class="next"><a href="../partstate/index.html">Onderdeelstatus</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

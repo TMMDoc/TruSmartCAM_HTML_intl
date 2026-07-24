@@ -1,0 +1,456 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Tâche</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Bienvenue dans TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Configuration matérielle requise</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Formats de fichiers pris en charge</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Prérequis</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Installation du serveur</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Installation du client</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Changer de licence</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Ajouter/Supprimer une machine</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Configuration de l'outillage</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Configurer les utilisateurs</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Langue</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Matériau</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Ajouter un nouveau matériau et une feuille</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Exporter/Importer le matériau</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Remplacer le matériau</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Associer le matériau</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Associer les pages CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Associer les champs depuis CAD (clés de recherche)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">L'interface utilisateur</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Flux de travail</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Bibliothèque</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Ouvrir</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Importer des pièces</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Importer des commandes</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Importer des tâches</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Importer des assemblages</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Vue de bibliothèque</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Pièces</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Assemblage</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Statut de la pièce</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Validation de pi\u00e8ce</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Panneau de pièces</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Filtres de pièces</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Statut de l'outillage</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Validation d'outillage</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Validation d'outillage de pliage</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Validation d'outillage de découpe</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Validation d'outillage de pliure</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Panneau d'outillage</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Enregistrer les filtres</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Commandes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Vue des commandes</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Travaux</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Créer un travail</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Vue du travail</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Panneau de travail</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Planification automatique</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Imbrication interactive</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Réemballage</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Gestion de l'imbrication</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Vue de mise en page</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Panneau de mise en page</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Expéditeur de rapport</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Gestion des chutes</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Gestion automatique des chutes</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Gestion manuelle des chutes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Imbrication en ligne double</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Obsolète</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtres de travail</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Factory</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../sheets.html">Feuilles</a></li>
+    <li><button class="tree blank"></button><a href="../users.html">Utilisateurs</a></li>
+    <li><button class="tree blank"></button><a href="../edit.html">Modifier</a></li>
+    <li><button class="tree blank"></button><a href="../customers.html">Clients</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Paramètres</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="environment.html">Environnement</a></li>
+      <li><button class="tree blank"></button><a href="import.html">Importation</a></li>
+      <li><button class="tree blank"></button><a href="bend.html">Pliage</a></li>
+      <li><button class="tree blank"></button><a href="cut.html">Découpe</a></li>
+      <li><button class="tree blank"></button><a href="notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="watch.html">Surveillance</a></li>
+      <li><button class="tree blank"></button><a class="active" href="job.html">Tâche</a></li>
+      <li><button class="tree blank"></button><a href="reports.html">Rapports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Extensions CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">Extension SolidWorks</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Enregistrer les pièces</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Enregistrer l'assemblage</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Vérifier la faisabilité</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Paramètres de l'usine</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Améliorations diverses</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Mentions légales</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Factory</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Paramètres</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="job.html">Tâche</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Tâche</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/job.png" alt="Job settings" width="814">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_réglages_sortie">Réglages sortie</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Enregistrer les CN et rapports de configuration</strong> - Activez cette option pour que les
+NC et rapports de mise en page soient enregistrés.</p>
+</div>
+<div class="paragraph">
+<p><strong>Enregistrer le fichier de configuration</strong> - Activez cette option pour que le fichier de
+mise en page soit enregistré.</p>
+</div>
+<div class="paragraph">
+<p><strong>Prévisualisation de la simulation de l&#8217;outillage dans les rapports</strong> - Activez cette
+option pour générer l&#8217;aperçu de simulation d&#8217;outillage avec les autres
+sorties. Il s&#8217;agit d&#8217;une courte animation GIF pour l&#8217;outillage laser/poinçon.</p>
+</div>
+<div class="paragraph">
+<p><strong>Ne pas supprimer les sorties de programme à la fin de l&#8217;agencement/tâche</strong> - L&#8217;activation de cette option ignorera l&#8217;opération de suppression pour les
+sorties de programme lorsqu&#8217;une tâche/mise en page est marquée comme terminée.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_réglages_dimbrication">Réglages d&#8217;imbrication</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Pièces mélangées de tâches multiples</strong> - Prend en charge le
+mode d&#8217;imbrication mixte. Les pièces de plusieurs tâches doivent être imbriquées ensemble pour une meilleure
+efficacité d&#8217;emballage.</p>
+</div>
+<div class="paragraph">
+<p><strong>Ne pas relâcher automatiquement les agencements</strong> - Cela empêchera les
+mises en page d&#8217;être disponibles pour la production jusqu&#8217;à ce que toutes les mises en page soient dans un état
+libéré.</p>
+</div>
+<div class="paragraph">
+<p><strong>Séparation de joint pour déblocage automatique</strong> - Cette valeur est
+utilisée pour décider si une mise en page imbriquée est conservée dans la file d&#8217;attente d&#8217;approbation et est
+imbriquée à nouveau lorsque de nouvelles pièces sont planifiées ou si elles sont libérées pour la production
+et que les sorties associées sont exportées vers le dossier de sortie.</p>
+</div>
+<div class="paragraph">
+<p><strong>Préfixe du nom de tôle interactif</strong> - Cette
+section est utilisée pour prendre en charge l&#8217;imbrication interactive où l&#8217;utilisateur a plus de contrôle
+sur les pièces imbriquées et le résultat d&#8217;imbrication. Utilisez un schéma de nommage, différent
+de l&#8217;imbrication automatique, pour les mises en page imbriquées de manière interactive.</p>
+</div>
+<div class="paragraph">
+<p><strong>Mise à jour du stock magasin de tôles concernant le (dé)blocage d&#8217;imbrication</strong> - Si
+cette option est activée, l&#8217;inventaire de feuilles sera mis à jour lors de l&#8217;envoi d&#8217;un nest à
+une machine. Aussi, le rappel du nest de la machine retournera la feuille à
+l&#8217;inventaire.</p>
+</div>
+<div class="paragraph">
+<p><strong>Automatiser la gestion du stock restant</strong> - Lorsque ce commutateur
+est sélectionné, le logiciel automatise la gestion de l&#8217;inventaire des chutes. S&#8217;il n&#8217;est pas
+sélectionné, la gestion des chutes devient interactive.</p>
+</div>
+<div class="paragraph">
+<p><strong>Actualisation automatique des configurations obsolètes</strong> - Lorsqu&#8217;elle est cochée, le logiciel actualise toutes les ui:EGTag.SelectOutOfDate[Out-of-date
+Layouts] liées à une pièce après le calcul de ses solutions de découpe.</p>
+</div>
+<div class="paragraph">
+<p><strong>Automatiser imbrication TwinLine</strong> - Cochez cette option pour activer
+l&#8217;automatisation twin-line.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_réglages_de_pull_workflow">Réglages de Pull workflow</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Utiliser 'Pull workflow'</strong> - Cette option est utile pour
+les utilisateurs qui ont besoin d&#8217;un système de planification et d&#8217;imbrication hautement autonome. Lorsqu&#8217;elle est activée,
+TruSmartCAM planifie l&#8217;imbrication sur demande.</p>
+</div>
+<div class="paragraph">
+<p><strong>Imbrications par poste</strong> - Cette valeur sert à définir combien de
+mises en page par station doivent être créées.</p>
+</div>
+<div class="paragraph">
+<p><strong>Tôles maximum par imbrication</strong> - Cette valeur est utilisée pour
+contrôler le nombre maximum de feuilles par rapport au nest unique. Ainsi, par exemple, s&#8217;il
+y a une commande avec une grande pièce (qui remplit toute la feuille), nécessaire en
+grandes quantités (par exemple 500) - TruSmartCAM ne crée plus un seul nest avec 500
+copies en mode pull. Au lieu de cela, il crée 10 copies par nest où 10 est le
+max.</p>
+</div>
+<div class="paragraph">
+<p><strong>Programmes de pliage par poste</strong> - Cette valeur sert à
+définir combien de programmes de pliage par station doivent être créés.</p>
+</div>
+<div class="paragraph">
+<p><strong>Marquer la tâche comme étant complète lorsque les sorties du programmes sont retirées</strong> -
+Activez cette option pour qu&#8217;une mise en page soit marquée Terminée lorsque
+les sorties sont supprimées de la destination de sortie cible.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_réglages_dimportation_de_feuille_de_calcul">Réglages d&#8217;importation de feuille de calcul</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Répertoires de recherche CAO</strong> - TruSmartCAM essaiera de
+charger l&#8217;entrée de pièce mentionnée dans le CSV importé depuis la bibliothèque de pièces.
+Cependant, si la pièce n&#8217;est pas disponible dans la bibliothèque de pièces, elle essaiera de
+récupérer les pièces depuis les répertoires de recherche en fonction de l&#8217;ordre des répertoires défini
+dans cette boîte de dialogue.</p>
+</div>
+<div class="paragraph">
+<p><strong>Utiliser la recherche CAO récursive</strong> - Activez cette option pour
+que la recherche soit répétée pour les résultats successifs.</p>
+</div>
+<div class="paragraph">
+<p><strong>Créer une pièce vierge pour les fichiers CAO manquants</strong> - Si
+les pièces n&#8217;existent pas dans la bibliothèque TruSmartCAM ou les répertoires de recherche, TruSmartCAM
+créera une pièce vierge pour ces pièces non disponibles.</p>
+</div>
+<div class="paragraph">
+<p><strong>Ne pas afficher la fenêtre de dialogue Nouvelle tâche si la feuille de calcul ne contient pas d&#8217;erreur</strong> -
+Si les entrées CSV sont propres, c&#8217;est-à-dire aucune non-concordance de données
+de la base de données ou tous les champs sont listés correctement, TruSmartCAM n&#8217;affichera pas la fenêtre
+d&#8217;aperçu de la tâche et traitera la tâche dès que le CSV est importé ou
+déposé.</p>
+</div>
+<div class="paragraph">
+<p><strong>Privilégier la colonne Matière brute plutôt que Matériau + épaisseur</strong> -
+ Types de feuilles de calcul pris en charge :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Modèle 1 : PartName, Quantity, DueDate, Priority, RawMaterial</p>
+</li>
+<li>
+<p>Modèle 2 : PartName, Quantity, DueDate, Priority, Material, Thickness</p>
+</li>
+<li>
+<p>Modèle 3 : PartName, Quantity, DueDate, Priority, Material, Thickness,
+RawMaterial</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Si cette option n&#8217;est pas cochée, le Modèle 1 sera considéré comme le
+type de feuille de calcul par défaut. Nous prenons également en charge le Modèle 3 au cas où le format CSV serait de type
+Modèle 3.</p>
+</div>
+<div class="paragraph">
+<p>Si cette option est cochée et que CSV est de type Modèle 2, alors TruSmartCAM
+résoudra Raw Material à partir des champs Material et Thickness du CSV.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_réglages_pour_lédition_de_la_feuille_de_calcul">Réglages pour l&#8217;édition de la feuille de calcul</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Exporter le rapport d&#8217;exécution de la tâche/configuration (</strong>.csv)* -
+Cochez cette option pour activer l&#8217;exportation CSV lorsqu&#8217;une mise en page ou une tâche est terminée. Les
+rapports terminés sont enregistrés à la destination Rapports spécifiée dans Factory
+&#8594; Settings &#8594; Reports settings.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_réglages_sortie">Réglages sortie</a>
+  </li>
+  <li level="1">
+   <a href="#_réglages_dimbrication">Réglages d&#8217;imbrication</a>
+  </li>
+  <li level="1">
+   <a href="#_réglages_de_pull_workflow">Réglages de Pull workflow</a>
+  </li>
+  <li level="1">
+   <a href="#_réglages_dimportation_de_feuille_de_calcul">Réglages d&#8217;importation de feuille de calcul</a>
+  </li>
+  <li level="1">
+   <a href="#_réglages_pour_lédition_de_la_feuille_de_calcul">Réglages pour l&#8217;édition de la feuille de calcul</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="watch.html">Surveillance</a></span>
+ <span class="next"><a href="reports.html">Rapports</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,751 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Layoutpanel</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Välkommen till TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hårdvarukrav</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Format som stöds</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Förutsättningar</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Serverinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Klientinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Ändra licens</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfiguration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Lägg till/ta bort maskin</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Ställ in verktyg</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Konfigurera användare</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Språk</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Lägg till nytt material och plåt</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Exportera/importera material</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Ersätt material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mappa material</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mappa CAM-sidor</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mappa fält från CAD (uppslagningsnycklar)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Användargränssnittet</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Arbetsflöde</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Bibliotek</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Öppna</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Importera delar</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Importera order</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Importera jobb</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Importera monteringar</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Biblioteksvy</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Delar</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Montering</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Delstatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Delvalidering</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Delpanel</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Delfilter</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Verktygsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Verktygningsvalidering</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Böjverktygningsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Skärverktygningsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Vikverktygningsvalidering</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Verktygspanel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Spara filter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Ordrar</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Ordervyer</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Jobb</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../jobcreation.html">Skapa jobb</a></li>
+    <li><button class="tree blank"></button><a href="../jobview.html">Jobbvy</a></li>
+    <li><button class="tree blank"></button><a href="../jobpanel.html">Jobbpanel</a></li>
+    <li><button class="tree blank"></button><a href="../jobautoplan.html">Autoplan</a></li>
+    <li><button class="tree blank"></button><a href="../jobinteractplan.html">Interaktiv häckning</a></li>
+    <li><button class="tree blank"></button><a href="../repacking.html">Ompackning</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Häckhantering</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="nestview.html">Layoutvy</a></li>
+      <li><button class="tree blank"></button><a class="active" href="layoutpanel.html">Layoutpanel</a></li>
+      <li><button class="tree blank"></button><a href="reportsender.html">Rapportavsändare</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../remnantmanagement/index.html">Resthantering</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../remnantmanagement/autoremnant.html">Automatisk resthantering</a></li>
+      <li><button class="tree blank"></button><a href="../remnantmanagement/manualremnant.html">Manuell resthantering</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../twinlinenesting.html">Twinline-häckning</a></li>
+    <li><button class="tree blank"></button><a href="../outdate.html">Inaktuell</a></li>
+    <li><button class="tree blank"></button><a href="../jobfilters.html">Jobbfilter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD-tillägg</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Spara delar</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Spara sammansättning</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Kontrollera genomförbarhet</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Fabriksinställningar</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Diverse förbättringar</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Jobb</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Häckhantering</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="layoutpanel.html">Layoutpanel</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Layoutpanel</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Detta avsnitt förklarar layoutrelaterade åtgärder såsom
+<strong>Skicka till maskin&#8230;&#8203;</strong>,
+<strong>Hämta om från maskin&#8230;&#8203;</strong>,
+<strong>Exportera utdata</strong>,
+<strong>Markera slutförd&#8230;&#8203;</strong>, <strong>Lägg till detaljer&#8230;&#8203;</strong>,
+<strong>Anpassa/kompakt&#8230;&#8203;</strong>,
+<strong>Dela layouter&#8230;&#8203;</strong> och andra alternativ som används för att hantera
+layoutinstanser.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/layout.png" alt="Layout panel" width="181">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Öppna i skrivskyddat läge för visning</strong><br>
+Öppnar den valda layouten i skrivskyddat läge.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Aktiverar redigering av den valda layouten.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Radera</strong><br>
+Tar bort den valda layouten.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/openreport.png" alt="Report" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Visa rapport</strong><br>
+Öppnar standardlayoutrapporten och etikettspecifik rapport för den
+valda layouten.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sendui.png" alt="Send" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Skicka till maskin&#8230;&#8203;</strong><br>
+Skickar den valda layouten till maskinen och exporterar utdatafilerna
+(fxlyt, NC, rapport, csv) till jobbets utdataplats.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/addui.png" alt="Add" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Lägg till detaljer&#8230;&#8203;</strong><br>
+Lägger till fler delar till en dåligt packad layout med hjälp av layoutompackningsguiden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/adaptui.png" alt="Adapt" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anpassa/kompakt&#8230;&#8203;</strong><br>
+Häckar om den valda layouten för att kompaktera delarna och frigöra användbar yta.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/changeui.png" alt="Change" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ändra LTT&#8230;&#8203;</strong><br>
+Ändrar arket som tilldelats den valda layouten.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/splitui.png" alt="Split"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Dela layouter&#8230;&#8203;</strong><br>
+Delar den valda layouten i två eller flera separata layouter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/renameui.png" alt="RenameUi" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rename layout&#8230;&#8203;</strong><br>
+Byter namn på den valda layouten.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Jobb</strong> / <strong>Föreg</strong> / <strong>Nästa</strong> / <strong>Detaljer</strong><br>
+Navigerar uppåt till överordnat jobb, till föregående eller nästa layout inom det
+valda jobbet, eller nedåt till delarna som ingår i layouten.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sort.png" alt="Filters" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort and filter</strong><br>
+Använd dessa filter för att visa andra layouter som delar samma attribut som
+den valda layouten: Same Machine, Same Material, Same LTT, Same Priority,
+Same State, Same Sheet, Same Part, Same Remnant State eller Same Rolling
+direction.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="send-to-machine">Skicka till maskin&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>När en häck är klar (fylld eller brådskande behövd) kan ni skicka den till
+maskinen.</p>
+</li>
+<li>
+<p>Högerklicka på häcken och välj <strong>Skicka till maskin&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>En mapp skapas automatiskt, namngiven efter häcken.</p>
+</li>
+<li>
+<p>Utdatafiler (fxlyt, NC, rapport, csv) exporteras till JOBB-
+utdataplatsen.</p>
+</li>
+<li>
+<p>Send to machine-häckar visas med en blå bock.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/sendtomachine.png" alt="Send to machines" width="1180">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+När de väl har släppts försöks dessa häckar inte längre ompackas igen.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hämta_om_från_maskin">Hämta om från maskin&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Om utdata behöver validering eller en uppdatering (till exempel lägga till fler delar):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Högerklicka på den exporterade layouten.</p>
+</li>
+<li>
+<p>Välj <strong>Hämta om från maskin&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Utdatafilerna och mappen (fxlyt, NC, rapport, csv) tas bort.</p>
+</li>
+<li>
+<p>Häcken blir redigerbar igen.</p>
+</li>
+<li>
+<p>Ni kan göra ändringar och skicka den till maskinen igen.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/recallfrommachine.png" alt="Recall from machines" width="1153">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exportera_utdata">Exportera utdata</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Högerklicka på valfri layout (häck) som har skickats till maskinen och klicka på
+<strong>Exportera utdata</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput1.png" alt="Export outputs" width="447">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternativet Export Outputs exporterar NC-, rapport- och layoutfilerna till de
+respektive maskinutdatamapparna.</p>
+</li>
+<li>
+<p>Detta alternativ regenererar NC-filen med aktuella enhetsinställningar för
+layouten.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Export Outputs är inte tillgängligt för layouter som är färdiga och
+layouter som väntar i kö för ompackning.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mark-complete">Mark complete</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>När häcken har bearbetats på maskinen högerklickar ni på häcken och
+väljer <strong>Markera slutförd&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Ni kan välja flera häckar och markera dem som färdiga samtidigt.</p>
+</li>
+<li>
+<p>När en häck markeras som färdig:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Den gråmarkeras, flyttas till slutet av listan och visas med en grön bock.</p>
+</li>
+<li>
+<p>Layouten tas bort från listan över aktiva layouter.</p>
+</li>
+<li>
+<p>Del- och jobbstatus uppdateras och bearbetade kvantiteter flyttas till
+färdigt tillstånd.</p>
+</li>
+<li>
+<p>Utdatafiler för den layouten tas bort från maskinutdataplatsen
+för att undvika dubbelanvändning.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/markcomplete1.png" alt="Mark complete" width="1101">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="add-parts">Lägg till detaljer&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart1.png" alt="Add parts" width="997">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Använd detta alternativ för att lägga till fler delar till en relativt dåligt packad layout. Liksom
+interaktiv häckning är detta ett guidestyrt alternativ och kan användas
+på en enskild eller flera layouter samtidigt.</p>
+</li>
+<li>
+<p>TruSmartCAM monterar layoutompackningsguiden i huvudarbetsområdet
+när detta alternativ används. Håll ned tangenten <kbd>Ctrl</kbd> och välj en eller flera
+delar som ska packas på layout(er)na och tryck på <strong>Nästa</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart2.png" alt="Part selection" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>De valda delarna visas i nästa steg med en redigerbar
+kvantitetskolumn. Uppdatera delkvantiteterna om det behövs i fältet
+<strong>Update Qty</strong>. Klicka på <strong>Nästa</strong> för att fortsätta till häckningen. Observera att
+kvantiteter endast kan ökas, inte minskas.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart3.png" alt="Update quantity" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>Alla layouter häckas separat och häckningsresultaten visas
+med de nypackade delarna placerade på dem. Att välja layouten visar alla
+befintliga layoutdelar. Resultatet kasseras automatiskt om ingen ny del
+placeras under ompackningen. En layout med flera kopior kan resultera i
+olika mönster efter ompackningen.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart4.png" alt="Repack result" width="2200">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="adapt-compact">Anpassa/kompakt&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Detta guidbaserade kommando kan användas för att anpassa en layout från en
+maskin till en annan när originalmaskinen är nere eller när maskinens
+arbetsbelastning behöver balanseras.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt1.png" alt="Adapt compact" width="737">
+</div>
+</div>
+</li>
+<li>
+<p>Det kan användas när arket som planerats för är slut på lager och layouten
+behöver omplaneras på ett annat tillgängligt ark.</p>
+</li>
+<li>
+<p>Ni kan slå samman layouter packade på mindre ark till större ark för att använda
+material mer effektivt.</p>
+</li>
+<li>
+<p>Ni kan dela layouter packade på större ark till mindre ark om stora
+arklager inte är tillgängliga.</p>
+</li>
+<li>
+<p>Ni kan förbättra packningseffektiviteten för flera layouter (även från
+olika maskiner) genom att slå samman dem.</p>
+</li>
+<li>
+<p>För att använda det väljer ni en eller flera layouter och klickar på
+<strong>Anpassa/kompakt&#8230;&#8203;</strong> för att öppna guiden i arbetsområdet.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt2.png" alt="Layouts window" width="1902">
+</div>
+</div>
+</li>
+<li>
+<p>Den vänstra panelen visar alla valda layouter och delpanelen visar layoutdelarna.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt3.png" alt="Layouts window" width="1910">
+</div>
+</div>
+</li>
+<li>
+<p>Välj målmaskin och arkmaterial och klicka sedan på
+<strong>Nästa</strong> för att utföra omhäckningen.</p>
+</li>
+<li>
+<p>De nya häckresultaten visas i resultatpanelen.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt4.png" alt="Layouts window" width="1901">
+</div>
+</div>
+</li>
+<li>
+<p>Klicka på <strong>Nästa</strong> för att spara den anpassade eller kompakterade layouten.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt5.png" alt="Layouts window" width="1902">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dela_en_layout">Dela en layout</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Alternativet <strong>Dela layouter&#8230;&#8203;</strong> gör att ni kan dela
+en befintlig layout i flera layouter genom att ändra kvantiteter,
+utan att behöva göra om verktygsutrustning eller häckning.</p>
+</div>
+<div class="paragraph">
+<p>Denna funktion är särskilt användbar i
+följande scenarier:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>När ni behöver producera en del av den totala kvantiteten omedelbart samtidigt som
+ni schemalägger återstående kvantitet för senare produktion.</p>
+</li>
+<li>
+<p>När produktionskrav behöver distribueras över flera skift eller
+dagar för att optimera arbetsflöde och resursutnyttjande.</p>
+</li>
+<li>
+<p>När en specifik maskin är tillfälligt otillgänglig eller upptagen och ni behöver
+justera layouten för att anpassa den till aktuella produktionsbegränsningar.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>För att dela en layout utför ni följande steg:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>I vyn Layouter väljer ni den önskade layouten.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/splitlayout.png" alt="Split layout" width="264">
+</div>
+</div>
+</li>
+<li>
+<p>Klicka på <strong>Dela layouter&#8230;&#8203;</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/layoutpanel.png" alt="Layout panel" width="155">
+</div>
+</div>
+</li>
+<li>
+<p>Ange det önskade värdet i <strong>Nya kopior</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/newcopies.png" alt="New copies" width="389">
+</div>
+</div>
+</li>
+<li>
+<p>Klicka på <strong>OK</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/twolayout.png" alt="Two layouts" width="547">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Den valda layouten är nu delad i två layouter med justerade kvantiteter.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#send-to-machine">Skicka till maskin&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_hämta_om_från_maskin">Hämta om från maskin&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_exportera_utdata">Exportera utdata</a>
+  </li>
+  <li level="1">
+   <a href="#mark-complete">Mark complete</a>
+  </li>
+  <li level="1">
+   <a href="#add-parts">Lägg till detaljer&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#adapt-compact">Anpassa/kompakt&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_dela_en_layout">Dela en layout</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="nestview.html">Layoutvy</a></span>
+ <span class="next"><a href="reportsender.html">Rapportavsändare</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

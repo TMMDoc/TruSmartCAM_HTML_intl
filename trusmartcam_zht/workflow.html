@@ -1,0 +1,404 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="res/bento.css">
+  <link rel="stylesheet" href="res/site.css">
+  <link rel="stylesheet" href="res/tree.css">
+  <link rel="stylesheet" href="res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="img/praxis-icon.png">
+  <title>工作流程</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="index.html">歡迎使用 TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="installation/index.html">安裝</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="installation/hardwarerequirement.html">硬體需求</a></li>
+    <li><button class="tree blank"></button><a href="installation/importformats.html">支援的檔案格式</a></li>
+    <li><button class="tree blank"></button><a href="installation/prerequisites.html">先決條件</a></li>
+    <li><button class="tree blank"></button><a href="installation/serverinstallation.html">伺服器安裝</a></li>
+    <li><button class="tree blank"></button><a href="installation/clientinstallation.html">用戶端安裝</a></li>
+    <li><button class="tree blank"></button><a href="installation/changelic.html">變更授權</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="configuration/index.html">配置</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="configuration/setupmachine.html">新增/移除機器</a></li>
+    <li><button class="tree blank"></button><a href="configuration/setuptooling.html">設定工具</a></li>
+    <li><button class="tree blank"></button><a href="configuration/configureusers.html">配置使用者</a></li>
+    <li><button class="tree blank"></button><a href="configuration/language.html">語言</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="configuration/addmaterial/index.html">材料</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="configuration/addmaterial/addnew.html">新增材料和板材</a></li>
+      <li><button class="tree blank"></button><a href="configuration/addmaterial/exportimport.html">匯出/匯入材料</a></li>
+      <li><button class="tree blank"></button><a href="configuration/addmaterial/replacematerial.html">取代材料</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="configuration/mapbendpages.html">對應材料</a></li>
+    <li><button class="tree blank"></button><a href="configuration/mapcampages.html">對應 CAM 頁面</a></li>
+    <li><button class="tree blank"></button><a href="configuration/cadmapfields.html">對應 CAD 欄位（查詢鍵）</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="userinterface.html">使用者介面</a></li>
+  <li><button class="tree blank"></button><a class="active" href="workflow.html">工作流程</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="library/index.html">資料庫</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/open/index.html">開啟</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="library/open/partimport.html">匯入零件</a></li>
+      <li><button class="tree blank"></button><a href="library/open/orderimport.html">匯入訂單</a></li>
+      <li><button class="tree blank"></button><a href="library/open/jobimport.html">匯入工作</a></li>
+      <li><button class="tree blank"></button><a href="library/open/assembliesimport.html">匯入組件</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/libraryview/index.html">資料庫視圖</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="library/libraryview/partview.html">零件</a></li>
+      <li><button class="tree blank"></button><a href="library/libraryview/assemblyview.html">組件</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/partstate/index.html">零件狀態</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="library/partstate/partvalidation.html">零件驗證</a></li>
+      <li><button class="tree blank"></button><a href="library/partstate/partpanel.html">零件面板</a></li>
+      <li><button class="tree blank"></button><a href="library/partstate/partfilters.html">零件篩選器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/toolingstatus/index.html">工具狀態</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="library/toolingstatus/toolingvalidation/index.html">工具驗證</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="library/toolingstatus/toolingvalidation/bendtooling.html">折彎工具驗證</a></li>
+        <li><button class="tree blank"></button><a href="library/toolingstatus/toolingvalidation/cuttooling.html">切割工具驗證</a></li>
+        <li><button class="tree blank"></button><a href="library/toolingstatus/toolingvalidation/foldtooling.html">折邊工具驗證</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="library/toolingstatus/toolingpanel.html">工具面板</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="library/savingfilters.html">儲存篩選器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="orders/index.html">訂單</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="orders/ordersview.html">訂單檢視</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="jobs/jobcreation.html">建立工作</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobview.html">工作檢視</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobpanel.html">工作面板</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobautoplan.html">自動規劃</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobinteractplan.html">互動式排版</a></li>
+    <li><button class="tree blank"></button><a href="jobs/repacking.html">重新包裝</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="jobs/layoutcommands/index.html">排版管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="jobs/layoutcommands/nestview.html">佈局檢視</a></li>
+      <li><button class="tree blank"></button><a href="jobs/layoutcommands/layoutpanel.html">佈局面板</a></li>
+      <li><button class="tree blank"></button><a href="jobs/layoutcommands/reportsender.html">報告傳送器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="jobs/remnantmanagement/index.html">餘料管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="jobs/remnantmanagement/autoremnant.html">自動餘料管理</a></li>
+      <li><button class="tree blank"></button><a href="jobs/remnantmanagement/manualremnant.html">手動餘料管理</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="jobs/twinlinenesting.html">雙線排版</a></li>
+    <li><button class="tree blank"></button><a href="jobs/outdate.html">過期</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobfilters.html">工作篩選器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="cadextensions/index.html">CAD 擴充功能</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="cadextensions/solidworksaddin/index.html">SolidWorks 增益集</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/installationsteps.html">安裝</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/savetopraxis.html">儲存零件</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/saveassembly.html">儲存組件</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/partfeasibility.html">檢查可行性</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/factorysettings.html">工廠設定</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/miscenhancements.html">其他增強功能</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="impressum.html">版權聲明</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="workflow.html">工作流程</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>工作流程</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>TruSmartCAM 是一個管理和優化鈑金製造流程的製造執行系統。TruSmartCAM 中的工作流程包含一系列步驟，您需要遵循這些步驟來完成特定的任務或流程。您可以自訂工作流程以適應不同的製造流程，並根據您的特定需求進行調整。TruSmartCAM 中的工作流程通常包括以下步驟：</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_配置系統">1. 配置系統</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>配置 TruSmartCAM 以符合您的製造環境。此基礎步驟包括定義機器及其功能和參數、新增可用材料和厚度範圍、配置包含沖頭和模具的工具資料庫、為不同的機器配置建立設定表，以及管理具有適當權限的使用者帳戶。正確配置的系統可確保精確處理並防止後續階段出現錯誤。此設定通常在初始部署期間執行一次，並隨著工廠發展定期更新。</p>
+</div>
+<div class="paragraph">
+<p>詳細資訊請參閱 <a href="configuration/setupmachine.html">Add/Remove
+machine</a>、<a href="configuration/addmaterial/index.html">Material</a>、
+<a href="factory/sheets.html">Sheets</a>、<a href="configuration/setuptooling.html">Setup
+tooling</a> 和 <a href="configuration/configureusers.html">Configure users</a>。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/setup.png" alt="Setup" width="817">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_將零件新增到資料庫">2. 將零件新增到資料庫</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>使用支援的格式（例如 DXF、DWG 或 STEP 檔案）將 2D 或 3D CAD 零件匯入到零件資料庫。在匯入過程中，TruSmartCAM 會自動分析零件幾何形狀、驗證可製造性、指派所需的鈑金技術（雷射、沖壓或組合），並產生預覽縮圖。已匯入的零件在資料庫檢視中顯示為磚塊，其中顏色編碼的圖示表示零件狀態、技術類型、材料需求和任何檢測到的問題。此視覺系統允許一眼快速評估零件的就緒狀態。</p>
+</div>
+<div class="paragraph">
+<p>詳細資訊請參閱 <a href="library/index.html">Library</a>。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/importparts.png" alt="Import" width="476">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_驗證零件和工具">3. 驗證零件和工具</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>檢查每個已匯入的零件是否存在潛在的生產問題。驗證零件幾何形狀是否有效且可製造、工具指派是否正確且可用、材料和厚度選擇是否與庫存匹配，以及成形零件的折彎序列是否正確定義。如果檢測到問題，請在 TecZone 中開啟零件以修改幾何形狀、重新指派或優化工具、調整處理參數或修正材料規格。在此階段解決問題可防止生產延誤並減少製造過程中的廢料。</p>
+</div>
+<div class="paragraph">
+<p>詳細資訊請參閱 <a href="library/partstate/index.html">Part state</a>
+和 <a href="library/toolingstatus/index.html">Tooling status</a>。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingcheck.png" alt="Tooling" width="1078">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_將零件組織成工作">4. 將零件組織成工作</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>根據生產需求將已驗證的零件分組成工作。工作代表一個邏輯生產單位，可能包括來自單一客戶訂單的零件、共享相同材料和厚度的零件、具有相似交貨期限的零件，或根據您的生產策略進行的組合。工作提供了規劃的容器，允許對相關零件進行批次處理，透過套料實現高效的材料利用，並簡化追蹤和報告。可以透過選擇零件手動建立工作，也可以根據預定義的規則和篩選條件自動建立。</p>
+</div>
+<div class="paragraph">
+<p>詳細資訊請參閱 <a href="jobs/index.html">Jobs</a>。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobs.png" alt="Jobs" width="578">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_5_將工作規劃到生產機器">5. 將工作規劃到生產機器</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>建立工作後，將其指派給適當的生產機器。考慮機器功能，包括支援的技術（雷射、沖壓、轉塔）、材料和厚度容量、可用工具和目前工作負載。如果存在多台合適的機器，請根據生產優先順序、機器可用性、設定需求或成本優化進行選擇。指派可以是手動以提供靈活性，或根據預配置的規則和機器排程演算法自動進行。</p>
+</div>
+<div class="paragraph">
+<p>詳細資訊請參閱 <a href="jobs/jobautoplan.html">Plan job</a>。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/machineselect.png" alt="MachineSelect" width="695">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_6_為工作發佈_nc">6. 為工作發佈 NC</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>在此階段，會產生切割佈局。您仍然可以使用 TecZone 編輯佈局並將切割技術新增到佈局中。之後，匯出 NC 輸出並將其傳輸到機器控制器或指定的網路位置。然後鎖定工作以防止進一步修改，並將其狀態更新為「已發佈」以進行生產追蹤。</p>
+</div>
+<div class="paragraph">
+<p>詳細資訊請參閱 <a href="jobs/layoutcommands/layoutpanel.html#send-to-machine">Send/Recall NC</a>。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/production.png" alt="Production" width="444">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_7_完成生產並結案工作">7. 完成生產並結案工作</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>在指派的機器上執行已發佈的工作。在生產過程中，機器操作員遵循 NC 程式、在切割過程中驗證零件品質、管理材料的裝載和卸載，並處理任何機器警報或問題。生產完成後，在 TruSmartCAM 中將個別零件或整個工作標記為完成。此最終步驟會更新庫存記錄、記錄實際生產時間和材料使用情況、封存工作資料以供報告和分析，並完成工作流程循環。</p>
+</div>
+<div class="paragraph">
+<p>詳細資訊請參閱 <a href="jobs/layoutcommands/layoutpanel.html#mark-complete">Mark
+complete</a>。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/complete.png" alt="Complete" width="435">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_1_配置系統">1. 配置系統</a>
+  </li>
+  <li level="1">
+   <a href="#_2_將零件新增到資料庫">2. 將零件新增到資料庫</a>
+  </li>
+  <li level="1">
+   <a href="#_3_驗證零件和工具">3. 驗證零件和工具</a>
+  </li>
+  <li level="1">
+   <a href="#_4_將零件組織成工作">4. 將零件組織成工作</a>
+  </li>
+  <li level="1">
+   <a href="#_5_將工作規劃到生產機器">5. 將工作規劃到生產機器</a>
+  </li>
+  <li level="1">
+   <a href="#_6_為工作發佈_nc">6. 為工作發佈 NC</a>
+  </li>
+  <li level="1">
+   <a href="#_7_完成生產並結案工作">7. 完成生產並結案工作</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="userinterface.html">使用者介面</a></span>
+ <span class="next"><a href="library/index.html">資料庫</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="res/index.js"></script>
+    <script src="res/files.js"></script>
+    <script src="res/site.js"></script>
+
+    
+</body>
+</html>

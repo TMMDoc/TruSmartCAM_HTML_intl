@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>การจัดเรียงแบบโต้ตอบ</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">ยินดีต้อนรับสู่ TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">การติดตั้ง</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">ข้อกำหนดฮาร์ดแวร์</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">รูปแบบไฟล์ที่รองรับ</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">ข้อกำหนดเบื้องต้น</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">การติดตั้ง Server</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">การติดตั้ง Client</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">เปลี่ยนใบอนุญาต</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">การกำหนดค่า</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">เพิ่ม/ลบเครื่องจักร</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">ตั้งค่าเครื่องมือ</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">กำหนดค่าผู้ใช้</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">ภาษา</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">วัสดุ</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">เพิ่มวัสดุและแผ่นวัสดุใหม่</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">ส่งออก/นำเข้าวัสดุ</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">แทนที่วัสดุ</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">จับคู่วัสดุ</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">จับคู่หน้า CAM</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">จับคู่ฟิลด์จาก CAD (คีย์การค้นหา)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">อินเทอร์เฟซผู้ใช้งาน</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">ขั้นตอนการทำงาน</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Library</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">แผงเครื่องมือ</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">คำสั่งซื้อ</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">มุมมองคำสั่งซื้อ</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">งาน</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">สร้างงาน</a></li>
+    <li><button class="tree blank"></button><a href="jobview.html">มุมมองงาน</a></li>
+    <li><button class="tree blank"></button><a href="jobpanel.html">แผงงาน</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">วางแผนอัตโนมัติ</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobinteractplan.html">การจัดเรียงแบบโต้ตอบ</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">การบรรจุใหม่</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">การจัดการการจัดเรียง</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">มุมมองเลย์เอาต์</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">แผงเลย์เอาต์</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">ผู้ส่งรายงาน</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">การจัดการวัสดุเหลือใช้</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">การจัดการวัสดุเหลือใช้อัตโนมัติ</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">การจัดการวัสดุเหลือใช้ด้วยตนเอง</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">การจัดเรียงแบบเส้นคู่</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">ล้าสมัย</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">ตัวกรองงาน</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">โรงงาน</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">เส้นทาง</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">แผ่นวัสดุ</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">ผู้ใช้</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">แก้ไข</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">ลูกค้า</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">การตั้งค่า</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">สภาพแวดล้อม</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">นำเข้า</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">การงอ</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">การตัด</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">การแจ้งเตือน</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">เฝ้าดู</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">งาน</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">รายงาน</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">ส่วนขยาย CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">การติดตั้ง</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">บันทึกชิ้นส่วน</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">บันทึกแอสเซมบลี</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">ตรวจสอบความเป็นไปได้</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">การตั้งค่าโรงงาน</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">การปรับปรุงอื่นๆ</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">ข้อมูลทางกฎหมาย</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">งาน</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobinteractplan.html">การจัดเรียงแบบโต้ตอบ</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>การจัดเรียงแบบโต้ตอบ</h1>
+<div class="paragraph">
+<p>การจัดเรียงแบบโต้ตอบสามารถใช้เพื่อสร้างแผนการจัดสำหรับชิ้นส่วนเดียว ชิ้นส่วนบางส่วนจากงาน งานเดียว หรือหลายงาน ช่วยให้คุณเลือกเครื่องจักรและวัสดุ ตั้งค่าพารามิเตอร์แผ่น และตรวจสอบผลการจัดเรียงแบบโต้ตอบ</p>
+</div>
+<div class="paragraph">
+<p>คลิกขวาที่ชิ้นส่วนหรืองานและเลือกตัวเลือก
+<strong>วางแผนชิ้นส่วน&#8230;&#8203;&#8230;&#8203;/วางแผนงาน&#8230;&#8203;&#8230;&#8203;</strong> &#8594;
+<strong>เรียกใช้ Interactive Nesting&#8230;&#8203;</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/interactive1.png" alt="Interactive nesting" width="1142">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>หน้าต่าง <strong>Interactive Nesting</strong> จะเปิดขึ้น</p>
+</li>
+<li>
+<p>โดยค่าเริ่มต้น หน้าต่างการจัดเรียงแบบโต้ตอบจะสลับไปที่หน้า
+<strong>เลือกเครื่องจักรและวัสดุ</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/interactive2.png" alt="Interactive nesting window" width="1908">
+</div>
+</div>
+</li>
+<li>
+<p>เครื่องจักรจะแสดงด้วยแถบสีที่บอกภาระงานการผลิตที่มีอยู่:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>แถบสีเขียว: ชั่วโมงที่กำหนดไว้</p>
+</li>
+<li>
+<p>แถบสีเทา: ชั่วโมงที่ว่าง (จากกะ 8 ชั่วโมง)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ภายใต้เครื่องจักรแต่ละตัว ชิ้นส่วนที่เลือกจะถูกจัดกลุ่มด้วยวัตถุดิบ
+(ชิ้นส่วน/ปริมาณรวม)</p>
+</li>
+<li>
+<p>หากชิ้นส่วนไม่มีโซลูชันเครื่องมือที่ถูกต้องสำหรับเครื่อง ชิ้นส่วนและวัสดุนั้นจะถูกละเว้นสำหรับการประมวลผลสำหรับเครื่องที่กำหนด</p>
+</li>
+<li>
+<p>หากวัตถุดิบถูกเลือกสำหรับเครื่องหนึ่ง จะไม่สามารถใช้ได้สำหรับเครื่องอื่น</p>
+</li>
+<li>
+<p>เมื่อตั้งค่าแผนการจัดเครื่องแล้ว ให้เลือกแผ่นที่ต้องการและแทนที่พารามิเตอร์แผ่นเช่น <strong>Priority</strong>,
+<strong>จำนวน</strong>, <strong>Margins</strong> ฯลฯ</p>
+</li>
+<li>
+<p>คุณสามารถกรองแผ่นเพื่อแสดง <strong>All Sheets</strong>,
+<strong>Standard Sheets</strong>, หรือ
+<strong>แผ่นเศษ</strong> คลิก <strong>ถัดไป</strong></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+ไม่สามารถเพิ่มปริมาณในขั้นตอนนี้ได้ คุณสามารถเก็บปริมาณเดียวกับคลังแผ่นหรือลดลงและตรวจสอบผลการจัดเรียง
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>อัปเดตจำนวน</strong> ปรากฏในหน้าต่างแผนการจัดเรียงแบบโต้ตอบ</p>
+</li>
+<li>
+<p>โดยค่าเริ่มต้น <strong>Pick All (F5)</strong> รวมชิ้นส่วนทั้งหมดสำหรับการจัดเรียง หรือคุณสามารถเลือกชิ้นส่วนตามลำดับความสำคัญด้วยตนเองและปรับปริมาณชิ้นส่วน คลิก <strong>ถัดไป</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/interactive3.png" alt="Update part quantity" width="1908">
+</div>
+</div>
+</li>
+<li>
+<p>การจัดเรียงเริ่มต้นและชิ้นส่วนที่จัดเรียงในแผ่นจะถูกอัปเดตด้วยสถานะสีน้ำเงิน</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/interactive4.png" alt="Review interactive nesting" width="1911">
+</div>
+</div>
+</li>
+<li>
+<p>ภาระงานการผลิตของเครื่องจะอัปเดตตามผลการจัด</p>
+</li>
+<li>
+<p>เลย์เอาต์ที่จัดเรียงจะถูกวาดตามมาตราส่วนและแสดงในแท็บ Nest Results</p>
+</li>
+<li>
+<p>หากชิ้นส่วนบางส่วนยังไม่ได้จัดเรียง ข้อความ
+<strong>ยังมีบางชิ้นส่วนที่ไม่ได้เนส</strong> จะปรากฏขึ้น — ชิ้นส่วนเหล่านี้จะยังคงอยู่ในงานเดิม</p>
+<div class="ulist">
+<ul>
+<li>
+<p>เหตุผลที่ไม่ได้จัดเรียงอาจเป็นเพราะไม่มีแผ่นสำหรับการจัด</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ผลการจัดแบบโต้ตอบมีคำนำหน้าเป็น: <strong>โรงงาน</strong> &#8594;
+<strong>การตั้งค่า</strong> &#8594; <strong>งาน</strong>&#8594;
+<strong>การตั้งค่าเนส</strong>,
+<strong>คำนำหน้าชื่อแผ่นแบบโต้ตอบ</strong></p>
+</li>
+<li>
+<p>เลย์เอาต์การจัดแบบโต้ตอบมีคำนำหน้าด้วยตัวอักษร <strong>L</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/interactive6.png" alt="Factory settings" width="754">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/interactive5.png" alt="Interactive nest layout" width="857">
+</div>
+</div>
+</li>
+</ul>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobautoplan.html">วางแผนอัตโนมัติ</a></span>
+ <span class="next"><a href="repacking.html">การบรรจุใหม่</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

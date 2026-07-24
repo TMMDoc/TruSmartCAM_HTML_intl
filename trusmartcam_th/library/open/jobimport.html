@@ -1,0 +1,533 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Import jobs</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">ยินดีต้อนรับสู่ TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">การติดตั้ง</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">ข้อกำหนดฮาร์ดแวร์</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">รูปแบบไฟล์ที่รองรับ</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">ข้อกำหนดเบื้องต้น</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">การติดตั้ง Server</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">การติดตั้ง Client</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">เปลี่ยนใบอนุญาต</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">การกำหนดค่า</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">เพิ่ม/ลบเครื่องจักร</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">ตั้งค่าเครื่องมือ</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">กำหนดค่าผู้ใช้</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">ภาษา</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">วัสดุ</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">เพิ่มวัสดุและแผ่นวัสดุใหม่</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">ส่งออก/นำเข้าวัสดุ</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">แทนที่วัสดุ</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">จับคู่วัสดุ</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">จับคู่หน้า CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">จับคู่ฟิลด์จาก CAD (คีย์การค้นหา)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">อินเทอร์เฟซผู้ใช้งาน</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">ขั้นตอนการทำงาน</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Library</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Open</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a class="active" href="jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">แผงเครื่องมือ</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">คำสั่งซื้อ</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">มุมมองคำสั่งซื้อ</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">งาน</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">สร้างงาน</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">มุมมองงาน</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">แผงงาน</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">วางแผนอัตโนมัติ</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">การจัดเรียงแบบโต้ตอบ</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">การบรรจุใหม่</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">การจัดการการจัดเรียง</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">มุมมองเลย์เอาต์</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">แผงเลย์เอาต์</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">ผู้ส่งรายงาน</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">การจัดการวัสดุเหลือใช้</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">การจัดการวัสดุเหลือใช้อัตโนมัติ</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">การจัดการวัสดุเหลือใช้ด้วยตนเอง</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">การจัดเรียงแบบเส้นคู่</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">ล้าสมัย</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">ตัวกรองงาน</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">โรงงาน</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">เส้นทาง</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">แผ่นวัสดุ</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">ผู้ใช้</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">แก้ไข</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">ลูกค้า</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">การตั้งค่า</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">สภาพแวดล้อม</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">นำเข้า</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">การงอ</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">การตัด</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">การแจ้งเตือน</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">เฝ้าดู</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">งาน</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">รายงาน</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">ส่วนขยาย CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">การติดตั้ง</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">บันทึกชิ้นส่วน</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">บันทึกแอสเซมบลี</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">ตรวจสอบความเป็นไปได้</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">การตั้งค่าโรงงาน</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">การปรับปรุงอื่นๆ</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">ข้อมูลทางกฎหมาย</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Library</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Open</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobimport.html">Import jobs</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Import jobs</h1>
+<div class="sect1">
+<h2 id="_นำเข้าจาก_csv_หรือ_xlsx">นำเข้าจาก csv หรือ xlsx</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>คุณยังสามารถนำเข้า jobs ในรูปแบบข้อความทั่วไปได้</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>คลิก <strong>File &#8594; Open &#8594; นำเข้างาน</strong> กล่องโต้ตอบ Open Folder
+จะปรากฏขึ้น เลือก <code>C:\Program
+Files\Metamation\Praxis\Samples\Jobs\C0\C0.csv</code></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv.png" alt="CSV import" width="426">
+</div>
+</div>
+</li>
+<li>
+<p>หากชิ้นงานทั้งหมดมีอยู่ในตำแหน่ง csv หรือในไดเรกทอรีโฟลเดอร์ค้นหา
+หน้าต่าง <strong>งานใหม่</strong> จะปรากฏโดยแสดงรายการชิ้นงานทั้งหมดที่ตรงกับ
+ฟิลด์ csv</p>
+</li>
+<li>
+<p>ชิ้นงานที่ขาดหายไปจะถูกละเว้นและไม่ปรากฏในหน้าต่าง <strong>งานใหม่</strong></p>
+</li>
+<li>
+<p>เริ่มต้นสถานะของชิ้นงานคือ Nascent</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv2.png" alt="CSV import" width="908">
+</div>
+</div>
+</li>
+<li>
+<p>คลิก <strong>OK</strong> ตอนนี้ชิ้นงานจะถูกนำเข้าใน Part Library การตรวจสอบ CAD
+การสร้างทูลลิงสำหรับการดัดและการตัดจะเสร็จสิ้นซึ่งสามารถ
+ตรวจสอบได้ในหน้าจอ <strong>Pmonitor</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv3.png" alt="CSV import" width="1438">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_สร้างชิ้นส่วนเปล่าสำหรับไฟล์_cad_ที่ขาดหาย">สร้างชิ้นส่วนเปล่าสำหรับไฟล์ CAD ที่ขาดหาย</h3>
+<div class="paragraph">
+<p>เมื่อนำเข้า jobs โดยใช้สเปรดชีต (.csv หรือ .xlsx) คุณอาจมี
+แถวที่อ้างอิงถึงไฟล์ CAD ที่ไม่มีในระบบบางครั้ง</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>เพื่อจัดการกับสิ่งนี้ ให้ไปที่ <strong>โรงงาน</strong>
+ &#8594; <strong>การตั้งค่า</strong> &#8594; <strong>งาน</strong>
+ ภายใต้ <strong>การนำเข้าสเปรดชีต</strong> เปิดใช้งาน
+<strong>สร้างชิ้นส่วนเปล่าสำหรับไฟล์ CAD ที่ขาดหาย</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv6.png" alt="Spreadsheet import" width="801">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>เมื่อเลือกตัวเลือกนี้:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>หากไฟล์ CAD หายไปสำหรับแถวใดๆ ระหว่างการนำเข้า job ระบบจะ
+สร้างชิ้นงานเปล่าโดยอัตโนมัติแทนที่ไฟล์ CAD ที่ขาดหายไป</p>
+</li>
+<li>
+<p>ในหน้าต่าง <strong>งานใหม่</strong> ชิ้นงานที่ขาดหายไปเหล่านี้จะถูก
+ไฮไลต์ด้วยสีเหลืองเพื่อระบุว่าไฟล์ CAD ที่เกี่ยวข้องหายไป</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/csv4.png" alt="Edit jobs" width="578"></span></p>
+</div>
+</li>
+<li>
+<p>ชิ้นงานที่ขาดหายไปจะยังคงมีฟิลด์ที่แมป (เช่น ชื่อชิ้นงาน วัสดุ
+ความหนา ปริมาณ ฯลฯ) จาก CSV อย่างไรก็ตาม สถานะชิ้นงานจะแสดง
+เป็น Nascent หมายความว่าเป็นเพียงตัวยึดตำแหน่งเปล่าที่ไม่มีรูปทรงเรขาคณิตจริง
+ยัง</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv5.png" alt="Nascent parts" width="1110">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>สิ่งนี้ทำให้มั่นใจได้ว่าการนำเข้า job ยังสามารถดำเนินต่อไปได้โดยไม่มีข้อผิดพลาดเนื่องจาก
+ไฟล์ CAD ที่ขาดหายไป — คุณสามารถอัปเดตหรือแทนที่ชิ้นงานเปล่าด้วย
+ไฟล์ CAD ที่ถูกต้องเมื่อมีให้ใช้งาน</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ไม่ต้องแสดงไดอะล็อกงานใหม่หากสเปรดชีตไม่มีข้อผิดพลาด">ไม่ต้องแสดงไดอะล็อกงานใหม่หากสเปรดชีตไม่มีข้อผิดพลาด</h3>
+<div class="paragraph">
+<p><strong>โรงงาน</strong> &#8594; <strong>การตั้งค่า</strong> &#8594;
+<strong>งาน</strong> → <strong>การนำเข้าสเปรดชีต</strong>→
+<strong>ไม่ต้องแสดงไดอะล็อกงานใหม่หากสเปรดชีตไม่มีข้อผิดพลาด</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>เมื่อเลือกช่องทำเครื่องหมายนี้ ระบบจะสร้าง job ใหม่โดยอัตโนมัติโดยไม่
+แสดงกล่องโต้ตอบ New Job หากสเปรดชีตไม่มีข้อผิดพลาด (ไม่มีชิ้นงานที่ขาดหายไป
+วันที่ที่ขาดหายไป หรือข้อมูลที่ไม่ถูกต้อง)</p>
+</li>
+<li>
+<p>เมื่อล้างช่องทำเครื่องหมายนี้ กล่องโต้ตอบ New Job จะปรากฏเสมอเพื่อให้ผู้ใช้ตรวจสอบ
+และยืนยัน แม้ว่าสเปรดชีตจะไม่มีข้อผิดพลาด</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_prefer_raw_material_column_over_material_thickness">Prefer raw-material column over material + thickness</h3>
+<div class="paragraph">
+<p><strong>โรงงาน</strong> &#8594; <strong>การตั้งค่า</strong> &#8594;
+<strong>งาน</strong>→<strong>Prefer Raw-Material column over Material + Thickness</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>เมื่อเลือกช่องทำเครื่องหมายนี้ ระบบจะคาดหวังว่าสเปรดชีตจะใช้
+คอลัมน์ Raw-Material (ตัวอย่างเช่น Steel-20) ซึ่งหมายความว่าประเภทวัสดุและ
+ความหนาควรรวมกันเป็นค่าเดียวในคอลัมน์เดียว</p>
+</li>
+<li>
+<p>เมื่อล้างช่องทำเครื่องหมายนี้ ระบบจะคาดหวังว่าสเปรดชีตจะมี
+คอลัมน์แยกสำหรับ Material และ Thickness (ตัวอย่างเช่น Steel และ 2.00)
+ระบบจะรวมมันภายในระหว่างการนำเข้า</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csvmaterial.png" alt="CSV Raw Material and Material+Thickness">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_โฟลเดอร์_watch_โดยใช้_csvxlsx">โฟลเดอร์ watch โดยใช้ CSV/XLSX</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>ใน <strong>โรงงาน</strong> &#8594; <strong>การตั้งค่า</strong>&#8594;
+<strong>เฝ้าติดตาม</strong> เลือก <strong>เปิดใช้งาน 'Live Folder'</strong>
+และ <strong>เฝ้าติดตามโฟลเดอร์ย่อยด้วย</strong></p>
+</li>
+<li>
+<p>ตั้งค่าเส้นทางโฟลเดอร์ watch (UNC หรือไดรฟ์ที่แมป)</p>
+</li>
+<li>
+<p>ใน <strong>การนำเข้าสเปรดชีต</strong> เลือก
+<strong>นำเข้าสเปรดชีตจาก 'Live Folder'</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/watchfolder.png" alt="Watch folder" width="702">
+</div>
+</div>
+</li>
+<li>
+<p>เลือก <strong>นำเข้างาน</strong> จากตัวเลือก Spreadsheet Import</p>
+</li>
+<li>
+<p>คัดลอก <code>C:\Program Files\Metamation\Praxis\Samples\Jobs\C0\C0.csv</code> และวางลงใน
+โฟลเดอร์ Watch</p>
+</li>
+<li>
+<p>ระบบจะตรวจสอบ CSV และพยายามสร้าง job โดยอัตโนมัติ</p>
+</li>
+<li>
+<p>หากไฟล์ CAD หายไป จะไม่มี job ถูกสร้างขึ้นเพราะไม่พบข้อมูล CAD ที่ต้องการ</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_cad_lookup_directory_และ_recursive_cad_search_ไม่ได้กำหนดค่า">CAD lookup directory และ recursive CAD search - ไม่ได้กำหนดค่า</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>ใน <strong>โรงงาน</strong> &#8594; <strong>การตั้งค่า</strong> &#8594;
+<strong>งาน</strong> &#8594; <strong>การนำเข้าสเปรดชีต</strong>
+หากไม่มี <strong>CAD lookup directories</strong> ที่ตั้งค่าและ
+<strong>ใช้การค้นหา CAD แบบวนซ้ำ</strong> ไม่ได้ใช้ ระบบ
+จะไม่ค้นหาไฟล์ CAD โดยอัตโนมัติ</p>
+</li>
+<li>
+<p>หากเลือกช่องทำเครื่องหมาย <strong>สร้างชิ้นส่วนเปล่าสำหรับไฟล์ CAD ที่ขาดหาย</strong>
+job จะยังคงถูกสร้างขึ้นแม้ว่าไฟล์ CAD จะหายไป</p>
+</li>
+<li>
+<p>ในกรณีนี้ ชิ้นงานทั้งหมดใน job จะถูกสร้างเป็นชิ้นงาน nascent (เปล่า) —
+หมายความว่าไม่มีรูปทรงเรขาคณิตเพราะไม่พบไฟล์ CAD</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/notconfigured.png" alt="Create blank parts" width="867">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cad_lookup_directory_และ_recursive_cad_search_กำหนดค่าแล้ว">CAD lookup directory และ recursive CAD search - กำหนดค่าแล้ว</h3>
+<div class="paragraph">
+<p>เมื่อ <strong>ไดเรกทอรีค้นหา CAD</strong> ถูกตั้งค่าเป็น
+(C:\Program Files\Metamation\Praxis\Samples) และ
+<strong>ใช้การค้นหา CAD แบบวนซ้ำ</strong> เปิดใช้งานภายใต้
+<strong>โรงงาน</strong> &#8594; <strong>การตั้งค่า</strong> &#8594; <strong>งาน</strong>
+&#8594; <strong>การนำเข้าสเปรดชีต</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ระบบจะค้นหาโฟลเดอร์ที่ระบุและโฟลเดอร์ย่อยทั้งหมดโดยอัตโนมัติ
+สำหรับไฟล์ CAD ที่ต้องการที่กล่าวถึงในสเปรดชีต</p>
+</li>
+<li>
+<p><strong>สร้างชิ้นส่วนเปล่าสำหรับไฟล์ CAD ที่ขาดหาย</strong> ยัง
+เปิดใช้งาน ดังนั้นหากยังไม่พบไฟล์ CAD ใดๆ ระบบจะสร้า
+ชิ้นงานเปล่าเป็นตัวยึดตำแหน่ง</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/configured.png" alt="Create blank parts" width="861">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_นำเข้าจาก_csv_หรือ_xlsx">นำเข้าจาก csv หรือ xlsx</a>
+  </li>
+  <li level="2">
+   <a href="#_สร้างชิ้นส่วนเปล่าสำหรับไฟล์_cad_ที่ขาดหาย">สร้างชิ้นส่วนเปล่าสำหรับไฟล์ CAD ที่ขาดหาย</a>
+  </li>
+  <li level="2">
+   <a href="#_ไม่ต้องแสดงไดอะล็อกงานใหม่หากสเปรดชีตไม่มีข้อผิดพลาด">ไม่ต้องแสดงไดอะล็อกงานใหม่หากสเปรดชีตไม่มีข้อผิดพลาด</a>
+  </li>
+  <li level="2">
+   <a href="#_prefer_raw_material_column_over_material_thickness">Prefer raw-material column over material + thickness</a>
+  </li>
+  <li level="1">
+   <a href="#_โฟลเดอร์_watch_โดยใช้_csvxlsx">โฟลเดอร์ watch โดยใช้ CSV/XLSX</a>
+  </li>
+  <li level="2">
+   <a href="#_cad_lookup_directory_และ_recursive_cad_search_ไม่ได้กำหนดค่า">CAD lookup directory และ recursive CAD search - ไม่ได้กำหนดค่า</a>
+  </li>
+  <li level="2">
+   <a href="#_cad_lookup_directory_และ_recursive_cad_search_กำหนดค่าแล้ว">CAD lookup directory และ recursive CAD search - กำหนดค่าแล้ว</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="orderimport.html">Import orders</a></span>
+ <span class="next"><a href="assembliesimport.html">Import assemblies</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

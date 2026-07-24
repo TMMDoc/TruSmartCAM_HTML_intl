@@ -1,0 +1,500 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Εισαγωγή parts</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Καλώς ήρθατε στο TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Εγκατάσταση</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Απαιτήσεις υλικού</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Υποστηριζόμενες μορφές αρχείων</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Προαπαιτούμενα</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Εγκατάσταση Server</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Εγκατάσταση Client</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Αλλαγή άδειας χρήσης</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Ρύθμιση Παραμέτρων</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Προσθήκη/Αφαίρεση μηχανής</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Ρύθμιση εργαλείων</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Διαμόρφωση χρηστών</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Γλώσσα</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Υλικό</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Προσθήκη νέου υλικού και φύλλου</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Εξαγωγή/Εισαγωγή υλικού</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Αντικατάσταση υλικού</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Αντιστοίχιση υλικού</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Αντιστοίχιση σελίδων CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Αντιστοίχιση πεδίων από CAD (κλειδιά αναζήτησης)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Η διεπαφή χρήστη</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Ροή εργασίας</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Βιβλιοθήκη</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Open</a>
+     <ul>
+      <li><button class="tree blank"></button><a class="active" href="partimport.html">Εισαγωγή parts</a></li>
+      <li><button class="tree blank"></button><a href="orderimport.html">Εισαγωγή παραγγελιών</a></li>
+      <li><button class="tree blank"></button><a href="jobimport.html">Εισαγωγή jobs</a></li>
+      <li><button class="tree blank"></button><a href="assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Προβολή βιβλιοθήκης</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Κατάσταση part</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Επικύρωση part</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Πίνακας part</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Φίλτρα part</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Κατάσταση tooling</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Επικύρωση tooling</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Επικύρωση bend tooling</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Επικύρωση cut tooling</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Επικύρωση fold tooling</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Πίνακας tooling</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Αποθήκευση φίλτρων</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Παραγγελίες</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Προβολή παραγγελιών</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Εργασίες</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Δημιουργία εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Προβολή εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Πίνακας εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Αυτόματος σχεδιασμός</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Διαδραστική τοποθέτηση</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Επανασυσκευασία</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Διαχείριση τοποθέτησης</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Προβολή διάταξης</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Πίνακας διάταξης</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Αποστολέας αναφοράς</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Διαχείριση υπολειμμάτων</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Αυτόματη διαχείριση υπολειμμάτων</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Χειροκίνητη διαχείριση υπολειμμάτων</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Τοποθέτηση διπλής γραμμής</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Μη ενημερωμένο</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Φίλτρα εργασίας</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Επεκτάσεις CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Εγκατάσταση</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Αποθήκευση εξαρτημάτων</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Αποθήκευση συναρμολόγησης</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Έλεγχος σκοπιμότητας</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Ρυθμίσεις εργοστασίου</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Διάφορες βελτιώσεις</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Βιβλιοθήκη</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Open</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="partimport.html">Εισαγωγή parts</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Εισαγωγή parts</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Πριν από την εισαγωγή parts, βεβαιωθείτε ότι οι μορφές αρχείων είναι συμβατές με το TruSmartCAM.
+Δείτε τις <a href="../../installation/importformats.html">υποστηριζόμενες μορφές αρχείων</a> για περισσότερες
+λεπτομέρειες.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Εάν το υλικό και το πάχος δεν έχουν αντιστοιχιστεί στο part μετά την εισαγωγή, εκχωρήστε
+υλικό χρησιμοποιώντας τον πίνακα part.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_μέθοδοι_εισαγωγής">Μέθοδοι εισαγωγής</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Υπάρχουν τρεις μέθοδοι για την εισαγωγή parts στη Βιβλιοθήκη Part:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Εισαγωγή μέσω αρχείου</p>
+</li>
+<li>
+<p>Μεταφορά και απόθεση</p>
+</li>
+<li>
+<p>Φάκελος παρακολούθησης</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_εισαγωγή_μέσω_αρχείου">Εισαγωγή μέσω αρχείου</h3>
+<div class="paragraph">
+<p>Ένα αρχείο part 2D ή 3D μπορεί να εισαχθεί στη Βιβλιοθήκη Part χρησιμοποιώντας την
+επιλογή <strong>Εισαγωγή εξαρτημάτων</strong>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Κάντε κλικ στα εικονίδια <strong>άνοιγμα</strong> από τη γραμμή εντολών και επιλέξτε
+την επιλογή <strong>Εισαγωγή εξαρτημάτων</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importpart.png" alt="Import part" width="337">
+</div>
+</div>
+</li>
+<li>
+<p>Εμφανίζεται ο διάλογος <strong>Open</strong> — επιλέξτε οποιοδήποτε αρχείο CAD (2D ή 3D).</p>
+</li>
+<li>
+<p>Εμφανίζεται μια προεπισκόπηση του επιλεγμένου αρχείου CAD.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/sideview.png" alt="Part preview" width="1233">
+</div>
+</div>
+</li>
+<li>
+<p>Επιλέξτε το απαιτούμενο part και κάντε κλικ στο <strong>Open</strong>.</p>
+</li>
+<li>
+<p>Το σύστημα εφοδιάζει αυτόματα με εργαλεία το part για όλες τις διαθέσιμες μηχανές με ενημερωμένη κατάσταση tooling
+.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_μεταφορά_και_απόθεση">Μεταφορά και απόθεση</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Μεταφέρετε και αποθέστε ένα αρχείο part απευθείας στη Βιβλιοθήκη Part του TruSmartCAM.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_φάκελος_παρακολούθησης">Φάκελος παρακολούθησης</h3>
+<div class="paragraph">
+<p>Οι ρυθμίσεις παρακολούθησης σας επιτρέπουν να παρακολουθείτε έναν φάκελο για νέα αρχεία και να τα εισάγετε αυτόματα
+στη Βιβλιοθήκη Part.</p>
+</div>
+<div class="paragraph">
+<p>Για διαμόρφωση, δείτε τη σελίδα <a href="../../factory/settings/watch.html">Watch settings</a>.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Χρησιμοποιήστε διαδρομή UNC (Universal Naming Convention) <code>\\192.168.1.11\&lt;Folder path&gt;</code> ή
+mapped drive <code>M:\&lt;Folder Path&gt;</code>.</p>
+</li>
+<li>
+<p>Ο υπολογιστής που εκτελεί τον Engine πρέπει να έχει πρόσβαση ανάγνωσης/εγγραφής σε αυτόν τον φάκελο.</p>
+</li>
+<li>
+<p>Μη χρησιμοποιείτε τοπική διαδρομή όπως <code>C:\&lt;Folder Path&gt;</code> επειδή η υπηρεσία Watch
+αναζητά αρχεία στον υπολογιστή Engine — όχι στον τοπικό υπολογιστή.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/watch.png" alt="Watch settings" width="744">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="import-configuration">Διαμόρφωση εισαγωγής</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_χρήση_σύγκρισης_γεωμετρίας_στην_ίδια_αναθεώρηση_cad">Χρήση σύγκρισης γεωμετρίας στην ίδια αναθεώρηση CAD</h3>
+<div class="paragraph">
+<p>Κατά την εισαγωγή ενός part με την ίδια αναθεώρηση CAD, το TruSmartCAM μπορεί να συγκρίνει τη
+γεωμετρία του αρχείου CAD με το υπάρχον part.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Για να το ενεργοποιήσετε αυτό, διαμορφώστε <strong>Πλήκτρα αναζήτησης αναθεωρήσεων</strong> (για
+παράδειγμα, REV) στο <strong>εργοστασιακές</strong> → <strong>ρυθμίσεις</strong>
+→<strong>Εισαγωγή/Εξαγωγή</strong>. Στη συνέχεια, ενεργοποιήστε την
+επιλογή <strong>Χρήση σύγκρισης γεωμετρίας στην ίδια αναθεώρηση CAD</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/rev.png" alt="Revision" width="755"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Η σύγκριση γεωμετρίας στην ίδια αναθεώρηση CAD λειτουργεί μόνο όταν
+τα <strong>Πλήκτρα αναζήτησης αναθεωρήσεων</strong> είναι διαμορφωμένα.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Τώρα, εισαγάγετε ένα part στη βιβλιοθήκη part με συγκεκριμένη αναθεώρηση (για
+παράδειγμα, Revision 1).</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/partcomparison.png" alt="Part Comparison" width="263">
+</div>
+</div>
+</li>
+<li>
+<p>Το ίδιο part εισάγεται ξανά με την ίδια τιμή αναθεώρησης.</p>
+</li>
+<li>
+<p>Το TruSmartCAM συγκρίνει τη γεωμετρία του νέου εισαγόμενου αρχείου CAD με το υπάρχον
+part.</p>
+</li>
+<li>
+<p>Εάν ανιχνευθεί διαφορά γεωμετρίας, το TruSmartCAM εμφανίζει μια προτροπή ρωτώντας αν θα:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Αντικατάσταση</strong> το υπάρχον part με τη νέα γεωμετρία, διατηρώντας την ίδια αναθεώρηση
+τιμή.</p>
+</li>
+<li>
+<p><strong>Παράλειψη</strong> την εισαγωγή, διατηρώντας το υπάρχον part και τη γεωμετρία του.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/comparison.png" alt="Comparison" width="435"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Αυτό επιτρέπει στους χρήστες να ενημερώσουν τη γεωμετρία part χωρίς να αλλάξουν την τιμή αναθεώρησης,
+ενώ διατηρούν τον έλεγχο σχετικά με το αν αντικαθίστανται τα υπάρχοντα parts.</p>
+</div>
+<div class="paragraph">
+<p>Τα εισαγόμενα parts προστίθενται αυτόματα στη βιβλιοθήκη για περαιτέρω χρήση. Για περισσότερες πληροφορίες,
+δείτε <a href="../../library/index.html">Library</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_μέθοδοι_εισαγωγής">Μέθοδοι εισαγωγής</a>
+  </li>
+  <li level="2">
+   <a href="#_εισαγωγή_μέσω_αρχείου">Εισαγωγή μέσω αρχείου</a>
+  </li>
+  <li level="2">
+   <a href="#_μεταφορά_και_απόθεση">Μεταφορά και απόθεση</a>
+  </li>
+  <li level="2">
+   <a href="#_φάκελος_παρακολούθησης">Φάκελος παρακολούθησης</a>
+  </li>
+  <li level="1">
+   <a href="#import-configuration">Διαμόρφωση εισαγωγής</a>
+  </li>
+  <li level="2">
+   <a href="#_χρήση_σύγκρισης_γεωμετρίας_στην_ίδια_αναθεώρηση_cad">Χρήση σύγκρισης γεωμετρίας στην ίδια αναθεώρηση CAD</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">Open</a></span>
+ <span class="next"><a href="orderimport.html">Εισαγωγή παραγγελιών</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

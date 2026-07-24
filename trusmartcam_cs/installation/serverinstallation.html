@@ -1,0 +1,905 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Instalace serveru</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Vítejte v TruSmartCAM</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Instalace</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="hardwarerequirement.html">Hardwarové požadavky</a></li>
+    <li><button class="tree blank"></button><a href="importformats.html">Podporované formáty souborů</a></li>
+    <li><button class="tree blank"></button><a href="prerequisites.html">Předpoklady</a></li>
+    <li><button class="tree blank"></button><a class="active" href="serverinstallation.html">Instalace serveru</a></li>
+    <li><button class="tree blank"></button><a href="clientinstallation.html">Instalace klienta</a></li>
+    <li><button class="tree blank"></button><a href="changelic.html">Změna licence</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Konfigurace</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Přidat/Odebrat stroj</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Nastavení nářadí</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Konfigurace uživatelů</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Jazyk</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Materiál</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Přidání nového materiálu a plechu</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Export/Import materiálu</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Nahrazení materiálu</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Mapování materiálu</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Mapování CAM stránek</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Mapování polí z CAD (vyhledávací klíče)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">Uživatelské rozhraní</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Pracovní postup</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Knihovna</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Otevřít</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Import dílů</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Import objednávek</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Import zakázek</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Import sestav</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Zobrazení knihovny</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Díly</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Sestava</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Stav dílu</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Validace dílu</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Panel dílů</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Filtry dílů</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Stav nástrojového vybavení</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Validace nástrojového vybavení</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Validace ohýbacího nástrojového vybavení</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Validace řezacího nástrojového vybavení</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Validace skládacího nástrojového vybavení</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Panel nástrojového vybavení</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Ukládání filtrů</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Objednávky</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Zobrazení objednávek</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../jobs/index.html">Zakázky</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../jobs/jobcreation.html">Vytvoření zakázky</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobview.html">Zobrazení zakázek</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobpanel.html">Panel zakázek</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobautoplan.html">Automatické plánování</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobinteractplan.html">Interaktivní hnízdění</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/repacking.html">Přebalení</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/layoutcommands/index.html">Správa hnízdění</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/nestview.html">Zobrazení uspořádání</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/layoutpanel.html">Panel uspořádání</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/reportsender.html">Odesílatel zpráv</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/remnantmanagement/index.html">Správa zbytků</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/autoremnant.html">Automatická správa zbytků</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/manualremnant.html">Ruční správa zbytků</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../jobs/twinlinenesting.html">Hnízdění Twinline</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/outdate.html">Zastaralé</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobfilters.html">Filtry zakázek</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Továrna</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Trasy</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Plechy</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Uživatelé</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Upravit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Zákazníci</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Nastavení</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Prostředí</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Ohýbání</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Řezání</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Oznámení</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Sledování</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Zakázka</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reporty</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">Rozšíření CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Instalace</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Uložení dílů</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Uložení sestavy</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Kontrola proveditelnosti</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Nastavení továrny</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Různá vylepšení</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Instalace</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="serverinstallation.html">Instalace serveru</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Instalace serveru</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Postupujte podle pokynů pro instalaci serveru TruSmartCAM spolu s SQL.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">Administrátorská práva</div>
+<div class="paragraph">
+<p><strong>Pro provedení této instalace musí mít uživatel administrátorská oprávnění.</strong></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Spusťte <strong>Setup.TruSmartCAM.&lt;version&gt;.exe</strong> pro zahájení instalace.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Verze je číslo.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Přečtěte si licenční smlouvu a zvolte <strong>I accept the agreement</strong> a poté
+klikněte na Další
+.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s02praxislicenseagreement.png" alt="Praxis License Agreement">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_krok_1_umístění_instalace">Krok 1 : Umístění instalace</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Zadejte instalační adresář nebo přijměte výchozí instalaci
+<code>C:\Program Files\Metamation\Praxis</code> a klikněte na Další.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>C:\Program Files\Metamation\Praxis</code> - Instalační složka bude obsahovat
+následující složky: Bin, MetaCAM, Samples a Tracker.</p>
+</li>
+<li>
+<p><code>C:\Program Data\Metamation</code> - Datová složka bude obsahovat následující
+složky: TruSmartCAM, TecZone a MetaCAM.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s03installationpath.png" alt="Installation Path">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_krok_2_výběr_komponent">Krok 2 : Výběr komponent</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Typ instalace</th>
+<th class="tableblock halign-left valign-top">Komponenty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Desktop client + Engine</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Client</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Desktop Client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Desktop client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Station</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vybere všechny terminály stanic jako TecZone, MetaCAM, RightAngle(Bend Controller),
+Vulcan(Laser Machine Controller)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Výběr podle volby uživatele.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Zvolte Full Installation. Vyberte <strong>Code Senders</strong> a <strong>Bend Code Senders</strong> z
+TruSmartCAM Tools. Nyní se typ instalace změní na <strong>Zákaznické</strong>.
+Klikněte na Další.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s04serverinstallation.png" alt="Server Installation">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_krok_3_volba_instalace_sql_serveru">Krok 3 : Volba instalace SQL serveru</h2>
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Instalace SQL Express 2022 je potřebná pouze pro server TruSmartCAM. Tato možnost
+není k dispozici pro instalace Client a Sync. Tato možnost je také zaškrtnuta a
+nainstalována poprvé a poté ji lze ignorovat. Pokud je již SQL nainstalováno na
+serveru TruSmartCAM, může uživatel Krok 3 přeskočit.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>V Select Additional Tasks : Klikněte na <strong>Install SQL Express</strong> a klikněte na
+Další.</p>
+</li>
+<li>
+<p>V Ready to Install : Shrňte všechny funkce instalace a klikněte na Install.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s05sqlinstall.png" alt="Install SQL">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_krok_4_instalace_sql_serveru">Krok 4 : Instalace SQL serveru</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jakmile jsou nainstalovány komponenty TruSmartCAM, instalační program pokračuje
+instalací SQL serveru. Pro pokračování přijměte licenční smlouvu a nainstalujte
+SQL express s výchozími možnostmi.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s06sqlserver.png" alt="SQLServer Install">
+</div>
+</div>
+<div class="paragraph">
+<p>Po dokončení instalace klikněte na Close a dokončete instalaci.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s07sqlservercomplete.png" alt="SQL Server Complete">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+V závislosti na verzi Windows může zavření instalace SQL vyzvat k
+restartu.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_krok_5_zástupce_windows_na_ploše">Krok 5 : Zástupce Windows na ploše</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Po instalaci SQL, pokud se systém nerestartuje, zaškrtněte políčko
+<strong>Launch TruSmartCAM</strong> a klikněte na <strong>Finish</strong>.</p>
+</li>
+<li>
+<p>Pokud se systém restartuje, spusťte ikonu zástupce TruSmartCAM na ploše nebo
+zadejte TruSmartCAM v nabídce Start systému Windows a <strong>spusťte jako správce</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<em>Instalace serveru</em> : Na ploše jsou k dispozici ikony zástupců TruSmartCAM
+a TruSmartCAM License. + <em>Instalace Client/SYNC</em> : Na ploše je k dispozici pouze
+ikona zástupce TruSmartCAM.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s08launchpraxis.png" alt="Launch TruSmartCAM">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_krok_6_registrace_licence">Krok 6 : Registrace licence</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Do pole <em>Serial Number</em> zadejte <em>Sériový klíč TruSmartCAM</em> poskytnutý týmem
+Trumpf Metamation Service. Do pole "Registered to" zadejte <strong>&lt;Název společnosti&gt;</strong>
+a e-mail. Klikněte na <strong>OK</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s09praxisregister.png" alt="TruSmartCAM Register">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>V případě, že síťový firewall blokuje registraci licence nebo není internet v
+PC serveru TruSmartCAM, pak se licence TruSmartCAM provádí offline aktivací.
+Odešlete e-mailem soubor <strong><em>Prax.request</em></strong> ze složky
+<em>C:\ProgramData\Metamation\Praxis</em> týmu Trumpf Metamation Service. Tým Trumpf
+Metamation poskytne soubor <strong><em>Prax.lock</em></strong>, který je třeba vložit do této složky.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_krok_7_úvodní_jednorázová_konfigurace">Krok 7 : Úvodní jednorázová konfigurace</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Zadejte název databáze a nastavte umístění úložiště dat. Zaškrtněte políčko
+Použít SQL server a vyberte název SQL serveru pro připojení
+k databázi. Klikněte na <strong>OK</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s10usedatabase.png" alt="Use Database">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Desktop klient TruSmartCAM se otevře a v dolní části zobrazí <strong>Database
+Connection Succeeded</strong>.</p>
+</li>
+<li>
+<p>Byly vytvořeny konfigurační soubory TruSmartCAM, TecZone a MetaCAM s
+výchozími konfiguračními stroji nebo proti licenčním strojům TruSmartCAM. Stejná
+konfigurace bude sdílena mezi všemi klienty TruSmartCAM.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s11databaseconnectionsuccess.png" alt="Database Connection Success">
+</div>
+</div>
+<div class="paragraph">
+<p>Uvítací obrazovka se zobrazuje s přihlašovacím jménem uživatele Windows jako
+přihlašovací jméno a jméno TruSmartCAM. První uživatel TruSmartCAM je považován za
+<strong>Stanoviště Admin</strong>. Zadejte e-mail a heslo. Klikněte na
+<strong>OK</strong>
+.</p>
+</div>
+<div class="paragraph">
+<p>Zaškrtněte políčko <strong>Zapamatovat</strong> pro uložení přihlašovacích
+údajů pro příště. Vymazání políčka <strong>Zapamatovat</strong> vyvolá
+dialogové okno pro přihlášení a heslo vždy, když je spuštěna aplikace
+TruSmartCAM.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s12welcomepraxis.png" alt="Welcome TruSmartCAM">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_krok_8_přihlášení_do_trusmartcam">Krok 8 : Přihlášení do TruSmartCAM</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Zavřete TruSmartCAM a znovu jej otevřete. Systém vás vyzve k zadání
+přihlašovacích údajů TruSmartCAM.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/signprompt.png" alt="Sign Prompt" width="450">
+</div>
+</div>
+</li>
+<li>
+<p>Přihlášené uživatelské jméno je zobrazeno vedle ikony uživatele v TruSmartCAM
+application header.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/userid.png" alt="User ID" width="228">
+</div>
+</div>
+</li>
+<li>
+<p>When you hover over the user icon, the system displays:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/hover.png" alt="Hover" width="108">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The user role (for example: Programmer, Admin).</p>
+</li>
+<li>
+<p>A shortcut to log out: <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>L</kbd></span>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Clicking the user icon opens a menu that allows you to:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/information.png" alt="Information" width="160">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Editovat informaci&#8230;&#8203;</strong> - Update your profile details.</p>
+</li>
+<li>
+<p><strong>Změnit heslo&#8230;&#8203;</strong> - Change your account
+password.</p>
+</li>
+<li>
+<p><strong>Odhlásit</strong> - Sign out of the application.</p>
+</li>
+<li>
+<p><strong>Zrušit</strong> - Close the menu without making any changes.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_9_factory_machine_configuration">Step 9 : Factory Machine Configuration</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM License [All machines enables license bit] : Default TruSmartCAM Machine
+and Material are considered as Factory Configuration.</p>
+</li>
+<li>
+<p>TruSmartCAM License [No demo and few machine bit enabled] : Those Few machines and
+default Material are considered as Factory Configuration.</p>
+</li>
+<li>
+<p>(Open &#8594; Import) a new Part from the <code>C:\Program
+Files\Metamation\Praxis\Samples\Parts</code> and verify if the Part is imported
+successfully.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s14praxiswelcomescreen.png" alt="Praxis Welcome screen">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_note_1_trusmartcam_monitor">Note 1 : TruSmartCAM Monitor</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor with Engine Installation (Site admin rights):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor with Engine along with Site Admin TruSmartCAM Rights will have
+following options:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Push TruSmartCAM configuration, TecZone, MetaCAM configuration across all TruSmartCAM
+Clients. Also have rights to create New TruSmartCAM User Login.</p>
+</li>
+<li>
+<p>Show Agents will show the total engine available to do automation task which
+is against the TruSmartCAM License.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s15pmonitor.png" alt="Praxis Monitor Status">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor without Engine Installation (Site admin rights):</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s16pmonitorwithoutengine.png" alt="Praxis Monitor without Engine">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor without Engine Installation (Non Site Admin rights):</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s17pmonitorwithprogrammerlogin.png" alt="Praxis with Progrmmer login">
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>PC running TruSmartCAM application must have the Engine TruSmartCAM component installed
+[Server PC or in any Client install]. Engine TruSmartCAM component installed PC
+should be running 24x7 to do all automation tasks.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_note_2_lock_tracker">Note 2 : Lock Tracker</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Click <strong>TruSmartCAM License</strong> shortcut available in TruSmartCAM Server Desktop.
+Alternatively, open <a href="http://localhost:7171/metamation/locktrack" class="bare">http://localhost:7171/metamation/locktrack</a> url in any web
+browser.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This will open Lock Tracker module which have License information, TruSmartCAM
+current session information and Log.</p>
+</div>
+<div class="paragraph">
+<p>LockTracker HOME Page : This show the TruSmartCAM Serial Number, Serial Expiry
+information and Serial bits available information.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s18locktrack01.png" alt="Lock Track License Home page">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker SESSIONS Page : Current TruSmartCAM Server connected information like
+TruSmartCAM Desktop client PC, PMonitor, PEngine Status.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s19locktrack02.png" alt="Lock Track Session information">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker LOGs Page : TruSmartCAM client start and log off | Pmonitor start and
+PEngine connect/disconnect status etc., can be viewed in this Logs page.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s20locktrack03.png" alt="Praxis Monitor Status">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_note_3_opengl">Note 3 : OpenGL</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM application while opening which gets closed immediately and also
+pmonitor is not shown at the task bar.</p>
+</li>
+<li>
+<p>This represents OpenGl issue.</p>
+</li>
+<li>
+<p>Another way to confirm this: Open C:\Program
+Files\Metamation\Praxis\Bin\Flux.exe which displays error dialog about the
+OpenGL issue.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s21opengl.png" alt="OpenGL Issue">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Update <em>C:\ProgramData\Metamation\Praxis\Prax.ini</em>, options section with
+<strong>GLVersion=1</strong> make TruSmartCAM application open successfully.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ini hljs" data-lang="ini">[Options]
+GLVersion=1.0</code></pre>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_krok_1_umístění_instalace">Krok 1 : Umístění instalace</a>
+  </li>
+  <li level="1">
+   <a href="#_krok_2_výběr_komponent">Krok 2 : Výběr komponent</a>
+  </li>
+  <li level="1">
+   <a href="#_krok_3_volba_instalace_sql_serveru">Krok 3 : Volba instalace SQL serveru</a>
+  </li>
+  <li level="1">
+   <a href="#_krok_4_instalace_sql_serveru">Krok 4 : Instalace SQL serveru</a>
+  </li>
+  <li level="1">
+   <a href="#_krok_5_zástupce_windows_na_ploše">Krok 5 : Zástupce Windows na ploše</a>
+  </li>
+  <li level="1">
+   <a href="#_krok_6_registrace_licence">Krok 6 : Registrace licence</a>
+  </li>
+  <li level="1">
+   <a href="#_krok_7_úvodní_jednorázová_konfigurace">Krok 7 : Úvodní jednorázová konfigurace</a>
+  </li>
+  <li level="1">
+   <a href="#_krok_8_přihlášení_do_trusmartcam">Krok 8 : Přihlášení do TruSmartCAM</a>
+  </li>
+  <li level="1">
+   <a href="#_step_9_factory_machine_configuration">Step 9 : Factory Machine Configuration</a>
+  </li>
+  <li level="1">
+   <a href="#_note_1_trusmartcam_monitor">Note 1 : TruSmartCAM Monitor</a>
+  </li>
+  <li level="1">
+   <a href="#_note_2_lock_tracker">Note 2 : Lock Tracker</a>
+  </li>
+  <li level="1">
+   <a href="#_note_3_opengl">Note 3 : OpenGL</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="prerequisites.html">Předpoklady</a></span>
+ <span class="next"><a href="clientinstallation.html">Instalace klienta</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>
+    if (!hljs.initHighlighting.called) {
+      hljs.initHighlighting.called = true
+      ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+    }
+  </script>
+</body>
+</html>

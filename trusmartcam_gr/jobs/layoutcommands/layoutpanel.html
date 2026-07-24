@@ -1,0 +1,752 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Πίνακας διάταξης</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Καλώς ήρθατε στο TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Εγκατάσταση</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Απαιτήσεις υλικού</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Υποστηριζόμενες μορφές αρχείων</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Προαπαιτούμενα</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Εγκατάσταση Server</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Εγκατάσταση Client</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Αλλαγή άδειας χρήσης</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Ρύθμιση Παραμέτρων</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Προσθήκη/Αφαίρεση μηχανής</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Ρύθμιση εργαλείων</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Διαμόρφωση χρηστών</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Γλώσσα</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Υλικό</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Προσθήκη νέου υλικού και φύλλου</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Εξαγωγή/Εισαγωγή υλικού</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Αντικατάσταση υλικού</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Αντιστοίχιση υλικού</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Αντιστοίχιση σελίδων CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Αντιστοίχιση πεδίων από CAD (κλειδιά αναζήτησης)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Η διεπαφή χρήστη</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Ροή εργασίας</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Βιβλιοθήκη</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Εισαγωγή parts</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Εισαγωγή παραγγελιών</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Εισαγωγή jobs</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Προβολή βιβλιοθήκης</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Κατάσταση part</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Επικύρωση part</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Πίνακας part</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Φίλτρα part</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Κατάσταση tooling</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Επικύρωση tooling</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Επικύρωση bend tooling</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Επικύρωση cut tooling</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Επικύρωση fold tooling</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Πίνακας tooling</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Αποθήκευση φίλτρων</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Παραγγελίες</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Προβολή παραγγελιών</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Εργασίες</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../jobcreation.html">Δημιουργία εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../jobview.html">Προβολή εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../jobpanel.html">Πίνακας εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../jobautoplan.html">Αυτόματος σχεδιασμός</a></li>
+    <li><button class="tree blank"></button><a href="../jobinteractplan.html">Διαδραστική τοποθέτηση</a></li>
+    <li><button class="tree blank"></button><a href="../repacking.html">Επανασυσκευασία</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Διαχείριση τοποθέτησης</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="nestview.html">Προβολή διάταξης</a></li>
+      <li><button class="tree blank"></button><a class="active" href="layoutpanel.html">Πίνακας διάταξης</a></li>
+      <li><button class="tree blank"></button><a href="reportsender.html">Αποστολέας αναφοράς</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../remnantmanagement/index.html">Διαχείριση υπολειμμάτων</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../remnantmanagement/autoremnant.html">Αυτόματη διαχείριση υπολειμμάτων</a></li>
+      <li><button class="tree blank"></button><a href="../remnantmanagement/manualremnant.html">Χειροκίνητη διαχείριση υπολειμμάτων</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../twinlinenesting.html">Τοποθέτηση διπλής γραμμής</a></li>
+    <li><button class="tree blank"></button><a href="../outdate.html">Μη ενημερωμένο</a></li>
+    <li><button class="tree blank"></button><a href="../jobfilters.html">Φίλτρα εργασίας</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Επεκτάσεις CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Εγκατάσταση</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Αποθήκευση εξαρτημάτων</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Αποθήκευση συναρμολόγησης</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Έλεγχος σκοπιμότητας</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Ρυθμίσεις εργοστασίου</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Διάφορες βελτιώσεις</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Εργασίες</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Διαχείριση τοποθέτησης</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="layoutpanel.html">Πίνακας διάταξης</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Πίνακας διάταξης</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Αυτή η ενότητα εξηγεί τις ενέργειες που σχετίζονται με τη διάταξη όπως
+<strong>Αποστολή στη μηχανή&#8230;&#8203;</strong>,
+<strong>Ανάκληση από τη μηχανή&#8230;&#8203;</strong>,
+<strong>Εξαγωγή αποτελεσμάτων</strong>,
+<strong>Σήμανση ως ολοκληρωμένη&#8230;&#8203;</strong>, <strong>Προσθήκη εξαρτημάτων&#8230;&#8203;</strong>,
+<strong>Προσαρμογή/Συμπίεση&#8230;&#8203;</strong>,
+<strong>Διαχωρισμός διατάξεων&#8230;&#8203;</strong> και άλλες επιλογές που χρησιμοποιούνται για τη διαχείριση
+παρουσιών διάταξης.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/layout.png" alt="Layout panel" width="181">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Άνοιγμα σε κατάσταση μόνο για ανάγνωση για προβολή</strong><br>
+Ανοίγει την επιλεγμένη διάταξη σε λειτουργία μόνο για ανάγνωση.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Ενεργοποιεί την επεξεργασία της επιλεγμένης διάταξης.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Διαγραφή</strong><br>
+Διαγράφει την επιλεγμένη διάταξη.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/openreport.png" alt="Report" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Προβολή αναφοράς</strong><br>
+Ανοίγει την τυπική αναφορά διάταξης και την αναφορά ειδική για ετικέτα για την
+επιλεγμένη διάταξη.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sendui.png" alt="Send" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Αποστολή στη μηχανή&#8230;&#8203;</strong><br>
+Στέλνει την επιλεγμένη διάταξη στο μηχάνημα και εξάγει τα αρχεία εξόδου
+(fxlyt, NC, report, csv) στην τοποθεσία εξόδου εργασίας.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/addui.png" alt="Add" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Προσθήκη εξαρτημάτων&#8230;&#8203;</strong><br>
+Προσθέτει περισσότερα εξαρτήματα σε μια κακά συσκευασμένη διάταξη χρησιμοποιώντας τον οδηγό επανασυσκευασίας διάταξης.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/adaptui.png" alt="Adapt" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Προσαρμογή/Συμπίεση&#8230;&#8203;</strong><br>
+Επανατοποθετεί την επιλεγμένη διάταξη για να συμπιέσει τα εξαρτήματα και να ελευθερώσει χρησιμοποιήσιμη περιοχή.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/changeui.png" alt="Change" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Αλλαγή LTT&#8230;&#8203;</strong><br>
+Αλλάζει το φύλλο που έχει ανατεθεί στην επιλεγμένη διάταξη.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/splitui.png" alt="Split"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Διαχωρισμός διατάξεων&#8230;&#8203;</strong><br>
+Διαχωρίζει την επιλεγμένη διάταξη σε δύο ή περισσότερες ξεχωριστές διατάξεις.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/renameui.png" alt="RenameUi" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rename layout&#8230;&#8203;</strong><br>
+Μετονομάζει την επιλεγμένη διάταξη.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Εργασία</strong> / <strong>Προηγ.</strong> / <strong>Επόμενο</strong> / <strong>Εξαρτήματα</strong><br>
+Πλοηγείται προς τα πάνω στη γονική εργασία, στην προηγούμενη ή την επόμενη διάταξη εντός της
+επιλεγμένης εργασίας ή προς τα κάτω στα εξαρτήματα που περιέχονται στη διάταξη.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sort.png" alt="Filters" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort and filter</strong><br>
+Χρησιμοποιήστε αυτά τα φίλτρα για να δείτε άλλες διατάξεις που μοιράζονται το ίδιο χαρακτηριστικό με
+την επιλεγμένη διάταξη: Ίδιο Μηχάνημα, Ίδιο Υλικό, Ίδιο LTT, Ίδια Προτεραιότητα,
+Ίδια Κατάσταση, Ίδιο Φύλλο, Ίδιο Εξάρτημα, Ίδια Κατάσταση Υπολείμματος ή Ίδια Κατεύθυνση
+Κύλισης.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="send-to-machine">Αποστολή στη μηχανή&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Όταν μια τοποθέτηση είναι έτοιμη (γεμάτη ή επείγουσα), μπορείτε να την στείλετε στο
+μηχάνημα.</p>
+</li>
+<li>
+<p>Κάντε δεξί κλικ στην τοποθέτηση και επιλέξτε <strong>Αποστολή στη μηχανή&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Ένας φάκελος δημιουργείται αυτόματα, με το όνομα της τοποθέτησης.</p>
+</li>
+<li>
+<p>Τα αρχεία εξόδου (fxlyt, NC, report, csv) εξάγονται στην τοποθεσία εξόδου JOB.</p>
+</li>
+<li>
+<p>Οι τοποθετήσεις που στάλθηκαν στο μηχάνημα εμφανίζονται με μπλε σημάδι ελέγχου.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/sendtomachine.png" alt="Send to machines" width="1180">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Μόλις απελευθερωθούν, αυτές οι τοποθετήσεις δεν επαναδοκιμάζονται για επανασυσκευασία.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ανάκληση_από_τη_μηχανή">Ανάκληση από τη μηχανή&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Εάν η έξοδος χρειάζεται επικύρωση ή ενημέρωση (για παράδειγμα, προσθήκη περισσότερων εξαρτημάτων):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Κάντε δεξί κλικ στην εξαγόμενη διάταξη.</p>
+</li>
+<li>
+<p>Επιλέξτε <strong>Ανάκληση από τη μηχανή&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Τα αρχεία εξόδου και ο φάκελος (fxlyt, NC, report, csv) διαγράφονται.</p>
+</li>
+<li>
+<p>Η τοποθέτηση γίνεται ξανά επεξεργάσιμη.</p>
+</li>
+<li>
+<p>Μπορείτε να κάνετε αλλαγές και να την στείλετε ξανά στο μηχάνημα.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/recallfrommachine.png" alt="Recall from machines" width="1153">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_εξαγωγή_αποτελεσμάτων">Εξαγωγή αποτελεσμάτων</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Κάντε δεξί κλικ σε οποιαδήποτε διάταξη (τοποθέτηση) που έχει σταλεί στο μηχάνημα και κάντε κλικ
+στο <strong>Εξαγωγή αποτελεσμάτων</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput1.png" alt="Export outputs" width="447">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Η επιλογή Export Outputs εξάγει τα αρχεία NC, Report και Layout στους
+αντίστοιχους φακέλους εξόδου μηχανήματος.</p>
+</li>
+<li>
+<p>Αυτή η επιλογή αναδημιουργεί το αρχείο NC με τις τρέχουσες ρυθμίσεις μονάδων για τη
+διάταξη.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Το Export Outputs δεν είναι διαθέσιμο για Διατάξεις που είναι Ολοκληρωμένες και
+Διατάξεις που βρίσκονται σε αναμονή στην ουρά για επανασυσκευασία.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mark-complete">Σήμανση ως ολοκληρωμένο</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Μόλις η τοποθέτηση υποβληθεί σε επεξεργασία στο μηχάνημα, κάντε δεξί κλικ στην τοποθέτηση και
+επιλέξτε <strong>Σήμανση ως ολοκληρωμένη&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Μπορείτε να επιλέξετε πολλαπλές τοποθετήσεις και να τις σημειώσετε ως ολοκληρωμένες ταυτόχρονα.</p>
+</li>
+<li>
+<p>Όταν μια τοποθέτηση σημειώνεται ως ολοκληρωμένη:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Γκριζάρει, μετακινείται στο τέλος της λίστας και εμφανίζεται με πράσινο σημάδι
+ελέγχου.</p>
+</li>
+<li>
+<p>Η διάταξη αφαιρείται από τη λίστα ενεργών διατάξεων.</p>
+</li>
+<li>
+<p>Οι καταστάσεις εξαρτημάτων και εργασιών ενημερώνονται και οι επεξεργασμένες ποσότητες μετακινούνται στην
+ολοκληρωμένη κατάσταση.</p>
+</li>
+<li>
+<p>Τα αρχεία εξόδου για αυτή τη διάταξη αφαιρούνται από την τοποθεσία εξόδου του μηχανήματος
+για να αποφευχθεί η διπλή χρήση.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/markcomplete1.png" alt="Mark complete" width="1101">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="add-parts">Προσθήκη εξαρτημάτων&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart1.png" alt="Add parts" width="997">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Χρησιμοποιήστε αυτήν την επιλογή για να προσθέσετε περισσότερα εξαρτήματα σε μια σχετικά κακά συσκευασμένη διάταξη. Όπως η
+Διαδραστική Τοποθέτηση, αυτή είναι μια επιλογή με οδηγό και μπορεί να χρησιμοποιηθεί
+σε μια μεμονωμένη ή πολλαπλές διατάξεις ταυτόχρονα.</p>
+</li>
+<li>
+<p>Το TruSmartCAM τοποθετεί τον Οδηγό επανασυσκευασίας Διάταξης στην κύρια περιοχή εργασίας
+όταν χρησιμοποιείται αυτή η επιλογή. Κρατήστε πατημένο το πλήκτρο <kbd>Ctrl</kbd> και επιλέξτε ένα ή περισσότερα
+εξαρτήματα που θα συσκευαστούν στη διάταξη(εις) και πατήστε <strong>Επόμενο</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart2.png" alt="Part selection" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>Τα επιλεγμένα εξαρτήματα εμφανίζονται στο επόμενο βήμα με επεξεργάσιμη
+στήλη ποσότητας. Ενημερώστε τις ποσότητες εξαρτημάτων εάν χρειάζεται στο
+πεδίο <strong>Update Qty</strong>. Κάντε κλικ στο <strong>Επόμενο</strong> για να προχωρήσετε στην τοποθέτηση. Σημειώστε ότι
+οι ποσότητες μπορούν μόνο να αυξηθούν, όχι να μειωθούν.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart3.png" alt="Update quantity" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>Όλες οι διατάξεις τοποθετούνται ξεχωριστά και τα τοποθετημένα αποτελέσματα εμφανίζονται
+με τα νέα συσκευασμένα εξαρτήματα τοποθετημένα σε αυτές. Η επιλογή της διάταξης εμφανίζει όλα
+τα υπάρχοντα εξαρτήματα διάταξης. Το αποτέλεσμα απορρίπτεται αυτόματα εάν κανένα νέο εξάρτημα δεν
+τοποθετηθεί κατά την επανασυσκευασία. Μια διάταξη με πολλαπλά αντίγραφα μπορεί να έχει ως αποτέλεσμα
+διαφορετικά μοτίβα μετά την επανασυσκευασία.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart4.png" alt="Repack result" width="2200">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="adapt-compact">Προσαρμογή/Συμπίεση&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Αυτή η εντολή με οδηγό μπορεί να χρησιμοποιηθεί για να προσαρμόσει μια διάταξη από ένα
+μηχάνημα σε άλλο όταν το αρχικό μηχάνημα δεν λειτουργεί ή όταν το φορτίο εργασίας του μηχανήματος
+χρειάζεται να εξισορροπηθεί.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt1.png" alt="Adapt compact" width="737">
+</div>
+</div>
+</li>
+<li>
+<p>Μπορεί να χρησιμοποιηθεί όταν το φύλλο που είχε σχεδιαστεί δεν υπάρχει σε απόθεμα και η διάταξη
+χρειάζεται να επανασχεδιαστεί σε άλλο διαθέσιμο φύλλο.</p>
+</li>
+<li>
+<p>Μπορείτε να συγχωνεύσετε διατάξεις που είναι συσκευασμένες σε μικρότερα φύλλα σε μεγαλύτερα φύλλα για να χρησιμοποιήσετε
+το υλικό πιο αποτελεσματικά.</p>
+</li>
+<li>
+<p>Μπορείτε να χωρίσετε διατάξεις που είναι συσκευασμένες σε μεγαλύτερα φύλλα σε μικρότερα φύλλα εάν τα μεγάλα
+αποθέματα φύλλων δεν είναι διαθέσιμα.</p>
+</li>
+<li>
+<p>Μπορείτε να βελτιώσετε την αποδοτικότητα συσκευασίας πολλαπλών διατάξεων (ακόμη και από
+διαφορετικά μηχανήματα) συγχωνεύοντάς τες μαζί.</p>
+</li>
+<li>
+<p>Για να το χρησιμοποιήσετε, επιλέξτε μία ή περισσότερες διατάξεις και κάντε κλικ στο
+<strong>Προσαρμογή/Συμπίεση&#8230;&#8203;</strong> για να ανοίξετε τον οδηγό στην περιοχή εργασίας.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt2.png" alt="Layouts window" width="1902">
+</div>
+</div>
+</li>
+<li>
+<p>Το αριστερό παράθυρο εμφανίζει όλες τις επιλεγμένες διατάξεις και το παράθυρο Parts εμφανίζει τα εξαρτήματα της
+διάταξης.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt3.png" alt="Layouts window" width="1910">
+</div>
+</div>
+</li>
+<li>
+<p>Επιλέξτε το μηχάνημα στόχο και το υλικό φύλλου, στη συνέχεια κάντε κλικ στο
+<strong>Επόμενο</strong> για να εκτελέσετε την επανατοποθέτηση.</p>
+</li>
+<li>
+<p>Τα νέα αποτελέσματα τοποθέτησης εμφανίζονται στο παράθυρο αποτελεσμάτων.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt4.png" alt="Layouts window" width="1901">
+</div>
+</div>
+</li>
+<li>
+<p>Κάντε κλικ στο <strong>Επόμενο</strong> για να αποθηκεύσετε την προσαρμοσμένη ή συμπιεσμένη διάταξη.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt5.png" alt="Layouts window" width="1902">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_διαχωρισμός_διάταξης">Διαχωρισμός διάταξης</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Η επιλογή <strong>Διαχωρισμός διατάξεων&#8230;&#8203;</strong> σας επιτρέπει να διαχωρίσετε
+μια υπάρχουσα διάταξη σε πολλαπλές διατάξεις τροποποιώντας τις ποσότητες,
+χωρίς την ανάγκη να επαναληφθεί η εργαλειοποίηση ή η τοποθέτηση.</p>
+</div>
+<div class="paragraph">
+<p>Αυτή η δυνατότητα είναι ιδιαίτερα χρήσιμη στα
+ακόλουθα σενάρια:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Όταν χρειάζεται να παράγετε ένα τμήμα της συνολικής ποσότητας άμεσα ενώ
+προγραμματίζετε την υπόλοιπη ποσότητα για μεταγενέστερη παραγωγή.</p>
+</li>
+<li>
+<p>Όταν οι απαιτήσεις παραγωγής πρέπει να κατανεμηθούν σε πολλαπλές βάρδιες ή
+ημέρες για βελτιστοποίηση της ροής εργασίας και της χρήσης πόρων.</p>
+</li>
+<li>
+<p>Όταν ένα συγκεκριμένο μηχάνημα είναι προσωρινά μη διαθέσιμο ή κατειλημμένο και χρειάζεται
+να προσαρμόσετε τη διάταξη για να εξυπηρετήσετε τους τρέχοντες περιορισμούς παραγωγής.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Για να διαχωρίσετε μια διάταξη, εκτελέστε τα ακόλουθα βήματα:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Στην προβολή Διατάξεων, επιλέξτε την απαιτούμενη διάταξη.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/splitlayout.png" alt="Split layout" width="264">
+</div>
+</div>
+</li>
+<li>
+<p>Κάντε κλικ στο <strong>Διαχωρισμός διατάξεων&#8230;&#8203;</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/layoutpanel.png" alt="Layout panel" width="155">
+</div>
+</div>
+</li>
+<li>
+<p>Εισαγάγετε την απαιτούμενη τιμή στο <strong>Νέα αντίγραφα</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/newcopies.png" alt="New copies" width="389">
+</div>
+</div>
+</li>
+<li>
+<p>Κάντε κλικ στο <strong>OK</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/twolayout.png" alt="Two layouts" width="547">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Η επιλεγμένη διάταξη τώρα διαχωρίζεται σε δύο διατάξεις με προσαρμοσμένες ποσότητες.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#send-to-machine">Αποστολή στη μηχανή&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_ανάκληση_από_τη_μηχανή">Ανάκληση από τη μηχανή&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_εξαγωγή_αποτελεσμάτων">Εξαγωγή αποτελεσμάτων</a>
+  </li>
+  <li level="1">
+   <a href="#mark-complete">Σήμανση ως ολοκληρωμένο</a>
+  </li>
+  <li level="1">
+   <a href="#add-parts">Προσθήκη εξαρτημάτων&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#adapt-compact">Προσαρμογή/Συμπίεση&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_διαχωρισμός_διάταξης">Διαχωρισμός διάταξης</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="nestview.html">Προβολή διάταξης</a></span>
+ <span class="next"><a href="reportsender.html">Αποστολέας αναφοράς</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

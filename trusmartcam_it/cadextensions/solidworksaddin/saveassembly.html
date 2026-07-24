@@ -1,0 +1,456 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Salvare assieme</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Benvenuti in TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Change license</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configurazione</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Aggiungere/Rimuovere macchina</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Configurare utensili</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Configurare utenti</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Lingua</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiale</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Aggiungere nuovo materiale e foglio</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Esportare/Importare materiale</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Sostituire materiale</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mappare materiale</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mappare pagine CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mappare campi da CAD (chiavi di ricerca)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">L'interfaccia utente</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Flusso di lavoro</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Libreria</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Apri</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Importa pezzi</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Importa ordini</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Importa lavori</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Importa assiemi</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Vista libreria</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Pezzi</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Assieme</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Stato parti</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Convalida parti</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Pannello pezzi</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Filtri pezzi</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Stato attrezzaggio</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Convalida attrezzaggio</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Convalida attrezzaggio piegatura</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Convalida attrezzaggio taglio</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Convalida attrezzaggio piegatubi</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Pannello attrezzaggio</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Salvataggio filtri</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Ordini</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Vista ordini</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Commesse</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Crea commessa</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Vista lavori</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Pannello commessa</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Pianificazione automatica</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Nesting interattivo</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Riconfezionamento</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Gestione nidi</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Vista layout</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Pannello layout</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Mittente report</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Gestione ritagli</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Gestione automatica ritagli</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Gestione manuale ritagli</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Nesting a doppia linea</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Non aggiornato</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtri lavoro</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Estensioni CAD</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Componente aggiuntivo SolidWorks</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="installationsteps.html">Installazione</a></li>
+      <li><button class="tree blank"></button><a href="savetopraxis.html">Salvare parti</a></li>
+      <li><button class="tree blank"></button><a class="active" href="saveassembly.html">Salvare assieme</a></li>
+      <li><button class="tree blank"></button><a href="partfeasibility.html">Verifica fattibilità</a></li>
+      <li><button class="tree blank"></button><a href="factorysettings.html">Impostazioni di fabbrica</a></li>
+      <li><button class="tree blank"></button><a href="miscenhancements.html">Miglioramenti vari</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Colophon</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Estensioni CAD</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Componente aggiuntivo SolidWorks</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="saveassembly.html">Salvare assieme</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Salvare assieme</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>La funzionalità Salva assieme consente agli utenti di esportare assiemi SolidWorks e
+le loro parti componenti direttamente nella libreria parti TruSmartCAM. Questo garantisce che
+tutte le parti in lamiera, le informazioni sui materiali grezzi e le quantità delle parti siano
+accuratamente trasferite per la pianificazione a valle, gli utensili e la creazione di commesse.</p>
+</div>
+<div class="paragraph">
+<p>Questa funzionalità è particolarmente utile per gestire assiemi completi come
+armadi, involucri o fabbricazioni strutturali che coinvolgono più componenti
+in lamiera.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_passaggi_per_salvare_un_assieme">Passaggi per salvare un assieme</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Avviare SolidWorks e aprire il file di assieme richiesto.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/saveassembly.png" alt="Save Assembly" width="682">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sulla barra degli strumenti TruSmartCAM, fare clic su <strong>Save Assembly</strong>. Appare la finestra di dialogo <strong>Salva gruppo costruttivo in Praxis</strong>,
+che riassume i dettagli dell&#8217;assieme.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/praxisassembly.png" alt="Praxis Assembly" width="350">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>La finestra di dialogo dell&#8217;assieme fornisce le seguenti informazioni:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Assembly Name</strong> - Visualizza il nome dell&#8217;assieme SolidWorks
+attualmente attivo. Questo nome viene utilizzato come riferimento predefinito per l&#8217;assieme in
+TruSmartCAM.</p>
+</li>
+<li>
+<p><strong>Pezzi totali</strong> - Indica il numero totale di istanze di componenti presenti
+nell&#8217;assieme SolidWorks. Questo include sia parti in lamiera che non in lamiera.</p>
+</li>
+<li>
+<p><strong>Pezzi in lamiera</strong> - Visualizza il numero totale di componenti in lamiera
+nell&#8217;assieme, insieme al conteggio delle parti in lamiera uniche.</p>
+</li>
+<li>
+<p><strong>Pezzi non in lamiera</strong> - Elenca il conteggio totale e il numero unico di componenti
+non in lamiera rilevati nell&#8217;assieme.</p>
+</li>
+<li>
+<p><strong>Unità da produrre</strong> - Specifica il numero di assiemi (prodotti finiti) da
+produrre. La quantità inserita viene utilizzata per calcolare i requisiti totali delle parti
+nella commessa o nell&#8217;assieme risultante all&#8217;interno di TruSmartCAM.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Dopo aver verificato i dettagli, fare clic su <strong>OK</strong>.</p>
+</li>
+<li>
+<p>TruSmartCAM salva tutte le parti elencate nella tabella nella libreria parti, insieme alle
+loro informazioni sui materiali associati. (Per i dettagli sulla mappatura dei materiali, fare riferimento a
+<a href="../../cadextensions/solidworksaddin/savetopraxis.html#_auto_material_resolution">Risoluzione
+automatica del materiale</a>)</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/backcover.png" alt="Back Cover" width="800">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_opzioni_aggiuntive">Opzioni aggiuntive</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_crea_commessa">Crea commessa</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Abilitare questa opzione per creare una nuova commessa TruSmartCAM direttamente dall&#8217;assieme selezionato,
+consentendo operazioni immediate di pianificazione commessa e nesting.</p>
+</li>
+<li>
+<p>Quando abilitata, appare la finestra di dialogo Nuova commessa, che consente di specificare:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Nome del <strong>Job Reference</strong> (predefinito: nome dell&#8217;assieme).</p>
+</li>
+<li>
+<p><strong>Customer</strong> e <strong>Comments</strong> (opzionali).</p>
+</li>
+<li>
+<p><strong>Due Date</strong>, <strong>Priority</strong> e <strong>Quantity</strong> per ogni parte.</p>
+</li>
+<li>
+<p>Parametri aggiuntivi come impostazioni specifiche del cliente o valori di rotazione
+per ogni parte.</p>
+</li>
+<li>
+<p>Fare clic su <strong>OK</strong> per creare e aprire la nuova commessa in TruSmartCAM.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyview.png" alt="AssemblyView" width="800">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_crea_assieme">Crea assieme</h3>
+<div class="paragraph">
+<p>Abilitare questa opzione per salvare l&#8217;assieme e le sue quantità di parti corrette nella
+pagina assieme TruSmartCAM. A differenza dell&#8217;opzione Crea commessa, questa non apre la finestra di dialogo Nuova
+commessa durante il processo.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/makeassembly.png" alt="Make Assembly" width="682">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblycover.png" alt="Assembly Cover" width="980">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Solo queste parti in lamiera vengono elaborate e importate nella libreria parti TruSmartCAM.</p>
+</li>
+<li>
+<p>Le parti non in lamiera vengono visualizzate per riferimento ma non vengono importate in
+TruSmartCAM, poiché solo le parti in lamiera producibili sono considerate per la pianificazione
+della produzione.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_passaggi_per_salvare_un_assieme">Passaggi per salvare un assieme</a>
+  </li>
+  <li level="1">
+   <a href="#_opzioni_aggiuntive">Opzioni aggiuntive</a>
+  </li>
+  <li level="2">
+   <a href="#_crea_commessa">Crea commessa</a>
+  </li>
+  <li level="2">
+   <a href="#_crea_assieme">Crea assieme</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="savetopraxis.html">Salvare parti</a></span>
+ <span class="next"><a href="partfeasibility.html">Verifica fattibilità</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

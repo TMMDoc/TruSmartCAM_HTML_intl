@@ -1,0 +1,391 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Import assemblies</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">ยินดีต้อนรับสู่ TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">การติดตั้ง</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">ข้อกำหนดฮาร์ดแวร์</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">รูปแบบไฟล์ที่รองรับ</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">ข้อกำหนดเบื้องต้น</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">การติดตั้ง Server</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">การติดตั้ง Client</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">เปลี่ยนใบอนุญาต</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">การกำหนดค่า</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">เพิ่ม/ลบเครื่องจักร</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">ตั้งค่าเครื่องมือ</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">กำหนดค่าผู้ใช้</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">ภาษา</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">วัสดุ</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">เพิ่มวัสดุและแผ่นวัสดุใหม่</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">ส่งออก/นำเข้าวัสดุ</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">แทนที่วัสดุ</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">จับคู่วัสดุ</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">จับคู่หน้า CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">จับคู่ฟิลด์จาก CAD (คีย์การค้นหา)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">อินเทอร์เฟซผู้ใช้งาน</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">ขั้นตอนการทำงาน</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Library</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Open</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a class="active" href="assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">แผงเครื่องมือ</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">คำสั่งซื้อ</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">มุมมองคำสั่งซื้อ</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">งาน</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">สร้างงาน</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">มุมมองงาน</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">แผงงาน</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">วางแผนอัตโนมัติ</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">การจัดเรียงแบบโต้ตอบ</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">การบรรจุใหม่</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">การจัดการการจัดเรียง</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">มุมมองเลย์เอาต์</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">แผงเลย์เอาต์</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">ผู้ส่งรายงาน</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">การจัดการวัสดุเหลือใช้</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">การจัดการวัสดุเหลือใช้อัตโนมัติ</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">การจัดการวัสดุเหลือใช้ด้วยตนเอง</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">การจัดเรียงแบบเส้นคู่</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">ล้าสมัย</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">ตัวกรองงาน</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">โรงงาน</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">เส้นทาง</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">แผ่นวัสดุ</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">ผู้ใช้</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">แก้ไข</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">ลูกค้า</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">การตั้งค่า</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">สภาพแวดล้อม</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">นำเข้า</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">การงอ</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">การตัด</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">การแจ้งเตือน</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">เฝ้าดู</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">งาน</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">รายงาน</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">ส่วนขยาย CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">การติดตั้ง</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">บันทึกชิ้นส่วน</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">บันทึกแอสเซมบลี</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">ตรวจสอบความเป็นไปได้</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">การตั้งค่าโรงงาน</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">การปรับปรุงอื่นๆ</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">ข้อมูลทางกฎหมาย</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Library</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Open</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="assembliesimport.html">Import assemblies</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Import assemblies</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Assemblies คือกลุ่มของชิ้นงานที่เกี่ยวข้องซึ่งรวมกันเป็นหน่วยเดียว ช่วยให้คุณสามารถจัดการชิ้นงานหลายชิ้นร่วมกันเป็นหนึ่งเดียว</p>
+</div>
+<div class="paragraph">
+<p>คุณสามารถนำเข้า assemblies โดยใช้วิธีต่อไปนี้:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>นำเข้าผ่านไฟล์</p>
+</li>
+<li>
+<p>ลากและวาง</p>
+</li>
+<li>
+<p>นำเข้าจากสเปรดชีต</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_นำเข้าผ่านไฟล์">นำเข้าผ่านไฟล์</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Assembly สามารถนำเข้าสู่ Part Library โดยใช้
+ตัวเลือก <strong>นำเข้าแอสเซมบลี</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>คลิกไอคอน Open ในแถบคำสั่งและเลือก
+<strong>นำเข้าแอสเซมบลี</strong> หรือใช้ <strong>_ไฟล์</strong> →
+<strong>เปิด</strong> → <strong>นำเข้าแอสเซมบลี</strong></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/importassembly.png" alt="Import assembly" width="337">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>กล่องโต้ตอบ Open จะปรากฏขึ้น เลือกไฟล์ assembly ที่ต้องการ</p>
+</li>
+<li>
+<p>ตัวอย่างของ assembly ที่เลือกจะแสดงขึ้น</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyview.png" alt="AssemblyView">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>คลิก Open เพื่อนำเข้า assembly</p>
+</li>
+<li>
+<p>Assemblies ที่นำเข้าจะแสดงอยู่ภายใต้มุมมอง Assemblies ใน Part Library</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyparts.png" alt="AssemblyParts">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ลากและวาง">ลากและวาง</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>ลากและวาง assembly โดยตรงเข้าสู่ Part Library ของ TruSmartCAM</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_นำเข้าจากสเปรดชีต">นำเข้าจากสเปรดชีต</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>ใช้ <strong>_ไฟล์</strong> → <strong>เปิด</strong> →
+<strong>นำเข้าแอสเซมบลี</strong> และเลือกไฟล์ CSV, XLSX หรือ XML หรือลากและวางไฟล์</p>
+</li>
+<li>
+<p>ตรวจสอบและอัปเดตรายละเอียดและปริมาณ assembly ก่อนนำเข้า ใช้
+<strong>_เพิ่ม&#8230;&#8203;</strong> หรือ <strong>_ลบ&#8230;&#8203;</strong> เพื่อแก้ไข</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/newassembly.png" alt="NewAssembly" width="408">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>หลังจากนำเข้า assemblies สามารถเตรียมและกำหนด Static Nests ได้</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_นำเข้าผ่านไฟล์">นำเข้าผ่านไฟล์</a>
+  </li>
+  <li level="2">
+   <a href="#_ลากและวาง">ลากและวาง</a>
+  </li>
+  <li level="1">
+   <a href="#_นำเข้าจากสเปรดชีต">นำเข้าจากสเปรดชีต</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobimport.html">Import jobs</a></span>
+ <span class="next"><a href="../libraryview/index.html">Library view</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

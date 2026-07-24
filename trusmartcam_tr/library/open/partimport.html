@@ -1,0 +1,488 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Parçaları içe aktarma</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">TruSmartCAM'e Hoş Geldiniz</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Kurulum</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Donanım gereksinimleri</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Desteklenen dosya formatları</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Önkoşullar</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Sunucu kurulumu</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">İstemci kurulumu</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Lisansı değiştir</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Yapılandırma</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Makine ekleme/çıkarma</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Takım kurulumu</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Kullanıcıları yapılandırma</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Dil</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Malzeme</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Yeni malzeme ve sac ekleme</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Malzemeyi dışa aktarma/içe aktarma</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Malzemeyi değiştirme</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Malzeme eşleme</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAM sayfalarını eşleme</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">CAD'den alanları eşleme (arama anahtarları)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Kullanıcı arayüzü</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">İş Akışı</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Kütüphane</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Aç</a>
+     <ul>
+      <li><button class="tree blank"></button><a class="active" href="partimport.html">Parçaları içe aktarma</a></li>
+      <li><button class="tree blank"></button><a href="orderimport.html">Siparişleri içe aktarma</a></li>
+      <li><button class="tree blank"></button><a href="jobimport.html">İşleri içe aktarma</a></li>
+      <li><button class="tree blank"></button><a href="assembliesimport.html">Montajları içe aktarma</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Kütüphane görünümü</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Parçalar</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Montaj</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Parça durumu</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Parça doğrulama</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Parça paneli</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Parça filtreleri</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Takım durumu</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Takım doğrulama</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Büküm takımı doğrulama</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Kesim takımı doğrulama</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Katlama takımı doğrulama</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Takım paneli</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Filtreleri kaydetme</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Siparişler</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Sipariş görünümü</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">İşler</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">İş oluşturma</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">İş görünümü</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">İş paneli</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Otomatik planlama</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Etkileşimli yerleştirme</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Yeniden paketleme</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Yerleşim yönetimi</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Yerleşim görünümü</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Yerleşim paneli</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Rapor gönderici</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Artık yönetimi</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Otomatik artık yönetimi</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manuel artık yönetimi</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">İkiz hat yerleştirme</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Güncel değil</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">İş filtreleri</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD uzantıları</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks eklentisi</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Kurulum</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Parçaları kaydet</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Montajı kaydet</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Uygulanabilirliği kontrol et</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Fabrika ayarları</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Çeşitli iyileştirmeler</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Künye</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Kütüphane</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Aç</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="partimport.html">Parçaları içe aktarma</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Parçaları içe aktarma</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Parçaları içe aktarmadan önce, dosya formatlarının TruSmartCAM ile uyumlu olduğundan emin olun.
+Daha fazla ayrıntı için bkz. <a href="../../installation/importformats.html">supported file formats</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+İçe aktarma sonrasında malzeme ve kalınlık parçaya eşlenmemişse, parça panelini kullanarak malzeme atayın.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_i̇çe_aktarma_yöntemleri">İçe aktarma yöntemleri</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Parça Kütüphanesi&#8217;ne parça içe aktarmanın üç yöntemi vardır:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Dosya üzerinden içe aktarma</p>
+</li>
+<li>
+<p>Sürükle ve bırak</p>
+</li>
+<li>
+<p>Klasör izleme</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_dosya_üzerinden_içe_aktarma">Dosya üzerinden içe aktarma</h3>
+<div class="paragraph">
+<p>2D veya 3D parça dosyası, <strong>Parçaları içe aktar</strong> seçeneği kullanılarak Parça Kütüphanesi&#8217;ne içe aktarılabilir.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Komut çubuğundan <strong>aç</strong> simgelerine tıklayın ve
+<strong>Parçaları içe aktar</strong> seçeneğini seçin.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importpart.png" alt="Import part" width="337">
+</div>
+</div>
+</li>
+<li>
+<p><strong>Open</strong> iletişim kutusu görünür — herhangi bir CAD dosyasını (2D veya 3D) seçin.</p>
+</li>
+<li>
+<p>Seçilen CAD dosyasının bir önizlemesi görüntülenir.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/sideview.png" alt="Part preview" width="1233">
+</div>
+</div>
+</li>
+<li>
+<p>Gerekli parçayı seçin ve <strong>Open</strong> seçeneğine tıklayın.</p>
+</li>
+<li>
+<p>Sistem, güncellenmiş takım durumuyla tüm mevcut makineler için parçayı otomatik olarak takımlar.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sürükle_ve_bırak">Sürükle ve bırak</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Parça dosyasını doğrudan TruSmartCAM Parça Kütüphanesi&#8217;ne sürükleyip bırakın.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_klasör_izleme">Klasör izleme</h3>
+<div class="paragraph">
+<p>İzleme ayarları, yeni dosyalar için bir klasörü izlemenize ve bunları otomatik olarak Parça Kütüphanesi&#8217;ne içe aktarmanıza olanak tanır.</p>
+</div>
+<div class="paragraph">
+<p>Yapılandırmak için bkz. <a href="../../factory/settings/watch.html">Watch settings</a> sayfası.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>UNC (Evrensel Adlandırma Sözleşmesi) yolu <code>\\192.168.1.11\&lt;Folder path&gt;</code> veya eşlenmiş bir sürücü <code>M:\&lt;Folder Path&gt;</code> kullanın.</p>
+</li>
+<li>
+<p>Motor çalıştıran PC&#8217;nin bu klasöre okuma/yazma erişimi olmalıdır.</p>
+</li>
+<li>
+<p><code>C:\&lt;Folder Path&gt;</code> gibi yerel bir yol kullanmayın çünkü İzleme hizmeti dosyaları Motor PC&#8217;sinde arar — yerel PC&#8217;de değil.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/watch.png" alt="Watch settings" width="744">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="import-configuration">İçe aktarma yapılandırması</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_aynı_cad_revizyonunda_geometri_karşılaştırmasını_kullan">Aynı CAD revizyonunda geometri karşılaştırmasını kullan</h3>
+<div class="paragraph">
+<p>Aynı CAD revizyonuna sahip bir parça içe aktarırken, TruSmartCAM CAD dosyasının geometrisini mevcut parçayla karşılaştırabilir.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bunu etkinleştirmek için, <strong>fabrika</strong> → <strong>ayarlar</strong>
+→<strong>İçe/Dışa Aktar</strong> içinde <strong>Revizyon arama anahtarları</strong> (örneğin, REV) yapılandırın. Ardından,
+<strong>Aynı CAD revizyonunda geometri karşılaştırmasını kullan</strong> seçeneğini etkinleştirin.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/rev.png" alt="Revision" width="755"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Aynı CAD revizyonunda geometri karşılaştırması yalnızca
+<strong>Revizyon arama anahtarları</strong> yapılandırıldığında çalışır.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Şimdi, belirli bir revizyonla (örneğin, Revizyon 1) parça kütüphanesine bir parça içe aktarın.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/partcomparison.png" alt="Part Comparison" width="263">
+</div>
+</div>
+</li>
+<li>
+<p>Aynı parça, aynı revizyon değeriyle tekrar içe aktarılır.</p>
+</li>
+<li>
+<p>TruSmartCAM, yeni içe aktarılan CAD dosyasının geometrisini mevcut parçayla karşılaştırır.</p>
+</li>
+<li>
+<p>Bir geometri farkı tespit edilirse, TruSmartCAM şunlardan birini yapıp yapmayacağınızı soran bir istem görüntüler:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Değiştir</strong> mevcut parçayı yeni geometriyle değiştir, aynı revizyon
+değerini koru.</p>
+</li>
+<li>
+<p><strong>Atla</strong> içe aktarmayı atla, mevcut parçayı ve geometrisini koru.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/comparison.png" alt="Comparison" width="435"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Bu, kullanıcıların revizyon değerini değiştirmeden parça geometrisini güncellemesine olanak tanırken, mevcut parçaların değiştirilip değiştirilmeyeceği konusunda hala kontrol sağlar.</p>
+</div>
+<div class="paragraph">
+<p>İçe aktarılan parçalar otomatik olarak daha fazla kullanım için kütüphaneye eklenir. Daha fazla bilgi için
+bkz. <a href="../../library/index.html">Library</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_i̇çe_aktarma_yöntemleri">İçe aktarma yöntemleri</a>
+  </li>
+  <li level="2">
+   <a href="#_dosya_üzerinden_içe_aktarma">Dosya üzerinden içe aktarma</a>
+  </li>
+  <li level="2">
+   <a href="#_sürükle_ve_bırak">Sürükle ve bırak</a>
+  </li>
+  <li level="2">
+   <a href="#_klasör_izleme">Klasör izleme</a>
+  </li>
+  <li level="1">
+   <a href="#import-configuration">İçe aktarma yapılandırması</a>
+  </li>
+  <li level="2">
+   <a href="#_aynı_cad_revizyonunda_geometri_karşılaştırmasını_kullan">Aynı CAD revizyonunda geometri karşılaştırmasını kullan</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">Aç</a></span>
+ <span class="next"><a href="orderimport.html">Siparişleri içe aktarma</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

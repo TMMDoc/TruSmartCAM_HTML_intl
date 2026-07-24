@@ -1,0 +1,607 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Zespoły</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Witamy w TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Instalacja</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Wymagania sprzętowe</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Obsługiwane formaty plików</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Wymagania wstępne</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Instalacja serwera</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Instalacja klienta</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Zmiana licencji</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfiguracja</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Dodaj/Usuń maszynę</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Konfiguracja oprzyrządowania</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Konfiguracja użytkowników</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Język</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiał</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Dodawanie nowego materiału i arkusza</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Eksport/Import materiału</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Zamiana materiału</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mapowanie materiału</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mapowanie stron CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mapowanie pól z CAD (klucze wyszukiwania)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Interfejs użytkownika</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Przepływ pracy</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Biblioteka</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Otwórz</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Importuj części</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Importuj zamówienia</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Import zadań</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Importuj zespoły</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Widok biblioteki</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partview.html">Części</a></li>
+      <li><button class="tree blank"></button><a class="active" href="assemblyview.html">Zespoły</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Status części</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Walidacja części</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Panel części</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Filtry części</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Status narzędzi</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Walidacja narzędzi</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Walidacja narzędzi do gięcia</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Walidacja narzędzi tnących</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Walidacja narzędzi do składania</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Panel narzędziowania</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Zapisywanie filtrów</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Zamówienia</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Widok zamówień</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Zadania</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Tworzenie zadania</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Widok zadania</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Panel zadania</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatyczne planowanie</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktywne zagnieżdżanie</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Przepakowywanie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Zarządzanie układem</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Widok układu</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Panel układu</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Nadawca raportów</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Zarządzanie resztkami</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatyczne zarządzanie resztkami</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Ręczne zarządzanie resztkami</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Zagnieżdżanie dwuliniowe</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Przestarzałe</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtry zadań</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Fabryka</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Trasy</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Arkusze</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Użytkownicy</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edycja</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Klienci</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Ustawienia</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Powiadomienia</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Raporty</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Rozszerzenia CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Instalacja</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Zapisywanie części</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Zapisywanie złożenia</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Sprawdzanie wykonalności</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Ustawienia fabryki</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Różne ulepszenia</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Biblioteka</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Widok biblioteki</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="assemblyview.html">Zespoły</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Zespoły</h1>
+<div class="sect1">
+<h2 id="_tworzenie_zagnieżdżeń_statycznych_z_zespołu">Tworzenie zagnieżdżeń statycznych z zespołu</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Zagnieżdżenia statyczne mogą być generowane dla zespołu za pomocą kreatora interaktywnego
+zagnieżdżania.
+Te zagnieżdżenia to stałe układy powiązane tylko z wybranym zespołem.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Przełącz się na widok <strong>asys.</strong>.</p>
+</li>
+<li>
+<p>Kliknij prawym przyciskiem myszy wymagany zespół i wybierz
+<strong>Utwórz ułożenia…</strong>.</p>
+</li>
+<li>
+<p>Kreator interaktywnego zagnieżdżania się otwiera.</p>
+</li>
+<li>
+<p>Domyślnie kreator interaktywnego zagnieżdżania przełącza się na stronę
+<strong>Wybierz maszynę i tworzywo</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyinteractive.png" alt="Machine and material" width="950">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Maszyny są wyświetlane z kolorowymi paskami wskazującymi dostępne obciążenie produkcyjne:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Zielony pasek: Zaplanowane godziny</p>
+</li>
+<li>
+<p>Szary pasek: Dostępne godziny (z 8-godzinnej zmiany)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Pod każdą maszyną wybrane Części są grupowane z ich Materiałem Surowcowym
+(Części/Całkowita Ilość).</p>
+</li>
+<li>
+<p>Jeśli część nie ma prawidłowego rozwiązania narzędziowego dla maszyny, ta część i
+materiał są ignorowane do przetwarzania dla danej maszyny.</p>
+</li>
+<li>
+<p>Jeśli materiał surowcowy jest wybrany dla jednej maszyny, nie będzie dostępny dla innych
+maszyn.</p>
+</li>
+<li>
+<p>Po ustawieniu planu zagnieżdżenia maszyny wybierz preferowany arkusz i
+nadpisz parametry arkusza, takie jak <strong>Kolejność</strong>,
+<strong>Liczba</strong>, <strong>Krawędzie arkusza</strong> itp.</p>
+</li>
+<li>
+<p>Możesz filtrować arkusze, aby wyświetlić <strong>Wszystkie arkusze</strong>,
+<strong>Arkusze standardowe</strong> lub
+<strong>Arkusze resztkowe</strong>. Kliknij <strong>Dalej</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Nie jest możliwe zwiększenie ilości na tym etapie. Możesz
+zachować je takie same jak ilość zapasów arkuszy lub zmniejszyć i
+sprawdzić wyniki zagnieżdżania.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Aktualizuj ilość</strong> pojawia się w oknie planu interaktywnego zagnieżdżania.</p>
+</li>
+<li>
+<p>Domyślnie <strong>Wybierz wszystkie (F5)</strong> obejmuje wszystkie części do
+zagnieżdżania lub możesz ręcznie wybrać priorytetowe części i dostosować ilości części.
+Kliknij <strong>Dalej</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyquantity.png" alt="Update quantity">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Zagnieżdżanie się rozpoczyna, a części zagnieżdżone w arkuszu są aktualizowane kolorem niebieskim.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyresult.png" alt="Nesting result">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Obciążenie produkcyjne maszyny jest aktualizowane na podstawie wyniku zagnieżdżania.</p>
+</li>
+<li>
+<p>Jeśli niektóre części pozostają niezagnieżdżone, pojawia się komunikat
+<strong>Niektóre detale pozostają nieułożone</strong> - te części pozostają
+w oryginalnym zadaniu.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Część może pozostać niezagnieżdżona, jeśli nie ma odpowiedniego arkusza dostępnego.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Zagnieżdżenia statyczne mogą być edytowane, aby uwzględnić niezagnieżdżone części:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Wybierz układ, w którym chcesz wstawić niezagnieżdżone części i sprawdź go
+do edycji.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblylayout.png" alt="Selected layout">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Otwiera się TecZone. Kliknij <strong>_Wybierz</strong> lub
+<strong>Wybierz _wszystkie</strong>, aby wybrać niezagnieżdżone części z
+zespołu nadrzędnego.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/addnest.png" alt="Add unnested parts" width="864">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ułóż część w układzie według potrzeb.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unnest.png" alt="Unnested part placement" width="715">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wygenerowane zagnieżdżenia są automatycznie nazywane według zespołu nadrzędnego dla łatwej
+identyfikacji.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Zagnieżdżenia statyczne nie mogą zawierać części z innych zespołów. Zezwolenie na mieszane
+zagnieżdżenia zespołów uniemożliwiłoby zwolnienie jednego zespołu bez zwolnienia
+innych, więc mieszanie jest celowo niedozwolone.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_komponenty_nieblacharskie">Komponenty nieblacharskie</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Gdy zespół jest importowany, części blacharskie są wyodrębniane i dodawane do
+zespołów w Bibliotece Części.</p>
+</li>
+<li>
+<p>Komponenty nieblacharskie są oddzielane i dodawane do
+<strong>Komponenty</strong>.</p>
+</li>
+<li>
+<p>Zespół jest dodawany do Biblioteki Zespołów, a BOM
+(Bill of Materials) zawiera zarówno części, jak i komponenty.</p>
+</li>
+<li>
+<p>Jeśli część została już zaimportowana jako część blacharska, system aktualizuje
+istniejący wpis i usuwa duplikaty z Biblioteki Części.</p>
+</li>
+<li>
+<p>Po wybraniu zespołu wyświetlane są zarówno części, jak i komponenty, z ilościami komponentów
+pokazanymi pod obrazem komponentu (liczba komponentów wybranego zespołu
+i całkowita liczba komponentów).</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/components.png" alt="Assembly components" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Podpowiedzi komponentów wyświetlają nazwę, materiał i rozmiar.
+Komponenty są wykluczane podczas produkcji - nie są zagnieżdżane i nie są
+generowane arkusze dla komponentów.</p>
+</li>
+<li>
+<p>Przykładowe zespoły i komponenty są dostępne w:
+C:\Program Files\Metamation\Praxis\Samples\Assys\Components, które mogą
+być używane do testowania importu komponentów i przepływów pracy zespołów.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tworzenie_zadania_z_zespołu">Tworzenie zadania z zespołu</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Kliknij prawym przyciskiem myszy zespół, kliknij <strong>Nowe…</strong>, a następnie
+<strong>Zadanie</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/newassemblyjob.png" alt="Create new job" width="760">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>W oknie dialogowym Nowe Zadanie ustaw liczbę zespołów, kliknij <strong>OK</strong>,
+a następnie w razie potrzeby zaktualizuj szczegóły zadania (takie jak termin realizacji i priorytet).</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/riegelwindow.png" alt="New job dialog" width="369">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>System tworzy zadanie z zespołu i kopiuje zagnieżdżenia statyczne jako
+zagnieżdżenia zadania, aktualizując liczby arkuszy. Skopiowane zagnieżdżenia są poprzedzone
+identyfikatorem zadania.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblycreated.png" alt="Assembly job created" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Zagnieżdżenia zadania mogą być edytowane lub usuwane bez wpływu na oryginalne
+zagnieżdżenia statyczne.</p>
+</li>
+<li>
+<p>Zagnieżdżenia zadania mogą być przepakowywane za pomocą <strong>Adaptuj/Zawęź</strong> lub
+<strong>Dodaj detale…</strong>.</p>
+</li>
+<li>
+<p>Aby uzyskać szczegółowe kroki, zobacz
+<a href="../../jobs/layoutcommands/layoutpanel.html#adapt-compact">Adapt/Compact</a> i
+<a href="../../jobs/layoutcommands/layoutpanel.html#add-parts">Add parts</a>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Jeśli część nie pojawia się w zagnieżdżeniu, sprawdź okno dialogowe edycji zagnieżdżenia - możesz
+ręcznie wstawić niezagnieżdżone części.</p>
+</div>
+<div class="paragraph">
+<p>Użyj zapisanych wyszukiwań i filtrów, aby szybko znaleźć części w wielu zespołach.</p>
+</div>
+<div class="paragraph">
+<p>Użyj jasnych, opisowych nazw zespołów i zagnieżdżeń, aby uniknąć zamieszania podczas
+kopiowania zagnieżdżeń do zadań.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_tworzenie_zagnieżdżeń_statycznych_z_zespołu">Tworzenie zagnieżdżeń statycznych z zespołu</a>
+  </li>
+  <li level="1">
+   <a href="#_komponenty_nieblacharskie">Komponenty nieblacharskie</a>
+  </li>
+  <li level="1">
+   <a href="#_tworzenie_zadania_z_zespołu">Tworzenie zadania z zespołu</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partview.html">Części</a></span>
+ <span class="next"><a href="../partstate/index.html">Status części</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

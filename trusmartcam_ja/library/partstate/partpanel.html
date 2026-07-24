@@ -1,0 +1,690 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>パートパネル</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">TruSmartCAMへようこそ</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">インストール</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">ハードウェア要件</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">サポートされているファイル形式</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">前提条件</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">サーバーインストール</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">クライアントインストール</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">ライセンスの変更</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">設定</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">機械の追加/削除</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">工具設定</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">ユーザー設定</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">言語</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">材料</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">新しい材料とシートの追加</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">材料のエクスポート/インポート</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">材料の置換</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">材料のマッピング</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAMページのマッピング</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">CADからのフィールドマッピング（検索キー）</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">ユーザーインターフェース</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">ワークフロー</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Library</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Part status</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a class="active" href="partpanel.html">パートパネル</a></li>
+      <li><button class="tree blank"></button><a href="partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">ツーリングパネル</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">注文</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">注文ビュー</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">ジョブ</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">ジョブの作成</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">ジョブビュー</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">ジョブパネル</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">自動計画</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">インタラクティブネスティング</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">リパッキング</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">ネスト管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">レイアウトビュー</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">レイアウトパネル</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">レポート送信者</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">端材管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">自動端材管理</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">手動端材管理</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">ツインラインネスティング</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">期限切れ</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">ジョブフィルター</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD拡張機能</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">インストール</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">パーツの保存</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">アセンブリの保存</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">実行可能性の確認</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">工場設定</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">その他の機能強化</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">奥付</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Library</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Part status</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="partpanel.html">パートパネル</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>パートパネル</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>このセクションでは、パートインスタンスの管理に使用される、
+<strong>再インポート…</strong>、<strong>再ツーリング…</strong>、
+<strong>名前の変更…</strong>、*アウトプットのエクスポート*などの
+パート関連のアクションについて説明します。</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/partpanel.png" alt="Part panel" width="150">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>読み取り専用モードで開いて見ます</strong><br>
+選択したパートを読み取り専用モードで開きます。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+選択したパートの編集を有効にします。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>削除</strong><br>
+選択したパートを削除します。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/newui.png" alt="Read-only" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>新規…</strong><br>
+選択したパートを新しいオーダー、ジョブ、またはアセンブリに変換できます。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>アウトプットのエクスポート</strong><br>
+設定された送信先にパート出力をエクスポートします。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/importui.png" alt="Import" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>再インポート…</strong><br>
+選択したパートを再度インポートできます。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/toolui.png" alt="Retool" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>再ツーリング…</strong><br>
+選択したパートを再処理できます。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/renameui.png" alt="Rename" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>名前の変更…</strong><br>
+選択したパートの名前を変更します。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/materialui.png" alt="Material" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>材料を割り当てる…</strong><br>
+選択したパートに関連付けられた材料を指定します。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/customerui.png" alt="Customer" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>顧客を割り当てる…</strong><br>
+選択したパートに関連付けられた顧客を指定します。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/rollingui.png" alt="Rolling" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ロール目</strong><br>
+材料が圧延される方向(水平または垂直)を定義します。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>前へ</strong> / <strong>次へ</strong> / <strong>ツーリング</strong><br>
+前または次のパート、またはツーリングに移動します。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sortui.png" alt="Filters" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>並べ替えとフィルタ</strong><br>
+これらのフィルタを使用して、選択したパートと同じ属性を共有する他のパートを
+表示します:同じ材料、同じ顧客、同じ曲げ数、または同じ状態。</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_再インポート">再インポート…</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>任意のパートを右クリックして、*再インポート…*をクリックします。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/reimport.png" alt="Re-import" width="503">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>すべてのマシンにわたって、選択したパートのツーリングインスタンスがすべてクリアされます。
+これには自動ツーリングと手動ツーリングの両方のインスタンスが含まれます。</p>
+</li>
+<li>
+<p>既存の出力ファイル(CAD、Bend、Cut)が削除されます。</p>
+</li>
+<li>
+<p>パートが再インポートされ、すべてのマシンに対して新しいCAD検証とツーリングが
+適用されます。</p>
+</li>
+<li>
+<p>更新されたツーリング結果に基づいて、新しい出力ファイルが作成されます。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_再ツーリング">再ツーリング…</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>任意のパートを右クリックして、*再ツーリング…*をクリックします。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/retool.png" alt="Re-tool" width="504">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>デフォルトですべてのマシンがチェックされ、Laser、Punch、Panel、
+Press brakeとしてグループ化されます。</p>
+</li>
+<li>
+<p>*OK*をクリックして続行します。これにより、選択したマシンの自動ツーリングと
+手動ツーリングの両方のインスタンスが削除され、関連する出力ファイルが削除されます。</p>
+</li>
+<li>
+<p>*既存のアウトプットを維持する*チェックボックスが
+選択されている場合、以前に出力が削除されたパートのみが再ツーリングされ、
+他の出力はそのまま残ります。チェックを外すと、選択したマシンのすべての出力ファイルが
+削除され、再ツーリング中に再生成されます。</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>いずれかのマシンのCAM設定が変更された場合は、そのマシンを選択してパートを
+Re-toolしてください。</p>
+</li>
+<li>
+<p>ツール(LTT、punch、またはbend)が変更または欠落している場合は、マシンを更新し、
+影響を受けるパートのみをRe-toolしてください。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_名前の変更">名前の変更…</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>このセクションでは、TruSmartCAMで1つまたは複数のパートの名前を変更する方法について説明します。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>パートを右クリックして、*名前の変更…*をクリックします。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/rename1.png" alt="Rename1" width="503">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>現在のパート名を表示する名前変更確認ダイアログが表示されます。</p>
+</li>
+<li>
+<p>新しい名前を入力し、チェック*✓<strong>アイコンをクリックして確定するか、
+クロス</strong>✗*アイコンをクリックして名前変更操作をキャンセルします。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/rename2.png" alt="Rename2" width="451">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>複数のパートの名前を変更するには、必要なすべてのパートを選択してから、
+そのうちの1つを右クリックして*名前の変更…*をクリックします。</p>
+</li>
+<li>
+<p>選択したパートの合計数を含む確認ダイアログが表示されます。</p>
+</li>
+<li>
+<p>各パートについて、新しい名前を入力し、チェック*✓*アイコンをクリックして
+1つずつ確定します。</p>
+</li>
+<li>
+<p>誤って選択したパートがある場合は、クロス*✗*アイコンをクリックしてキャンセルします。
+または、パートを右クリックして*名前の変更のキャンセル*をクリックして
+名前変更をスキップできます。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_アウトプットのエクスポート">アウトプットのエクスポート</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>このオプションは、*ファクトリー設定*で設定された送信先に
+パート出力をエクスポートします。(<a href="../../factory/settings/bend.html">Bend Settings</a>および
+<a href="../../factory/settings/cut.html">Cut Settings</a>を参照)</p>
+</div>
+<div class="paragraph">
+<p>出力場所は、それぞれの出力設定でBend、Fold、Cutごとに個別に定義されます。
+曲げ、折り、切断操作に関連するすべてのツーリングが、パート全体でエクスポートされます。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput.png" alt="Export Output" width="451">
+</div>
+</div>
+<div class="paragraph">
+<p>以下に示すように、エクスポートされたファイルは指定されたフォルダ
+(例:`C:\PraxData\Out\Reports`)に保存されます。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportout.png" alt="Export Output Location" width="451">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+エクスポートされるファイルは操作タイプによって異なります。BendおよびFold操作の場合、
+NCファイルとレポートが生成されます。CutおよびPunch操作の場合は、パートファイルのみが
+エクスポートされます。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_パートに材料を割り当てる">パートに材料を割り当てる</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>*材料が割り当てられていません*ステータスのパートは、
+さらに処理する前に更新する必要があります。以下の手順では、材料を割り当てる方法について
+説明します。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>*材料が割り当てられていません*ステータスを表示するパートを
+右クリックして、*材料を割り当てる*を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/asignmaterial.png" alt="Assign Material" width="442">
+</div>
+</div>
+</li>
+<li>
+<p>*材料を割り当てる*ウィンドウが開きます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/dialogue.png" alt="Dialogue" width="600">
+</div>
+</div>
+</li>
+<li>
+<p>ダイアログには4つのセクションがあります:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>提案</strong> - インポートされたパートの厚さに基づいて、
+原材料を自動的に提案します。</p>
+</li>
+<li>
+<p><strong>すべての材料</strong> - TruSmartCAMで定義されているすべての材料タイプを
+リスト表示します。</p>
+</li>
+<li>
+<p><strong>すべての原料</strong> - システムで利用可能なすべての原材料を
+表示します。</p>
+</li>
+<li>
+<p><strong>使用された原料</strong> - クイックアクセスのために、
+最近使用した原材料を表示します。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>上部の*検索&#8230;&#8203; (Ctrl+F)*フィールドを使用して、材料をすばやく検索できます。
+たとえば、「steel」と入力すると、3つのセクション全体で一致するすべての材料が表示されます。</p>
+</li>
+<li>
+<p>フィルタされたリストから、原材料リストから必要な材料(例:Steel-25)を選択します。</p>
+</li>
+<li>
+<p>選択した材料がパートに割り当てられます。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ロール目">ロール目</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>*ロール目*は、パート内の粒子の方向を指し、
+パートの切断と処理の方法に影響を与える可能性があります。
+このオプションを使用すると、Part Libraryのパートに
+*ロール目*を指定できます。選択した
+方向に基づいて、パートは利用可能なマシンでの切断に適した向きに配置されます。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Part LibraryまたはJobウィンドウの任意のパートタイルを右クリックします。</p>
+</li>
+<li>
+<p>希望する圧延方向を選択します:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>なし</strong></p>
+</li>
+<li>
+<p><strong>水平</strong></p>
+</li>
+<li>
+<p><strong>垂直</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/rollingdirection1.png" alt="Rolling direction" width="514">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>選択した圧延方向に基づいて、利用可能なすべての切断マシンに対してパートが
+自動的に再ツーリングされます。</p>
+</li>
+<li>
+<p>以下に示すように、パートタイルには選択した圧延方向が表示されます:</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/none.png" alt="None" width="270"></span> <span class="image"><img src="img/horizontal.png" alt="Horizontal" width="270"></span>
+<span class="image"><img src="img/vertical.png" alt="Vertical" width="270"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_再インポート">再インポート…</a>
+  </li>
+  <li level="1">
+   <a href="#_再ツーリング">再ツーリング…</a>
+  </li>
+  <li level="1">
+   <a href="#_名前の変更">名前の変更…</a>
+  </li>
+  <li level="1">
+   <a href="#_アウトプットのエクスポート">アウトプットのエクスポート</a>
+  </li>
+  <li level="1">
+   <a href="#_パートに材料を割り当てる">パートに材料を割り当てる</a>
+  </li>
+  <li level="1">
+   <a href="#_ロール目">ロール目</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partvalidation.html">Part validation</a></span>
+ <span class="next"><a href="partfilters.html">Part filters</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

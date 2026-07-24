@@ -1,0 +1,847 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Sunucu kurulumu</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">TruSmartCAM'e Hoş Geldiniz</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Kurulum</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="hardwarerequirement.html">Donanım gereksinimleri</a></li>
+    <li><button class="tree blank"></button><a href="importformats.html">Desteklenen dosya formatları</a></li>
+    <li><button class="tree blank"></button><a href="prerequisites.html">Önkoşullar</a></li>
+    <li><button class="tree blank"></button><a class="active" href="serverinstallation.html">Sunucu kurulumu</a></li>
+    <li><button class="tree blank"></button><a href="clientinstallation.html">İstemci kurulumu</a></li>
+    <li><button class="tree blank"></button><a href="changelic.html">Lisansı değiştir</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Yapılandırma</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Makine ekleme/çıkarma</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Takım kurulumu</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Kullanıcıları yapılandırma</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Dil</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Malzeme</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Yeni malzeme ve sac ekleme</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Malzemeyi dışa aktarma/içe aktarma</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Malzemeyi değiştirme</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Malzeme eşleme</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">CAM sayfalarını eşleme</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">CAD'den alanları eşleme (arama anahtarları)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">Kullanıcı arayüzü</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">İş Akışı</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Kütüphane</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Aç</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Parçaları içe aktarma</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Siparişleri içe aktarma</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">İşleri içe aktarma</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Montajları içe aktarma</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Kütüphane görünümü</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Parçalar</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Montaj</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Parça durumu</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Parça doğrulama</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Parça paneli</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Parça filtreleri</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Takım durumu</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Takım doğrulama</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Büküm takımı doğrulama</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Kesim takımı doğrulama</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Katlama takımı doğrulama</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Takım paneli</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Filtreleri kaydetme</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Siparişler</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Sipariş görünümü</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../jobs/index.html">İşler</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../jobs/jobcreation.html">İş oluşturma</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobview.html">İş görünümü</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobpanel.html">İş paneli</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobautoplan.html">Otomatik planlama</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobinteractplan.html">Etkileşimli yerleştirme</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/repacking.html">Yeniden paketleme</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/layoutcommands/index.html">Yerleşim yönetimi</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/nestview.html">Yerleşim görünümü</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/layoutpanel.html">Yerleşim paneli</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/reportsender.html">Rapor gönderici</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/remnantmanagement/index.html">Artık yönetimi</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/autoremnant.html">Otomatik artık yönetimi</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/manualremnant.html">Manuel artık yönetimi</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../jobs/twinlinenesting.html">İkiz hat yerleştirme</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/outdate.html">Güncel değil</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobfilters.html">İş filtreleri</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD uzantıları</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks eklentisi</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Kurulum</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Parçaları kaydet</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Montajı kaydet</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Uygulanabilirliği kontrol et</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Fabrika ayarları</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Çeşitli iyileştirmeler</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Künye</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Kurulum</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="serverinstallation.html">Sunucu kurulumu</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Sunucu kurulumu</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>TruSmartCAM Sunucu kurulumunu SQL ile birlikte kurmak için talimatları izleyin.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">Yönetici Hakları</div>
+<div class="paragraph">
+<p><strong>Bu kurulumu çalıştırmak için kullanıcının yönetici ayrıcalıklarına sahip olması gerekmektedir.</strong></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kuruluma başlamak için <strong>Setup.TruSmartCAM.&lt;version&gt;.exe</strong> dosyasını çalıştırın.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Version bir sayıdır.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Lisans sözleşmesini okuyun ve <strong>I accept the agreement</strong> seçeneğini işaretleyin, ardından Sonraki butonuna tıklayın.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s02praxislicenseagreement.png" alt="Praxis License Agreement">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adım_1_kurulum_konumu">Adım 1 : Kurulum Konumu</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Kurulum dizinini belirtin veya varsayılan kurulum konumu olan <code>C:\Program Files\Metamation\Praxis</code> dizinini kabul edin ve Sonraki butonuna tıklayın.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>C:\Program Files\Metamation\Praxis</code> - Kurulum klasörü şu klasörleri içerecektir: Bin, MetaCAM, Samples ve Tracker.</p>
+</li>
+<li>
+<p><code>C:\Program Data\Metamation</code> - Veri Klasörü şu klasörleri içerecektir: TruSmartCAM, TecZone ve MetaCAM.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s03installationpath.png" alt="Installation Path">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adım_2_bileşen_seçimi">Adım 2 : Bileşen Seçimi</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Kurulum Türü</th>
+<th class="tableblock halign-left valign-top">Bileşenler</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Desktop client + Engine</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Client</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Desktop Client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Desktop client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Station</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TecZone, MetaCAM, RightAngle(Bend Controller), Vulcan(Laser Machine Controller) gibi tüm İstasyon Terminallerini seçer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kullanıcı seçimine göre seçer.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Full Installation seçeneğini seçin. TruSmartCAM Tools&#8217;dan <strong>Code Senders</strong> ve <strong>Bend Code Senders</strong> seçeneklerini seçin. Şimdi Kurulum türü <strong>Özel</strong> olarak değişir. Sonraki butonuna tıklayın.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s04serverinstallation.png" alt="Server Installation">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adım_3_sql_server_kurulumu_seçimi">Adım 3 : SQL Server Kurulumu Seçimi</h2>
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>SQL Express 2022 kurulumu yalnızca TruSmartCAM Sunucusu için gereklidir. Bu seçenek Client ve Sync Kurulumları için mevcut değildir. Ayrıca bu seçenek ilk kez İŞARETLİDİR ve kurulur, bundan sonra göz ardı edilebilir. TruSmartCAM sunucusunda SQL zaten kurulu ise, kullanıcı Adım 3&#8217;ü atlayabilir.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select Additional Tasks&#8217;ta: <strong>Install SQL Express</strong> seçeneğini işaretleyin ve Sonraki butonuna tıklayın.</p>
+</li>
+<li>
+<p>Ready to Install&#8217;da: Tüm kurulum özelliklerini özetleyin ve Install butonuna tıklayın.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s05sqlinstall.png" alt="Install SQL">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adım_4_sql_server_kurulumu">Adım 4 : SQL Server Kurulumu</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TruSmartCAM bileşenleri kurulduktan sonra, yükleyici SQL sunucu kurulumuna geçer. Lisans Sözleşmesini kabul edin ve SQL express&#8217;i varsayılan seçeneklerle kurun.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s06sqlserver.png" alt="SQLServer Install">
+</div>
+</div>
+<div class="paragraph">
+<p>Kurulum tamamlandıktan sonra Close butonuna tıklayın ve kurulumu tamamlayın.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s07sqlservercomplete.png" alt="SQL Server Complete">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Windows sürümüne bağlı olarak, SQL kurulumunu kapatmak yeniden başlatma istemi gösterebilir.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adım_5_windows_masaüstü_kısayolları">Adım 5 : Windows Masaüstü kısayolları</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>SQL kurulumundan sonra, Sistem yeniden başlamazsa, <strong>Launch TruSmartCAM</strong> onay kutusunu seçin ve <strong>Finish</strong> butonuna tıklayın.</p>
+</li>
+<li>
+<p>Sistem yeniden başlarsa, Masaüstündeki TruSmartCAM kısayol simgesini başlatın veya Windows Başlat Programı&#8217;nda TruSmartCAM yazın ve <strong>Yönetici olarak çalıştır</strong> seçeneğini kullanın.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<em>Sunucu kurulumu</em>: TruSmartCAM ve TruSmartCAM License Kısayol simgeleri Masaüstünde mevcuttur. + <em>Client/SYNC Kurulumu</em>: Masaüstünde yalnızca TruSmartCAM kısayol simgesi mevcuttur.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s08launchpraxis.png" alt="Launch TruSmartCAM">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adım_6_lisans_kaydı">Adım 6 : Lisans Kaydı</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><em>Serial Number</em> alanına, Trumpf Metamation Servis Ekibi tarafından sağlanan <em>TruSmartCAM Seri anahtarını</em> yazın. "Registered to" alanına <strong>&lt;Company Name&gt;</strong> ve E-posta yazın. <strong>OK</strong> butonuna tıklayın.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s09praxisregister.png" alt="TruSmartCAM Register">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Network güvenlik duvarının lisans kaydını engellemesi veya TruSmartCAM Sunucu PC&#8217;sinde internet olmaması durumunda, TruSmartCAM lisansı Çevrimdışı aktivasyon ile yapılır. <em>C:\ProgramData\Metamation\Praxis</em> Klasöründen <strong><em>Prax.request</em></strong> dosyasını Trumpf Metamation Servis Ekibine e-posta ile gönderin. Trumpf Metamation Ekibi bu klasöre bırakılması gereken <strong><em>Prax.lock</em></strong> dosyasını sağlayacaktır.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adım_7_i̇lk_kez_yapılandırma">Adım 7 : İlk kez Yapılandırma</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Veritabanı Adını yazın ve Veri Depolama Konumunu ayarlayın. SQL Sunucusu Kullan onay kutusunu seçin ve Veritabanına bağlanmak için SQL sunucu adını seçin. <strong>OK</strong> butonuna tıklayın.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s10usedatabase.png" alt="Use Database">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Desktop Client, alt kısımda <strong>Database Connection Succeeded</strong> yazısını göstererek açılır.</p>
+</li>
+<li>
+<p>TruSmartCAM, TecZone ve MetaCAM Yapılandırma dosyaları varsayılan yapılandırma makineleri veya TruSmartCAM lisans makinelerine göre oluşturuldu. Aynı yapılandırma tüm TruSmartCAM İstemcileri arasında paylaşılacaktır.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s11databaseconnectionsuccess.png" alt="Database Connection Success">
+</div>
+</div>
+<div class="paragraph">
+<p>Hoş geldiniz ekranı, Windows Kullanıcı LoginName ile TruSmartCAM Giriş ve İsim olarak gösterilir. İlk TruSmartCAM Kullanıcısı <strong>Site Yöneticisi</strong> olarak kabul edilir. E-posta ve Parola girin. <strong>Tamam</strong> butonuna tıklayın.</p>
+</div>
+<div class="paragraph">
+<p>Bir sonraki sefer için oturum açma kimlik bilgilerini kaydetmek için <strong>Beni hatırla</strong> onay kutusunu seçin.
+<strong>Beni hatırla</strong> onay kutusunu temizlemek, TruSmartCAM uygulaması başlatıldığında oturum açma ve parola iletişim kutusunu her seferinde görüntüleyecektir.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s12welcomepraxis.png" alt="Welcome TruSmartCAM">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adım_8_trusmartcam_oturum_açma">Adım 8 : TruSmartCAM oturum açma</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM&#8217;i kapatın ve yeniden açın. Sistem, TruSmartCAM oturum açma kimlik bilgilerini girmenizi ister.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/signprompt.png" alt="Sign Prompt" width="450">
+</div>
+</div>
+</li>
+<li>
+<p>Oturum açmış kullanıcı adı, TruSmartCAM uygulama başlığında kullanıcı simgesinin yanında görüntülenir.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/userid.png" alt="User ID" width="228">
+</div>
+</div>
+</li>
+<li>
+<p>Kullanıcı simgesinin üzerine geldiğinizde, sistem şunları görüntüler:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/hover.png" alt="Hover" width="108">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kullanıcı rolü (örneğin: Programmer, Admin).</p>
+</li>
+<li>
+<p>Oturumu kapatmak için kısayol: <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>L</kbd></span>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Kullanıcı simgesine tıklamak, aşağıdakileri yapmanıza olanak tanıyan bir menü açar:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/information.png" alt="Information" width="160">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Bilgileri Düzenle&#8230;&#8203;</strong> - Profil bilgilerinizi güncelleyin.</p>
+</li>
+<li>
+<p><strong>Şifreyi değiştir&#8230;&#8203;</strong> - Hesap parolanızı değiştirin.</p>
+</li>
+<li>
+<p><strong>Oturumu kapat</strong> - Uygulamadan çıkış yapın.</p>
+</li>
+<li>
+<p><strong>İptal</strong> - Herhangi bir değişiklik yapmadan menüyü kapatın.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adım_9_fabrika_makine_yapılandırması">Adım 9 : Fabrika Makine Yapılandırması</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Lisansı [Tüm makineler lisans bitini etkinleştirir]: Varsayılan TruSmartCAM Makinesi ve Malzeme, Fabrika Yapılandırması olarak kabul edilir.</p>
+</li>
+<li>
+<p>TruSmartCAM Lisansı [Demo yok ve birkaç makine biti etkinleştirildi]: Bu Birkaç makine ve varsayılan Malzeme, Fabrika Yapılandırması olarak kabul edilir.</p>
+</li>
+<li>
+<p><code>C:\Program Files\Metamation\Praxis\Samples\Parts</code> konumundan yeni bir Parça (Open &#8594; Import) yapın ve Parçanın başarıyla içe aktarılıp aktarılmadığını doğrulayın.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s14praxiswelcomescreen.png" alt="Praxis Welcome screen">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_not_1_trusmartcam_monitor">Not 1 : TruSmartCAM Monitor</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Engine Kurulumu ile TruSmartCAM Monitor (Site admin hakları):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Engine ile birlikte Site Admin TruSmartCAM Hakları ile TruSmartCAM Monitor aşağıdaki seçeneklere sahip olacaktır:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>TruSmartCAM yapılandırmasını, TecZone, MetaCAM yapılandırmasını tüm TruSmartCAM İstemcilerine itin. Ayrıca Yeni TruSmartCAM Kullanıcı Girişi oluşturma haklarına sahiptir.</p>
+</li>
+<li>
+<p>Show Agents, TruSmartCAM Lisansına göre otomasyon görevini yapmak için kullanılabilir toplam engine&#8217;i gösterecektir.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s15pmonitor.png" alt="Praxis Monitor Status">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Engine Kurulumu olmadan TruSmartCAM Monitor (Site admin hakları):</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s16pmonitorwithoutengine.png" alt="Praxis Monitor without Engine">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Engine Kurulumu olmadan TruSmartCAM Monitor (Site Admin olmayan haklar):</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s17pmonitorwithprogrammerlogin.png" alt="Praxis with Progrmmer login">
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>TruSmartCAM uygulamasını çalıştıran PC&#8217;de Engine TruSmartCAM bileşeni kurulu olmalıdır [Sunucu PC&#8217;si veya herhangi bir İstemci kurulumunda]. Engine TruSmartCAM bileşeni kurulu PC, tüm otomasyon görevlerini yapmak için 7/24 çalışıyor olmalıdır.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_not_2_lock_tracker">Not 2 : Lock Tracker</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Sunucu Masaüstünde bulunan <strong>TruSmartCAM License</strong> kısayoluna tıklayın. Alternatif olarak, herhangi bir web tarayıcısında <a href="http://localhost:7171/metamation/locktrack" class="bare">http://localhost:7171/metamation/locktrack</a> url&#8217;sini açın.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Bu, Lisans bilgilerini, TruSmartCAM mevcut oturum bilgilerini ve Günlüğü içeren Lock Tracker modülünü açacaktır.</p>
+</div>
+<div class="paragraph">
+<p>LockTracker ANA SAYFA: Bu, TruSmartCAM Seri Numarasını, Seri Son Kullanma tarihini ve Seri bit bilgilerini gösterir.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s18locktrack01.png" alt="Lock Track License Home page">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker OTURUMLAR Sayfası: TruSmartCAM Desktop client PC, PMonitor, PEngine Durumu gibi mevcut TruSmartCAM Sunucu bağlı bilgileri.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s19locktrack02.png" alt="Lock Track Session information">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker GÜNLÜKLER Sayfası: TruSmartCAM istemci başlatma ve çıkış | Pmonitor başlatma ve PEngine bağlantı/bağlantı kesme durumu vb. bu Günlükler sayfasında görüntülenebilir.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s20locktrack03.png" alt="Praxis Monitor Status">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_not_3_opengl">Not 3 : OpenGL</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM uygulaması açılırken hemen kapanıyor ve pmonitor görev çubuğunda gösterilmiyor.</p>
+</li>
+<li>
+<p>Bu, OpenGL sorununun göstergesidir.</p>
+</li>
+<li>
+<p>Bunu doğrulamanın başka bir yolu: C:\Program Files\Metamation\Praxis\Bin\Flux.exe dosyasını açın, OpenGL sorunu hakkında hata iletişim kutusu görüntülenir.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s21opengl.png" alt="OpenGL Issue">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>C:\ProgramData\Metamation\Praxis\Prax.ini</em> dosyasını, options bölümünde <strong>GLVersion=1</strong> ile güncelleyin, TruSmartCAM uygulamasının başarıyla açılmasını sağlar.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ini hljs" data-lang="ini">[Options]
+GLVersion=1.0</code></pre>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_adım_1_kurulum_konumu">Adım 1 : Kurulum Konumu</a>
+  </li>
+  <li level="1">
+   <a href="#_adım_2_bileşen_seçimi">Adım 2 : Bileşen Seçimi</a>
+  </li>
+  <li level="1">
+   <a href="#_adım_3_sql_server_kurulumu_seçimi">Adım 3 : SQL Server Kurulumu Seçimi</a>
+  </li>
+  <li level="1">
+   <a href="#_adım_4_sql_server_kurulumu">Adım 4 : SQL Server Kurulumu</a>
+  </li>
+  <li level="1">
+   <a href="#_adım_5_windows_masaüstü_kısayolları">Adım 5 : Windows Masaüstü kısayolları</a>
+  </li>
+  <li level="1">
+   <a href="#_adım_6_lisans_kaydı">Adım 6 : Lisans Kaydı</a>
+  </li>
+  <li level="1">
+   <a href="#_adım_7_i̇lk_kez_yapılandırma">Adım 7 : İlk kez Yapılandırma</a>
+  </li>
+  <li level="1">
+   <a href="#_adım_8_trusmartcam_oturum_açma">Adım 8 : TruSmartCAM oturum açma</a>
+  </li>
+  <li level="1">
+   <a href="#_adım_9_fabrika_makine_yapılandırması">Adım 9 : Fabrika Makine Yapılandırması</a>
+  </li>
+  <li level="1">
+   <a href="#_not_1_trusmartcam_monitor">Not 1 : TruSmartCAM Monitor</a>
+  </li>
+  <li level="1">
+   <a href="#_not_2_lock_tracker">Not 2 : Lock Tracker</a>
+  </li>
+  <li level="1">
+   <a href="#_not_3_opengl">Not 3 : OpenGL</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="prerequisites.html">Önkoşullar</a></span>
+ <span class="next"><a href="clientinstallation.html">İstemci kurulumu</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>
+    if (!hljs.initHighlighting.called) {
+      hljs.initHighlighting.called = true
+      ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+    }
+  </script>
+</body>
+</html>

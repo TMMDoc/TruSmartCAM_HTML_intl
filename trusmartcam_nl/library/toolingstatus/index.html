@@ -1,0 +1,458 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Gereedschapsstatus</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Welkom bij TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installatie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardwarevereisten</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Ondersteunde bestandsformaten</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Vereisten</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Serverinstallatie</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Clientinstallatie</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Licentie wijzigen</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configuratie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Machine toevoegen/verwijderen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Gereedschap instellen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Gebruikers configureren</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Taal</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiaal</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Nieuw materiaal en plaat toevoegen</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Materiaal exporteren/importeren</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Materiaal vervangen</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Materiaal toewijzen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAM-pagina's toewijzen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Velden uit CAD toewijzen (zoeksleutels)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">De gebruikersinterface</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Bibliotheek</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Openen</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Onderdelen importeren</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Orders importeren</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Jobs importeren</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Assemblages importeren</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Bibliotheekweergave</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Onderdelen</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assemblage</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Onderdeelstatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Onderdeelvalidatie</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Onderdeelpaneel</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Onderdeelfilters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a class="active" href="index.html">Gereedschapsstatus</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="toolingvalidation/index.html">Gereedschapsvalidatie</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="toolingvalidation/bendtooling.html">Buiggereedschapsvalidatie</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/cuttooling.html">Snijgereedschapsvalidatie</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/foldtooling.html">Vouwgereedschapsvalidatie</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="toolingpanel.html">Gereedschapspaneel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Filters opslaan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Orders</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Orders weergave</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Job aanmaken</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Job weergave</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Job paneel</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatisch plannen</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interactief nesten</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Opnieuw verpakken</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Nestbeheer</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Layout weergave</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Layout paneel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Rapportverzender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Restmateriaal beheer</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatisch restmateriaal beheer</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Handmatig restmateriaal beheer</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Twinline nesten</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Verouderd</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Job filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD extensies</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installatie</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Onderdelen opslaan</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Assemblage opslaan</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Haalbaarheid controleren</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Fabrieksinstellingen</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Diverse verbeteringen</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Bibliotheek</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Gereedschapsstatus</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Gereedschapsstatus</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In TruSmartCAM geeft elke onderdeeltegel visueel de gereedschapsstatus van dat onderdeel
+voor alle beschikbare machines aan. Dit helpt gebruikers om snel te zien voor welke machines een onderdeel
+van gereedschap is voorzien, en of het gereedschap klaar is, beoordeling vereist of ontbreekt.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>De gereedschapsstatus wordt direct op de onderdeeltegel weergegeven met behulp van pictogrammen en kleur-
+indicatoren.</p>
+</li>
+<li>
+<p>Elk pictogram vertegenwoordigt een machinetechnologie (bijv. Punching, Laser).</p>
+</li>
+<li>
+<p>De kleur van het pictogram geeft de huidige gereedschapsstatus voor die machine aan.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>De onderstaande tabel legt de betekenis van elk pictogram en kleur uit, waarmee gebruikers
+de gereedschapsstatus nauwkeurig kunnen interpreteren.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingstatus.png" alt="Tooling status" width="265">
+</div>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Machinepictogram</th>
+<th class="tableblock halign-left valign-top">Beschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/lasergood.png" alt="Laser OK" width="18"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laser snijmachine</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/punchgood.png" alt="Punch OK" width="18"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pons machine</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/bendgood.png" alt="Bend OK" width="18"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Persrem</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/foldgood.png" alt="Fold OK" width="18"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Paneel buigmachine</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Gereedschapsstatus</th>
+<th class="tableblock halign-left valign-top">Beschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/lasergood.png" alt="Laser OK" width="18"></span> <span class="image"><img src="img/bendgood.png" alt="Bend OK" width="18"></span> <span class="image"><img src="img/foldgood.png" alt="Fold OK" width="18"></span> <span class="image"><img src="img/punchgood.png" alt="Punch OK" width="18"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gereedschap is ok</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/laserwarning.png" alt="Laser Warning" width="18"></span> <span class="image"><img src="img/bendwarning.png" alt="Bend Warning" width="18"></span> <span class="image"><img src="img/foldwarning.png" alt="Fold Warning" width="18"></span> <span class="image"><img src="img/punchwarning.png" alt="Punch Warning" width="18"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gereedschap heeft waarschuwingen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/lasererror.png" alt="Laser Error" width="18"></span> <span class="image"><img src="img/benderror.png" alt="Bend Error" width="18"></span> <span class="image"><img src="img/folderror.png" alt="Fold Error" width="18"></span> <span class="image"><img src="img/puncherror.png" alt="Punch Error" width="18"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gereedschap heeft fouten</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/lasermissing.png" alt="Laser Missing" width="18"></span> <span class="image"><img src="img/bendmissing.png" alt="Bend Missing" width="18"></span> <span class="image"><img src="img/foldmissing.png" alt="Fold Missing" width="18"></span> <span class="image"><img src="img/punchmissing.png" alt="Punch Missing" width="18"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gereedschap niet beschikbaar</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gereedschapsfouten">Gereedschapsfouten</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Een CAM (Computer-Aided Manufacturing) fout treedt op tijdens de gereedschaps- of
+productievoorbereidi ngsfase. Deze fouten ontstaan door problemen zoals gereedschaps-
+botsingen, ontbrekende gereedschappen of ongeldige snijvoorwaarden.</p>
+</div>
+<div class="sect2">
+<h3 id="_buiggereedschapsfouten">Buiggereedschapsfouten</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Botsingen gedetecteerd</strong> en
+ <strong>Grijperfout</strong> : De buigopstelling veroorzaakt gereedschaps- of gripperbotsingen tijdens
+simulatie.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/collisiondetected.png" alt="Collision Detected" width="256"></span> <span class="image"><img src="img/grippererror.png" alt="Gripper Error" width="256"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Overbelastingsfout</strong> en
+<strong>Smalle flens of uitsparing te dichtbij</strong> :
+De buiggereedschappen zijn overbelast, of gaten bevinden zich te dicht bij
+de buiglijn, wat het onderdeel of gereedschappen kan beschadigen.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/overloaderror.png" alt="Overload Error" width="256"></span> <span class="image"><img src="img/narrowflange.png" alt="Narrow Flange" width="256"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Moet worden bekeken</strong> en
+<strong>Korte stempel/matrijs spanne</strong> :  De gereedschapsopstelling vereist handmatige
+inspectie, of de geselecteerde matrijs/ponsoverspanning is kleiner dan vereist voor het
+onderdeel.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/needsreview.png" alt="Needs Review" width="256"></span> <span class="image"><img src="img/baseflat.png" alt="Base Flat" width="256"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Uitrusting niet toegewezen</strong>, <strong>Slechte achteraanslag</strong>, of
+<strong>Part too big for this machine</strong> : Vereiste buiggereedschappen zijn
+niet beschikbaar, de achteraanslag is niet correct geconfigureerd, of het onderdeel is te groot
+voor de geselecteerde machine.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/toolmissing.png" alt="Tool Missing" width="256"></span>  <span class="image"><img src="img/poorbackgauge.png" alt="Poor Backgauge" width="256"></span> <span class="image"><img src="img/partbig.png" alt="Part Too Big" width="256"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_snijgereedschapsfouten">Snijgereedschapsfouten</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Ontbrekende snijvoorwaarde</strong> : De snijconditie is
+niet toegewezen aan het grondmateriaal, dus snijden kan niet worden uitgevoerd.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/cuttingcondition.png" alt="Cutting Condition" width="256">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Niet uitgeruste of gedeeltelijk uitgeruste contouren</strong> : Sommige vormen of
+randen worden gemist of slechts gedeeltelijk bedekt tijdens het gereedschapsproces, waardoor het
+onderdeel onvolledig is voor het snijden.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/untooled.png" alt="Untooled" width="256">
+</div>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_gereedschapsfouten">Gereedschapsfouten</a>
+  </li>
+  <li level="2">
+   <a href="#_buiggereedschapsfouten">Buiggereedschapsfouten</a>
+  </li>
+  <li level="2">
+   <a href="#_snijgereedschapsfouten">Snijgereedschapsfouten</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="../partstate/partfilters.html">Onderdeelfilters</a></span>
+ <span class="next"><a href="toolingvalidation/index.html">Gereedschapsvalidatie</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

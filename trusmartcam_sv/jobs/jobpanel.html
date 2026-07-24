@@ -1,0 +1,539 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Jobbpanel</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Välkommen till TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Hårdvarukrav</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Format som stöds</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Förutsättningar</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Serverinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Klientinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Ändra licens</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Konfiguration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Lägg till/ta bort maskin</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Ställ in verktyg</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Konfigurera användare</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Språk</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Lägg till nytt material och plåt</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Exportera/importera material</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Ersätt material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Mappa material</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Mappa CAM-sidor</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Mappa fält från CAD (uppslagningsnycklar)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">Användargränssnittet</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Arbetsflöde</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Bibliotek</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Öppna</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Importera delar</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Importera order</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Importera jobb</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Importera monteringar</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Biblioteksvy</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Delar</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Montering</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Delstatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Delvalidering</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Delpanel</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Delfilter</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Verktygsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Verktygningsvalidering</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Böjverktygningsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Skärverktygningsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Vikverktygningsvalidering</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Verktygspanel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Spara filter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Ordrar</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Ordervyer</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Jobb</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">Skapa jobb</a></li>
+    <li><button class="tree blank"></button><a href="jobview.html">Jobbvy</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobpanel.html">Jobbpanel</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">Autoplan</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">Interaktiv häckning</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">Ompackning</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">Häckhantering</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">Layoutvy</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">Layoutpanel</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">Rapportavsändare</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">Resthantering</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">Automatisk resthantering</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">Manuell resthantering</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">Twinline-häckning</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">Inaktuell</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">Jobbfilter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD-tillägg</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Spara delar</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Spara sammansättning</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Kontrollera genomförbarhet</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Fabriksinställningar</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Diverse förbättringar</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Jobb</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobpanel.html">Jobbpanel</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Jobbpanel</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Detta avsnitt förklarar jobbrelaterade åtgärder såsom
+<strong>Export outputs</strong>, <strong>Återställ jobb&#8230;&#8203;</strong>,
+<strong>Markera slutförd&#8230;&#8203;</strong>, <strong>Exportera jobb&#8230;&#8203;</strong>
+och andra alternativ som används för att hantera jobbinstanser.</p>
+</div>
+<table class="tableblock frame-none grid-none fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/jobpanel.png" alt="JobPanel" width="200">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Öppna i skrivskyddat läge för visning</strong><br>
+Öppnar det valda jobbet i skrivskyddat läge.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Aktiverar redigering av det valda jobbet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Radera</strong><br>
+Tar bort det valda jobbet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/openreport.png" alt="Report" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Visa rapport</strong><br>
+Öppnar produktionsrapporten för det valda jobbet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Exportera utdata</strong><br>
+Exporterar maskinärt utdatafiler (NC-filer och rapporter) genererade
+för det valda jobbet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/planui.png" alt="Plan" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Plan job</strong><br>
+Genererar häckade layouter för delarna i det valda jobbet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/resetui.png" alt="Reset" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Återställ jobb&#8230;&#8203;</strong><br>
+Tar bort alla genererade layouter för jobbet och återställer dess delar till
+planerbart tillstånd.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/markui.png" alt="Mark" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Markera slutförd&#8230;&#8203;</strong><br>
+Markerar jobbet och alla dess häckar som färdiga efter produktion.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/jobui.png" alt="Job" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Exportera jobb&#8230;&#8203;</strong><br>
+Exporterar det kompletta jobbet som ett paket som kan återanvändas eller importeras till
+ett annat system.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Föreg</strong> / <strong>Nästa</strong> / <strong>Layout</strong><br>
+Navigerar till föregående eller nästa layout inom det valda jobbet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sort.png" alt="Filters" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort and filter</strong><br>
+Använd dessa filter för att visa andra jobb som delar samma material, kund,
+förfallodatum eller prioritet.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exportera_utdata">Exportera utdata</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Välj det önskade jobbet.</p>
+</li>
+<li>
+<p>Klicka på <strong>Exportera utdata</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput.png" alt="Export outputs dialog" width="585">
+</div>
+</div>
+</li>
+<li>
+<p>Detta exporterar de maskinärt utdatafiler som genererats för det valda
+jobbet.</p>
+</li>
+<li>
+<p>Export Outputs kan sparas antingen till standardplatsen konfigurerad i
+<strong>Fabriksinställningar</strong> eller till en anpassad plats genom att använda
+<strong>Sök&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Det exporterar endast maskinutdatafiler (såsom NC och rapporter) för
+jobbet.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/output.png" alt="Exported output files" width="725">
+</div>
+</div>
+</li>
+<li>
+<p>Dessa filer används direkt för produktion och kan skickas till
+maskinen.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_återställ_jobb">Återställ jobb&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Återställer det valda jobbet genom att ta bort alla genererade layouter och göra delarna
+tillgängliga för planering igen.</p>
+</div>
+<div class="paragraph">
+<p>Så här återställer ni ett jobb:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Högerklicka på jobbet och välj <strong>Återställ jobb&#8230;&#8203;</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/resetjob1.png" alt="Reset job" width="820">
+</div>
+</div>
+</li>
+<li>
+<p>Detta tar bort alla befintliga häckade layouter för det valda jobbet och återställer
+alla dess delar till planerbart tillstånd.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/resetjob2.png" alt="Reset job" width="820">
+</div>
+</div>
+</li>
+<li>
+<p>Om layouterna innehåller delar från andra jobb återställs även dessa delar.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exportera_jobb">Exportera jobb&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Välj det önskade jobbet.</p>
+</li>
+<li>
+<p>Klicka på <strong>Exportera jobb&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Detta alternativ exporterar det kompletta jobbet som ett paket som kan återanvändas eller
+importeras till ett annat system.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/outputview.png" alt="Output view" width="785">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Den exporterade datan inkluderar all information som krävs för att återskapa jobbet:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Deldetaljer och kvantiteter (CSV-filer).</p>
+</li>
+<li>
+<p>Layout- och häckningsdata (CSV / FXYLT-filer).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>De exporterade filerna sparas som en jobbmapp på den konfigurerade exportplatsen.</p>
+</li>
+<li>
+<p>Detta alternativ används för att överföra, dela eller säkerhetskopiera hela jobbet.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_markera_slutförd">Markera slutförd&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>När jobbet har bearbetats på maskinen öppnar ni jobbpanelen och väljer
+<strong>Markera slutförd&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/mark.png" alt="Mark complete dialog" width="845">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>När ett jobb markeras som färdigt:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Alla häckar under jobbet markeras som färdiga.</p>
+</li>
+<li>
+<p>Jobbet gråmarkeras, flyttas till slutet av listan och visas med en
+grön bock.</p>
+</li>
+<li>
+<p>Alla layouter under jobbet tas bort från listan över aktiva layouter.</p>
+</li>
+<li>
+<p>Del- och jobbstatus uppdateras och bearbetade kvantiteter flyttas till
+färdigt tillstånd.</p>
+</li>
+<li>
+<p>Utdatafiler för alla layouter i jobbet tas bort från maskinutdataplatsen
+för att undvika dubbelanvändning.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_exportera_utdata">Exportera utdata</a>
+  </li>
+  <li level="1">
+   <a href="#_återställ_jobb">Återställ jobb&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_exportera_jobb">Exportera jobb&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_markera_slutförd">Markera slutförd&#8230;&#8203;</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobview.html">Jobbvy</a></span>
+ <span class="next"><a href="jobautoplan.html">Autoplan</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Planification automatique</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Bienvenue dans TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Configuration matérielle requise</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Formats de fichiers pris en charge</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Prérequis</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Installation du serveur</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Installation du client</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Changer de licence</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Ajouter/Supprimer une machine</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Configuration de l'outillage</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Configurer les utilisateurs</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Langue</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Matériau</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Ajouter un nouveau matériau et une feuille</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Exporter/Importer le matériau</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Remplacer le matériau</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Associer le matériau</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Associer les pages CAM</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Associer les champs depuis CAD (clés de recherche)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">L'interface utilisateur</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Flux de travail</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Bibliothèque</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Ouvrir</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Importer des pièces</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Importer des commandes</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Importer des tâches</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Importer des assemblages</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Vue de bibliothèque</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Pièces</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Assemblage</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Statut de la pièce</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Validation de pi\u00e8ce</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Panneau de pièces</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Filtres de pièces</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Statut de l'outillage</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Validation d'outillage</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Validation d'outillage de pliage</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Validation d'outillage de découpe</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Validation d'outillage de pliure</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Panneau d'outillage</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Enregistrer les filtres</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Commandes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Vue des commandes</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Travaux</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">Créer un travail</a></li>
+    <li><button class="tree blank"></button><a href="jobview.html">Vue du travail</a></li>
+    <li><button class="tree blank"></button><a href="jobpanel.html">Panneau de travail</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobautoplan.html">Planification automatique</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">Imbrication interactive</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">Réemballage</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">Gestion de l'imbrication</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">Vue de mise en page</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">Panneau de mise en page</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">Expéditeur de rapport</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">Gestion des chutes</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">Gestion automatique des chutes</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">Gestion manuelle des chutes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">Imbrication en ligne double</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">Obsolète</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">Filtres de travail</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Feuilles</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Utilisateurs</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Modifier</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Clients</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Paramètres</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environnement</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Importation</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Pliage</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Découpe</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Surveillance</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Tâche</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Rapports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">Extensions CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">Extension SolidWorks</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Enregistrer les pièces</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Enregistrer l'assemblage</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Vérifier la faisabilité</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Paramètres de l'usine</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Améliorations diverses</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Mentions légales</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Travaux</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobautoplan.html">Planification automatique</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Planification automatique</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>La planification automatique automatise le processus de planification pour les opérations de pliage et de découpe.
+Elle aide à optimiser l&#8217;utilisation des machines, réduire le gaspillage de matériaux et gérer les priorités des travaux efficacement.</p>
+</div>
+<div class="paragraph">
+<p>Le flux de travail général consiste à planifier d&#8217;abord les pièces pour les machines de pliage, puis à planifier les pièces pour les machines de découpe.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plan_de_pliage">Plan de pliage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un plan de pliage définit comment les pièces sont distribuées sur les machines de pliage disponibles.</p>
+</div>
+<div class="paragraph">
+<p>Exemple : Plan de pliage pour 5 pièces (10 unités chacune).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Cliquez sur l&#8217;option <strong>Planifier tâche&#8230;&#8203;</strong>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>5 pièces (50 unités) sont assignées à TBC-5030 B27</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Après la planification, le statut du travail est mis à jour à Pliage planifié pour un total de 50 unités. Les étapes de travail sont mises à jour avec les machines de pliage assignées et les quantités de pièces.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autoplan1.png" alt="Plan job for bending" width="1469">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autoplan2.png" alt="Plan job for bending" width="1483">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plan_de_découpe_imbrication">Plan de découpe - imbrication</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Après le plan de pliage, le plan de découpe est créé en imbriquant les pièces sur les machines de découpe appropriées. Il existe deux façons d&#8217;imbriquer :</p>
+</div>
+<div class="sect2">
+<h3 id="_planifier_le_travail_pour_limbrication_travail">Planifier le travail pour l&#8217;imbrication - travail</h3>
+<div class="paragraph">
+<p>Utilisez <strong>Planifier tâche&#8230;&#8203;</strong> pour imbriquer toutes les pièces du travail ensemble. Le moteur d&#8217;imbrication traite automatiquement toutes les pièces en fonction de la priorité du travail, de la date d&#8217;échéance et du matériau. Ceci est idéal lorsque vous souhaitez que l&#8217;ensemble du travail soit imbriqué et envoyé à la file d&#8217;attente de découpe en une seule fois.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Cliquez sur <strong>Planifier tâche&#8230;&#8203;</strong> et sélectionnez n&#8217;importe quelle machine.</p>
+</li>
+<li>
+<p>Le moteur Pmonitor démarre le travail d&#8217;imbrication.</p>
+</li>
+<li>
+<p>Le moteur divise le travail selon les besoins pour maximiser l&#8217;utilisation des feuilles.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Il n&#8217;est pas possible d&#8217;imbriquer en assignant des matériaux spécifiques à des machines spécifiques. Par exemple, vous ne pouvez pas imbriquer <em>Material1</em> sur <em>Machine1</em> et <em>Material2</em> sur <em>Machine2</em> dans la même opération.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autoplan3.png" alt="Plan job for cutting" width="1404">
+</div>
+</div>
+<div class="paragraph">
+<p>Ici, l&#8217;ensemble du travail est imbriqué en 5 imbrications sur L49-3kw. Le statut du travail est mis à jour à 50 : File d&#8217;attente de découpe.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_planifier_la_pièce_pour_limbrication_commande">Planifier la pièce pour l&#8217;imbrication - commande</h3>
+<div class="paragraph">
+<p>Utilisez Planifier la pièce pour l&#8217;imbrication au niveau de la commande — c&#8217;est-à-dire, imbriquer uniquement les pièces sélectionnées du travail. En général, vous faites un clic droit sur une pièce et choisissez <strong>Same Material</strong>, de sorte que seules les pièces avec le même matériau sont regroupées et imbriquées ensemble.</p>
+</div>
+<div class="paragraph">
+<p>Ceci est utile lorsque vous souhaitez contrôler quelles pièces sont imbriquées — par exemple, des pièces du même matériau ou un lot spécifique.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autoplan4.png" alt="Plan job for cutting" width="831">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autoplan5.png" alt="Plan job for cutting" width="885">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Dans la page Détail du travail, faites un clic droit sur n&#8217;importe quelle pièce et sélectionnez Same Material. Toutes les pièces avec le même matériau sont sélectionnées.</p>
+</li>
+<li>
+<p>Cliquez sur <strong>Plan Part&#8230;&#8203;</strong> et sélectionnez une machine pour l&#8217;imbrication.</p>
+</li>
+<li>
+<p>Le moteur traite uniquement les pièces sélectionnées et crée les imbrications.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autoplan6.png" alt="Plan job for cutting" width="1418">
+</div>
+</div>
+<div class="paragraph">
+<p>Ici, steel-25 est imbriqué sur Mits ML3015.</p>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_plan_de_pliage">Plan de pliage</a>
+  </li>
+  <li level="1">
+   <a href="#_plan_de_découpe_imbrication">Plan de découpe - imbrication</a>
+  </li>
+  <li level="2">
+   <a href="#_planifier_le_travail_pour_limbrication_travail">Planifier le travail pour l&#8217;imbrication - travail</a>
+  </li>
+  <li level="2">
+   <a href="#_planifier_la_pièce_pour_limbrication_commande">Planifier la pièce pour l&#8217;imbrication - commande</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobpanel.html">Panneau de travail</a></span>
+ <span class="next"><a href="jobinteractplan.html">Imbrication interactive</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

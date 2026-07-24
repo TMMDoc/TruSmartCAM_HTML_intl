@@ -1,0 +1,429 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Filtre dielov</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Vitajte v TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Inštalácia</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardvérové požiadavky</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Podporované formáty súborov</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Predpoklady</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Inštalácia servera</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Inštalácia klienta</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Zmena licencie</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfigurácia</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Pridať/Odstrániť stroj</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Nastavenie náradia</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Konfigurácia používateľov</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Jazyk</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiál</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Pridať nový materiál a hárok</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Export/Import materiálu</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Nahradiť materiál</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mapovanie materiálu</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mapovanie CAM stránok</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mapovanie polí z CAD (vyhľadávacie klúče)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Používateľské rozhranie</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Pracovný postup</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Knižnica</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Otvoriť</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Import dielov</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Import objednávok</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Import úloh</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Import zostáv</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Zobrazenie knižnice</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Diely</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Zostavy</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Stav dielu</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partvalidation.html">Validácia dielu</a></li>
+      <li><button class="tree blank"></button><a href="partpanel.html">Panel dielu</a></li>
+      <li><button class="tree blank"></button><a class="active" href="partfilters.html">Filtre dielov</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Stav obrábania</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Validácia obrábania</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Validácia ohýbacieho obrábania</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Validácia rezacieho obrábania</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Validácia skladacieho obrábania</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Panel obrábania</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Ukladanie filtrov</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Objednávky</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Zobrazenie objednávok</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Práce</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Vytvorenie práce</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Zobrazenie práce</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Panel práce</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatické plánovanie</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktívne ukladanie</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Prebaľovanie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Správa hniezd</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Zobrazenie rozvrhnutia</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Panel rozvrhnutia</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Odosielateľ správ</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Správa zvyškov</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatická správa zvyškov</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manuálna správa zvyškov</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Dvojlinové ukladanie</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Zastaralé</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtre prác</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD rozšírenia</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Inštalácia</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Uložiť diely</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Uložiť zostavu</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Skontrolovať uskutočniteľnosť</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Nastavenia továrne</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Rôzne vylepšenia</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Knižnica</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Stav dielu</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="partfilters.html">Filtre dielov</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Filtre dielov</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Filtre knižnice dielov vám umožňujú rýchlo vyhľadávať a lokalizovať diely v
+knižnici aplikovaním špecifických podmienok. Zúžením výsledkov len na diely,
+ktoré spĺňajú vaše kritériá, tieto filtre uľahčujú efektívne spravovanie a prístup k
+relevantným dielom.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/partlibrary.png" alt="Part Library" width="170">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_stav">Stav</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Použite filter <strong>Stav</strong> na vyhľadávanie dielov podľa stavu obrábania.</p>
+</li>
+<li>
+<p>Rozbaľovacia ponuka zobrazuje stavy obrábania ako farebné boxy a všetky dostupné
+stroje a ich aplikovateľné chyby.</p>
+</li>
+<li>
+<p>Farebné boxy predstavujú nasledujúce stavy:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Biela: Obrábanie v poriadku</p>
+</li>
+<li>
+<p>Oranžová: Obrábanie má chybu</p>
+</li>
+<li>
+<p>Žltá: Obrábanie má varovanie</p>
+</li>
+<li>
+<p>Šedá: Obrábanie potlačené</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Ak má diel úzku prírubu alebo chybu nepriradené obrábanie, výberom týchto
+sa zobrazia príslušné diely.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/status2.png" alt="Status" width="1233">
+</div>
+</div>
+</li>
+<li>
+<p>Diely s potlačeným obrábaním na zvolenom stroji sa zobrazia kliknutím na šedý farebný box.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/supressed.png" alt="Suppressed" width="990">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sada_ohr_nástrojov">Sada ohr.nástrojov</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Použite filter <strong>Sada ohr.nástrojov</strong> na vyhľadávanie dielov podľa použitého ohýbacieho nástroja.</p>
+</li>
+<li>
+<p>Rozbaľovacia ponuka zobrazuje všetky dostupné ohýbacie nástroje a môže byť filtrovaná podľa názvu nástroja,
+typu (razník, gooseneck, polomer, atď.) alebo popisu.</p>
+</li>
+<li>
+<p>Vyberte viacero nástrojov a kliknite na <strong>Zhoda so všet.|</strong>&amp;** na zoradenie nástrojov, ktoré používajú
+oba zvolené nástroje.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/bendmount.png" alt="Bend Mount" width="990">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_použité_nástroje">Použité nástroje</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Filtrovanie podľa <strong>Použité nástroje</strong> funguje podobne ako filtrovanie podľa
+<strong>Sada ohr.nástrojov</strong>.</p>
+</li>
+<li>
+<p>Ikony nástrojov sú zobrazené v proporcionálnych veľkostiach (nie presné, ale relatívne).</p>
+</li>
+<li>
+<p>Keď je otvorený náhľad obrábania, navedenie myšou nad nástroj v
+zozname filtrov zvýrazní tento nástroj v paneli náhľadu.</p>
+</li>
+<li>
+<p>Viacero nástrojov môže byť zvolených a aplikovaných pomocou
+<strong>Zhoda so všet.|</strong>&amp;**.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/usedtool.png" alt="Used Tool" width="912">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_stav_2">Stav</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Použite filter <strong>Stav</strong> na vyhľadávanie dielov podľa ich aktuálneho
+stavu.</p>
+</li>
+<li>
+<p>Rozbaľovacia ponuka zobrazuje všetky aplikovateľné stavy v závislosti od dielov dostupných v knižnici.</p>
+</li>
+<li>
+<p>Zoznam stavov sa dynamicky mení podľa zvolených dielov a
+ich stavu.</p>
+</li>
+<li>
+<p>Napríklad vyberte <strong>Material Missing</strong> na zobrazenie dielov v nevyriešenom
+stave materiálu.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/state.png" alt="State" width="990">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_stav">Stav</a>
+  </li>
+  <li level="1">
+   <a href="#_sada_ohr_nástrojov">Sada ohr.nástrojov</a>
+  </li>
+  <li level="1">
+   <a href="#_použité_nástroje">Použité nástroje</a>
+  </li>
+  <li level="1">
+   <a href="#_stav_2">Stav</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partpanel.html">Panel dielu</a></span>
+ <span class="next"><a href="../toolingstatus/index.html">Stav obrábania</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

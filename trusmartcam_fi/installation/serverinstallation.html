@@ -1,0 +1,904 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Palvelimen asennus</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Tervetuloa TruSmartCAM-järjestelmään</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Asennus</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="hardwarerequirement.html">Laitteistovaatimukset</a></li>
+    <li><button class="tree blank"></button><a href="importformats.html">Tuetut tiedostomuodot</a></li>
+    <li><button class="tree blank"></button><a href="prerequisites.html">Ennakkovaatimukset</a></li>
+    <li><button class="tree blank"></button><a class="active" href="serverinstallation.html">Palvelimen asennus</a></li>
+    <li><button class="tree blank"></button><a href="clientinstallation.html">Asiakkaan asennus</a></li>
+    <li><button class="tree blank"></button><a href="changelic.html">Lisenssin vaihto</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Konfigurointi</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Koneen lisääminen/poistaminen</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Työkalujen asetukset</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Käyttäjien määrittäminen</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Kieli</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Materiaali</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Uuden materiaalin ja arkin lisääminen</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Materiaalin vienti/tuonti</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Materiaalin korvaaminen</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Materiaalin kartoitus</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">CAM-sivujen kartoitus</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Kenttien kartoitus CAD:sta (hakuavaimet)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">Käyttöliittymä</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Työnkulku</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Kirjasto</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Avaa</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Osien tuonti</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Tilausten tuonti</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Töiden tuonti</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Kokoonpanojen tuonti</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Kirjastonäkymä</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Osat</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Kokoonpano</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Osan tila</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Osan validointi</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Osapaneeli</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Osasuodattimet</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Työkalutila</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Työkalutuksen validointi</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Taivutustyökalun validointi</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Leikkaustyökalun validointi</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Paneelitaivutuksen validointi</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Työkalutuspaneeli</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Suodattimien tallentaminen</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Tilaukset</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Tilausnäkymät</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../jobs/index.html">Työt</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../jobs/jobcreation.html">Luo työ</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobview.html">Työnäkymä</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobpanel.html">Työpaneeli</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobautoplan.html">Automaattinen suunnittelu</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobinteractplan.html">Interaktiivinen sisäkkäisyys</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/repacking.html">Uudelleenpakkaus</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/layoutcommands/index.html">Sisäkkäisyyden hallinta</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/nestview.html">Asettelunäkymä</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/layoutpanel.html">Asettelupaneeli</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/reportsender.html">Raportin lähettäjä</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/remnantmanagement/index.html">Jäännösarkkien hallinta</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/autoremnant.html">Automaattinen jäännösarkkien hallinta</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/manualremnant.html">Manuaalinen jäännösarkkien hallinta</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../jobs/twinlinenesting.html">Twinline-sisäkkäisyys</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/outdate.html">Vanhentunut</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobfilters.html">Työsuodattimet</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD-laajennukset</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Asennus</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Tallenna osat</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Tallenna kokoonpano</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Tarkista toteutettavuus</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Tehtaan asetukset</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Muut parannukset</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Asennus</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="serverinstallation.html">Palvelimen asennus</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Palvelimen asennus</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Noudata ohjeita asentaaksesi TruSmartCAM-palvelimen yhdessä SQL:n kanssa.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">Järjestelmänvalvojan oikeudet</div>
+<div class="paragraph">
+<p><strong>Tämän asennuksen suorittamiseen käyttäjällä on oltava järjestelmänvalvojan oikeudet.</strong></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suorita <strong>Setup.TruSmartCAM.&lt;version&gt;.exe</strong> aloittaaksesi asennuksen.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Versio on numero.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Lue käyttöoikeussopimus ja valitse <strong>I accept the agreement</strong> ja napsauta sitten
+Seuraava
+.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s02praxislicenseagreement.png" alt="Praxis License Agreement">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vaihe_1_asennussijainti">Vaihe 1 : Asennussijainti</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Ilmoita asennushakemisto tai hyväksy asennuksen oletusarvo
+<code>C:\Program Files\Metamation\Praxis</code> ja napsauta Seuraava.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>C:\Program Files\Metamation\Praxis</code> - Asennuskansiossa on seuraavat
+kansiot: Bin, MetaCAM, Samples ja Tracker.</p>
+</li>
+<li>
+<p><code>C:\Program Data\Metamation</code> - Datakansiossa on seuraavat kansiot:
+TruSmartCAM, TecZone ja MetaCAM.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s03installationpath.png" alt="Installation Path">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vaihe_2_komponenttien_valinta">Vaihe 2 : Komponenttien valinta</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Asennustyyppi</th>
+<th class="tableblock halign-left valign-top">Komponentit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Desktop client + Engine</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Client</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Desktop Client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Desktop client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Station</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valitsee kaikki asemapäätteet kuten TecZone, MetaCAM, RightAngle(Bend Controller),
+Vulcan(Laser Machine Controller)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Käyttäjän valitsema.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Valitse Full Installation. Valitse <strong>Code Senders</strong> ja <strong>Bend Code Senders</strong>
+TruSmartCAM Tools -kohdasta. Nyt asennustyyppi muuttuu muotoon <strong>Mukautettu</strong>. Napsauta
+Seuraava.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s04serverinstallation.png" alt="Server Installation">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vaihe_3_valitse_install_sql_server">Vaihe 3 : Valitse Install SQL Server</h2>
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>SQL Express 2022 -asennus on tarpeen vain TruSmartCAM-palvelimelle. Tämä
+vaihtoehto ei ole käytettävissä Client- ja Sync-asennuksissa. Tämä on myös
+valittuna JA asennettuna ensimmäisellä kerralla, ja se voidaan ohittaa sen jälkeen. Jos
+TruSmartCAM-palvelimeen on jo asennettu SQL, käyttäjä voi ohittaa vaiheen 3.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select Additional Tasks -kohdassa: Napsauta <strong>Install SQL Express</strong> ja napsauta
+Seuraava.</p>
+</li>
+<li>
+<p>Ready to Install -kohdassa: Tiivistä kaikki asennusominaisuudet ja napsauta Install.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s05sqlinstall.png" alt="Install SQL">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vaihe_4_sql_server_asennus">Vaihe 4 : SQL Server -asennus</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kun TruSmartCAM-komponentit on asennettu, asennusohjelma jatkaa SQL-palvelimen
+asennukseen. Hyväksy käyttöoikeussopimus jatkaaksesi ja asenna SQL Express
+oletusasetuksilla.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s06sqlserver.png" alt="SQLServer Install">
+</div>
+</div>
+<div class="paragraph">
+<p>Kun asennus on valmis, napsauta Close ja viimeistele asennus.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s07sqlservercomplete.png" alt="SQL Server Complete">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Windows-versiosta riippuen SQL-asennuksen sulkeminen saattaa kehottaa
+uudelleenkäynnistykseen.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vaihe_5_windows_työpöydän_pikakuvakkeet">Vaihe 5 : Windows-työpöydän pikakuvakkeet</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Jos järjestelmä ei käynnisty uudelleen SQL-asennuksen jälkeen, valitse <strong>Launch TruSmartCAM</strong>
+-valintaruutu ja napsauta <strong>Finish</strong>.</p>
+</li>
+<li>
+<p>Jos järjestelmä käynnistyy uudelleen, käynnistä TruSmartCAM-pikakuvake työpöydältä tai kirjoita
+TruSmartCAM Windows Start Program -valikkoon ja <strong>Suorita järjestelmänvalvojana</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<em>Palvelimen asennus</em>: TruSmartCAM ja TruSmartCAM License -pikakuvakkeet ovat
+käytettävissä työpöydällä. + <em>Client/SYNC-asennus</em>: Vain TruSmartCAM-pikakuvake
+on käytettävissä työpöydällä.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s08launchpraxis.png" alt="Launch TruSmartCAM">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vaihe_6_lisenssin_rekisteröinti">Vaihe 6 : Lisenssin rekisteröinti</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><em>Serial Number</em> -kenttään kirjoita Trumpf
+Metamation Service Team -tiimin toimittama <em>TruSmartCAM Serial key</em>. Kirjoita <strong>&lt;Yrityksen nimi&gt;</strong>
+"Registered to" -kenttään ja sähköpostiosoite. Napsauta <strong>OK</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s09praxisregister.png" alt="TruSmartCAM Register">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Jos verkon palomuuri estää lisenssin rekisteröinnin tai TruSmartCAM-palvelintietokoneessa
+ei ole Internet-yhteyttä, TruSmartCAM-lisenssi suoritetaan offline-aktivoinnilla. Lähetä
+<strong><em>Prax.request</em></strong> <em>C:\ProgramData\Metamation\Praxis</em> -kansiosta Trumpf
+Metamation Service Team -tiimille sähköpostilla. Trumpf Metamation -tiimi toimittaa <strong><em>Prax.lock</em></strong>
+-tiedoston, joka on pudotettava tähän kansioon.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vaihe_7_ensimmäinen_kertakonfiguraatio">Vaihe 7 : Ensimmäinen kertakonfiguraatio</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Kirjoita tietokannan nimi ja aseta tiedon tallennussijainti. Valitse
+Käytä SQL-palvelinta -valintaruutu ja valitse SQL-palvelimen nimi
+yhdistääksesi tietokantaan. Napsauta <strong>OK</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s10usedatabase.png" alt="Use Database">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Desktop Client avautuu näyttäen <strong>Database Connection Succeeded</strong> alhaalla
+alareunassa.</p>
+</li>
+<li>
+<p>TruSmartCAM, TecZone ja MetaCAM -konfiguraatiotiedostot luotiin oletusmäärityskoneiden
+tai TruSmartCAM-lisenssikoneiden mukaan. Sama konfiguraatio jaetaan
+kaikkien TruSmartCAM-asiakkaiden kesken.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s11databaseconnectionsuccess.png" alt="Database Connection Success">
+</div>
+</div>
+<div class="paragraph">
+<p>Tervetuloa-näyttö näyttää Windows-käyttäjän kirjautumisnimen TruSmartCAM-kirjautumistunnuksena ja nimena.
+Ensimmäistä TruSmartCAM-käyttäjää pidetään <strong>Sivuston ylläpitäjä</strong>-käyttäjänä. Anna sähköposti ja
+salasana. Napsauta <strong>OK</strong>
+.</p>
+</div>
+<div class="paragraph">
+<p>Valitse <strong>Muista minut</strong>
+-valintaruutu tallentaaksesi kirjautumistiedot seuraavaa kertaa varten.
+<strong>Muista minut</strong> -valintaruudun tyhjentäminen kehottaa kirjautumis- ja
+salasanakehote aina, kun TruSmartCAM-sovellus käynnistetään.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s12welcomepraxis.png" alt="Welcome TruSmartCAM">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vaihe_8_trusmartcam_kirjautuminen">Vaihe 8 : TruSmartCAM-kirjautuminen</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Sulje TruSmartCAM ja avaa se uudelleen. Järjestelmä kehottaa sinua antamaan TruSmartCAM
+-kirjautumistiedot.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/signprompt.png" alt="Sign Prompt" width="450">
+</div>
+</div>
+</li>
+<li>
+<p>Kirjautunut käyttäjänimi näytetään käyttäjäkuvakkeen vieressä TruSmartCAM
+-sovelluksen otsikossa.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/userid.png" alt="User ID" width="228">
+</div>
+</div>
+</li>
+<li>
+<p>Kun viet hiiren käyttäjäkuvakkeen päälle, järjestelmä näyttää:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/hover.png" alt="Hover" width="108">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Käyttäjäroolin (esimerkiksi: Programmer, Admin).</p>
+</li>
+<li>
+<p>Pikakuvakkeen uloskirjautumiseen: <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>L</kbd></span>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Käyttäjäkuvakkeen napsauttaminen avaa valikon, jonka avulla voit:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/information.png" alt="Information" width="160">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Muokkaa tietoja&#8230;&#8203;</strong> - Päivitä profiilitietosi.</p>
+</li>
+<li>
+<p><strong>Vaihda salasana&#8230;&#8203;</strong> - Vaihda tilisi
+salasana.</p>
+</li>
+<li>
+<p><strong>Kirjaudu ulos</strong> - Kirjaudu ulos sovelluksesta.</p>
+</li>
+<li>
+<p><strong>Peruuta</strong> - Sulje valikko tekemättä muutoksia.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vaihe_9_tehdaskoneen_konfiguraatio">Vaihe 9 : Tehdaskoneen konfiguraatio</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM-lisenssi [Kaikki koneet mahdollistavat lisenssibitti]: Oletus TruSmartCAM-kone
+ja materiaali katsotaan tehdasmäärityksenä.</p>
+</li>
+<li>
+<p>TruSmartCAM-lisenssi [Ei demoa ja muutama konebitti käytössä]: Nuo muutamat koneet ja
+oletusmateriaali katsotaan tehdasmäärityksenä.</p>
+</li>
+<li>
+<p>(Open &#8594; Import) uusi osa kansiosta <code>C:\Program
+Files\Metamation\Praxis\Samples\Parts</code> ja tarkista, onko osa tuotu
+onnistuneesti.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s14praxiswelcomescreen.png" alt="Praxis Welcome screen">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_huomautus_1_trusmartcam_monitor">Huomautus 1 : TruSmartCAM Monitor</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor Engine-asennuksen kanssa (Site admin -oikeudet):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor Engine-asennuksen kanssa yhdessä Site Admin TruSmartCAM -oikeuksien kanssa on
+seuraavat vaihtoehdot:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Push TruSmartCAM -konfiguraatio, TecZone, MetaCAM -konfiguraatio kaikkiin TruSmartCAM
+-asiakkaisiin. Myös oikeudet luoda uusi TruSmartCAM-käyttäjän kirjautuminen.</p>
+</li>
+<li>
+<p>Show Agents näyttää käytettävissä olevien moottoreiden kokonaismäärän automatiikkatehtäviin, joka
+on TruSmartCAM-lisenssin mukainen.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s15pmonitor.png" alt="Praxis Monitor Status">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor ilman Engine-asennusta (Site admin -oikeudet):</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s16pmonitorwithoutengine.png" alt="Praxis Monitor without Engine">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor ilman Engine-asennusta (Ei Site Admin -oikeuksia):</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s17pmonitorwithprogrammerlogin.png" alt="Praxis with Progrmmer login">
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>TruSmartCAM-sovellusta suorittavassa tietokoneessa on oltava Engine TruSmartCAM -komponentti asennettuna
+[Palvelintietokoneessa tai missä tahansa asiakasohjelmassa]. Engine TruSmartCAM -komponentti asennetun tietokoneen
+tulisi olla käynnissä 24x7 kaikkien automatiikkatehtävien suorittamiseen.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_huomautus_2_lock_tracker">Huomautus 2 : Lock Tracker</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Napsauta TruSmartCAM-palvelimen työpöydällä käytettävissä olevaa <strong>TruSmartCAM License</strong> -pikakuvaketta.
+Vaihtoehtoisesti avaa <a href="http://localhost:7171/metamation/locktrack" class="bare">http://localhost:7171/metamation/locktrack</a> url missä tahansa web
+-selaimessa.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Tämä avaa Lock Tracker -moduulin, jossa on lisenssitiedot, TruSmartCAM:n
+nykyiset istuntotiedot ja loki.</p>
+</div>
+<div class="paragraph">
+<p>LockTracker HOME Page : Tämä näyttää TruSmartCAM-sarjanumeron, sarjan vanhentumisen
+tiedot ja saatavilla olevat sarjabitit.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s18locktrack01.png" alt="Lock Track License Home page">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker SESSIONS Page : Nykyiset TruSmartCAM-palvelimen yhdistämistiedot kuten
+TruSmartCAM Desktop client -tietokone, PMonitor, PEngine-tila.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s19locktrack02.png" alt="Lock Track Session information">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker LOGs Page : TruSmartCAM-asiakkaan aloitus ja uloskirjautuminen | Pmonitor-käynnistys ja
+PEngine-yhdistä/katkaise-tila jne. voidaan tarkastella tällä Logs-sivulla.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s20locktrack03.png" alt="Praxis Monitor Status">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_huomautus_3_opengl">Huomautus 3 : OpenGL</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM-sovellus sulkeutuu heti avautumisen yhteydessä, eikä myöskään
+pmonitor näy tehtäväpalkissa.</p>
+</li>
+<li>
+<p>Tämä edustaa OpenGl-ongelmaa.</p>
+</li>
+<li>
+<p>Toinen tapa vahvistaa tämä: Avaa C:\Program
+Files\Metamation\Praxis\Bin\Flux.exe, joka näyttää virheilmoituksen
+OpenGL-ongelmasta.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s21opengl.png" alt="OpenGL Issue">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Päivitä <em>C:\ProgramData\Metamation\Praxis\Prax.ini</em>, options-osio
+<strong>GLVersion=1</strong>-asetuksella, jotta TruSmartCAM-sovellus avautuu onnistuneesti.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ini hljs" data-lang="ini">[Options]
+GLVersion=1.0</code></pre>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_vaihe_1_asennussijainti">Vaihe 1 : Asennussijainti</a>
+  </li>
+  <li level="1">
+   <a href="#_vaihe_2_komponenttien_valinta">Vaihe 2 : Komponenttien valinta</a>
+  </li>
+  <li level="1">
+   <a href="#_vaihe_3_valitse_install_sql_server">Vaihe 3 : Valitse Install SQL Server</a>
+  </li>
+  <li level="1">
+   <a href="#_vaihe_4_sql_server_asennus">Vaihe 4 : SQL Server -asennus</a>
+  </li>
+  <li level="1">
+   <a href="#_vaihe_5_windows_työpöydän_pikakuvakkeet">Vaihe 5 : Windows-työpöydän pikakuvakkeet</a>
+  </li>
+  <li level="1">
+   <a href="#_vaihe_6_lisenssin_rekisteröinti">Vaihe 6 : Lisenssin rekisteröinti</a>
+  </li>
+  <li level="1">
+   <a href="#_vaihe_7_ensimmäinen_kertakonfiguraatio">Vaihe 7 : Ensimmäinen kertakonfiguraatio</a>
+  </li>
+  <li level="1">
+   <a href="#_vaihe_8_trusmartcam_kirjautuminen">Vaihe 8 : TruSmartCAM-kirjautuminen</a>
+  </li>
+  <li level="1">
+   <a href="#_vaihe_9_tehdaskoneen_konfiguraatio">Vaihe 9 : Tehdaskoneen konfiguraatio</a>
+  </li>
+  <li level="1">
+   <a href="#_huomautus_1_trusmartcam_monitor">Huomautus 1 : TruSmartCAM Monitor</a>
+  </li>
+  <li level="1">
+   <a href="#_huomautus_2_lock_tracker">Huomautus 2 : Lock Tracker</a>
+  </li>
+  <li level="1">
+   <a href="#_huomautus_3_opengl">Huomautus 3 : OpenGL</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="prerequisites.html">Ennakkovaatimukset</a></span>
+ <span class="next"><a href="clientinstallation.html">Asiakkaan asennus</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>
+    if (!hljs.initHighlighting.called) {
+      hljs.initHighlighting.called = true
+      ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,539 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Εισαγωγή jobs</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Καλώς ήρθατε στο TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Εγκατάσταση</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Απαιτήσεις υλικού</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Υποστηριζόμενες μορφές αρχείων</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Προαπαιτούμενα</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Εγκατάσταση Server</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Εγκατάσταση Client</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Αλλαγή άδειας χρήσης</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Ρύθμιση Παραμέτρων</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Προσθήκη/Αφαίρεση μηχανής</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Ρύθμιση εργαλείων</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Διαμόρφωση χρηστών</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Γλώσσα</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Υλικό</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Προσθήκη νέου υλικού και φύλλου</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Εξαγωγή/Εισαγωγή υλικού</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Αντικατάσταση υλικού</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Αντιστοίχιση υλικού</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Αντιστοίχιση σελίδων CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Αντιστοίχιση πεδίων από CAD (κλειδιά αναζήτησης)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Η διεπαφή χρήστη</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Ροή εργασίας</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Βιβλιοθήκη</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Open</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partimport.html">Εισαγωγή parts</a></li>
+      <li><button class="tree blank"></button><a href="orderimport.html">Εισαγωγή παραγγελιών</a></li>
+      <li><button class="tree blank"></button><a class="active" href="jobimport.html">Εισαγωγή jobs</a></li>
+      <li><button class="tree blank"></button><a href="assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Προβολή βιβλιοθήκης</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Κατάσταση part</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Επικύρωση part</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Πίνακας part</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Φίλτρα part</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Κατάσταση tooling</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Επικύρωση tooling</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Επικύρωση bend tooling</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Επικύρωση cut tooling</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Επικύρωση fold tooling</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Πίνακας tooling</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Αποθήκευση φίλτρων</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Παραγγελίες</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Προβολή παραγγελιών</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Εργασίες</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Δημιουργία εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Προβολή εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Πίνακας εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Αυτόματος σχεδιασμός</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Διαδραστική τοποθέτηση</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Επανασυσκευασία</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Διαχείριση τοποθέτησης</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Προβολή διάταξης</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Πίνακας διάταξης</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Αποστολέας αναφοράς</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Διαχείριση υπολειμμάτων</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Αυτόματη διαχείριση υπολειμμάτων</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Χειροκίνητη διαχείριση υπολειμμάτων</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Τοποθέτηση διπλής γραμμής</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Μη ενημερωμένο</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Φίλτρα εργασίας</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Επεκτάσεις CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Εγκατάσταση</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Αποθήκευση εξαρτημάτων</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Αποθήκευση συναρμολόγησης</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Έλεγχος σκοπιμότητας</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Ρυθμίσεις εργοστασίου</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Διάφορες βελτιώσεις</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Βιβλιοθήκη</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Open</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobimport.html">Εισαγωγή jobs</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Εισαγωγή jobs</h1>
+<div class="sect1">
+<h2 id="_εισαγωγή_από_csv_ή_xlsx">Εισαγωγή από csv ή xlsx</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Μπορείτε επίσης να εισαγάγετε jobs σε κοινές μορφές κειμένου</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Κάντε κλικ στο <strong>File &#8594; Open &#8594; Εισαγωγή εργασιών</strong>, εμφανίζεται ο διάλογος Open Folder</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Επιλέξτε <code>C:\Program
+Files\Metamation\Praxis\Samples\Jobs\C0\C0.csv</code>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv.png" alt="CSV import" width="426">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Εάν όλα τα Parts υπάρχουν στην τοποθεσία csv ή σε καταλόγους φακέλων αναζήτησης,
+εμφανίζεται το παράθυρο <strong>νέα εργασία</strong> παραθέτοντας όλα τα parts που ταιριάζουν με τα πεδία csv
+.</p>
+</li>
+<li>
+<p>Τα parts που λείπουν αγνοούνται και δεν εμφανίζονται στο παράθυρο <strong>νέα εργασία</strong>.</p>
+</li>
+<li>
+<p>Αρχικά η κατάσταση Part είναι Nascent.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv2.png" alt="CSV import" width="908">
+</div>
+</div>
+</li>
+<li>
+<p>Κάντε κλικ στο <strong>OK</strong> , τώρα τα parts εισάγονται στη Βιβλιοθήκη Part. CAD
+validation, tooling για bend και cut tooling instance πραγματοποιούνται τα οποία μπορούν να
+παρακολουθηθούν στην οθόνη <strong>Pmonitor</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv3.png" alt="CSV import" width="1438">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_δημιουργία_ακατέργαστο_εξάρτημα_για_τα_ελλιπή_αρχεία_cad">Δημιουργία ακατέργαστο εξάρτημα για τα ελλιπή αρχεία CAD</h3>
+<div class="paragraph">
+<p>Κατά την εισαγωγή jobs χρησιμοποιώντας ένα υπολογιστικό φύλλο (.csv ή .xlsx), μπορεί μερικές φορές να έχετε
+σειρές που αναφέρονται σε αρχεία CAD που δεν είναι διαθέσιμα στο σύστημα.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Για να το χειριστείτε αυτό, μεταβείτε στο <strong>εργοστασιακές</strong>
+ &#8594; <strong>Ρυθμίσεις</strong> &#8594; <strong>Εργασία</strong>,
+ στην ενότητα <strong>Εισαγωγή λογιστικού φύλλου</strong> ενεργοποιήστε
+<strong>Δημιουργία ακατέργαστο εξάρτημα για τα ελλιπή αρχεία CAD</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv6.png" alt="Spreadsheet import" width="801">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Όταν επιλέγεται αυτή η επιλογή:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Εάν λείπει ένα αρχείο CAD για οποιαδήποτε σειρά κατά την εισαγωγή job, το σύστημα θα
+δημιουργήσει αυτόματα ένα κενό part στη θέση του αρχείου CAD που λείπει.</p>
+</li>
+<li>
+<p>Στο παράθυρο <strong>νέα εργασία</strong>, αυτά τα parts που λείπουν επισημαίνονται οπτικά
+με κίτρινο για να υποδείξουν ότι το σχετικό αρχείο CAD λείπει.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/csv4.png" alt="Edit jobs" width="578"></span></p>
+</div>
+</li>
+<li>
+<p>Το part που λείπει θα εξακολουθεί να έχει τα αντιστοιχισμένα πεδία του (όπως όνομα part, υλικό,
+πάχος, ποσότητα, κ.λπ.) από το CSV. Ωστόσο, η κατάσταση part του θα εμφανίζεται
+ως Nascent, που σημαίνει ότι είναι απλώς ένα κενό placeholder χωρίς πραγματική γεωμετρία
+ακόμα.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv5.png" alt="Nascent parts" width="1110">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Αυτό διασφαλίζει ότι η εισαγωγή job μπορεί να συνεχιστεί χωρίς σφάλματα λόγω
+αρχείων CAD που λείπουν — μπορείτε αργότερα να ενημερώσετε ή να αντικαταστήσετε το κενό part με το
+σωστό αρχείο CAD όταν αυτό γίνει διαθέσιμο.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_να_μην_προβάλλεται_ο_διάλογος_νέα_εργασία_εάν_το_λογιστικό_φύλλου_δεν_έχει_σφάλματα">Να μην προβάλλεται ο διάλογος Νέα εργασία εάν το λογιστικό φύλλου δεν έχει σφάλματα</h3>
+<div class="paragraph">
+<p><strong>εργοστασιακές</strong> &#8594; <strong>Ρυθμίσεις</strong> &#8594;
+<strong>Εργασία</strong> → <strong>Εισαγωγή λογιστικού φύλλου</strong>→
+<strong>Να μην προβάλλεται ο διάλογος Νέα εργασία εάν το λογιστικό φύλλου δεν έχει σφάλματα</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Όταν αυτό το πλαίσιο ελέγχου είναι επιλεγμένο, το σύστημα δημιουργεί αυτόματα το νέο job χωρίς
+να εμφανίσει το διάλογο New Job εάν το υπολογιστικό φύλλο δεν έχει σφάλματα (κανένα part που λείπει,
+ημερομηνίες που λείπουν ή μη έγκυρα δεδομένα).</p>
+</li>
+<li>
+<p>Όταν αυτό το πλαίσιο ελέγχου καταργηθεί, ο διάλογος New Job εμφανίζεται πάντα για έλεγχο χρήστη
+και επιβεβαίωση, ακόμα και αν το υπολογιστικό φύλλο δεν έχει σφάλματα.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_prefer_raw_material_column_over_material_thickness">Prefer raw-material column over material + thickness</h3>
+<div class="paragraph">
+<p><strong>εργοστασιακές</strong> &#8594; <strong>Ρυθμίσεις</strong> &#8594;
+<strong>Εργασία</strong>→<strong>Prefer Raw-Material column over Material + Thickness</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Όταν αυτό το πλαίσιο ελέγχου είναι επιλεγμένο, το σύστημα αναμένει το υπολογιστικό φύλλο να χρησιμοποιεί τη
+στήλη Raw-Material (για παράδειγμα, Steel-20). Αυτό σημαίνει ότι ο τύπος υλικού και
+το πάχος πρέπει να συνδυάζονται σε μία μόνο τιμή σε μία στήλη.</p>
+</li>
+<li>
+<p>Όταν αυτό το πλαίσιο ελέγχου καταργηθεί, το σύστημα αναμένει το υπολογιστικό φύλλο να έχει
+ξεχωριστές στήλες για Material και Thickness (για παράδειγμα, Steel και 2.00). Το
+σύστημα τα συνδυάζει εσωτερικά κατά την εισαγωγή.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csvmaterial.png" alt="CSV Raw Material and Material+Thickness">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_φάκελος_παρακολούθησης_χρησιμοποιώντας_csvxlsx">Φάκελος παρακολούθησης χρησιμοποιώντας CSV/XLSX</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Στο <strong>εργοστασιακές</strong> &#8594; <strong>Ρυθμίσεις</strong>&#8594;
+<strong>Επιτήρηση</strong> επιλέξτε <strong>Ενεργοποίηση 'Φακέλου Live'</strong>
+και <strong>Επιτήρηση και των υποφακέλων</strong>.</p>
+</li>
+<li>
+<p>Ορίστε τη διαδρομή φακέλου παρακολούθησης (UNC ή mapped drive).</p>
+</li>
+<li>
+<p>Στο <strong>Εισαγωγή λογιστικού φύλλου</strong>, επιλέξτε
+<strong>Εισαγωγή λογιστικού φύλλου από το 'Φάκελο Live'</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/watchfolder.png" alt="Watch folder" width="702">
+</div>
+</div>
+</li>
+<li>
+<p>Επιλέξτε <strong>Εισαγωγή εργασιών</strong> από τις επιλογές Spreadsheet Import.</p>
+</li>
+<li>
+<p>Αντιγράψτε <code>C:\Program Files\Metamation\Praxis\Samples\Jobs\C0\C0.csv</code> και επικολλήστε το
+στον Watch Folder.</p>
+</li>
+<li>
+<p>Το σύστημα ελέγχει το CSV και προσπαθεί να δημιουργήσει το job αυτόματα.</p>
+</li>
+<li>
+<p>Εάν λείπει το αρχείο CAD, δεν δημιουργείται job επειδή δεν βρίσκονται τα απαιτούμενα δεδομένα CAD.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_κατάλογος_αναζήτησης_cad_αναδρομική_αναζήτηση_cad_μη_διαμορφωμένη">Κατάλογος αναζήτησης CAD &amp; αναδρομική αναζήτηση CAD - μη διαμορφωμένη</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Στο <strong>εργοστασιακές</strong> &#8594; <strong>Ρυθμίσεις</strong> &#8594;
+<strong>Εργασία</strong> &#8594; <strong>Εισαγωγή λογιστικού φύλλου</strong>,
+εάν δεν έχει οριστεί <strong>CAD lookup directories</strong> και
+δεν χρησιμοποιείται το <strong>Χρήση περιοδικά επαναλαμβανόμενης αναζήτησης CAD</strong>, το σύστημα
+δεν αναζητά αρχεία CAD αυτόματα.</p>
+</li>
+<li>
+<p>Εάν το πλαίσιο ελέγχου <strong>Δημιουργία ακατέργαστο εξάρτημα για τα ελλιπή αρχεία CAD</strong> είναι
+επιλεγμένο, το job θα δημιουργηθεί ακόμα και όταν λείπουν αρχεία CAD.</p>
+</li>
+<li>
+<p>Σε αυτή την περίπτωση, όλα τα parts στο job θα δημιουργηθούν ως nascent (κενά) parts —
+που σημαίνει ότι δεν έχουν γεωμετρία επειδή τα αρχεία CAD δεν μπόρεσαν να βρεθούν.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/notconfigured.png" alt="Create blank parts" width="867">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_κατάλογος_αναζήτησης_cad_αναδρομική_αναζήτηση_cad_διαμορφωμένη">Κατάλογος αναζήτησης CAD &amp; αναδρομική αναζήτηση CAD - διαμορφωμένη</h3>
+<div class="paragraph">
+<p>Όταν το <strong>Κατάλογοι αναζήτησης CAD</strong> έχει οριστεί σε
+(C:\Program Files\Metamation\Praxis\Samples) και
+το <strong>Χρήση περιοδικά επαναλαμβανόμενης αναζήτησης CAD</strong> είναι ενεργοποιημένο στο
+<strong>εργοστασιακές</strong> &#8594; <strong>Ρυθμίσεις</strong> &#8594; <strong>Εργασία</strong>
+&#8594; <strong>Εισαγωγή λογιστικού φύλλου</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Το σύστημα αναζητά αυτόματα τον καθορισμένο φάκελο και όλους τους υποφακέλους του
+για τα απαιτούμενα αρχεία CAD που αναφέρονται στο υπολογιστικό φύλλο.</p>
+</li>
+<li>
+<p>Το <strong>Δημιουργία ακατέργαστο εξάρτημα για τα ελλιπή αρχεία CAD</strong> είναι
+επίσης ενεργοποιημένο, οπότε εάν κάποιο αρχείο CAD εξακολουθεί να μην βρεθεί, το σύστημα θα δημιουργήσει ένα
+κενό part ως placeholder.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/configured.png" alt="Create blank parts" width="861">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_εισαγωγή_από_csv_ή_xlsx">Εισαγωγή από csv ή xlsx</a>
+  </li>
+  <li level="2">
+   <a href="#_δημιουργία_ακατέργαστο_εξάρτημα_για_τα_ελλιπή_αρχεία_cad">Δημιουργία ακατέργαστο εξάρτημα για τα ελλιπή αρχεία CAD</a>
+  </li>
+  <li level="2">
+   <a href="#_να_μην_προβάλλεται_ο_διάλογος_νέα_εργασία_εάν_το_λογιστικό_φύλλου_δεν_έχει_σφάλματα">Να μην προβάλλεται ο διάλογος Νέα εργασία εάν το λογιστικό φύλλου δεν έχει σφάλματα</a>
+  </li>
+  <li level="2">
+   <a href="#_prefer_raw_material_column_over_material_thickness">Prefer raw-material column over material + thickness</a>
+  </li>
+  <li level="1">
+   <a href="#_φάκελος_παρακολούθησης_χρησιμοποιώντας_csvxlsx">Φάκελος παρακολούθησης χρησιμοποιώντας CSV/XLSX</a>
+  </li>
+  <li level="2">
+   <a href="#_κατάλογος_αναζήτησης_cad_αναδρομική_αναζήτηση_cad_μη_διαμορφωμένη">Κατάλογος αναζήτησης CAD &amp; αναδρομική αναζήτηση CAD - μη διαμορφωμένη</a>
+  </li>
+  <li level="2">
+   <a href="#_κατάλογος_αναζήτησης_cad_αναδρομική_αναζήτηση_cad_διαμορφωμένη">Κατάλογος αναζήτησης CAD &amp; αναδρομική αναζήτηση CAD - διαμορφωμένη</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="orderimport.html">Εισαγωγή παραγγελιών</a></span>
+ <span class="next"><a href="assembliesimport.html">Import assemblies</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

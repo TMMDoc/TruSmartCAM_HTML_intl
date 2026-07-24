@@ -1,0 +1,722 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>工装面板</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">欢迎使用 TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">安装</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">硬件要求</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">支持的文件格式</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">先决条件</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">客户端安装</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">更改许可证</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">配置</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">添加/删除设备</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">设置工具</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">配置用户</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">语言</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">材料</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">添加新材料和板材</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">导出/导入材料</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">替换材料</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">映射材料</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">映射 CAM 页面</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">从 CAD 映射字段（查找键）</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">用户界面</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">工作流程</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">库</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">打开</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">导入零件</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">导入订单</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">导入作业</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">导入装配体</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">库视图</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">零件</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">装配体</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">零件状态</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">零件验证</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">零件面板</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">零件筛选器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">工装状态</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="toolingvalidation/index.html">工装验证</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="toolingvalidation/bendtooling.html">折弯工装验证</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/cuttooling.html">切割工装验证</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/foldtooling.html">折边工装验证</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a class="active" href="toolingpanel.html">工装面板</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">保存筛选器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">订单</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">订单视图</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">作业</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">创建作业</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">作业视图</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">作业面板</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">自动规划</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">交互式排样</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">重新打包</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">排样管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">布局视图</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">布局面板</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">报告发送器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">余料管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">自动余料管理</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">手动余料管理</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">双线排样</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">过期</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">作业过滤器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">工厂</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">路线</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">板材</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">用户</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">编辑</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">客户</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">设置</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">环境</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">导入</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">折弯</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">切割</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">通知</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">监视</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">作业</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">报告</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD 扩展</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks 插件</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">安装</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">保存零件</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">保存装配体</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">检查可行性</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">工厂设置</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">其他增强功能</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">版本说明</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">库</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">工装状态</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="toolingpanel.html">工装面板</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>工装面板</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>本节说明与工装相关的操作，如 <strong>导出输出</strong>、<strong>Check Tooling</strong>、<strong>隐藏装备</strong>、<strong>设置为基面平面&#8230;&#8203;</strong>、<strong>复制装备…</strong> 以及用于管理工装实例的其他选项。</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/toolingpanel.png" alt="Tooling panel" width="150">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>以只读模式打开查看</strong><br>
+以只读模式打开所选工装。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+启用所选工装的编辑。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>导出输出</strong><br>
+将所选工装输出导出到配置的目标。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/checkui.png" alt="Check Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check Tooling</strong><br>
+验证现有工装而不进行任何更改，如果验证失败则更新其状态。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/copyui.png" alt="Copy Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>复制装备…</strong><br>
+从所选参考工装复制冲头、顺序和后挡料设置，并在可行的情况下将其应用于其他解决方案。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/baseui.png" alt="Set as Base-Flat" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>设置为基面平面&#8230;&#8203;</strong><br>
+将所选折弯或折边工装标记为用于生成切割解决方案的参考平面尺寸。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/retoolui.png" alt="Re-tool" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Re-tool&#8230;&#8203;</strong><br>
+重新处理零件的所选工装，而不影响其他工装。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/supressui.png" alt="Suppress Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>隐藏装备</strong><br>
+抑制所选工装，使其从进一步处理和输出生成中排除。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prevui.png" alt="Prev Next" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>上一个</strong> / <strong>下一页</strong> / <strong>零件</strong><br>
+导航到上一个或下一个工装，或返回到父零件。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sortui.png" alt="Similar Toolings" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort and filter</strong><br>
+显示与所选工装具有相似特征的其他工装以供快速参考。</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_导出输出">导出输出</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>此选项将零件输出导出到 <strong>出厂设置</strong> 中配置的目标。（请参阅 <a href="../../factory/settings/bend.html">Bend Settings</a> 和 <a href="../../factory/settings/cut.html">Cut Settings</a>）</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingoutput.png" alt="Tooling Output" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>仅导出与所选工装操作关联的工装，而不是整个零件。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+导出的文件取决于操作类型。对于折弯和折边操作，会生成 NC 文件和报告。对于切割和冲压操作，仅导出零件文件。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_check_tooling">Check Tooling</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>如果 CAM 设置发生更改或折弯工具丢失，您不需要重新工装零件。</p>
+</li>
+<li>
+<p>相反，使用检查工装来验证现有工装而不进行任何更改。</p>
+</li>
+<li>
+<p>如果验证失败，该实例的工装状态会更新，并删除相关的输出文件。</p>
+</li>
+<li>
+<p>检查工装还会检测先前使用 <strong>忽略错误</strong> 手动覆盖错误的零件，并在需要时将其状态更新为错误。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/checktooling.png" alt="Check Tooling" width="456">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_复制装备">复制装备…</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>复制工装允许您快速将一个解决方案的折弯工装应用于其他解决方案，从而节省时间和精力。</p>
+</div>
+<div class="paragraph">
+<p>这会从所选参考工装（解决方案）复制冲头、顺序和后挡料设置，并尝试将相同的设置应用于所有其他解决方案。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>如果复制的设置对目标机床可行，则保存并使用。</p>
+</li>
+<li>
+<p>如果设置不可行，该机床的原始工装保持不变。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>例如，您可能对不同的机床有不同的工装：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>此处，机床 5230SX 6A 使用鹅颈冲头，机床 5085X 6A B23 使用尖头冲头。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check3.png" alt="Before tooling" width="724">
+</div>
+</div>
+<div class="paragraph">
+<p>当您在机床 5230SX 6A 上使用 <strong>复制装备…</strong> 时，它会尝试将鹅颈设置复制到所有其他机床。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check4.png" alt="Copy tooling" width="664">
+</div>
+</div>
+<div class="paragraph">
+<p>相同的冲头、顺序和后挡料设置会尽可能应用。如果无法使用复制的设置，原始工装保持不变。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/copytooling3.png" alt="After tooling" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>应用复制工装后，鹅颈设置已成功应用于所有其他可行的机床。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_设置为基面平面">设置为基面平面&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>设置为基面平面&#8230;&#8203;</strong> 功能定义哪个折弯或折边工装用作生成切割解决方案的参考平面尺寸。当工装标记为 Base-Flat 时，TruSmartCAM 会根据该机床更新零件的平面尺寸，并相应地重新生成切割解决方案。Base-Flat 工装在 UI 中显示为蓝色边框。</p>
+</div>
+<div class="paragraph">
+<p>不同的折弯机床可能会为同一零件产生平面尺寸的细微变化。当您将工装设置为 Base-Flat 时，TruSmartCAM 使用该机床的平面尺寸作为主参考并自动重新计算切割解决方案。</p>
+</div>
+<div class="paragraph">
+<p>在这里，我们可以看到同一零件在不同机床上的不同平面尺寸：</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat1.png" alt="Base flat1" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>在此示例中，<strong>5130X 6A B23</strong> 工装设置为 Base-Flat，更新的平面尺寸应用于零件属性：</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat2.png" alt="Base flat2" width="663">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_自动_base_flat_选择">自动 base flat 选择</h3>
+<div class="paragraph">
+<p>当工厂设置 <strong>在折弯过程中进行平面修正</strong> 启用时：</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autobase.png" alt="Auto Base" width="806">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM 会在零件导入期间自动将折弯工装（包含最大折弯长度表）设置为 Base-Flat。</p>
+</li>
+<li>
+<p>如果所选折弯工装遇到错误或不可行，TruSmartCAM 会智能切换并将另一个有效的折弯工装设置为 Base-Flat。这确保平面尺寸参考和切割解决方案始终保持一致和有效，无需人工干预。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_增强的_base_flat_管理">增强的 base flat 管理</h3>
+<div class="paragraph">
+<p>TruSmartCAM 在保存折弯或折边工装编辑时在 <strong>保存到 Praxis</strong> 对话框中提供 Base-Flat 选项。这些选项仅针对处于正常状态的工装显示，并确保平面尺寸和切割解决方案保持准确。</p>
+</div>
+<div class="sect3">
+<h4 id="_设置为基面平面并计算切割程序">设置为基面平面并计算切割程序</h4>
+<div class="paragraph">
+<p>此选项用于首次将工装标记为 Base-Flat 并自动生成相应的切割解决方案。</p>
+</div>
+<div class="paragraph">
+<p>出现时机：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>工装当前未标记为 Base-Flat。</p>
+</li>
+<li>
+<p>用户已签出工装进行编辑并正在保存更改。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/setbase.png" alt="Set Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>要使用此选项，请签出折弯或折边工装并进行所需的修改，例如更改折弯参数或平面尺寸。按 <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>S</kbd></span> 保存更改。在 <strong>保存到 Praxis</strong> 对话框中，选择 <strong>设置为基面平面并计算切割程序</strong> 并点击 <strong>确定</strong>。TruSmartCAM 将设置工装为 Base-Flat 并使用更新的平面尺寸生成切割解决方案。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_更新基面平面并重新计算切割程序">更新基面平面并重新计算切割程序</h4>
+<div class="paragraph">
+<p>此选项用于工装已标记为 Base-Flat 并已编辑，需要重新生成平面尺寸和切割解决方案时。</p>
+</div>
+<div class="paragraph">
+<p>出现时机：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>工装已标记为 Base-Flat。</p>
+</li>
+<li>
+<p>用户已签出、编辑并正在保存更改。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/updatebase.png" alt="Update Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>编辑现有 Base-Flat 工装时，根据需要更新折弯参数或平面尺寸几何形状。在 <strong>保存到 Praxis</strong> 对话框中，选择 <strong>更新基面平面并重新计算切割程序</strong>。然后 TruSmartCAM 将更新 Base-Flat 工装并重新生成所有相关切割解决方案以反映最新更改。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>一次只能将一个折弯工装设置为 Base-Flat。</p>
+</div>
+<div class="paragraph">
+<p>当 Base-Flat 更改时，现有切割解决方案会自动重新处理。</p>
+</div>
+<div class="paragraph">
+<p>此功能适用于 TruSmartCAM 中的折弯和折边工装。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_重新装备">重新装备…</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>此选项重新处理零件的所选工装。</p>
+</div>
+<div class="paragraph">
+<p>在工装面板中右键单击所需的工装并点击 <strong>重新装备…</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingretool.png" alt="ToolingRetool" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>继续之前会显示确认对话框。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingconfirm.png" alt="ToolingConfirm" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>点击 <strong>是</strong> 继续重新工装，或点击 <strong>否</strong> 取消操作。</p>
+</div>
+<div class="paragraph">
+<p>仅重新工装所选工装。不影响与零件关联的其他工装。在重新工装过程中删除与所选工装相关的现有输出并重新生成。</p>
+</div>
+<div class="paragraph">
+<p>当工装数据过时、不正确或对机床或工装配置进行更改时使用此选项。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_忽略错误">忽略错误</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>如果工装实例显示警告，但您仍想继续使用它，可以通过点击 <strong>忽略错误</strong> 来覆盖警告。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/ignore.png" alt="Ignore errors" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>这将允许系统为该实例导出输出文件，即使存在工装问题。</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+仅在确定可以安全忽略警告时使用 <strong>Ignore Errors</strong>。覆盖实际错误可能导致机床损坏或安全风险。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_抑制取消抑制工装">抑制/取消抑制工装</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>当机床不活动或您不希望特定零件由特定机床处理时，使用 <strong>隐藏装备</strong> 将该零件从该机床的排样中排除。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/supress.png" alt="Supress Tooling" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>抑制后，将鼠标悬停在工装实例上会显示类似以下消息："Tooling suppressed by &lt;User name&gt; on &lt;Date Time&gt;"。</p>
+</li>
+<li>
+<p>抑制工装会删除该机床和零件的输出文件。</p>
+</li>
+<li>
+<p>使用 <strong>显示装备</strong> 恢复该机床上零件的工装状态。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unsupress.png" alt="Unsupress Tooling" width="495">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>取消抑制后，会再次生成相应的输出文件。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_导出输出">导出输出</a>
+  </li>
+  <li level="1">
+   <a href="#_check_tooling">Check Tooling</a>
+  </li>
+  <li level="1">
+   <a href="#_复制装备">复制装备…</a>
+  </li>
+  <li level="1">
+   <a href="#_设置为基面平面">设置为基面平面&#8230;&#8203;</a>
+  </li>
+  <li level="2">
+   <a href="#_自动_base_flat_选择">自动 base flat 选择</a>
+  </li>
+  <li level="2">
+   <a href="#_增强的_base_flat_管理">增强的 base flat 管理</a>
+  </li>
+  <li level="1">
+   <a href="#_重新装备">重新装备…</a>
+  </li>
+  <li level="1">
+   <a href="#_忽略错误">忽略错误</a>
+  </li>
+  <li level="1">
+   <a href="#_抑制取消抑制工装">抑制/取消抑制工装</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="toolingvalidation/foldtooling.html">折边工装验证</a></span>
+ <span class="next"><a href="../savingfilters.html">保存筛选器</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

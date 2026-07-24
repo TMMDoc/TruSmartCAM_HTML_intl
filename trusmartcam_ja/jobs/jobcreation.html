@@ -1,0 +1,339 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>ジョブの作成</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">TruSmartCAMへようこそ</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">インストール</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">ハードウェア要件</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">サポートされているファイル形式</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">前提条件</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">サーバーインストール</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">クライアントインストール</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">ライセンスの変更</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">設定</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">機械の追加/削除</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">工具設定</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">ユーザー設定</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">言語</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">材料</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">新しい材料とシートの追加</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">材料のエクスポート/インポート</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">材料の置換</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">材料のマッピング</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">CAMページのマッピング</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">CADからのフィールドマッピング（検索キー）</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">ユーザーインターフェース</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">ワークフロー</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Library</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">パートパネル</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">ツーリングパネル</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">注文</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">注文ビュー</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">ジョブ</a>
+   <ul>
+    <li><button class="tree blank"></button><a class="active" href="jobcreation.html">ジョブの作成</a></li>
+    <li><button class="tree blank"></button><a href="jobview.html">ジョブビュー</a></li>
+    <li><button class="tree blank"></button><a href="jobpanel.html">ジョブパネル</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">自動計画</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">インタラクティブネスティング</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">リパッキング</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">ネスト管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">レイアウトビュー</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">レイアウトパネル</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">レポート送信者</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">端材管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">自動端材管理</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">手動端材管理</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">ツインラインネスティング</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">期限切れ</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">ジョブフィルター</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD拡張機能</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">インストール</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">パーツの保存</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">アセンブリの保存</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">実行可能性の確認</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">工場設定</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">その他の機能強化</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">奥付</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">ジョブ</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobcreation.html">ジョブの作成</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>ジョブの作成</h1>
+<div class="paragraph">
+<p>ジョブは、顧客注文を記録および追跡するために使用されます。通常、ジョブには、さまざまな数量、納期、優先順位、パーツの順序を持つパーツのコレクションが含まれています。</p>
+</div>
+<div class="paragraph">
+<p>新しいジョブは、以下の方法で作成できます：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>パーツライブラリ内の既存のパーツから。</p>
+</li>
+<li>
+<p>パーツをジョブページに直接ドラッグし、ジョブパラメータを手動で提供します。</p>
+</li>
+<li>
+<p>アセンブリから。</p>
+</li>
+<li>
+<p>パーツ <strong>library</strong> からいくつかのパーツを選択し、右クリックして <strong>part</strong> パネルを開きます。</p>
+</li>
+<li>
+<p><strong>新規…</strong> &#8594; <strong>ジョブ</strong> をクリックします。これにより、<strong>新しいジョブ</strong> ウィンドウが開きます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/createjob1.png" alt="Create job" width="869">
+</div>
+</div>
+</li>
+<li>
+<p>New Jobウィンドウで：</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/createjob3.png" alt="Create job window" width="716">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>必要なジョブフィールドを入力します：<strong>Job Reference</strong>、<strong>顧客</strong>、および <strong>コメント</strong>。</p>
+</li>
+<li>
+<p><strong>その他…</strong> をクリックして、必要に応じて <strong>顧客</strong>、<strong>回転</strong>、<strong>テキストマーキング</strong> などの追加フィールドにアクセスします。</p>
+</li>
+<li>
+<p><strong>すべて選択する (F5)]</strong> を有効にすると、1つを編集するときに選択されたすべてのパーツが更新されます。これを使用して、パーツの数量、納期、優先順位などを変更します。</p>
+</li>
+<li>
+<p>すべてのジョブの詳細を入力した後、<strong>OK</strong> をクリックします。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>ジョブに切り替える (F6)</strong> がチェックされている場合、システムはジョブページに切り替わり、ジョブが自動的に作成されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/createjob2.png" alt="Jobs page" width="479">
+</div>
+</div>
+</li>
+<li>
+<p>また、次のいずれかの方法を使用してジョブをインポートすることもできます：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>テキストファイルからインポートします。</p>
+</li>
+<li>
+<p>スプレッドシート（CSVまたはXLSX形式）からインポートします。</p>
+</li>
+<li>
+<p>ウォッチフォルダーを使用します。</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>詳細については、以下の章を参照してください。</p>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">ジョブ</a></span>
+ <span class="next"><a href="jobview.html">ジョブビュー</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

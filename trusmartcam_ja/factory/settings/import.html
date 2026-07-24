@@ -1,0 +1,417 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Import</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">TruSmartCAMへようこそ</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">インストール</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">ハードウェア要件</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">サポートされているファイル形式</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">前提条件</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">サーバーインストール</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">クライアントインストール</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">ライセンスの変更</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">設定</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">機械の追加/削除</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">工具設定</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">ユーザー設定</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">言語</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">材料</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">新しい材料とシートの追加</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">材料のエクスポート/インポート</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">材料の置換</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">材料のマッピング</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAMページのマッピング</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">CADからのフィールドマッピング（検索キー）</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">ユーザーインターフェース</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">ワークフロー</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Library</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">パートパネル</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">ツーリングパネル</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">注文</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">注文ビュー</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">ジョブ</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">ジョブの作成</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">ジョブビュー</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">ジョブパネル</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">自動計画</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">インタラクティブネスティング</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">リパッキング</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">ネスト管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">レイアウトビュー</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">レイアウトパネル</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">レポート送信者</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">端材管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">自動端材管理</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">手動端材管理</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">ツインラインネスティング</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">期限切れ</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">ジョブフィルター</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Factory</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../customers.html">Customers</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Settings</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a class="active" href="import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD拡張機能</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">インストール</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">パーツの保存</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">アセンブリの保存</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">実行可能性の確認</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">工場設定</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">その他の機能強化</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">奥付</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Factory</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Settings</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="import.html">Import</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Import</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/import.png" alt="Import settings" width="814">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_アウトプット設定">アウトプット設定</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>平面パターンを保存する</strong> - インポートされたパーツのフラットパターンを保存するには、このオプションを有効にします。</p>
+</div>
+<div class="paragraph">
+<p><strong>平面パターン形式</strong> - このオプションは、DXFまたはGEOファイル形式のいずれかを選択するために使用されます。</p>
+</div>
+<div class="paragraph">
+<p><strong>平面パターンの送信先</strong> - これは、フラットパターンが保存される場所です。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_インポート設定">インポート設定</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>DXFファイル用の単位</strong> - これは、DXFファイルがインポートされる測定単位であり、ユーザーはmmまたはinchを選択できます。</p>
+</div>
+<div class="paragraph">
+<p><strong>材料検索キー</strong> - 複数のルックアップエントリは、それらの間にコンマ区切り記号を使用して割り当てることができます。パーツがインポートされると、TruSmartCAMはこれらのキーを使用して材料値を検索します。検索された値は、原材料を解決するために使用されます。元の値は、パーツのMiscプロパティに保存されます。</p>
+</div>
+<div class="paragraph">
+<p><strong>リビジョン検索キー</strong> - パーツがインポートされると、rawパーツファイル（インポートされるパーツファイル）のリビジョン値がリポジトリの既存のリビジョン値と比較されます。リビジョンが同じ場合、インポートは中止されます。カスタムフィールドマッピングは、DXFファイルでもサポートされるようになりました。DXFファイルの場合、カスタムフィールドデータは、図面のテキストレイヤーまたはPPIアタッチメントから抽出されます。</p>
+</div>
+<div class="paragraph">
+<p><strong>同じCADリビジョンで形状比較を使用する</strong> -
+同じCADリビジョンを持つパーツをインポートするときにジオメトリを比較し、差異が検出された場合にユーザーに置換またはインポートのスキップを促します。詳細については、
+<a href="../../library/open/partimport.html#import-configuration">Import configuration</a>
+を参照してください。</p>
+</div>
+<div class="paragraph">
+<p><strong>パーツ名キー</strong> - このオプションは、材料およびリビジョン検索キーと同様に機能します。ファイル名の代わりにPPI パーツ名をパーツ名として使用するには、1つ以上のパーツ名キーを設定します。</p>
+</div>
+<div class="paragraph">
+<p><strong>板厚検索キー</strong> - 複数のルックアップエントリは、それらの間にコンマ区切り記号を使用して割り当てることができます。パーツがインポートされると、TruSmartCAMはこれらのキーを使用して厚さ値を検索します。検索された値は、厚さを解決するために使用されます。元の値は、パーツのMiscプロパティに保存されます。</p>
+</div>
+<div class="paragraph">
+<p><strong>板厚比較ファッジ</strong> - これは、パーツがインポートされるときに原材料を検索するために使用されます。TruSmartCAMは、材料名と厚さが解析された後、原材料を解決しようとします。詳細については、以下の<a href="#_thickness_fudge">Thickness fudge</a>トピックを参照してください。</p>
+</div>
+<div class="paragraph">
+<p><strong>平面のインポート後に形状を識別する</strong> - パーツがインポートされると、パーツ内の内部形状を自動的に認識して識別できます。</p>
+</div>
+<div class="paragraph">
+<p><strong>形状識別ファッジ</strong> - 形状識別ファッジ値は以下で設定できます：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>グローバルレベル</strong> - この値は、すべての形状のデフォルトとして使用されます。</p>
+</li>
+<li>
+<p><strong>個別形状レベル</strong> - 個別の形状レベルでファッジ値を設定することで、デフォルト値をオーバーライドできます。Shape Libraryダイアログで形状を選択すると、ファッジ値が表示されます。デフォルトでは、これは0に設定されており、このような形状にはデフォルトのグローバル値が使用されます。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>平面を水平に回転</strong> - 一般的に、切断機のテーブルは長方形で幅が広いです。ツーリングの実行可能性を高めるために、パーツがインポートされた後、パーツ幅に沿ってパーツを回転させます。</p>
+</div>
+<div class="paragraph">
+<p><strong>パーツ回転閾値</strong> - これを回転を許可する最小数として設定します。設定された値より小さいパーツは回転されません。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_種々の設定">種々の設定</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>外部ツールのプレインポートを有効にする</strong> - Creo Readerを有効にするには、事前インポート外部ツールのインポートオプションを有効にします。TruSmartCAMは、ドロップされたパーツの事前抽出されたファミリーインスタンスをアップロードします。インスタンス抽出はパーツアップロード中に（事前インポート操作として）実行されるため、パーツがアップロードされるコンピューターにCreoソフトウェアがインストールされている必要があることに注意してください。</p>
+</div>
+<div class="paragraph">
+<p><strong>明確にするために平面サムネイルで描画色を無視する</strong> -
+このオプションを有効にすると、グレースケールのシャープなサムネイルが生成されます。
+画像の明瞭性のために、レイヤーの色とテキストエンティティは無視されます。</p>
+</div>
+<div class="paragraph">
+<p><strong>すべてのインポートタスクで一つのエンジンしか使用しない</strong> -
+有効にすると、重要なタスクには1つのエンジンコアのみが使用されます。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_thickness_fudge">Thickness fudge</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>*板厚比較ファッジ*は、在庫内のシートの厚さ値を比較することにより、希望するシート厚さが在庫にない場合に最も近いシート厚さ値を選択します。</p>
+</div>
+<div class="paragraph">
+<p>たとえば、以下を仮定しましょう：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>シート厚さが1.6 mmで材料が鋼のパーツがあります。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importsheet.png" alt="ImportSheet" width="310">
+</div>
+</div>
+</li>
+<li>
+<p>*板厚比較ファッジ*値は0.1 mmです。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/thickcomfudge.png" alt="Thickness comparison fudge" width="821">
+</div>
+</div>
+</li>
+<li>
+<p>在庫には、厚さ1.5 mm、1.55 mm、1.7 mmの鋼シートがあります。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/sheetthickness.png" alt="Sheet inventory" width="621">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>TruSmartCAMは、*板厚比較ファッジ*値（0.1 mm）をインポートされたアイテム（1.6 mm）と比較した後、最も近い厚さ値のシートを選択します。この場合、1.55 mmが選択されます。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/fudgeimport.png" alt="Import part" width="347">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_アウトプット設定">アウトプット設定</a>
+  </li>
+  <li level="1">
+   <a href="#_インポート設定">インポート設定</a>
+  </li>
+  <li level="1">
+   <a href="#_種々の設定">種々の設定</a>
+  </li>
+  <li level="1">
+   <a href="#_thickness_fudge">Thickness fudge</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="environment.html">Environment</a></span>
+ <span class="next"><a href="bend.html">Bend</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

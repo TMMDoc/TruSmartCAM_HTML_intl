@@ -1,0 +1,463 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Orders importeren</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Welkom bij TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installatie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardwarevereisten</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Ondersteunde bestandsformaten</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Vereisten</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Serverinstallatie</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Clientinstallatie</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Licentie wijzigen</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configuratie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Machine toevoegen/verwijderen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Gereedschap instellen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Gebruikers configureren</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Taal</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiaal</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Nieuw materiaal en plaat toevoegen</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Materiaal exporteren/importeren</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Materiaal vervangen</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Materiaal toewijzen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAM-pagina's toewijzen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Velden uit CAD toewijzen (zoeksleutels)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">De gebruikersinterface</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Bibliotheek</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Openen</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partimport.html">Onderdelen importeren</a></li>
+      <li><button class="tree blank"></button><a class="active" href="orderimport.html">Orders importeren</a></li>
+      <li><button class="tree blank"></button><a href="jobimport.html">Jobs importeren</a></li>
+      <li><button class="tree blank"></button><a href="assembliesimport.html">Assemblages importeren</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Bibliotheekweergave</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Onderdelen</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assemblage</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Onderdeelstatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Onderdeelvalidatie</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Onderdeelpaneel</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Onderdeelfilters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Gereedschapsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Gereedschapsvalidatie</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Buiggereedschapsvalidatie</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Snijgereedschapsvalidatie</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Vouwgereedschapsvalidatie</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Gereedschapspaneel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Filters opslaan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Orders</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Orders weergave</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Job aanmaken</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Job weergave</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Job paneel</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatisch plannen</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interactief nesten</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Opnieuw verpakken</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Nestbeheer</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Layout weergave</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Layout paneel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Rapportverzender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Restmateriaal beheer</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatisch restmateriaal beheer</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Handmatig restmateriaal beheer</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Twinline nesten</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Verouderd</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Job filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD extensies</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installatie</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Onderdelen opslaan</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Assemblage opslaan</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Haalbaarheid controleren</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Fabrieksinstellingen</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Diverse verbeteringen</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Bibliotheek</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Openen</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="orderimport.html">Orders importeren</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Orders importeren</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Orders kunnen worden aangemaakt of geïmporteerd met behulp van de volgende methoden:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Orders importeren uit spreadsheetbestanden.</p>
+</li>
+<li>
+<p>Orders automatisch importeren via watch-instellingen.</p>
+</li>
+<li>
+<p>Orders aanmaken vanuit bestaande onderdelen in de onderdelenbibliotheek.</p>
+</li>
+<li>
+<p>Orders aanmaken vanuit assemblage statische nesten.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_orders_importeren_uit_spreadsheet">Orders importeren uit spreadsheet</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Navigeer naar <strong>openen</strong> &#8594;
+<strong>_Opdrachten importeren&#8230;&#8203;</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/orders.png" alt="Orders" width="259">
+</div>
+</div>
+</li>
+<li>
+<p>Ondersteunde spreadsheetformaten zijn CSV, XLSX en XML.</p>
+</li>
+<li>
+<p>Selecteer het vereiste spreadsheetbestand en klik op <strong>openen</strong>.</p>
+</li>
+<li>
+<p>Het importproces is vergelijkbaar met de Job/Assemblage import workflow.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importorder.png" alt="Import Order" width="591">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+U kunt de spreadsheet ook rechtstreeks slepen en neerzetten op de Orders-pagina
+om orders te importeren.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_orders_importeren_met_watch_instellingen">Orders importeren met watch-instellingen</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Schakel de optie
+<strong>Spreadsheet importeren uit 'Live map'</strong> in bij
+<strong>Instellingen bekijken</strong>.</p>
+</li>
+<li>
+<p>Selecteer <strong>Opdrachten importeren</strong> bij de
+<strong>Spreadsheet importoptie</strong>.</p>
+</li>
+<li>
+<p>Configureer de maplocatie van waaruit orders moeten worden geïmporteerd.</p>
+</li>
+<li>
+<p>Het systeem bewaakt de geconfigureerde map continu.</p>
+</li>
+<li>
+<p>Nieuw toegevoegde spreadsheetbestanden worden automatisch geïmporteerd in Orders.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/spreadsheetorder.png" alt="Spreadsheet Order" width="715">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Raadpleeg voor gedetailleerde configuratiestappen de
+<a href="../../factory/settings/watch.html">Watch settings</a>
+documentatie.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_orders_aanmaken_vanuit_onderdelenbibliotheek">Orders aanmaken vanuit onderdelenbibliotheek</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Selecteer de vereiste onderdelen uit de Onderdelenbibliotheek.</p>
+</li>
+<li>
+<p>Klik met de rechtermuisknop en kies <strong>Nieuw…</strong> &#8594; <strong>Opdracht</strong> om het
+<strong>Nieuwe opdrachten</strong> dialoogvenster te openen.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/partorder.png" alt="Part Order" width="617">
+</div>
+</div>
+</li>
+<li>
+<p>Voer de vereiste gegevens in zoals hoeveelheid, vervaldatum en prioriteit.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/orderwindow.png" alt="Order Window" width="570">
+</div>
+</div>
+</li>
+<li>
+<p>Klik op <strong>OK</strong> om de orders aan te maken.</p>
+</li>
+<li>
+<p>Het systeem schakelt automatisch over naar de Orders-pagina.</p>
+</li>
+<li>
+<p>Aangemaakte orders worden weergegeven op de Orders Ready-pagina voor het aanmaken van jobs.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_orders_aanmaken_vanuit_assemblage">Orders aanmaken vanuit assemblage</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Klik met de rechtermuisknop op de vereiste Assemblage.</p>
+</li>
+<li>
+<p>Selecteer <strong>Nieuw…</strong> &#8594; <strong>Opdracht</strong> om het
+<strong>Nieuwe opdrachten</strong> dialoogvenster te openen.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/rooforder.png" alt="Roof Order" width="561">
+</div>
+</div>
+</li>
+<li>
+<p>Voer het vereiste <strong>Aantal modules</strong> in.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyorder.png" alt="Assembly Order" width="367">
+</div>
+</div>
+</li>
+<li>
+<p>Klik op <strong>OK</strong> om de orders aan te maken.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_orders_importeren_uit_spreadsheet">Orders importeren uit spreadsheet</a>
+  </li>
+  <li level="1">
+   <a href="#_orders_importeren_met_watch_instellingen">Orders importeren met watch-instellingen</a>
+  </li>
+  <li level="1">
+   <a href="#_orders_aanmaken_vanuit_onderdelenbibliotheek">Orders aanmaken vanuit onderdelenbibliotheek</a>
+  </li>
+  <li level="1">
+   <a href="#_orders_aanmaken_vanuit_assemblage">Orders aanmaken vanuit assemblage</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partimport.html">Onderdelen importeren</a></span>
+ <span class="next"><a href="jobimport.html">Jobs importeren</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

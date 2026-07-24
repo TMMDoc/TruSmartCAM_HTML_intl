@@ -1,0 +1,477 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Zamówienia</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Witamy w TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Instalacja</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Wymagania sprzętowe</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Obsługiwane formaty plików</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Wymagania wstępne</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Instalacja serwera</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Instalacja klienta</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Zmiana licencji</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Konfiguracja</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Dodaj/Usuń maszynę</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Konfiguracja oprzyrządowania</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Konfiguracja użytkowników</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Język</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Materiał</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Dodawanie nowego materiału i arkusza</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Eksport/Import materiału</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Zamiana materiału</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Mapowanie materiału</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Mapowanie stron CAM</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Mapowanie pól z CAD (klucze wyszukiwania)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">Interfejs użytkownika</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Przepływ pracy</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Biblioteka</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Otwórz</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Importuj części</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Importuj zamówienia</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Import zadań</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Importuj zespoły</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Widok biblioteki</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Części</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Zespoły</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Status części</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Walidacja części</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Panel części</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Filtry części</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Status narzędzi</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Walidacja narzędzi</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Walidacja narzędzi do gięcia</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Walidacja narzędzi tnących</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Walidacja narzędzi do składania</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Panel narzędziowania</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Zapisywanie filtrów</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a class="active" href="index.html">Zamówienia</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="ordersview.html">Widok zamówień</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../jobs/index.html">Zadania</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../jobs/jobcreation.html">Tworzenie zadania</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobview.html">Widok zadania</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobpanel.html">Panel zadania</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobautoplan.html">Automatyczne planowanie</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobinteractplan.html">Interaktywne zagnieżdżanie</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/repacking.html">Przepakowywanie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/layoutcommands/index.html">Zarządzanie układem</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/nestview.html">Widok układu</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/layoutpanel.html">Panel układu</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/reportsender.html">Nadawca raportów</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/remnantmanagement/index.html">Zarządzanie resztkami</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/autoremnant.html">Automatyczne zarządzanie resztkami</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/manualremnant.html">Ręczne zarządzanie resztkami</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../jobs/twinlinenesting.html">Zagnieżdżanie dwuliniowe</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/outdate.html">Przestarzałe</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobfilters.html">Filtry zadań</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Fabryka</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Trasy</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Arkusze</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Użytkownicy</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edycja</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Klienci</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Ustawienia</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Powiadomienia</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Raporty</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">Rozszerzenia CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Instalacja</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Zapisywanie części</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Zapisywanie złożenia</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Sprawdzanie wykonalności</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Ustawienia fabryki</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Różne ulepszenia</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Zamówienia</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Zamówienia</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Zamówienie definiuje, jakie części mają zostać wyprodukowane, w jakiej ilości
+i do kiedy. Steruje planowaniem i realizacją produkcji w TruSmartCAM. Zamówienia
+można tworzyć lub importować przy użyciu różnych metod, a następnie można je
+konwertować na zadania w celu planowania produkcji.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_panel_zamówień">Panel zamówień</h2>
+<div class="sectionbody">
+<table class="tableblock frame-none grid-none fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/orderpanel.png" alt="OrderPanel" width="145">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="22"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Otwórz w trybie tylko do odczytu do przeglądania</strong><br>
+Otwiera wybrane zamówienie w trybie tylko do odczytu.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="22"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Umożliwia edycję wybranego zamówienia.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="22"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Usuń</strong><br>
+Usuwa wybrane zamówienie.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/new.png" alt="New" width="120"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Nowe…</strong><br>
+Konwertuje zamówienie na zadanie, złożenie lub inne zamówienie.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/assigncustomer.png" alt="Assign Customer" width="120"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Przypisz klienta</strong><br>
+Przypisuje klienta do zamówienia.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/setdue.png" alt="Due Date" width="120"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ustaw datę wymagalności…</strong><br>
+Ustawia termin realizacji zamówienia.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/priority.png" alt="Priority" width="120"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kolejność</strong><br>
+Określa poziom priorytetu zamówienia.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/partorder.png" alt="Part Order" width="120"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Zlecenie dotyczące detali</strong><br>
+Określa identyfikator referencyjny przypisany do części w ramach zamówienia.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/quantity.png" alt="Quantity" width="120"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Liczba</strong><br>
+Określa liczbę części lub instancji w zamówieniu.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="120"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Poprz.</strong> / <strong>Dalej</strong> / <strong>Detal</strong><br>
+Umożliwia nawigację do poprzedniej lub następnej części w ramach zamówienia.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/filters.png" alt="Filters" width="120"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sortowanie i filtrowanie</strong><br>
+Użyj tych filtrów, aby wyświetlić inne zamówienia mające ten sam materiał,
+klienta, termin realizacji lub priorytet.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_edycja_zamówień">Edycja zamówień</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Wybierz jedno lub więcej zamówień i kliknij prawym przyciskiem myszy, aby
+zmodyfikować wspólne szczegóły zamówienia, takie jak ilość, termin realizacji,
+priorytet i informacje o kliencie.</p>
+</div>
+<div class="paragraph">
+<p>Jeśli wiele wybranych zamówień wymaga różnych wartości, użyj opcji
+<strong>Check-out for Editing</strong>, aby edytować każde zamówienie
+indywidualnie zgodnie z wymaganiami.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/editorder.png" alt="Edit" width="618">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/orderquantity.png" alt="Quantity" width="685">
+</div>
+</div>
+<div class="paragraph">
+<p>Wszelkie aktualizacje wprowadzone do zamówień są natychmiast stosowane w bazie
+danych. Użyj polecenia <strong>Usuń</strong>, aby usunąć zamówienia z
+biblioteki zamówień.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Polecenie Delete usuwa tylko zamówienia. Części powiązane z odpowiednimi
+zamówieniami nie są usuwane z biblioteki części.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_planowanie_zamówień">Planowanie zamówień</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Wybierz jedno lub więcej zamówień, kliknij prawym przyciskiem myszy i kliknij
+<strong>Nowe…</strong> &#8594; <strong>Zadanie</strong>, aby skonwertować wybrane zamówienia
+na zadania. Użyj opcji Sortowanie i Filtrowanie, aby pogrupować odpowiednie
+zamówienia przed utworzeniem zadań.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/orderjob.png" alt="Order Job" width="1141">
+</div>
+</div>
+<div class="paragraph">
+<p>Po skonwertowaniu zamówień na zadanie:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Zadanie jest przenoszone na stronę Zadania</p>
+</li>
+<li>
+<p>Zamówienia są usuwane z listy Zamówienia</p>
+</li>
+<li>
+<p>Standardowy przepływ pracy planowania zadań może być następnie używany do
+planowania produkcji i zagnieżdżania</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/orderplan.png" alt="Order Plan" width="884">
+</div>
+</div>
+<div class="paragraph">
+<p>Aby uzyskać więcej informacji na temat przepływu pracy planowania zadań, zobacz
+<a href="../jobs/jobautoplan.html">Auto Plan</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_informacje_dodatkowe">Informacje dodatkowe</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Jeśli zadanie zawierające zamówienia zostanie usunięte, powiązane zamówienia
+są automatycznie przenoszone z powrotem na stronę Zamówienia gotowe, chyba że
+zadanie lub część zostały oznaczone jako Ukończone.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/addinfo.png" alt="Add" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Zamówienia można dodawać do istniejącego zadania lub usuwać z niego za
+pośrednictwem okna <strong>Edycja zadania</strong> zgodnie z wymaganiami produkcji.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_panel_zamówień">Panel zamówień</a>
+  </li>
+  <li level="1">
+   <a href="#_edycja_zamówień">Edycja zamówień</a>
+  </li>
+  <li level="1">
+   <a href="#_planowanie_zamówień">Planowanie zamówień</a>
+  </li>
+  <li level="1">
+   <a href="#_informacje_dodatkowe">Informacje dodatkowe</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="../library/savingfilters.html">Zapisywanie filtrów</a></span>
+ <span class="next"><a href="ordersview.html">Widok zamówień</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

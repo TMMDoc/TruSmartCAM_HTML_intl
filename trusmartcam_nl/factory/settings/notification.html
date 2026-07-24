@@ -1,0 +1,445 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Notifications</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Welkom bij TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installatie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardwarevereisten</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Ondersteunde bestandsformaten</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Vereisten</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Serverinstallatie</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Clientinstallatie</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Licentie wijzigen</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configuratie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Machine toevoegen/verwijderen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Gereedschap instellen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Gebruikers configureren</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Taal</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiaal</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Nieuw materiaal en plaat toevoegen</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Materiaal exporteren/importeren</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Materiaal vervangen</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Materiaal toewijzen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAM-pagina's toewijzen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Velden uit CAD toewijzen (zoeksleutels)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">De gebruikersinterface</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Bibliotheek</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Openen</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Onderdelen importeren</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Orders importeren</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Jobs importeren</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Assemblages importeren</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Bibliotheekweergave</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Onderdelen</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Assemblage</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Onderdeelstatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Onderdeelvalidatie</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Onderdeelpaneel</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Onderdeelfilters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Gereedschapsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Gereedschapsvalidatie</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Buiggereedschapsvalidatie</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Snijgereedschapsvalidatie</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Vouwgereedschapsvalidatie</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Gereedschapspaneel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Filters opslaan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Orders</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Orders weergave</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Job aanmaken</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Job weergave</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Job paneel</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatisch plannen</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interactief nesten</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Opnieuw verpakken</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Nestbeheer</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Layout weergave</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Layout paneel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Rapportverzender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Restmateriaal beheer</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatisch restmateriaal beheer</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Handmatig restmateriaal beheer</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Twinline nesten</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Verouderd</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Job filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Factory</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../customers.html">Customers</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Settings</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a class="active" href="notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD extensies</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installatie</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Onderdelen opslaan</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Assemblage opslaan</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Haalbaarheid controleren</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Fabrieksinstellingen</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Diverse verbeteringen</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Factory</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Settings</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="notification.html">Notifications</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Notifications</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Meldingen informeren gebruikers over CAD- en gereedschapsfouten die zich binnen het
+systeem voordoen. Ze zorgen ervoor dat problemen tijdig worden gecommuniceerd zodat passende
+actie kan worden ondernomen.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_e_mailmelding">E-mailmelding</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>De functie E-mailmelding stelt gebruikers in staat om geautomatiseerde
+e-mailwaarschuwingen voor CAD- en gereedschapsfouten te configureren en te ontvangen. Eenmaal geconfigureerd, stuurt het systeem
+automatisch e-mails naar de opgegeven ontvangers wanneer een relevante gebeurtenis
+optreedt, zodat problemen tijdig worden aangepakt.</p>
+</div>
+<div class="paragraph">
+<p>Om e-mailmeldingen te configureren, navigeert u naar:
+<strong>fabriek</strong> &gt; <strong>instellingen</strong> &gt;
+<strong>Meldingen</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/notification.png" alt="Notification settings" width="814">
+</div>
+</div>
+<div class="paragraph">
+<p>De pagina <strong>Meldingen</strong> bestaat uit de volgende secties:</p>
+</div>
+<div class="sect2">
+<h3 id="_notification_settings">Notification settings</h3>
+<div class="paragraph">
+<p>De sectie <strong>Meldingsinstellingen</strong> regelt hoe
+e-mailwaarschuwingen worden gegenereerd en aan ontvangers worden bezorgd.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>E-mailmeldingen inschakelen</strong> - Schakelt het
+systeem in om meldingen te verzenden op basis van de geconfigureerde voorwaarden.</p>
+</li>
+<li>
+<p><strong>Meldingsontvangers</strong> - Specificeert het e-mailadres(sen) van de ontvangers. Meerdere ontvangers kunnen worden toegevoegd door
+ze te scheiden met een komma (<code>,</code>) of een spatie.</p>
+</li>
+<li>
+<p><strong>Meldingen in batch sturen</strong> - Combineert meerdere
+meldingen in één e-mail. Berichten die binnen een gedefinieerd tijdsinterval worden gegenereerd, worden samen gegroepeerd, wat helpt het e-mailvolume te verminderen en
+rommel te voorkomen.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/batch.png" alt="Batch" width="608">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Vooruitblik uitrustingssimulatie bijvoegen waar van toepassing +</strong> -
+Voegt een gereedschapsimulatievoorbeeld toe aan de meldings-e-mail wanneer
+beschikbaar. Dit is handig om gereedschapgerelateerde problemen direct vanuit
+de e-mail te beoordelen.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/warning.png" alt="Warning" width="395">
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Het opnemen van het simulatievoorbeeld kan de e-mailgrootte
+aanzienlijk verhogen.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mailinstellingen">Mailinstellingen</h3>
+<div class="paragraph">
+<p>De sectie <strong>Mailinstellingen</strong> definieert de uitgaande mail-
+serverconfiguratie die het systeem gebruikt om e-mailmeldingen te bezorgen.
+Deze instellingen moeten correct worden geconfigureerd opdat meldingen succesvol kunnen worden verzonden.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>SMTP-server</strong> - Specificeert het SMTP-serveradres dat wordt gebruikt om
+uitgaande e-mails te verzenden (bijvoorbeeld <code>smtp.gmail.com</code>). Deze informatie is
+doorgaans beschikbaar in de account- of instellingssectie van de e-mailclient van de gebruiker.</p>
+</li>
+<li>
+<p><strong>SMPT-poort</strong> - Definieert het poortnummer dat door de mail-
+server wordt gebruikt om e-mails via internet te verzenden. Veelvoorkomende waarden zijn <code>465</code> (SSL)
+en <code>587</code> (TLS).</p>
+</li>
+<li>
+<p><strong>Transportprotocol</strong> - Specificeert het protocol dat wordt gebruikt om
+veilig e-mails te verzenden van de applicatie naar de mailserver (bijvoorbeeld
+SSL of TLS).</p>
+</li>
+<li>
+<p><strong>Server vereist authenticatie</strong> - Schakelt
+authenticatie in voor de SMTP-server. Wanneer ingeschakeld, worden de gebruikersnaam en het wachtwoord
+gevalideerd door de server voordat e-mails worden verzonden.</p>
+</li>
+<li>
+<p><strong>Gebruikersnaam</strong> - Specificeert het e-mailaccount dat wordt gebruikt om
+te authenticeren bij de SMTP-server en meldingen te verzenden.</p>
+</li>
+<li>
+<p><strong>Wachtwoord</strong> - Specificeert het wachtwoord dat is gekoppeld aan het e-mail-
+account dat wordt gebruikt voor authenticatie.</p>
+</li>
+<li>
+<p><strong>Sender address</strong> - Specificeert het e-mailadres van de afzender dat wordt weergegeven aan
+ontvangers wanneer meldingen worden ontvangen.</p>
+</li>
+<li>
+<p><strong>Testen&#8230;&#8203;</strong> - Stuurt een test-e-mail om de mailserver-
+configuratie te verifiëren.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Klik op <strong>Testen&#8230;&#8203;</strong> om de setup te valideren. Een bevestigingsmelding
+wordt weergegeven als de test succesvol is; anders wordt een foutmelding
+getoond die de oorzaak van de fout aangeeft.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>E-mailmeldingen worden niet geactiveerd in interactieve modus (bijvoorbeeld tijdens het
+bewerken of handmatig opslaan van een onderdeel).</p>
+</li>
+<li>
+<p>E-mailbezorging wordt in de achtergrond afgehandeld en kan vertraagd zijn.</p>
+</li>
+<li>
+<p>Meldingen worden mogelijk niet bezorgd als het systeem of de engine wordt gestopt voordat
+de verwerking is voltooid.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_e_mailmelding">E-mailmelding</a>
+  </li>
+  <li level="2">
+   <a href="#_notification_settings">Notification settings</a>
+  </li>
+  <li level="2">
+   <a href="#_mailinstellingen">Mailinstellingen</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="cut.html">Cut</a></span>
+ <span class="next"><a href="watch.html">Watch</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,514 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Uložiť diely</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Vitajte v TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Inštalácia</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardvérové požiadavky</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Podporované formáty súborov</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Predpoklady</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Inštalácia servera</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Inštalácia klienta</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Zmena licencie</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfigurácia</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Pridať/Odstrániť stroj</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Nastavenie náradia</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Konfigurácia používateľov</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Jazyk</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiál</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Pridať nový materiál a hárok</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Export/Import materiálu</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Nahradiť materiál</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mapovanie materiálu</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mapovanie CAM stránok</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mapovanie polí z CAD (vyhľadávacie klúče)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Používateľské rozhranie</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Pracovný postup</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Knižnica</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Otvoriť</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Import dielov</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Import objednávok</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Import úloh</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Import zostáv</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Zobrazenie knižnice</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Diely</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Zostavy</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Stav dielu</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Validácia dielu</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Panel dielu</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Filtre dielov</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Stav obrábania</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Validácia obrábania</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Validácia ohýbacieho obrábania</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Validácia rezacieho obrábania</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Validácia skladacieho obrábania</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Panel obrábania</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Ukladanie filtrov</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Objednávky</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Zobrazenie objednávok</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Práce</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Vytvorenie práce</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Zobrazenie práce</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Panel práce</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatické plánovanie</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktívne ukladanie</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Prebaľovanie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Správa hniezd</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Zobrazenie rozvrhnutia</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Panel rozvrhnutia</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Odosielateľ správ</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Správa zvyškov</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatická správa zvyškov</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manuálna správa zvyškov</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Dvojlinové ukladanie</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Zastaralé</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtre prác</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">CAD rozšírenia</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">SolidWorks addin</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="installationsteps.html">Inštalácia</a></li>
+      <li><button class="tree blank"></button><a class="active" href="savetopraxis.html">Uložiť diely</a></li>
+      <li><button class="tree blank"></button><a href="saveassembly.html">Uložiť zostavu</a></li>
+      <li><button class="tree blank"></button><a href="partfeasibility.html">Skontrolovať uskutočniteľnosť</a></li>
+      <li><button class="tree blank"></button><a href="factorysettings.html">Nastavenia továrne</a></li>
+      <li><button class="tree blank"></button><a href="miscenhancements.html">Rôzne vylepšenia</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">CAD rozšírenia</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">SolidWorks addin</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="savetopraxis.html">Uložiť diely</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Uložiť diely</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spustite SolidWorks a otvorte diel z plechu (.sldprt).</p>
+</div>
+<div class="paragraph">
+<p>Potom postupujte podľa týchto krokov:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Prepnite na záložku TruSmartCAM v SolidWorks pre prístup k panelu nástrojov TruSmartCAM.</p>
+</li>
+<li>
+<p>Kliknite na <strong>Uložiť do Praxis</strong> v paneli nástrojov <strong>TruSmartCAM</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>V dialógovom okne <strong>Uložiť do Praxis</strong> vyberte príslušný surový materiál TruSmartCAM, potom
+kliknite na <strong>OK</strong> pre nahratie a uloženie dielu do knižnice TruSmartCAM dielov.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/savepraxis.png" alt="Save Praxis" width="850">
+</div>
+</div>
+<div class="paragraph">
+<p>Diel bude teraz uložený v TruSmartCAM.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/part.png" alt="Part" width="372">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+TruSmartCAM obsahuje niekoľko vzorových dielov umiestnených v <code>C:\Program
+Files\Metamation\ TruSmartCAM \Samples\Parts</code>. Môžete ich použiť na testovacie účely, ak
+je to potrebné.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_automatické_rozlíšenie_materiálu">Automatické rozlíšenie materiálu</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Táto funkcia automaticky konvertuje materiály SolidWorks a hodnoty hrúbky dielu
+na zodpovedajúce surové materiály TruSmartCAM počas nahrávania.</p>
+</div>
+<div class="paragraph">
+<p>Konfigurácia mapovania materiálu:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Kliknite na <strong>Možnosti</strong> v paneli nástrojov <strong>TruSmartCAM</strong> pre otvorenie dialógového okna <strong>Možnosti</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/mapmaterial.png" alt="Map Material" width="850">
+</div>
+</div>
+</li>
+<li>
+<p>Prejdite na stránku <strong>Mapovanie materiálov</strong>.</p>
+</li>
+<li>
+<p>V ľavom paneli vyberte materiál SolidWorks.</p>
+</li>
+<li>
+<p>V pravom paneli vyberte zodpovedajúci materiál TruSmartCAM.</p>
+</li>
+<li>
+<p>Kliknite na <strong>Mapovať</strong> pre vytvorenie mapovania.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Namapovaný pár sa zobrazí v zozname mapovania v dolnej časti.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Ak chcete odstrániť mapovanie, vyberte ho a kliknite na <strong>Nemapovať</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nastavenie_tolerancie_hrúbky">Nastavenie tolerancie hrúbky</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hodnota tolerancie hrúbky definuje rozsah tolerancie, v rámci ktorého TruSmartCAM
+porovnáva hrúbku modelu plechu z SolidWorks s existujúcou hrúbkou surového
+materiálu v databáze TruSmartCAM. Kompenzuje malé odchýlky
+v hrúbke modelu spôsobené zaokrúhľovaním návrhu, konverziou jednotiek atď&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Keď hrúbka dielu SolidWorks presne nezodpovedá materiálu v TruSmartCAM,
+hodnota tolerancie zabezpečí, že najbližší dostupný materiál bude vybraný
+automaticky.</p>
+</div>
+<div class="paragraph">
+<div class="title">Príklad</div>
+<p>S nominálnym 2,0 mm materiálom a hodnotou tolerancie 0,05 mm:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM prijíma akúkoľvek hrúbku modelu SolidWorks medzi 1,95 mm a 2,05 mm ako
+platnú zhodu.</p>
+</li>
+<li>
+<p>Odchýlky mimo tento rozsah spustia výzvu na manuálny výber materiálu
+počas nahrávania dielu.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Zobrazenie alebo úprava hodnoty tolerancie:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kliknite na <strong>Možnosti</strong> v paneli nástrojov <strong>TruSmartCAM</strong> a potom prejdite na <strong>Rôzne nastavenia</strong> pre zobrazenie
+hodnoty tolerancie, teraz kliknite na <strong>Uložiť do Praxis</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/thicknessfudge.png" alt="Thickness Fudge" width="850">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>V dialógovom okne <strong>Uložiť do Praxis</strong> kliknite na <strong>OK</strong>, diel bude uložený do TruSmartCAM.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/configuration.png" alt="Configuration" width="428">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_čítanie_vlastných_vlastností_dielu">Čítanie vlastných vlastností dielu</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Toto nastavenie umožňuje TruSmartCAM automaticky čítať vlastné informácie o diele—ako
+<strong>Material</strong>, <strong>Revision</strong> a ďalšie používateľom definované atribúty—priamo zo
+súborov dielov SolidWorks.</p>
+</div>
+<div class="paragraph">
+<p>Nastavenie:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kliknite na <strong>Možnosti</strong> v paneli nástrojov <strong>TruSmartCAM</strong> pre otvorenie dialógového okna <strong>Možnosti</strong> a potom
+prejdite na <strong>Vlastné polia</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/custompart.png" alt="Custom Part" width="850">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Použite tlačidlá <strong>Mapovať</strong> a <strong>Nemapovať</strong> na prepojenie požadovaných polí TruSmartCAM s
+príslušnými poľami SolidWorks Custom alebo Configuration.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Zobrazené hodnoty sú načítané z aktuálne aktívneho dielu SolidWorks.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Po dokončení mapovania budú vybrané vlastné vlastnosti
+automaticky čítané zo SolidWorks vždy, keď sú diely importované alebo aktualizované v
+TruSmartCAM, teraz kliknite na <strong>Uložiť do Praxis</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Mapovania definované tu sú uložené v repozitári TruSmartCAM a
+automaticky synchronizované naprieč všetkými inštaláciami TruSmartCAM SolidWorks v rámci
+siete.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>V dialógovom okne <strong>Uložiť do Praxis</strong> kliknite na <strong>OK</strong>, diel bude uložený do TruSmartCAM.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/default.png" alt="Default" width="428">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_automatické_rozlíšenie_materiálu">Automatické rozlíšenie materiálu</a>
+  </li>
+  <li level="1">
+   <a href="#_nastavenie_tolerancie_hrúbky">Nastavenie tolerancie hrúbky</a>
+  </li>
+  <li level="1">
+   <a href="#_čítanie_vlastných_vlastností_dielu">Čítanie vlastných vlastností dielu</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="installationsteps.html">Inštalácia</a></span>
+ <span class="next"><a href="saveassembly.html">Uložiť zostavu</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

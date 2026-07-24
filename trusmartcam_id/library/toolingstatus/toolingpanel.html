@@ -1,0 +1,797 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Panel tooling</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Selamat Datang di TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Change license</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfigurasi</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Tambah/Hapus mesin</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Setup tooling</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Konfigurasi pengguna</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Bahasa</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Tambah material dan sheet baru</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Export/Import material</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Ganti material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Petakan material</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Petakan halaman CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Petakan field dari CAD (lookup keys)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Antarmuka pengguna</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Perpustakaan</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Impor part</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Impor order</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Impor job</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Impor assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Tampilan perpustakaan</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Bagian</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Rakitan</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Status part</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Validasi part</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Panel part</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Filter part</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Status tooling</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="toolingvalidation/index.html">Validasi tooling</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="toolingvalidation/bendtooling.html">Validasi tooling bend</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/cuttooling.html">Validasi tooling cut</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/foldtooling.html">Validasi tooling fold</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a class="active" href="toolingpanel.html">Panel tooling</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Menyimpan filter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Pesanan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Tampilan pesanan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Pekerjaan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Buat pekerjaan</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Tampilan pekerjaan</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Panel pekerjaan</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Rencana otomatis</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Nesting interaktif</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Pengepakan ulang</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Manajemen nest</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Tampilan tata letak</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Panel tata letak</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Pengirim laporan</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Manajemen sisa</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Manajemen sisa otomatis</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manajemen sisa manual</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Nesting twinline</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Kedaluwarsa</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filter pekerjaan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Ekstensi CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Instalasi</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Simpan part</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Simpan assembly</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Periksa kelayakan</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Pengaturan factory</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Peningkatan lain-lain</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Perpustakaan</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Status tooling</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="toolingpanel.html">Panel tooling</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Panel tooling</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bagian ini menjelaskan tindakan terkait tooling seperti
+<strong>Ekspor Output</strong>,
+<strong>Check Tooling</strong>, <strong>Sembunyikan Pengaturan Alat</strong>,
+<strong>Atur sebagai Flat Dasar&#8230;&#8203;</strong>, <strong>Salin Pengaturan Alat&#8230;&#8203;</strong>,
+dan opsi lain yang digunakan untuk mengelola instance tooling.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/toolingpanel.png" alt="Tooling panel" width="150">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Buka dalam mode dilindungi dari penulisan untuk melihat</strong><br>
+Membuka tooling yang dipilih dalam mode read-only.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Mengaktifkan pengeditan tooling yang dipilih.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ekspor Output</strong><br>
+Mengekspor output tooling yang dipilih ke tujuan yang dikonfigurasi.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/checkui.png" alt="Check Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check Tooling</strong><br>
+Memvalidasi tooling yang ada tanpa membuat perubahan apapun dan memperbarui
+statusnya jika validasi gagal.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/copyui.png" alt="Copy Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Salin Pengaturan Alat&#8230;&#8203;</strong><br>
+Menyalin punch, urutan, dan pengaturan back gauge dari tooling
+referensi yang dipilih dan menerapkannya ke solusi lain di mana memungkinkan.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/baseui.png" alt="Set as Base-Flat" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Atur sebagai Flat Dasar&#8230;&#8203;</strong><br>
+Menandai bend atau fold tooling yang dipilih sebagai ukuran flat referensi untuk
+menghasilkan solusi pemotongan.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/retoolui.png" alt="Re-tool" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Re-tool&#8230;&#8203;</strong><br>
+Memproses ulang tooling yang dipilih untuk part tanpa mempengaruhi
+tooling lainnya.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/supressui.png" alt="Suppress Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sembunyikan Pengaturan Alat</strong><br>
+Menekan tooling yang dipilih sehingga dikecualikan dari
+pemrosesan lebih lanjut dan pembuatan output.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prevui.png" alt="Prev Next" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sebelumnya</strong> / <strong>Berikutnya</strong> / <strong>Komponen</strong><br>
+Menavigasi ke tooling sebelumnya atau berikutnya, atau kembali ke parent part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sortui.png" alt="Similar Toolings" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort and filter</strong><br>
+Menampilkan tooling lain yang memiliki karakteristik serupa dengan
+tooling yang dipilih untuk referensi cepat.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ekspor_output">Ekspor Output</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Opsi ini mengekspor output part ke tujuan yang dikonfigurasi di
+<strong>Pengaturan Pabrik</strong>. (Lihat
+<a href="../../factory/settings/bend.html">Bend Settings</a> dan
+<a href="../../factory/settings/cut.html">Cut Settings</a>)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingoutput.png" alt="Tooling Output" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Hanya tooling yang terkait dengan operasi tooling yang dipilih yang
+diekspor, bukan seluruh part.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+File yang diekspor tergantung pada tipe operasi. Untuk operasi Bend dan
+Fold, file NC dan laporan dihasilkan. Untuk operasi Cut dan Punch,
+hanya file part yang diekspor.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_check_tooling">Check Tooling</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Jika ada perubahan dalam CAM Settings atau bend tool hilang, Anda tidak perlu
+melakukan Re-tool part.</p>
+</li>
+<li>
+<p>Sebaliknya, gunakan Check Tooling untuk memvalidasi tooling yang ada tanpa membuat
+perubahan apapun.</p>
+</li>
+<li>
+<p>Jika validasi gagal, status tooling dari instance tersebut diperbarui, dan
+file output terkait dihapus.</p>
+</li>
+<li>
+<p>Check Tooling juga mendeteksi part di mana kesalahan sebelumnya secara manual
+ditimpa menggunakan <strong>Abaikan Kondisi Kegagalan</strong>, dan memperbarui
+statusnya menjadi error jika diperlukan.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/checktooling.png" alt="Check Tooling" width="456">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_salin_pengaturan_alat">Salin Pengaturan Alat&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Copy tooling memungkinkan Anda dengan cepat menerapkan bend tooling dari satu solusi ke
+solusi lainnya, menghemat waktu dan usaha.</p>
+</div>
+<div class="paragraph">
+<p>Ini menyalin punch, urutan, dan pengaturan back gauge dari tooling
+referensi yang dipilih (solusi) dan mencoba menerapkan pengaturan yang sama ke semua solusi lainnya.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Jika pengaturan yang disalin layak untuk mesin target, itu disimpan dan digunakan.</p>
+</li>
+<li>
+<p>Jika pengaturan tidak layak, tooling asli untuk mesin tersebut tetap
+tidak berubah.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Misalnya, Anda mungkin memiliki tooling yang berbeda untuk mesin yang berbeda:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Di sini, Machine 5230SX 6A menggunakan Gooseneck punch, Machine 5085X 6A B23 menggunakan
+Pointed punch.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check3.png" alt="Before tooling" width="724">
+</div>
+</div>
+<div class="paragraph">
+<p>Ketika Anda menggunakan <strong>Salin Pengaturan Alat&#8230;&#8203;</strong> pada Machine 5230SX 6A, itu
+mencoba menyalin pengaturan Gooseneck ke semua mesin lain.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check4.png" alt="Copy tooling" width="664">
+</div>
+</div>
+<div class="paragraph">
+<p>Punch, urutan, dan pengaturan back gauge yang sama diterapkan di mana pun
+memungkinkan. Jika pengaturan yang disalin tidak dapat digunakan, tooling asli tetap
+tidak berubah.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/copytooling3.png" alt="After tooling" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>Setelah menerapkan copy tooling, pengaturan Gooseneck telah berhasil diterapkan
+ke semua mesin lain di mana itu layak.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_atur_sebagai_flat_dasar">Atur sebagai Flat Dasar&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Fitur <strong>Atur sebagai Flat Dasar&#8230;&#8203;</strong> mendefinisikan bend atau fold
+tooling mana yang digunakan sebagai ukuran flat referensi untuk menghasilkan solusi pemotongan.
+Ketika tooling ditandai sebagai Base-Flat, TruSmartCAM memperbarui ukuran flat part
+berdasarkan mesin tersebut dan meregenerasi solusi pemotongan sesuai. Tooling Base-Flat
+ditampilkan dengan border biru di UI.</p>
+</div>
+<div class="paragraph">
+<p>Mesin bend yang berbeda dapat menghasilkan variasi sedikit dalam ukuran flat untuk part yang sama.
+Ketika Anda menetapkan tooling sebagai Base-Flat, TruSmartCAM menggunakan ukuran flat mesin tersebut
+sebagai referensi utama dan secara otomatis menghitung ulang solusi
+pemotongan.</p>
+</div>
+<div class="paragraph">
+<p>Di sini, kita dapat melihat ukuran flat yang berbeda untuk part yang sama di berbagai
+mesin:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat1.png" alt="Base flat1" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>Dalam contoh ini, tooling <strong>5130X 6A B23</strong> ditetapkan sebagai Base-Flat, dan
+ukuran flat yang diperbarui diterapkan di properti part:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat2.png" alt="Base flat2" width="663">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pemilihan_base_flat_otomatis">Pemilihan base flat otomatis</h3>
+<div class="paragraph">
+<p>Ketika pengaturan factory
+<strong>Terapkan koreksi flat selama proses tekuk</strong> diaktifkan:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autobase.png" alt="Auto Base" width="806">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM secara otomatis menetapkan bend tooling (yang berisi tabel max bend
+length) sebagai Base-Flat selama impor part.</p>
+</li>
+<li>
+<p>Jika bend tooling yang dipilih mengalami kesalahan atau tidak layak,
+TruSmartCAM secara cerdas beralih dan menetapkan bend tooling valid lainnya sebagai
+Base-Flat. Ini memastikan referensi ukuran flat dan solusi pemotongan selalu
+tetap konsisten dan valid tanpa intervensi manual.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_manajemen_base_flat_yang_ditingkatkan">Manajemen base flat yang ditingkatkan</h3>
+<div class="paragraph">
+<p>TruSmartCAM menyediakan opsi Base-Flat di dialog <strong>Simpan ke Praxis</strong>
+saat menyimpan pengeditan bend atau fold tooling. Opsi ini hanya muncul untuk
+tooling dalam status OK dan memastikan bahwa ukuran flat dan solusi pemotongan tetap
+akurat.</p>
+</div>
+<div class="sect3">
+<h4 id="_tetapkan_sebagai_flat_dasar_dan_hitung_solusi_pemotongan">Tetapkan sebagai Flat Dasar dan hitung solusi pemotongan</h4>
+<div class="paragraph">
+<p>Opsi ini digunakan untuk menandai tooling sebagai Base-Flat untuk pertama kalinya dan
+secara otomatis menghasilkan solusi pemotongan yang sesuai.</p>
+</div>
+<div class="paragraph">
+<p>Muncul ketika:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tooling saat ini tidak ditandai sebagai Base-Flat.</p>
+</li>
+<li>
+<p>Pengguna telah check out tooling untuk pengeditan dan menyimpan perubahan.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/setbase.png" alt="Set Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>Untuk menggunakan opsi ini, check out bend atau fold tooling dan buat modifikasi yang diperlukan,
+seperti perubahan pada parameter bend atau ukuran flat. Tekan
+<span class="keyseq"><kbd>Ctrl</kbd>+<kbd>S</kbd></span> untuk menyimpan perubahan. Di dialog <strong>Simpan ke Praxis</strong>,
+pilih
+<strong>Tetapkan sebagai Flat Dasar dan hitung solusi pemotongan</strong> dan
+klik
+<strong>OK</strong>. TruSmartCAM akan menetapkan tooling sebagai Base-Flat dan menghasilkan
+solusi pemotongan menggunakan ukuran flat yang diperbarui.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_perbarui_flat_dasar_dan_hitung_ulang_solusi_pemotongan">Perbarui Flat Dasar dan hitung ulang solusi pemotongan</h4>
+<div class="paragraph">
+<p>Opsi ini digunakan ketika tooling sudah ditandai sebagai Base-Flat dan telah
+diedit, memerlukan ukuran flat dan solusi pemotongan untuk diregenerasi.</p>
+</div>
+<div class="paragraph">
+<p>Muncul ketika:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tooling sudah ditandai sebagai Base-Flat.</p>
+</li>
+<li>
+<p>Pengguna telah check out, mengeditnya, dan menyimpan perubahan.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/updatebase.png" alt="Update Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>Saat mengedit tooling Base-Flat yang ada, perbarui parameter bend atau
+geometri flat-size sesuai kebutuhan. Di dialog <strong>Simpan ke Praxis</strong>,
+pilih
+<strong>Perbarui Flat Dasar dan hitung ulang solusi pemotongan</strong>.
+TruSmartCAM kemudian akan memperbarui tooling Base-Flat dan meregenerasi semua solusi
+pemotongan terkait untuk mencerminkan perubahan terbaru.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Hanya satu bend tooling yang dapat ditetapkan sebagai Base-Flat pada satu waktu.</p>
+</div>
+<div class="paragraph">
+<p>Ketika Base-Flat diubah, solusi pemotongan yang ada secara otomatis
+diproses ulang.</p>
+</div>
+<div class="paragraph">
+<p>Fitur ini tersedia untuk bend dan fold tooling dalam TruSmartCAM.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_atur_ulang_alat">Atur ulang alat…</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Opsi ini memproses ulang tooling yang dipilih untuk part.</p>
+</div>
+<div class="paragraph">
+<p>Klik kanan tooling yang diperlukan di panel Tooling dan klik
+<strong>Atur ulang alat…</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingretool.png" alt="ToolingRetool" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Dialog konfirmasi ditampilkan sebelum melanjutkan.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingconfirm.png" alt="ToolingConfirm" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Klik <strong>Ya</strong> untuk melanjutkan dengan re-tooling, atau <strong>Tidak</strong> untuk
+membatalkan operasi.</p>
+</div>
+<div class="paragraph">
+<p>Hanya tooling yang dipilih yang di-re-tool. Tooling lain yang terkait dengan
+part tidak terpengaruh. Output yang ada terkait dengan tooling yang dipilih
+dihapus dan diregenerasi selama proses re-tooling.</p>
+</div>
+<div class="paragraph">
+<p>Gunakan opsi ini ketika data tooling sudah usang, tidak benar, atau ketika
+perubahan dibuat pada konfigurasi mesin atau tooling.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_abaikan_kondisi_kegagalan">Abaikan Kondisi Kegagalan</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Jika instance yang di-tool menampilkan peringatan, dan Anda masih ingin melanjutkan dengan itu,
+Anda dapat menimpa peringatan dengan mengklik
+<strong>Abaikan Kondisi Kegagalan</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/ignore.png" alt="Ignore errors" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ini akan memungkinkan sistem untuk mengekspor file output untuk instance
+tersebut, bahkan jika ada masalah tooling.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Gunakan <strong>Ignore Errors</strong> hanya ketika Anda yakin peringatan dapat dengan aman
+diabaikan. Menimpa kesalahan aktual dapat menyebabkan kerusakan mesin atau risiko keselamatan.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_suppressunsuppress_tooling">Suppress/Unsuppress tooling</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Ketika mesin tidak aktif atau Anda tidak ingin part tertentu
+diproses oleh
+mesin tertentu, gunakan <strong>Sembunyikan Pengaturan Alat</strong> untuk mengecualikan
+part tersebut dari nesting pada mesin tersebut.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/supress.png" alt="Supress Tooling" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Setelah menekan, mengarahkan mouse ke atas instance yang di-tool menampilkan
+pesan seperti: "Tooling suppressed by &lt;User name&gt; on &lt;Date Time&gt;".</p>
+</li>
+<li>
+<p>Suppress tooling menghapus file output untuk mesin dan part tersebut.</p>
+</li>
+<li>
+<p>Gunakan <strong>Tampilkan Pengaturan Alat</strong> untuk mengembalikan status tooling
+untuk part pada mesin tersebut.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unsupress.png" alt="Unsupress Tooling" width="495">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ketika unsuppressed, file output yang bersangkutan dihasilkan lagi.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_ekspor_output">Ekspor Output</a>
+  </li>
+  <li level="1">
+   <a href="#_check_tooling">Check Tooling</a>
+  </li>
+  <li level="1">
+   <a href="#_salin_pengaturan_alat">Salin Pengaturan Alat&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_atur_sebagai_flat_dasar">Atur sebagai Flat Dasar&#8230;&#8203;</a>
+  </li>
+  <li level="2">
+   <a href="#_pemilihan_base_flat_otomatis">Pemilihan base flat otomatis</a>
+  </li>
+  <li level="2">
+   <a href="#_manajemen_base_flat_yang_ditingkatkan">Manajemen base flat yang ditingkatkan</a>
+  </li>
+  <li level="1">
+   <a href="#_atur_ulang_alat">Atur ulang alat…</a>
+  </li>
+  <li level="1">
+   <a href="#_abaikan_kondisi_kegagalan">Abaikan Kondisi Kegagalan</a>
+  </li>
+  <li level="1">
+   <a href="#_suppressunsuppress_tooling">Suppress/Unsuppress tooling</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="toolingvalidation/foldtooling.html">Validasi tooling fold</a></span>
+ <span class="next"><a href="../savingfilters.html">Menyimpan filter</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

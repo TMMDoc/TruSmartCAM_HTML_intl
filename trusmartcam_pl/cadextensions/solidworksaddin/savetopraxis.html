@@ -1,0 +1,513 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Zapisywanie części</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Witamy w TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Instalacja</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Wymagania sprzętowe</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Obsługiwane formaty plików</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Wymagania wstępne</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Instalacja serwera</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Instalacja klienta</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Zmiana licencji</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfiguracja</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Dodaj/Usuń maszynę</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Konfiguracja oprzyrządowania</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Konfiguracja użytkowników</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Język</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiał</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Dodawanie nowego materiału i arkusza</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Eksport/Import materiału</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Zamiana materiału</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mapowanie materiału</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mapowanie stron CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mapowanie pól z CAD (klucze wyszukiwania)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Interfejs użytkownika</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Przepływ pracy</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Biblioteka</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Otwórz</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Importuj części</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Importuj zamówienia</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Import zadań</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Importuj zespoły</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Widok biblioteki</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Części</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Zespoły</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Status części</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Walidacja części</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Panel części</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Filtry części</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Status narzędzi</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Walidacja narzędzi</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Walidacja narzędzi do gięcia</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Walidacja narzędzi tnących</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Walidacja narzędzi do składania</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Panel narzędziowania</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Zapisywanie filtrów</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Zamówienia</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Widok zamówień</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Zadania</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Tworzenie zadania</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Widok zadania</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Panel zadania</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatyczne planowanie</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktywne zagnieżdżanie</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Przepakowywanie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Zarządzanie układem</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Widok układu</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Panel układu</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Nadawca raportów</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Zarządzanie resztkami</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatyczne zarządzanie resztkami</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Ręczne zarządzanie resztkami</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Zagnieżdżanie dwuliniowe</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Przestarzałe</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtry zadań</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Fabryka</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Trasy</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Arkusze</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Użytkownicy</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edycja</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Klienci</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Ustawienia</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Powiadomienia</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Raporty</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Rozszerzenia CAD</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">SolidWorks addin</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="installationsteps.html">Instalacja</a></li>
+      <li><button class="tree blank"></button><a class="active" href="savetopraxis.html">Zapisywanie części</a></li>
+      <li><button class="tree blank"></button><a href="saveassembly.html">Zapisywanie złożenia</a></li>
+      <li><button class="tree blank"></button><a href="partfeasibility.html">Sprawdzanie wykonalności</a></li>
+      <li><button class="tree blank"></button><a href="factorysettings.html">Ustawienia fabryki</a></li>
+      <li><button class="tree blank"></button><a href="miscenhancements.html">Różne ulepszenia</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Rozszerzenia CAD</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">SolidWorks addin</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="savetopraxis.html">Zapisywanie części</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Zapisywanie części</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Uruchom SolidWorks i otwórz część z blachy (.sldprt).</p>
+</div>
+<div class="paragraph">
+<p>Następnie wykonaj poniższe kroki:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Przełącz się na zakładkę TruSmartCAM w SolidWorks, aby uzyskać dostęp do paska narzędzi TruSmartCAM.</p>
+</li>
+<li>
+<p>Kliknij <strong>Zapisz w Praxis</strong> na pasku narzędzi <strong>TruSmartCAM</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>W oknie dialogowym <strong>Zapisz w Praxis</strong> wybierz odpowiedni materiał surowy TruSmartCAM,
+następnie kliknij <strong>OK</strong>, aby przesłać i zapisać część do biblioteki części TruSmartCAM.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/savepraxis.png" alt="Save Praxis" width="850">
+</div>
+</div>
+<div class="paragraph">
+<p>Część zostanie teraz zapisana w TruSmartCAM.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/part.png" alt="Part" width="372">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+TruSmartCAM zawiera kilka przykładowych części znajdujących się w lokalizacji <code>C:\Program
+Files\Metamation\ TruSmartCAM \Samples\Parts</code>. W razie potrzeby możesz ich użyć do celów
+testowych.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_automatyczne_rozpoznawanie_materiału">Automatyczne rozpoznawanie materiału</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ta funkcja automatycznie konwertuje materiały SolidWorks i wartości grubości części
+na odpowiednie materiały surowe TruSmartCAM podczas przesyłania.</p>
+</div>
+<div class="paragraph">
+<p>Aby skonfigurować mapowanie materiałów:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Kliknij <strong>Opcje</strong> na pasku narzędzi <strong>TruSmartCAM</strong>, aby otworzyć okno dialogowe <strong>Opcje</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/mapmaterial.png" alt="Map Material" width="850">
+</div>
+</div>
+</li>
+<li>
+<p>Przejdź do strony <strong>Mapowanie tworzywa</strong>.</p>
+</li>
+<li>
+<p>W lewym panelu wybierz materiał SolidWorks.</p>
+</li>
+<li>
+<p>W prawym panelu wybierz odpowiedni materiał TruSmartCAM.</p>
+</li>
+<li>
+<p>Kliknij <strong>Mapuj</strong>, aby utworzyć mapowanie.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Zmapowana para pojawi się na liście mapowań u dołu.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Aby usunąć mapowanie, zaznacz je i kliknij <strong>Cofnij mapowanie</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ustawienie_tolerancji_grubości">Ustawienie tolerancji grubości</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Wartość tolerancji grubości określa zakres tolerancji, w ramach którego TruSmartCAM
+dopasowuje grubość modelu z blachy z SolidWorks do istniejącej grubości materiału
+surowego w bazie danych TruSmartCAM. Kompensuje niewielkie różnice w grubości modelu
+spowodowane zaokrągleniami projektowymi, konwersjami jednostek itp.</p>
+</div>
+<div class="paragraph">
+<p>Gdy grubość części SolidWorks nie odpowiada dokładnie materiałowi w TruSmartCAM,
+wartość tolerancji zapewnia automatyczny wybór najbliższego dostępnego materiału.</p>
+</div>
+<div class="paragraph">
+<div class="title">Przykład</div>
+<p>Przy nominalnym materiale 2,0 mm i wartości tolerancji 0,05 mm:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM akceptuje każdą grubość modelu SolidWorks między 1,95 mm a 2,05 mm jako
+prawidłowe dopasowanie.</p>
+</li>
+<li>
+<p>Odchylenia poza tym zakresem spowodują wyświetlenie monitu o ręczny wybór materiału
+podczas przesyłania części.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Aby wyświetlić lub zmodyfikować wartość tolerancji:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kliknij <strong>Opcje</strong> na pasku narzędzi <strong>TruSmartCAM</strong>, a następnie przejdź do <strong>Ustawienia różne</strong>, aby
+wyświetlić wartość tolerancji, teraz kliknij <strong>Zapisz w Praxis</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/thicknessfudge.png" alt="Thickness Fudge" width="850">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>W oknie dialogowym <strong>Zapisz w Praxis</strong> kliknij <strong>OK</strong>, część zostanie zapisana w TruSmartCAM.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/configuration.png" alt="Configuration" width="428">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_odczytywanie_niestandardowych_właściwości_części">Odczytywanie niestandardowych właściwości części</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To ustawienie umożliwia TruSmartCAM automatyczne odczytywanie niestandardowych informacji
+o części—takich jak <strong>Material</strong>, <strong>Revision</strong> i innych atrybutów zdefiniowanych przez
+użytkownika—bezpośrednio z plików części SolidWorks.</p>
+</div>
+<div class="paragraph">
+<p>Aby to skonfigurować:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kliknij <strong>Opcje</strong> na pasku narzędzi <strong>TruSmartCAM</strong>, aby otworzyć okno dialogowe <strong>Opcje</strong>,
+a następnie przejdź do <strong>Pola niestandardowe</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/custompart.png" alt="Custom Part" width="850">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Użyj przycisków <strong>Mapuj</strong> i <strong>Cofnij mapowanie</strong>, aby połączyć wymagane pola TruSmartCAM z
+odpowiadającymi im polami Custom lub Configuration w SolidWorks.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Wyświetlane wartości są ładowane z aktualnie aktywnej części SolidWorks.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Po zakończeniu mapowania wybrane właściwości niestandardowe będą
+automatycznie odczytywane z SolidWorks podczas importowania lub aktualizacji części w
+TruSmartCAM, teraz kliknij <strong>Zapisz w Praxis</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Mapowania zdefiniowane tutaj są zapisywane w repozytorium TruSmartCAM i
+automatycznie synchronizowane we wszystkich instalacjach TruSmartCAM SolidWorks w
+sieci.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>W oknie dialogowym <strong>Zapisz w Praxis</strong> kliknij <strong>OK</strong>, część zostanie zapisana w TruSmartCAM.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/default.png" alt="Default" width="428">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_automatyczne_rozpoznawanie_materiału">Automatyczne rozpoznawanie materiału</a>
+  </li>
+  <li level="1">
+   <a href="#_ustawienie_tolerancji_grubości">Ustawienie tolerancji grubości</a>
+  </li>
+  <li level="1">
+   <a href="#_odczytywanie_niestandardowych_właściwości_części">Odczytywanie niestandardowych właściwości części</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="installationsteps.html">Instalacja</a></span>
+ <span class="next"><a href="saveassembly.html">Zapisywanie złożenia</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

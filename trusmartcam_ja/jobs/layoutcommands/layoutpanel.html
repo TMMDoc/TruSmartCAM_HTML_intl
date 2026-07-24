@@ -1,0 +1,704 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>レイアウトパネル</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">TruSmartCAMへようこそ</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">インストール</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">ハードウェア要件</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">サポートされているファイル形式</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">前提条件</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">サーバーインストール</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">クライアントインストール</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">ライセンスの変更</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">設定</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">機械の追加/削除</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">工具設定</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">ユーザー設定</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">言語</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">材料</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">新しい材料とシートの追加</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">材料のエクスポート/インポート</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">材料の置換</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">材料のマッピング</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAMページのマッピング</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">CADからのフィールドマッピング（検索キー）</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">ユーザーインターフェース</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">ワークフロー</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Library</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">パートパネル</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">ツーリングパネル</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">注文</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">注文ビュー</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">ジョブ</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../jobcreation.html">ジョブの作成</a></li>
+    <li><button class="tree blank"></button><a href="../jobview.html">ジョブビュー</a></li>
+    <li><button class="tree blank"></button><a href="../jobpanel.html">ジョブパネル</a></li>
+    <li><button class="tree blank"></button><a href="../jobautoplan.html">自動計画</a></li>
+    <li><button class="tree blank"></button><a href="../jobinteractplan.html">インタラクティブネスティング</a></li>
+    <li><button class="tree blank"></button><a href="../repacking.html">リパッキング</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">ネスト管理</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="nestview.html">レイアウトビュー</a></li>
+      <li><button class="tree blank"></button><a class="active" href="layoutpanel.html">レイアウトパネル</a></li>
+      <li><button class="tree blank"></button><a href="reportsender.html">レポート送信者</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../remnantmanagement/index.html">端材管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../remnantmanagement/autoremnant.html">自動端材管理</a></li>
+      <li><button class="tree blank"></button><a href="../remnantmanagement/manualremnant.html">手動端材管理</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../twinlinenesting.html">ツインラインネスティング</a></li>
+    <li><button class="tree blank"></button><a href="../outdate.html">期限切れ</a></li>
+    <li><button class="tree blank"></button><a href="../jobfilters.html">ジョブフィルター</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD拡張機能</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">インストール</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">パーツの保存</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">アセンブリの保存</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">実行可能性の確認</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">工場設定</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">その他の機能強化</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">奥付</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">ジョブ</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">ネスト管理</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="layoutpanel.html">レイアウトパネル</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>レイアウトパネル</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>このセクションでは、<strong>マシンに送信…</strong>、<strong>マシンから呼び戻す…</strong>、<strong>アウトプットのエクスポート</strong>、<strong>完了としてマーク…</strong>、<strong>パーツの追加…</strong>、<strong>適合させる/コンパクトにする…</strong>、<strong>レイアウトの分割…</strong> など、レイアウトインスタンスを管理するために使用されるレイアウト関連のアクションとその他のオプションについて説明します。</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/layout.png" alt="Layout panel" width="181">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>読み取り専用モードで開いて見ます</strong><br>
+選択したレイアウトを読み取り専用モードで開きます。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+選択したレイアウトの編集を有効にします。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>削除</strong><br>
+選択したレイアウトを削除します。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/openreport.png" alt="Report" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>レポートを見る</strong><br>
+選択したレイアウトの標準レイアウトレポートとラベル固有レポートを開きます。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sendui.png" alt="Send" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>マシンに送信…</strong><br>
+選択したレイアウトを機械に送信し、出力ファイル（fxlyt、NC、レポート、csv）をジョブ出力場所にエクスポートします。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/addui.png" alt="Add" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>パーツの追加…</strong><br>
+レイアウトリパックウィザードを使用して、パッキング効率の低いレイアウトにさらにパーツを追加します。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/adaptui.png" alt="Adapt" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>適合させる/コンパクトにする…</strong><br>
+選択したレイアウトを再ネスティングして、パーツを圧縮し、使用可能な領域を解放します。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/changeui.png" alt="Change" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LTTの変更…</strong><br>
+選択したレイアウトに割り当てられたシートを変更します。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/splitui.png" alt="Split"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>レイアウトの分割…</strong><br>
+選択したレイアウトを2つ以上の個別のレイアウトに分割します。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/renameui.png" alt="RenameUi" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rename layout&#8230;&#8203;</strong><br>
+選択したレイアウトの名前を変更します。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ジョブ</strong> / <strong>前へ</strong> / <strong>次へ</strong> / <strong>パーツ</strong><br>
+親ジョブに移動するか、選択したジョブ内の前または次のレイアウトに移動するか、レイアウトに含まれるパーツに移動します。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sort.png" alt="Filters" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort and filter</strong><br>
+これらのフィルターを使用して、選択したレイアウトと同じ属性を共有する他のレイアウトを表示します：Same Machine、Same Material、Same LTT、Same Priority、Same State、Same Sheet、Same Part、Same Remnant State、またはSame Rolling direction。</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="send-to-machine">マシンに送信…</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>ネストが準備完了（満杯または緊急に必要）になったら、機械に送信できます。</p>
+</li>
+<li>
+<p>ネストを右クリックし、<strong>マシンに送信…</strong> を選択します。</p>
+</li>
+<li>
+<p>ネストにちなんで名前が付けられたフォルダーが自動的に作成されます。</p>
+</li>
+<li>
+<p>出力ファイル（fxlyt、NC、レポート、csv）がJOB出力場所にエクスポートされます。</p>
+</li>
+<li>
+<p>機械に送信されたネストには、青いチェックマークが表示されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/sendtomachine.png" alt="Send to machines" width="1180">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+リリースされると、それらのネストはリパッキングのために再試行されなくなります。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_マシンから呼び戻す">マシンから呼び戻す…</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>出力に検証または更新が必要な場合（たとえば、さらにパーツを追加する場合）：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>エクスポートされたレイアウトを右クリックします。</p>
+</li>
+<li>
+<p><strong>マシンから呼び戻す…</strong> を選択します。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>出力ファイルとフォルダー（fxlyt、NC、レポート、csv）が削除されます。</p>
+</li>
+<li>
+<p>ネストが再び編集可能になります。</p>
+</li>
+<li>
+<p>変更を加えて、再度機械に送信できます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/recallfrommachine.png" alt="Recall from machines" width="1153">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_アウトプットのエクスポート">アウトプットのエクスポート</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>機械に送信されたレイアウト（ネスト）を右クリックし、<strong>アウトプットのエクスポート</strong> をクリックします。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput1.png" alt="Export outputs" width="447">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Export Outputsオプションは、NC、レポート、レイアウトファイルをそれぞれの機械出力フォルダーにエクスポートします。</p>
+</li>
+<li>
+<p>このオプションは、レイアウトの現在の単位設定でNCファイルを再生成します。</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Export Outputsは、完了したレイアウトとリパッキングのキューで待機しているレイアウトでは使用できません。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mark-complete">Mark complete</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>ネストが機械で処理されたら、ネストを右クリックして <strong>完了としてマーク…</strong> を選択します。</p>
+</li>
+<li>
+<p>複数のネストを選択し、同時に完了としてマークすることができます。</p>
+</li>
+<li>
+<p>ネストが完了としてマークされると：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>グレーアウトされ、リストの最後に移動され、緑のチェックマークが表示されます。</p>
+</li>
+<li>
+<p>レイアウトはアクティブなレイアウトリストから削除されます。</p>
+</li>
+<li>
+<p>パーツとジョブのステータスが更新され、処理された数量が完了状態に移動します。</p>
+</li>
+<li>
+<p>そのレイアウトの出力ファイルは、重複使用を避けるために機械出力場所から削除されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/markcomplete1.png" alt="Mark complete" width="1101">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="add-parts">パーツの追加…</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart1.png" alt="Add parts" width="997">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>このオプションを使用して、比較的パッキング効率の低いレイアウトにさらにパーツを追加します。インタラクティブネスティングと同様に、これはウィザード駆動のオプションであり、単一または複数のレイアウトで同時に使用できます。</p>
+</li>
+<li>
+<p>このオプションを使用すると、TruSmartCAMはメイン作業領域にレイアウトリパックウィザードをマウントします。<kbd>Ctrl</kbd> キーを押しながら、レイアウトにパックする1つ以上のパーツを選択し、<strong>次へ</strong> を押します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart2.png" alt="Part selection" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>選択されたパーツは、編集可能な数量列とともに次のステップに表示されます。必要に応じて、<strong>Update Qty</strong> フィールドでパーツの数量を更新します。ネスティングに進むには <strong>次へ</strong> をクリックします。数量は増やすことはできますが、減らすことはできません。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart3.png" alt="Update quantity" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>すべてのレイアウトは個別にネストされ、ネストされた結果は新しくパックされたパーツが配置された状態で表示されます。レイアウトを選択すると、既存のすべてのレイアウトパーツが表示されます。リパッキング中に新しいパーツが配置されなかった場合、結果は自動的に破棄されます。複数のコピーを持つレイアウトは、リパッキング後に異なるパターンになる場合があります。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart4.png" alt="Repack result" width="2200">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="adapt-compact">適合させる/コンパクトにする…</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>このウィザードベースのコマンドは、元の機械がダウンしている場合や、機械のワークロードをバランスさせる必要がある場合に、レイアウトを1つの機械から別の機械に適応させるために使用できます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt1.png" alt="Adapt compact" width="737">
+</div>
+</div>
+</li>
+<li>
+<p>計画されたシートが在庫切れで、レイアウトを別の利用可能なシートで再計画する必要がある場合に使用できます。</p>
+</li>
+<li>
+<p>材料をより効率的に使用するために、小さなシートにパックされたレイアウトを大きなシートにマージできます。</p>
+</li>
+<li>
+<p>大きなシート在庫が利用できない場合、大きなシートにパックされたレイアウトを小さなシートに分割できます。</p>
+</li>
+<li>
+<p>複数のレイアウト（異なる機械からのものでも）をマージすることで、パッキング効率を向上させることができます。</p>
+</li>
+<li>
+<p>これを使用するには、1つ以上のレイアウトを選択し、<strong>適合させる/コンパクトにする…</strong> をクリックして、作業領域にウィザードを開きます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt2.png" alt="Layouts window" width="1902">
+</div>
+</div>
+</li>
+<li>
+<p>左側のペインには選択されたすべてのレイアウトが表示され、Partsペインにはレイアウトパーツが表示されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt3.png" alt="Layouts window" width="1910">
+</div>
+</div>
+</li>
+<li>
+<p>ターゲット機械とシート材料を選択し、<strong>次へ</strong> をクリックして再ネスティングを実行します。</p>
+</li>
+<li>
+<p>新しいネスト結果が結果ペインに表示されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt4.png" alt="Layouts window" width="1901">
+</div>
+</div>
+</li>
+<li>
+<p><strong>次へ</strong> をクリックして、適応または圧縮されたレイアウトを保存します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt5.png" alt="Layouts window" width="1902">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_レイアウトの分割">レイアウトの分割</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>レイアウトの分割…</strong> オプションを使用すると、ツーリングやネスティングをやり直すことなく、数量を変更して既存のレイアウトを複数のレイアウトに分割できます。</p>
+</div>
+<div class="paragraph">
+<p>この機能は、次のシナリオで特に役立ちます：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>合計数量の一部を直ちに生産し、残りの数量を後で生産するようにスケジュールする必要がある場合。</p>
+</li>
+<li>
+<p>ワークフローとリソースの利用を最適化するために、生産要件を複数のシフトまたは日にわたって分散する必要がある場合。</p>
+</li>
+<li>
+<p>特定の機械が一時的に利用できないか占有されており、現在の生産制約に対応するためにレイアウトを調整する必要がある場合。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>レイアウトを分割するには、次の手順を実行します：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Layoutsビューで、必要なレイアウトを選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/splitlayout.png" alt="Split layout" width="264">
+</div>
+</div>
+</li>
+<li>
+<p><strong>レイアウトの分割…</strong> をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/layoutpanel.png" alt="Layout panel" width="155">
+</div>
+</div>
+</li>
+<li>
+<p><strong>新規コピー</strong> に必要な値を入力します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/newcopies.png" alt="New copies" width="389">
+</div>
+</div>
+</li>
+<li>
+<p><strong>OK</strong> をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/twolayout.png" alt="Two layouts" width="547">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>選択したレイアウトは、調整された数量を持つ2つのレイアウトに分割されます。</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#send-to-machine">マシンに送信…</a>
+  </li>
+  <li level="1">
+   <a href="#_マシンから呼び戻す">マシンから呼び戻す…</a>
+  </li>
+  <li level="1">
+   <a href="#_アウトプットのエクスポート">アウトプットのエクスポート</a>
+  </li>
+  <li level="1">
+   <a href="#mark-complete">Mark complete</a>
+  </li>
+  <li level="1">
+   <a href="#add-parts">パーツの追加…</a>
+  </li>
+  <li level="1">
+   <a href="#adapt-compact">適合させる/コンパクトにする…</a>
+  </li>
+  <li level="1">
+   <a href="#_レイアウトの分割">レイアウトの分割</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="nestview.html">レイアウトビュー</a></span>
+ <span class="next"><a href="reportsender.html">レポート送信者</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

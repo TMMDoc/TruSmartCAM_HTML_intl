@@ -1,0 +1,607 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Assembly</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Καλώς ήρθατε στο TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Εγκατάσταση</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Απαιτήσεις υλικού</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Υποστηριζόμενες μορφές αρχείων</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Προαπαιτούμενα</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Εγκατάσταση Server</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Εγκατάσταση Client</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Αλλαγή άδειας χρήσης</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Ρύθμιση Παραμέτρων</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Προσθήκη/Αφαίρεση μηχανής</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Ρύθμιση εργαλείων</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Διαμόρφωση χρηστών</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Γλώσσα</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Υλικό</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Προσθήκη νέου υλικού και φύλλου</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Εξαγωγή/Εισαγωγή υλικού</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Αντικατάσταση υλικού</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Αντιστοίχιση υλικού</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Αντιστοίχιση σελίδων CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Αντιστοίχιση πεδίων από CAD (κλειδιά αναζήτησης)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Η διεπαφή χρήστη</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Ροή εργασίας</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Βιβλιοθήκη</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Εισαγωγή parts</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Εισαγωγή παραγγελιών</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Εισαγωγή jobs</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Προβολή βιβλιοθήκης</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a class="active" href="assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Κατάσταση part</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Επικύρωση part</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Πίνακας part</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Φίλτρα part</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Κατάσταση tooling</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Επικύρωση tooling</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Επικύρωση bend tooling</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Επικύρωση cut tooling</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Επικύρωση fold tooling</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Πίνακας tooling</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Αποθήκευση φίλτρων</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Παραγγελίες</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Προβολή παραγγελιών</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Εργασίες</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Δημιουργία εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Προβολή εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Πίνακας εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Αυτόματος σχεδιασμός</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Διαδραστική τοποθέτηση</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Επανασυσκευασία</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Διαχείριση τοποθέτησης</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Προβολή διάταξης</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Πίνακας διάταξης</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Αποστολέας αναφοράς</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Διαχείριση υπολειμμάτων</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Αυτόματη διαχείριση υπολειμμάτων</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Χειροκίνητη διαχείριση υπολειμμάτων</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Τοποθέτηση διπλής γραμμής</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Μη ενημερωμένο</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Φίλτρα εργασίας</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Επεκτάσεις CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Εγκατάσταση</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Αποθήκευση εξαρτημάτων</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Αποθήκευση συναρμολόγησης</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Έλεγχος σκοπιμότητας</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Ρυθμίσεις εργοστασίου</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Διάφορες βελτιώσεις</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Βιβλιοθήκη</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Προβολή βιβλιοθήκης</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="assemblyview.html">Assembly</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Assembly</h1>
+<div class="sect1">
+<h2 id="_δημιουργία_στατικών_nests_από_assembly">Δημιουργία στατικών nests από assembly</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Τα στατικά nests μπορούν να δημιουργηθούν για ένα assembly χρησιμοποιώντας τον Interactive
+nesting wizard.
+Αυτά τα nests είναι σταθερά layouts που σχετίζονται μόνο με το επιλεγμένο assembly.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Μεταβείτε στην προβολή <strong>συγκρ.</strong>.</p>
+</li>
+<li>
+<p>Κάντε δεξί κλικ στο απαιτούμενο assembly και επιλέξτε
+<strong>Δημιουργία κατανομών&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Ανοίγει ο Interactive Nesting wizard.</p>
+</li>
+<li>
+<p>Από προεπιλογή, ο interactive nesting wizard μεταβαίνει στη
+σελίδα <strong>Επιλογή μηχανής &amp; υλικού</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyinteractive.png" alt="Machine and material" width="950">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Οι μηχανές εμφανίζονται με έγχρωμες μπάρες που υποδεικνύουν το διαθέσιμο φορτίο παραγωγής:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Πράσινη μπάρα: Προγραμματισμένες ώρες</p>
+</li>
+<li>
+<p>Γκρι μπάρα: Διαθέσιμες ώρες (από μια βάρδια 8 ωρών)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Κάτω από κάθε μηχανή, τα επιλεγμένα Parts ομαδοποιούνται με το Raw-Material τους
+(Parts/Total Quantity).</p>
+</li>
+<li>
+<p>Εάν ένα part δεν έχει έγκυρη λύση tooling για μια μηχανή, το part και
+το υλικό αγνοούνται για επεξεργασία για τη δεδομένη μηχανή.</p>
+</li>
+<li>
+<p>Εάν ένα raw material επιλεγεί για μια μηχανή, δεν θα είναι διαθέσιμο για άλλες
+μηχανές.</p>
+</li>
+<li>
+<p>Μόλις οριστεί το σχέδιο nest μηχανής, επιλέξτε το προτιμώμενο φύλλο και
+παρακάμψτε τις παραμέτρους φύλλου όπως <strong>Προτεραιότητα</strong>,
+<strong>Ποσότητα</strong>, <strong>Περιθώρια μεταλλικής πλάκας</strong>, κ.λπ.</p>
+</li>
+<li>
+<p>Μπορείτε να φιλτράρετε φύλλα για να εμφανίσετε <strong>Όλες οι μεταλλικές πλάκες</strong>,
+<strong>Βασικές μεταλλικές πλάκες</strong>, ή
+<strong>Υπολειμματικές μεταλλικές πλάκες</strong>. Κάντε κλικ στο <strong>Επόμενο</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Δεν είναι δυνατή η αύξηση των ποσοτήτων σε αυτό το στάδιο. Μπορείτε
+να κρατήσετε την ίδια με την ποσότητα αποθέματος φύλλου ή να τη μειώσετε και
+να ελέγξετε τα αποτελέσματα nesting.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Το <strong>Ενημέρωση ποσότ.</strong> εμφανίζεται στο παράθυρο Interactive nesting plan.</p>
+</li>
+<li>
+<p>Από προεπιλογή, το <strong>Επιλογή όλων (F5)</strong> περιλαμβάνει όλα τα parts για
+nesting, ή μπορείτε να επιλέξετε χειροκίνητα parts προτεραιότητας και να προσαρμόσετε τις ποσότητες part.
+Κάντε κλικ στο <strong>Επόμενο</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyquantity.png" alt="Update quantity">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Το nesting ξεκινά και τα parts που τοποθετήθηκαν σε φύλλο ενημερώνονται με κατάσταση μπλε χρώματος.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyresult.png" alt="Nesting result">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Το φορτίο παραγωγής της μηχανής ενημερώνεται με βάση το αποτέλεσμα nest.</p>
+</li>
+<li>
+<p>Εάν κάποια parts παραμένουν μη τοποθετημένα, το μήνυμα
+<strong>Ορισμένα εξαρτήματα παραμένουν μη κατανεμημένα</strong> εμφανίζεται - αυτά τα parts παραμένουν
+στην αρχική εργασία.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ένα part μπορεί να παραμείνει μη τοποθετημένο εάν δεν υπάρχει διαθέσιμο κατάλληλο φύλλο.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Τα στατικά Nests μπορούν να επεξεργαστούν για να συμπεριλάβουν μη τοποθετημένα parts:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Επιλέξτε το layout όπου θέλετε να εισαγάγετε μη τοποθετημένα parts και κάντε check
+out για επεξεργασία.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblylayout.png" alt="Selected layout">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ανοίγει το TecZone. Κάντε κλικ στο <strong>_Επιλογή</strong> ή
+<strong>Επιλογή_όλων</strong> για να επιλέξετε μη τοποθετημένα parts από το
+γονικό assembly.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/addnest.png" alt="Add unnested parts" width="864">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Τακτοποιήστε το part στο layout όπως απαιτείται.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unnest.png" alt="Unnested part placement" width="715">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Τα δημιουργημένα nests ονομάζονται αυτόματα με το όνομα του γονικού assembly για εύκολη
+αναγνώριση.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Τα στατικά nests δεν μπορούν να περιέχουν parts από άλλα assemblies. Η επιτρεπόμενη ανάμειξη
+assembly nests θα εμπόδιζε την απελευθέρωση ενός assembly χωρίς να απελευθερωθούν τα
+άλλα, επομένως η ανάμειξη απαγορεύεται από το σχεδιασμό.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_μη_μεταλλικά_εξαρτήματα_φύλλου">Μη μεταλλικά εξαρτήματα φύλλου</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Όταν εισάγεται ένα assembly, τα μεταλλικά parts φύλλου εξάγονται και προστίθενται σε
+assemblies στη Βιβλιοθήκη Part.</p>
+</li>
+<li>
+<p>Τα μη μεταλλικά εξαρτήματα φύλλου διαχωρίζονται και προστίθενται στα
+<strong>Στοιχεία</strong>.</p>
+</li>
+<li>
+<p>Το assembly προστίθεται στη Βιβλιοθήκη Assembly και το BOM του
+(Bill of Materials) περιέχει τόσο parts όσο και components.</p>
+</li>
+<li>
+<p>Εάν ένα part έχει ήδη εισαχθεί ως μεταλλικό part φύλλου, το σύστημα ενημερώνει
+την υπάρχουσα καταχώριση και αφαιρεί διπλότυπα από τη Βιβλιοθήκη Part.</p>
+</li>
+<li>
+<p>Η επιλογή ενός assembly εμφανίζει τόσο parts όσο και components, με ποσότητες component
+που εμφανίζονται κάτω από την εικόνα component (μετρήστε επιλεγμένο assembly component και
+συνολικό μέτρηση component).</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/components.png" alt="Assembly components" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Τα tooltips των components εμφανίζουν το όνομα, το υλικό και το μέγεθος.
+Τα components αποκλείονται κατά την παραγωγή - δεν τοποθετούνται και δεν
+δημιουργούνται φύλλα για components.</p>
+</li>
+<li>
+<p>Δείγματα assemblies και components είναι διαθέσιμα στο:
+C:\Program Files\Metamation\Praxis\Samples\Assys\Components, τα οποία μπορούν
+να χρησιμοποιηθούν για τη δοκιμή εισαγωγής component και ροών εργασίας assembly.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_δημιουργία_job_από_assembly">Δημιουργία job από assembly</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Κάντε δεξί κλικ στο assembly, κάντε κλικ στο <strong>Νέο&#8230;&#8203;</strong>, και στη συνέχεια
+<strong>Εργασία</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/newassemblyjob.png" alt="Create new job" width="760">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Στο διάλογο New Job, ορίστε το πλήθος assembly, κάντε κλικ στο <strong>OK</strong>,
+και στη συνέχεια ενημερώστε τις λεπτομέρειες job (όπως ημερομηνία παράδοσης και προτεραιότητα) όπως απαιτείται.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/riegelwindow.png" alt="New job dialog" width="369">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Το σύστημα δημιουργεί ένα job από το assembly και αντιγράφει στατικά nests ως
+job nests, ενημερώνοντας το πλήθος φύλλων. Τα αντιγραμμένα nests προηγούνται με το
+job ID.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblycreated.png" alt="Assembly job created" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Τα job nests μπορούν να επεξεργαστούν ή να διαγραφούν χωρίς να επηρεαστούν τα αρχικά
+στατικά nests.</p>
+</li>
+<li>
+<p>Τα job nests μπορούν να επανασυσκευαστούν χρησιμοποιώντας <strong>Προσαρμογή/Συμπίεση&#8230;&#8203;</strong> ή
+<strong>Προσθήκη εξαρτημάτων&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Για λεπτομερή βήματα, δείτε
+<a href="../../jobs/layoutcommands/layoutpanel.html#adapt-compact">Adapt/Compact</a> και
+<a href="../../jobs/layoutcommands/layoutpanel.html#add-parts">Add parts</a>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Εάν ένα part δεν εμφανίζεται σε nest, ελέγξτε το διάλογο επεξεργασίας nest - μπορείτε
+να εισαγάγετε μη τοποθετημένα parts χειροκίνητα.</p>
+</div>
+<div class="paragraph">
+<p>Χρησιμοποιήστε αποθηκευμένες αναζητήσεις και φίλτρα για να βρείτε γρήγορα parts σε πολλαπλά assemblies.</p>
+</div>
+<div class="paragraph">
+<p>Use clear, descriptive assembly and nest names to avoid confusion when
+copying nests into jobs.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_δημιουργία_στατικών_nests_από_assembly">Δημιουργία στατικών nests από assembly</a>
+  </li>
+  <li level="1">
+   <a href="#_μη_μεταλλικά_εξαρτήματα_φύλλου">Μη μεταλλικά εξαρτήματα φύλλου</a>
+  </li>
+  <li level="1">
+   <a href="#_δημιουργία_job_από_assembly">Δημιουργία job από assembly</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partview.html">Parts</a></span>
+ <span class="next"><a href="../partstate/index.html">Κατάσταση part</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

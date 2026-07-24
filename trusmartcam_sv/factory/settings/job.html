@@ -1,0 +1,456 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Job</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Välkommen till TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hårdvarukrav</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Format som stöds</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Förutsättningar</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Serverinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Klientinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Ändra licens</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfiguration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Lägg till/ta bort maskin</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Ställ in verktyg</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Konfigurera användare</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Språk</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Lägg till nytt material och plåt</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Exportera/importera material</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Ersätt material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mappa material</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mappa CAM-sidor</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mappa fält från CAD (uppslagningsnycklar)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Användargränssnittet</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Arbetsflöde</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Bibliotek</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Öppna</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Importera delar</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Importera order</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Importera jobb</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Importera monteringar</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Biblioteksvy</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Delar</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Montering</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Delstatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Delvalidering</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Delpanel</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Delfilter</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Verktygsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Verktygningsvalidering</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Böjverktygningsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Skärverktygningsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Vikverktygningsvalidering</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Verktygspanel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Spara filter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Ordrar</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Ordervyer</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Jobb</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Skapa jobb</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Jobbvy</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Jobbpanel</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Autoplan</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktiv häckning</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Ompackning</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Häckhantering</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Layoutvy</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Layoutpanel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Rapportavsändare</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Resthantering</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatisk resthantering</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manuell resthantering</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Twinline-häckning</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Inaktuell</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Jobbfilter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Factory</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../customers.html">Customers</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Settings</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a class="active" href="job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD-tillägg</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Spara delar</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Spara sammansättning</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Kontrollera genomförbarhet</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Fabriksinställningar</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Diverse förbättringar</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Factory</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Settings</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="job.html">Job</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Job</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/job.png" alt="Job settings" width="814">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_utdatainställningar">Utdatainställningar</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Spara layout NC</strong> - Aktivera detta alternativ för att layout-
+NC och rapporter ska sparas.</p>
+</div>
+<div class="paragraph">
+<p><strong>Spara layoutfil- och rapporter</strong> - Aktivera detta alternativ för att layoutfilen
+ska sparas.</p>
+</div>
+<div class="paragraph">
+<p><strong>Utdata simuleringsförhandsgranskning i rapporter</strong> - Aktivera
+detta alternativ för att generera förhandsvisning av verktygningssimulering tillsammans med andra
+utdata. Detta är en kort GIF-animering för laser/punch-verktygsuppsättning.</p>
+</div>
+<div class="paragraph">
+<p><strong>Radera inte programutdata när layout/jobb är slutfört</strong> - Att aktivera detta alternativ hoppar över raderingsoperationen för
+programutdata när ett jobb/layout markeras som slutfört.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nestinginställningar">Nestinginställningar</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Blanda detaljer från olika jobb</strong> - Stöd för blandat
+läge för nesting. Delar från flera jobb ska nestas tillsammans för bättre
+packningseffektivitet.</p>
+</div>
+<div class="paragraph">
+<p><strong>Frige inte layouter automatiskt</strong> - Detta kommer att stoppa
+layouter från att vara tillgängliga för produktion tills alla layouter är i ett släppt
+tillstånd.</p>
+</div>
+<div class="paragraph">
+<p><strong>Omnesting förpackning avstängning</strong> - Detta värde
+används för att avgöra om en nestad layout hålls i godkännandekön och
+nestas om igen när nya delar planeras eller om de släpps för produktion
+och relaterade utdata exporteras till utdatamappen.</p>
+</div>
+<div class="paragraph">
+<p><strong>Prefix för interaktivt plåtnamn</strong> - Detta
+avsnitt används för att stödja interaktiv nesting där användaren har mer kontroll
+över delarna som nestas och nestresultatet. Använd ett namngivningsschema som skiljer sig
+från automatisk nesting för interaktivt nestade layouter.</p>
+</div>
+<div class="paragraph">
+<p><strong>Uppdatera plåtlager på nesting frisläpp/lås</strong> - Om
+detta alternativ är aktiverat kommer plåtlagret att uppdateras när en nest skickas till
+en maskin. Att återkalla nesten från maskinen kommer också att returnera plåten till
+lagret.</p>
+</div>
+<div class="paragraph">
+<p><strong>Automatisera restlagerhantering</strong> - När denna växel
+är vald automatiserar programvaran restlagerhanteringen. Om den inte
+är vald blir resthanteringen interaktiv.</p>
+</div>
+<div class="paragraph">
+<p><strong>Autouppdatera föråldrade layouter</strong> - När
+markerad uppdatera programvaran alla ui:EGTag.SelectOutOfDate[Out-of-date
+Layouts] länkade till en del efter att dess skärlösningar har beräknats.</p>
+</div>
+<div class="paragraph">
+<p><strong>Automatisera TwinLine-nesting</strong> - Markera detta alternativ för att aktivera
+twin-line-automatisering.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_inställningar_för_hämta_arbetsflöde">Inställningar för hämta arbetsflöde</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Använd 'Hämta arbetsflöde'</strong> - Detta alternativ är användbart för
+användare som behöver ett mycket autonomt planerings- och nestingssystem. När det är aktiverat
+planerar TruSmartCAM nesting på begäran.</p>
+</div>
+<div class="paragraph">
+<p><strong>Nesting per station</strong> - Detta värde används för att ställa in hur många
+layouter per station som ska skapas.</p>
+</div>
+<div class="paragraph">
+<p><strong>Max. plåtar per nesting</strong> - Detta värde används för att
+kontrollera maximalt plåtantal mot den unika nesten. Så till exempel, om
+det finns en order med en stor del (som fyller hela plåten), behövd i
+stora kvantiteter (säg 500) - skapar TruSmartCAM inte längre en enda nest med 500
+kopior i pull-läge. Istället skapas 10 kopior per nest där 10 är
+max.</p>
+</div>
+<div class="paragraph">
+<p><strong>Bockningsprogram per station</strong> - Detta värde används för att ställa in hur många bockningsprogram per station som ska skapas.</p>
+</div>
+<div class="paragraph">
+<p><strong>Markera uppgiften som klar när programutdata tas bort</strong> -
+Aktivera detta alternativ för att en layout ska markeras Done när
+utdata tas bort från målutdatadestinationen.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_importinställningar_för_kalkylblad">Importinställningar för kalkylblad</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Kataloger för CAD-sökning</strong> - TruSmartCAM försöker
+ladda delposten som nämns i den importerade CSV-filen från delbiblioteket.
+Om delen inte finns tillgänglig i delbiblioteket försöker den dock
+hämta delarna från uppslagskataloger baserat på ordningen för kataloger som ställts in
+i denna dialogruta.</p>
+</div>
+<div class="paragraph">
+<p><strong>Använd rekursiv CAD-sökning</strong> - Aktivera detta alternativ för att
+sökningen ska upprepas för efterföljande resultat.</p>
+</div>
+<div class="paragraph">
+<p><strong>Skapa en bockdetalj för saknade CAD-filer</strong> - Om
+delar inte finns i TruSmartCAM-biblioteket eller uppslagskatalogerna kommer TruSmartCAM
+att skapa en tom del för de saknade delarna.</p>
+</div>
+<div class="paragraph">
+<p><strong>Visa inte dialogen Nya jobb om kalkylbladet inte har några fel</strong> -
+Om CSV-posterna är rena dvs. ingen avvikelse av data
+från DB eller alla fält är korrekt listade kommer TruSmartCAM inte att visa jobb-
+översiktsfönstret och kommer att behandla jobbet så snart CSV-filen importeras eller
+släpps.</p>
+</div>
+<div class="paragraph">
+<p><strong>Prioritera råmaterialkolumen framför material + tjocklek</strong> -
+ Stödda kalkylbladstyper:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Mönster 1: PartName, Quantity, DueDate, Priority, RawMaterial</p>
+</li>
+<li>
+<p>Mönster 2: PartName, Quantity, DueDate, Priority, Material, Thickness</p>
+</li>
+<li>
+<p>Mönster 3: PartName, Quantity, DueDate, Priority, Material, Thickness,
+RawMaterial</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Om detta alternativ inte är markerat kommer Mönster 1 att betraktas som standard
+kalkylbladstyp. Vi stöder också Mönster 3 om CSV-formatet är av typ
+Mönster 3.</p>
+</div>
+<div class="paragraph">
+<p>Om detta alternativ är markerat och CSV är av typ Mönster 2 kommer TruSmartCAM att
+bestämma Raw Material från Material- och Thickness-fälten från CSV.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_utdatainställningar_för_kalkylblad">Utdatainställningar för kalkylblad</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Exportera rapport slutförda jobb/slutförd layout (</strong>.csv)* -
+Markera detta alternativ för att aktivera CSV-export när en Layout eller Job är klar. De
+färdiga rapporterna sparas på Reports-destinationen som anges i Factory
+&#8594; Settings &#8594; Reports-inställningar.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_utdatainställningar">Utdatainställningar</a>
+  </li>
+  <li level="1">
+   <a href="#_nestinginställningar">Nestinginställningar</a>
+  </li>
+  <li level="1">
+   <a href="#_inställningar_för_hämta_arbetsflöde">Inställningar för hämta arbetsflöde</a>
+  </li>
+  <li level="1">
+   <a href="#_importinställningar_för_kalkylblad">Importinställningar för kalkylblad</a>
+  </li>
+  <li level="1">
+   <a href="#_utdatainställningar_för_kalkylblad">Utdatainställningar för kalkylblad</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="watch.html">Watch</a></span>
+ <span class="next"><a href="reports.html">Reports</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

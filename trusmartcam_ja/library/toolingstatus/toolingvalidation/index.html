@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../../img/praxis-icon.png">
+  <title>Tooling validation</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">TruSmartCAMへようこそ</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../installation/index.html">インストール</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../installation/hardwarerequirement.html">ハードウェア要件</a></li>
+    <li><button class="tree blank"></button><a href="../../../installation/importformats.html">サポートされているファイル形式</a></li>
+    <li><button class="tree blank"></button><a href="../../../installation/prerequisites.html">前提条件</a></li>
+    <li><button class="tree blank"></button><a href="../../../installation/serverinstallation.html">サーバーインストール</a></li>
+    <li><button class="tree blank"></button><a href="../../../installation/clientinstallation.html">クライアントインストール</a></li>
+    <li><button class="tree blank"></button><a href="../../../installation/changelic.html">ライセンスの変更</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../configuration/index.html">設定</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../configuration/setupmachine.html">機械の追加/削除</a></li>
+    <li><button class="tree blank"></button><a href="../../../configuration/setuptooling.html">工具設定</a></li>
+    <li><button class="tree blank"></button><a href="../../../configuration/configureusers.html">ユーザー設定</a></li>
+    <li><button class="tree blank"></button><a href="../../../configuration/language.html">言語</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../configuration/addmaterial/index.html">材料</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../configuration/addmaterial/addnew.html">新しい材料とシートの追加</a></li>
+      <li><button class="tree blank"></button><a href="../../../configuration/addmaterial/exportimport.html">材料のエクスポート/インポート</a></li>
+      <li><button class="tree blank"></button><a href="../../../configuration/addmaterial/replacematerial.html">材料の置換</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../configuration/mapbendpages.html">材料のマッピング</a></li>
+    <li><button class="tree blank"></button><a href="../../../configuration/mapcampages.html">CAMページのマッピング</a></li>
+    <li><button class="tree blank"></button><a href="../../../configuration/cadmapfields.html">CADからのフィールドマッピング（検索キー）</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../userinterface.html">ユーザーインターフェース</a></li>
+  <li><button class="tree blank"></button><a href="../../../workflow.html">ワークフロー</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">Library</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../../open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../../open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../../open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../../libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../../partstate/partpanel.html">パートパネル</a></li>
+      <li><button class="tree blank"></button><a href="../../partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">Tooling status</a>
+     <ul>
+      <li>
+       <button class="tree open"></button>
+       <a class="active" href="index.html">Tooling validation</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingpanel.html">ツーリングパネル</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../orders/index.html">注文</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../orders/ordersview.html">注文ビュー</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../jobs/index.html">ジョブ</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../jobs/jobcreation.html">ジョブの作成</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/jobview.html">ジョブビュー</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/jobpanel.html">ジョブパネル</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/jobautoplan.html">自動計画</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/jobinteractplan.html">インタラクティブネスティング</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/repacking.html">リパッキング</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../jobs/layoutcommands/index.html">ネスト管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../jobs/layoutcommands/nestview.html">レイアウトビュー</a></li>
+      <li><button class="tree blank"></button><a href="../../../jobs/layoutcommands/layoutpanel.html">レイアウトパネル</a></li>
+      <li><button class="tree blank"></button><a href="../../../jobs/layoutcommands/reportsender.html">レポート送信者</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../jobs/remnantmanagement/index.html">端材管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../jobs/remnantmanagement/autoremnant.html">自動端材管理</a></li>
+      <li><button class="tree blank"></button><a href="../../../jobs/remnantmanagement/manualremnant.html">手動端材管理</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../jobs/twinlinenesting.html">ツインラインネスティング</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/outdate.html">期限切れ</a></li>
+    <li><button class="tree blank"></button><a href="../../../jobs/jobfilters.html">ジョブフィルター</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../cadextensions/index.html">CAD拡張機能</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../cadextensions/solidworksaddin/installationsteps.html">インストール</a></li>
+      <li><button class="tree blank"></button><a href="../../../cadextensions/solidworksaddin/savetopraxis.html">パーツの保存</a></li>
+      <li><button class="tree blank"></button><a href="../../../cadextensions/solidworksaddin/saveassembly.html">アセンブリの保存</a></li>
+      <li><button class="tree blank"></button><a href="../../../cadextensions/solidworksaddin/partfeasibility.html">実行可能性の確認</a></li>
+      <li><button class="tree blank"></button><a href="../../../cadextensions/solidworksaddin/factorysettings.html">工場設定</a></li>
+      <li><button class="tree blank"></button><a href="../../../cadextensions/solidworksaddin/miscenhancements.html">その他の機能強化</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../impressum.html">奥付</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">Library</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">Tooling status</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Tooling validation</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Tooling validation</h1>
+<div class="paragraph">
+<p>このセクションでは、TruSmartCAM内のパーツのツーリング情報にアクセスおよび変更する方法について説明します。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>任意のパーツタイルを右クリックしてパーツパネルを開き、ツーリングオプションにアクセスします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/tooling.png" alt="Tooling" width="511">
+</div>
+</div>
+</li>
+<li>
+<p>*ツーリング*をクリックして、最初に利用可能なツーリング済みインスタンスに切り替えます。</p>
+</li>
+<li>
+<p>または、ツーリング済みインスタンスを直接クリックして、機械の詳細とツーリングオプションを表示します。</p>
+</li>
+<li>
+<p><span class="image"><img src="img/document.png" alt="View" width="18"></span>を使用して*読み取り専用モードで開いて見ます*。</p>
+</li>
+<li>
+<p><span class="image"><img src="img/edit.png" alt="Edit" width="18"></span>を使用して*文書をチェックアウトして編集します*。</p>
+</li>
+<li>
+<p>選択したツーリング済みインスタンスがTecZoneまたはMetaCAMで開きます。</p>
+</li>
+<li>
+<p>手動ツーリングチェックを実行し、必要な変更を行います。</p>
+</li>
+<li>
+<p>保存しようとすると、*Unsaved Changes*ダイアログが表示され、編集を確認するよう促します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/unsave.png" alt="Unsave" width="368">
+</div>
+</div>
+</li>
+<li>
+<p>*Yes*をクリックして保存を続行します。</p>
+</li>
+<li>
+<p>システムは保存後にツーリング検証を再度実行します。</p>
+</li>
+<li>
+<p>エラーがない場合、TruSmartCAMに変更を保存するオプションが表示されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/save.png" alt="Save" width="436">
+</div>
+</div>
+</li>
+<li>
+<p>ツーリングエラーが見つかった場合、エラーメッセージが表示されます：</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/errorsave.png" alt="Error Save" width="436">
+</div>
+</div>
+</li>
+<li>
+<p>保存後、パーツのツーリング状態がパートライブラリで更新されます。</p>
+</li>
+<li>
+<p>ツーリング済みインスタンスの緑色は、チェックインされていることを示します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/checkedout.png" alt="Checkout" width="256">
+</div>
+</div>
+</li>
+<li>
+<p>ツーリング済みインスタンスの作成者は、最後に編集した人に更新されます。</p>
+</li>
+<li>
+<p>*ユーザー編集*フィールドは、ツーリング済みインスタンスが手動で変更されたかどうかを示します。ユーザーがインスタンスをチェックアウトして変更を行うと、保存時にこのフィールドは自動的にはいに設定されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/useredit.png" alt="User edit" width="379">
+</div>
+</div>
+</li>
+<li>
+<p>パーツが現在編集中の場合、そのタイルにユーザーアイコンが表示されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/checkout.png" alt="check" width="265">
+</div>
+</div>
+</li>
+<li>
+<p>タイルの上にマウスを置くと、チェックアウトした人とチェックアウトされた時刻が表示されます。</p>
+</li>
+<li>
+<p>パーツがチェックアウトされている間、同じツーリング済みインスタンスの<span class="image"><img src="img/edit.png" alt="Edit" width="18"></span> *文書をチェックアウトして編集します*オプションは無効になり、<span class="image"><img src="img/canceledit.png" alt="Cancel" width="18"></span> *チェックアウトをキャンセルする*オプションが有効になります。</p>
+</li>
+</ul>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="../index.html">Tooling status</a></span>
+ <span class="next"><a href="bendtooling.html">Bend tooling validation</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

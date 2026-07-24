@@ -1,0 +1,495 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>保存零件</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">欢迎使用 TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">安装</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">硬件要求</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">支持的文件格式</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">先决条件</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">客户端安装</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">更改许可证</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">配置</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">添加/删除设备</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">设置工具</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">配置用户</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">语言</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">材料</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">添加新材料和板材</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">导出/导入材料</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">替换材料</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">映射材料</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">映射 CAM 页面</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">从 CAD 映射字段（查找键）</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">用户界面</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">工作流程</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">库</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">打开</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">导入零件</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">导入订单</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">导入作业</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">导入装配体</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">库视图</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">零件</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">装配体</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">零件状态</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">零件验证</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">零件面板</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">零件筛选器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">工装状态</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">工装验证</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">折弯工装验证</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">切割工装验证</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">折边工装验证</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">工装面板</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">保存筛选器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">订单</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">订单视图</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">作业</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">创建作业</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">作业视图</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">作业面板</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">自动规划</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">交互式排样</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">重新打包</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">排样管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">布局视图</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">布局面板</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">报告发送器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">余料管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">自动余料管理</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">手动余料管理</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">双线排样</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">过期</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">作业过滤器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">工厂</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">路线</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">板材</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">用户</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">编辑</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">客户</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">设置</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">环境</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">导入</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">折弯</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">切割</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">通知</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">监视</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">作业</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">报告</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">CAD 扩展</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">SolidWorks 插件</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="installationsteps.html">安装</a></li>
+      <li><button class="tree blank"></button><a class="active" href="savetopraxis.html">保存零件</a></li>
+      <li><button class="tree blank"></button><a href="saveassembly.html">保存装配体</a></li>
+      <li><button class="tree blank"></button><a href="partfeasibility.html">检查可行性</a></li>
+      <li><button class="tree blank"></button><a href="factorysettings.html">工厂设置</a></li>
+      <li><button class="tree blank"></button><a href="miscenhancements.html">其他增强功能</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">版本说明</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">CAD 扩展</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">SolidWorks 插件</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="savetopraxis.html">保存零件</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>保存零件</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>启动 SolidWorks 并打开钣金零件 (.sldprt)。</p>
+</div>
+<div class="paragraph">
+<p>然后按照以下步骤操作：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>切换到 SolidWorks 中的 TruSmartCAM 选项卡以访问 TruSmartCAM 工具栏。</p>
+</li>
+<li>
+<p>在 <strong>TruSmartCAM</strong> 工具栏上单击 <strong>保存到 Praxis</strong>。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>在 <strong>保存到 Praxis</strong> 对话框中，选择适当的 TruSmartCAM 原材料，然后单击 <strong>确定</strong> 将零件上传并保存到 TruSmartCAM 零件库。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/savepraxis.png" alt="Save Praxis" width="850">
+</div>
+</div>
+<div class="paragraph">
+<p>零件现已保存在 TruSmartCAM 中。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/part.png" alt="Part" width="372">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+TruSmartCAM 在 <code>C:\Program
+Files\Metamation\ TruSmartCAM \Samples\Parts</code> 中包含一些示例零件。如果需要，您可以将其用于测试目的。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_自动材料解析">自动材料解析</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>此功能在上传过程中自动将 SolidWorks 材料和零件厚度值转换为相应的 TruSmartCAM 原材料。</p>
+</div>
+<div class="paragraph">
+<p>要配置材料映射：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>在 <strong>TruSmartCAM</strong> 工具栏上单击 <strong>选项</strong> 以打开 <strong>选项</strong> 对话框。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/mapmaterial.png" alt="Map Material" width="850">
+</div>
+</div>
+</li>
+<li>
+<p>导航到 <strong>材料映射</strong> 页面。</p>
+</li>
+<li>
+<p>在左窗格中，选择 SolidWorks 材料。</p>
+</li>
+<li>
+<p>在右窗格中，选择相应的 TruSmartCAM 材料。</p>
+</li>
+<li>
+<p>单击 <strong>映射</strong> 以创建映射。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>映射的材料对将出现在底部的映射列表中。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>要删除映射，请选择它并单击 <strong>取消映射</strong>。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_厚度容差设置">厚度容差设置</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>厚度容差值定义了容差范围，在此范围内 TruSmartCAM 将来自 SolidWorks 的钣金模型厚度与 TruSmartCAM 数据库中现有的原材料厚度进行匹配。它补偿了由设计舍入、单位转换等引起的模型厚度的微小变化。</p>
+</div>
+<div class="paragraph">
+<p>当 SolidWorks 零件厚度与 TruSmartCAM 中的材料不完全匹配时，容差值确保自动选择最接近的可用材料。</p>
+</div>
+<div class="paragraph">
+<div class="title">示例</div>
+<p>对于标称 2.0 mm 材料和 0.05 mm 的容差值：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM 接受 1.95 mm 至 2.05 mm 之间的任何 SolidWorks 模型厚度作为有效匹配。</p>
+</li>
+<li>
+<p>超出此范围的偏差将在零件上传期间触发手动材料选择提示。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>要查看或修改容差值：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>在 <strong>TruSmartCAM</strong> 工具栏上单击 <strong>选项</strong>，然后导航到 <strong>其他设置</strong> 以查看容差值，现在单击 <strong>保存到 Praxis</strong>。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/thicknessfudge.png" alt="Thickness Fudge" width="850">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>在 <strong>保存到 Praxis</strong> 对话框中单击 <strong>确定</strong>，零件将保存到 TruSmartCAM。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/configuration.png" alt="Configuration" width="428">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_读取自定义零件属性">读取自定义零件属性</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>此设置允许 TruSmartCAM 直接从 SolidWorks 零件文件自动读取自定义零件信息——例如 <strong>Material</strong>、<strong>Revision</strong> 和其他用户定义的属性。</p>
+</div>
+<div class="paragraph">
+<p>进行设置：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>在 <strong>TruSmartCAM</strong> 工具栏上单击 <strong>选项</strong> 以打开 <strong>选项</strong> 对话框，然后导航到 <strong>定制字段</strong>。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/custompart.png" alt="Custom Part" width="850">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>使用 <strong>映射</strong> 和 <strong>取消映射</strong> 按钮将所需的 TruSmartCAM 字段与相应的 SolidWorks 自定义字段或配置字段链接。</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+显示的值从当前活动的 SolidWorks 零件中加载。
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>映射完成后，每当在 TruSmartCAM 中导入或更新零件时，将自动从 SolidWorks 读取所选的自定义属性，现在单击 <strong>保存到 Praxis</strong>。</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+此处定义的映射保存在 TruSmartCAM 存储库中，并自动在网络中的所有 TruSmartCAM SolidWorks 安装之间同步。
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>在 <strong>保存到 Praxis</strong> 对话框中单击 <strong>确定</strong>，零件将保存到 TruSmartCAM。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/default.png" alt="Default" width="428">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_自动材料解析">自动材料解析</a>
+  </li>
+  <li level="1">
+   <a href="#_厚度容差设置">厚度容差设置</a>
+  </li>
+  <li level="1">
+   <a href="#_读取自定义零件属性">读取自定义零件属性</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="installationsteps.html">安装</a></span>
+ <span class="next"><a href="saveassembly.html">保存装配体</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

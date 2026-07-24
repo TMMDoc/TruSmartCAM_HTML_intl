@@ -1,0 +1,413 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>通知</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">欢迎使用 TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">安装</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">硬件要求</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">支持的文件格式</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">先决条件</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">客户端安装</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">更改许可证</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">配置</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">添加/删除设备</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">设置工具</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">配置用户</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">语言</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">材料</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">添加新材料和板材</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">导出/导入材料</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">替换材料</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">映射材料</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">映射 CAM 页面</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">从 CAD 映射字段（查找键）</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">用户界面</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">工作流程</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">库</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">打开</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">导入零件</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">导入订单</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">导入作业</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">导入装配体</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">库视图</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">零件</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">装配体</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">零件状态</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">零件验证</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">零件面板</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">零件筛选器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">工装状态</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">工装验证</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">折弯工装验证</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">切割工装验证</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">折边工装验证</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">工装面板</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">保存筛选器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">订单</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">订单视图</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">作业</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">创建作业</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">作业视图</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">作业面板</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">自动规划</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">交互式排样</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">重新打包</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">排样管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">布局视图</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">布局面板</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">报告发送器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">余料管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">自动余料管理</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">手动余料管理</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">双线排样</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">过期</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">作业过滤器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">工厂</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../routes.html">路线</a></li>
+    <li><button class="tree blank"></button><a href="../sheets.html">板材</a></li>
+    <li><button class="tree blank"></button><a href="../users.html">用户</a></li>
+    <li><button class="tree blank"></button><a href="../edit.html">编辑</a></li>
+    <li><button class="tree blank"></button><a href="../customers.html">客户</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">设置</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="environment.html">环境</a></li>
+      <li><button class="tree blank"></button><a href="import.html">导入</a></li>
+      <li><button class="tree blank"></button><a href="bend.html">折弯</a></li>
+      <li><button class="tree blank"></button><a href="cut.html">切割</a></li>
+      <li><button class="tree blank"></button><a class="active" href="notification.html">通知</a></li>
+      <li><button class="tree blank"></button><a href="watch.html">监视</a></li>
+      <li><button class="tree blank"></button><a href="job.html">作业</a></li>
+      <li><button class="tree blank"></button><a href="reports.html">报告</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD 扩展</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks 插件</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">安装</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">保存零件</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">保存装配体</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">检查可行性</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">工厂设置</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">其他增强功能</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">版本说明</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">工厂</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">设置</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="notification.html">通知</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>通知</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>通知会告知用户系统内发生的 CAD 和工艺错误。它们确保及时传达问题，以便采取适当的措施。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_电子邮件通知">电子邮件通知</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>电子邮件通知功能允许用户配置和接收针对 CAD 和工艺错误的自动电子邮件警报。配置后，系统会在发生相关事件时自动向指定的收件人发送电子邮件，确保及时解决问题。</p>
+</div>
+<div class="paragraph">
+<p>要配置电子邮件通知，请导航到：
+<strong>出厂</strong> &gt; <strong>设置</strong> &gt;
+<strong>通知</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/notification.png" alt="Notification settings" width="814">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>通知</strong> 页面包含以下部分：</p>
+</div>
+<div class="sect2">
+<h3 id="_通知设置">通知设置</h3>
+<div class="paragraph">
+<p><strong>通知设置</strong> 部分控制如何生成电子邮件警报并将其传递给收件人。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>启用电子邮件通知</strong> - 使系统能够根据配置的条件发送通知。</p>
+</li>
+<li>
+<p><strong>通知收件人</strong> - 指定收件人的电子邮件地址。可以通过使用逗号（<code>,</code>）或空格分隔来添加多个收件人。</p>
+</li>
+<li>
+<p><strong>批量发送消息</strong> - 将多个通知合并到一封电子邮件中。在定义的时间间隔内生成的消息会被分组在一起，这有助于减少电子邮件数量并防止混乱。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/batch.png" alt="Batch" width="608">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>酌情附加装备模拟预览+</strong> - 在可用时将工艺仿真预览附加到通知电子邮件中。这对于直接从电子邮件中查看与工艺相关的问题很有用。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/warning.png" alt="Warning" width="395">
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+包含仿真预览可能会显著增加电子邮件大小。
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_邮件设置">邮件设置</h3>
+<div class="paragraph">
+<p><strong>邮件设置</strong> 部分定义系统用于传递电子邮件通知的发送邮件服务器配置。这些设置必须正确配置才能成功发送通知。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>SMTP 服务器</strong> - 指定用于发送出站电子邮件的 SMTP 服务器地址（例如，<code>smtp.gmail.com</code>）。此信息通常可在用户邮件客户端的帐户或设置部分中找到。</p>
+</li>
+<li>
+<p><strong>SMTP 端口</strong> - 定义邮件服务器用于通过互联网发送电子邮件的端口号。常见值包括 <code>465</code> (SSL) 和 <code>587</code> (TLS)。</p>
+</li>
+<li>
+<p><strong>传输协议</strong> - 指定用于安全地将电子邮件从应用程序发送到邮件服务器的协议（例如，SSL 或 TLS）。</p>
+</li>
+<li>
+<p><strong>服务器需要身份验证</strong> - 为 SMTP 服务器启用身份验证。启用后，服务器会在发送电子邮件之前验证用户名和密码。</p>
+</li>
+<li>
+<p><strong>用户名</strong> - 指定用于向 SMTP 服务器进行身份验证和发送通知的电子邮件帐户。</p>
+</li>
+<li>
+<p><strong>密码</strong> - 指定与用于身份验证的电子邮件帐户关联的密码。</p>
+</li>
+<li>
+<p><strong>Sender address</strong> - 指定在接收通知时向收件人显示的发件人电子邮件地址。</p>
+</li>
+<li>
+<p><strong>测试…</strong> - 发送测试电子邮件以验证邮件服务器配置。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>点击 <strong>测试…</strong> 以验证设置。如果测试成功，将显示确认消息；否则，将显示指示失败原因的错误消息。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>在交互模式下不会触发电子邮件通知（例如，在编辑或手动保存零件时）。</p>
+</li>
+<li>
+<p>电子邮件传递在后台处理，可能会延迟。</p>
+</li>
+<li>
+<p>如果在处理完成之前停止系统或引擎，则可能不会传递通知。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_电子邮件通知">电子邮件通知</a>
+  </li>
+  <li level="2">
+   <a href="#_通知设置">通知设置</a>
+  </li>
+  <li level="2">
+   <a href="#_邮件设置">邮件设置</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="cut.html">切割</a></span>
+ <span class="next"><a href="watch.html">监视</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

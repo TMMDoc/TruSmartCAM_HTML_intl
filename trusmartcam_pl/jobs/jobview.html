@@ -1,0 +1,678 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Widok zadania</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Witamy w TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Instalacja</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Wymagania sprzętowe</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Obsługiwane formaty plików</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Wymagania wstępne</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Instalacja serwera</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Instalacja klienta</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Zmiana licencji</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Konfiguracja</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Dodaj/Usuń maszynę</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Konfiguracja oprzyrządowania</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Konfiguracja użytkowników</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Język</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Materiał</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Dodawanie nowego materiału i arkusza</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Eksport/Import materiału</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Zamiana materiału</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Mapowanie materiału</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Mapowanie stron CAM</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Mapowanie pól z CAD (klucze wyszukiwania)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">Interfejs użytkownika</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Przepływ pracy</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Biblioteka</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Otwórz</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Importuj części</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Importuj zamówienia</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Import zadań</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Importuj zespoły</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Widok biblioteki</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Części</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Zespoły</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Status części</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Walidacja części</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Panel części</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Filtry części</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Status narzędzi</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Walidacja narzędzi</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Walidacja narzędzi do gięcia</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Walidacja narzędzi tnących</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Walidacja narzędzi do składania</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Panel narzędziowania</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Zapisywanie filtrów</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Zamówienia</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Widok zamówień</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Zadania</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">Tworzenie zadania</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobview.html">Widok zadania</a></li>
+    <li><button class="tree blank"></button><a href="jobpanel.html">Panel zadania</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">Automatyczne planowanie</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">Interaktywne zagnieżdżanie</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">Przepakowywanie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">Zarządzanie układem</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">Widok układu</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">Panel układu</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">Nadawca raportów</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">Zarządzanie resztkami</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">Automatyczne zarządzanie resztkami</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">Ręczne zarządzanie resztkami</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">Zagnieżdżanie dwuliniowe</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">Przestarzałe</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">Filtry zadań</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Fabryka</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Trasy</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Arkusze</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Użytkownicy</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edycja</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Klienci</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Ustawienia</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Powiadomienia</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Raporty</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">Rozszerzenia CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Instalacja</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Zapisywanie części</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Zapisywanie złożenia</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Sprawdzanie wykonalności</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Ustawienia fabryki</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Różne ulepszenia</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Zadania</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobview.html">Widok zadania</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Widok zadania</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ta sekcja wyjaśnia różne widoki dostępne w widoku zadania, w tym
+Zadania, Części, Zagnieżdżenia, Edycję, Symulację i Eksport.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_zadania">Zadania</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Wybranie opcji <strong>zadania</strong> wyświetla listę wszystkich zadań, które są obecnie
+skonfigurowane w oprogramowaniu. Możesz dwukrotnie kliknąć zadanie, aby zobaczyć szczegóły lub
+kliknąć prawym przyciskiem myszy, aby uzyskać dostęp do dodatkowych opcji.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Zadania są wyświetlane w widoku kafelków, gdzie każde zadanie jest wyświetlane z podstawowymi właściwościami
+takimi jak ID zadania, odniesienie zadania, nazwa klienta, całkowite części, data dostawy, pasek
+stanu zadania itp.</p>
+</li>
+<li>
+<p>Każdy kafelek zadania pokazuje również obrazy części w formacie ułożonych kart. Możesz
+przewijać wszystkie części w zadaniu za pomocą kółka myszy.<br></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobview1.png" alt="Job Page" width="1489">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_szczegóły_zadania">Szczegóły zadania</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Dwukrotne kliknięcie kafelka lub naciśnięcie klawisza <kbd>Enter</kbd> po wybraniu kafelka
+przełącza widok do trybu szczegółów.</p>
+</li>
+<li>
+<p>Strona szczegółów pokazuje listę części wraz z zagnieżdżonymi arkuszami
+(układami), jeśli są obecne.</p>
+</li>
+<li>
+<p>Użyj klawiszy strzałek w górę/w dół, aby przełączać się między zadaniami na stronie szczegółów.</p>
+</li>
+<li>
+<p>Przewijanie kółkiem myszy nad stosem części podkreśla część zarówno na
+liście części, jak i na układach.</p>
+</li>
+<li>
+<p>Wybranie układu podkreśla układ i wszystkie części zagnieżdżone na nim na
+liście części. Podkreślenia są automatycznie wyłączane po minucie.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobview2.png" alt="Job Details" width="1908">
+</div>
+</div>
+</li>
+<li>
+<p><strong>Podsumowanie ułożenia</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Detale</strong>: Pokazuje całkowitą liczbę pozycji zamówienia i
+całkowitą ilość w zadaniu.</p>
+</li>
+<li>
+<p><strong>arkusze</strong>: Pokazuje całkowitą liczbę zagnieżdżonych arkuszy wraz
+z całkowitą ilością arkuszy.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Czynności</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Gięcie</strong>: Pokazuje przypiszaną maszynę i ilość zamówienia,
+która ma być przetworzona.</p>
+</li>
+<li>
+<p><strong>Cięcie</strong>: Pokazuje przypiszaną maszynę i ilość zamówienia,
+która ma być przetworzona.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_priorytet">Priorytet</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Najpierw kliknij ikonę <strong>Jobs</strong> po lewej stronie ekranu, wybierz zadanie, które chcesz
+edytować, a następnie kliknij <strong>edit</strong> po prawej stronie ekranu (upewnij się,
+że wybrana jest opcja Jobs).</p>
+</li>
+<li>
+<p>Alternatywnie możesz kliknąć prawym przyciskiem myszy na wybrane zadanie i kliknąć ikonę
+<strong>Wyrejestruj dokument do edycji</strong>.</p>
+</li>
+<li>
+<p>Po kliknięciu <strong>edit</strong> pojawia się okno edycji zadania. W tym oknie możesz ustawić lub zmienić priorytet
+dla zadania.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/priority1.png" alt="Priority1" width="1207">
+</div>
+</div>
+</li>
+<li>
+<p>Na podstawie priorytetu części zadania, odniesienie do zadania na kafelku zadania
+jest odpowiednio kolorowane.</p>
+</li>
+<li>
+<p>Części zadania są najpierw sortowane według priorytetu, a następnie według daty dostawy. Są również
+kolorowane zgodnie z ich priorytetem.</p>
+</li>
+<li>
+<p>Podczas zagnieżdżania części <strong>Urgent</strong> są brane pod uwagę jako pierwsze, następnie <strong>High</strong>, potem
+<strong>Normal</strong>, a na końcu części o priorytecie <strong>Low</strong> są umieszczane w pozostałej przestrzeni na
+arkuszach zagnieżdżenia.</p>
+</li>
+<li>
+<p>Arkusze zagnieżdżenia są również sortowane i kolorowane zgodnie z priorytetem.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Priorytet zadania</th>
+<th class="tableblock halign-left valign-top">Opis koloru</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/urgent.png" alt="Urgent" width="50"></span> (Pomarańczowy)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pilne</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/normal1.png" alt="Normal" width="50"></span> (Brak koloru)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Normalne</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/high.png" alt="High" width="50"></span> (Żółty)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wysoki</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/low.png" alt="Low" width="50"></span> (Ciemnoszary)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Niski</p></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock">
+<div class="content">
+<img src="img/priority2.png" alt="Priority2" width="1158">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_status">Status</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Pasek stanu zadania używa kodów kolorystycznych do wskazania postępu lub stanu
+zadania na podstawie przetworzonej lub pozostałej ilości.</p>
+</li>
+<li>
+<p>Części w ramach zadania i arkusze zagnieżdżenia są również oznaczane
+odpowiednimi kolorami, aby odzwierciedlić ich indywidualny status w ramach całego ZADANIA.</p>
+</li>
+<li>
+<p>Kodowanie kolorystyczne poprawia śledzenie i zapewnia, że operatorzy mogą łatwo zobaczyć
+status produkcji na pierwszy rzut oka.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/status1.png" alt="Job status" width="1114">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/status2.png" alt="Job status" width="1360">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Status zadania</th>
+<th class="tableblock halign-left valign-top">Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/notready.png" alt="Not Ready" width="100"></span> (Jasnoszary)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nie gotowe</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/nesting.png" alt="Nesting" width="100"></span> (Magenta)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Układanie</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/ready.png" alt="Ready" width="100"></span> (Biały)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gotowe</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/cuttingqueue.png" alt="Bend planned" width="100"></span> (Jasnożółty)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bend Planned</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/sheetmissing.png" alt="Sheet Missing" width="100"></span> (Ciemnoszary)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brakuje arkuszy blachy</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/bendingqueue.png" alt="Bending Queue" width="100"></span> (Ciemnożółty)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kolejka gięcia</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/bendplanned.png" alt="Bend Planned" width="100"></span> (Żółty)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kolejka cięcia</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/completed.png" alt="Completed" width="100"></span> (Ciemnozielony)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wykonano</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_części">Części</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Widok Aktywne części pokazuje wszystkie części, które są obecnie w trakcie realizacji w ramach
+aktywnych zadań.</p>
+</div>
+<div class="paragraph">
+<p>Każda część jest wyświetlana jako kafelek z kluczowymi szczegółami, takimi jak nazwa części,
+wymiary, materiał, grubość, ilość i data dostawy. Wyświetlany jest również podgląd wizualny
+części.</p>
+</div>
+<div class="paragraph">
+<p>Ten widok pomaga użytkownikom monitorować status przetwarzania poszczególnych części i
+śledzić ich postęp w ramach trwających zadań.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/activeparts.png" alt="Active">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_zagnieżdżenia">Zagnieżdżenia</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Widok Aktywne zagnieżdżenia pokazuje wszystkie zagnieżdżenia, które są obecnie w trakcie realizacji w ramach
+aktywnych zadań.</p>
+</div>
+<div class="paragraph">
+<p>Każde zagnieżdżenie jest wyświetlane z istotnymi szczegółami, takimi jak liczba części i
+status przetwarzania. Wyświetlany jest również wizualny układ zagnieżdżonych części.</p>
+</div>
+<div class="paragraph">
+<p>Ten widok pomaga użytkownikom monitorować postęp zagnieżdżania i śledzić, jak części są rozmieszczone
+i przetwarzane na arkuszach.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/activenest.png" alt="Nest">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_edytuj">Edytuj</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Opcja Edytuj umożliwia zmianę wybranego elementu.</p>
+</div>
+<div class="paragraph">
+<p>W zależności od bieżącego widoku wybrana instancja jest otwierana do edycji:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>W widoku Zadania wybrane zadanie jest otwierane do edycji.</p>
+</li>
+<li>
+<p>W widoku Aktywne części wybrana część jest otwierana do edycji.</p>
+</li>
+<li>
+<p>W widoku Aktywne zagnieżdżenia wybrane zagnieżdżenie jest otwierane do edycji.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobviewedit.png" alt="Edit" width="980">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_eksportuj_csv">Eksportuj csv</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Opcja Eksportuj umożliwia wybranie i eksport informacji o zadaniu do pliku CSV.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kliknij ikonę <strong>jobs</strong>.</p>
+</li>
+<li>
+<p>Kliknij opcję <strong>export</strong> po prawej stronie ekranu.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importexport1.png" alt="Export" width="700">
+</div>
+</div>
+</li>
+<li>
+<p>Pojawia się okno dialogowe z dostępnymi polami:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importexport2.png" alt="Export CSV" width="174">
+</div>
+</div>
+</li>
+<li>
+<p>Zaznacz pola wyboru dla pól, które chcesz wyeksportować.</p>
+</li>
+<li>
+<p>Użyj opcji <strong>Group By</strong>, jeśli chcesz zgrupować dane według
+wybranego pola.</p>
+</li>
+<li>
+<p>Kliknij Eksportuj, aby wygenerować plik CSV.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_informacje_dodatkowe">Informacje dodatkowe</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Są również trzy dodatkowe ikony po prawej stronie ekranu, a mianowicie
+<strong>symuluj</strong>, <strong>Goto</strong> i <strong>powrót</strong>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Simulate otwiera wybrany element dla bardziej szczegółowego widoku.</p>
+</li>
+<li>
+<p>Goto przełącza fokus i pokazuje część lub zagnieżdżenie, które zostało
+wybrane.</p>
+</li>
+<li>
+<p>Back wraca o jeden poziom wstecz od miejsca, w którym się obecnie znajdujesz, na przykład
+przez kliknięcie <strong>powrót</strong> podczas symulacji wracasz do
+głównego zadania, a z zadania wracasz do głównego widoku zadań.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_zadania">Zadania</a>
+  </li>
+  <li level="2">
+   <a href="#_szczegóły_zadania">Szczegóły zadania</a>
+  </li>
+  <li level="2">
+   <a href="#_priorytet">Priorytet</a>
+  </li>
+  <li level="2">
+   <a href="#_status">Status</a>
+  </li>
+  <li level="1">
+   <a href="#_części">Części</a>
+  </li>
+  <li level="1">
+   <a href="#_zagnieżdżenia">Zagnieżdżenia</a>
+  </li>
+  <li level="1">
+   <a href="#_edytuj">Edytuj</a>
+  </li>
+  <li level="1">
+   <a href="#_eksportuj_csv">Eksportuj csv</a>
+  </li>
+  <li level="1">
+   <a href="#_informacje_dodatkowe">Informacje dodatkowe</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobcreation.html">Tworzenie zadania</a></span>
+ <span class="next"><a href="jobpanel.html">Panel zadania</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

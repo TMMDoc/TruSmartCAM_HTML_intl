@@ -1,0 +1,512 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>บันทึกชิ้นส่วน</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">ยินดีต้อนรับสู่ TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">การติดตั้ง</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">ข้อกำหนดฮาร์ดแวร์</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">รูปแบบไฟล์ที่รองรับ</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">ข้อกำหนดเบื้องต้น</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">การติดตั้ง Server</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">การติดตั้ง Client</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">เปลี่ยนใบอนุญาต</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">การกำหนดค่า</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">เพิ่ม/ลบเครื่องจักร</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">ตั้งค่าเครื่องมือ</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">กำหนดค่าผู้ใช้</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">ภาษา</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">วัสดุ</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">เพิ่มวัสดุและแผ่นวัสดุใหม่</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">ส่งออก/นำเข้าวัสดุ</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">แทนที่วัสดุ</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">จับคู่วัสดุ</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">จับคู่หน้า CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">จับคู่ฟิลด์จาก CAD (คีย์การค้นหา)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">อินเทอร์เฟซผู้ใช้งาน</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">ขั้นตอนการทำงาน</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Library</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">แผงเครื่องมือ</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">คำสั่งซื้อ</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">มุมมองคำสั่งซื้อ</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">งาน</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">สร้างงาน</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">มุมมองงาน</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">แผงงาน</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">วางแผนอัตโนมัติ</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">การจัดเรียงแบบโต้ตอบ</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">การบรรจุใหม่</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">การจัดการการจัดเรียง</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">มุมมองเลย์เอาต์</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">แผงเลย์เอาต์</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">ผู้ส่งรายงาน</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">การจัดการวัสดุเหลือใช้</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">การจัดการวัสดุเหลือใช้อัตโนมัติ</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">การจัดการวัสดุเหลือใช้ด้วยตนเอง</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">การจัดเรียงแบบเส้นคู่</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">ล้าสมัย</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">ตัวกรองงาน</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">โรงงาน</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">เส้นทาง</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">แผ่นวัสดุ</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">ผู้ใช้</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">แก้ไข</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">ลูกค้า</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">การตั้งค่า</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">สภาพแวดล้อม</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">นำเข้า</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">การงอ</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">การตัด</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">การแจ้งเตือน</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">เฝ้าดู</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">งาน</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">รายงาน</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">ส่วนขยาย CAD</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">SolidWorks addin</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="installationsteps.html">การติดตั้ง</a></li>
+      <li><button class="tree blank"></button><a class="active" href="savetopraxis.html">บันทึกชิ้นส่วน</a></li>
+      <li><button class="tree blank"></button><a href="saveassembly.html">บันทึกแอสเซมบลี</a></li>
+      <li><button class="tree blank"></button><a href="partfeasibility.html">ตรวจสอบความเป็นไปได้</a></li>
+      <li><button class="tree blank"></button><a href="factorysettings.html">การตั้งค่าโรงงาน</a></li>
+      <li><button class="tree blank"></button><a href="miscenhancements.html">การปรับปรุงอื่นๆ</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">ข้อมูลทางกฎหมาย</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">ส่วนขยาย CAD</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">SolidWorks addin</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="savetopraxis.html">บันทึกชิ้นส่วน</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>บันทึกชิ้นส่วน</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>เปิด SolidWorks และเปิดชิ้นส่วนโลหะแผ่น (.sldprt)</p>
+</div>
+<div class="paragraph">
+<p>จากนั้นปฏิบัติตามขั้นตอนเหล่านี้:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>สลับไปที่แท็บ TruSmartCAM ใน SolidWorks เพื่อเข้าถึงแถบเครื่องมือ TruSmartCAM</p>
+</li>
+<li>
+<p>คลิก <strong>บันทึกไปยัง Praxis</strong> บนแถบเครื่องมือ <strong>TruSmartCAM</strong></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>ในกล่องโต้ตอบ <strong>บันทึกไปยัง Praxis</strong> ให้เลือกวัสดุดิบ TruSmartCAM ที่เหมาะสม จากนั้น
+คลิก <strong>ตกลง</strong> เพื่ออัปโหลดและบันทึกชิ้นส่วนไปยังไลบรารีชิ้นส่วน TruSmartCAM</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/savepraxis.png" alt="Save Praxis" width="850">
+</div>
+</div>
+<div class="paragraph">
+<p>ชิ้นส่วนจะถูกบันทึกใน TruSmartCAM แล้ว</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/part.png" alt="Part" width="372">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+TruSmartCAM มีชิ้นส่วนตัวอย่างบางส่วนที่อยู่ที่ <code>C:\Program
+Files\Metamation\ TruSmartCAM \Samples\Parts</code> คุณสามารถใช้สำหรับการทดสอบได้หากจำเป็น
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_การแก้ไขวัสดุอัตโนมัติ">การแก้ไขวัสดุอัตโนมัติ</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ฟีเจอร์นี้จะแปลงวัสดุ SolidWorks และค่าความหนาของชิ้นส่วน
+ให้เป็นวัสดุดิบ TruSmartCAM ที่สอดคล้องกันโดยอัตโนมัติระหว่างการอัปโหลด</p>
+</div>
+<div class="paragraph">
+<p>เพื่อกำหนดการแม็ปวัสดุ:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>คลิก <strong>ตัวเลือก</strong> บนแถบเครื่องมือ <strong>TruSmartCAM</strong> เพื่อเปิดกล่องโต้ตอบ <strong>ตัวเลือก</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/mapmaterial.png" alt="Map Material" width="850">
+</div>
+</div>
+</li>
+<li>
+<p>ไปที่หน้า <strong>การแมปวัสดุ</strong></p>
+</li>
+<li>
+<p>ในบานหน้าต่างด้านซ้าย เลือกวัสดุ SolidWorks</p>
+</li>
+<li>
+<p>ในบานหน้าต่างด้านขวา เลือกวัสดุ TruSmartCAM ที่สอดคล้องกัน</p>
+</li>
+<li>
+<p>คลิก <strong>แมป</strong> เพื่อสร้างการแม็ป</p>
+<div class="ulist">
+<ul>
+<li>
+<p>คู่ที่แม็ปจะปรากฏในรายการแม็ปที่ด้านล่าง</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>เพื่อลบการแม็ป ให้เลือกและคลิก <strong>ยกเลิกการแมป</strong></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_การตั้งค่าความคลาดเคลื่อนความหนา">การตั้งค่าความคลาดเคลื่อนความหนา</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ค่าความคลาดเคลื่อนความหนาจะกำหนดช่วงความเผื่อที่ TruSmartCAM
+จับคู่ความหนาของโมเดลโลหะแผ่นจาก SolidWorks กับความหนาวัสดุดิบที่มีอยู่
+ในฐานข้อมูล TruSmartCAM มันชดเชยความแตกต่างเล็กน้อยของความหนาโมเดล
+ที่เกิดจากการปัดเศษการออกแบบ การแปลงหน่วย ฯลฯ</p>
+</div>
+<div class="paragraph">
+<p>เมื่อความหนาของชิ้นส่วน SolidWorks ไม่ตรงกับวัสดุใน TruSmartCAM อย่างแน่นอน
+ค่าความคลาดเคลื่อนจะช่วยให้มั่นใจว่าวัสดุที่มีอยู่ที่ใกล้เคียงที่สุดจะถูกเลือกโดยอัตโนมัติ</p>
+</div>
+<div class="paragraph">
+<div class="title">ตัวอย่าง</div>
+<p>สำหรับวัสดุขนาดปกติ 2.0 mm และค่าความคลาดเคลื่อน 0.05 mm:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM ยอมรับความหนาโมเดล SolidWorks ใดๆ ระหว่าง 1.95 mm ถึง 2.05 mm
+ว่าเป็นการจับคู่ที่ถูกต้อง</p>
+</li>
+<li>
+<p>ความเบี่ยงเบนที่เกินช่วงนี้จะทำให้เกิดการแจ้งให้เลือกวัสดุด้วยตนเอง
+ระหว่างการอัปโหลดชิ้นส่วน</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>เพื่อดูหรือแก้ไขค่าความเผื่อ:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>คลิก <strong>ตัวเลือก</strong> บนแถบเครื่องมือ <strong>TruSmartCAM</strong> จากนั้นไปที่ <strong>การตั้งค่าอื่นๆ</strong> เพื่อดู
+ค่าความเผื่อ จากนั้นคลิก <strong>บันทึกไปยัง Praxis</strong></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/thicknessfudge.png" alt="Thickness Fudge" width="850">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ในกล่องโต้ตอบ <strong>บันทึกไปยัง Praxis</strong> คลิก <strong>ตกลง</strong> ชิ้นส่วนจะถูกบันทึกไปยัง TruSmartCAM</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/configuration.png" alt="Configuration" width="428">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_การอ่านคุณสมบัติชิ้นส่วนที่กำหนดเอง">การอ่านคุณสมบัติชิ้นส่วนที่กำหนดเอง</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>การตั้งค่านี้ช่วยให้ TruSmartCAM อ่านข้อมูลชิ้นส่วนที่กำหนดเอง เช่น
+<strong>Material</strong>, <strong>Revision</strong> และแอตทริบิวต์อื่นๆ ที่ผู้ใช้กำหนด โดยตรงจาก
+ไฟล์ชิ้นส่วน SolidWorks</p>
+</div>
+<div class="paragraph">
+<p>เพื่อตั้งค่า:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>คลิก <strong>ตัวเลือก</strong> บนแถบเครื่องมือ <strong>TruSmartCAM</strong> เพื่อเปิดกล่องโต้ตอบ <strong>ตัวเลือก</strong> จากนั้น
+ไปที่ <strong>ฟิลด์กำหนดเอง</strong></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/custompart.png" alt="Custom Part" width="850">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ใช้ปุ่ม <strong>แมป</strong> และ <strong>ยกเลิกการแมป</strong> เพื่อเชื่อมโยงฟิลด์ TruSmartCAM ที่จำเป็นกับ
+ฟิลด์ Custom หรือ Configuration ของ SolidWorks ที่สอดคล้องกัน</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+ค่าที่แสดงถูกโหลดจากชิ้นส่วน SolidWorks ที่ใช้งานอยู่ในขณะนั้น
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>เมื่อการแม็ปเสร็จสมบูรณ์ คุณสมบัติที่กำหนดเองที่เลือกไว้จะถูก
+อ่านโดยอัตโนมัติจาก SolidWorks เมื่อใดก็ตามที่มีการนำเข้าหรืออัปเดตชิ้นส่วนใน
+TruSmartCAM ตอนนี้คลิก <strong>บันทึกไปยัง Praxis</strong></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+การแม็ปที่กำหนดไว้ที่นี่จะถูกบันทึกในที่เก็บข้อมูล TruSmartCAM และ
+ซิงโครไนซ์โดยอัตโนมัติทั่วทั้งการติดตั้ง TruSmartCAM SolidWorks ทั้งหมดภายใน
+เครือข่าย
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ในกล่องโต้ตอบ <strong>บันทึกไปยัง Praxis</strong> คลิก <strong>ตกลง</strong> ชิ้นส่วนจะถูกบันทึกไปยัง TruSmartCAM</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/default.png" alt="Default" width="428">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_การแก้ไขวัสดุอัตโนมัติ">การแก้ไขวัสดุอัตโนมัติ</a>
+  </li>
+  <li level="1">
+   <a href="#_การตั้งค่าความคลาดเคลื่อนความหนา">การตั้งค่าความคลาดเคลื่อนความหนา</a>
+  </li>
+  <li level="1">
+   <a href="#_การอ่านคุณสมบัติชิ้นส่วนที่กำหนดเอง">การอ่านคุณสมบัติชิ้นส่วนที่กำหนดเอง</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="installationsteps.html">การติดตั้ง</a></span>
+ <span class="next"><a href="saveassembly.html">บันทึกแอสเซมบลี</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

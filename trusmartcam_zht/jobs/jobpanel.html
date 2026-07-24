@@ -1,0 +1,537 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>工作面板</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">歡迎使用 TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">安裝</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">硬體需求</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">支援的檔案格式</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">先決條件</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">伺服器安裝</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">用戶端安裝</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">變更授權</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">配置</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">新增/移除機器</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">設定工具</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">配置使用者</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">語言</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">材料</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">新增材料和板材</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">匯出/匯入材料</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">取代材料</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">對應材料</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">對應 CAM 頁面</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">對應 CAD 欄位（查詢鍵）</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">使用者介面</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">工作流程</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">資料庫</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">開啟</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">匯入零件</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">匯入訂單</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">匯入工作</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">匯入組件</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">資料庫視圖</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">零件</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">組件</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">零件狀態</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">零件驗證</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">零件面板</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">零件篩選器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">工具狀態</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">工具驗證</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">折彎工具驗證</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">切割工具驗證</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">折邊工具驗證</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">工具面板</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">儲存篩選器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">訂單</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">訂單檢視</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Jobs</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">建立工作</a></li>
+    <li><button class="tree blank"></button><a href="jobview.html">工作檢視</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobpanel.html">工作面板</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">自動規劃</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">互動式排版</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">重新包裝</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">排版管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">佈局檢視</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">佈局面板</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">報告傳送器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">餘料管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">自動餘料管理</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">手動餘料管理</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">雙線排版</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">過期</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">工作篩選器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD 擴充功能</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks 增益集</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">安裝</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">儲存零件</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">儲存組件</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">檢查可行性</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">工廠設定</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">其他增強功能</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">版權聲明</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Jobs</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobpanel.html">工作面板</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>工作面板</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>本節說明與工作相關的動作，如
+<strong>Export outputs</strong>、<strong>復位套裁…</strong>、
+<strong>標記完成&#8230;&#8203;</strong>、<strong>匯出套裁…</strong>
+以及其他用於管理工作實例的選項。</p>
+</div>
+<table class="tableblock frame-none grid-none fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/jobpanel.png" alt="JobPanel" width="200">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>以唯讀模式打開進行查看</strong><br>
+以唯讀模式開啟選定的工作。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+啟用選定工作的編輯功能。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>刪除</strong><br>
+刪除選定的工作。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/openreport.png" alt="Report" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>查看報告</strong><br>
+開啟選定工作的生產報告。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>匯出輸出</strong><br>
+匯出為選定工作產生的機器就緒輸出檔案（NC 檔案和報告）。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/planui.png" alt="Plan" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Plan job</strong><br>
+為選定工作中的零件產生排版佈局。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/resetui.png" alt="Reset" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>復位套裁…</strong><br>
+移除工作的所有產生的佈局，並將其零件重設為
+可規劃狀態。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/markui.png" alt="Mark" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>標記完成&#8230;&#8203;</strong><br>
+在生產後將工作及其所有排版標記為完成。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/jobui.png" alt="Job" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>匯出套裁…</strong><br>
+將完整的工作匯出為套件，可以重複使用或匯入到
+其他系統。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>上一個</strong> / <strong>下一個</strong> / <strong>展開圖</strong><br>
+導覽至選定工作中的上一個或下一個佈局。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sort.png" alt="Filters" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort and filter</strong><br>
+使用這些篩選器查看共用相同材料、客戶、
+到期日期或優先順序的其他工作。</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_匯出輸出">匯出輸出</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>選擇所需的工作。</p>
+</li>
+<li>
+<p>點擊 <strong>匯出輸出</strong>。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput.png" alt="Export outputs dialog" width="585">
+</div>
+</div>
+</li>
+<li>
+<p>這會匯出為選定工作產生的機器就緒輸出檔案。</p>
+</li>
+<li>
+<p>匯出輸出可以儲存到
+<strong>工廠設定</strong> 中配置的預設位置，或透過使用
+<strong>瀏覽…</strong> 儲存到自訂位置。</p>
+</li>
+<li>
+<p>它僅匯出工作的機器輸出檔案（如 NC 和報告）。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/output.png" alt="Exported output files" width="725">
+</div>
+</div>
+</li>
+<li>
+<p>這些檔案直接用於生產，可以傳送到
+機器。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_復位套裁">復位套裁…</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>透過移除所有產生的佈局並使零件
+再次可用於規劃來重設選定的工作。</p>
+</div>
+<div class="paragraph">
+<p>要重設工作：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>右鍵點擊工作並選擇 <strong>復位套裁…</strong>。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/resetjob1.png" alt="Reset job" width="820">
+</div>
+</div>
+</li>
+<li>
+<p>這會刪除選定工作的所有現有排版佈局，並將
+所有零件重設為可規劃狀態。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/resetjob2.png" alt="Reset job" width="820">
+</div>
+</div>
+</li>
+<li>
+<p>如果佈局包含來自其他工作的零件，這些零件也會被重設。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_匯出套裁">匯出套裁…</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>選擇所需的工作。</p>
+</li>
+<li>
+<p>點擊 <strong>匯出套裁…</strong>。</p>
+</li>
+<li>
+<p>此選項將完整的工作匯出為套件，可以重複使用或
+匯入到其他系統。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/outputview.png" alt="Output view" width="785">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>匯出的資料包括重新建立工作所需的所有資訊：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>零件詳細資訊和數量（CSV 檔案）。</p>
+</li>
+<li>
+<p>佈局和排版資料（CSV / FXYLT 檔案）。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>匯出的檔案會儲存為配置的匯出
+位置中的工作資料夾。</p>
+</li>
+<li>
+<p>此選項用於傳輸、共用或備份整個工作。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_標記完成">標記完成&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>在機器上處理完工作後，開啟工作面板並選擇
+<strong>標記完成&#8230;&#8203;</strong>。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/mark.png" alt="Mark complete dialog" width="845">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>當工作被標記為完成時：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>工作下的所有排版都被標記為完成。</p>
+</li>
+<li>
+<p>工作會變灰、移至清單末尾，並顯示
+綠色勾選標記。</p>
+</li>
+<li>
+<p>工作下的所有佈局都會從活動佈局清單中移除。</p>
+</li>
+<li>
+<p>零件和工作狀態會更新，已處理的數量移至
+完成狀態。</p>
+</li>
+<li>
+<p>工作中所有佈局的輸出檔案都會從機器
+輸出位置移除，以避免重複使用。</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_匯出輸出">匯出輸出</a>
+  </li>
+  <li level="1">
+   <a href="#_復位套裁">復位套裁…</a>
+  </li>
+  <li level="1">
+   <a href="#_匯出套裁">匯出套裁…</a>
+  </li>
+  <li level="1">
+   <a href="#_標記完成">標記完成&#8230;&#8203;</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobview.html">工作檢視</a></span>
+ <span class="next"><a href="jobautoplan.html">自動規劃</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

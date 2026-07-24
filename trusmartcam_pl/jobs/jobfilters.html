@@ -1,0 +1,416 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Filtry zadań</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Witamy w TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Instalacja</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Wymagania sprzętowe</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Obsługiwane formaty plików</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Wymagania wstępne</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Instalacja serwera</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Instalacja klienta</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Zmiana licencji</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Konfiguracja</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Dodaj/Usuń maszynę</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Konfiguracja oprzyrządowania</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Konfiguracja użytkowników</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Język</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Materiał</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Dodawanie nowego materiału i arkusza</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Eksport/Import materiału</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Zamiana materiału</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Mapowanie materiału</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Mapowanie stron CAM</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Mapowanie pól z CAD (klucze wyszukiwania)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">Interfejs użytkownika</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Przepływ pracy</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Biblioteka</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Otwórz</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Importuj części</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Importuj zamówienia</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Import zadań</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Importuj zespoły</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Widok biblioteki</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Części</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Zespoły</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Status części</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Walidacja części</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Panel części</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Filtry części</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Status narzędzi</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Walidacja narzędzi</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Walidacja narzędzi do gięcia</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Walidacja narzędzi tnących</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Walidacja narzędzi do składania</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Panel narzędziowania</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Zapisywanie filtrów</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Zamówienia</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Widok zamówień</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Zadania</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">Tworzenie zadania</a></li>
+    <li><button class="tree blank"></button><a href="jobview.html">Widok zadania</a></li>
+    <li><button class="tree blank"></button><a href="jobpanel.html">Panel zadania</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">Automatyczne planowanie</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">Interaktywne zagnieżdżanie</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">Przepakowywanie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">Zarządzanie układem</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">Widok układu</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">Panel układu</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">Nadawca raportów</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">Zarządzanie resztkami</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">Automatyczne zarządzanie resztkami</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">Ręczne zarządzanie resztkami</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">Zagnieżdżanie dwuliniowe</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">Przestarzałe</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobfilters.html">Filtry zadań</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Fabryka</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Trasy</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Arkusze</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Użytkownicy</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edycja</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Klienci</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Ustawienia</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Powiadomienia</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Raporty</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">Rozszerzenia CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Instalacja</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Zapisywanie części</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Zapisywanie złożenia</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Sprawdzanie wykonalności</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Ustawienia fabryki</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Różne ulepszenia</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Zadania</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobfilters.html">Filtry zadań</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Filtry zadań</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Filtry strony zadań pomagają lokalizować zadania, aktywne części i zagnieżdżenia poprzez
+wyświetlanie tylko elementów spełniających wybrane warunki. Ułatwiają one znajdowanie, sortowanie i
+zarządzanie zadaniami lub częściami, zwiększając ogólną efektywność w przepływie pracy.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/filter.png" alt="Filter" width="726">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_przykłady_dostępnych_filtrów">Przykłady dostępnych filtrów</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_kolejność_i_wymagane">Kolejność i Wymagane</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Filtr <strong>Kolejność</strong> umożliwia wyszukiwanie i wyświetlanie części lub zadań na podstawie
+ich przypisanego priorytetu (<strong>Pilny</strong>, <strong>Wysoki</strong>, <strong>Niski</strong>, <strong>Normalny</strong>).</p>
+</li>
+<li>
+<p>Po wybraniu określonego poziomu priorytetu zaznaczane są tylko części o tym
+określonym priorytecie lub wyświetlane w wynikach.</p>
+</li>
+<li>
+<p>Na przykład, jeśli wybierzesz priorytet <strong>Wysoki</strong>, system
+wyfiltruje i oznaczy tylko części oznaczone jako Wysoki Priorytet na zagnieżdżeniu.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/priority.png" alt="Priority" width="1307">
+</div>
+</div>
+</li>
+<li>
+<p>Filtr <strong>Wymagane</strong> umożliwia wyszukiwanie i wyświetlanie części lub
+zadań według ich przypisanych dat.</p>
+</li>
+<li>
+<p>Po wybraniu określonej daty dostawy zaznaczane są tylko części o tej konkretnej dacie dostawy
+lub wyświetlane w wynikach.</p>
+</li>
+<li>
+<p>Oprócz predefiniowanych filtrów daty dostawy, takich jak <strong>Dzisiaj</strong>,
+<strong>Wczoraj</strong>, <strong>Jutro</strong> itp., możesz również
+wprowadzić niestandardowe wartości/zakresy dat w formacie <strong>yymmdd</strong> w polu wyszukiwania.</p>
+</li>
+<li>
+<p>Możesz także używać wyrażeń z operatorami nierówności (&lt;, &lt;=, &gt;, &gt;=, =)
+następującymi po wartości daty. Przykład: &gt;=250901 wyszukuje wszystkie elementy, które
+uprawniają w dniu 1 września 2025 lub później.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/dueon.png" alt="Due On" width="1121">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Jeśli lista filtrów zakrywa zawartość wyszukiwania, możesz ją uczynić przezroczystą
+za pomocą polecenia <strong>Przełącz przezroczystość|*Kliknięcie prawym przyciskiem myszy</strong>*
+<span class="image"><img src="img/toggleopacity.png" alt="Toggle Opacity" width="15"></span>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nazwa_detalu_layout_name">Nazwa detalu/ Layout name</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Filtr <strong>Nazwa detalu</strong> jest dostępny na stronie zadań i zagnieżdżeń.</p>
+</li>
+<li>
+<p>Podczas wpisywania nazwy części wyświetlana jest lista sugestii, aby pomóc w szybkim wybraniu
+właściwej części.</p>
+</li>
+<li>
+<p>Wybranie jednego lub więcej elementów z listy sugestii ogranicza wyniki wyszukiwania
+do tylko wybranych części.</p>
+</li>
+<li>
+<p>Na stronie Zadań to zachowanie jest rozszerzone o nazwy układów, umożliwiając
+użytkownikom wyszukiwanie według nazwy części lub nazwy układu.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/partname.png" alt="Part Name" width="1453">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_resztka">Resztka</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Użyj filtru <strong>Resztka</strong>, aby wyszukać układy na podstawie dostępności resztki.</p>
+</li>
+<li>
+<p>Lista rozwijana pokazuje następujące opcje:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Brak resztek</strong> - pokazuje układy, w których nie utworzono resztki.</p>
+</li>
+<li>
+<p><strong>Istnieje</strong> - pokazuje układy, w których resztka już istnieje.</p>
+</li>
+<li>
+<p><strong>Dodano</strong> - pokazuje układy, w których dodano nową resztkę.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Pomaga w efektywnym identyfikowaniu i zarządzaniu pozostałymi materiałami arkuszy.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/remnant.png" alt="Remnant" width="990">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_przykłady_dostępnych_filtrów">Przykłady dostępnych filtrów</a>
+  </li>
+  <li level="2">
+   <a href="#_kolejność_i_wymagane">Kolejność i Wymagane</a>
+  </li>
+  <li level="2">
+   <a href="#_nazwa_detalu_layout_name">Nazwa detalu/ Layout name</a>
+  </li>
+  <li level="2">
+   <a href="#_resztka">Resztka</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="outdate.html">Przestarzałe</a></span>
+ <span class="next"><a href="../factory/index.html">Fabryka</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

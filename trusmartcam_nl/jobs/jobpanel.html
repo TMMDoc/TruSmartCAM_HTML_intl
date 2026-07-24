@@ -1,0 +1,539 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Job paneel</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Welkom bij TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Installatie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Hardwarevereisten</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Ondersteunde bestandsformaten</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Vereisten</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Serverinstallatie</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Clientinstallatie</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Licentie wijzigen</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Configuratie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Machine toevoegen/verwijderen</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Gereedschap instellen</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Gebruikers configureren</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Taal</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Materiaal</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Nieuw materiaal en plaat toevoegen</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Materiaal exporteren/importeren</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Materiaal vervangen</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Materiaal toewijzen</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">CAM-pagina's toewijzen</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Velden uit CAD toewijzen (zoeksleutels)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">De gebruikersinterface</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Bibliotheek</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Openen</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Onderdelen importeren</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Orders importeren</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Jobs importeren</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Assemblages importeren</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Bibliotheekweergave</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Onderdelen</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Assemblage</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Onderdeelstatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Onderdeelvalidatie</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Onderdeelpaneel</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Onderdeelfilters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Gereedschapsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Gereedschapsvalidatie</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Buiggereedschapsvalidatie</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Snijgereedschapsvalidatie</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Vouwgereedschapsvalidatie</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Gereedschapspaneel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Filters opslaan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Orders</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Orders weergave</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Jobs</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">Job aanmaken</a></li>
+    <li><button class="tree blank"></button><a href="jobview.html">Job weergave</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobpanel.html">Job paneel</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">Automatisch plannen</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">Interactief nesten</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">Opnieuw verpakken</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">Nestbeheer</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">Layout weergave</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">Layout paneel</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">Rapportverzender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">Restmateriaal beheer</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">Automatisch restmateriaal beheer</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">Handmatig restmateriaal beheer</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">Twinline nesten</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">Verouderd</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">Job filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD extensies</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Installatie</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Onderdelen opslaan</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Assemblage opslaan</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Haalbaarheid controleren</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Fabrieksinstellingen</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Diverse verbeteringen</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Jobs</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobpanel.html">Job paneel</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Job paneel</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Deze sectie legt jobgerelateerde acties uit zoals
+<strong>Export outputs</strong>, <strong>Job resetten…</strong>,
+<strong>Markeren als voltooid…</strong>, <strong>Job exporteren…</strong>,
+en andere opties die worden gebruikt om jobinstanties te beheren.</p>
+</div>
+<table class="tableblock frame-none grid-none fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/jobpanel.png" alt="JobPanel" width="200">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Openen in de modus alleen lezen voor weergave</strong><br>
+Opent de geselecteerde job in alleen-lezen modus.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Schakelt bewerken in van de geselecteerde job.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Wissen</strong><br>
+Verwijdert de geselecteerde job.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/openreport.png" alt="Report" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rapport weergeven</strong><br>
+Opent het productierapport voor de geselecteerde job.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Uitvoeren exporteren</strong><br>
+Exporteert de machine-klare outputbestanden (NC bestanden en rapporten) gegenereerd
+voor de geselecteerde job.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/planui.png" alt="Plan" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Plan job</strong><br>
+Genereert geneste layouts voor de onderdelen in de geselecteerde job.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/resetui.png" alt="Reset" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Job resetten…</strong><br>
+Verwijdert alle gegenereerde layouts voor de job en reset de onderdelen naar de
+planbare status.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/markui.png" alt="Mark" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Markeren als voltooid…</strong><br>
+Markeert de job en alle nesten als voltooid na productie.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/jobui.png" alt="Job" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Job exporteren…</strong><br>
+Exporteert de volledige job als een pakket dat kan worden hergebruikt of geïmporteerd in
+een ander systeem.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Vorige</strong> / <strong>Volgende</strong> / <strong>Lay-out</strong><br>
+Navigeert naar de vorige of volgende layout binnen de geselecteerde job.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sort.png" alt="Filters" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sorteren en filteren</strong><br>
+Gebruik deze filters om andere jobs weer te geven die hetzelfde materiaal, klant,
+leverdatum of prioriteit delen.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uitvoeren_exporteren">Uitvoeren exporteren</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Selecteer de vereiste job.</p>
+</li>
+<li>
+<p>Klik op <strong>Uitvoeren exporteren</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput.png" alt="Export outputs dialog" width="585">
+</div>
+</div>
+</li>
+<li>
+<p>Dit exporteert de machine-klare outputbestanden gegenereerd voor de geselecteerde
+job.</p>
+</li>
+<li>
+<p>Export Outputs kunnen worden opgeslagen op de standaardlocatie geconfigureerd in
+<strong>Fabrieksinstellingen</strong> of op een aangepaste locatie door gebruik te maken van
+<strong>Bladeren…</strong>.</p>
+</li>
+<li>
+<p>Het exporteert alleen machine outputbestanden (zoals NC en rapporten) voor de
+job.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/output.png" alt="Exported output files" width="725">
+</div>
+</div>
+</li>
+<li>
+<p>Deze bestanden worden direct gebruikt voor productie en kunnen naar de
+machine worden gestuurd.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_job_resetten">Job resetten…</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Reset de geselecteerde job door alle gegenereerde layouts te verwijderen en de onderdelen
+weer beschikbaar te maken voor planning.</p>
+</div>
+<div class="paragraph">
+<p>Om een job te resetten:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klik met de rechtermuisknop op de job en selecteer <strong>Job resetten…</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/resetjob1.png" alt="Reset job" width="820">
+</div>
+</div>
+</li>
+<li>
+<p>Dit verwijdert alle bestaande geneste layouts voor de geselecteerde job en reset
+alle onderdelen naar de planbare status.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/resetjob2.png" alt="Reset job" width="820">
+</div>
+</div>
+</li>
+<li>
+<p>Als de layouts onderdelen van andere jobs bevatten, worden die onderdelen ook gereset.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_job_exporteren">Job exporteren…</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Selecteer de vereiste job.</p>
+</li>
+<li>
+<p>Klik op <strong>Job exporteren…</strong>.</p>
+</li>
+<li>
+<p>Deze optie exporteert de volledige job als een pakket dat kan worden hergebruikt of
+geïmporteerd in een ander systeem.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/outputview.png" alt="Output view" width="785">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>De geëxporteerde gegevens bevatten alle informatie die nodig is om de job opnieuw te maken:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Onderdeeldetails en hoeveelheden (CSV bestanden).</p>
+</li>
+<li>
+<p>Layout en nestgegevens (CSV / FXYLT bestanden).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>De geëxporteerde bestanden worden opgeslagen als een jobmap in de geconfigureerde exportlocatie.</p>
+</li>
+<li>
+<p>Deze optie wordt gebruikt voor het overdragen, delen of back-uppen van de hele job.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_markeren_als_voltooid">Markeren als voltooid…</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Zodra de job is verwerkt op de machine, opent u het Job paneel en selecteert u
+<strong>Markeren als voltooid…</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/mark.png" alt="Mark complete dialog" width="845">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wanneer een job als voltooid wordt gemarkeerd:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Worden alle nesten onder de job als voltooid gemarkeerd.</p>
+</li>
+<li>
+<p>Wordt de job uitgegrijsd, naar het einde van de lijst verplaatst en getoond met een
+groen vinkje.</p>
+</li>
+<li>
+<p>Worden alle layouts onder de job verwijderd uit de actieve layouts lijst.</p>
+</li>
+<li>
+<p>Worden onderdeel- en jobstatussen bijgewerkt en verplaatsen verwerkte hoeveelheden naar de
+voltooide status.</p>
+</li>
+<li>
+<p>Worden outputbestanden voor alle layouts in de job verwijderd uit de machine
+outputlocatie om dubbel gebruik te voorkomen.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_uitvoeren_exporteren">Uitvoeren exporteren</a>
+  </li>
+  <li level="1">
+   <a href="#_job_resetten">Job resetten…</a>
+  </li>
+  <li level="1">
+   <a href="#_job_exporteren">Job exporteren…</a>
+  </li>
+  <li level="1">
+   <a href="#_markeren_als_voltooid">Markeren als voltooid…</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobview.html">Job weergave</a></span>
+ <span class="next"><a href="jobautoplan.html">Automatisch plannen</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

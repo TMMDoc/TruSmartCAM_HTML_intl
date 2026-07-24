@@ -1,0 +1,677 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Προβολή εργασίας</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Καλώς ήρθατε στο TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Εγκατάσταση</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Απαιτήσεις υλικού</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Υποστηριζόμενες μορφές αρχείων</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Προαπαιτούμενα</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Εγκατάσταση Server</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Εγκατάσταση Client</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Αλλαγή άδειας χρήσης</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Ρύθμιση Παραμέτρων</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Προσθήκη/Αφαίρεση μηχανής</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Ρύθμιση εργαλείων</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Διαμόρφωση χρηστών</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Γλώσσα</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Υλικό</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Προσθήκη νέου υλικού και φύλλου</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Εξαγωγή/Εισαγωγή υλικού</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Αντικατάσταση υλικού</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Αντιστοίχιση υλικού</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Αντιστοίχιση σελίδων CAM</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Αντιστοίχιση πεδίων από CAD (κλειδιά αναζήτησης)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">Η διεπαφή χρήστη</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Ροή εργασίας</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Βιβλιοθήκη</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Εισαγωγή parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Εισαγωγή παραγγελιών</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Εισαγωγή jobs</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Προβολή βιβλιοθήκης</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Κατάσταση part</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Επικύρωση part</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Πίνακας part</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Φίλτρα part</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Κατάσταση tooling</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Επικύρωση tooling</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Επικύρωση bend tooling</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Επικύρωση cut tooling</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Επικύρωση fold tooling</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Πίνακας tooling</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Αποθήκευση φίλτρων</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Παραγγελίες</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Προβολή παραγγελιών</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Εργασίες</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">Δημιουργία εργασίας</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobview.html">Προβολή εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="jobpanel.html">Πίνακας εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">Αυτόματος σχεδιασμός</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">Διαδραστική τοποθέτηση</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">Επανασυσκευασία</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">Διαχείριση τοποθέτησης</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">Προβολή διάταξης</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">Πίνακας διάταξης</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">Αποστολέας αναφοράς</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">Διαχείριση υπολειμμάτων</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">Αυτόματη διαχείριση υπολειμμάτων</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">Χειροκίνητη διαχείριση υπολειμμάτων</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">Τοποθέτηση διπλής γραμμής</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">Μη ενημερωμένο</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">Φίλτρα εργασίας</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">Επεκτάσεις CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Εγκατάσταση</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Αποθήκευση εξαρτημάτων</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Αποθήκευση συναρμολόγησης</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Έλεγχος σκοπιμότητας</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Ρυθμίσεις εργοστασίου</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Διάφορες βελτιώσεις</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Εργασίες</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobview.html">Προβολή εργασίας</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Προβολή εργασίας</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Αυτή η ενότητα εξηγεί τις διαφορετικές προβολές που είναι διαθέσιμες στην προβολή Εργασίας, συμπεριλαμβανομένων
+Εργασιών, Εξαρτημάτων, Τοποθετήσεων, Επεξεργασίας, Προσομοίωσης και Εξαγωγής.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_εργασίες">Εργασίες</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Η επιλογή του <strong>εργασίες</strong> εμφανίζει μια λίστα με όλες τις εργασίες που είναι τρέχοντος
+ρυθμισμένες στο λογισμικό. Μπορείτε να κάνετε διπλό κλικ σε μια εργασία για να δείτε τις λεπτομέρειές της ή
+δεξί κλικ για πρόσβαση σε πρόσθετες επιλογές.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Οι εργασίες εμφανίζονται σε προβολή πλακιδίων, όπου κάθε εργασία εμφανίζεται με βασικές
+ιδιότητες όπως Job ID, Job Ref, Όνομα πελάτη, Σύνολο εξαρτημάτων, Ημερομηνία παράδοσης, Γραμμή κατάστασης εργασίας κ.λπ.</p>
+</li>
+<li>
+<p>Κάθε πλακίδιο εργασίας εμφανίζει επίσης εικόνες εξαρτημάτων σε μορφή στοιβαγμένης κάρτας. Μπορείτε
+να κάνετε κύλιση μέσω όλων των εξαρτημάτων σε μια εργασία χρησιμοποιώντας τον τροχό του ποντικιού.<br></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobview1.png" alt="Job Page" width="1489">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_λεπτομέρειες_εργασίας">Λεπτομέρειες εργασίας</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Διπλό κλικ σε ένα πλακίδιο ή πατώντας το πλήκτρο <kbd>Enter</kbd> μετά την επιλογή ενός πλακιδίου
+αλλάζει την προβολή σε Λειτουργία Λεπτομερειών.</p>
+</li>
+<li>
+<p>Η σελίδα λεπτομερειών εμφανίζει τη λίστα εξαρτημάτων μαζί με τα τοποθετημένα φύλλα
+(διατάξεις), εάν υπάρχουν.</p>
+</li>
+<li>
+<p>Χρησιμοποιήστε τα πλήκτρα Πάνω/Κάτω βέλους για εναλλαγή μεταξύ εργασιών στη σελίδα λεπτομερειών.</p>
+</li>
+<li>
+<p>Η κύλιση του τροχού του ποντικιού πάνω από τη στοίβα εξαρτημάτων επισημαίνει το εξάρτημα και στη
+λίστα εξαρτημάτων και στις διατάξεις.</p>
+</li>
+<li>
+<p>Η επιλογή μιας διάταξης επισημαίνει τη διάταξη και όλα τα εξαρτήματα που είναι τοποθετημένα σε αυτήν στη
+λίστα εξαρτημάτων. Οι επισημάνσεις απενεργοποιούνται αυτόματα μετά από ένα λεπτό.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobview2.png" alt="Job Details" width="1908">
+</div>
+</div>
+</li>
+<li>
+<p><strong>Σύνοψη κατανομής</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Εξαρτήματα</strong>: Εμφανίζει τον συνολικό αριθμό στοιχείων παραγγελίας και τη
+συνολική ποσότητα στην εργασία.</p>
+</li>
+<li>
+<p><strong>μεταλλικές πλάκες</strong>: Εμφανίζει τον συνολικό αριθμό τοποθετημένων φύλλων μαζί
+με τη συνολική ποσότητα φύλλων.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Βήματα εργασίας</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Κάμψη</strong>: Εμφανίζει το ανατεθειμένο μηχάνημα και την ποσότητα παραγγελίας του
+που θα υποβληθεί σε επεξεργασία.</p>
+</li>
+<li>
+<p><strong>Κοπή</strong>: Εμφανίζει το ανατεθειμένο μηχάνημα και την ποσότητα παραγγελίας του
+που θα υποβληθεί σε επεξεργασία.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_προτεραιότητα">Προτεραιότητα</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Πρώτα, κάντε κλικ στο εικονίδιο <strong>Jobs</strong> στην αριστερή πλευρά της οθόνης, επιλέξτε την εργασία που
+θέλετε να επεξεργαστείτε και στη συνέχεια κάντε κλικ στο <strong>edit</strong> στη δεξιά πλευρά της οθόνης (βεβαιωθείτε
+ότι είναι επιλεγμένη η επιλογή Jobs).</p>
+</li>
+<li>
+<p>Εναλλακτικά, κάντε δεξί κλικ στην επιλεγμένη εργασία και κάντε κλικ στο εικονίδιο
+<strong>Επιλογή του εγγράφου για επεξεργασία</strong>.</p>
+</li>
+<li>
+<p>Όταν κάνετε κλικ στο <strong>edit</strong>, εμφανίζεται το παράθυρο επεξεργασίας εργασίας. Σε αυτό το παράθυρο, μπορείτε να ορίσετε
+ή να αλλάξετε την προτεραιότητα για την εργασία.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/priority1.png" alt="Priority1" width="1207">
+</div>
+</div>
+</li>
+<li>
+<p>Με βάση την προτεραιότητα εξαρτήματος εργασίας, η Αναφορά εργασίας στο πλακίδιο εργασίας είναι
+σκιασμένη με χρώμα αναλόγως.</p>
+</li>
+<li>
+<p>Τα Εξαρτήματα Εργασίας ταξινομούνται πρώτα κατά προτεραιότητα και στη συνέχεια κατά ημερομηνία παράδοσης. Επίσης είναι
+σκιασμένα με χρώμα σύμφωνα με την προτεραιότητά τους.</p>
+</li>
+<li>
+<p>Κατά την τοποθέτηση, τα εξαρτήματα <strong>Urgent</strong> εξετάζονται πρώτα, ακολουθούμενα από <strong>High</strong>, στη συνέχεια
+<strong>Normal</strong> και τέλος τα εξαρτήματα <strong>Low</strong> προτεραιότητας τοποθετούνται στον υπόλοιπο χώρο στα
+φύλλα τοποθέτησης.</p>
+</li>
+<li>
+<p>Τα φύλλα τοποθέτησης επίσης ταξινομούνται και σκιάζονται με χρώμα σύμφωνα με την προτεραιότητα.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Προτεραιότητα εργασίας</th>
+<th class="tableblock halign-left valign-top">Περιγραφή χρώματος</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/urgent.png" alt="Urgent" width="50"></span> (Πορτοκαλί)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Urgent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/normal1.png" alt="Normal" width="50"></span> (Χωρίς χρώμα)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Normal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/high.png" alt="High" width="50"></span> (Κίτρινο)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">High</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/low.png" alt="Low" width="50"></span> (Σκούρο γκρι)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Low</p></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock">
+<div class="content">
+<img src="img/priority2.png" alt="Priority2" width="1158">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_κατάσταση">Κατάσταση</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Η γραμμή κατάστασης Εργασίας χρησιμοποιεί κωδικούς χρώματος για να υποδείξει την πρόοδο ή την κατάσταση της
+εργασίας με βάση την ποσότητα που έχει υποβληθεί σε επεξεργασία ή απομένει.</p>
+</li>
+<li>
+<p>Τα εξαρτήματα εντός της εργασίας και τα φύλλα τοποθέτησης επίσης επισημαίνονται με
+αντίστοιχα χρώματα για να αντικατοπτρίσουν την ατομική τους κατάσταση εντός της συνολικής ΕΡΓΑΣΙΑΣ.</p>
+</li>
+<li>
+<p>Ο κωδικός χρώματος βελτιώνει την παρακολούθηση και διασφαλίζει ότι οι χειριστές μπορούν εύκολα να δουν την
+κατάσταση παραγωγής με μια ματιά.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/status1.png" alt="Job status" width="1114">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/status2.png" alt="Job status" width="1360">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Κατάσταση Εργασίας</th>
+<th class="tableblock halign-left valign-top">Περιγραφή</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/notready.png" alt="Not Ready" width="100"></span> (Ανοιχτό γκρι)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Όχι έτοιμο</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/nesting.png" alt="Nesting" width="100"></span> (Πορφυρό)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Κατανομή</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/ready.png" alt="Ready" width="100"></span> (Λευκό)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Έτοιμο</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/cuttingqueue.png" alt="Bend planned" width="100"></span> (Ανοιχτό κίτρινο)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bend Planned</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/sheetmissing.png" alt="Sheet Missing" width="100"></span> (Σκούρο γκρι)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ελλιπής μεταλλική πλάκα</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/bendingqueue.png" alt="Bending Queue" width="100"></span> (Σκούρο κίτρινο)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ουρά κάμψης</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/bendplanned.png" alt="Bend Planned" width="100"></span> (Κίτρινο)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ουρά κοπής</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/completed.png" alt="Completed" width="100"></span> (Σκούρο πράσινο)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ολοκληρώθηκε</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_εξαρτήματα">Εξαρτήματα</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Η προβολή Ενεργών Εξαρτημάτων εμφανίζει όλα τα εξαρτήματα που βρίσκονται αυτήν τη στιγμή σε εξέλιξη εντός
+ενεργών εργασιών.</p>
+</div>
+<div class="paragraph">
+<p>Κάθε εξάρτημα αναπαρίσταται ως πλακίδιο που εμφανίζει βασικές λεπτομέρειες όπως όνομα εξαρτήματος,
+διαστάσεις, υλικό, πάχος, ποσότητα και ημερομηνία παράδοσης. Μια οπτική προεπισκόπηση του
+εξαρτήματος επίσης εμφανίζεται.</p>
+</div>
+<div class="paragraph">
+<p>Αυτή η προβολή βοηθά τους χρήστες να παρακολουθούν την κατάσταση επεξεργασίας μεμονωμένων εξαρτημάτων και να
+παρακολουθούν την πρόοδό τους σε τρέχουσες εργασίες.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/activeparts.png" alt="Active">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_τοποθετήσεις">Τοποθετήσεις</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Η προβολή Ενεργών Τοποθετήσεων εμφανίζει όλες τις τοποθετήσεις που βρίσκονται αυτήν τη στιγμή σε εξέλιξη εντός
+ενεργών εργασιών.</p>
+</div>
+<div class="paragraph">
+<p>Κάθε τοποθέτηση αναπαρίσταται με σχετικές λεπτομέρειες όπως αριθμός εξαρτημάτων και
+κατάσταση επεξεργασίας. Μια οπτική διάταξη των τοποθετημένων εξαρτημάτων επίσης εμφανίζεται.</p>
+</div>
+<div class="paragraph">
+<p>Αυτή η προβολή βοηθά τους χρήστες να παρακολουθούν την πρόοδο τοποθέτησης και να παρακολουθούν πώς τα εξαρτήματα είναι διατεταγμένα
+και υποβάλλονται σε επεξεργασία σε φύλλα.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/activenest.png" alt="Nest">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_επεξεργασία">Επεξεργασία</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Η επιλογή Επεξεργασία σας επιτρέπει να τροποποιήσετε το επιλεγμένο στοιχείο.</p>
+</div>
+<div class="paragraph">
+<p>Με βάση την τρέχουσα προβολή, η επιλεγμένη παρουσία ανοίγει για επεξεργασία:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Στην προβολή Εργασιών, η επιλεγμένη εργασία ανοίγει για επεξεργασία.</p>
+</li>
+<li>
+<p>Στην προβολή Ενεργών Εξαρτημάτων, το επιλεγμένο εξάρτημα ανοίγει για επεξεργασία.</p>
+</li>
+<li>
+<p>Στην προβολή Ενεργών Τοποθετήσεων, η επιλεγμένη τοποθέτηση ανοίγει για επεξεργασία.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobviewedit.png" alt="Edit" width="980">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_εξαγωγή_csv">Εξαγωγή csv</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Η επιλογή Εξαγωγή σας επιτρέπει να επιλέξετε πληροφορίες εργασίας και να τις εξαγάγετε σε αρχείο CSV.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Κάντε κλικ στο εικονίδιο <strong>jobs</strong>.</p>
+</li>
+<li>
+<p>Κάντε κλικ στην επιλογή <strong>export</strong> στη δεξιά πλευρά της οθόνης.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importexport1.png" alt="Export" width="700">
+</div>
+</div>
+</li>
+<li>
+<p>Εμφανίζεται ένα παράθυρο διαλόγου που εμφανίζει διαθέσιμα πεδία:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importexport2.png" alt="Export CSV" width="174">
+</div>
+</div>
+</li>
+<li>
+<p>Επιλέξτε τα πλαίσια ελέγχου για τα πεδία που θέλετε να εξαγάγετε.</p>
+</li>
+<li>
+<p>Χρησιμοποιήστε την επιλογή <strong>Group By</strong> εάν θέλετε να ομαδοποιήσετε τα δεδομένα κατά ένα
+επιλεγμένο πεδίο.</p>
+</li>
+<li>
+<p>Κάντε κλικ στο Export για να δημιουργήσετε το αρχείο CSV.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_πρόσθετες_πληροφορίες">Πρόσθετες πληροφορίες</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Υπάρχουν επίσης τρία πρόσθετα εικονίδια στη δεξιά πλευρά της οθόνης τα οποία είναι
+<strong>προσομοίωση</strong>, <strong>Goto</strong> και <strong>πίσω</strong>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Το Simulate θα ανοίξει το επιλεγμένο στοιχείο για πιο λεπτομερή προβολή.</p>
+</li>
+<li>
+<p>Το Goto θα αλλάξει την εστίαση και την εμφάνιση στο εξάρτημα ή την τοποθέτηση που είναι
+επιλεγμένη.</p>
+</li>
+<li>
+<p>Το Back θα πάει πίσω ένα επίπεδο από όπου βρίσκεστε τώρα, για παράδειγμα
+κάνοντας κλικ στο <strong>πίσω</strong> ενώ είστε σε προσομοίωση θα σας πάει πίσω στην
+κύρια εργασία και από μια εργασία θα σας πάει πίσω στην κύρια προβολή εργασιών.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_εργασίες">Εργασίες</a>
+  </li>
+  <li level="2">
+   <a href="#_λεπτομέρειες_εργασίας">Λεπτομέρειες εργασίας</a>
+  </li>
+  <li level="2">
+   <a href="#_προτεραιότητα">Προτεραιότητα</a>
+  </li>
+  <li level="2">
+   <a href="#_κατάσταση">Κατάσταση</a>
+  </li>
+  <li level="1">
+   <a href="#_εξαρτήματα">Εξαρτήματα</a>
+  </li>
+  <li level="1">
+   <a href="#_τοποθετήσεις">Τοποθετήσεις</a>
+  </li>
+  <li level="1">
+   <a href="#_επεξεργασία">Επεξεργασία</a>
+  </li>
+  <li level="1">
+   <a href="#_εξαγωγή_csv">Εξαγωγή csv</a>
+  </li>
+  <li level="1">
+   <a href="#_πρόσθετες_πληροφορίες">Πρόσθετες πληροφορίες</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobcreation.html">Δημιουργία εργασίας</a></span>
+ <span class="next"><a href="jobpanel.html">Πίνακας εργασίας</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

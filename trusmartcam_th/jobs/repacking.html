@@ -1,0 +1,474 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>การบรรจุใหม่</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">ยินดีต้อนรับสู่ TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">การติดตั้ง</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">ข้อกำหนดฮาร์ดแวร์</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">รูปแบบไฟล์ที่รองรับ</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">ข้อกำหนดเบื้องต้น</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">การติดตั้ง Server</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">การติดตั้ง Client</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">เปลี่ยนใบอนุญาต</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">การกำหนดค่า</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">เพิ่ม/ลบเครื่องจักร</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">ตั้งค่าเครื่องมือ</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">กำหนดค่าผู้ใช้</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">ภาษา</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">วัสดุ</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">เพิ่มวัสดุและแผ่นวัสดุใหม่</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">ส่งออก/นำเข้าวัสดุ</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">แทนที่วัสดุ</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">จับคู่วัสดุ</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">จับคู่หน้า CAM</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">จับคู่ฟิลด์จาก CAD (คีย์การค้นหา)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">อินเทอร์เฟซผู้ใช้งาน</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">ขั้นตอนการทำงาน</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Library</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">แผงเครื่องมือ</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">คำสั่งซื้อ</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">มุมมองคำสั่งซื้อ</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">งาน</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">สร้างงาน</a></li>
+    <li><button class="tree blank"></button><a href="jobview.html">มุมมองงาน</a></li>
+    <li><button class="tree blank"></button><a href="jobpanel.html">แผงงาน</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">วางแผนอัตโนมัติ</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">การจัดเรียงแบบโต้ตอบ</a></li>
+    <li><button class="tree blank"></button><a class="active" href="repacking.html">การบรรจุใหม่</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">การจัดการการจัดเรียง</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">มุมมองเลย์เอาต์</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">แผงเลย์เอาต์</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">ผู้ส่งรายงาน</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">การจัดการวัสดุเหลือใช้</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">การจัดการวัสดุเหลือใช้อัตโนมัติ</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">การจัดการวัสดุเหลือใช้ด้วยตนเอง</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">การจัดเรียงแบบเส้นคู่</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">ล้าสมัย</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">ตัวกรองงาน</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">โรงงาน</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">เส้นทาง</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">แผ่นวัสดุ</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">ผู้ใช้</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">แก้ไข</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">ลูกค้า</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">การตั้งค่า</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">สภาพแวดล้อม</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">นำเข้า</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">การงอ</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">การตัด</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">การแจ้งเตือน</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">เฝ้าดู</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">งาน</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">รายงาน</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">ส่วนขยาย CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">การติดตั้ง</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">บันทึกชิ้นส่วน</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">บันทึกแอสเซมบลี</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">ตรวจสอบความเป็นไปได้</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">การตั้งค่าโรงงาน</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">การปรับปรุงอื่นๆ</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">ข้อมูลทางกฎหมาย</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">งาน</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="repacking.html">การบรรจุใหม่</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>การบรรจุใหม่</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>TruSmartCAM ไม่มีโมดูลการบรรจุใหม่แยกต่างหาก แต่การบรรจุใหม่จะ
+ถูกจัดการผ่านตัวเลือกระดับงานที่ให้ความยืดหยุ่นในวิธีการรวม
+ชิ้นส่วน</p>
+</div>
+<div class="paragraph">
+<p>มีสามวิธีที่สามารถทำการบรรจุใหม่ได้</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>การบรรจุใหม่ด้วย
+<strong>รวมชิ้นส่วนจากหลายงานรวมชิ้นส่วนจากหลายงาน</strong></p>
+</li>
+<li>
+<p>การบรรจุใหม่ด้วยตนเองโดยใช้ตัวช่วยเชิงโต้ตอบ <strong>เพิ่มชิ้นส่วน&#8230;&#8203;</strong></p>
+</li>
+<li>
+<p>การบรรจุใหม่ด้วยตนเองโดยใช้ TecZone</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_การบรรจุใหม่ด้วย_รวมชิ้นส่วนจากหลายงานรวมชิ้นส่วนจากหลายงาน">การบรรจุใหม่ด้วย รวมชิ้นส่วนจากหลายงานรวมชิ้นส่วนจากหลายงาน</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>เพื่อเปิดใช้งานตัวเลือกนี้ให้ไปที่ <strong>โรงงาน</strong> &#8594;
+<strong>การตั้งค่า</strong> &#8594; <strong>งาน</strong> &#8594;
+<strong>การตั้งค่าเนส</strong> &#8594;
+<strong>รวมชิ้นส่วนจากหลายงานรวมชิ้นส่วนจากหลายงาน</strong></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/mixparts.png" alt="Mix Parts" width="735">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>เมื่อเปิดใช้งาน ตัวเลือกนี้จะอนุญาตให้ชิ้นส่วนจากงานต่างๆ ถูกจัดกลุ่ม
+เข้าด้วยกันระหว่างการจัดเรียงอัตโนมัติหรือการจัดเรียงแบบโต้ตอบ ส่งผลให้เกิดการบรรจุ
+หรือการจัดเรียงแบบรวม</p>
+</li>
+<li>
+<p>ตัวอย่างเช่น:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>งาน-1 มี 1 ชิ้นส่วน งาน-2 มี 1 ชิ้นส่วน</p>
+</li>
+<li>
+<p>ด้วย <strong>รวมชิ้นส่วนจากหลายงานรวมชิ้นส่วนจากหลายงาน</strong>
+ที่เปิดใช้งาน TruSmartCAM สามารถบรรจุชิ้นส่วน 2 ชิ้นนี้ใหม่เป็นการจัดเรียงเดียวที่ปรับให้เหมาะสม</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/mixnest1.png" alt="Mix Nest1" width="415"></span> <span class="image"><img src="img/mixnest2.png" alt="Mix Nest2" width="400"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>หากไม่มีตัวเลือกนี้ ชิ้นส่วนจากแต่ละงานจะยังคงแยกออกจากกันระหว่าง
+การจัดเรียง/การบรรจุด้วยชื่อเลย์เอาต์ที่แตกต่างกัน</p>
+</li>
+<li>
+<p>การบรรจุใหม่ยังสามารถทำได้ด้วยตนเองโดยไม่ต้องเปิดใช้งานตัวเลือกนี้</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_การบรรจุใหม่ด้วยตนเองโดยใช้ตัวช่วยเชิงโต้ตอบเพิ่มชิ้นส่วน">การบรรจุใหม่ด้วยตนเองโดยใช้ตัวช่วยเชิงโต้ตอบเพิ่มชิ้นส่วน</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>จากมุมมองเลย์เอาต์ เลือกชิ้นส่วนที่คุณต้องการบรรจุใหม่</p>
+</li>
+<li>
+<p>คลิกขวาที่ชิ้นส่วนและเลือก <strong>เพิ่มชิ้นส่วน&#8230;&#8203;</strong> จาก
+แผงเลย์เอาต์</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/addparts.png" alt="Add Parts" width="740">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ทำตามข้อความแจ้งในตัวช่วยเพื่อทำการบรรจุใหม่ให้เสร็จสมบูรณ์</p>
+</li>
+<li>
+<p>เลือก <strong>แสดงชิ้นส่วนของงานอื่น</strong> และเพิ่มไปยัง
+งานปัจจุบัน</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/manualrepacking2.png" alt="Manual Repacking2" width="1846">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ตรวจสอบการเปลี่ยนแปลงและยืนยันการบรรจุใหม่</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/manualrepacking1.png" alt="Manual Repacking1" width="1846">
+</div>
+</div>
+<div class="paragraph">
+<p>สำหรับรายละเอียดเพิ่มเติม โปรดดู <a href="./layoutcommands/layoutpanel.html#add-parts">Add Parts</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_การบรรจุใหม่ด้วยตนเองโดยใช้_teczone">การบรรจุใหม่ด้วยตนเองโดยใช้ TecZone</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>เปิด TecZone โดยคลิกที่ <span class="image"><img src="img/editicon.png" alt="Edit" width="18"></span></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/fluxlayout.png" alt="Flux Layout" width="741">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ในอินเทอร์เฟซ TecZone คลิก Add</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/fluxadd.png" alt="Add" width="544">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>หน้าต่างใหม่จะปรากฏขึ้นที่คุณสามารถเลือกชิ้นส่วนที่จะบรรจุใหม่ คลิก
+<strong>แสดง&#8230;&#8203;</strong> แล้วเลือก <strong>ชิ้นส่วนของงานอื่น</strong>
+หลังจากทำการเลือกแล้ว คลิก <strong>_เลือก</strong></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/pick.png" alt="Pick" width="838">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>หน้าต่างใหม่จะปรากฏขึ้นที่คุณสามารถกำหนดว่าชิ้นส่วนต้อง
+บรรจุใหม่ที่ไหน</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/selection.png" alt="Selection" width="408">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>คลิกที่ <strong>บันทึกการเปลี่ยนแปลงไปยัง Praxis</strong> และ
+เลย์เอาต์ที่บรรจุใหม่จะพร้อมใช้งานใน TruSmartCAM</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/fluxrepack1.png" alt="Flux Repack1" width="410"></span> <span class="image"><img src="img/fluxrepack2.png" alt="Flux Repack2" width="418"></span></p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_การบรรจุใหม่ด้วย_รวมชิ้นส่วนจากหลายงานรวมชิ้นส่วนจากหลายงาน">การบรรจุใหม่ด้วย รวมชิ้นส่วนจากหลายงานรวมชิ้นส่วนจากหลายงาน</a>
+  </li>
+  <li level="1">
+   <a href="#_การบรรจุใหม่ด้วยตนเองโดยใช้ตัวช่วยเชิงโต้ตอบเพิ่มชิ้นส่วน">การบรรจุใหม่ด้วยตนเองโดยใช้ตัวช่วยเชิงโต้ตอบเพิ่มชิ้นส่วน</a>
+  </li>
+  <li level="1">
+   <a href="#_การบรรจุใหม่ด้วยตนเองโดยใช้_teczone">การบรรจุใหม่ด้วยตนเองโดยใช้ TecZone</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobinteractplan.html">การจัดเรียงแบบโต้ตอบ</a></span>
+ <span class="next"><a href="layoutcommands/index.html">การจัดการการจัดเรียง</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

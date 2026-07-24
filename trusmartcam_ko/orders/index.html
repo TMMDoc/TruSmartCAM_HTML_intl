@@ -1,0 +1,459 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>주문</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">TruSmartCAM에 오신 것을 환영합니다</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">설치</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">하드웨어 요구 사항</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">지원되는 파일 형식</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">사전 요구 사항</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">서버 설치</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">클라이언트 설치</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">라이선스 변경</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">구성</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">기계 추가/제거</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">툴링 설정</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">사용자 구성</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">언어</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">재료</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">새 재료 및 시트 추가</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">재료 내보내기/가져오기</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">재료 교체</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">재료 매핑</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">CAM 페이지 매핑</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">CAD에서 필드 매핑 (조회 키)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">사용자 인터페이스</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">워크플로우</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Library</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Tooling panel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a class="active" href="index.html">주문</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="ordersview.html">주문 보기</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../jobs/jobcreation.html">작업 생성</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobview.html">작업 보기</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobpanel.html">작업 패널</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobautoplan.html">자동 계획</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobinteractplan.html">대화형 네스팅</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/repacking.html">재포장</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/layoutcommands/index.html">네스트 관리</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/nestview.html">레이아웃 보기</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/layoutpanel.html">레이아웃 패널</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/reportsender.html">보고서 발신자</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/remnantmanagement/index.html">잔재 관리</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/autoremnant.html">자동 잔재 관리</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/manualremnant.html">수동 잔재 관리</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../jobs/twinlinenesting.html">트윈라인 네스팅</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/outdate.html">구식</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobfilters.html">작업 필터</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD 확장 기능</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks 추가 기능</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">설치</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">부품 저장</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">어셈블리 저장</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">실행 가능성 확인</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">공장 설정</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">기타 개선 사항</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">법적 고지</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">주문</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>주문</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>주문은 제조해야 할 부품, 수량 및 납기일을 정의합니다. 주문은 TruSmartCAM의 생산 계획 및 실행을 주도합니다. 주문은 다양한 방법을 사용하여 생성하거나 가져올 수 있으며, 생산 계획을 위해 작업으로 변환할 수 있습니다.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_주문_패널">주문 패널</h2>
+<div class="sectionbody">
+<table class="tableblock frame-none grid-none fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/orderpanel.png" alt="OrderPanel" width="145">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="22"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>보기용 읽기 전용으로 열기</strong><br>
+선택한 주문을 읽기 전용 모드로 엽니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="22"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+선택한 주문의 편집을 활성화합니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="22"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>삭제</strong><br>
+선택한 주문을 삭제합니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/new.png" alt="New" width="120"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>새로 만들기&#8230;&#8203;</strong><br>
+주문을 작업, 어셈블리 또는 다른 주문으로 변환합니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/assigncustomer.png" alt="Assign Customer" width="120"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>고객 할당</strong><br>
+주문에 고객을 할당합니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/setdue.png" alt="Due Date" width="120"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>기한일 설정&#8230;&#8203;</strong><br>
+주문의 납기일을 설정합니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/priority.png" alt="Priority" width="120"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>우선순위</strong><br>
+주문의 우선순위 수준을 지정합니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/partorder.png" alt="Part Order" width="120"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>파트 오더</strong><br>
+주문 내 부품에 할당된 참조 ID를 지정합니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/quantity.png" alt="Quantity" width="120"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>수량</strong><br>
+주문의 부품 수량 또는 인스턴스 수를 지정합니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="120"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>이전</strong> / <strong>다음</strong> / <strong>파트</strong><br>
+주문 내에서 이전 또는 다음 부품으로 이동합니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/filters.png" alt="Filters" width="120"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>정렬 및 필터</strong><br>
+이 필터를 사용하여 동일한 재료, 고객, 납기일 또는 우선순위를 공유하는 다른 주문을 볼 수 있습니다.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_주문_편집">주문 편집</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>하나 이상의 주문을 선택하고 마우스 오른쪽 버튼을 클릭하여 수량, 납기일, 우선순위 및 고객 정보와 같은 일반적인 주문 세부 정보를 수정합니다.</p>
+</div>
+<div class="paragraph">
+<p>선택한 여러 주문에 서로 다른 값이 필요한 경우 <strong>Check-out for Editing</strong> 옵션을 사용하여 요구 사항에 따라 각 주문을 개별적으로 편집합니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/editorder.png" alt="Edit" width="618">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/orderquantity.png" alt="Quantity" width="685">
+</div>
+</div>
+<div class="paragraph">
+<p>주문에 대한 모든 업데이트는 데이터베이스에 즉시 적용됩니다. <strong>삭제</strong> 명령을 사용하여 주문 라이브러리에서 주문을 제거합니다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Delete 명령은 주문만 제거합니다. 해당 주문에 연결된 부품은 부품 라이브러리에서 삭제되지 않습니다.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_주문_계획">주문 계획</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>하나 이상의 주문을 선택하고 마우스 오른쪽 버튼을 클릭한 다음 <strong>새로 만들기&#8230;&#8203;</strong> &#8594;
+<strong>통합 작업</strong> 을 클릭하여 선택한 주문을 작업으로 변환합니다. 작업 생성 전에 정렬 및 필터 옵션을 사용하여 관련 주문을 함께 그룹화합니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/orderjob.png" alt="Order Job" width="1141">
+</div>
+</div>
+<div class="paragraph">
+<p>주문이 작업으로 변환되면:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>작업이 작업 페이지로 이동됩니다</p>
+</li>
+<li>
+<p>주문이 주문 목록에서 제거됩니다</p>
+</li>
+<li>
+<p>표준 작업 계획 워크플로를 생산 계획 및 네스팅에 사용할 수 있습니다</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/orderplan.png" alt="Order Plan" width="884">
+</div>
+</div>
+<div class="paragraph">
+<p>작업 계획 워크플로에 대한 자세한 내용은 <a href="../jobs/jobautoplan.html">자동 계획</a>을 참조하십시오</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_추가_정보">추가 정보</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>주문이 포함된 작업이 삭제되면 작업 또는 부품이 완료됨으로 표시되지 않는 한 관련 주문이 자동으로 주문 준비 페이지로 다시 이동됩니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/addinfo.png" alt="Add" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>생산 요구 사항에 따라 <strong>통합 작업 편집</strong> 창을 통해 기존 작업에서 주문을 추가하거나 제거할 수 있습니다.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_주문_패널">주문 패널</a>
+  </li>
+  <li level="1">
+   <a href="#_주문_편집">주문 편집</a>
+  </li>
+  <li level="1">
+   <a href="#_주문_계획">주문 계획</a>
+  </li>
+  <li level="1">
+   <a href="#_추가_정보">추가 정보</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="../library/savingfilters.html">Saving filters</a></span>
+ <span class="next"><a href="ordersview.html">주문 보기</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

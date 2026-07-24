@@ -1,0 +1,452 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="res/bento.css">
+  <link rel="stylesheet" href="res/site.css">
+  <link rel="stylesheet" href="res/tree.css">
+  <link rel="stylesheet" href="res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="img/praxis-icon.png">
+  <title>Pracovní postup</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="index.html">Vítejte v TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="installation/index.html">Instalace</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="installation/hardwarerequirement.html">Hardwarové požadavky</a></li>
+    <li><button class="tree blank"></button><a href="installation/importformats.html">Podporované formáty souborů</a></li>
+    <li><button class="tree blank"></button><a href="installation/prerequisites.html">Předpoklady</a></li>
+    <li><button class="tree blank"></button><a href="installation/serverinstallation.html">Instalace serveru</a></li>
+    <li><button class="tree blank"></button><a href="installation/clientinstallation.html">Instalace klienta</a></li>
+    <li><button class="tree blank"></button><a href="installation/changelic.html">Změna licence</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="configuration/index.html">Konfigurace</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="configuration/setupmachine.html">Přidat/Odebrat stroj</a></li>
+    <li><button class="tree blank"></button><a href="configuration/setuptooling.html">Nastavení nářadí</a></li>
+    <li><button class="tree blank"></button><a href="configuration/configureusers.html">Konfigurace uživatelů</a></li>
+    <li><button class="tree blank"></button><a href="configuration/language.html">Jazyk</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="configuration/addmaterial/index.html">Materiál</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="configuration/addmaterial/addnew.html">Přidání nového materiálu a plechu</a></li>
+      <li><button class="tree blank"></button><a href="configuration/addmaterial/exportimport.html">Export/Import materiálu</a></li>
+      <li><button class="tree blank"></button><a href="configuration/addmaterial/replacematerial.html">Nahrazení materiálu</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="configuration/mapbendpages.html">Mapování materiálu</a></li>
+    <li><button class="tree blank"></button><a href="configuration/mapcampages.html">Mapování CAM stránek</a></li>
+    <li><button class="tree blank"></button><a href="configuration/cadmapfields.html">Mapování polí z CAD (vyhledávací klíče)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="userinterface.html">Uživatelské rozhraní</a></li>
+  <li><button class="tree blank"></button><a class="active" href="workflow.html">Pracovní postup</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="library/index.html">Knihovna</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/open/index.html">Otevřít</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="library/open/partimport.html">Import dílů</a></li>
+      <li><button class="tree blank"></button><a href="library/open/orderimport.html">Import objednávek</a></li>
+      <li><button class="tree blank"></button><a href="library/open/jobimport.html">Import zakázek</a></li>
+      <li><button class="tree blank"></button><a href="library/open/assembliesimport.html">Import sestav</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/libraryview/index.html">Zobrazení knihovny</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="library/libraryview/partview.html">Díly</a></li>
+      <li><button class="tree blank"></button><a href="library/libraryview/assemblyview.html">Sestava</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/partstate/index.html">Stav dílu</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="library/partstate/partvalidation.html">Validace dílu</a></li>
+      <li><button class="tree blank"></button><a href="library/partstate/partpanel.html">Panel dílů</a></li>
+      <li><button class="tree blank"></button><a href="library/partstate/partfilters.html">Filtry dílů</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/toolingstatus/index.html">Stav nástrojového vybavení</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="library/toolingstatus/toolingvalidation/index.html">Validace nástrojového vybavení</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="library/toolingstatus/toolingvalidation/bendtooling.html">Validace ohýbacího nástrojového vybavení</a></li>
+        <li><button class="tree blank"></button><a href="library/toolingstatus/toolingvalidation/cuttooling.html">Validace řezacího nástrojového vybavení</a></li>
+        <li><button class="tree blank"></button><a href="library/toolingstatus/toolingvalidation/foldtooling.html">Validace skládacího nástrojového vybavení</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="library/toolingstatus/toolingpanel.html">Panel nástrojového vybavení</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="library/savingfilters.html">Ukládání filtrů</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="orders/index.html">Objednávky</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="orders/ordersview.html">Zobrazení objednávek</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="jobs/index.html">Zakázky</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="jobs/jobcreation.html">Vytvoření zakázky</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobview.html">Zobrazení zakázek</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobpanel.html">Panel zakázek</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobautoplan.html">Automatické plánování</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobinteractplan.html">Interaktivní hnízdění</a></li>
+    <li><button class="tree blank"></button><a href="jobs/repacking.html">Přebalení</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="jobs/layoutcommands/index.html">Správa hnízdění</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="jobs/layoutcommands/nestview.html">Zobrazení uspořádání</a></li>
+      <li><button class="tree blank"></button><a href="jobs/layoutcommands/layoutpanel.html">Panel uspořádání</a></li>
+      <li><button class="tree blank"></button><a href="jobs/layoutcommands/reportsender.html">Odesílatel zpráv</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="jobs/remnantmanagement/index.html">Správa zbytků</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="jobs/remnantmanagement/autoremnant.html">Automatická správa zbytků</a></li>
+      <li><button class="tree blank"></button><a href="jobs/remnantmanagement/manualremnant.html">Ruční správa zbytků</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="jobs/twinlinenesting.html">Hnízdění Twinline</a></li>
+    <li><button class="tree blank"></button><a href="jobs/outdate.html">Zastaralé</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobfilters.html">Filtry zakázek</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="factory/index.html">Továrna</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="factory/routes.html">Trasy</a></li>
+    <li><button class="tree blank"></button><a href="factory/sheets.html">Plechy</a></li>
+    <li><button class="tree blank"></button><a href="factory/users.html">Uživatelé</a></li>
+    <li><button class="tree blank"></button><a href="factory/edit.html">Upravit</a></li>
+    <li><button class="tree blank"></button><a href="factory/customers.html">Zákazníci</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="factory/settings/index.html">Nastavení</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="factory/settings/environment.html">Prostředí</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/bend.html">Ohýbání</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/cut.html">Řezání</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/notification.html">Oznámení</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/watch.html">Sledování</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/job.html">Zakázka</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/reports.html">Reporty</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="cadextensions/index.html">Rozšíření CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/installationsteps.html">Instalace</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/savetopraxis.html">Uložení dílů</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/saveassembly.html">Uložení sestavy</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/partfeasibility.html">Kontrola proveditelnosti</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/factorysettings.html">Nastavení továrny</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/miscenhancements.html">Různá vylepšení</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="workflow.html">Pracovní postup</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Pracovní postup</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>TruSmartCAM je systém pro řízení výroby, který spravuje a optimalizuje procesy
+výroby plechu. Pracovní postup v TruSmartCAM se skládá z řady kroků, které
+postupujete k dokončení konkrétního úkolu nebo procesu. Pracovní postup můžete
+přizpůsobit různým výrobním procesům a upravit jej podle svých specifických
+potřeb. Pracovní postup v TruSmartCAM obvykle zahrnuje následující kroky:</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_konfigurace_systému">1. Konfigurace systému</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nakonfigurujte TruSmartCAM tak, aby odpovídal vašemu výrobnímu prostředí. Tento
+základní krok zahrnuje definování strojů s jejich schopnostmi a parametry,
+přidání dostupných materiálů a rozsahů tlouštěk, konfiguraci knihoven nástrojů
+s razníky a zápustkami, vytvoření nastavovacích listů pro různé konfigurace
+strojů a správu uživatelských účtů s příslušnými oprávněními. Správně
+nakonfigurovaný systém zajišťuje přesné zpracování a předchází chybám v
+pozdějších fázích. Toto nastavení se obvykle provádí jednou během počátečního
+nasazení s pravidelnými aktualizacemi podle vývoje vaší továrny.</p>
+</div>
+<div class="paragraph">
+<p>Další informace naleznete v <a href="configuration/setupmachine.html">Add/Remove
+machine</a>, <a href="configuration/addmaterial/index.html">Material</a>,
+<a href="factory/sheets.html">Sheets</a>, <a href="configuration/setuptooling.html">Setup
+tooling</a> a <a href="configuration/configureusers.html">Configure users</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/setup.png" alt="Setup" width="817">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_přidání_dílů_do_knihovny">2. Přidání dílů do knihovny</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Importujte 2D nebo 3D CAD díly do knihovny dílů pomocí podporovaných formátů,
+jako jsou soubory DXF, DWG nebo STEP. Během importu TruSmartCAM automaticky
+analyzuje geometrii dílu, ověřuje vyrobitelnost, přiřazuje požadovanou
+technologii zpracování plechu (laser, děrování nebo kombinace) a generuje
+náhledové miniatury. Importované díly se zobrazují jako dlaždice v zobrazení
+knihovny, kde barevně kódované ikony indikují stav dílu, typ technologie,
+požadavky na materiál a všechny zjištěné problémy. Tento vizuální systém
+umožňuje rychlé posouzení připravenosti dílu na první pohled.</p>
+</div>
+<div class="paragraph">
+<p>Další informace naleznete v <a href="library/index.html">Library</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/importparts.png" alt="Import" width="476">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_ověření_dílů_a_nástrojů">3. Ověření dílů a nástrojů</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Zkontrolujte každý importovaný díl z hlediska možných problémů s výrobou.
+Ověřte, že geometrie dílu je platná a vyrobitelná, přiřazení nástrojů jsou
+správná a dostupná, výběry materiálu a tlouštky odpovídají inventáři a ohybové
+sekvence jsou správně definovány pro tvarované díly. Pokud jsou zjištěny
+problémy, otevřete díl v TecZone a upravte geometrii, přeřaďte nebo
+optimalizujte nástroje, upravte parametry zpracování nebo opravte specifikace
+materiálu. Řešení problémů v této fázi zabraňuje zpožděním výroby a snižuje
+odpad během výroby.</p>
+</div>
+<div class="paragraph">
+<p>Další informace naleznete v <a href="library/partstate/index.html">Part state</a>
+a <a href="library/toolingstatus/index.html">Tooling status</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingcheck.png" alt="Tooling" width="1078">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_organizace_dílů_do_úloh">4. Organizace dílů do úloh</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Seskupte ověřené díly do úloh na základě výrobních požadavků. Úloha představuje
+logickou výrobní jednotku, která může zahrnovat díly z jedné objednávky
+zákazníka, díly sdílející společné materiály a tlouštku, díly s podobnými
+termíny dodání nebo kombinaci na základě vaší výrobní strategie. Úlohy poskytují
+kontejner pro plánování, umožňují dávkové zpracování souvisejících dílů,
+umožňují efektivní využití materiálu prostřednictvím skládání a zjednodušují
+sledování a hlášení. Úlohy lze vytvořit ručně výběrem dílů nebo automaticky na
+základě předdefinovaných pravidel a filtrů.</p>
+</div>
+<div class="paragraph">
+<p>Další informace naleznete v <a href="jobs/index.html">Jobs</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobs.png" alt="Jobs" width="578">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_5_plánování_úloh_na_výrobní_stroje">5. Plánování úloh na výrobní stroje</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Po vytvoření úlohy ji přiřaďte příslušnému výrobnímu stroji. Zvažte schopnosti
+stroje včetně podporovaných technologií (laser, děrování, revolver), kapacity
+materiálu a tlouštky, dostupných nástrojů a aktuálního pracovního vytížení.
+Pokud existuje více vhodných strojů, vyberte na základě priority výroby,
+dostupnosti stroje, požadavků na nastavení nebo optimalizace nákladů. Přiřazení
+může být ruční pro flexibilitu nebo automatické na základě předem nakonfigurovaných
+pravidel a algoritmů plánování strojů.</p>
+</div>
+<div class="paragraph">
+<p>Další informace naleznete v <a href="jobs/jobautoplan.html">Plan job</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/machineselect.png" alt="MachineSelect" width="695">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_6_uvolnění_nc_pro_úlohy">6. Uvolnění NC pro úlohy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>V této fázi jsou generována rozložení řezání. Stále můžete upravovat rozložení
+a přidávat technologie řezání do rozložení pomocí TecZone. Následně
+exportujte výstup NC a přeneste jej do ovladače stroje nebo určeného síťového
+umístění. Úloha je poté uzamčena, aby se zabránilo dalším úpravám, a její stav
+je aktualizován na "Uvolněno" pro sledování výroby.</p>
+</div>
+<div class="paragraph">
+<p>Další informace naleznete v <a href="jobs/layoutcommands/layoutpanel.html#send-to-machine">Send/Recall NC</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/production.png" alt="Production" width="444">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_7_dokončení_výroby_a_finalizace_úloh">7. Dokončení výroby a finalizace úloh</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Proveďte uvolněnou úlohu na přiřazeném stroji. Během výroby obsluha stroje
+postupuje podle programu NC, ověřuje kvalitu dílů během řezání, spravuje
+nakládání a vykládání materiálu a řeší případné alarmy nebo problémy stroje.
+Po dokončení výroby označte jednotlivé díly nebo celou úlohu jako dokončenou v
+TruSmartCAM. Tento závěrečný krok aktualizuje záznamy inventáře, zaznamenává
+skutečný čas výroby a spotřebu materiálu, archivuje data úlohy pro hlášení a
+analýzu a dokončuje cyklus pracovního postupu.</p>
+</div>
+<div class="paragraph">
+<p>Další informace naleznete v <a href="jobs/layoutcommands/layoutpanel.html#mark-complete">Mark
+complete</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/complete.png" alt="Complete" width="435">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_1_konfigurace_systému">1. Konfigurace systému</a>
+  </li>
+  <li level="1">
+   <a href="#_2_přidání_dílů_do_knihovny">2. Přidání dílů do knihovny</a>
+  </li>
+  <li level="1">
+   <a href="#_3_ověření_dílů_a_nástrojů">3. Ověření dílů a nástrojů</a>
+  </li>
+  <li level="1">
+   <a href="#_4_organizace_dílů_do_úloh">4. Organizace dílů do úloh</a>
+  </li>
+  <li level="1">
+   <a href="#_5_plánování_úloh_na_výrobní_stroje">5. Plánování úloh na výrobní stroje</a>
+  </li>
+  <li level="1">
+   <a href="#_6_uvolnění_nc_pro_úlohy">6. Uvolnění NC pro úlohy</a>
+  </li>
+  <li level="1">
+   <a href="#_7_dokončení_výroby_a_finalizace_úloh">7. Dokončení výroby a finalizace úloh</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="userinterface.html">Uživatelské rozhraní</a></span>
+ <span class="next"><a href="library/index.html">Knihovna</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="res/index.js"></script>
+    <script src="res/files.js"></script>
+    <script src="res/site.js"></script>
+
+    
+</body>
+</html>

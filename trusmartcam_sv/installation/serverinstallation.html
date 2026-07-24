@@ -1,0 +1,902 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Serverinstallation</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Välkommen till TruSmartCAM</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Installation</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="hardwarerequirement.html">Hårdvarukrav</a></li>
+    <li><button class="tree blank"></button><a href="importformats.html">Format som stöds</a></li>
+    <li><button class="tree blank"></button><a href="prerequisites.html">Förutsättningar</a></li>
+    <li><button class="tree blank"></button><a class="active" href="serverinstallation.html">Serverinstallation</a></li>
+    <li><button class="tree blank"></button><a href="clientinstallation.html">Klientinstallation</a></li>
+    <li><button class="tree blank"></button><a href="changelic.html">Ändra licens</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Konfiguration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Lägg till/ta bort maskin</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Ställ in verktyg</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Konfigurera användare</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Språk</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Lägg till nytt material och plåt</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Exportera/importera material</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Ersätt material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Mappa material</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Mappa CAM-sidor</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Mappa fält från CAD (uppslagningsnycklar)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">Användargränssnittet</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Arbetsflöde</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Bibliotek</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Öppna</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Importera delar</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Importera order</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Importera jobb</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Importera monteringar</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Biblioteksvy</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Delar</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Montering</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Delstatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Delvalidering</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Delpanel</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Delfilter</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Verktygsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Verktygningsvalidering</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Böjverktygningsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Skärverktygningsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Vikverktygningsvalidering</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Verktygspanel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Spara filter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Ordrar</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Ordervyer</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../jobs/index.html">Jobb</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../jobs/jobcreation.html">Skapa jobb</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobview.html">Jobbvy</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobpanel.html">Jobbpanel</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobautoplan.html">Autoplan</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobinteractplan.html">Interaktiv häckning</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/repacking.html">Ompackning</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/layoutcommands/index.html">Häckhantering</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/nestview.html">Layoutvy</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/layoutpanel.html">Layoutpanel</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/reportsender.html">Rapportavsändare</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/remnantmanagement/index.html">Resthantering</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/autoremnant.html">Automatisk resthantering</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/manualremnant.html">Manuell resthantering</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../jobs/twinlinenesting.html">Twinline-häckning</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/outdate.html">Inaktuell</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobfilters.html">Jobbfilter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD-tillägg</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Spara delar</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Spara sammansättning</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Kontrollera genomförbarhet</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Fabriksinställningar</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Diverse förbättringar</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Installation</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="serverinstallation.html">Serverinstallation</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Serverinstallation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Följ instruktionerna för att installera TruSmartCAM Serverinstallation tillsammans med
+SQL.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">Administratörsrättigheter</div>
+<div class="paragraph">
+<p><strong>För att utföra denna installation måste användaren ha administratörsbehörighet.</strong></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kör <strong>Setup.TruSmartCAM.&lt;version&gt;.exe</strong> för att påbörja installationen.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Version är ett nummer.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Läs licensavtalet och välj <strong>I accept the agreement</strong> och klicka sedan på
+Nästa
+.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s02praxislicenseagreement.png" alt="Praxis License Agreement">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_steg_1_installationsplats">Steg 1 : Installationsplats</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Ange installationskatalogen eller acceptera installationens standardsökväg
+<code>C:\Program Files\Metamation\Praxis</code> och klicka Nästa.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>C:\Program Files\Metamation\Praxis</code> - Installationsmappen kommer att ha följande
+mappar: Bin, MetaCAM, Samples och Tracker.</p>
+</li>
+<li>
+<p><code>C:\Program Data\Metamation</code> - Datamappen kommer att ha följande mappar:
+TruSmartCAM, TecZone och MetaCAM.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s03installationpath.png" alt="Installation Path">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_steg_2_val_av_komponenter">Steg 2 : Val av komponenter</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Installationstyp</th>
+<th class="tableblock halign-left valign-top">Komponenter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Skrivbordsklient + Engine</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Client</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skrivbordsklient</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Skrivbordsklient</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Station</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Väljer alla stationsterminaler som TecZone, MetaCAM, RightAngle(Bend Controller),
+Vulcan(Laser Machine Controller)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Väljs av användaren.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Välj Fullständig installation. Välj <strong>Code Senders</strong> och <strong>Bend Code Senders</strong> från
+TruSmartCAM Tools. Nu ändras installationstypen till <strong>Anpassad</strong>. Klicka
+Nästa.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s04serverinstallation.png" alt="Server Installation">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_steg_3_välj_installera_sql_server">Steg 3 : Välj Installera SQL Server</h2>
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>SQL Express 2022-installation behövs endast för TruSmartCAM Server. Detta
+alternativ är inte tillgängligt för Klient- och Sync-installationer. Detta är också
+markerat ON och installerat för första gången och kan ignoreras därefter. Om
+SQL redan är installerat på TruSmartCAM-servern kan användaren ignorera Steg 3.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>I Välj ytterligare uppgifter: Klicka <strong>Install SQL Express</strong> och klicka
+Nästa.</p>
+</li>
+<li>
+<p>I Redo att installera: Sammanfatta alla installationsfunktioner och klicka Install.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s05sqlinstall.png" alt="Install SQL">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_steg_4_sql_server_installation">Steg 4 : SQL Server-installation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>När TruSmartCAM-komponenterna är installerade fortsätter installationsprogrammet med SQL
+server-installationen. Acceptera licensavtalet för att fortsätta och installera SQL
+express med standardalternativen.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s06sqlserver.png" alt="SQLServer Install">
+</div>
+</div>
+<div class="paragraph">
+<p>När installationen är klar klicka Close och slutför installationen.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s07sqlservercomplete.png" alt="SQL Server Complete">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Beroende på Windows-versionen kan stängning av SQL-installationen uppmana till
+en omstart.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_steg_5_windows_skrivbordsgenvägar">Steg 5 : Windows skrivbordsgenvägar</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Efter SQL-installation, om systemet inte startar om, välj kryssrutan <strong>Launch TruSmartCAM</strong>
+och klicka <strong>Finish</strong>.</p>
+</li>
+<li>
+<p>Om systemet startar om, starta TruSmartCAM-genvägsikonen på skrivbordet eller skriv
+TruSmartCAM i Windows Start Program och <strong>Kör som administratör</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<em>Serverinstallation</em> : TruSmartCAM och TruSmartCAM License-genvägsikoner är
+tillgängliga på skrivbordet. + <em>Klient/SYNC-installation</em> : Endast TruSmartCAM-genvägsikon
+tillgänglig på skrivbordet.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s08launchpraxis.png" alt="Launch TruSmartCAM">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_steg_6_licensregistrering">Steg 6 : Licensregistrering</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>I fältet <em>Serial Number</em> skriver ni den <em>TruSmartCAM seriell nyckel</em> som tillhandahållits av Trumpf
+Metamation Service Team. Skriv <strong>&lt;Företagsnamn&gt;</strong> i fältet "Registered to" och
+e-post. Klicka <strong>OK</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s09praxisregister.png" alt="TruSmartCAM Register">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>I fall nätverkets brandvägg blockerar licensregistreringen eller om det inte finns internet på
+TruSmartCAM Server-datorn, görs TruSmartCAM-licensieringen genom offlineaktivering. Maila
+<strong><em>Prax.request</em></strong> från <em>C:\ProgramData\Metamation\Praxis</em> mappen till Trumpf
+Metamation Service Team. Trumpf Metamation Team kommer att tillhandahålla <strong><em>Prax.lock</em></strong>
+som behöver placeras i denna mapp.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_steg_7_initial_engångskonfiguration">Steg 7 : Initial engångskonfiguration</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Skriv databasnamn och ställ in datalagringsplats. Välj
+Använd SQL-server kryssrutan och välj SQL-servernamnet
+för att ansluta till databasen. Klicka <strong>OK</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s10usedatabase.png" alt="Use Database">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM skrivbordsklient öppnas och visar <strong>Database Connection Succeeded</strong> längst
+ner.</p>
+</li>
+<li>
+<p>TruSmartCAM, TecZone och MetaCAM konfigurationsfiler skapades med standardkonfigurationsmaskiner eller mot TruSmartCAM licensmaskiner. Samma konfiguration kommer att delas
+över alla TruSmartCAM Klienter.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s11databaseconnectionsuccess.png" alt="Database Connection Success">
+</div>
+</div>
+<div class="paragraph">
+<p>Välkomstskärmen visas med Windows User LoginName som TruSmartCAM Login och Name.
+Första TruSmartCAM användaren betraktas som <strong>Platsadministratör</strong>. Ange e-post och
+lösenord. Klicka <strong>OK</strong>
+.</p>
+</div>
+<div class="paragraph">
+<p>Välj kryssrutan <strong>Kom ihåg mig</strong>
+för att spara inloggningsuppgifterna för nästa gång.
+Avmarkera kryssrutan <strong>Kom ihåg mig</strong> kommer att uppmana till inloggnings- och
+lösenordsdialogruta varje gång TruSmartCAM-applikationen startas.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s12welcomepraxis.png" alt="Welcome TruSmartCAM">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_steg_8_trusmartcam_inloggning">Steg 8 : TruSmartCAM inloggning</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Stäng TruSmartCAM och öppna det igen. Systemet uppmanar er att ange TruSmartCAM
+inloggningsuppgifter.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/signprompt.png" alt="Sign Prompt" width="450">
+</div>
+</div>
+</li>
+<li>
+<p>Det inloggade användarnamnet visas bredvid användarikonen i TruSmartCAM
+applikationshuvudet.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/userid.png" alt="User ID" width="228">
+</div>
+</div>
+</li>
+<li>
+<p>När ni håller muspekaren över användarikonen visar systemet:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/hover.png" alt="Hover" width="108">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Användarrollen (till exempel: Programmer, Admin).</p>
+</li>
+<li>
+<p>En genväg för att logga ut: <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>L</kbd></span>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Genom att klicka på användarikonen öppnas en meny som gör att ni kan:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/information.png" alt="Information" width="160">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Redigera information&#8230;&#8203;</strong> - Uppdatera era profildetaljer.</p>
+</li>
+<li>
+<p><strong>Ändra lösenord&#8230;&#8203;</strong> - Ändra ert kontolösenord.</p>
+</li>
+<li>
+<p><strong>Logga ut</strong> - Logga ut från applikationen.</p>
+</li>
+<li>
+<p><strong>Avbryt</strong> - Stäng menyn utan att göra några ändringar.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_steg_9_fabriksmaskinkonfiguration">Steg 9 : Fabriksmaskinkonfiguration</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Licens [Alla maskiner aktiverar licensbit] : Standard TruSmartCAM maskin
+och material betraktas som fabrikskonfiguration.</p>
+</li>
+<li>
+<p>TruSmartCAM Licens [Ingen demo och få maskinbitar aktiverade] : Dessa få maskiner och
+standardmaterial betraktas som fabrikskonfiguration.</p>
+</li>
+<li>
+<p>(Öppna &#8594; Importera) en ny del från <code>C:\Program
+Files\Metamation\Praxis\Samples\Parts</code> och verifiera om delen importeras
+framgångsrikt.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s14praxiswelcomescreen.png" alt="Praxis Welcome screen">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_not_1_trusmartcam_monitor">Not 1 : TruSmartCAM Monitor</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor med Engine-installation (Site admin-rättigheter):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor med Engine tillsammans med Site Admin TruSmartCAM rättigheter kommer att ha
+följande alternativ:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Skicka TruSmartCAM-konfiguration, TecZone, MetaCAM-konfiguration över alla TruSmartCAM
+Klienter. Har också rättigheter att skapa ny TruSmartCAM användarinloggning.</p>
+</li>
+<li>
+<p>Visa agenter kommer att visa den totala motorn som är tillgänglig för att utföra automationsuppgifter som
+är mot TruSmartCAM licensen.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s15pmonitor.png" alt="Praxis Monitor Status">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor utan Engine-installation (Site admin-rättigheter):</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s16pmonitorwithoutengine.png" alt="Praxis Monitor without Engine">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor utan Engine-installation (Icke Site Admin-rättigheter):</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s17pmonitorwithprogrammerlogin.png" alt="Praxis with Progrmmer login">
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>PC som kör TruSmartCAM-applikationen måste ha Engine TruSmartCAM-komponenten installerad
+[Server-PC eller i någon klientinstallation]. Engine TruSmartCAM-komponent installerad PC
+bör köras 24x7 för att utföra alla automationsuppgifter.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_not_2_lock_tracker">Not 2 : Lock Tracker</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Klicka på <strong>TruSmartCAM License</strong>-genvägen som finns på TruSmartCAM Server-skrivbordet.
+Alternativt, öppna <a href="http://localhost:7171/metamation/locktrack" class="bare">http://localhost:7171/metamation/locktrack</a> url i valfri webbläsare.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Detta öppnar Lock Tracker-modulen som har licensinformation, TruSmartCAM
+aktuell sessionsinformation och logg.</p>
+</div>
+<div class="paragraph">
+<p>LockTracker HOME-sida : Detta visar TruSmartCAM serienummer, seriens utgångsdatum
+information och tillgänglig seriebitsinformation.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s18locktrack01.png" alt="Lock Track License Home page">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker SESSIONS-sida : Aktuell TruSmartCAM Server-ansluten information som
+TruSmartCAM skrivbordsklient-PC, PMonitor, PEngine Status.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s19locktrack02.png" alt="Lock Track Session information">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker LOGs-sida : TruSmartCAM-klientstart och utloggning | Pmonitor-start och
+PEngine anslut/koppla från status etc., kan ses på denna loggsida.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s20locktrack03.png" alt="Praxis Monitor Status">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_not_3_opengl">Not 3 : OpenGL</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM-applikationen stängs omedelbart vid öppning och även
+pmonitor visas inte i aktivitetsfältet.</p>
+</li>
+<li>
+<p>Detta representerar ett OpenGl-problem.</p>
+</li>
+<li>
+<p>Ett annat sätt att bekräfta detta: Öppna C:\Program
+Files\Metamation\Praxis\Bin\Flux.exe som visar en feldialogruta om
+OpenGL-problemet.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s21opengl.png" alt="OpenGL Issue">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Uppdatera <em>C:\ProgramData\Metamation\Praxis\Prax.ini</em>, options-sektionen med
+<strong>GLVersion=1</strong> gör att TruSmartCAM-applikationen öppnas framgångsrikt.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ini hljs" data-lang="ini">[Options]
+GLVersion=1.0</code></pre>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_steg_1_installationsplats">Steg 1 : Installationsplats</a>
+  </li>
+  <li level="1">
+   <a href="#_steg_2_val_av_komponenter">Steg 2 : Val av komponenter</a>
+  </li>
+  <li level="1">
+   <a href="#_steg_3_välj_installera_sql_server">Steg 3 : Välj Installera SQL Server</a>
+  </li>
+  <li level="1">
+   <a href="#_steg_4_sql_server_installation">Steg 4 : SQL Server-installation</a>
+  </li>
+  <li level="1">
+   <a href="#_steg_5_windows_skrivbordsgenvägar">Steg 5 : Windows skrivbordsgenvägar</a>
+  </li>
+  <li level="1">
+   <a href="#_steg_6_licensregistrering">Steg 6 : Licensregistrering</a>
+  </li>
+  <li level="1">
+   <a href="#_steg_7_initial_engångskonfiguration">Steg 7 : Initial engångskonfiguration</a>
+  </li>
+  <li level="1">
+   <a href="#_steg_8_trusmartcam_inloggning">Steg 8 : TruSmartCAM inloggning</a>
+  </li>
+  <li level="1">
+   <a href="#_steg_9_fabriksmaskinkonfiguration">Steg 9 : Fabriksmaskinkonfiguration</a>
+  </li>
+  <li level="1">
+   <a href="#_not_1_trusmartcam_monitor">Not 1 : TruSmartCAM Monitor</a>
+  </li>
+  <li level="1">
+   <a href="#_not_2_lock_tracker">Not 2 : Lock Tracker</a>
+  </li>
+  <li level="1">
+   <a href="#_not_3_opengl">Not 3 : OpenGL</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="prerequisites.html">Förutsättningar</a></span>
+ <span class="next"><a href="clientinstallation.html">Klientinstallation</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>
+    if (!hljs.initHighlighting.called) {
+      hljs.initHighlighting.called = true
+      ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+    }
+  </script>
+</body>
+</html>

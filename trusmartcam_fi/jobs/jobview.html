@@ -1,0 +1,675 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Työnäkymä</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Tervetuloa TruSmartCAM-järjestelmään</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Asennus</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Laitteistovaatimukset</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Tuetut tiedostomuodot</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Ennakkovaatimukset</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Palvelimen asennus</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Asiakkaan asennus</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Lisenssin vaihto</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Konfigurointi</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Koneen lisääminen/poistaminen</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Työkalujen asetukset</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Käyttäjien määrittäminen</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Kieli</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Materiaali</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Uuden materiaalin ja arkin lisääminen</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Materiaalin vienti/tuonti</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Materiaalin korvaaminen</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Materiaalin kartoitus</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">CAM-sivujen kartoitus</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Kenttien kartoitus CAD:sta (hakuavaimet)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">Käyttöliittymä</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Työnkulku</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Kirjasto</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Avaa</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Osien tuonti</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Tilausten tuonti</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Töiden tuonti</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Kokoonpanojen tuonti</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Kirjastonäkymä</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Osat</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Kokoonpano</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Osan tila</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Osan validointi</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Osapaneeli</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Osasuodattimet</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Työkalutila</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Työkalutuksen validointi</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Taivutustyökalun validointi</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Leikkaustyökalun validointi</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Paneelitaivutuksen validointi</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Työkalutuspaneeli</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Suodattimien tallentaminen</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Tilaukset</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Tilausnäkymät</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Työt</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">Luo työ</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobview.html">Työnäkymä</a></li>
+    <li><button class="tree blank"></button><a href="jobpanel.html">Työpaneeli</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">Automaattinen suunnittelu</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">Interaktiivinen sisäkkäisyys</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">Uudelleenpakkaus</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">Sisäkkäisyyden hallinta</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">Asettelunäkymä</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">Asettelupaneeli</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">Raportin lähettäjä</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">Jäännösarkkien hallinta</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">Automaattinen jäännösarkkien hallinta</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">Manuaalinen jäännösarkkien hallinta</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">Twinline-sisäkkäisyys</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">Vanhentunut</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">Työsuodattimet</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD-laajennukset</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Asennus</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Tallenna osat</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Tallenna kokoonpano</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Tarkista toteutettavuus</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Tehtaan asetukset</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Muut parannukset</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Työt</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobview.html">Työnäkymä</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Työnäkymä</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tämä osio selittää Työnäkymässä käytettävissä olevat eri näkymät, mukaan lukien
+Työt, Osat, Sisäkkäisyydet, Muokkaa, Simuloi ja Vie.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_työt">Työt</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>työt</strong> -vaihtoehdon valitseminen näyttää luettelon kaikista tällä hetkellä
+ohjelmistossa määritetyistä töistä. Voit kaksoisnapsauttaa työtä nähdäksesi sen tiedot tai
+napsauttaa hiiren oikealla painikkeella päästäksesi lisävaihtoehtoihin.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Työt näytetään laattanäkymässä, jossa jokainen työ näytetään perustietojen kanssa,
+kuten Työn ID, Työn viite, Asiakkaan nimi, Osat yhteensä, Toimituspäivä, Työn
+tilapalkki jne.</p>
+</li>
+<li>
+<p>Jokainen työlaatta näyttää myös osakuvat pinotun korttiformaatin muodossa. Voit
+vierittää kaikkien työn osien läpi hiiren rullalla.<br></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobview1.png" alt="Job Page" width="1489">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_työn_tiedot">Työn tiedot</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Laatan kaksoisnapsautus tai <kbd>Enter</kbd> -näppäimen painaminen laatan valinnan jälkeen
+vaihtaa näkymän yksityiskohtatilaan.</p>
+</li>
+<li>
+<p>Tietosivu näyttää osien luettelon yhdessä sisäkkäisten arkkien
+(asetteluiden) kanssa, jos niitä on.</p>
+</li>
+<li>
+<p>Käytä Ylös/Alas-nuolinäppäimiä vaihtaaksesi töiden välillä tietosivulla.</p>
+</li>
+<li>
+<p>Hiiren rullan vierittäminen osapinon päällä korostaa osan sekä osa-
+luettelossa että asetteluissa.</p>
+</li>
+<li>
+<p>Asettelun valitseminen korostaa asettelun ja kaikki siihen sisäkkäin sijoitetut osat osa-
+luettelossa. Korostukset sammuvat automaattisesti minuutin kuluttua.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobview2.png" alt="Job Details" width="1908">
+</div>
+</div>
+</li>
+<li>
+<p><strong>Nestauksen tiivistelmä</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Osat</strong>: Näyttää tilauskohteiden kokonaismäärän ja
+kokonaismäärän työssä.</p>
+</li>
+<li>
+<p><strong>levyt</strong>: Näyttää sisäkkäisten arkkien kokonaismäärän yhdessä
+arkkien kokonaismäärän kanssa.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Työvaiheet</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Taivutus</strong>: Näyttää määritetyn koneen ja sen käsiteltävän tilausmäärän.</p>
+</li>
+<li>
+<p><strong>Leikkaus</strong>: Näyttää määritetyn koneen ja sen käsiteltävän tilausmäärän.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_prioriteetti">Prioriteetti</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Napsauta ensin <strong>Jobs</strong>-kuvaketta näytön vasemmalla puolella, valitse työ, jota
+haluat muokata, ja napsauta sitten <strong>edit</strong> näytön oikealla puolella (varmista,
+että Jobs-vaihtoehto on valittuna).</p>
+</li>
+<li>
+<p>Vaihtoehtoisesti napsauta hiiren oikealla painikkeella valittua työtä ja napsauta
+<strong>Kuittaa asiakirja ulos muokkausta varten</strong> -kuvaketta.</p>
+</li>
+<li>
+<p>Kun napsautat <strong>edit</strong>, muokkaa työtä -ikkuna ilmestyy. Tässä ikkunassa voit asettaa
+tai muuttaa työn prioriteettia.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/priority1.png" alt="Priority1" width="1207">
+</div>
+</div>
+</li>
+<li>
+<p>Työn osan prioriteetin perusteella työlaatan työviite on
+väritetty vastaavasti.</p>
+</li>
+<li>
+<p>Työn osat lajitellaan ensin prioriteetin ja sitten toimituspäivän mukaan. Ne on myös
+väritetty prioriteetin mukaan.</p>
+</li>
+<li>
+<p>Sisäkkäisyydessä <strong>Urgent</strong>-osat otetaan huomioon ensin, sen jälkeen <strong>High</strong>, sitten
+<strong>Normal</strong>, ja lopuksi <strong>Low</strong>-prioriteetin osat sijoitetaan jäljelle jääneeseen tilaan
+sisäkkäisyyden arkeilla.</p>
+</li>
+<li>
+<p>Sisäkkäisyyden arkit on myös lajiteltu ja väritetty prioriteetin mukaan.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Työn prioriteetti</th>
+<th class="tableblock halign-left valign-top">Värin kuvaus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/urgent.png" alt="Urgent" width="50"></span> (Oranssi)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Urgent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/normal1.png" alt="Normal" width="50"></span> (Ei väriä)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Normal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/high.png" alt="High" width="50"></span> (Keltainen)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">High</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/low.png" alt="Low" width="50"></span> (Tummanharmaa)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Low</p></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock">
+<div class="content">
+<img src="img/priority2.png" alt="Priority2" width="1158">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tila">Tila</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Työn tilapalkki käyttää värikoodeja osoittamaan työn etenemistä tai tilaa
+käsitellyn tai jäljellä olevan määrän perusteella.</p>
+</li>
+<li>
+<p>Työn sisällä olevat osat ja sisäkkäisyyden arkit on myös korostettu
+vastaavilla väreillä heijastamaan niiden yksittäistä tilaa kokonaistyössä.</p>
+</li>
+<li>
+<p>Värikoodaus parantaa seurantaa ja varmistaa, että operaattorit voivat helposti nähdä
+tuotantotilan yhdellä silmäyksellä.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/status1.png" alt="Job status" width="1114">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/status2.png" alt="Job status" width="1360">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Työn tila</th>
+<th class="tableblock halign-left valign-top">Kuvaus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/notready.png" alt="Not Ready" width="100"></span> (Vaaleanharmaa)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ei valmis</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/nesting.png" alt="Nesting" width="100"></span> (Magenta)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nestaus</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/ready.png" alt="Ready" width="100"></span> (Valkoinen)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valmis</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/cuttingqueue.png" alt="Bend planned" width="100"></span> (Vaaleankeltainen)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bend Planned</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/sheetmissing.png" alt="Sheet Missing" width="100"></span> (Tummanharmaa)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Levy puuttuu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/bendingqueue.png" alt="Bending Queue" width="100"></span> (Tummankeltainen)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Taivutusjono</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/bendplanned.png" alt="Bend Planned" width="100"></span> (Keltainen)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Leikkausjono</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/completed.png" alt="Completed" width="100"></span> (Tummanvihreä)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valmis</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_osat">Osat</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Aktiivisten osien näkymä näyttää kaikki osat, jotka ovat tällä hetkellä käsittelyssä
+aktiivisissa töissä.</p>
+</div>
+<div class="paragraph">
+<p>Jokainen osa esitetään laattana, jossa näkyy keskeiset tiedot, kuten osan nimi,
+mitat, materiaali, paksuus, määrä ja toimituspäivä. Myös visuaalinen esikatselu
+osasta näytetään.</p>
+</div>
+<div class="paragraph">
+<p>Tämä näkymä auttaa käyttäjiä seuraamaan yksittäisten osien käsittelytilaa ja
+seuraamaan niiden etenemistä meneillään olevissa töissä.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/activeparts.png" alt="Active">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sisäkkäisyydet">Sisäkkäisyydet</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Aktiivisten sisäkkäisyyksien näkymä näyttää kaikki sisäkkäisyydet, jotka ovat tällä hetkellä käsittelyssä
+aktiivisissa töissä.</p>
+</div>
+<div class="paragraph">
+<p>Jokainen sisäkkäisyys esitetään olennaisilla tiedoilla, kuten osien lukumäärällä ja
+käsittelytilalla. Myös visuaalinen asettelu sisäkkäisistä osista näytetään.</p>
+</div>
+<div class="paragraph">
+<p>Tämä näkymä auttaa käyttäjiä seuraamaan sisäkkäisyyden etenemistä ja seuraamaan, kuinka osat on järjestetty
+ja käsitelty arkeilla.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/activenest.png" alt="Nest">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_muokkaa">Muokkaa</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Muokkaa-vaihtoehto mahdollistaa valitun kohteen muokkaamisen.</p>
+</div>
+<div class="paragraph">
+<p>Nykyisen näkymän perusteella valittu instanssi avataan muokattavaksi:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Työt-näkymässä valittu työ avataan muokkausta varten.</p>
+</li>
+<li>
+<p>Aktiivisten osien näkymässä valittu osa avataan muokkausta varten.</p>
+</li>
+<li>
+<p>Aktiivisten sisäkkäisyyksien näkymässä valittu sisäkkäisyys avataan muokkausta varten.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobviewedit.png" alt="Edit" width="980">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vie_csv">Vie csv</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Vie-vaihtoehto mahdollistaa työtietojen valinnan ja viemisen CSV-tiedostoon.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Napsauta <strong>jobs</strong>-kuvaketta.</p>
+</li>
+<li>
+<p>Napsauta <strong>export</strong>-vaihtoehtoa näytön oikealla puolella.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importexport1.png" alt="Export" width="700">
+</div>
+</div>
+</li>
+<li>
+<p>Valintaikkuna ilmestyy näyttäen saatavilla olevat kentät:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importexport2.png" alt="Export CSV" width="174">
+</div>
+</div>
+</li>
+<li>
+<p>Valitse vietävien kenttien valintaruudut.</p>
+</li>
+<li>
+<p>Käytä <strong>Group By</strong> -vaihtoehtoa, jos haluat ryhmitellä tietoja valitun
+kentän mukaan.</p>
+</li>
+<li>
+<p>Napsauta Vie luodaksesi CSV-tiedoston.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lisätiedot">Lisätiedot</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Näytön oikealla puolella on myös kolme lisäkuvaketta, jotka ovat
+<strong>simuloi</strong>, <strong>Goto</strong> ja <strong>takaisin</strong>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Simuloi avaa valitun kohteen yksityiskohtaisempaa näkymää varten.</p>
+</li>
+<li>
+<p>Siirry vaihtaa fokuksen ja näyttää valitun osan tai sisäkkäisyyden.</p>
+</li>
+<li>
+<p>Takaisin siirtää yhden tason taaksepäin siitä, missä olet tällä hetkellä, esimerkiksi
+napsauttamalla <strong>takaisin</strong> simulaatiossa palaat takaisin
+päätyöhön ja työstä palaat takaisin töiden pääsivulle.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_työt">Työt</a>
+  </li>
+  <li level="2">
+   <a href="#_työn_tiedot">Työn tiedot</a>
+  </li>
+  <li level="2">
+   <a href="#_prioriteetti">Prioriteetti</a>
+  </li>
+  <li level="2">
+   <a href="#_tila">Tila</a>
+  </li>
+  <li level="1">
+   <a href="#_osat">Osat</a>
+  </li>
+  <li level="1">
+   <a href="#_sisäkkäisyydet">Sisäkkäisyydet</a>
+  </li>
+  <li level="1">
+   <a href="#_muokkaa">Muokkaa</a>
+  </li>
+  <li level="1">
+   <a href="#_vie_csv">Vie csv</a>
+  </li>
+  <li level="1">
+   <a href="#_lisätiedot">Lisätiedot</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobcreation.html">Luo työ</a></span>
+ <span class="next"><a href="jobpanel.html">Työpaneeli</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

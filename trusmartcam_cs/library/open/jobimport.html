@@ -1,0 +1,532 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Import zakázek</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Vítejte v TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Instalace</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardwarové požadavky</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Podporované formáty souborů</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Předpoklady</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Instalace serveru</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Instalace klienta</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Změna licence</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfigurace</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Přidat/Odebrat stroj</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Nastavení nářadí</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Konfigurace uživatelů</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Jazyk</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiál</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Přidání nového materiálu a plechu</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Export/Import materiálu</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Nahrazení materiálu</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mapování materiálu</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mapování CAM stránek</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mapování polí z CAD (vyhledávací klíče)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Uživatelské rozhraní</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Pracovní postup</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Knihovna</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Otevřít</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partimport.html">Import dílů</a></li>
+      <li><button class="tree blank"></button><a href="orderimport.html">Import objednávek</a></li>
+      <li><button class="tree blank"></button><a class="active" href="jobimport.html">Import zakázek</a></li>
+      <li><button class="tree blank"></button><a href="assembliesimport.html">Import sestav</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Zobrazení knihovny</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Díly</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Sestava</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Stav dílu</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Validace dílu</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Panel dílů</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Filtry dílů</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Stav nástrojového vybavení</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Validace nástrojového vybavení</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Validace ohýbacího nástrojového vybavení</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Validace řezacího nástrojového vybavení</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Validace skládacího nástrojového vybavení</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Panel nástrojového vybavení</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Ukládání filtrů</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Objednávky</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Zobrazení objednávek</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Zakázky</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Vytvoření zakázky</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Zobrazení zakázek</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Panel zakázek</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatické plánování</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktivní hnízdění</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Přebalení</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Správa hnízdění</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Zobrazení uspořádání</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Panel uspořádání</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Odesílatel zpráv</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Správa zbytků</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatická správa zbytků</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Ruční správa zbytků</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Hnízdění Twinline</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Zastaralé</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtry zakázek</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Továrna</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Trasy</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Plechy</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Uživatelé</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Upravit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Zákazníci</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Nastavení</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Prostředí</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Ohýbání</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Řezání</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Oznámení</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Sledování</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Zakázka</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reporty</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Rozšíření CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Instalace</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Uložení dílů</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Uložení sestavy</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Kontrola proveditelnosti</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Nastavení továrny</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Různá vylepšení</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Knihovna</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Otevřít</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobimport.html">Import zakázek</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Import zakázek</h1>
+<div class="sect1">
+<h2 id="_import_z_csv_nebo_xlsx">Import z csv nebo xlsx</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Zakázky můžete také importovat v běžných textových formátech</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klikněte na <strong>File &#8594; Open &#8594; Import úloh</strong>, zobrazí se dialogové okno
+Open Folder. Vyberte <code>C:\Program
+Files\Metamation\Praxis\Samples\Jobs\C0\C0.csv</code>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv.png" alt="CSV import" width="426">
+</div>
+</div>
+</li>
+<li>
+<p>Pokud všechny díly existují v umístění csv nebo v adresářích vyhledávací složky,
+objeví se okno <strong>nová úloha</strong> se seznamem všech dílů odpovídajících polím
+csv.</p>
+</li>
+<li>
+<p>Chybějící díly jsou ignorovány a nezobrazí se v okně <strong>nová úloha</strong>.</p>
+</li>
+<li>
+<p>Zpočátku je stav dílu Nascent.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv2.png" alt="CSV import" width="908">
+</div>
+</div>
+</li>
+<li>
+<p>Klikněte na <strong>OK</strong>, nyní jsou díly importovány do knihovny dílů. CAD
+validace, nástroje pro ohýbací a řezací instance nástrojů jsou provedeny, což lze
+sledovat na obrazovce <strong>Pmonitor</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv3.png" alt="CSV import" width="1438">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_vytvořit_prázdný_díl_pro_chybějící_cad_soubory">Vytvořit prázdný díl pro chybějící CAD soubory</h3>
+<div class="paragraph">
+<p>Při importu zakázek pomocí tabulky (.csv nebo .xlsx) můžete někdy mít
+řádky odkazující na CAD soubory, které nejsou v systému k dispozici.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pro řešení tohoto problému přejděte do <strong>závod</strong>
+ &#8594; <strong>Nastavení</strong> &#8594; <strong>Úloha</strong>,
+ v <strong>Import tabulkového procesoru</strong> povolte
+<strong>Vytvořit prázdný díl pro chybějící CAD soubory</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv6.png" alt="Spreadsheet import" width="801">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Když je tato možnost vybrána:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pokud chybí CAD soubor pro jakýkoli řádek během importu zakázky, systém
+automaticky vytvoří prázdný díl namísto chybějícího CAD souboru.</p>
+</li>
+<li>
+<p>V okně <strong>nová úloha</strong> jsou tyto chybějící díly vizuálně
+zvýrazněny žlutou barvou, aby bylo zřejmé, že přidružený CAD soubor chybí.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/csv4.png" alt="Edit jobs" width="578"></span></p>
+</div>
+</li>
+<li>
+<p>Chybějící díl bude stále mít svá mapovaná pole (jako název dílu, materiál,
+tloušťka, množství atd.) z CSV. Jeho stav dílu však bude zobrazen
+jako Nascent, což znamená, že se jedná pouze o prázdný zástupný symbol bez skutečné geometrie.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv5.png" alt="Nascent parts" width="1110">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Tím je zajištěno, že import zakázky může stále pokračovat bez chyb kvůli
+chybějícím CAD souborům — prázdný díl můžete později aktualizovat nebo nahradit
+správným CAD souborem, jakmile bude k dispozici.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nezobrazovat_dialogové_okno_nové_úlohy_když_má_tabulkový_procesor_chybu">Nezobrazovat dialogové okno Nové úlohy když má tabulkový procesor chybu</h3>
+<div class="paragraph">
+<p><strong>závod</strong> &#8594; <strong>Nastavení</strong> &#8594;
+<strong>Úloha</strong> → <strong>Import tabulkového procesoru</strong>→
+<strong>Nezobrazovat dialogové okno Nové úlohy když má tabulkový procesor chybu</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Když je toto zaškrtávací políčko vybráno, systém automaticky vytvoří novou zakázku bez
+zobrazení dialogu New Job, pokud tabulka neobsahuje žádné chyby (žádné chybějící díly,
+chybějící data nebo neplatná data).</p>
+</li>
+<li>
+<p>Když je toto zaškrtávací políčko zrušeno, dialog New Job se vždy zobrazí pro kontrolu
+a potvrzení uživatelem, i když tabulka neobsahuje žádné chyby.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_prefer_raw_material_column_over_material_thickness">Prefer raw-material column over material + thickness</h3>
+<div class="paragraph">
+<p><strong>závod</strong> &#8594; <strong>Nastavení</strong> &#8594;
+<strong>Úloha</strong>→<strong>Prefer Raw-Material column over Material + Thickness</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Když je toto zaškrtávací políčko vybráno, systém očekává, že tabulka použije
+sloupec Raw-Material (například Steel-20). To znamená, že typ materiálu a
+tloušťka by měly být sloučeny do jedné hodnoty v jednom sloupci.</p>
+</li>
+<li>
+<p>Když je toto zaškrtávací políčko zrušeno, systém očekává, že tabulka bude mít
+samostatné sloupce pro Material a Thickness (například Steel a 2.00).
+Systém je interně kombinuje během importu.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csvmaterial.png" alt="CSV Raw Material and Material+Thickness">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sledovaná_složka_pomocí_csvxlsx">Sledovaná složka pomocí CSV/XLSX</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>V <strong>závod</strong> &#8594; <strong>Nastavení</strong>&#8594;
+<strong>Sledovat</strong> zaškrtněte <strong>Umožnit 'Live složku'</strong>
+a <strong>Sledovat také pod-složky</strong>.</p>
+</li>
+<li>
+<p>Nastavte cestu ke sledované složce (UNC nebo mapovaná jednotka).</p>
+</li>
+<li>
+<p>V <strong>Import tabulkového procesoru</strong> zaškrtněte
+<strong>Import tabulkového procesoru z 'Live složky'</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/watchfolder.png" alt="Watch folder" width="702">
+</div>
+</div>
+</li>
+<li>
+<p>Vyberte <strong>Import úloh</strong> z možností Spreadsheet Import.</p>
+</li>
+<li>
+<p>Zkopírujte <code>C:\Program Files\Metamation\Praxis\Samples\Jobs\C0\C0.csv</code> a vložte jej
+do sledované složky.</p>
+</li>
+<li>
+<p>Systém zkontroluje CSV a pokusí se automaticky vytvořit zakázku.</p>
+</li>
+<li>
+<p>Pokud CAD soubor chybí, není vytvořena žádná zakázka, protože požadovaná CAD data nejsou nalezena.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_adresář_vyhledávání_cad_a_rekurzivní_vyhledávání_cad_není_nakonfigurováno">Adresář vyhledávání CAD a rekurzivní vyhledávání CAD - není nakonfigurováno</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>V <strong>závod</strong> &#8594; <strong>Nastavení</strong> &#8594;
+<strong>Úloha</strong> &#8594; <strong>Import tabulkového procesoru</strong>,
+pokud není nastaven <strong>CAD lookup directories</strong> a
+<strong>Použít rekurzivní CAD hledání</strong> není používáno, systém
+automaticky nevyhledává CAD soubory.</p>
+</li>
+<li>
+<p>Pokud je zaškrtnuto políčko <strong>Vytvořit prázdný díl pro chybějící CAD soubory</strong>,
+zakázka bude stále vytvořena, i když CAD soubory chybí.</p>
+</li>
+<li>
+<p>V tomto případě budou všechny díly v zakázce vytvořeny jako nascent (prázdné) díly —
+což znamená, že nemají žádnou geometrii, protože CAD soubory nebyly nalezeny.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/notconfigured.png" alt="Create blank parts" width="867">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_adresář_vyhledávání_cad_a_rekurzivní_vyhledávání_cad_nakonfigurováno">Adresář vyhledávání CAD a rekurzivní vyhledávání CAD - nakonfigurováno</h3>
+<div class="paragraph">
+<p>Když je <strong>Vyhledat adresáře CAD</strong> nastaveno na
+(C:\Program Files\Metamation\Praxis\Samples) a
+<strong>Použít rekurzivní CAD hledání</strong> je povoleno v
+<strong>závod</strong> &#8594; <strong>Nastavení</strong> &#8594; <strong>Úloha</strong>
+&#8594; <strong>Import tabulkového procesoru</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Systém automaticky vyhledává požadované CAD soubory uvedené v tabulce
+v zadané složce a všech jejích podsložkách.</p>
+</li>
+<li>
+<p><strong>Vytvořit prázdný díl pro chybějící CAD soubory</strong> je
+také povoleno, takže pokud stále není nalezen žádný CAD soubor, systém vytvoří
+prázdný díl jako zástupný symbol.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/configured.png" alt="Create blank parts" width="861">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_import_z_csv_nebo_xlsx">Import z csv nebo xlsx</a>
+  </li>
+  <li level="2">
+   <a href="#_vytvořit_prázdný_díl_pro_chybějící_cad_soubory">Vytvořit prázdný díl pro chybějící CAD soubory</a>
+  </li>
+  <li level="2">
+   <a href="#_nezobrazovat_dialogové_okno_nové_úlohy_když_má_tabulkový_procesor_chybu">Nezobrazovat dialogové okno Nové úlohy když má tabulkový procesor chybu</a>
+  </li>
+  <li level="2">
+   <a href="#_prefer_raw_material_column_over_material_thickness">Prefer raw-material column over material + thickness</a>
+  </li>
+  <li level="1">
+   <a href="#_sledovaná_složka_pomocí_csvxlsx">Sledovaná složka pomocí CSV/XLSX</a>
+  </li>
+  <li level="2">
+   <a href="#_adresář_vyhledávání_cad_a_rekurzivní_vyhledávání_cad_není_nakonfigurováno">Adresář vyhledávání CAD a rekurzivní vyhledávání CAD - není nakonfigurováno</a>
+  </li>
+  <li level="2">
+   <a href="#_adresář_vyhledávání_cad_a_rekurzivní_vyhledávání_cad_nakonfigurováno">Adresář vyhledávání CAD a rekurzivní vyhledávání CAD - nakonfigurováno</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="orderimport.html">Import objednávek</a></span>
+ <span class="next"><a href="assembliesimport.html">Import sestav</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

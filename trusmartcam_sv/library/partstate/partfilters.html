@@ -1,0 +1,434 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Delfilter</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Välkommen till TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hårdvarukrav</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Format som stöds</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Förutsättningar</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Serverinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Klientinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Ändra licens</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfiguration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Lägg till/ta bort maskin</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Ställ in verktyg</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Konfigurera användare</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Språk</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Lägg till nytt material och plåt</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Exportera/importera material</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Ersätt material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mappa material</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mappa CAM-sidor</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mappa fält från CAD (uppslagningsnycklar)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Användargränssnittet</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Arbetsflöde</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Bibliotek</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Öppna</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Importera delar</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Importera order</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Importera jobb</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Importera monteringar</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Biblioteksvy</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Delar</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Montering</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Delstatus</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partvalidation.html">Delvalidering</a></li>
+      <li><button class="tree blank"></button><a href="partpanel.html">Delpanel</a></li>
+      <li><button class="tree blank"></button><a class="active" href="partfilters.html">Delfilter</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Verktygsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Verktygningsvalidering</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Böjverktygningsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Skärverktygningsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Vikverktygningsvalidering</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Verktygspanel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Spara filter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Ordrar</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Ordervyer</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Jobb</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Skapa jobb</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Jobbvy</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Jobbpanel</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Autoplan</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktiv häckning</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Ompackning</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Häckhantering</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Layoutvy</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Layoutpanel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Rapportavsändare</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Resthantering</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatisk resthantering</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manuell resthantering</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Twinline-häckning</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Inaktuell</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Jobbfilter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD-tillägg</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Spara delar</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Spara sammansättning</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Kontrollera genomförbarhet</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Fabriksinställningar</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Diverse förbättringar</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Bibliotek</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Delstatus</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="partfilters.html">Delfilter</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Delfilter</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Delbibliotekets filter låter er snabbt söka efter och lokalisera delar i
+biblioteket genom att tillämpa specifika villkor. Genom att begränsa resultaten
+till endast de delar som uppfyller era kriterier gör dessa filter det enklare
+att hantera och komma åt relevanta delar effektivt.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/partlibrary.png" alt="Part Library" width="170">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_status">Status</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Använd filtret <strong>Status</strong> för att söka delar baserat på
+verktygsstatus.</p>
+</li>
+<li>
+<p>Rullgardinsmenyn visar verktygstillstånd som färgade rutor och alla tillgängliga
+maskiner och deras tillämpliga fel.</p>
+</li>
+<li>
+<p>De färgade rutorna representerar följande tillstånd:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Vit: Verktygning OK</p>
+</li>
+<li>
+<p>Orange: Verktygning har fel</p>
+</li>
+<li>
+<p>Gul: Verktygning har varning</p>
+</li>
+<li>
+<p>Grå: Verktygning undertryckt</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Om en del har smal fläns eller verktygning inte tilldelad fel, kommer att
+välja dessa att visa respektive delar.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/status2.png" alt="Status" width="1233">
+</div>
+</div>
+</li>
+<li>
+<p>Delar med undertryckt verktygning på den valda maskinen visas genom att
+klicka på den gråfärgade rutan.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/supressed.png" alt="Suppressed" width="990">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bockningsmonteringar">Bockningsmonteringar</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Använd filtret <strong>Bockningsmonteringar</strong> för att söka delar baserat på
+det böjverktyg som används.</p>
+</li>
+<li>
+<p>Rullgardinsmenyn visar alla tillgängliga böjverktyg och kan filtreras efter
+verktygsnamn, typ (stans, gåsnacke, radie, etc.) eller beskrivning.</p>
+</li>
+<li>
+<p>Välj flera verktyg och klicka på <strong>Matcha alla|</strong>&amp;** för att
+sortera verktygen som använder båda de valda verktygen.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/bendmount.png" alt="Bend Mount" width="990">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_använda_verktyg">Använda verktyg</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Filtrering efter <strong>Använda verktyg</strong> fungerar liknande filtrering
+efter <strong>Bockningsmonteringar</strong>.</p>
+</li>
+<li>
+<p>Verktygsikoner visas i proportionerliga storlekar (inte exakta, men
+relativa).</p>
+</li>
+<li>
+<p>När förhandsgranskningen av verktygning är öppen, markerar mushovring över
+ett verktyg i filterlistan det verktyget i förhandsgranskningsrutan.</p>
+</li>
+<li>
+<p>Flera verktyg kan väljas och tillämpas med hjälp av
+<strong>Matcha alla|</strong>&amp;**.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/usedtool.png" alt="Used Tool" width="912">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tillstånd">Tillstånd</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Använd filtret <strong>Tillstånd</strong> för att söka delar baserat på deras
+aktuella tillstånd.</p>
+</li>
+<li>
+<p>Rullgardinsmenyn visar alla tillämpliga tillstånd beroende på de tillgängliga
+biblioteksdelarna.</p>
+</li>
+<li>
+<p>Listan över tillstånd ändras dynamiskt enligt de valda delarna och deras
+status.</p>
+</li>
+<li>
+<p>Välj till exempel <strong>Material Missing</strong> för att visa delar i ett olöst
+materialtillstånd.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/state.png" alt="State" width="990">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_status">Status</a>
+  </li>
+  <li level="1">
+   <a href="#_bockningsmonteringar">Bockningsmonteringar</a>
+  </li>
+  <li level="1">
+   <a href="#_använda_verktyg">Använda verktyg</a>
+  </li>
+  <li level="1">
+   <a href="#_tillstånd">Tillstånd</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partpanel.html">Delpanel</a></span>
+ <span class="next"><a href="../toolingstatus/index.html">Verktygsstatus</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

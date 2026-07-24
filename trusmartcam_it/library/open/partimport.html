@@ -1,0 +1,500 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Importa pezzi</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Benvenuti in TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Change license</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configurazione</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Aggiungere/Rimuovere macchina</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Configurare utensili</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Configurare utenti</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Lingua</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiale</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Aggiungere nuovo materiale e foglio</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Esportare/Importare materiale</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Sostituire materiale</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mappare materiale</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mappare pagine CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mappare campi da CAD (chiavi di ricerca)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">L'interfaccia utente</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Flusso di lavoro</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Libreria</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Apri</a>
+     <ul>
+      <li><button class="tree blank"></button><a class="active" href="partimport.html">Importa pezzi</a></li>
+      <li><button class="tree blank"></button><a href="orderimport.html">Importa ordini</a></li>
+      <li><button class="tree blank"></button><a href="jobimport.html">Importa lavori</a></li>
+      <li><button class="tree blank"></button><a href="assembliesimport.html">Importa assiemi</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Vista libreria</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Pezzi</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assieme</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Stato parti</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Convalida parti</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Pannello pezzi</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Filtri pezzi</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Stato attrezzaggio</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Convalida attrezzaggio</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Convalida attrezzaggio piegatura</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Convalida attrezzaggio taglio</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Convalida attrezzaggio piegatubi</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Pannello attrezzaggio</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Salvataggio filtri</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Ordini</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Vista ordini</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Commesse</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Crea commessa</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Vista lavori</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Pannello commessa</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Pianificazione automatica</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Nesting interattivo</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Riconfezionamento</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Gestione nidi</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Vista layout</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Pannello layout</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Mittente report</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Gestione ritagli</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Gestione automatica ritagli</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Gestione manuale ritagli</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Nesting a doppia linea</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Non aggiornato</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtri lavoro</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Estensioni CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">Componente aggiuntivo SolidWorks</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installazione</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Salvare parti</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Salvare assieme</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Verifica fattibilità</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Impostazioni di fabbrica</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Miglioramenti vari</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Colophon</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Libreria</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Apri</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="partimport.html">Importa pezzi</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Importa pezzi</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Prima di importare i pezzi, assicurarsi che i formati dei file siano compatibili con TruSmartCAM.
+Vedere <a href="../../installation/importformats.html">supported file formats</a> per maggiori
+dettagli.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Se il materiale e lo spessore non sono mappati al pezzo dopo l&#8217;importazione, assegnare
+il materiale utilizzando il pannello dei pezzi.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_metodi_di_importazione">Metodi di importazione</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Esistono tre metodi per importare i pezzi nella libreria dei pezzi:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Importa tramite file</p>
+</li>
+<li>
+<p>Trascina e rilascia</p>
+</li>
+<li>
+<p>Cartella di monitoraggio</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_importa_tramite_file">Importa tramite file</h3>
+<div class="paragraph">
+<p>Un file di pezzo 2D o 3D può essere importato nella libreria dei pezzi utilizzando l&#8217;opzione
+<strong>Importa parti</strong>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Fare clic sulle icone <strong>aperto</strong> dalla barra dei comandi e selezionare
+l&#8217;opzione <strong>Importa parti</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importpart.png" alt="Import part" width="337">
+</div>
+</div>
+</li>
+<li>
+<p>Viene visualizzata la finestra di dialogo <strong>Open</strong> — selezionare un file CAD qualsiasi (2D o 3D).</p>
+</li>
+<li>
+<p>Viene visualizzata un&#8217;anteprima del file CAD selezionato.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/sideview.png" alt="Part preview" width="1233">
+</div>
+</div>
+</li>
+<li>
+<p>Selezionare il pezzo richiesto e fare clic su <strong>Open</strong>.</p>
+</li>
+<li>
+<p>Il sistema attrezzerà automaticamente il pezzo per tutte le macchine disponibili con stato di attrezzaggio
+aggiornato.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_trascina_e_rilascia">Trascina e rilascia</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Trascinare e rilasciare un file di pezzo direttamente nella libreria dei pezzi TruSmartCAM.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cartella_di_monitoraggio">Cartella di monitoraggio</h3>
+<div class="paragraph">
+<p>Le impostazioni di monitoraggio consentono di monitorare una cartella per nuovi file e importarli
+automaticamente nella libreria dei pezzi.</p>
+</div>
+<div class="paragraph">
+<p>Per configurare, vedere la pagina <a href="../../factory/settings/watch.html">Watch settings</a>.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Utilizzare il percorso UNC (Universal Naming Convention) <code>\\192.168.1.11\&lt;Folder path&gt;</code> o un'
+unità mappata <code>M:\&lt;Folder Path&gt;</code>.</p>
+</li>
+<li>
+<p>Il PC su cui è in esecuzione il motore deve avere accesso in lettura/scrittura a questa cartella.</p>
+</li>
+<li>
+<p>Non utilizzare un percorso locale come <code>C:\&lt;Folder Path&gt;</code> perché il servizio di monitoraggio
+cerca i file sul PC del motore — non sul PC locale.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/watch.png" alt="Watch settings" width="744">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="import-configuration">Configurazione importazione</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_usa_il_confronto_geometrie_sulla_stessa_revisione_cad">Usa il confronto geometrie sulla stessa revisione CAD</h3>
+<div class="paragraph">
+<p>Quando si importa un pezzo con la stessa revisione CAD, TruSmartCAM può confrontare la
+geometria del file CAD con il pezzo esistente.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Per abilitare questo, configurare <strong>Chiavi di ricerca revisione</strong> (ad
+esempio, REV) in <strong>fabbrica</strong> → <strong>impostazioni</strong>
+→<strong>Importazione/esportazione</strong>. Quindi, abilitare l&#8217;opzione
+<strong>Usa il confronto geometrie sulla stessa revisione CAD</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/rev.png" alt="Revision" width="755"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Il confronto della geometria sulla stessa revisione CAD funziona solo quando
+sono configurate <strong>Chiavi di ricerca revisione</strong>.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ora, importare un pezzo nella libreria dei pezzi con una revisione specifica (ad
+esempio, Revisione 1).</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/partcomparison.png" alt="Part Comparison" width="263">
+</div>
+</div>
+</li>
+<li>
+<p>Lo stesso pezzo viene importato di nuovo con lo stesso valore di revisione.</p>
+</li>
+<li>
+<p>TruSmartCAM confronta la geometria del file CAD appena importato con il pezzo
+esistente.</p>
+</li>
+<li>
+<p>Se viene rilevata una differenza di geometria, TruSmartCAM visualizza un prompt chiedendo se:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Sostituisci</strong> il pezzo esistente con la nuova geometria, mantenendo lo stesso valore di
+revisione.</p>
+</li>
+<li>
+<p><strong>Salta</strong> l&#8217;importazione, mantenendo il pezzo esistente e la sua geometria.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/comparison.png" alt="Comparison" width="435"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ciò consente agli utenti di aggiornare la geometria del pezzo senza modificare il valore di revisione,
+pur mantenendo il controllo su se i pezzi esistenti vengono sostituiti.</p>
+</div>
+<div class="paragraph">
+<p>I pezzi importati vengono automaticamente aggiunti alla libreria per un ulteriore utilizzo. Per ulteriori informazioni,
+vedere <a href="../../library/index.html">Library</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_metodi_di_importazione">Metodi di importazione</a>
+  </li>
+  <li level="2">
+   <a href="#_importa_tramite_file">Importa tramite file</a>
+  </li>
+  <li level="2">
+   <a href="#_trascina_e_rilascia">Trascina e rilascia</a>
+  </li>
+  <li level="2">
+   <a href="#_cartella_di_monitoraggio">Cartella di monitoraggio</a>
+  </li>
+  <li level="1">
+   <a href="#import-configuration">Configurazione importazione</a>
+  </li>
+  <li level="2">
+   <a href="#_usa_il_confronto_geometrie_sulla_stessa_revisione_cad">Usa il confronto geometrie sulla stessa revisione CAD</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">Apri</a></span>
+ <span class="next"><a href="orderimport.html">Importa ordini</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,904 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Server installation</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Selamat Datang di TruSmartCAM</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Installation</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a class="active" href="serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="changelic.html">Change license</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Konfigurasi</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Tambah/Hapus mesin</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Setup tooling</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Konfigurasi pengguna</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Bahasa</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Tambah material dan sheet baru</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Export/Import material</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Ganti material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Petakan material</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Petakan halaman CAM</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Petakan field dari CAD (lookup keys)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">Antarmuka pengguna</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Perpustakaan</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Impor part</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Impor order</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Impor job</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Impor assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Tampilan perpustakaan</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Bagian</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Rakitan</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Status part</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Validasi part</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Panel part</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Filter part</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Status tooling</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Validasi tooling</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Validasi tooling bend</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Validasi tooling cut</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Validasi tooling fold</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Panel tooling</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Menyimpan filter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Pesanan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Tampilan pesanan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../jobs/index.html">Pekerjaan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../jobs/jobcreation.html">Buat pekerjaan</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobview.html">Tampilan pekerjaan</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobpanel.html">Panel pekerjaan</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobautoplan.html">Rencana otomatis</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobinteractplan.html">Nesting interaktif</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/repacking.html">Pengepakan ulang</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/layoutcommands/index.html">Manajemen nest</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/nestview.html">Tampilan tata letak</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/layoutpanel.html">Panel tata letak</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/reportsender.html">Pengirim laporan</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/remnantmanagement/index.html">Manajemen sisa</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/autoremnant.html">Manajemen sisa otomatis</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/manualremnant.html">Manajemen sisa manual</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../jobs/twinlinenesting.html">Nesting twinline</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/outdate.html">Kedaluwarsa</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobfilters.html">Filter pekerjaan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">Ekstensi CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Instalasi</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Simpan part</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Simpan assembly</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Periksa kelayakan</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Pengaturan factory</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Peningkatan lain-lain</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Installation</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="serverinstallation.html">Server installation</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Server installation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ikuti instruksi untuk menginstal instalasi TruSmartCAM Server bersama dengan
+SQL.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">Administrator Rights</div>
+<div class="paragraph">
+<p><strong>Untuk menjalankan instalasi ini, pengguna harus memiliki hak administratif.</strong></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Jalankan <strong>Setup.TruSmartCAM.&lt;version&gt;.exe</strong> untuk memulai instalasi.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Version adalah nomor.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Baca perjanjian lisensi dan pilih <strong>I accept the agreement</strong> dan kemudian Klik
+Berikutnya
+.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s02praxislicenseagreement.png" alt="Praxis License Agreement">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_1_install_location">Step 1 : Install Location</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Sebutkan direktori instalasi atau terima default instalasi
+<code>C:\Program Files\Metamation\Praxis</code> dan klik Berikutnya.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>C:\Program Files\Metamation\Praxis</code> - Folder Install akan memiliki folder
+berikut : Bin, MetaCAM, Samples dan Tracker.</p>
+</li>
+<li>
+<p><code>C:\Program Data\Metamation</code> - Folder Data akan memiliki folder berikut :
+TruSmartCAM, TecZone dan MetaCAM.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s03installationpath.png" alt="Installation Path">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_2_components_selection">Step 2 : Components Selection</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Installation Type</th>
+<th class="tableblock halign-left valign-top">Components</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Desktop client + Engine</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Client</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Desktop Client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Desktop client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Station</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Picks all Stations Terminal like TecZone, MetaCAM, RightAngle(Bend Controller),
+Vulcan(Laser Machine Controller)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Picks by user choice.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Pilih Full Installation. Pilih <strong>Code Senders</strong> dan <strong>Bend Code Senders</strong> dari
+TruSmartCAM Tools. Sekarang Installation type berubah menjadi <strong>Khusus</strong>. Klik
+Berikutnya.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s04serverinstallation.png" alt="Server Installation">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_3_choose_install_sql_server">Step 3 : Choose Install SQL Server</h2>
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Instalasi SQL Express 2022 hanya diperlukan untuk TruSmartCAM Server.  Opsi ini
+tidak tersedia untuk Instalasi Client dan Sync.  Juga ini
+Dicentang ON dan diinstal untuk pertama kalinya dan dapat diabaikan setelahnya. Jika
+SQL sudah diinstal di server TruSmartCAM, pengguna dapat mengabaikan Step 3.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Dalam Select Additional Tasks : Klik <strong>Install SQL Express</strong> dan Klik
+Berikutnya.</p>
+</li>
+<li>
+<p>Dalam Ready to Install : Rangkum semua fitur instalasi dan Klik Install.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s05sqlinstall.png" alt="Install SQL">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_4_sql_server_installation">Step 4 : SQL Server Installation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Setelah komponen TruSmartCAM diinstal, installer melanjutkan dengan
+instalasi server SQL. Terima License Agreement untuk melanjutkan dan menginstal SQL
+express dengan opsi default.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s06sqlserver.png" alt="SQLServer Install">
+</div>
+</div>
+<div class="paragraph">
+<p>Setelah instalasi selesai Klik Close dan selesaikan instalasi.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s07sqlservercomplete.png" alt="SQL Server Complete">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Tergantung pada versi Windows, menutup instalasi SQL dapat meminta
+restart.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_5_windows_desktop_shortcuts">Step 5 : Windows Desktop shortcuts</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Setelah instalasi SQL, jika Sistem tidak restart, maka pilih checkbox <strong>Launch TruSmartCAM</strong>
+dan Klik <strong>Finish</strong>.</p>
+</li>
+<li>
+<p>Jika Sistem restart, maka Luncurkan ikon shortcut TruSmartCAM di Desktop atau ketik
+TruSmartCAM di Windows Start Program dan <strong>Run as administrator</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<em>Server installation</em> : Ikon shortcut TruSmartCAM dan TruSmartCAM License tersedia di Desktop. + <em>Client/SYNC Installation</em> : Hanya ikon shortcut
+TruSmartCAM tersedia di Desktop.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s08launchpraxis.png" alt="Launch TruSmartCAM">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_6_license_registration">Step 6 : License Registration</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Di field <em>Serial Number</em>, ketik <em>TruSmartCAM Serial key</em> yang disediakan oleh Trumpf
+Metamation Service Team. Ketik <strong>&lt;Company Name&gt;</strong> di field "Registered to" dan
+E-Mail. Klik <strong>OK</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s09praxisregister.png" alt="TruSmartCAM Register">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Jika firewall Jaringan memblokir registrasi lisensi atau Tidak ada internet di
+PC Server TruSmartCAM, maka lisensi TruSmartCAM dilakukan dengan aktivasi Offline. Email
+<strong><em>Prax.request</em></strong> dari Folder <em>C:\ProgramData\Metamation\Praxis</em> ke Trumpf
+Metamation Service Team. Trumpf Metamation Team akan menyediakan <strong><em>Prax.lock</em></strong>
+yang perlu dijatuhkan di folder ini.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_7_initial_one_time_configuration">Step 7 : Initial one time Configuration</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Ketik Nama Database dan Atur Lokasi Penyimpanan Data. Pilih
+checkbox Gunakan Server SQL dan pilih nama server SQL
+untuk terhubung ke Database. Klik <strong>OK</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s10usedatabase.png" alt="Use Database">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Desktop Client membuka menampilkan <strong>Database Connection Succeeded</strong> di
+bagian bawah.</p>
+</li>
+<li>
+<p>File konfigurasi TruSmartCAM, TecZone dan MetaCAM dibuat dengan mesin config default
+atau terhadap mesin lisensi TruSmartCAM. Config yang sama akan dibagikan
+di semua TruSmartCAM Clients.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s11databaseconnectionsuccess.png" alt="Database Connection Success">
+</div>
+</div>
+<div class="paragraph">
+<p>Layar Welcome menampilkan dengan Windows User LoginName sebagai TruSmartCAM Login dan Name.
+Pengguna TruSmartCAM pertama dianggap sebagai <strong>Admin Situs</strong>. Berikan Email dan
+Password. Klik <strong>OK</strong>
+.</p>
+</div>
+<div class="paragraph">
+<p>Pilih checkbox <strong>Ingat saya</strong>
+untuk menyimpan kredensial login untuk waktu berikutnya.
+Hapus centang checkbox <strong>Ingat saya</strong> akan meminta dialog login dan
+kata sandi setiap kali aplikasi TruSmartCAM diluncurkan.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s12welcomepraxis.png" alt="Welcome TruSmartCAM">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_8_trusmartcam_sign_in">Step 8 : TruSmartCAM sign-in</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Tutup TruSmartCAM dan buka kembali. Sistem meminta Anda untuk memasukkan kredensial
+login TruSmartCAM.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/signprompt.png" alt="Sign Prompt" width="450">
+</div>
+</div>
+</li>
+<li>
+<p>Nama pengguna yang masuk ditampilkan di sebelah ikon pengguna di header aplikasi
+TruSmartCAM.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/userid.png" alt="User ID" width="228">
+</div>
+</div>
+</li>
+<li>
+<p>Ketika Anda mengarahkan kursor ke ikon pengguna, sistem menampilkan:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/hover.png" alt="Hover" width="108">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Peran pengguna (misalnya: Programmer, Admin).</p>
+</li>
+<li>
+<p>Pintasan untuk keluar: <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>L</kbd></span>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Mengklik ikon pengguna membuka menu yang memungkinkan Anda untuk:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/information.png" alt="Information" width="160">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Edit informasi&#8230;&#8203;</strong> - Perbarui detail profil Anda.</p>
+</li>
+<li>
+<p><strong>Ubah kata sandi&#8230;&#8203;</strong> - Ubah kata sandi akun
+Anda.</p>
+</li>
+<li>
+<p><strong>Keluar</strong> - Keluar dari aplikasi.</p>
+</li>
+<li>
+<p><strong>Batal</strong> - Tutup menu tanpa membuat perubahan apa pun.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_9_factory_machine_configuration">Step 9 : Factory Machine Configuration</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM License [All machines enables license bit] : Default TruSmartCAM Machine
+dan Material dianggap sebagai Factory Configuration.</p>
+</li>
+<li>
+<p>TruSmartCAM License [No demo and few machine bit enabled] : Beberapa Mesin tersebut dan
+Material default dianggap sebagai Factory Configuration.</p>
+</li>
+<li>
+<p>(Open &#8594; Import) Part baru dari <code>C:\Program
+Files\Metamation\Praxis\Samples\Parts</code> dan verifikasi apakah Part diimpor
+dengan sukses.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s14praxiswelcomescreen.png" alt="Praxis Welcome screen">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_note_1_trusmartcam_monitor">Note 1 : TruSmartCAM Monitor</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor dengan Engine Installation (Site admin rights):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor dengan Engine bersama dengan Site Admin TruSmartCAM Rights akan memiliki
+opsi berikut:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Push konfigurasi TruSmartCAM, konfigurasi TecZone, MetaCAM di semua TruSmartCAM
+Clients. Juga memiliki hak untuk membuat Login Pengguna TruSmartCAM Baru.</p>
+</li>
+<li>
+<p>Show Agents akan menampilkan total engine yang tersedia untuk melakukan tugas otomatisasi yang
+terhadap TruSmartCAM License.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s15pmonitor.png" alt="Praxis Monitor Status">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor tanpa Engine Installation (Site admin rights):</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s16pmonitorwithoutengine.png" alt="Praxis Monitor without Engine">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Monitor tanpa Engine Installation (Non Site Admin rights):</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s17pmonitorwithprogrammerlogin.png" alt="Praxis with Progrmmer login">
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>PC yang menjalankan aplikasi TruSmartCAM harus memiliki komponen Engine TruSmartCAM terinstal
+[Server PC atau di instalasi Client mana pun]. PC yang terinstal komponen Engine TruSmartCAM
+harus berjalan 24x7 untuk melakukan semua tugas otomatisasi.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_note_2_lock_tracker">Note 2 : Lock Tracker</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Klik shortcut <strong>TruSmartCAM License</strong> yang tersedia di Desktop Server TruSmartCAM.
+Atau, buka url <a href="http://localhost:7171/metamation/locktrack" class="bare">http://localhost:7171/metamation/locktrack</a> di browser web mana pun
+.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ini akan membuka modul Lock Tracker yang memiliki informasi Lisensi, informasi
+sesi TruSmartCAM saat ini dan Log.</p>
+</div>
+<div class="paragraph">
+<p>LockTracker HOME Page : Ini menampilkan Nomor Serial TruSmartCAM, informasi Kadaluwarsa Serial
+dan informasi bit Serial yang tersedia.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s18locktrack01.png" alt="Lock Track License Home page">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker SESSIONS Page : Informasi koneksi Server TruSmartCAM saat ini seperti
+PC client Desktop TruSmartCAM, PMonitor, Status PEngine.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s19locktrack02.png" alt="Lock Track Session information">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker LOGs Page : Client TruSmartCAM mulai dan keluar | Pmonitor mulai dan
+status koneksi/pemutusan PEngine dll., dapat dilihat di halaman Logs ini.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s20locktrack03.png" alt="Praxis Monitor Status">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_note_3_opengl">Note 3 : OpenGL</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Aplikasi TruSmartCAM saat membuka yang tertutup segera dan juga
+pmonitor tidak ditampilkan di task bar.</p>
+</li>
+<li>
+<p>Ini merepresentasikan masalah OpenGl.</p>
+</li>
+<li>
+<p>Cara lain untuk mengonfirmasi ini: Buka C:\Program
+Files\Metamation\Praxis\Bin\Flux.exe yang menampilkan dialog kesalahan tentang
+masalah OpenGL.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s21opengl.png" alt="OpenGL Issue">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Perbarui <em>C:\ProgramData\Metamation\Praxis\Prax.ini</em>, bagian options dengan
+<strong>GLVersion=1</strong> membuat aplikasi TruSmartCAM membuka dengan sukses.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ini hljs" data-lang="ini">[Options]
+GLVersion=1.0</code></pre>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_step_1_install_location">Step 1 : Install Location</a>
+  </li>
+  <li level="1">
+   <a href="#_step_2_components_selection">Step 2 : Components Selection</a>
+  </li>
+  <li level="1">
+   <a href="#_step_3_choose_install_sql_server">Step 3 : Choose Install SQL Server</a>
+  </li>
+  <li level="1">
+   <a href="#_step_4_sql_server_installation">Step 4 : SQL Server Installation</a>
+  </li>
+  <li level="1">
+   <a href="#_step_5_windows_desktop_shortcuts">Step 5 : Windows Desktop shortcuts</a>
+  </li>
+  <li level="1">
+   <a href="#_step_6_license_registration">Step 6 : License Registration</a>
+  </li>
+  <li level="1">
+   <a href="#_step_7_initial_one_time_configuration">Step 7 : Initial one time Configuration</a>
+  </li>
+  <li level="1">
+   <a href="#_step_8_trusmartcam_sign_in">Step 8 : TruSmartCAM sign-in</a>
+  </li>
+  <li level="1">
+   <a href="#_step_9_factory_machine_configuration">Step 9 : Factory Machine Configuration</a>
+  </li>
+  <li level="1">
+   <a href="#_note_1_trusmartcam_monitor">Note 1 : TruSmartCAM Monitor</a>
+  </li>
+  <li level="1">
+   <a href="#_note_2_lock_tracker">Note 2 : Lock Tracker</a>
+  </li>
+  <li level="1">
+   <a href="#_note_3_opengl">Note 3 : OpenGL</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="prerequisites.html">Prerequisites</a></span>
+ <span class="next"><a href="clientinstallation.html">Client installation</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>
+    if (!hljs.initHighlighting.called) {
+      hljs.initHighlighting.called = true
+      ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,747 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Takım paneli</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">TruSmartCAM'e Hoş Geldiniz</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Kurulum</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Donanım gereksinimleri</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Desteklenen dosya formatları</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Önkoşullar</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Sunucu kurulumu</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">İstemci kurulumu</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Lisansı değiştir</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Yapılandırma</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Makine ekleme/çıkarma</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Takım kurulumu</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Kullanıcıları yapılandırma</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Dil</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Malzeme</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Yeni malzeme ve sac ekleme</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Malzemeyi dışa aktarma/içe aktarma</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Malzemeyi değiştirme</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Malzeme eşleme</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAM sayfalarını eşleme</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">CAD'den alanları eşleme (arama anahtarları)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Kullanıcı arayüzü</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">İş Akışı</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Kütüphane</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Aç</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Parçaları içe aktarma</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Siparişleri içe aktarma</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">İşleri içe aktarma</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Montajları içe aktarma</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Kütüphane görünümü</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Parçalar</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Montaj</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Parça durumu</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Parça doğrulama</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Parça paneli</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Parça filtreleri</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Takım durumu</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="toolingvalidation/index.html">Takım doğrulama</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="toolingvalidation/bendtooling.html">Büküm takımı doğrulama</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/cuttooling.html">Kesim takımı doğrulama</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/foldtooling.html">Katlama takımı doğrulama</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a class="active" href="toolingpanel.html">Takım paneli</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Filtreleri kaydetme</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Siparişler</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Sipariş görünümü</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">İşler</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">İş oluşturma</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">İş görünümü</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">İş paneli</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Otomatik planlama</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Etkileşimli yerleştirme</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Yeniden paketleme</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Yerleşim yönetimi</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Yerleşim görünümü</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Yerleşim paneli</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Rapor gönderici</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Artık yönetimi</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Otomatik artık yönetimi</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manuel artık yönetimi</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">İkiz hat yerleştirme</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Güncel değil</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">İş filtreleri</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD uzantıları</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks eklentisi</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Kurulum</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Parçaları kaydet</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Montajı kaydet</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Uygulanabilirliği kontrol et</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Fabrika ayarları</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Çeşitli iyileştirmeler</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Künye</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Kütüphane</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Takım durumu</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="toolingpanel.html">Takım paneli</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Takım paneli</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bu bölüm, takım örneklerini yönetmek için kullanılan
+<strong>Çıktıları Dışa Aktar</strong>,
+<strong>Check Tooling</strong>, <strong>Donatımı Bastır</strong>,
+<strong>Düz Temel olarak Ayarla&#8230;&#8203;</strong>, <strong>Donatımı Kopyala&#8230;&#8203;</strong>
+ve diğer seçenekler gibi takımla ilgili eylemleri açıklar.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/toolingpanel.png" alt="Tooling panel" width="150">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Görüntülemek için salt okunur olarak aç</strong><br>
+Opens the selected tooling in read-only mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Enables editing of the selected tooling.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Çıktıları Dışa Aktar</strong><br>
+Exports the selected tooling output to the destination configured.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/checkui.png" alt="Check Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check Tooling</strong><br>
+Validates the existing tooling without making any changes and updates
+its status if the validation fails.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/copyui.png" alt="Copy Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Donatımı Kopyala&#8230;&#8203;</strong><br>
+Copies the punch, sequence, and back gauge setup from the selected
+reference tooling and applies it to other solutions wherever feasible.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/baseui.png" alt="Set as Base-Flat" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Düz Temel olarak Ayarla&#8230;&#8203;</strong><br>
+Marks the selected bend or fold tooling as the reference flat size for
+generating cutting solutions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/retoolui.png" alt="Re-tool" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Re-tool&#8230;&#8203;</strong><br>
+Reprocesses the selected tooling for the part without affecting other
+toolings.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/supressui.png" alt="Suppress Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Donatımı Bastır</strong><br>
+Suppresses the selected tooling so that it is excluded from further
+processing and output generation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prevui.png" alt="Prev Next" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Önceki</strong> / <strong>Sonraki</strong> / <strong>Parça</strong><br>
+Navigates to the previous or next tooling, or back to the parent part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sortui.png" alt="Similar Toolings" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort and filter</strong><br>
+Displays other toolings that share similar characteristics with the
+selected tooling for quick reference.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_çıktıları_dışa_aktar">Çıktıları Dışa Aktar</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bu seçenek, parça çıktısını
+<strong>Fabrika Ayarları</strong> içinde yapılandırılan hedefe aktarır. (Bkz.
+<a href="../../factory/settings/bend.html">Bend Settings</a> ve
+<a href="../../factory/settings/cut.html">Cut Settings</a>)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingoutput.png" alt="Tooling Output" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Yalnızca seçilen takım işlemiyle ilişkili takımlar
+dışa aktarılır, tüm parça değil.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Dışa aktarılan dosyalar işlem türüne bağlıdır. Bükme ve
+Katlama işlemleri için NC dosyaları ve raporlar oluşturulur. Kesme ve Zımba
+işlemleri için yalnızca parça dosyaları dışa aktarılır.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_check_tooling">Check Tooling</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>CAM Ayarlarında bir değişiklik varsa veya bir bükme takımı kaybolmuşsa, Parçayı Yeniden Takımlamaya gerek yoktur.</p>
+</li>
+<li>
+<p>Bunun yerine, hiçbir değişiklik yapmadan mevcut takımlamayı doğrulamak için Takım Kontrolünü kullanın.</p>
+</li>
+<li>
+<p>Doğrulama başarısız olursa, o örneğin takım durumu güncellenir ve ilgili çıktı dosyaları kaldırılır.</p>
+</li>
+<li>
+<p>Takım Kontrolü ayrıca <strong>Hataları Yoksay</strong> kullanılarak daha önce manuel olarak geçersiz kılınan hataları olan parçaları algılar ve gerekirse durumlarını hataya günceller.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/checktooling.png" alt="Check Tooling" width="456">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_donatımı_kopyala">Donatımı Kopyala&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kopyalama takımı, bir çözümden bükme takımını diğerlerine hızlı bir şekilde uygulamanza olanak tanıyarak zaman ve efor tasarrufu sağlar.</p>
+</div>
+<div class="paragraph">
+<p>Bu, seçilen bir referans takımdan (çözüm) zımba, sıra ve arka dayama kurulumunu kopyalar ve aynı ayarları tüm diğer çözümlere uygulamaya çalışır.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kopyalanan kurulum hedef makine için uygulanabilirse, kaydedilir ve kullanılır.</p>
+</li>
+<li>
+<p>Kurulum uygulanamaz ise, o makine için orijinal takımlama değişmeden kalır.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Örneğin, farklı makineler için farklı takımlara sahip olabilirsiniz:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Burada, Makine 5230SX 6A bir Kaz Boynu zımbası kullanır, Makine 5085X 6A B23 Sivri bir zımba kullanır.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check3.png" alt="Before tooling" width="724">
+</div>
+</div>
+<div class="paragraph">
+<p>Makine 5230SX 6A üzerinde <strong>Donatımı Kopyala&#8230;&#8203;</strong> kullandığınızda, Kaz Boynu kurulumunu tüm diğer makinelere kopyalamaya çalışır.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check4.png" alt="Copy tooling" width="664">
+</div>
+</div>
+<div class="paragraph">
+<p>Aynı zımba, sıra ve arka dayama ayarları mümkün olan her yerde uygulanır. Kopyalanan kurulum kullanılamazsa, orijinal takımlama değişmeden kalır.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/copytooling3.png" alt="After tooling" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>Kopyalama takımı uyguladıktan sonra, Kaz Boynu kurulumu uygulanabilir olduğu tüm diğer makinelere başarıyla uygulanmıştır.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_düz_temel_olarak_ayarla">Düz Temel olarak Ayarla&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Düz Temel olarak Ayarla&#8230;&#8203;</strong> özelliği, kesme çözümleri oluşturmak için hangi bükme veya katlama takımının referans düz boyut olarak kullanılacağını tanımlar.
+Bir takım Base-Flat olarak işaretlendiğinde, TruSmartCAM parçanın düz boyutunu o makineye göre günceller ve kesme çözümlerini buna göre yeniden oluşturur. Base-Flat takımları kullanıcı arayüzünde mavi bir kenarlıkla gösterilir.</p>
+</div>
+<div class="paragraph">
+<p>Farklı bükme makineleri aynı parça için düz boyutta hafif farklılıklar üretebilir. Bir takımı Base-Flat olarak ayarladığınızda, TruSmartCAM o makinenin düz boyutunu ana referans olarak kullanır ve kesme çözümlerini otomatik olarak yeniden hesaplar.</p>
+</div>
+<div class="paragraph">
+<p>Burada, aynı parça için çeşitli makinelerde farklı düz boyutlar görebiliriz:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat1.png" alt="Base flat1" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>Bu örnekte, <strong>5130X 6A B23</strong> takımı Base-Flat olarak ayarlanmıştır ve güncellenmiş düz boyut parça özelliklerinde uygulanmıştır:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat2.png" alt="Base flat2" width="663">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_otomatik_base_flat_seçimi">Otomatik base flat seçimi</h3>
+<div class="paragraph">
+<p>Fabrika ayarı
+<strong>Büküm sırasında düzlük düzeltmesi uygula</strong> etkinleştirildiğinde:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autobase.png" alt="Auto Base" width="806">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM, parça içe aktarma sırasında bükme takımını (maksimum bükme uzunluk tablosunu içeren) otomatik olarak Base-Flat olarak ayarlar.</p>
+</li>
+<li>
+<p>Seçilen bükme takımı bir hatayla karşılaşırsa veya uygulanamaz ise,
+TruSmartCAM akıllıca geçiş yapar ve başka bir geçerli bükme takımını Base-Flat olarak ayarlar. Bu, manuel müdahale olmadan düz boyut referansının ve kesme çözümlerinin her zaman tutarlı ve geçerli kalmasını sağlar.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gelişmiş_base_flat_yönetimi">Gelişmiş base flat yönetimi</h3>
+<div class="paragraph">
+<p>TruSmartCAM, bükme veya katlama takım düzenlemelerini kaydederken <strong>Praxis&#8217;e kaydet</strong> iletişim kutusunda Base-Flat seçenekleri sağlar. Bu seçenekler yalnızca Tamam durumundaki takımlar için görünür ve düz boyut ile kesme çözümlerinin doğru kalmasını sağlar.</p>
+</div>
+<div class="sect3">
+<h4 id="_düz_temel_olarak_ayarla_ve_kesim_çözümünü_hesapla">Düz Temel olarak ayarla ve kesim çözümünü hesapla</h4>
+<div class="paragraph">
+<p>Bu seçenek, ilk kez bir takımı Base-Flat olarak işaretlemek ve karşılık gelen kesme çözümünü otomatik olarak oluşturmak için kullanılır.</p>
+</div>
+<div class="paragraph">
+<p>Görünür olduğu durumlar:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Takım şu anda Base-Flat olarak işaretlenmemiştir.</p>
+</li>
+<li>
+<p>Kullanıcı düzenleme için takımı çıkış yapmıştır ve değişiklikleri kaydediyor.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/setbase.png" alt="Set Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>Bu seçeneği kullanmak için, bükme veya katlama takımını çıkış yapın ve bükme parametreleri veya düz boyut gibi gerekli değişiklikleri yapın. Değişiklikleri kaydetmek için <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>S</kbd></span> tuşuna basın. <strong>Praxis&#8217;e kaydet</strong> iletişim kutusunda,
+<strong>Düz Temel olarak ayarla ve kesim çözümünü hesapla</strong> seçeneğini seçin ve
+<strong>Tamam</strong> seçeneğine tıklayın. TruSmartCAM, takımı Base-Flat olarak ayarlar ve güncellenmiş düz boyutu kullanarak kesme çözümünü oluşturur.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_düz_temeli_güncelle_ve_kesim_çözümünü_yeniden_hesapla">Düz Temeli güncelle ve kesim çözümünü yeniden hesapla</h4>
+<div class="paragraph">
+<p>Bu seçenek, takım zaten Base-Flat olarak işaretlenmişken ve düzenlenmişken, düz boyut ve kesme çözümlerinin yeniden oluşturulması gerektiğinde kullanılır.</p>
+</div>
+<div class="paragraph">
+<p>Görünür olduğu durumlar:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Takım zaten Base-Flat olarak işaretlenmiştir.</p>
+</li>
+<li>
+<p>Kullanıcı bunu çıkış yapmış, düzenlemiş ve değişiklikleri kaydediyor.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/updatebase.png" alt="Update Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>Mevcut Base-Flat takımını düzenlerken, bükme parametrelerini veya düz boyut geometrisini gerektiği gibi güncelleyin. <strong>Praxis&#8217;e kaydet</strong> iletişim kutusunda,
+<strong>Düz Temeli güncelle ve kesim çözümünü yeniden hesapla</strong> seçeneğini seçin.
+TruSmartCAM, Base-Flat takımını güncelleyecek ve en son değişiklikleri yansıtmak için ilgili tüm kesme çözümlerini yeniden oluşturacaktır.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Aynı anda yalnızca bir bükme takımı Base-Flat olarak ayarlanabilir.</p>
+</div>
+<div class="paragraph">
+<p>Base-Flat değiştirildiğinde, mevcut kesme çözümleri otomatik olarak yeniden işlenir.</p>
+</div>
+<div class="paragraph">
+<p>Bu özellik TruSmartCAM içinde hem bükme hem de katlama takımları için kullanılabilir.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_yeniden_donat">Yeniden Donat&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bu seçenek, parça için seçilen takımı yeniden işler.</p>
+</div>
+<div class="paragraph">
+<p>Takım panelinde gerekli takıma sağ tıklayın ve
+<strong>Yeniden Donat&#8230;&#8203;</strong> seçeneğine tıklayın</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingretool.png" alt="ToolingRetool" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Devam etmeden önce bir onay iletişim kutusu görüntülenir.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingconfirm.png" alt="ToolingConfirm" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Yeniden takımlama ile devam etmek için <strong>Evet</strong> seçeneğine veya işlemi iptal etmek için <strong>Hayır</strong> seçeneğine tıklayın.</p>
+</div>
+<div class="paragraph">
+<p>Yalnızca seçilen takım yeniden takımlanır. Parçayla ilişkili diğer takımlar etkilenmez. Seçilen takımla ilgili mevcut çıktılar kaldırılır ve yeniden takımlama işlemi sırasında yeniden oluşturulur.</p>
+</div>
+<div class="paragraph">
+<p>Takım verileri güncel değil, yanlış veya makine veya takım yapılandırmalarında değişiklik yapıldığında bu seçeneği kullanın.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hataları_yoksay">Hataları Yoksay</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Takımlı bir örnek bir uyarı gösteriyorsa ve yine de devam etmek istiyorsanız,
+<strong>Hataları Yoksay</strong> seçeneğine tıklayarak uyarıyı geçersiz kılabilirsiniz.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/ignore.png" alt="Ignore errors" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bu, takım sorunları olsa bile sistemin o örnek için çıktı dosyalarını dışa aktarmasına izin verir.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Hata Yok Say&#8217;yı yalnızca uyarının güvenle yok sayılabileceğinden emin olduğunuzda kullanın. Gerçek hataları geçersiz kılmak makine hasarına veya güvenlik risklerine yol açabilir.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_takımı_bastırmabastırmayı_kaldırma">Takımı bastırma/bastırmayı kaldırma</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Bir makine etkin olmadığında veya belirli bir parçanın belirli bir makine tarafından işlenmesini istemediğinizde, o parçayı o makinede yuvalamadan hariç tutmak için <strong>Donatımı Bastır</strong> kullanın.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/supress.png" alt="Supress Tooling" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bastırdıktan sonra, fareyi takımlı örneğin üzerine getirdiğinizde şu gibi bir mesaj görüntülenir: "Tooling suppressed by &lt;User name&gt; on &lt;Date Time&gt;".</p>
+</li>
+<li>
+<p>Takımı bastırmak, o makine ve parça için çıktı dosyasını kaldırır.</p>
+</li>
+<li>
+<p>Parçanın o makinedeki takım durumunu geri yüklemek için <strong>Donatımı Bastırmayı İptal Et</strong> kullanın.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unsupress.png" alt="Unsupress Tooling" width="495">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bastırma kaldırıldığında, ilgili çıktı dosyası tekrar oluşturulur.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_çıktıları_dışa_aktar">Çıktıları Dışa Aktar</a>
+  </li>
+  <li level="1">
+   <a href="#_check_tooling">Check Tooling</a>
+  </li>
+  <li level="1">
+   <a href="#_donatımı_kopyala">Donatımı Kopyala&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_düz_temel_olarak_ayarla">Düz Temel olarak Ayarla&#8230;&#8203;</a>
+  </li>
+  <li level="2">
+   <a href="#_otomatik_base_flat_seçimi">Otomatik base flat seçimi</a>
+  </li>
+  <li level="2">
+   <a href="#_gelişmiş_base_flat_yönetimi">Gelişmiş base flat yönetimi</a>
+  </li>
+  <li level="1">
+   <a href="#_yeniden_donat">Yeniden Donat&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_hataları_yoksay">Hataları Yoksay</a>
+  </li>
+  <li level="1">
+   <a href="#_takımı_bastırmabastırmayı_kaldırma">Takımı bastırma/bastırmayı kaldırma</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="toolingvalidation/foldtooling.html">Katlama takımı doğrulama</a></span>
+ <span class="next"><a href="../savingfilters.html">Filtreleri kaydetme</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

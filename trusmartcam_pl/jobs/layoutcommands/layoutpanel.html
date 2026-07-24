@@ -1,0 +1,751 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Panel układu</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Witamy w TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Instalacja</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Wymagania sprzętowe</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Obsługiwane formaty plików</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Wymagania wstępne</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Instalacja serwera</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Instalacja klienta</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Zmiana licencji</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfiguracja</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Dodaj/Usuń maszynę</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Konfiguracja oprzyrządowania</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Konfiguracja użytkowników</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Język</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiał</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Dodawanie nowego materiału i arkusza</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Eksport/Import materiału</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Zamiana materiału</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mapowanie materiału</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mapowanie stron CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mapowanie pól z CAD (klucze wyszukiwania)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Interfejs użytkownika</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Przepływ pracy</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Biblioteka</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Otwórz</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Importuj części</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Importuj zamówienia</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Import zadań</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Importuj zespoły</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Widok biblioteki</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Części</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Zespoły</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Status części</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Walidacja części</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Panel części</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Filtry części</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Status narzędzi</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Walidacja narzędzi</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Walidacja narzędzi do gięcia</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Walidacja narzędzi tnących</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Walidacja narzędzi do składania</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Panel narzędziowania</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Zapisywanie filtrów</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Zamówienia</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Widok zamówień</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Zadania</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../jobcreation.html">Tworzenie zadania</a></li>
+    <li><button class="tree blank"></button><a href="../jobview.html">Widok zadania</a></li>
+    <li><button class="tree blank"></button><a href="../jobpanel.html">Panel zadania</a></li>
+    <li><button class="tree blank"></button><a href="../jobautoplan.html">Automatyczne planowanie</a></li>
+    <li><button class="tree blank"></button><a href="../jobinteractplan.html">Interaktywne zagnieżdżanie</a></li>
+    <li><button class="tree blank"></button><a href="../repacking.html">Przepakowywanie</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Zarządzanie układem</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="nestview.html">Widok układu</a></li>
+      <li><button class="tree blank"></button><a class="active" href="layoutpanel.html">Panel układu</a></li>
+      <li><button class="tree blank"></button><a href="reportsender.html">Nadawca raportów</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../remnantmanagement/index.html">Zarządzanie resztkami</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../remnantmanagement/autoremnant.html">Automatyczne zarządzanie resztkami</a></li>
+      <li><button class="tree blank"></button><a href="../remnantmanagement/manualremnant.html">Ręczne zarządzanie resztkami</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../twinlinenesting.html">Zagnieżdżanie dwuliniowe</a></li>
+    <li><button class="tree blank"></button><a href="../outdate.html">Przestarzałe</a></li>
+    <li><button class="tree blank"></button><a href="../jobfilters.html">Filtry zadań</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Fabryka</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Trasy</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Arkusze</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Użytkownicy</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edycja</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Klienci</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Ustawienia</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Powiadomienia</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Raporty</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Rozszerzenia CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Instalacja</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Zapisywanie części</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Zapisywanie złożenia</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Sprawdzanie wykonalności</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Ustawienia fabryki</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Różne ulepszenia</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Zadania</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Zarządzanie układem</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="layoutpanel.html">Panel układu</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Panel układu</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ta sekcja wyjaśnia akcje związane z układem, takie jak
+<strong>Wyślij do maszyny…</strong>,
+<strong>Przywołaj z maszyny…</strong>,
+<strong>Dane wyjściowe eksportu</strong>,
+<strong>Oznacz jako ukończone…</strong>, <strong>Dodaj detale…</strong>,
+<strong>Adaptuj/Zawęź</strong>,
+<strong>Podziel układy…</strong> i inne opcje używane do
+zarządzania instancjami układu.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/layout.png" alt="Layout panel" width="181">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Otwórz w trybie tylko do odczytu do przeglądania</strong><br>
+Otwiera wybrany układ w trybie tylko do odczytu.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Włącza edycję wybranego układu.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Usuń</strong><br>
+Usuwa wybrany układ.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/openreport.png" alt="Report" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Zobacz raport</strong><br>
+Otwiera standardowy raport układu i raport specyficzny dla etykiety dla
+wybranego układu.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sendui.png" alt="Send" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Wyślij do maszyny…</strong><br>
+Wysyła wybrany układ na maszynę i eksportuje pliki wyjściowe
+(fxlyt, NC, raport, csv) do lokalizacji wyjściowej zadania.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/addui.png" alt="Add" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Dodaj detale…</strong><br>
+Dodaje więcej części do słabo zapakowanego układu za pomocą kreatora przepakowywania układu.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/adaptui.png" alt="Adapt" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Adaptuj/Zawęź</strong><br>
+Ponownie zagnieżdża wybrany układ, aby skompresować części i zwolnić użyteczną przestrzeń.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/changeui.png" alt="Change" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Zmień tabelę technologiczną lasera…</strong><br>
+Zmienia arkusz przypisany do wybranego układu.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/splitui.png" alt="Split"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Podziel układy…</strong><br>
+Dzieli wybrany układ na dwa lub więcej oddzielnych układów.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/renameui.png" alt="RenameUi" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rename layout&#8230;&#8203;</strong><br>
+Zmienia nazwę wybranego układu.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Zadanie</strong> / <strong>Poprz.</strong> / <strong>Dalej</strong> / <strong>Detale</strong><br>
+Nawiguje do nadrzędnego zadania, do poprzedniego lub następnego układu w ramach
+wybranego zadania lub w dół do części w układzie.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sort.png" alt="Filters" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sortowanie i filtrowanie</strong><br>
+Użyj tych filtrów, aby wyświetlić inne układy, które dzielą ten sam atrybut co
+wybrany układ: Same Machine, Same Material, Same LTT, Same Priority,
+Same State, Same Sheet, Same Part, Same Remnant State lub Same Rolling
+direction.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="send-to-machine">Wyślij do maszyny…</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Gdy zagnieżdżenie jest gotowe (wypełnione lub pilnie potrzebne), możesz wysłać je na
+maszynę.</p>
+</li>
+<li>
+<p>Kliknij prawym przyciskiem myszy na zagnieżdżenie i wybierz <strong>Wyślij do maszyny…</strong>.</p>
+</li>
+<li>
+<p>Automatycznie tworzony jest folder o nazwie zagnieżdżenia.</p>
+</li>
+<li>
+<p>Pliki wyjściowe (fxlyt, NC, raport, csv) są eksportowane do
+lokalizacji wyjściowej ZADANIA.</p>
+</li>
+<li>
+<p>Zagnieżdżenia wysłane na maszynę są pokazywane z niebieskim ptaszkiem.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/sendtomachine.png" alt="Send to machines" width="1180">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Po zwolnieniu te zagnieżdżenia nie są już ponownie próbowane do przepakowania.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_przywołaj_z_maszyny">Przywołaj z maszyny…</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Jeśli wymagana jest walidacja wyjścia lub aktualizacja (na przykład dodanie więcej części):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Kliknij prawym przyciskiem myszy na wyeksportowany układ.</p>
+</li>
+<li>
+<p>Wybierz <strong>Przywołaj z maszyny…</strong>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Pliki wyjściowe i folder (fxlyt, NC, raport, csv) są usuwane.</p>
+</li>
+<li>
+<p>Zagnieżdżenie staje się ponownie edytowalne.</p>
+</li>
+<li>
+<p>Możesz wprowadzić zmiany i ponownie wysłać je na maszynę.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/recallfrommachine.png" alt="Recall from machines" width="1153">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dane_wyjściowe_eksportu">Dane wyjściowe eksportu</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Kliknij prawym przyciskiem myszy na układ (zagnieżdżenie) wysłany na maszynę i kliknij
+<strong>Dane wyjściowe eksportu</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput1.png" alt="Export outputs" width="447">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Opcja Export Outputs eksportuje pliki NC, Raportu i Układu do
+odpowiednich folderów wyjściowych maszyny.</p>
+</li>
+<li>
+<p>Ta opcja ponownie generuje plik NC z bieżącymi ustawieniami jednostki dla
+układu.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Export Outputs nie jest dostępny dla układów, które są zakończone i
+układów, które są w kolejce do przepakowania.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mark-complete">Oznacz jako zakończone</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Po przetworzeniu zagnieżdżenia na maszynie kliknij prawym przyciskiem myszy na zagnieżdżenie i
+wybierz <strong>Oznacz jako ukończone…</strong>.</p>
+</li>
+<li>
+<p>Możesz wybrać wiele zagnieżdżeń i oznaczyć je jako zakończone jednocześnie.</p>
+</li>
+<li>
+<p>Gdy zagnieżdżenie zostaje oznaczone jako zakończone:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Zostaje wyszarzane, przenoszone na koniec listy i pokazywane z zielonym ptaszkiem.</p>
+</li>
+<li>
+<p>Układ jest usuwany z listy aktywnych układów.</p>
+</li>
+<li>
+<p>Statusy części i zadań są aktualizowane, a przetworzone ilości przenoszone do
+stanu zakończonego.</p>
+</li>
+<li>
+<p>Pliki wyjściowe dla tego układu są usuwane z lokalizacji wyjściowej maszyny,
+aby zapobiec podwójnemu użyciu.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/markcomplete1.png" alt="Mark complete" width="1101">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="add-parts">Dodaj detale…</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart1.png" alt="Add parts" width="997">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Użyj tej opcji, aby dodać więcej części do stosunkowo słabo zapakowanego układu. Podobnie jak
+interaktywne zagnieżdżanie, jest to opcja oparta na kreatorze i może być używana
+na jednym lub wielu układach jednocześnie.</p>
+</li>
+<li>
+<p>TruSmartCAM otwie ra kreatora przepakowywania układu w głównym obszarze roboczym,
+gdy ta opcja jest używana. Przytrzymaj klawisz <kbd>Ctrl</kbd> i wybierz jedną lub więcej
+części, które mają zostać zapakowane na układ(ach), i naciśnij <strong>Dalej</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart2.png" alt="Part selection" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>Wybrane części są wyświetlane w następnym kroku z edytowalną
+kolumną ilości. W razie potrzeby zaktualizuj ilości części w polu
+<strong>Update Qty</strong>. Kliknij <strong>Dalej</strong>, aby kontynuować zagnieżdżanie. Zauważ, że
+ilości mogą być tylko zwiększane, a nie zmniejszane.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart3.png" alt="Update quantity" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>Wszystkie układy są zagnieżdżane oddzielnie, a wyniki zagnieżdżania są wyświetlane
+z nowo zapakowanymi częściami umieszczonymi na nich. Wybranie układu pokazuje wszystkie
+istniejące części układu. Wynik jest automatycznie odrzucany, jeśli żadna nowa część nie zostaje
+umieszczona podczas przepakowywania. Układ z wieloma kopiami może skutkować
+różnymi wzorami po przepakowaniu.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart4.png" alt="Repack result" width="2200">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="adapt-compact">Adaptuj/Zawęź</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>To polecenie oparte na kreatorze może być użyte do dostosowania układu z jednej
+maszyny na inną, gdy oryginalna maszyna jest niesprawna lub gdy obciążenie maszyny
+musi być zrównoważone.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt1.png" alt="Adapt compact" width="737">
+</div>
+</div>
+</li>
+<li>
+<p>Może być użyte, gdy zaplanowany arkusz nie jest na stanie, a układ
+musi zostać ponownie zaplanowany na inny dostępny arkusz.</p>
+</li>
+<li>
+<p>Możesz połączyć układy zapakowane na mniejszych arkuszach na większe arkusze, aby materiał
+bardziej efektywnie wykorzystać.</p>
+</li>
+<li>
+<p>Możesz podzielić układy zapakowane na większych arkuszach na mniejsze arkusze, jeśli duże
+zapasy arkuszy nie są dostępne.</p>
+</li>
+<li>
+<p>Możesz poprawić efektywność pakowania wielu układów (nawet z
+różnych maszyn) poprzez połączenie ich.</p>
+</li>
+<li>
+<p>Aby z niego skorzystać, wybierz jeden lub więcej układów i kliknij
+<strong>Adaptuj/Zawęź</strong>, aby otworzyć kreatora w obszarze roboczym.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt2.png" alt="Layouts window" width="1902">
+</div>
+</div>
+</li>
+<li>
+<p>Lewe okienko pokazuje wszystkie wybrane układy, a okienko Części pokazuje części układu.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt3.png" alt="Layouts window" width="1910">
+</div>
+</div>
+</li>
+<li>
+<p>Wybierz maszynę docelową i materiał arkusza, a następnie kliknij
+<strong>Dalej</strong>, aby wykonać ponowne zagnieżdżenie.</p>
+</li>
+<li>
+<p>Nowe wyniki zagnieżdżania są pokazane w panelu wyników.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt4.png" alt="Layouts window" width="1901">
+</div>
+</div>
+</li>
+<li>
+<p>Kliknij <strong>Dalej</strong>, aby zapisać dostosowany lub skompresowany układ.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt5.png" alt="Layouts window" width="1902">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dzielenie_układu">Dzielenie układu</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Opcja <strong>Podziel układy…</strong> umożliwia
+podzielenie istniejącego układu na wiele układów poprzez zmianę ilości,
+bez konieczności ponownego narzędziowania lub zagnieżdżania.</p>
+</div>
+<div class="paragraph">
+<p>Ta funkcja jest szczególnie przydatna w
+następujących scenariuszach:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Gdy musisz natychmiast wyprodukować część całkowitej ilości, podczas gdy
+pozostała ilość jest planowana na późniejszą produkcję.</p>
+</li>
+<li>
+<p>Gdy wymagania produkcyjne muszą być podzielone na wiele zmian lub
+dni, aby zoptymalizować przepływ pracy i wykorzystanie zasobów.</p>
+</li>
+<li>
+<p>Gdy konkretna maszyna jest tymczasowo niedostępna lub zajęta, a musisz
+dostosować układ, aby spełnić bieżące ograniczenia produkcyjne.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Aby podzielić układ, wykonaj następujące kroki:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>W widoku Układy wybierz wymagany układ.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/splitlayout.png" alt="Split layout" width="264">
+</div>
+</div>
+</li>
+<li>
+<p>Kliknij <strong>Podziel układy…</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/layoutpanel.png" alt="Layout panel" width="155">
+</div>
+</div>
+</li>
+<li>
+<p>Wprowadź wymaganą wartość w polu <strong>Nowe kopie</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/newcopies.png" alt="New copies" width="389">
+</div>
+</div>
+</li>
+<li>
+<p>Kliknij <strong>OK</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/twolayout.png" alt="Two layouts" width="547">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Wybrany układ został teraz podzielony na dwa układy z dostosowanymi ilościami.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#send-to-machine">Wyślij do maszyny…</a>
+  </li>
+  <li level="1">
+   <a href="#_przywołaj_z_maszyny">Przywołaj z maszyny…</a>
+  </li>
+  <li level="1">
+   <a href="#_dane_wyjściowe_eksportu">Dane wyjściowe eksportu</a>
+  </li>
+  <li level="1">
+   <a href="#mark-complete">Oznacz jako zakończone</a>
+  </li>
+  <li level="1">
+   <a href="#add-parts">Dodaj detale…</a>
+  </li>
+  <li level="1">
+   <a href="#adapt-compact">Adaptuj/Zawęź</a>
+  </li>
+  <li level="1">
+   <a href="#_dzielenie_układu">Dzielenie układu</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="nestview.html">Widok układu</a></span>
+ <span class="next"><a href="reportsender.html">Nadawca raportów</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

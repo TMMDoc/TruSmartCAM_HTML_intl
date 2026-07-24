@@ -1,0 +1,798 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Panel narzędziowania</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Witamy w TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Instalacja</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Wymagania sprzętowe</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Obsługiwane formaty plików</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Wymagania wstępne</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Instalacja serwera</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Instalacja klienta</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Zmiana licencji</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfiguracja</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Dodaj/Usuń maszynę</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Konfiguracja oprzyrządowania</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Konfiguracja użytkowników</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Język</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiał</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Dodawanie nowego materiału i arkusza</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Eksport/Import materiału</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Zamiana materiału</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mapowanie materiału</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mapowanie stron CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mapowanie pól z CAD (klucze wyszukiwania)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Interfejs użytkownika</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Przepływ pracy</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Biblioteka</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Otwórz</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Importuj części</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Importuj zamówienia</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Import zadań</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Importuj zespoły</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Widok biblioteki</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Części</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Zespoły</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Status części</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Walidacja części</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Panel części</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Filtry części</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Status narzędzi</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="toolingvalidation/index.html">Walidacja narzędzi</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="toolingvalidation/bendtooling.html">Walidacja narzędzi do gięcia</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/cuttooling.html">Walidacja narzędzi tnących</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/foldtooling.html">Walidacja narzędzi do składania</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a class="active" href="toolingpanel.html">Panel narzędziowania</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Zapisywanie filtrów</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Zamówienia</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Widok zamówień</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Zadania</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Tworzenie zadania</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Widok zadania</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Panel zadania</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatyczne planowanie</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktywne zagnieżdżanie</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Przepakowywanie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Zarządzanie układem</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Widok układu</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Panel układu</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Nadawca raportów</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Zarządzanie resztkami</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatyczne zarządzanie resztkami</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Ręczne zarządzanie resztkami</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Zagnieżdżanie dwuliniowe</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Przestarzałe</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtry zadań</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Fabryka</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Trasy</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Arkusze</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Użytkownicy</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edycja</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Klienci</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Ustawienia</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Powiadomienia</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Raporty</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Rozszerzenia CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Instalacja</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Zapisywanie części</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Zapisywanie złożenia</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Sprawdzanie wykonalności</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Ustawienia fabryki</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Różne ulepszenia</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Biblioteka</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Status narzędzi</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="toolingpanel.html">Panel narzędziowania</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Panel narzędziowania</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ta sekcja wyjaśnia działania związane z narzędziowaniem, takie jak
+<strong>Dane wyjściowe eksportu</strong>,
+<strong>Sprawdź narzędziowanie</strong>, <strong>Ukryj zbrojenie</strong>,
+<strong>Ustaw jako bazę płaską…</strong>, <strong>Kopiuj zbrojenie…</strong>
+i inne opcje używane do zarządzania instancjami narzędziowania.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/toolingpanel.png" alt="Tooling panel" width="150">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Otwórz w trybie tylko do odczytu do przeglądania</strong><br>
+Otwiera wybrane narzędziowanie w trybie tylko do odczytu.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sprawdź dokument w celu edycji</strong><br>
+Umożliwia edycję wybranego narzędziowania.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Dane wyjściowe eksportu</strong><br>
+Eksportuje wybrane wyniki narzędziowania do skonfigurowanego miejsca docelowego.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/checkui.png" alt="Check Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sprawdź narzędziowanie</strong><br>
+Waliduje istniejące narzędziowanie bez wprowadzania zmian i aktualizuje
+jego status, jeśli walidacja się nie powiedzie.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/copyui.png" alt="Copy Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kopiuj zbrojenie…</strong><br>
+Kopiuje dziurkarkę, sekwencję i ustawienia tylnego ogranicznika z wybranego
+narzędziowania referencyjnego i stosuje je do innych rozwiązań, gdzie to możliwe.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/baseui.png" alt="Set as Base-Flat" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ustaw jako bazę płaską…</strong><br>
+Oznacza wybrane narzędziowanie gięcia lub składania jako referencyjny rozmiar płaski do
+generowania rozwiązań cięcia.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/retoolui.png" alt="Re-tool" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ponowne narzędziowanie&#8230;&#8203;</strong><br>
+Przetwarza ponownie wybrane narzędziowanie dla części bez wpływu na inne
+narzędziowania.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/supressui.png" alt="Suppress Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ukryj zbrojenie</strong><br>
+Ukrywa wybrane narzędziowanie, aby było wykluczone z dalszego
+przetwarzania i generowania wyników.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prevui.png" alt="Prev Next" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Poprz.</strong> / <strong>Dalej</strong> / <strong>Detal</strong><br>
+Przechodzi do poprzedniego lub następnego narzędziowania lub z powrotem do części nadrzędnej.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sortui.png" alt="Similar Toolings" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sortowanie i filtrowanie</strong><br>
+Wyświetla inne narzędziowania, które mają podobne cechy do
+wybranego narzędziowania dla szybkiego odniesienia.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dane_wyjściowe_eksportu">Dane wyjściowe eksportu</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ta opcja eksportuje wyniki części do miejsca docelowego skonfigurowanego w
+<strong>Ustawienia fabryczne</strong>. (Zobacz
+<a href="../../factory/settings/bend.html">Ustawienia gięcia</a> i
+<a href="../../factory/settings/cut.html">Ustawienia cięcia</a>)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingoutput.png" alt="Tooling Output" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Eksportowane są tylko narzędziowania związane z wybraną operacją narzędziowania,
+a nie cała część.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Eksportowane pliki zależą od typu operacji. Dla operacji gięcia i
+składania generowane są pliki NC i raporty. Dla operacji cięcia i dziurkowania
+eksportowane są tylko pliki części.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sprawdź_narzędziowanie">Sprawdź narzędziowanie</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Jeśli nastąpiła zmiana w ustawieniach CAM lub narzędzie gięcia zostało utracone,
+nie musisz ponownie obrabiać narzędziowo części.</p>
+</li>
+<li>
+<p>Zamiast tego użyj opcji Sprawdź narzędziowanie, aby zwalidować istniejące
+narzędziowanie bez wprowadzania jakichkolwiek zmian.</p>
+</li>
+<li>
+<p>Jeśli walidacja się nie powiedzie, status narzędziowania tej instancji zostaje
+zaktualizowany, a powiązane pliki wyjściowe są usuwane.</p>
+</li>
+<li>
+<p>Sprawdź narzędziowanie wykrywa również części, w których błędy zostały wcześniej
+ręcznie nadpisane za pomocą <strong>Ignoruj błędy</strong>, i aktualizuje
+ich status na błąd, jeśli to konieczne.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/checktooling.png" alt="Check Tooling" width="456">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kopiuj_zbrojenie">Kopiuj zbrojenie…</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kopiowanie narzędziowania pozwala szybko zastosować narzędziowanie gięcia z jednego
+rozwiązania do innych, oszczędzając czas i wysiłek.</p>
+</div>
+<div class="paragraph">
+<p>Kopiuje to dziurkarkę, sekwencję i ustawienia tylnego ogranicznika z wybranego
+narzędziowania referencyjnego (rozwiązania) i próbuje zastosować te same ustawienia
+do wszystkich innych rozwiązań.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Jeśli skopiowane ustawienia są wykonalne dla maszyny docelowej, są zapisywane i używane.</p>
+</li>
+<li>
+<p>Jeśli ustawienia nie są wykonalne, oryginalne narzędziowanie dla tej maszyny pozostaje
+niezmienione.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Na przykład możesz mieć różne narzędziowania dla różnych maszyn:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tutaj maszyna 5230SX 6A używa dziurkarki Gooseneck, maszyna 5085X 6A B23 używa
+dziurkarki Pointed.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check3.png" alt="Before tooling" width="724">
+</div>
+</div>
+<div class="paragraph">
+<p>Gdy użyjesz <strong>Kopiuj zbrojenie…</strong> na maszynie 5230SX 6A,
+próbuje ona skopiować ustawienie Gooseneck do wszystkich innych maszyn.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check4.png" alt="Copy tooling" width="664">
+</div>
+</div>
+<div class="paragraph">
+<p>Te same ustawienia dziurkarki, sekwencji i tylnego ogranicznika są stosowane tam,
+gdzie to możliwe. Jeśli skopiowane ustawienie nie może być użyte, oryginalne
+narzędziowanie pozostaje niezmienione.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/copytooling3.png" alt="After tooling" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>Po zastosowaniu kopiowania narzędziowania, ustawienie Gooseneck zostało pomyślnie
+zastosowane do wszystkich innych maszyn, gdzie jest to wykonalne.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ustaw_jako_bazę_płaską">Ustaw jako bazę płaską…</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Funkcja <strong>Ustaw jako bazę płaską…</strong> określa, które narzędziowanie
+gięcia lub składania jest używane jako referencyjny rozmiar płaski do generowania
+rozwiązań cięcia. Gdy narzędziowanie jest oznaczone jako Base-Flat, TruSmartCAM
+aktualizuje rozmiar płaski części na podstawie tej maszyny i regeneruje rozwiązania
+cięcia odpowiednio. Narzędziowania Base-Flat są wyświetlane z niebieską ramką w UI.</p>
+</div>
+<div class="paragraph">
+<p>Różne maszyny do gięcia mogą generować niewielkie różnice w rozmiarze płaskim dla
+tej samej części. Gdy ustawisz narzędziowanie jako Base-Flat, TruSmartCAM używa
+rozmiaru płaskiego tej maszyny jako głównego odniesienia i automatycznie przelicza
+rozwiązania cięcia.</p>
+</div>
+<div class="paragraph">
+<p>Tutaj widzimy różne rozmiary płaskie dla tej samej części na różnych
+maszynach:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat1.png" alt="Base flat1" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>W tym przykładzie narzędziowanie <strong>5130X 6A B23</strong> jest ustawione jako Base-Flat, a
+zaktualizowany rozmiar płaski jest zastosowany we właściwościach części:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat2.png" alt="Base flat2" width="663">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_automatyczny_wybór_base_flat">Automatyczny wybór base flat</h3>
+<div class="paragraph">
+<p>Gdy ustawienie fabryki
+<strong>Zastosuj korektę płaską podczas cięcia</strong> jest włączone:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autobase.png" alt="Auto Base" width="806">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM automatycznie ustawia narzędziowanie gięcia (które zawiera tabelę
+maksymalnej długości gięcia) jako Base-Flat podczas importowania części.</p>
+</li>
+<li>
+<p>Jeśli wybrane narzędziowanie gięcia napotka błąd lub nie jest wykonalne,
+TruSmartCAM inteligentnie przełącza i ustawia inne prawidłowe narzędziowanie gięcia
+jako Base-Flat. To zapewnia, że odniesienie do rozmiaru płaskiego i rozwiązania
+cięcia zawsze pozostają spójne i prawidłowe bez ręcznej interwencji.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rozszerzone_zarządzanie_base_flat">Rozszerzone zarządzanie base flat</h3>
+<div class="paragraph">
+<p>TruSmartCAM zapewnia opcje Base-Flat w oknie dialogowym <strong>Zapisz w Praxis</strong>
+podczas zapisywania edycji narzędziowania gięcia lub składania. Te opcje pojawiają się
+tylko dla narzędziowań w stanie OK i zapewniają, że rozmiar płaski i rozwiązania cięcia
+pozostają dokładne.</p>
+</div>
+<div class="sect3">
+<h4 id="_ustaw_jako_bazę_płaską_i_oblicz_rozwiązanie_cięcia">Ustaw jako bazę płaską i oblicz rozwiązanie cięcia</h4>
+<div class="paragraph">
+<p>Ta opcja służy do oznaczenia narzędziowania jako Base-Flat po raz pierwszy i
+automatycznego wygenerowania odpowiedniego rozwiązania cięcia.</p>
+</div>
+<div class="paragraph">
+<p>Pojawia się, gdy:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Narzędziowanie nie jest obecnie oznaczone jako Base-Flat.</p>
+</li>
+<li>
+<p>Użytkownik sprawdził narzędziowanie do edycji i zapisuje zmiany.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/setbase.png" alt="Set Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>Aby użyć tej opcji, sprawdź narzędziowanie gięcia lub składania i wprowadź wymagane
+modyfikacje, takie jak zmiany w parametrach gięcia lub rozmiarze płaskim. Naciśnij
+<span class="keyseq"><kbd>Ctrl</kbd>+<kbd>S</kbd></span>, aby zapisać zmiany. W oknie dialogowym <strong>Zapisz w Praxis</strong>
+wybierz
+<strong>Ustaw jako bazę płaską i oblicz rozwiązanie cięcia</strong> i
+kliknij
+<strong>OK</strong>. TruSmartCAM ustawi narzędziowanie jako Base-Flat i wygeneruje
+rozwiązanie cięcia przy użyciu zaktualizowanego rozmiaru płaskiego.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_zaktualizuj_bazę_płaską_i_ponownie_oblicz_rozwiązanie_cięcia">Zaktualizuj bazę płaską i ponownie oblicz rozwiązanie cięcia</h4>
+<div class="paragraph">
+<p>Ta opcja jest używana, gdy narzędziowanie jest już oznaczone jako Base-Flat i zostało
+edytowane, wymagając ponownego wygenerowania rozmiaru płaskiego i rozwiązań cięcia.</p>
+</div>
+<div class="paragraph">
+<p>Pojawia się, gdy:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Narzędziowanie jest już oznaczone jako Base-Flat.</p>
+</li>
+<li>
+<p>Użytkownik sprawdził je, edytował i zapisuje zmiany.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/updatebase.png" alt="Update Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>Podczas edycji istniejącego narzędziowania Base-Flat, zaktualizuj parametry gięcia lub
+geometrię rozmiaru płaskiego według potrzeb. W oknie dialogowym <strong>Zapisz w Praxis</strong>
+wybierz
+<strong>Zaktualizuj bazę płaską i ponownie oblicz rozwiązanie cięcia</strong>.
+TruSmartCAM zaktualizuje następnie narzędziowanie Base-Flat i zregeneruje wszystkie powiązane
+rozwiązania cięcia, aby odzwierciedlić najnowsze zmiany.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Tylko jedno narzędziowanie gięcia może być ustawione jako Base-Flat na raz.</p>
+</div>
+<div class="paragraph">
+<p>Gdy Base-Flat jest zmieniany, istniejące rozwiązania cięcia są automatycznie
+przetwarzane ponownie.</p>
+</div>
+<div class="paragraph">
+<p>Ta funkcja jest dostępna zarówno dla narzędziowań gięcia, jak i składania w TruSmartCAM.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ponownie_użyj_narzędzia">Ponownie użyj narzędzia…</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ta opcja przetwarza ponownie wybrane narzędziowanie dla części.</p>
+</div>
+<div class="paragraph">
+<p>Kliknij prawym przyciskiem myszy wymagane narzędziowanie w panelu narzędziowania i kliknij
+<strong>Ponownie użyj narzędzia…</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingretool.png" alt="ToolingRetool" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Przed kontynuacją wyświetlane jest okno dialogowe potwierdzenia.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingconfirm.png" alt="ToolingConfirm" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Kliknij <strong>Tak</strong>, aby kontynuować ponowne narzędziowanie, lub <strong>Nie</strong>, aby
+anulować operację.</p>
+</div>
+<div class="paragraph">
+<p>Tylko wybrane narzędziowanie jest przetwarzane ponownie. Inne narzędziowania związane z
+częścią nie są dotknięte. Istniejące wyniki związane z wybranym
+narzędziowaniem są usuwane i regenerowane podczas procesu ponownego narzędziowania.</p>
+</div>
+<div class="paragraph">
+<p>Użyj tej opcji, gdy dane narzędziowania są nieaktualne, nieprawidłowe lub gdy
+wprowadzane są zmiany w konfiguracjach maszyny lub narzędziowania.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ignoruj_błędy">Ignoruj błędy</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Jeśli instancja obrobiona narzędziowo wyświetla ostrzeżenie, a nadal chcesz kontynuować,
+możesz nadpisać ostrzeżenie, klikając
+<strong>Ignoruj błędy</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/ignore.png" alt="Ignore errors" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pozwoli to systemowi na eksport plików wyjściowych dla tej
+instancji, nawet jeśli wystąpiły problemy z narzędziowaniem.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Gebruik <strong>Ignore Errors</strong> alleen wanneer u zeker weet dat de waarschuwing veilig kan worden
+genegeerd. Het overschrijven van daadwerkelijke fouten kan leiden tot machineschade of veiligheidsrisico&#8217;s.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ukryjodkryj_narzędziowanie">Ukryj/Odkryj narzędziowanie</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Gdy maszyna jest nieaktywna lub nie chcesz, aby określona część była
+przetwarzana przez
+określoną maszynę, użyj <strong>Ukryj zbrojenie</strong>, aby wykluczyć
+tę część z zagnieżdżania na tej maszynie.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/supress.png" alt="Supress Tooling" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Po ukryciu, najechanie myszą na instancję obrobioną narzędziowo pokazuje
+komunikat typu: "Narzędziowanie ukryte przez &lt;Nazwa użytkownika&gt; dnia &lt;Data Godzina&gt;".</p>
+</li>
+<li>
+<p>Ukrycie narzędziowania usuwa plik wyjściowy dla tej maszyny i części.</p>
+</li>
+<li>
+<p>Użyj <strong>Odkryj zbrojenie</strong>, aby przywrócić status
+narzędziowania dla części na tej maszynie.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unsupress.png" alt="Unsupress Tooling" width="495">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Gdy zostanie odkryte, odpowiedni plik wyjściowy jest generowany ponownie.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_dane_wyjściowe_eksportu">Dane wyjściowe eksportu</a>
+  </li>
+  <li level="1">
+   <a href="#_sprawdź_narzędziowanie">Sprawdź narzędziowanie</a>
+  </li>
+  <li level="1">
+   <a href="#_kopiuj_zbrojenie">Kopiuj zbrojenie…</a>
+  </li>
+  <li level="1">
+   <a href="#_ustaw_jako_bazę_płaską">Ustaw jako bazę płaską…</a>
+  </li>
+  <li level="2">
+   <a href="#_automatyczny_wybór_base_flat">Automatyczny wybór base flat</a>
+  </li>
+  <li level="2">
+   <a href="#_rozszerzone_zarządzanie_base_flat">Rozszerzone zarządzanie base flat</a>
+  </li>
+  <li level="1">
+   <a href="#_ponownie_użyj_narzędzia">Ponownie użyj narzędzia…</a>
+  </li>
+  <li level="1">
+   <a href="#_ignoruj_błędy">Ignoruj błędy</a>
+  </li>
+  <li level="1">
+   <a href="#_ukryjodkryj_narzędziowanie">Ukryj/Odkryj narzędziowanie</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="toolingvalidation/foldtooling.html">Walidacja narzędzi do składania</a></span>
+ <span class="next"><a href="../savingfilters.html">Zapisywanie filtrów</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

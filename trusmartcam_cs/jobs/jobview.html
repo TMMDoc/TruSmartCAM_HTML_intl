@@ -1,0 +1,678 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Zobrazení zakázek</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Vítejte v TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Instalace</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Hardwarové požadavky</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Podporované formáty souborů</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Předpoklady</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Instalace serveru</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Instalace klienta</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Změna licence</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Konfigurace</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Přidat/Odebrat stroj</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Nastavení nářadí</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Konfigurace uživatelů</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Jazyk</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Materiál</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Přidání nového materiálu a plechu</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Export/Import materiálu</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Nahrazení materiálu</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Mapování materiálu</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Mapování CAM stránek</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Mapování polí z CAD (vyhledávací klíče)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">Uživatelské rozhraní</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Pracovní postup</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Knihovna</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Otevřít</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Import dílů</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Import objednávek</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Import zakázek</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Import sestav</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Zobrazení knihovny</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Díly</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Sestava</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Stav dílu</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Validace dílu</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Panel dílů</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Filtry dílů</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Stav nástrojového vybavení</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Validace nástrojového vybavení</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Validace ohýbacího nástrojového vybavení</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Validace řezacího nástrojového vybavení</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Validace skládacího nástrojového vybavení</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Panel nástrojového vybavení</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Ukládání filtrů</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Objednávky</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Zobrazení objednávek</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Zakázky</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">Vytvoření zakázky</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobview.html">Zobrazení zakázek</a></li>
+    <li><button class="tree blank"></button><a href="jobpanel.html">Panel zakázek</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">Automatické plánování</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">Interaktivní hnízdění</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">Přebalení</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">Správa hnízdění</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">Zobrazení uspořádání</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">Panel uspořádání</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">Odesílatel zpráv</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">Správa zbytků</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">Automatická správa zbytků</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">Ruční správa zbytků</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">Hnízdění Twinline</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">Zastaralé</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">Filtry zakázek</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Továrna</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Trasy</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Plechy</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Uživatelé</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Upravit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Zákazníci</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Nastavení</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Prostředí</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Ohýbání</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Řezání</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Oznámení</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Sledování</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Zakázka</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reporty</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">Rozšíření CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Instalace</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Uložení dílů</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Uložení sestavy</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Kontrola proveditelnosti</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Nastavení továrny</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Různá vylepšení</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Zakázky</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobview.html">Zobrazení zakázek</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Zobrazení zakázek</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tato část vysvětluje různá zobrazení dostupná v zobrazení zakázek, včetně
+zakázek, dílů, hnízdění, úprav, simulace a exportu.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_zakázky">Zakázky</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Výběrem možnosti <strong>úlohy</strong> se zobrazí seznam všech zakázek aktuálně
+nastavených v softwaru. Můžete dvakrát kliknout na zakázku pro zobrazení jejích
+podrobností nebo kliknout pravým tlačítkem pro přístup k dalším možnostem.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Zakázky jsou zobrazeny v dlaždicovém zobrazení, kde je každá zakázka zobrazena
+se základními vlastnostmi jako ID zakázky, Reference zakázky, Jméno zákazníka,
+Celkový počet dílů, Termín splnění, Stavový řádek zakázky atd.</p>
+</li>
+<li>
+<p>Každá dlaždice zakázky také zobrazuje obrázky dílů v formátu skládaných karet.
+Všemi díly v zakázce můžete procházet pomocí kolečka myši.<br></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobview1.png" alt="Job Page" width="1489">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_podrobnosti_zakázky">Podrobnosti zakázky</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Dvojité kliknutí na dlaždici nebo stisknutí klávesy <kbd>Enter</kbd> po výběru
+dlaždice přepne zobrazení do režimu podrobností.</p>
+</li>
+<li>
+<p>Stránka podrobností zobrazuje seznam dílů spolu s uhnízdněnými listy
+(uspořádání), pokud existují.</p>
+</li>
+<li>
+<p>Pro přepínání mezi zakázkami na stránce podrobností použijte šipky
+Nahoru/Dolů.</p>
+</li>
+<li>
+<p>Posunutí kolečka myši přes zásobník dílů zvýrazní díl jak v seznamu dílů, tak
+v uspořádáních.</p>
+</li>
+<li>
+<p>Výběr uspořádání zvýrazní uspořádání a všechny díly na něm uhnízdněné v
+seznamu dílů. Zvýraznění se automaticky vypne po minutě.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobview2.png" alt="Job Details" width="1908">
+</div>
+</div>
+</li>
+<li>
+<p><strong>Souhrn optimálního rozmístění</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Díly</strong>: Zobrazuje celkový počet položek objednávky a celkové
+množství v zakázce.</p>
+</li>
+<li>
+<p><strong>plechy</strong>: Zobrazuje celkový počet uhnízdněných listů spolu s
+celkovým množstvím listů.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Pracovní kroky</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Ohýbání</strong>: Zobrazuje přiřazený stroj a jeho objednané množství
+ke zpracování.</p>
+</li>
+<li>
+<p><strong>Řezání</strong>: Zobrazuje přiřazený stroj a jeho objednané množství
+ke zpracování.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_priorita">Priorita</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Nejprve klikněte na ikonu <strong>Jobs</strong> na levé straně obrazovky, vyberte zakázku,
+kterou chcete upravit, a poté klikněte na <strong>edit</strong> na pravé straně obrazovky
+(ujistěte se, že je vybrána možnost Jobs).</p>
+</li>
+<li>
+<p>Případně klikněte pravým tlačítkem na vybranou zakázku a klikněte na ikonu
+<strong>Odhlásit dokument pro editaci</strong>.</p>
+</li>
+<li>
+<p>Když kliknete na <strong>edit</strong>, zobrazí se okno úpravy zakázky. V tomto okně můžete
+nastavit nebo změnit prioritu zakázky.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/priority1.png" alt="Priority1" width="1207">
+</div>
+</div>
+</li>
+<li>
+<p>Na základě priority části zakázky je reference zakázky v dlaždici zakázky
+příslušně barevně označena.</p>
+</li>
+<li>
+<p>Části zakázky jsou seřazeny nejprve podle priority a poté podle termínu
+splnění. Jsou také barevně označeny podle své priority.</p>
+</li>
+<li>
+<p>Při hnízdění jsou nejprve zvažovány díly s prioritou <strong>Urgent</strong>, následované
+<strong>High</strong>, pak <strong>Normal</strong> a nakonec jsou díly s prioritou <strong>Low</strong> umístěny do zbývajícího
+prostoru na listech hnízdění.</p>
+</li>
+<li>
+<p>Listy hnízdění jsou také seřazeny a barevně označeny podle priority.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Priorita zakázky</th>
+<th class="tableblock halign-left valign-top">Barevný popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/urgent.png" alt="Urgent" width="50"></span> (Oranžová)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Naléhavá</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/normal1.png" alt="Normal" width="50"></span> (Bez barvy)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Normální</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/high.png" alt="High" width="50"></span> (Žlutá)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vysoká</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/low.png" alt="Low" width="50"></span> (Tmavě šedá)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nízká</p></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock">
+<div class="content">
+<img src="img/priority2.png" alt="Priority2" width="1158">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_stav">Stav</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Stavový řádek zakázky používá barevné kódy k označení pokroku nebo stavu
+zakázky na základě zpracovaného nebo zbývajícího množství.</p>
+</li>
+<li>
+<p>Díly v rámci zakázky a listy hnízdění jsou také zvýrazněny odpovídajícími
+barvami, aby odrážely svůj individuální stav v rámci celkové zakázky.</p>
+</li>
+<li>
+<p>Barevné kódování zlepšuje sledování a zajistí, že operátoři mohou snadno vidět
+stav výroby na první pohled.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/status1.png" alt="Job status" width="1114">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/status2.png" alt="Job status" width="1360">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Stav zakázky</th>
+<th class="tableblock halign-left valign-top">Popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/notready.png" alt="Not Ready" width="100"></span> (Světle šedá)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nepřipraveno</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/nesting.png" alt="Nesting" width="100"></span> (Purpurová)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optimální rozmístění</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/ready.png" alt="Ready" width="100"></span> (Bílá)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Připraveno</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/cuttingqueue.png" alt="Bend planned" width="100"></span> (Světle žlutá)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Naplánováno ohýbání</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/sheetmissing.png" alt="Sheet Missing" width="100"></span> (Tmavě šedá)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Chybí plech</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/bendingqueue.png" alt="Bending Queue" width="100"></span> (Tmavě žlutá)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fronta ohýbání</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/bendplanned.png" alt="Bend Planned" width="100"></span> (Žlutá)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fronta řezání</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/completed.png" alt="Completed" width="100"></span> (Tmavě zelená)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hotovo</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_díly">Díly</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Zobrazení aktivních dílů zobrazuje všechny díly, které jsou aktuálně
+rozpracované v rámci aktivních zakázek.</p>
+</div>
+<div class="paragraph">
+<p>Každý díl je reprezentován jako dlaždice zobrazující klíčové podrobnosti jako
+název dílu, rozměry, materiál, tloušťku, množství a termín splnění. Je také
+zobrazen vizuální náhled dílu.</p>
+</div>
+<div class="paragraph">
+<p>Toto zobrazení pomáhá uživatelům monitorovat stav zpracování jednotlivých dílů
+a sledovat jejich pokrok v probíhajících zakázkách.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/activeparts.png" alt="Active">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hnízdění">Hnízdění</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Zobrazení aktivních hnízdění zobrazuje všechna hnízdění, která jsou aktuálně
+rozpracovaná v rámci aktivních zakázek.</p>
+</div>
+<div class="paragraph">
+<p>Každé hnízdění je reprezentováno s relevantními podrobnostmi jako počet dílů
+a stav zpracování. Je také zobrazeno vizuální uspořádání uhnízdněných dílů.</p>
+</div>
+<div class="paragraph">
+<p>Toto zobrazení pomáhá uživatelům monitorovat pokrok hnízdění a sledovat, jak
+jsou díly uspořádány a zpracovávány na listech.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/activenest.png" alt="Nest">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_úpravy">Úpravy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Možnost Edit umožňuje upravit vybranou položku.</p>
+</div>
+<div class="paragraph">
+<p>Na základě aktuálního zobrazení je vybraná instance otevřena pro úpravy:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>V zobrazení Jobs je vybraná zakázka otevřena pro úpravy.</p>
+</li>
+<li>
+<p>V zobrazení Active Parts je vybraný díl otevřen pro úpravy.</p>
+</li>
+<li>
+<p>V zobrazení Active Nests je vybrané hnízdění otevřeno pro úpravy.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobviewedit.png" alt="Edit" width="980">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_export_csv">Export csv</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Možnost Export vám umožní vybrat informace o zakázce a exportovat je do CSV souboru.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klikněte na ikonu <strong>jobs</strong>.</p>
+</li>
+<li>
+<p>Klikněte na možnost <strong>export</strong> na pravé straně obrazovky.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importexport1.png" alt="Export" width="700">
+</div>
+</div>
+</li>
+<li>
+<p>Zobrazí se dialogové okno s dostupnými poli:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importexport2.png" alt="Export CSV" width="174">
+</div>
+</div>
+</li>
+<li>
+<p>Vyberte zaškrtávací políčka pro pole, která chcete exportovat.</p>
+</li>
+<li>
+<p>Použijte možnost <strong>Group By</strong>, pokud chcete seskupit data podle
+vybraného pole.</p>
+</li>
+<li>
+<p>Klikněte na Export pro vygenerování CSV souboru.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_další_informace">Další informace</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Na pravé straně obrazovky jsou také tři další ikony, které jsou
+<strong>simulovat</strong>, <strong>Goto</strong> a <strong>zpět</strong>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Simulate otevře vybranou položku pro podrobnější zobrazení.</p>
+</li>
+<li>
+<p>Goto přepne zaměření a zobrazení na díl nebo hnízdění, které je vybráno.</p>
+</li>
+<li>
+<p>Back se vrátí o jednu úroveň zpět od místa, kde se právě nacházíte, například
+kliknutí na <strong>zpět</strong> při simulaci vás vrátí zpět k hlavní zakázce
+a ze zakázky vás vrátí zpět k hlavnímu zobrazení zakázek.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_zakázky">Zakázky</a>
+  </li>
+  <li level="2">
+   <a href="#_podrobnosti_zakázky">Podrobnosti zakázky</a>
+  </li>
+  <li level="2">
+   <a href="#_priorita">Priorita</a>
+  </li>
+  <li level="2">
+   <a href="#_stav">Stav</a>
+  </li>
+  <li level="1">
+   <a href="#_díly">Díly</a>
+  </li>
+  <li level="1">
+   <a href="#_hnízdění">Hnízdění</a>
+  </li>
+  <li level="1">
+   <a href="#_úpravy">Úpravy</a>
+  </li>
+  <li level="1">
+   <a href="#_export_csv">Export csv</a>
+  </li>
+  <li level="1">
+   <a href="#_další_informace">Další informace</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobcreation.html">Vytvoření zakázky</a></span>
+ <span class="next"><a href="jobpanel.html">Panel zakázek</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="res/bento.css">
+  <link rel="stylesheet" href="res/site.css">
+  <link rel="stylesheet" href="res/tree.css">
+  <link rel="stylesheet" href="res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="img/praxis-icon.png">
+  <title>Brugergrænsefladen</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="index.html">Velkommen til TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="installation/hardwarerequirement.html">Hardwarekrav</a></li>
+    <li><button class="tree blank"></button><a href="installation/importformats.html">Understøttede filformater</a></li>
+    <li><button class="tree blank"></button><a href="installation/prerequisites.html">Forudsætninger</a></li>
+    <li><button class="tree blank"></button><a href="installation/serverinstallation.html">Serverinstallation</a></li>
+    <li><button class="tree blank"></button><a href="installation/clientinstallation.html">Klientinstallation</a></li>
+    <li><button class="tree blank"></button><a href="installation/changelic.html">Skift licens</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="configuration/index.html">Konfiguration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="configuration/setupmachine.html">Tilføj/fjern maskine</a></li>
+    <li><button class="tree blank"></button><a href="configuration/setuptooling.html">Opsæt værktøj</a></li>
+    <li><button class="tree blank"></button><a href="configuration/configureusers.html">Konfigurer brugere</a></li>
+    <li><button class="tree blank"></button><a href="configuration/language.html">Sprog</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="configuration/addmaterial/index.html">Materiale</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="configuration/addmaterial/addnew.html">Tilføj nyt materiale og plade</a></li>
+      <li><button class="tree blank"></button><a href="configuration/addmaterial/exportimport.html">Eksporter/Importer materiale</a></li>
+      <li><button class="tree blank"></button><a href="configuration/addmaterial/replacematerial.html">Erstat materiale</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="configuration/mapbendpages.html">Kortlæg materiale</a></li>
+    <li><button class="tree blank"></button><a href="configuration/mapcampages.html">Kortlæg CAM-sider</a></li>
+    <li><button class="tree blank"></button><a href="configuration/cadmapfields.html">Kortlæg felter fra CAD (opslagnøgler)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a class="active" href="userinterface.html">Brugergrænsefladen</a></li>
+  <li><button class="tree blank"></button><a href="workflow.html">Arbejdsgang</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="library/index.html">Bibliotek</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/open/index.html">Åbn</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="library/open/partimport.html">Importer dele</a></li>
+      <li><button class="tree blank"></button><a href="library/open/orderimport.html">Importer ordrer</a></li>
+      <li><button class="tree blank"></button><a href="library/open/jobimport.html">Importer jobs</a></li>
+      <li><button class="tree blank"></button><a href="library/open/assembliesimport.html">Importer samlinger</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/libraryview/index.html">Biblioteksvisning</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="library/libraryview/partview.html">Dele</a></li>
+      <li><button class="tree blank"></button><a href="library/libraryview/assemblyview.html">Samling</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/partstate/index.html">Delstatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="library/partstate/partvalidation.html">Delvalidering</a></li>
+      <li><button class="tree blank"></button><a href="library/partstate/partpanel.html">Delpanel</a></li>
+      <li><button class="tree blank"></button><a href="library/partstate/partfilters.html">Dele filtre</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/toolingstatus/index.html">Værktøjsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="library/toolingstatus/toolingvalidation/index.html">Værktøjsvalidering</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="library/toolingstatus/toolingvalidation/bendtooling.html">Bukkeværktøjsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="library/toolingstatus/toolingvalidation/cuttooling.html">Skæreværktøjsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="library/toolingstatus/toolingvalidation/foldtooling.html">Foldeværktøjsvalidering</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="library/toolingstatus/toolingpanel.html">Værktøjspanel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="library/savingfilters.html">Gem filtre</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="orders/index.html">Ordrer</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="orders/ordersview.html">Ordrevisning</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="jobs/jobcreation.html">Opret job</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobview.html">Job visning</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobpanel.html">Job panel</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobautoplan.html">Auto plan</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobinteractplan.html">Interaktiv nesting</a></li>
+    <li><button class="tree blank"></button><a href="jobs/repacking.html">Ompakning</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="jobs/layoutcommands/index.html">Nest management</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="jobs/layoutcommands/nestview.html">Layout visning</a></li>
+      <li><button class="tree blank"></button><a href="jobs/layoutcommands/layoutpanel.html">Layout panel</a></li>
+      <li><button class="tree blank"></button><a href="jobs/layoutcommands/reportsender.html">Report sender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="jobs/remnantmanagement/index.html">Restmaterialestyring</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="jobs/remnantmanagement/autoremnant.html">Auto restmaterialestyring</a></li>
+      <li><button class="tree blank"></button><a href="jobs/remnantmanagement/manualremnant.html">Manuel restmaterialestyring</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="jobs/twinlinenesting.html">Twinline nesting</a></li>
+    <li><button class="tree blank"></button><a href="jobs/outdate.html">Forældet</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobfilters.html">Job filtre</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="cadextensions/index.html">CAD-udvidelser</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/savetopraxis.html">Gem dele</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/saveassembly.html">Gem samling</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/partfeasibility.html">Kontroller gennemførlighed</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/factorysettings.html">Fabriksindstillinger</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/miscenhancements.html">Diverse forbedringer</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="userinterface.html">Brugergrænsefladen</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Brugergrænsefladen</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>TruSmartCAM-brugergrænsefladen giver adgang til alle vigtige funktioner gennem
+kommandolinjen og menulinjen, hvilket muliggør effektiv navigation og betjening.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/userinterface.png" alt="Interface" width="990"></span></p>
+</div>
+<div class="paragraph">
+<p>I billedet:</p>
+</div>
+<div class="paragraph">
+<p>1 -  Kommandolinje</p>
+</div>
+<div class="paragraph">
+<p>2 -  Menulinje</p>
+</div>
+<div class="paragraph">
+<p>3 -  Underkommandoer</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kommandolinje">Kommandolinje</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>åbn</strong> - Importerer dele, job, ordrer og samlesæt til
+biblioteket. For detaljer, se <a href="library/open/index.html">Open</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>sprog</strong> - Ændrer brugergrænsefladens sprog. For detaljer,
+se <a href="configuration/language.html">Language</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>bibliotek</strong> - Åbner bibliotekets startside, hvor dele og
+samlesæt vises separat. For detaljer, se <a href="library/index.html">Library</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>jobs</strong> - Viser importerede eller oprettede job. For detaljer, se
+<a href="jobs/index.html">Jobs</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>fabrik</strong> - Åbner den centrale placering til konfiguration og
+styring af ruter, materialer, brugere og kundedata til produktionsopsætning. For
+detaljer, se <a href="factory/index.html">Factory</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>info</strong> - Viser oplysninger om softwaren.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_menulinje">Menulinje</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>_Fil</strong> - Giver muligheder for at åbne dele, job, ordrer og samlesæt,
+og for at afslutte applikationen.</p>
+</div>
+<div class="paragraph">
+<p><strong>_Se</strong> - Tillader skift mellem skærme og adgang til forskellige visninger.</p>
+</div>
+<div class="paragraph">
+<p><strong>_Hjælp</strong> - Giver adgang til hjælpemanualen og softwareopdateringsmuligheder.</p>
+</div>
+<div class="paragraph">
+<p><strong>Admin</strong> - Indeholder administrative indstillinger og konfigurationsmuligheder.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_underkommandoer">Underkommandoer</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Parts</strong> - Viser emner i delebiblioteket.</p>
+</div>
+<div class="paragraph">
+<p><strong>Assys</strong> - Skifter til samlesætsemner i biblioteksvisningen.</p>
+</div>
+<div class="paragraph">
+<p><strong>Export</strong> - Eksporterer den aktuelle del eller værktøjsrapport som CSV.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_kommandolinje">Kommandolinje</a>
+  </li>
+  <li level="1">
+   <a href="#_menulinje">Menulinje</a>
+  </li>
+  <li level="1">
+   <a href="#_underkommandoer">Underkommandoer</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="configuration/cadmapfields.html">Kortlæg felter fra CAD (opslagnøgler)</a></span>
+ <span class="next"><a href="workflow.html">Arbejdsgang</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="res/index.js"></script>
+    <script src="res/files.js"></script>
+    <script src="res/site.js"></script>
+
+    
+</body>
+</html>

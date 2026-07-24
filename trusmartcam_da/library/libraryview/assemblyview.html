@@ -1,0 +1,607 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Samling</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Velkommen til TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardwarekrav</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Understøttede filformater</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Forudsætninger</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Serverinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Klientinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Skift licens</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfiguration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Tilføj/fjern maskine</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Opsæt værktøj</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Konfigurer brugere</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Sprog</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiale</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Tilføj nyt materiale og plade</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Eksporter/Importer materiale</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Erstat materiale</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Kortlæg materiale</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Kortlæg CAM-sider</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Kortlæg felter fra CAD (opslagnøgler)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Brugergrænsefladen</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Arbejdsgang</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Bibliotek</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Åbn</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Importer dele</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Importer ordrer</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Importer jobs</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Importer samlinger</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Biblioteksvisning</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partview.html">Dele</a></li>
+      <li><button class="tree blank"></button><a class="active" href="assemblyview.html">Samling</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Delstatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Delvalidering</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Delpanel</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Dele filtre</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Værktøjsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Værktøjsvalidering</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Bukkeværktøjsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Skæreværktøjsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Foldeværktøjsvalidering</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Værktøjspanel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Gem filtre</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Ordrer</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Ordrevisning</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Opret job</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Job visning</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Job panel</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Auto plan</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktiv nesting</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Ompakning</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Nest management</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Layout visning</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Layout panel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Report sender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Restmaterialestyring</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Auto restmaterialestyring</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manuel restmaterialestyring</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Twinline nesting</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Forældet</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Job filtre</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD-udvidelser</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Gem dele</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Gem samling</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Kontroller gennemførlighed</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Fabriksindstillinger</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Diverse forbedringer</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Bibliotek</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Biblioteksvisning</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="assemblyview.html">Samling</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Samling</h1>
+<div class="sect1">
+<h2 id="_opret_statiske_nests_fra_en_samling">Opret statiske nests fra en samling</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Statiske nests kan genereres for en samling ved hjælp af den interaktive
+nesting-guide.
+Disse nests er faste layouts, der kun er knyttet til den valgte samling.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Skift til <strong>assys.</strong> visningen.</p>
+</li>
+<li>
+<p>Højreklik på den ønskede samling og vælg
+<strong>Opret indlejringer&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Den interaktive nesting-guide åbner.</p>
+</li>
+<li>
+<p>Som standard skifter den interaktive nesting-guide til
+<strong>Vælg maskine &amp; materiale</strong> siden.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyinteractive.png" alt="Machine and material" width="950">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Maskiner vises med farvede bjælker, der angiver tilgængelig produktionsbelastning:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Grøn bjælke: Planlagte timer</p>
+</li>
+<li>
+<p>Grå bjælke: Tilgængelige timer (ud af et 8-timers skift)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Under hver maskine er valgte dele grupperet med deres råmateriale
+(Dele/Samlet antal).</p>
+</li>
+<li>
+<p>Hvis en del ikke har en gyldig værktøjsløsning for en maskine, ignoreres den pågældende del og
+materiale til behandling for en given maskine.</p>
+</li>
+<li>
+<p>Hvis et råmateriale er valgt til én maskine, vil det ikke være tilgængeligt for andre
+maskiner.</p>
+</li>
+<li>
+<p>Når maskine-nest-planen er fastsat, skal De vælge den foretrukne plade og
+tilsidesætte pladeparametre som <strong>Prioritet</strong>,
+<strong>Antal</strong>, <strong>Pladekanter</strong> osv.</p>
+</li>
+<li>
+<p>De kan filtrere plader for at vise <strong>Alle plader</strong>,
+<strong>Standardplader</strong> eller
+<strong>Restplader</strong>. Klik på <strong>Næste</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Det er ikke muligt at øge antallet på dette tidspunkt. De kan
+enten beholde det samme som pladebeholdningens antal eller reducere det og
+kontrollere nesting-resultaterne.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Opdatér antal</strong> vises i det interaktive nesting-planvindue.</p>
+</li>
+<li>
+<p>Som standard inkluderer <strong>Vælg alle (F5)</strong> alle dele til
+nesting, eller De kan manuelt vælge prioriterede dele og justere delantal.
+Klik på <strong>Næste</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyquantity.png" alt="Update quantity">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nesting starter, og dele, der er nesteret i pladen, opdateres med blå farvede status.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyresult.png" alt="Nesting result">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Maskinens produktionsbelastning opdateres baseret på nest-resultatet.</p>
+</li>
+<li>
+<p>Hvis nogle dele forbliver ikke-nesteret, vises meddelelsen
+<strong>Visse dele forbliver uden indlejring</strong> - disse dele forbliver
+i det oprindelige job.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>En del kan forblive ikke-nesteret, hvis ingen passende plade er tilgængelig.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Statiske nests kan redigeres for at inkludere ikke-nestererede dele:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Vælg layoutet, hvor De ønsker at indsætte ikke-nestererede dele og tjek det
+ud til redigering.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblylayout.png" alt="Selected layout">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TecZone åbner. Klik på <strong>_Markér</strong> eller
+<strong>Markér _alt</strong> for at vælge ikke-nestererede dele fra
+forældersamlingen.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/addnest.png" alt="Add unnested parts" width="864">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Arranger delen i layoutet efter behov.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unnest.png" alt="Unnested part placement" width="715">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Genererede nests får automatisk navn efter forældersamlingen for nem
+identifikation.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Statiske nests kan ikke indeholde dele fra andre samlinger. Tillader blandede
+samlingsnests ville forhindre frigivelse af én samling uden at frigive de
+andre, så blanding er ikke tilladt ved design.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ikke_plademetaldele">Ikke-plademetaldele</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Når en samling importeres, udtrækkes plademetaldele og tilføjes til
+samlinger i delebiblioteket.</p>
+</li>
+<li>
+<p>Ikke-plademetaldele adskilles og tilføjes til
+<strong>Komponenter</strong>.</p>
+</li>
+<li>
+<p>Samlingen tilføjes til samlingsbiblioteket, og dens BOM
+(Bill of Materials) indeholder både dele og komponenter.</p>
+</li>
+<li>
+<p>Hvis en del allerede er blevet importeret som en plademetaldel, opdaterer systemet
+den eksisterende post og fjerner dubletter fra delebiblioteket.</p>
+</li>
+<li>
+<p>Valg af en samling viser både dele og komponenter med komponent-
+antal vist under komponentbilledet (valgt samlingskomponentantal
+og samlet komponentantal).</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/components.png" alt="Assembly components" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Komponent-værktøjstips viser navnet, materialet og størrelsen.
+Komponenter er udelukket under produktion - de nesteres ikke, og ingen
+plader genereres for komponenter.</p>
+</li>
+<li>
+<p>Eksempelsamlinger og komponenter er tilgængelige på:
+C:\Program Files\Metamation\Praxis\Samples\Assys\Components, som kan
+bruges til at teste komponentimport og samlingsworkflows.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_oprettelse_af_job_fra_samling">Oprettelse af job fra samling</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Højreklik på samlingen, klik på <strong>Ny&#8230;&#8203;</strong>, og derefter
+<strong>Job</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/newassemblyjob.png" alt="Create new job" width="760">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>I dialogboksen Nyt job skal De indstille samlingsantallet, klikke på <strong>OK</strong>
+og derefter opdatere jobdetaljer (såsom forfaldsdato og prioritet) efter behov.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/riegelwindow.png" alt="New job dialog" width="369">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Systemet opretter et job fra samlingen og kopierer statiske nests som
+job-nests og opdaterer pladeantal. Kopierede nests præfikses med
+job-ID&#8217;et.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblycreated.png" alt="Assembly job created" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Job-nests kan redigeres eller slettes uden at påvirke de oprindelige
+statiske nests.</p>
+</li>
+<li>
+<p>Job-nests kan ompakkes ved hjælp af <strong>Tilpas/kompakt&#8230;&#8203;</strong> eller
+<strong>Tilføj dele&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>For detaljerede trin, se
+<a href="../../jobs/layoutcommands/layoutpanel.html#adapt-compact">Adapt/Compact</a> og
+<a href="../../jobs/layoutcommands/layoutpanel.html#add-parts">Add parts</a>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Hvis en del ikke vises i et nest, skal De kontrollere nest-redigeringsdialogen - De kan
+indsætte ikke-nestererede dele manuelt.</p>
+</div>
+<div class="paragraph">
+<p>Brug gemte søgninger og filtre til hurtigt at finde dele på tværs af flere samlinger.</p>
+</div>
+<div class="paragraph">
+<p>Brug klare, beskrivende samlings- og nest-navne for at undgå forvirring ved
+kopiering af nests til jobs.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_opret_statiske_nests_fra_en_samling">Opret statiske nests fra en samling</a>
+  </li>
+  <li level="1">
+   <a href="#_ikke_plademetaldele">Ikke-plademetaldele</a>
+  </li>
+  <li level="1">
+   <a href="#_oprettelse_af_job_fra_samling">Oprettelse af job fra samling</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partview.html">Dele</a></span>
+ <span class="next"><a href="../partstate/index.html">Delstatus</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

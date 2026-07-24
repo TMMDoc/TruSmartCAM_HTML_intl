@@ -1,0 +1,796 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>แผงเครื่องมือ</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">ยินดีต้อนรับสู่ TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">การติดตั้ง</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">ข้อกำหนดฮาร์ดแวร์</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">รูปแบบไฟล์ที่รองรับ</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">ข้อกำหนดเบื้องต้น</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">การติดตั้ง Server</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">การติดตั้ง Client</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">เปลี่ยนใบอนุญาต</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">การกำหนดค่า</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">เพิ่ม/ลบเครื่องจักร</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">ตั้งค่าเครื่องมือ</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">กำหนดค่าผู้ใช้</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">ภาษา</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">วัสดุ</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">เพิ่มวัสดุและแผ่นวัสดุใหม่</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">ส่งออก/นำเข้าวัสดุ</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">แทนที่วัสดุ</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">จับคู่วัสดุ</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">จับคู่หน้า CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">จับคู่ฟิลด์จาก CAD (คีย์การค้นหา)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">อินเทอร์เฟซผู้ใช้งาน</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">ขั้นตอนการทำงาน</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Library</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Tooling status</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a class="active" href="toolingpanel.html">แผงเครื่องมือ</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">คำสั่งซื้อ</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">มุมมองคำสั่งซื้อ</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">งาน</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">สร้างงาน</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">มุมมองงาน</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">แผงงาน</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">วางแผนอัตโนมัติ</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">การจัดเรียงแบบโต้ตอบ</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">การบรรจุใหม่</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">การจัดการการจัดเรียง</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">มุมมองเลย์เอาต์</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">แผงเลย์เอาต์</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">ผู้ส่งรายงาน</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">การจัดการวัสดุเหลือใช้</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">การจัดการวัสดุเหลือใช้อัตโนมัติ</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">การจัดการวัสดุเหลือใช้ด้วยตนเอง</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">การจัดเรียงแบบเส้นคู่</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">ล้าสมัย</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">ตัวกรองงาน</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">โรงงาน</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">เส้นทาง</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">แผ่นวัสดุ</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">ผู้ใช้</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">แก้ไข</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">ลูกค้า</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">การตั้งค่า</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">สภาพแวดล้อม</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">นำเข้า</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">การงอ</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">การตัด</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">การแจ้งเตือน</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">เฝ้าดู</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">งาน</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">รายงาน</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">ส่วนขยาย CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">การติดตั้ง</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">บันทึกชิ้นส่วน</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">บันทึกแอสเซมบลี</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">ตรวจสอบความเป็นไปได้</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">การตั้งค่าโรงงาน</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">การปรับปรุงอื่นๆ</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">ข้อมูลทางกฎหมาย</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Library</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Tooling status</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="toolingpanel.html">แผงเครื่องมือ</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>แผงเครื่องมือ</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>ส่วนนี้อธิบายการดำเนินการที่เกี่ยวข้องกับเครื่องมือ เช่น
+<strong>ส่งออกเอาต์พุต</strong>,
+<strong>Check Tooling</strong>, <strong>ปิดการใช้เครื่องมือ</strong>,
+<strong>ตั้งค่าเป็น Base-Flat&#8230;&#8203;</strong>, <strong>คัดลอกเครื่องมือ&#8230;&#8203;</strong>
+และตัวเลือกอื่นๆ ที่ใช้ในการจัดการอินสแตนซ์เครื่องมือ</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/toolingpanel.png" alt="Tooling panel" width="150">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>เปิดในโหมดอ่านอย่างเดียวสำหรับดู</strong><br>
+เปิดเครื่องมือที่เลือกในโหมดอ่านอย่างเดียว</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+เปิดใช้งานการแก้ไขเครื่องมือที่เลือก</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ส่งออกเอาต์พุต</strong><br>
+ส่งออกผลลัพธ์เครื่องมือที่เลือกไปยังปลายทางที่กำหนดค่าไว้</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/checkui.png" alt="Check Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check Tooling</strong><br>
+ตรวจสอบความถูกต้องของเครื่องมือที่มีอยู่โดยไม่ทำการเปลี่ยนแปลงใดๆ
+และอัปเดตสถานะหากการตรวจสอบล้มเหลว</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/copyui.png" alt="Copy Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>คัดลอกเครื่องมือ&#8230;&#8203;</strong><br>
+คัดลอกการตั้งค่าเครื่องเจาะ ลำดับ และ back gauge จากเครื่องมืออ้างอิงที่เลือก
+และนำไปใช้กับโซลูชันอื่นๆ ในกรณีที่เป็นไปได้</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/baseui.png" alt="Set as Base-Flat" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ตั้งค่าเป็น Base-Flat&#8230;&#8203;</strong><br>
+ทำเครื่องหมายเครื่องมือดัดหรือพับที่เลือกเป็นขนาดแบนอ้างอิงสำหรับ
+การสร้างโซลูชันการตัด</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/retoolui.png" alt="Re-tool" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Re-tool&#8230;&#8203;</strong><br>
+ประมวลผลเครื่องมือที่เลือกสำหรับชิ้นส่วนใหม่โดยไม่กระทบกับ
+เครื่องมืออื่นๆ</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/supressui.png" alt="Suppress Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ปิดการใช้เครื่องมือ</strong><br>
+ระงับเครื่องมือที่เลือกเพื่อไม่ให้ถูกรวมในการประมวลผล
+และการสร้างผลลัพธ์ต่อไป</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prevui.png" alt="Prev Next" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ก่อนหน้า</strong> / <strong>ถัดไป</strong> / <strong>ชิ้นส่วน</strong><br>
+นำทางไปยังเครื่องมือก่อนหน้าหรือถัดไป หรือกลับไปยังชิ้นส่วนหลัก</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sortui.png" alt="Similar Toolings" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>จัดเรียงและกรอง</strong><br>
+แสดงเครื่องมืออื่นๆ ที่มีลักษณะคล้ายกันกับ
+เครื่องมือที่เลือกสำหรับอ้างอิงอย่างรวดเร็ว</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ส่งออกเอาต์พุต">ส่งออกเอาต์พุต</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ตัวเลือกนี้ส่งออกผลลัพธ์ชิ้นส่วนไปยังปลายทางที่กำหนดค่าไว้ใน
+<strong>การตั้งค่าโรงงาน</strong> (ดู
+<a href="../../factory/settings/bend.html">Bend Settings</a> และ
+<a href="../../factory/settings/cut.html">Cut Settings</a>)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingoutput.png" alt="Tooling Output" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>มีเพียงเครื่องมือที่เกี่ยวข้องกับการดำเนินการเครื่องมือที่เลือก
+เท่านั้นที่ถูกส่งออก ไม่ใช่ทั้งชิ้นส่วน</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+ไฟล์ที่ส่งออกขึ้นอยู่กับประเภทการดำเนินการ สำหรับการดำเนินการ Bend และ
+Fold จะสร้างไฟล์ NC และรายงาน สำหรับการดำเนินการ Cut และ Punch
+จะส่งออกเฉพาะไฟล์ชิ้นส่วนเท่านั้น
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_check_tooling">Check Tooling</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>หากมีการเปลี่ยนแปลงใน CAM Settings หรือเครื่องมือดัดสูญหาย คุณไม่จำเป็นต้อง
+Re-tool ชิ้นส่วน</p>
+</li>
+<li>
+<p>แทนที่จะเป็นเช่นนั้น ให้ใช้ Check Tooling เพื่อตรวจสอบความถูกต้องของเครื่องมือที่มีอยู่โดยไม่ทำ
+การเปลี่ยนแปลงใดๆ</p>
+</li>
+<li>
+<p>หากการตรวจสอบล้มเหลว สถานะเครื่องมือของอินสแตนซ์นั้นจะถูกอัปเดต แลๅ
+ไฟล์ผลลัพธ์ที่เกี่ยวข้องจะถูกลบออก</p>
+</li>
+<li>
+<p>Check Tooling ยังตรวจจับชิ้นส่วนที่มีข้อผิดพลาดที่ถูกแทนที่ด้วยตนเองก่อนหน้านี้
+โดยใช้ <strong>ละเว้นข้อผิดพลาด</strong> และอัปเดตสถานะ
+เป็นข้อผิดพลาดหากจำเป็น</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/checktooling.png" alt="Check Tooling" width="456">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_คัดลอกเครื่องมือ">คัดลอกเครื่องมือ&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>การคัดลอกเครื่องมือช่วยให้คุณสามารถนำเครื่องมือดัดจากโซลูชันหนึ่งไปใช้กับ
+โซลูชันอื่นๆ ได้อย่างรวดเร็ว ประหยัดเวลาและความพยายาม</p>
+</div>
+<div class="paragraph">
+<p>การดำเนินการนี้จะคัดลอกการตั้งค่าเครื่องเจาะ ลำดับ และ back gauge จากเครื่องมืออ้างอิง
+ที่เลือก (โซลูชัน) และพยายามนำการตั้งค่าเดียวกันไปใช้กับโซลูชันอื่นๆ ทั้งหมด</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>หากการตั้งค่าที่คัดลอกนั้นเป็นไปได้สำหรับเครื่องจักรเป้าหมาย จะถูกบันทึกและนำไปใช้</p>
+</li>
+<li>
+<p>หากการตั้งค่าไม่เป็นไปได้ เครื่องมือเดิมสำหรับเครื่องจักรนั้นจะยังคง
+ไม่เปลี่ยนแปลง</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>ตัวอย่างเช่น คุณอาจมีเครื่องมือที่แตกต่างกันสำหรับเครื่องจักรต่างๆ:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ที่นี่ Machine 5230SX 6A ใช้เครื่องเจาะ Gooseneck, Machine 5085X 6A B23 ใช้
+เครื่องเจาะ Pointed</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check3.png" alt="Before tooling" width="724">
+</div>
+</div>
+<div class="paragraph">
+<p>เมื่อคุณใช้ <strong>คัดลอกเครื่องมือ&#8230;&#8203;</strong> บน Machine 5230SX 6A มัน
+พยายามคัดลอกการตั้งค่า Gooseneck ไปยังเครื่องจักรอื่นๆ ทั้งหมด</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check4.png" alt="Copy tooling" width="664">
+</div>
+</div>
+<div class="paragraph">
+<p>การตั้งค่าเครื่องเจาะ ลำดับ และ back gauge เดียวกันจะถูกนำไปใช้ทุกที่ที่
+เป็นไปได้ หากการตั้งค่าที่คัดลอกไม่สามารถใช้ได้ เครื่องมือเดิมจะยังคง
+ไม่เปลี่ยนแปลง</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/copytooling3.png" alt="After tooling" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>หลังจากนำการคัดลอกเครื่องมือไปใช้ การตั้งค่า Gooseneck ได้ถูกนำไปใช้สำเร็จ
+กับเครื่องจักรอื่นๆ ทั้งหมดที่เป็นไปได้</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ตั้งค่าเป็น_base_flat">ตั้งค่าเป็น Base-Flat&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>คุณลักษณะ <strong>ตั้งค่าเป็น Base-Flat&#8230;&#8203;</strong> กำหนดว่าเครื่องมือดัดหรือพับ
+ใดจะถูกใช้เป็นขนาดแบนอ้างอิงสำหรับการสร้างโซลูชันการตัด
+เมื่อเครื่องมือถูกทำเครื่องหมายเป็น Base-Flat, TruSmartCAM จะอัปเดตขนาดแบนของชิ้นส่วน
+ตามเครื่องจักรนั้นและสร้างโซลูชันการตัดใหม่ตามนั้น เครื่องมือ Base-Flat
+จะแสดงด้วยเส้นขอบสีน้ำเงินใน UI</p>
+</div>
+<div class="paragraph">
+<p>เครื่องจักรดัดต่างๆ อาจผลิตขนาดแบนที่แตกต่างกันเล็กน้อยสำหรับ
+ชิ้นส่วนเดียวกัน เมื่อคุณตั้งค่าเครื่องมือเป็น Base-Flat, TruSmartCAM จะใช้ขนาดแบน
+ของเครื่องจักรนั้นเป็นการอ้างอิงหลักและคำนวณโซลูชันการตัดใหม่โดยอัตโนมัติ</p>
+</div>
+<div class="paragraph">
+<p>ที่นี่ เราสามารถเห็นขนาดแบนที่แตกต่างกันสำหรับชิ้นส่วนเดียวกันในเครื่องจักร
+ต่างๆ:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat1.png" alt="Base flat1" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>ในตัวอย่างนี้ เครื่องมือ <strong>5130X 6A B23</strong> ถูกตั้งค่าเป็น Base-Flat และ
+ขนาดแบนที่อัปเดตจะถูกนำไปใช้ในคุณสมบัติชิ้นส่วน:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat2.png" alt="Base flat2" width="663">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_การเลือก_base_flat_อัตโนมัติ">การเลือก base flat อัตโนมัติ</h3>
+<div class="paragraph">
+<p>เมื่อการตั้งค่าโรงงาน
+<strong>ใช้การปรับแก้ลวดลายแผ่ระหว่างการดัด</strong> เปิดใช้งาน:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autobase.png" alt="Auto Base" width="806">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM จะตั้งค่าเครื่องมือดัด (ที่มีตารางความยาวดัดสูงสุด) เป็น Base-Flat
+โดยอัตโนมัติระหว่างการนำเข้าชิ้นส่วน</p>
+</li>
+<li>
+<p>หากเครื่องมือดัดที่เลือกพบข้อผิดพลาดหรือไม่เป็นไปได้
+TruSmartCAM จะสลับอย่างชาญฉลาดและตั้งค่าเครื่องมือดัดที่ถูกต้องอื่นเป็น
+Base-Flat เพื่อให้แน่ใจว่าการอ้างอิงขนาดแบนและโซลูชันการตัดยังคง
+สอดคล้องและถูกต้องเสมอโดยไม่ต้องมีการแทรกแซงด้วยตนเอง</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_การจัดการ_base_flat_ที่ปรับปรุงแล้ว">การจัดการ base flat ที่ปรับปรุงแล้ว</h3>
+<div class="paragraph">
+<p>TruSmartCAM มีตัวเลือก Base-Flat ในกล่องโต้ตอบ <strong>บันทึกไปยัง Praxis</strong>
+เมื่อบันทึกการแก้ไขเครื่องมือดัดหรือพับ ตัวเลือกเหล่านี้จะปรากฏเฉพาะสำหรับ
+เครื่องมือในสถานะ OK และช่วยให้มั่นใจว่าขนาดแบนและโซลูชันการตัดยังคง
+ถูกต้อง</p>
+</div>
+<div class="sect3">
+<h4 id="_ตั้งค่าเป็น_base_flat_และคำนวณโซลูชันการตัด">ตั้งค่าเป็น Base-Flat และคำนวณโซลูชันการตัด</h4>
+<div class="paragraph">
+<p>ตัวเลือกนี้ใช้เพื่อทำเครื่องหมายเครื่องมือเป็น Base-Flat เป็นครั้งแรกและ
+สร้างโซลูชันการตัดที่เกี่ยวข้องโดยอัตโนมัติ</p>
+</div>
+<div class="paragraph">
+<p>ปรากฏเมื่อ:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>เครื่องมือไม่ได้ถูกทำเครื่องหมายเป็น Base-Flat ในปัจจุบัน</p>
+</li>
+<li>
+<p>ผู้ใช้ได้ check out เครื่องมือเพื่อแก้ไขและกำลังบันทึกการเปลี่ยนแปลง</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/setbase.png" alt="Set Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>หากต้องการใช้ตัวเลือกนี้ ให้ check out เครื่องมือดัดหรือพับและทำการ
+ปรับเปลี่ยนที่จำเป็น เช่น การเปลี่ยนแปลงพารามิเตอร์การดัดหรือขนาดแบน กด
+<span class="keyseq"><kbd>Ctrl</kbd>+<kbd>S</kbd></span> เพื่อบันทึกการเปลี่ยนแปลง ในกล่องโต้ตอบ <strong>บันทึกไปยัง Praxis</strong>
+เลือก
+<strong>ตั้งค่าเป็น Base-Flat และคำนวณโซลูชันการตัด</strong> และ
+คลิก
+<strong>ตกลง</strong> TruSmartCAM จะตั้งค่าเครื่องมือเป็น Base-Flat และสร้าง
+โซลูชันการตัดโดยใช้ขนาดแบนที่อัปเดต</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_อัปเดต_base_flat_และคำนวณโซลูชันการตัดใหม่">อัปเดต Base-Flat และคำนวณโซลูชันการตัดใหม่</h4>
+<div class="paragraph">
+<p>ตัวเลือกนี้ใช้เมื่อเครื่องมือถูกทำเครื่องหมายเป็น Base-Flat อยู่แล้วและได้รับ
+การแก้ไข ซึ่งต้องการให้ขนาดแบนและโซลูชันการตัดถูกสร้างใหม่</p>
+</div>
+<div class="paragraph">
+<p>ปรากฏเมื่อ:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>เครื่องมือถูกทำเครื่องหมายเป็น Base-Flat อยู่แล้ว</p>
+</li>
+<li>
+<p>ผู้ใช้ได้ check out แก้ไข และกำลังบันทึกการเปลี่ยนแปลง</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/updatebase.png" alt="Update Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>เมื่อแก้ไขเครื่องมือ Base-Flat ที่มีอยู่ ให้อัปเดตพารามิเตอร์การดัดหรือ
+เรขาคณิตขนาดแบนตามที่ต้องการ ในกล่องโต้ตอบ <strong>บันทึกไปยัง Praxis</strong>
+เลือก
+<strong>อัปเดต Base-Flat และคำนวณโซลูชันการตัดใหม่</strong>
+TruSmartCAM จะอัปเดตเครื่องมือ Base-Flat และสร้างโซลูชันการตัดที่เกี่ยวข้อง
+ทั้งหมดใหม่เพื่อสะท้อนการเปลี่ยนแปลงล่าสุด</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>สามารถตั้งค่าเครื่องมือดัดเพียงหนึ่งรายการเป็น Base-Flat ได้ในแต่ละครั้ง</p>
+</div>
+<div class="paragraph">
+<p>เมื่อ Base-Flat มีการเปลี่ยนแปลง โซลูชันการตัดที่มีอยู่จะถูกประมวลผลใหม่
+โดยอัตโนมัติ</p>
+</div>
+<div class="paragraph">
+<p>คุณลักษณะนี้พร้อมใช้งานสำหรับทั้งเครื่องมือดัดและพับภายใน TruSmartCAM</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_กำหนดเครื่องมือใหม่">กำหนดเครื่องมือใหม่&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ตัวเลือกนี้ประมวลผลเครื่องมือที่เลือกสำหรับชิ้นส่วนใหม่</p>
+</div>
+<div class="paragraph">
+<p>คลิกขวาที่เครื่องมือที่ต้องการในแผง Tooling และคลิก
+<strong>กำหนดเครื่องมือใหม่&#8230;&#8203;</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingretool.png" alt="ToolingRetool" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>กล่องโต้ตอบยืนยันจะแสดงขึ้นก่อนดำเนินการต่อ</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingconfirm.png" alt="ToolingConfirm" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>คลิก <strong>ใช่</strong> เพื่อดำเนินการ re-tooling ต่อ หรือ <strong>ไม่</strong> เพื่อ
+ยกเลิกการดำเนินการ</p>
+</div>
+<div class="paragraph">
+<p>มีเพียงเครื่องมือที่เลือกเท่านั้นที่จะถูก re-tool เครื่องมืออื่นๆ ที่เกี่ยวข้องกับ
+ชิ้นส่วนจะไม่ได้รับผลกระทบ ผลลัพธ์ที่มีอยู่ซึ่งเกี่ยวข้องกับเครื่องมือที่เลือก
+จะถูกลบออกและสร้างใหม่ระหว่างกระบวนการ re-tooling</p>
+</div>
+<div class="paragraph">
+<p>ใช้ตัวเลือกนี้เมื่อข้อมูลเครื่องมือล้าสมัย ไม่ถูกต้อง หรือเมื่อ
+มีการเปลี่ยนแปลงการกำหนดค่าเครื่องจักรหรือเครื่องมือ</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ละเว้นข้อผิดพลาด">ละเว้นข้อผิดพลาด</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>หากอินสแตนซ์ที่ติดตั้งเครื่องมือแสดงคำเตือน และคุณยังคงต้องการดำเนินการต่อ
+คุณสามารถแทนที่คำเตือนได้โดยคลิก
+<strong>ละเว้นข้อผิดพลาด</strong></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/ignore.png" alt="Ignore errors" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>การดำเนินการนี้จะอนุญาตให้ระบบส่งออกไฟล์ผลลัพธ์สำหรับอินสแตนซ์
+นั้น แม้จะมีปัญหาเครื่องมือก็ตาม</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+ใช้ <strong>Ignore Errors</strong> เฉพาะเมื่อคุณแน่ใจว่าคำเตือนสามารถ
+ถูกละเว้นได้อย่างปลอดภัย การแทนที่ข้อผิดพลาดจริงอาจนำไปสู่ความเสียหายของเครื่องจักรหรือความเสี่ยงด้านความปลอดภัย
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_การระงับยกเลิกการระงับเครื่องมือ">การระงับ/ยกเลิกการระงับเครื่องมือ</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>เมื่อเครื่องจักรไม่ทำงานหรือคุณไม่ต้องการให้ชิ้นส่วนเฉพาะถูก
+ประมวลผลโดย
+เครื่องจักรเฉพาะ ใช้ <strong>ปิดการใช้เครื่องมือ</strong> เพื่อยกเว้น
+ชิ้นส่วนนั้นจากการจัดวางบนเครื่องจักรนั้น</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/supress.png" alt="Supress Tooling" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>หลังจากการระงับ การวางเมาส์เหนืออินสแตนซ์ที่ติดตั้งเครื่องมือจะแสดง
+ข้อความเช่น: "Tooling suppressed by &lt;User name&gt; on &lt;Date Time&gt;"</p>
+</li>
+<li>
+<p>การระงับเครื่องมือจะลบไฟล์ผลลัพธ์สำหรับเครื่องจักรและชิ้นส่วนนั้น</p>
+</li>
+<li>
+<p>ใช้ <strong>เปิดการใช้เครื่องมือ</strong> เพื่อกลับคืนสถานะเครื่องมือ
+สำหรับชิ้นส่วนบนเครื่องจักรนั้น</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unsupress.png" alt="Unsupress Tooling" width="495">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>เมื่อยกเลิกการระงับ ไฟล์ผลลัพธ์ที่เกี่ยวข้องจะถูกสร้างขึ้นอีกครั้ง</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_ส่งออกเอาต์พุต">ส่งออกเอาต์พุต</a>
+  </li>
+  <li level="1">
+   <a href="#_check_tooling">Check Tooling</a>
+  </li>
+  <li level="1">
+   <a href="#_คัดลอกเครื่องมือ">คัดลอกเครื่องมือ&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_ตั้งค่าเป็น_base_flat">ตั้งค่าเป็น Base-Flat&#8230;&#8203;</a>
+  </li>
+  <li level="2">
+   <a href="#_การเลือก_base_flat_อัตโนมัติ">การเลือก base flat อัตโนมัติ</a>
+  </li>
+  <li level="2">
+   <a href="#_การจัดการ_base_flat_ที่ปรับปรุงแล้ว">การจัดการ base flat ที่ปรับปรุงแล้ว</a>
+  </li>
+  <li level="1">
+   <a href="#_กำหนดเครื่องมือใหม่">กำหนดเครื่องมือใหม่&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_ละเว้นข้อผิดพลาด">ละเว้นข้อผิดพลาด</a>
+  </li>
+  <li level="1">
+   <a href="#_การระงับยกเลิกการระงับเครื่องมือ">การระงับ/ยกเลิกการระงับเครื่องมือ</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="toolingvalidation/foldtooling.html">Fold tooling validation</a></span>
+ <span class="next"><a href="../savingfilters.html">Saving filters</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

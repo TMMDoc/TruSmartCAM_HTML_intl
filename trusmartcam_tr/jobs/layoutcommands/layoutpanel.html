@@ -1,0 +1,755 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Yerleşim paneli</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">TruSmartCAM'e Hoş Geldiniz</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Kurulum</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Donanım gereksinimleri</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Desteklenen dosya formatları</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Önkoşullar</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Sunucu kurulumu</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">İstemci kurulumu</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Lisansı değiştir</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Yapılandırma</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Makine ekleme/çıkarma</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Takım kurulumu</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Kullanıcıları yapılandırma</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Dil</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Malzeme</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Yeni malzeme ve sac ekleme</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Malzemeyi dışa aktarma/içe aktarma</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Malzemeyi değiştirme</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Malzeme eşleme</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAM sayfalarını eşleme</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">CAD'den alanları eşleme (arama anahtarları)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Kullanıcı arayüzü</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">İş Akışı</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Kütüphane</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Aç</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Parçaları içe aktarma</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Siparişleri içe aktarma</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">İşleri içe aktarma</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Montajları içe aktarma</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Kütüphane görünümü</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Parçalar</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Montaj</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Parça durumu</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Parça doğrulama</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Parça paneli</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Parça filtreleri</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Takım durumu</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Takım doğrulama</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Büküm takımı doğrulama</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Kesim takımı doğrulama</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Katlama takımı doğrulama</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Takım paneli</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Filtreleri kaydetme</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Siparişler</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Sipariş görünümü</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">İşler</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../jobcreation.html">İş oluşturma</a></li>
+    <li><button class="tree blank"></button><a href="../jobview.html">İş görünümü</a></li>
+    <li><button class="tree blank"></button><a href="../jobpanel.html">İş paneli</a></li>
+    <li><button class="tree blank"></button><a href="../jobautoplan.html">Otomatik planlama</a></li>
+    <li><button class="tree blank"></button><a href="../jobinteractplan.html">Etkileşimli yerleştirme</a></li>
+    <li><button class="tree blank"></button><a href="../repacking.html">Yeniden paketleme</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Yerleşim yönetimi</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="nestview.html">Yerleşim görünümü</a></li>
+      <li><button class="tree blank"></button><a class="active" href="layoutpanel.html">Yerleşim paneli</a></li>
+      <li><button class="tree blank"></button><a href="reportsender.html">Rapor gönderici</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../remnantmanagement/index.html">Artık yönetimi</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../remnantmanagement/autoremnant.html">Otomatik artık yönetimi</a></li>
+      <li><button class="tree blank"></button><a href="../remnantmanagement/manualremnant.html">Manuel artık yönetimi</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../twinlinenesting.html">İkiz hat yerleştirme</a></li>
+    <li><button class="tree blank"></button><a href="../outdate.html">Güncel değil</a></li>
+    <li><button class="tree blank"></button><a href="../jobfilters.html">İş filtreleri</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD uzantıları</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks eklentisi</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Kurulum</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Parçaları kaydet</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Montajı kaydet</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Uygulanabilirliği kontrol et</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Fabrika ayarları</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Çeşitli iyileştirmeler</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Künye</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">İşler</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Yerleşim yönetimi</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="layoutpanel.html">Yerleşim paneli</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Yerleşim paneli</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bu bölüm, <strong>Makineye Gönder&#8230;&#8203;</strong>,
+<strong>Makineden Geri Çağır&#8230;&#8203;</strong>,
+<strong>Çıktıları Dışa Aktar</strong>,
+<strong>Tamamlandı Olarak İşaretle&#8230;&#8203;</strong>, <strong>Parçalar Ekle&#8230;&#8203;</strong>,
+<strong>Uyarla/Sıkıştır&#8230;&#8203;</strong>,
+<strong>Yerleşim Düzenlerini Ayır&#8230;&#8203;</strong> ve yerleşim örneklerini yönetmek için kullanılan
+diğer seçenekler gibi yerleşimle ilgili eylemleri açıklar.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/layout.png" alt="Layout panel" width="181">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Görüntülemek için salt okunur olarak aç</strong><br>
+Seçili yerleşimi salt okunur modda açar.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Seçili yerleşimin düzenlenmesini etkinleştirir.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sil</strong><br>
+Seçili yerleşimi siler.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/openreport.png" alt="Report" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Raporu Görüntüle</strong><br>
+Seçili yerleşim için standart yerleşim raporunu ve etikete özgü raporu açar.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sendui.png" alt="Send" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Makineye Gönder&#8230;&#8203;</strong><br>
+Seçili yerleşimi makineye gönderir ve çıktı dosyalarını (fxlyt, NC, rapor, csv)
+iş çıktı konumuna aktarır.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/addui.png" alt="Add" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Parçalar Ekle&#8230;&#8203;</strong><br>
+Yerleşim yeniden paketleme sihirbazını kullanarak kötü paketlenmiş bir
+yerleşime daha fazla parça ekler.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/adaptui.png" alt="Adapt" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Uyarla/Sıkıştır&#8230;&#8203;</strong><br>
+Parçaları sıkıştırmak ve kullanılabilir alanı boşaltmak için seçili yerleşimi
+yeniden yerleştirir.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/changeui.png" alt="Change" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LTT&#8217;yi değiştir&#8230;&#8203;</strong><br>
+Seçili yerleşime atanan levhayı değiştirir.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/splitui.png" alt="Split"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Yerleşim Düzenlerini Ayır&#8230;&#8203;</strong><br>
+Seçili yerleşimi iki veya daha fazla ayrı yerleşime böler.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/renameui.png" alt="RenameUi" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rename layout&#8230;&#8203;</strong><br>
+Seçili yerleşimi yeniden adlandırır.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>İş</strong> / <strong>Önceki</strong> / <strong>Sonraki</strong> / <strong>Parçalar</strong><br>
+Üst işe, seçili iş içindeki önceki veya sonraki yerleşime veya yerleşimde
+bulunan parçalara gider.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sort.png" alt="Filters" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort and filter</strong><br>
+Seçili yerleşimle aynı özniteliği paylaşan diğer yerleşimleri görüntülemek için
+bu filtreleri kullanın: Aynı Makine, Aynı Malzeme, Aynı LTT, Aynı Öncelik,
+Aynı Durum, Aynı Levha, Aynı Parça, Aynı Artık Durumu veya Aynı Hadde yönü.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="send-to-machine">Makineye Gönder&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Bir yerleşim hazır olduğunda (dolu veya acilen gerekli), makineye
+gönderebilirsiniz.</p>
+</li>
+<li>
+<p>Yerleşime sağ tıklayın ve <strong>Makineye Gönder&#8230;&#8203;</strong> seçeneğini
+belirleyin.</p>
+</li>
+<li>
+<p>Yerleşim adını taşıyan bir klasör otomatik olarak oluşturulur.</p>
+</li>
+<li>
+<p>Çıktı dosyaları (fxlyt, NC, rapor, csv) İŞ çıktı konumuna aktarılır.</p>
+</li>
+<li>
+<p>Makineye gönder yerleşimleri mavi bir onay işareti ile gösterilir.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/sendtomachine.png" alt="Send to machines" width="1180">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Yayınlandıktan sonra, bu yerleşimler yeniden paketleme için tekrar
+denenmez.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_makineden_geri_çağır">Makineden Geri Çağır&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Çıktının doğrulamaya veya güncellemeye ihtiyacı varsa (örneğin, daha fazla
+parça eklemek):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Dışa aktarılan yerleşime sağ tıklayın.</p>
+</li>
+<li>
+<p><strong>Makineden Geri Çağır&#8230;&#8203;</strong> seçeneğini belirleyin.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Çıktı dosyaları ve klasör (fxlyt, NC, rapor, csv) silinir.</p>
+</li>
+<li>
+<p>Yerleşim tekrar düzenlenebilir hale gelir.</p>
+</li>
+<li>
+<p>Değişiklik yapabilir ve tekrar makineye gönderebilirsiniz.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/recallfrommachine.png" alt="Recall from machines" width="1153">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_çıktıları_dışa_aktar">Çıktıları Dışa Aktar</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Makineye gönderilmiş herhangi bir yerleşime (yerleşim) sağ tıklayın ve
+<strong>Çıktıları Dışa Aktar</strong> seçeneğine tıklayın.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput1.png" alt="Export outputs" width="447">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Çıktıları Dışa Aktar seçeneği, NC, Rapor ve Yerleşim dosyalarını ilgili
+makine çıktı klasörlerine aktarır.</p>
+</li>
+<li>
+<p>Bu seçenek, yerleşim için geçerli birim ayarları ile NC dosyasını yeniden
+oluşturur.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Çıktıları Dışa Aktar, Tamamlanan Yerleşimler ve yeniden paketleme için
+kuyrukta bekleyen Yerleşimler için kullanılamaz.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mark-complete">Tamamlandı olarak işaretle</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Yerleşim makinede işlendikten sonra, yerleşime sağ tıklayın ve
+<strong>Tamamlandı Olarak İşaretle&#8230;&#8203;</strong> seçeneğini belirleyin.</p>
+</li>
+<li>
+<p>Birden fazla yerleşim seçip aynı anda tamamlandı olarak işaretleyebilirsiniz.</p>
+</li>
+<li>
+<p>Bir yerleşim tamamlandı olarak işaretlendiğinde:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Gri renkte gösterilir, listenin sonuna taşınır ve yeşil bir onay işareti
+ile gösterilir.</p>
+</li>
+<li>
+<p>Yerleşim, aktif yerleşimler listesinden kaldırılır.</p>
+</li>
+<li>
+<p>Parça ve iş durumları güncellenir ve işlenen miktarlar tamamlanmış duruma
+geçer.</p>
+</li>
+<li>
+<p>O yerleşim için çıktı dosyaları, çift kullanımı önlemek için makine çıktı
+konumundan kaldırılır.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/markcomplete1.png" alt="Mark complete" width="1101">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="add-parts">Parçalar Ekle&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart1.png" alt="Add parts" width="997">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nispeten kötü paketlenmiş bir yerleşime daha fazla parça eklemek için bu
+seçeneği kullanın. Etkileşimli Yerleştirme gibi, bu da sihirbaz odaklı bir
+seçenektir ve aynı anda tek veya birden fazla yerleşimde kullanılabilir.</p>
+</li>
+<li>
+<p>Bu seçenek kullanıldığında TruSmartCAM, ana çalışma alanına Yerleşim yeniden
+paketleme sihirbazını monte eder. <kbd>Ctrl</kbd> tuşunu basılı tutun ve yerleşim(ler)e
+paketlenecek bir veya daha fazla parça seçin ve <strong>Sonraki</strong> seçeneğine
+basın.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart2.png" alt="Part selection" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>Seçili parçalar, düzenlenebilir bir miktar sütunu ile bir sonraki adımda
+görüntülenir. Gerekirse <strong>Update Qty</strong> alanında parça miktarlarını güncelleyin.
+Yerleştirmeye devam etmek için <strong>Sonraki</strong> seçeneğine tıklayın.
+Miktarların yalnızca artırılabileceğini, azaltılamayacağını unutmayın.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart3.png" alt="Update quantity" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>Tüm yerleşimler ayrı ayrı yerleştirilir ve yerleştirme sonuçları, yeni
+paketlenen parçalarla birlikte yerleştirilerek görüntülenir. Yerleşimi seçmek,
+mevcut tüm yerleşim parçalarını görüntüler. Yeniden paketleme sırasında yeni
+parça yerleştirilmezse sonuç otomatik olarak iptal edilir. Birden fazla kopyası
+olan bir yerleşim, yeniden paketlemeden sonra farklı desenlerle sonuçlanabilir.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart4.png" alt="Repack result" width="2200">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="adapt-compact">Uyarla/Sıkıştır&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Bu sihirbaz tabanlı komut, orijinal makine arızalı olduğunda veya makine iş
+yükünün dengelenmesi gerektiğinde bir yerleşimi bir makineden diğerine
+uyarlamak için kullanılabilir.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt1.png" alt="Adapt compact" width="737">
+</div>
+</div>
+</li>
+<li>
+<p>Planlanan levha stokta olmadığında ve yerleşimin başka bir mevcut levhaya
+yeniden planlanması gerektiğinde kullanılabilir.</p>
+</li>
+<li>
+<p>Malzemeyi daha verimli kullanmak için daha küçük levhalara paketlenen
+yerleşimleri daha büyük levhaların üzerine birleştirebilirsiniz.</p>
+</li>
+<li>
+<p>Büyük levha stokları mevcut değilse, daha büyük levhalara paketlenen
+yerleşimleri daha küçük levhalara bölebilirsiniz.</p>
+</li>
+<li>
+<p>Birden fazla yerleşimin (hatta farklı makinelerden) paketleme verimliliğini
+birleştirerek artırabilirsiniz.</p>
+</li>
+<li>
+<p>Kullanmak için, bir veya daha fazla yerleşim seçin ve çalışma alanında
+sihirbazı açmak için <strong>Uyarla/Sıkıştır&#8230;&#8203;</strong> seçeneğine tıklayın.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt2.png" alt="Layouts window" width="1902">
+</div>
+</div>
+</li>
+<li>
+<p>Sol bölme seçili tüm yerleşimleri, Parçalar bölmesi ise yerleşim parçalarını
+gösterir.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt3.png" alt="Layouts window" width="1910">
+</div>
+</div>
+</li>
+<li>
+<p>Hedef makineyi ve levha malzemesini seçin, ardından yeniden yerleştirme
+yapmak için <strong>Sonraki</strong> seçeneğine tıklayın.</p>
+</li>
+<li>
+<p>Yeni yerleşim sonuçları sonuçlar bölmesinde gösterilir.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt4.png" alt="Layouts window" width="1901">
+</div>
+</div>
+</li>
+<li>
+<p>Uyarlanan veya sıkıştırılan yerleşimi kaydetmek için <strong>Sonraki</strong>
+seçeneğine tıklayın.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt5.png" alt="Layouts window" width="1902">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_yerleşim_bölme">Yerleşim bölme</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Yerleşim Düzenlerini Ayır&#8230;&#8203;</strong> seçeneği, takım veya yerleştirmeyi yeniden
+yapma ihtiyacı olmadan miktarları değiştirerek mevcut bir yerleşimi birden fazla
+yerleşime bölmenizi sağlar.</p>
+</div>
+<div class="paragraph">
+<p>Bu özellik özellikle aşağıdaki senaryolarda kullanışlıdır:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Toplam miktarın bir kısmını hemen üretmeniz ve kalan miktarı daha sonraki
+üretim için planlamanız gerektiğinde.</p>
+</li>
+<li>
+<p>Üretim gereksinimlerinin iş akışını ve kaynak kullanımını optimize etmek için
+birden fazla vardiya veya güne dağıtılması gerektiğinde.</p>
+</li>
+<li>
+<p>Belirli bir makine geçici olarak kullanılamadığında veya meşgul olduğunda ve
+mevcut üretim kısıtlamalarını karşılamak için yerleşimi ayarlamanız gerektiğinde.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Bir yerleşimi bölmek için aşağıdaki adımları gerçekleştirin:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Yerleşimler görünümünde, gerekli yerleşimi seçin.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/splitlayout.png" alt="Split layout" width="264">
+</div>
+</div>
+</li>
+<li>
+<p><strong>Yerleşim Düzenlerini Ayır&#8230;&#8203;</strong> seçeneğine tıklayın.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/layoutpanel.png" alt="Layout panel" width="155">
+</div>
+</div>
+</li>
+<li>
+<p><strong>Yeni Kopyalar</strong> alanına gerekli değeri girin.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/newcopies.png" alt="New copies" width="389">
+</div>
+</div>
+</li>
+<li>
+<p><strong>Tamam</strong> seçeneğine tıklayın.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/twolayout.png" alt="Two layouts" width="547">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Seçili yerleşim artık ayarlanmış miktarlarla iki yerleşime bölünmüştür.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#send-to-machine">Makineye Gönder&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_makineden_geri_çağır">Makineden Geri Çağır&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_çıktıları_dışa_aktar">Çıktıları Dışa Aktar</a>
+  </li>
+  <li level="1">
+   <a href="#mark-complete">Tamamlandı olarak işaretle</a>
+  </li>
+  <li level="1">
+   <a href="#add-parts">Parçalar Ekle&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#adapt-compact">Uyarla/Sıkıştır&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_yerleşim_bölme">Yerleşim bölme</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="nestview.html">Yerleşim görünümü</a></span>
+ <span class="next"><a href="reportsender.html">Rapor gönderici</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

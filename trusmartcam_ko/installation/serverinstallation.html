@@ -1,0 +1,854 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>서버 설치</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">TruSmartCAM에 오신 것을 환영합니다</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">설치</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="hardwarerequirement.html">하드웨어 요구 사항</a></li>
+    <li><button class="tree blank"></button><a href="importformats.html">지원되는 파일 형식</a></li>
+    <li><button class="tree blank"></button><a href="prerequisites.html">사전 요구 사항</a></li>
+    <li><button class="tree blank"></button><a class="active" href="serverinstallation.html">서버 설치</a></li>
+    <li><button class="tree blank"></button><a href="clientinstallation.html">클라이언트 설치</a></li>
+    <li><button class="tree blank"></button><a href="changelic.html">라이선스 변경</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">구성</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">기계 추가/제거</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">툴링 설정</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">사용자 구성</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">언어</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">재료</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">새 재료 및 시트 추가</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">재료 내보내기/가져오기</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">재료 교체</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">재료 매핑</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">CAM 페이지 매핑</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">CAD에서 필드 매핑 (조회 키)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">사용자 인터페이스</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">워크플로우</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Library</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Tooling panel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">주문</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">주문 보기</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../jobs/jobcreation.html">작업 생성</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobview.html">작업 보기</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobpanel.html">작업 패널</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobautoplan.html">자동 계획</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobinteractplan.html">대화형 네스팅</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/repacking.html">재포장</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/layoutcommands/index.html">네스트 관리</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/nestview.html">레이아웃 보기</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/layoutpanel.html">레이아웃 패널</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/reportsender.html">보고서 발신자</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/remnantmanagement/index.html">잔재 관리</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/autoremnant.html">자동 잔재 관리</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/manualremnant.html">수동 잔재 관리</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../jobs/twinlinenesting.html">트윈라인 네스팅</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/outdate.html">구식</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobfilters.html">작업 필터</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD 확장 기능</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks 추가 기능</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">설치</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">부품 저장</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">어셈블리 저장</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">실행 가능성 확인</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">공장 설정</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">기타 개선 사항</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">법적 고지</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">설치</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="serverinstallation.html">서버 설치</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>서버 설치</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>SQL과 함께 TruSmartCAM 서버를 설치하려면 다음 지침을 따르십시오.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">관리자 권한</div>
+<div class="paragraph">
+<p><strong>이 설치를 실행하려면 사용자에게 관리자 권한이 있어야 합니다.</strong></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>설치를 시작하려면 *Setup.TruSmartCAM.&lt;version&gt;.exe*를 실행합니다.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Version은 숫자입니다.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>라이선스 계약을 읽고 *I accept the agreement*를 선택한 다음 다음
+를 클릭합니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s02praxislicenseagreement.png" alt="Praxis License Agreement">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1단계_설치_위치">1단계 : 설치 위치</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>설치 디렉터리를 지정하거나 기본 설치 경로인 `C:\Program Files\Metamation\Praxis`를 수락하고 다음를 클릭합니다.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>C:\Program Files\Metamation\Praxis</code> - 설치 폴더에는 다음 폴더가 포함됩니다: Bin, MetaCAM, Samples 및 Tracker.</p>
+</li>
+<li>
+<p><code>C:\Program Data\Metamation</code> - 데이터 폴더에는 다음 폴더가 포함됩니다: TruSmartCAM, TecZone 및 MetaCAM.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s03installationpath.png" alt="Installation Path">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2단계_구성_요소_선택">2단계 : 구성 요소 선택</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">설치 유형</th>
+<th class="tableblock halign-left valign-top">구성 요소</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Desktop client + Engine</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Client</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Desktop Client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Desktop client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Station</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Picks all Stations Terminal like TecZone, MetaCAM, RightAngle(Bend Controller),
+Vulcan(Laser Machine Controller)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Picks by user choice.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Full Installation을 선택합니다. TruSmartCAM Tools에서 <strong>Code Senders</strong> 및 *Bend Code Senders*를 선택합니다. 이제 설치 유형이 *사용자 정의*로 변경됩니다. 다음를 클릭합니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s04serverinstallation.png" alt="Server Installation">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3단계_sql_server_설치_선택">3단계 : SQL Server 설치 선택</h2>
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>SQL Express 2022 설치는 TruSmartCAM 서버에만 필요합니다. 이 옵션은 Client 및 Sync 설치에서는 사용할 수 없습니다. 또한 처음 설치 시 선택되어 설치되며 이후에는 무시할 수 있습니다. TruSmartCAM 서버에 SQL이 이미 설치되어 있는 경우 사용자는 3단계를 무시할 수 있습니다.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select Additional Tasks에서: *Install SQL Express*를 클릭하고 다음를 클릭합니다.</p>
+</li>
+<li>
+<p>Ready to Install에서: 모든 설치 기능을 요약하고 Install을 클릭합니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s05sqlinstall.png" alt="Install SQL">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4단계_sql_server_설치">4단계 : SQL Server 설치</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TruSmartCAM 구성 요소가 설치되면 설치 프로그램은 SQL 서버 설치를 진행합니다. 라이선스 계약에 동의하여 진행하고 기본 옵션으로 SQL express를 설치합니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s06sqlserver.png" alt="SQLServer Install">
+</div>
+</div>
+<div class="paragraph">
+<p>설치가 완료되면 Close를 클릭하고 설치를 완료합니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s07sqlservercomplete.png" alt="SQL Server Complete">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Windows 버전에 따라 SQL 설치를 닫으면 다시 시작하라는 메시지가 표시될 수 있습니다.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_5단계_windows_바탕_화면_바로_가기">5단계 : Windows 바탕 화면 바로 가기</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>SQL 설치 후 시스템이 다시 시작되지 않으면 <strong>Launch TruSmartCAM</strong> 확인란을 선택하고 *Finish*를 클릭합니다.</p>
+</li>
+<li>
+<p>시스템이 다시 시작되면 바탕 화면에서 TruSmartCAM 바로 가기 아이콘을 시작하거나 Windows 시작 프로그램에서 TruSmartCAM을 입력하고 *관리자 권한으로 실행*합니다.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<em>서버 설치</em> : TruSmartCAM 및 TruSmartCAM License 바로 가기 아이콘이 바탕 화면에서 사용 가능합니다. + <em>Client/SYNC 설치</em> : TruSmartCAM 바로 가기 아이콘만 바탕 화면에서 사용 가능합니다.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s08launchpraxis.png" alt="Launch TruSmartCAM">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_6단계_라이선스_등록">6단계 : 라이선스 등록</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><em>Serial Number</em> 필드에 Trumpf Metamation Service Team에서 제공한 _TruSmartCAM Serial key_를 입력합니다. "Registered to" 필드와 E-Mail에 *&lt;Company Name&gt;*을 입력합니다. *OK*를 클릭합니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s09praxisregister.png" alt="TruSmartCAM Register">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>네트워크 방화벽이 라이선스 등록을 차단하거나 TruSmartCAM 서버 PC에 인터넷이 없는 경우 오프라인 활성화를 통해 TruSmartCAM 라이선스가 수행됩니다. <em>C:\ProgramData\Metamation\Praxis</em> 폴더에서 *<em>Prax.request</em>*를 Trumpf Metamation Service Team에 이메일로 보냅니다. Trumpf Metamation Team은 이 폴더에 저장해야 하는 *<em>Prax.lock</em>*을 제공합니다.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_7단계_초기_1회_구성">7단계 : 초기 1회 구성</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Database Name을 입력하고 Data Storage Location을 설정합니다. SQL 서버 사용 확인란을 선택하고 데이터베이스에 연결할 SQL 서버 이름을 선택합니다. *OK*를 클릭합니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s10usedatabase.png" alt="Use Database">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM Desktop Client가 열리고 왼쪽 하단에 *Database Connection Succeeded*가 표시됩니다.</p>
+</li>
+<li>
+<p>TruSmartCAM, TecZone 및 MetaCAM 구성 파일이 기본 구성 머신 또는 TruSmartCAM 라이선스 머신에 대해 생성되었습니다. 동일한 구성이 모든 TruSmartCAM 클라이언트에서 공유됩니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s11databaseconnectionsuccess.png" alt="Database Connection Success">
+</div>
+</div>
+<div class="paragraph">
+<p>환영 화면이 Windows User LoginName을 TruSmartCAM Login 및 Name으로 표시합니다. 첫 번째 TruSmartCAM 사용자는 <strong>사이트 관리자*로 간주됩니다. Email 및 Password를 입력합니다. *OK</strong>
+를 클릭합니다.</p>
+</div>
+<div class="paragraph">
+<p>다음 번에 로그인 자격 증명을 저장하려면 <strong>로그인 기억하기</strong>
+확인란을 선택합니다.
+<strong>로그인 기억하기</strong> 확인란을 선택 해제하면 TruSmartCAM 애플리케이션이 시작될 때마다 로그인 및 비밀번호 대화 상자가 표시됩니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s12welcomepraxis.png" alt="Welcome TruSmartCAM">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_8단계_trusmartcam_로그인">8단계 : TruSmartCAM 로그인</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM을 닫고 다시 엽니다. 시스템에서 TruSmartCAM 로그인 자격 증명을 입력하라는 메시지가 표시됩니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/signprompt.png" alt="Sign Prompt" width="450">
+</div>
+</div>
+</li>
+<li>
+<p>로그인한 사용자 이름이 TruSmartCAM 애플리케이션 헤더의 사용자 아이콘 옆에 표시됩니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/userid.png" alt="User ID" width="228">
+</div>
+</div>
+</li>
+<li>
+<p>사용자 아이콘 위로 마우스를 가져가면 시스템에 다음이 표시됩니다:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/hover.png" alt="Hover" width="108">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>사용자 역할(예: Programmer, Admin).</p>
+</li>
+<li>
+<p>로그아웃 바로 가기: <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>L</kbd></span>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>사용자 아이콘을 클릭하면 다음을 수행할 수 있는 메뉴가 열립니다:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/information.png" alt="Information" width="160">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>정보 편집&#8230;&#8203;</strong> - 프로필 세부 정보를 업데이트합니다.</p>
+</li>
+<li>
+<p><strong>비밀번호 변경&#8230;&#8203;</strong> - 계정 비밀번호를 변경합니다.</p>
+</li>
+<li>
+<p><strong>로그아웃</strong> - 애플리케이션에서 로그아웃합니다.</p>
+</li>
+<li>
+<p><strong>취소</strong> - 변경 사항 없이 메뉴를 닫습니다.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_9단계_factory_machine_구성">9단계 : Factory Machine 구성</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM License [모든 머신 라이선스 비트 활성화] : 기본 TruSmartCAM Machine 및 Material이 Factory Configuration으로 간주됩니다.</p>
+</li>
+<li>
+<p>TruSmartCAM License [데모 없음 및 일부 머신 비트 활성화] : 이러한 일부 머신 및 기본 Material이 Factory Configuration으로 간주됩니다.</p>
+</li>
+<li>
+<p>`C:\Program
+Files\Metamation\Praxis\Samples\Parts`에서 새 Part를 (Open &#8594; Import)하고 Part가 성공적으로 가져와졌는지 확인합니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s14praxiswelcomescreen.png" alt="Praxis Welcome screen">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_참고_1_trusmartcam_monitor">참고 1 : TruSmartCAM Monitor</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Engine 설치가 포함된 TruSmartCAM Monitor (Site admin 권한):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Site Admin TruSmartCAM 권한이 있는 Engine이 포함된 TruSmartCAM Monitor에는 다음 옵션이 있습니다:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>모든 TruSmartCAM 클라이언트에 TruSmartCAM 구성, TecZone, MetaCAM 구성을 푸시합니다. 또한 새 TruSmartCAM 사용자 로그인을 생성할 권한이 있습니다.</p>
+</li>
+<li>
+<p>Show Agents는 TruSmartCAM License에 대한 자동화 작업을 수행할 수 있는 총 엔진을 표시합니다.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s15pmonitor.png" alt="Praxis Monitor Status">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Engine 설치가 없는 TruSmartCAM Monitor (Site admin 권한):</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s16pmonitorwithoutengine.png" alt="Praxis Monitor without Engine">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Engine 설치가 없는 TruSmartCAM Monitor (Non Site Admin 권한):</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s17pmonitorwithprogrammerlogin.png" alt="Praxis with Progrmmer login">
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>TruSmartCAM 애플리케이션을 실행하는 PC에는 Engine TruSmartCAM 구성 요소가 설치되어 있어야 합니다[서버 PC 또는 모든 클라이언트 설치]. Engine TruSmartCAM 구성 요소가 설치된 PC는 모든 자동화 작업을 수행하기 위해 24x7로 실행되어야 합니다.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_참고_2_lock_tracker">참고 2 : Lock Tracker</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM 서버 바탕 화면에서 사용 가능한 <strong>TruSmartCAM License</strong> 바로 가기를 클릭합니다.
+또는 웹 브라우저에서 <a href="http://localhost:7171/metamation/locktrack" class="bare">http://localhost:7171/metamation/locktrack</a> url을 엽니다.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>이렇게 하면 라이선스 정보, TruSmartCAM 현재 세션 정보 및 로그가 있는 Lock Tracker 모듈이 열립니다.</p>
+</div>
+<div class="paragraph">
+<p>LockTracker HOME Page : TruSmartCAM Serial Number, Serial 만료 정보 및 Serial 비트 사용 가능 정보를 표시합니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s18locktrack01.png" alt="Lock Track License Home page">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker SESSIONS Page : TruSmartCAM Desktop client PC, PMonitor, PEngine 상태와 같은 현재 TruSmartCAM 서버 연결 정보입니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s19locktrack02.png" alt="Lock Track Session information">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker LOGs Page : TruSmartCAM 클라이언트 시작 및 로그오프 | Pmonitor 시작 및 PEngine 연결/연결 해제 상태 등을 이 로그 페이지에서 볼 수 있습니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s20locktrack03.png" alt="Praxis Monitor Status">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_참고_3_opengl">참고 3 : OpenGL</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM 애플리케이션을 열 때 즉시 닫히고 pmonitor가 작업 표시줄에 표시되지 않습니다.</p>
+</li>
+<li>
+<p>이것은 OpenGl 문제를 나타냅니다.</p>
+</li>
+<li>
+<p>이를 확인하는 또 다른 방법: C:\Program
+Files\Metamation\Praxis\Bin\Flux.exe를 열면 OpenGL 문제에 대한 오류 대화 상자가 표시됩니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s21opengl.png" alt="OpenGL Issue">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>C:\ProgramData\Metamation\Praxis\Prax.ini</em>, options 섹션을 *GLVersion=1*로 업데이트하면 TruSmartCAM 애플리케이션이 성공적으로 열립니다.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ini hljs" data-lang="ini">[Options]
+GLVersion=1.0</code></pre>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_1단계_설치_위치">1단계 : 설치 위치</a>
+  </li>
+  <li level="1">
+   <a href="#_2단계_구성_요소_선택">2단계 : 구성 요소 선택</a>
+  </li>
+  <li level="1">
+   <a href="#_3단계_sql_server_설치_선택">3단계 : SQL Server 설치 선택</a>
+  </li>
+  <li level="1">
+   <a href="#_4단계_sql_server_설치">4단계 : SQL Server 설치</a>
+  </li>
+  <li level="1">
+   <a href="#_5단계_windows_바탕_화면_바로_가기">5단계 : Windows 바탕 화면 바로 가기</a>
+  </li>
+  <li level="1">
+   <a href="#_6단계_라이선스_등록">6단계 : 라이선스 등록</a>
+  </li>
+  <li level="1">
+   <a href="#_7단계_초기_1회_구성">7단계 : 초기 1회 구성</a>
+  </li>
+  <li level="1">
+   <a href="#_8단계_trusmartcam_로그인">8단계 : TruSmartCAM 로그인</a>
+  </li>
+  <li level="1">
+   <a href="#_9단계_factory_machine_구성">9단계 : Factory Machine 구성</a>
+  </li>
+  <li level="1">
+   <a href="#_참고_1_trusmartcam_monitor">참고 1 : TruSmartCAM Monitor</a>
+  </li>
+  <li level="1">
+   <a href="#_참고_2_lock_tracker">참고 2 : Lock Tracker</a>
+  </li>
+  <li level="1">
+   <a href="#_참고_3_opengl">참고 3 : OpenGL</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="prerequisites.html">사전 요구 사항</a></span>
+ <span class="next"><a href="clientinstallation.html">클라이언트 설치</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>
+    if (!hljs.initHighlighting.called) {
+      hljs.initHighlighting.called = true
+      ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,737 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Tooling panel</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">TruSmartCAM에 오신 것을 환영합니다</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">설치</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">하드웨어 요구 사항</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">지원되는 파일 형식</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">사전 요구 사항</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">서버 설치</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">클라이언트 설치</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">라이선스 변경</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">구성</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">기계 추가/제거</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">툴링 설정</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">사용자 구성</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">언어</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">재료</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">새 재료 및 시트 추가</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">재료 내보내기/가져오기</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">재료 교체</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">재료 매핑</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAM 페이지 매핑</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">CAD에서 필드 매핑 (조회 키)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">사용자 인터페이스</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">워크플로우</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Library</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Tooling status</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a class="active" href="toolingpanel.html">Tooling panel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">주문</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">주문 보기</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">작업 생성</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">작업 보기</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">작업 패널</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">자동 계획</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">대화형 네스팅</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">재포장</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">네스트 관리</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">레이아웃 보기</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">레이아웃 패널</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">보고서 발신자</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">잔재 관리</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">자동 잔재 관리</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">수동 잔재 관리</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">트윈라인 네스팅</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">구식</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">작업 필터</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD 확장 기능</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks 추가 기능</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">설치</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">부품 저장</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">어셈블리 저장</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">실행 가능성 확인</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">공장 설정</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">기타 개선 사항</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">법적 고지</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Library</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Tooling status</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="toolingpanel.html">Tooling panel</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Tooling panel</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>이 섹션에서는 툴링 인스턴스를 관리하는 데 사용되는
+<strong>출력물 내보내기</strong>,
+<strong>Check Tooling</strong>, <strong>툴링 억제</strong>,
+<strong>기본 전개도로 설정&#8230;&#8203;</strong>, <strong>툴링 복사&#8230;&#8203;</strong> 및 기타 옵션과 같은 툴링 관련 작업을 설명합니다.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/toolingpanel.png" alt="Tooling panel" width="150">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>보기용 읽기 전용으로 열기</strong><br>
+선택한 툴링을 읽기 전용 모드로 엽니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+선택한 툴링을 편집할 수 있도록 합니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>출력물 내보내기</strong><br>
+선택한 툴링 출력을 구성된 대상으로 내보냅니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/checkui.png" alt="Check Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check Tooling</strong><br>
+변경하지 않고 기존 툴링을 검증하고 검증이 실패하면 상태를 업데이트합니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/copyui.png" alt="Copy Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>툴링 복사&#8230;&#8203;</strong><br>
+선택한 참조 툴링에서 펀치, 시퀀스 및 백 게이지 설정을 복사하고 가능한 경우 다른 솔루션에 적용합니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/baseui.png" alt="Set as Base-Flat" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>기본 전개도로 설정&#8230;&#8203;</strong><br>
+절단 솔루션 생성을 위한 참조 플랫 크기로 선택한 벤드 또는 폴드 툴링을 표시합니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/retoolui.png" alt="Re-tool" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Re-tool&#8230;&#8203;</strong><br>
+다른 툴링에 영향을 주지 않고 부품에 대해 선택한 툴링을 다시 처리합니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/supressui.png" alt="Suppress Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>툴링 억제</strong><br>
+추가 처리 및 출력 생성에서 제외되도록 선택한 툴링을 억제합니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prevui.png" alt="Prev Next" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>이전</strong> / <strong>다음</strong> / <strong>파트</strong><br>
+이전 또는 다음 툴링으로 이동하거나 상위 부품으로 돌아갑니다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sortui.png" alt="Similar Toolings" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort and filter</strong><br>
+빠른 참조를 위해 선택한 툴링과 유사한 특성을 공유하는 다른 툴링을 표시합니다.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_출력물_내보내기">출력물 내보내기</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>이 옵션은 부품 출력을
+<strong>공장 설정</strong> 에 구성된 대상으로 내보냅니다. (
+<a href="../../factory/settings/bend.html">Bend Settings</a> 및
+<a href="../../factory/settings/cut.html">Cut Settings</a> 참조)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingoutput.png" alt="Tooling Output" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>전체 부품이 아닌 선택한 툴링 작업과 연결된 툴링만 내보냅니다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+내보낸 파일은 작업 유형에 따라 다릅니다. Bend 및 Fold 작업의 경우 NC 파일 및 보고서가 생성됩니다. Cut 및 Punch 작업의 경우 부품 파일만 내보냅니다.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_check_tooling">Check Tooling</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>CAM Settings 변경이 있거나 벤드 도구가 손실된 경우 부품을 다시 툴링할 필요가 없습니다.</p>
+</li>
+<li>
+<p>대신 Check Tooling을 사용하여 변경하지 않고 기존 툴링을 검증합니다.</p>
+</li>
+<li>
+<p>검증이 실패하면 해당 인스턴스의 툴링 상태가 업데이트되고 관련 출력 파일이 제거됩니다.</p>
+</li>
+<li>
+<p>Check Tooling은 <strong>오류 무시</strong> 를 사용하여 이전에 수동으로 재정의된 오류가 있는 부품을 감지하고 필요한 경우 상태를 오류로 업데이트합니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/checktooling.png" alt="Check Tooling" width="456">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_툴링_복사">툴링 복사&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>복사 툴링을 사용하면 한 솔루션의 벤드 툴링을 다른 솔루션에 빠르게 적용하여 시간과 노력을 절약할 수 있습니다.</p>
+</div>
+<div class="paragraph">
+<p>이것은 선택한 참조 툴링(솔루션)에서 펀치, 시퀀스 및 백 게이지 설정을 복사하고 다른 모든 솔루션에 동일한 설정을 적용하려고 시도합니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>복사된 설정이 대상 기계에 대해 실행 가능한 경우 저장되고 사용됩니다.</p>
+</li>
+<li>
+<p>설정이 실행 가능하지 않은 경우 해당 기계의 원래 툴링은 변경되지 않은 상태로 유지됩니다.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>예를 들어 다른 기계에 대해 다른 툴링이 있을 수 있습니다:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>여기서 Machine 5230SX 6A는 Gooseneck 펀치를 사용하고 Machine 5085X 6A B23은 Pointed 펀치를 사용합니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check3.png" alt="Before tooling" width="724">
+</div>
+</div>
+<div class="paragraph">
+<p>Machine 5230SX 6A에서 <strong>툴링 복사&#8230;&#8203;</strong> 를 사용하면 Gooseneck 설정을 다른 모든 기계에 복사하려고 시도합니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check4.png" alt="Copy tooling" width="664">
+</div>
+</div>
+<div class="paragraph">
+<p>동일한 펀치, 시퀀스 및 백 게이지 설정이 가능한 경우 적용됩니다. 복사된 설정을 사용할 수 없는 경우 원래 툴링은 변경되지 않은 상태로 유지됩니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/copytooling3.png" alt="After tooling" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>복사 툴링을 적용한 후 Gooseneck 설정이 실행 가능한 다른 모든 기계에 성공적으로 적용되었습니다.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_기본_전개도로_설정">기본 전개도로 설정&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>기본 전개도로 설정&#8230;&#8203;</strong> 기능은 절단 솔루션 생성을 위한 참조 플랫 크기로 사용되는 벤드 또는 폴드 툴링을 정의합니다.
+툴링이 Base-Flat로 표시되면 TruSmartCAM은 해당 기계를 기반으로 부품의 플랫 크기를 업데이트하고 그에 따라 절단 솔루션을 다시 생성합니다. Base-Flat 툴링은 UI에서 파란색 테두리로 표시됩니다.</p>
+</div>
+<div class="paragraph">
+<p>다른 벤드 기계는 동일한 부품에 대해 플랫 크기의 약간의 변형을 생성할 수 있습니다. 툴링을 Base-Flat로 설정하면 TruSmartCAM은 해당 기계의 플랫 크기를 마스터 참조로 사용하고 절단 솔루션을 자동으로 다시 계산합니다.</p>
+</div>
+<div class="paragraph">
+<p>여기서 다양한 기계에서 동일한 부품에 대해 다른 플랫 크기를 볼 수 있습니다:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat1.png" alt="Base flat1" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>이 예에서 <strong>5130X 6A B23</strong> 툴링이 Base-Flat로 설정되고 업데이트된 플랫 크기가 부품 속성에 적용됩니다:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat2.png" alt="Base flat2" width="663">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_자동_base_flat_선택">자동 base flat 선택</h3>
+<div class="paragraph">
+<p>공장 설정
+<strong>벤딩과정에서 전개도 보정 적용</strong> 이 활성화된 경우:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autobase.png" alt="Auto Base" width="806">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM은 부품 가져오기 중에 벤드 툴링(최대 벤드 길이 테이블 포함)을 자동으로 Base-Flat로 설정합니다.</p>
+</li>
+<li>
+<p>선택한 벤드 툴링에 오류가 발생하거나 실행 가능하지 않은 경우
+TruSmartCAM은 지능적으로 전환하고 다른 유효한 벤드 툴링을 Base-Flat로 설정합니다. 이렇게 하면 수동 개입 없이 플랫 크기 참조 및 절단 솔루션이 항상 일관되고 유효하게 유지됩니다.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_향상된_base_flat_관리">향상된 base flat 관리</h3>
+<div class="paragraph">
+<p>TruSmartCAM은 벤드 또는 폴드 툴링 편집을 저장할 때 <strong>Praxis에 저장</strong> 대화 상자에서 Base-Flat 옵션을 제공합니다. 이러한 옵션은 OK 상태의 툴링에 대해서만 나타나며 플랫 크기와 절단 솔루션이 정확하게 유지되도록 합니다.</p>
+</div>
+<div class="sect3">
+<h4 id="_기본_전개도base_flat로_설정하고_절단_프로그램_계산">기본 전개도(Base-Flat)로 설정하고 절단 프로그램 계산</h4>
+<div class="paragraph">
+<p>이 옵션은 툴링을 처음으로 Base-Flat로 표시하고 해당 절단 솔루션을 자동으로 생성하는 데 사용됩니다.</p>
+</div>
+<div class="paragraph">
+<p>다음과 같은 경우 나타납니다:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>툴링이 현재 Base-Flat로 표시되지 않음.</p>
+</li>
+<li>
+<p>사용자가 편집을 위해 툴링을 체크 아웃하고 변경 사항을 저장 중.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/setbase.png" alt="Set Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>이 옵션을 사용하려면 벤드 또는 폴드 툴링을 체크 아웃하고 벤드 매개변수 또는 플랫 크기 변경과 같은 필요한 수정을 수행합니다. <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>S</kbd></span>를 눌러 변경 사항을 저장합니다. <strong>Praxis에 저장</strong> 대화 상자에서
+<strong>기본 전개도(Base-Flat)로 설정하고 절단 프로그램 계산</strong> 을 선택하고
+<strong>OK</strong> 를 클릭합니다. TruSmartCAM은 툴링을 Base-Flat로 설정하고 업데이트된 플랫 크기를 사용하여 절단 솔루션을 생성합니다.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_기본_전개도를_업데이트하고_절단_프로그램_재계산">기본 전개도를 업데이트하고 절단 프로그램 재계산</h4>
+<div class="paragraph">
+<p>이 옵션은 툴링이 이미 Base-Flat로 표시되고 편집되어 플랫 크기와 절단 솔루션을 다시 생성해야 하는 경우 사용됩니다.</p>
+</div>
+<div class="paragraph">
+<p>다음과 같은 경우 나타납니다:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>툴링이 이미 Base-Flat로 표시됨.</p>
+</li>
+<li>
+<p>사용자가 이를 체크 아웃하고 편집한 후 변경 사항을 저장 중.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/updatebase.png" alt="Update Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>기존 Base-Flat 툴링을 편집할 때 필요에 따라 벤드 매개변수 또는 플랫 크기 형상을 업데이트합니다. <strong>Praxis에 저장</strong> 대화 상자에서
+<strong>기본 전개도를 업데이트하고 절단 프로그램 재계산</strong> 을 선택합니다.
+TruSmartCAM은 Base-Flat 툴링을 업데이트하고 최신 변경 사항을 반영하도록 관련된 모든 절단 솔루션을 다시 생성합니다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>한 번에 하나의 벤드 툴링만 Base-Flat로 설정할 수 있습니다.</p>
+</div>
+<div class="paragraph">
+<p>Base-Flat가 변경되면 기존 절단 솔루션이 자동으로 다시 처리됩니다.</p>
+</div>
+<div class="paragraph">
+<p>이 기능은 TruSmartCAM 내의 벤드 및 폴드 툴링 모두에 사용할 수 있습니다.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_다시_툴">다시 툴&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>이 옵션은 부품에 대해 선택한 툴링을 다시 처리합니다.</p>
+</div>
+<div class="paragraph">
+<p>Tooling 패널에서 필요한 툴링을 마우스 오른쪽 버튼으로 클릭하고
+<strong>다시 툴&#8230;&#8203;</strong> 를 클릭합니다</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingretool.png" alt="ToolingRetool" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>계속하기 전에 확인 대화 상자가 표시됩니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingconfirm.png" alt="ToolingConfirm" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>예</strong> 를 클릭하여 다시 툴링을 계속하거나 <strong>아니오</strong> 를 클릭하여 작업을 취소합니다.</p>
+</div>
+<div class="paragraph">
+<p>선택한 툴링만 다시 툴링됩니다. 부품과 연결된 다른 툴링은 영향을 받지 않습니다. 선택한 툴링과 관련된 기존 출력은 다시 툴링 프로세스 중에 제거되고 다시 생성됩니다.</p>
+</div>
+<div class="paragraph">
+<p>툴링 데이터가 오래되었거나 잘못되었거나 기계 또는 툴링 구성이 변경된 경우 이 옵션을 사용합니다.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_오류_무시">오류 무시</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>툴링된 인스턴스에 경고가 표시되고 여전히 계속 진행하려는 경우
+<strong>오류 무시</strong> 를 클릭하여 경고를 재정의할 수 있습니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/ignore.png" alt="Ignore errors" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>이렇게 하면 툴링 문제가 있어도 시스템이 해당 인스턴스에 대한 출력 파일을 내보낼 수 있습니다.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+경고를 안전하게 무시할 수 있다고 확신하는 경우에만 *Ignore Errors*를 사용하십시오. 실제 오류를 재정의하면 기계 손상 또는 안전 위험이 발생할 수 있습니다.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_suppressunsuppress_tooling">Suppress/Unsuppress tooling</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>기계가 비활성 상태이거나 특정 부품을 특정 기계에서 처리하지 않으려는 경우 <strong>툴링 억제</strong> 을 사용하여 해당 기계에서 해당 부품을 네스팅에서 제외합니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/supress.png" alt="Supress Tooling" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>억제 후 툴링된 인스턴스 위로 마우스를 가져가면 다음과 같은 메시지가 표시됩니다: "Tooling suppressed by &lt;User name&gt; on &lt;Date Time&gt;".</p>
+</li>
+<li>
+<p>Suppress tooling은 해당 기계 및 부품에 대한 출력 파일을 제거합니다.</p>
+</li>
+<li>
+<p><strong>툴링 억제 해제</strong> 을 사용하여 해당 기계에서 부품에 대한 툴링 상태를 복원합니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unsupress.png" alt="Unsupress Tooling" width="495">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>억제 해제되면 해당 출력 파일이 다시 생성됩니다.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_출력물_내보내기">출력물 내보내기</a>
+  </li>
+  <li level="1">
+   <a href="#_check_tooling">Check Tooling</a>
+  </li>
+  <li level="1">
+   <a href="#_툴링_복사">툴링 복사&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_기본_전개도로_설정">기본 전개도로 설정&#8230;&#8203;</a>
+  </li>
+  <li level="2">
+   <a href="#_자동_base_flat_선택">자동 base flat 선택</a>
+  </li>
+  <li level="2">
+   <a href="#_향상된_base_flat_관리">향상된 base flat 관리</a>
+  </li>
+  <li level="1">
+   <a href="#_다시_툴">다시 툴&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_오류_무시">오류 무시</a>
+  </li>
+  <li level="1">
+   <a href="#_suppressunsuppress_tooling">Suppress/Unsuppress tooling</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="toolingvalidation/foldtooling.html">Fold tooling validation</a></span>
+ <span class="next"><a href="../savingfilters.html">Saving filters</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

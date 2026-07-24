@@ -1,0 +1,409 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Routes</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">TruSmartCAM에 오신 것을 환영합니다</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">설치</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">하드웨어 요구 사항</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">지원되는 파일 형식</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">사전 요구 사항</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">서버 설치</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">클라이언트 설치</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">라이선스 변경</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">구성</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">기계 추가/제거</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">툴링 설정</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">사용자 구성</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">언어</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">재료</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">새 재료 및 시트 추가</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">재료 내보내기/가져오기</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">재료 교체</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">재료 매핑</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">CAM 페이지 매핑</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">CAD에서 필드 매핑 (조회 키)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">사용자 인터페이스</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">워크플로우</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Library</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Tooling panel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">주문</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">주문 보기</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../jobs/jobcreation.html">작업 생성</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobview.html">작업 보기</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobpanel.html">작업 패널</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobautoplan.html">자동 계획</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobinteractplan.html">대화형 네스팅</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/repacking.html">재포장</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/layoutcommands/index.html">네스트 관리</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/nestview.html">레이아웃 보기</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/layoutpanel.html">레이아웃 패널</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/reportsender.html">보고서 발신자</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/remnantmanagement/index.html">잔재 관리</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/autoremnant.html">자동 잔재 관리</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/manualremnant.html">수동 잔재 관리</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../jobs/twinlinenesting.html">트윈라인 네스팅</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/outdate.html">구식</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobfilters.html">작업 필터</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Factory</a>
+   <ul>
+    <li><button class="tree blank"></button><a class="active" href="routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD 확장 기능</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks 추가 기능</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">설치</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">부품 저장</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">어셈블리 저장</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">실행 가능성 확인</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">공장 설정</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">기타 개선 사항</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">법적 고지</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Factory</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="routes.html">Routes</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Routes</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>라이선스에 따라 TruSmartCAM에는 기본 CAM 기계 및 라우팅 구성 세트가 포함됩니다.
+이러한 구성을 사용자 정의하여 특정 제조 워크플로에 맞게 조정할 수 있습니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/station.png" alt="Station" width="882">
+</div>
+</div>
+<div class="paragraph">
+<p>routes 페이지에서 기계는 처리 스테이션으로 표시되며 각 스테이션은
+그림과 이름으로 식별됩니다.</p>
+</div>
+<div class="paragraph">
+<p>Routes는 스테이션을 연결하여 부품이 시작부터 완료까지 따를 수 있는
+가능한 워크플로 경로를 보여줍니다. 마우스를 스테이션 위에 올려놓으면
+스테이션 속성을 볼 수 있습니다.</p>
+</div>
+<div class="paragraph">
+<p>스테이션을 클릭하면 해당 스테이션의 이름, 유형 및 가용성 상태를 포함한
+상세 정보가 있는 패널이 열립니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>스테이션 가용성을 편집하려면 스테이션을 클릭하고
+패널에서 <strong>_Enabled</strong> 체크박스를 토글합니다.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exportimport_routing_configurations">Export/Import routing configurations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Export/Import</strong> 기능을 사용하면 사용자가 현재 라우팅 구성을 저장하고
+다른 프로젝트 또는 인스턴스에 적용할 수 있습니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/export.png" alt="Export" width="335">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_export_cad_routes">Export CAD routes</h3>
+<div class="paragraph">
+<p>*Export CAD routes&#8230;&#8203;*를 클릭하여 모든 현재 경로 조건 규칙을 CSV 파일로 저장합니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportroutes.png" alt="ExportRoutes">
+</div>
+</div>
+<div class="paragraph">
+<p>CSV에는 재료와 라우팅 조건이 나열됩니다.
+열은 기계 이름과 조건(예: Material, SpecialTool, HasBend, MaxBendLength)을 나타냅니다.
+값 1은 기계로의 라우팅을 나타내며 빈 셀은 라우팅 없음을 의미합니다.</p>
+</div>
+<div class="paragraph">
+<p>이 CSV를 수정하여 시스템에 다시 가져올 수 있습니다.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_import_cad_routes">Import CAD routes</h3>
+<div class="paragraph">
+<p>*Import CAD routes&#8230;&#8203;*를 사용하여 수정된 CSV 파일을 적용합니다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+가져오기 전에 *Reset CAD routes*를 실행하여 기존 구성을 지웁니다.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>시스템은 파일을 읽고 경로 조건을 업데이트합니다. 규칙에는
+HasBend 및 MaxBendLength와 같은 조건이 포함될 수 있습니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/hasbend.png" alt="HasBend">
+</div>
+</div>
+<div class="paragraph">
+<p>`HasBend = 1`이면 규칙은 벤드가 있는 부품에 적용됩니다.<br>
+`MaxBendLength =1`이면 규칙은 부품의 가장 긴 벤드 길이를 기준으로 추가로 제한됩니다.</p>
+</div>
+<div class="paragraph">
+<div class="title">Example 1</div>
+<p>Part 00.13의 가장 긴 벤드는 500 mm입니다. 첫 번째 규칙과 일치하므로 TBC-5030-V2가 제외됩니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/supressed.png" alt="Suppressed" width="580">
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Example 2</div>
+<p>Part 00.20의 가장 긴 벤드는 600 mm입니다. 첫 번째 규칙과 일치하지 않고 두 번째 규칙을 따르므로 모든 기계로 라우팅됩니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/notsupressed.png" alt="Not Suppressed" width="573">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_reset_cad_routes">Reset CAD routes</h3>
+<div class="paragraph">
+<p>새 CSV를 가져오기 전에 *Reset CAD routes*를 사용하여 모든 기존 구성을 지웁니다.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+리셋하지 않고 가져오면 이전 규칙이 새 규칙과 충돌할 수 있습니다.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_exportimport_routing_configurations">Export/Import routing configurations</a>
+  </li>
+  <li level="2">
+   <a href="#_export_cad_routes">Export CAD routes</a>
+  </li>
+  <li level="2">
+   <a href="#_import_cad_routes">Import CAD routes</a>
+  </li>
+  <li level="2">
+   <a href="#_reset_cad_routes">Reset CAD routes</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">Factory</a></span>
+ <span class="next"><a href="sheets.html">Sheets</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

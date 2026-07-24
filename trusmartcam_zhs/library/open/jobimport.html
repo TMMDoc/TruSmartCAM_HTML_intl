@@ -1,0 +1,489 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>导入作业</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">欢迎使用 TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">安装</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">硬件要求</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">支持的文件格式</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">先决条件</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">客户端安装</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">更改许可证</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">配置</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">添加/删除设备</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">设置工具</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">配置用户</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">语言</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">材料</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">添加新材料和板材</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">导出/导入材料</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">替换材料</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">映射材料</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">映射 CAM 页面</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">从 CAD 映射字段（查找键）</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">用户界面</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">工作流程</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">库</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">打开</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partimport.html">导入零件</a></li>
+      <li><button class="tree blank"></button><a href="orderimport.html">导入订单</a></li>
+      <li><button class="tree blank"></button><a class="active" href="jobimport.html">导入作业</a></li>
+      <li><button class="tree blank"></button><a href="assembliesimport.html">导入装配体</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">库视图</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">零件</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">装配体</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">零件状态</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">零件验证</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">零件面板</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">零件筛选器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">工装状态</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">工装验证</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">折弯工装验证</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">切割工装验证</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">折边工装验证</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">工装面板</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">保存筛选器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">订单</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">订单视图</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">作业</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">创建作业</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">作业视图</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">作业面板</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">自动规划</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">交互式排样</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">重新打包</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">排样管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">布局视图</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">布局面板</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">报告发送器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">余料管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">自动余料管理</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">手动余料管理</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">双线排样</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">过期</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">作业过滤器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">工厂</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">路线</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">板材</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">用户</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">编辑</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">客户</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">设置</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">环境</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">导入</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">折弯</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">切割</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">通知</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">监视</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">作业</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">报告</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD 扩展</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks 插件</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">安装</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">保存零件</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">保存装配体</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">检查可行性</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">工厂设置</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">其他增强功能</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">版本说明</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">库</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">打开</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobimport.html">导入作业</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>导入作业</h1>
+<div class="sect1">
+<h2 id="_从_csv_或_xlsx_导入">从 csv 或 xlsx 导入</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>您还可以以常见文本格式导入作业</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>点击 <strong>File &#8594; Open &#8594; 导入套料</strong>，打开文件夹对话框出现。选择 <code>C:\Program Files\Metamation\Praxis\Samples\Jobs\C0\C0.csv</code>。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv.png" alt="CSV import" width="426">
+</div>
+</div>
+</li>
+<li>
+<p>如果所有零件存在于 csv 位置或查找文件夹目录中，<strong>新套料</strong> 窗口会出现，列出所有与 csv 字段匹配的零件。</p>
+</li>
+<li>
+<p>缺失的零件被忽略，不会出现在 <strong>新套料</strong> 窗口中。</p>
+</li>
+<li>
+<p>最初零件状态为初始状态。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv2.png" alt="CSV import" width="908">
+</div>
+</div>
+</li>
+<li>
+<p>点击 <strong>OK</strong>，现在零件导入到零件库中。CAD 验证、折弯和切割工装实例的工装完成，可以在 <strong>Pmonitor</strong> 屏幕中监控。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv3.png" alt="CSV import" width="1438">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_为缺失的_cad_文件创建落料零件">为缺失的 CAD 文件创建落料零件</h3>
+<div class="paragraph">
+<p>使用电子表格（.csv 或 .xlsx）导入作业时，您有时可能会有引用系统中不可用的 CAD 文件的行。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>要处理这个问题，转到 <strong>出厂</strong> &#8594; <strong>设置</strong> &#8594; <strong>套料</strong>，在 <strong>电子表格导入</strong> 下启用 <strong>为缺失的 CAD 文件创建落料零件</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv6.png" alt="Spreadsheet import" width="801">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>选择此选项后：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>如果在作业导入期间任何行的 CAD 文件缺失，系统将自动创建空白零件来代替缺失的 CAD 文件。</p>
+</li>
+<li>
+<p>在 <strong>新套料</strong> 窗口中，这些缺失的零件会以黄色突出显示，表示关联的 CAD 文件缺失。</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/csv4.png" alt="Edit jobs" width="578"></span></p>
+</div>
+</li>
+<li>
+<p>缺失的零件仍将保留其从 CSV 映射的字段（如零件名称、材料、厚度、数量等）。但是，其零件状态将显示为初始状态，这意味着它只是一个没有实际几何形状的空占位符。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv5.png" alt="Nascent parts" width="1110">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>这确保了作业导入可以继续进行，而不会因为缺少 CAD 文件而出错 — 您可以稍后在 CAD 文件可用时更新或替换空白零件。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_如果电子表格没有错误则不显示新建套料对话框">如果电子表格没有错误，则不显示新建套料对话框</h3>
+<div class="paragraph">
+<p><strong>出厂</strong> &#8594; <strong>设置</strong> &#8594; <strong>套料</strong> → <strong>电子表格导入</strong>→ <strong>如果电子表格没有错误，则不显示新建套料对话框</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>选择此复选框后，如果电子表格没有错误（没有缺失零件、缺失日期或无效数据），系统会自动创建新作业而不显示新建作业对话框。</p>
+</li>
+<li>
+<p>清除此复选框后，新建作业对话框始终会出现供用户审查和确认，即使电子表格没有错误。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_prefer_raw_material_column_over_material_thickness">Prefer raw-material column over material + thickness</h3>
+<div class="paragraph">
+<p><strong>出厂</strong> &#8594; <strong>设置</strong> &#8594; <strong>套料</strong>→<strong>Prefer Raw-Material column over Material + Thickness</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>选择此复选框后，系统期望电子表格使用原材料列（例如，Steel-20）。这意味着材料类型和厚度应在一列中组合为单个值。</p>
+</li>
+<li>
+<p>清除此复选框后，系统期望电子表格具有单独的材料和厚度列（例如，Steel 和 2.00）。系统在导入期间在内部组合它们。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csvmaterial.png" alt="CSV Raw Material and Material+Thickness">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_使用_csvxlsx_监视文件夹">使用 CSV/XLSX 监视文件夹</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>在 <strong>出厂</strong> &#8594; <strong>设置</strong>&#8594; <strong>查看</strong> 中选中 <strong>启用“实时文件夹“</strong> 和 <strong>也查看子文件夹</strong>。</p>
+</li>
+<li>
+<p>设置监视文件夹路径（UNC 或映射驱动器）。</p>
+</li>
+<li>
+<p>在 <strong>电子表格导入</strong> 中，选中 <strong>从“实时文件夹”导入电子表格</strong>。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/watchfolder.png" alt="Watch folder" width="702">
+</div>
+</div>
+</li>
+<li>
+<p>从电子表格导入选项中选择 <strong>导入套料</strong>。</p>
+</li>
+<li>
+<p>复制 <code>C:\Program Files\Metamation\Praxis\Samples\Jobs\C0\C0.csv</code> 并将其粘贴到监视文件夹中。</p>
+</li>
+<li>
+<p>系统检查 CSV 并尝试自动创建作业。</p>
+</li>
+<li>
+<p>如果 CAD 文件缺失，则不会创建作业，因为找不到所需的 CAD 数据。</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_cad_查找目录和递归_cad_搜索_未配置">CAD 查找目录和递归 CAD 搜索 - 未配置</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>在 <strong>出厂</strong> &#8594; <strong>设置</strong> &#8594; <strong>套料</strong> &#8594; <strong>电子表格导入</strong> 中，如果未设置 <strong>CAD lookup directories</strong> 且未使用 <strong>使用递归 CAD 搜索</strong>，系统不会自动搜索 CAD 文件。</p>
+</li>
+<li>
+<p>如果选中 <strong>为缺失的 CAD 文件创建落料零件</strong> 复选框，即使 CAD 文件缺失，仍会创建作业。</p>
+</li>
+<li>
+<p>在这种情况下，作业中的所有零件都将创建为初始（空白）零件 — 这意味着它们没有几何形状，因为找不到 CAD 文件。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/notconfigured.png" alt="Create blank parts" width="867">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cad_查找目录和递归_cad_搜索_已配置">CAD 查找目录和递归 CAD 搜索 - 已配置</h3>
+<div class="paragraph">
+<p>当在 <strong>出厂</strong> &#8594; <strong>设置</strong> &#8594; <strong>套料</strong> &#8594; <strong>电子表格导入</strong> 下将 <strong>CAD 查找目录</strong> 设置为（C:\Program Files\Metamation\Praxis\Samples）并启用 <strong>使用递归 CAD 搜索</strong> 时：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>系统会自动搜索指定的文件夹及其所有子文件夹，查找电子表格中提到的所需 CAD 文件。</p>
+</li>
+<li>
+<p>还启用了 <strong>为缺失的 CAD 文件创建落料零件</strong>，因此如果仍然找不到任何 CAD 文件，系统将创建空白零件作为占位符。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/configured.png" alt="Create blank parts" width="861">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_从_csv_或_xlsx_导入">从 csv 或 xlsx 导入</a>
+  </li>
+  <li level="2">
+   <a href="#_为缺失的_cad_文件创建落料零件">为缺失的 CAD 文件创建落料零件</a>
+  </li>
+  <li level="2">
+   <a href="#_如果电子表格没有错误则不显示新建套料对话框">如果电子表格没有错误，则不显示新建套料对话框</a>
+  </li>
+  <li level="2">
+   <a href="#_prefer_raw_material_column_over_material_thickness">Prefer raw-material column over material + thickness</a>
+  </li>
+  <li level="1">
+   <a href="#_使用_csvxlsx_监视文件夹">使用 CSV/XLSX 监视文件夹</a>
+  </li>
+  <li level="2">
+   <a href="#_cad_查找目录和递归_cad_搜索_未配置">CAD 查找目录和递归 CAD 搜索 - 未配置</a>
+  </li>
+  <li level="2">
+   <a href="#_cad_查找目录和递归_cad_搜索_已配置">CAD 查找目录和递归 CAD 搜索 - 已配置</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="orderimport.html">导入订单</a></span>
+ <span class="next"><a href="assembliesimport.html">导入装配体</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

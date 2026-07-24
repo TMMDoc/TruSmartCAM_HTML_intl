@@ -1,0 +1,753 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Panel de disposiciones</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Bienvenido a TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Change license</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configuración</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Agregar/Eliminar máquina</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Configurar herramientas</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Configurar usuarios</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Idioma</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Agregar nuevo material y lámina</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Exportar/Importar material</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Reemplazar material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mapear material</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mapear páginas CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mapear campos desde CAD (claves de búsqueda)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">La interfaz de usuario</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Flujo de trabajo</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Biblioteca</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Abrir</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Importar piezas</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Importar pedidos</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Importar trabajos</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Importar ensamblajes</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Vista de biblioteca</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Piezas</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Estado de pieza</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Validación de pieza</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Estado de herramientas</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Validación de herramientas</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Validación de herramientas de plegado</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Validación de herramientas de corte</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Validación de herramientas de doblado</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Tooling panel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Pedidos</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Vista de pedidos</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Trabajos</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../jobcreation.html">Crear trabajo</a></li>
+    <li><button class="tree blank"></button><a href="../jobview.html">Vista de trabajos</a></li>
+    <li><button class="tree blank"></button><a href="../jobpanel.html">Panel de trabajos</a></li>
+    <li><button class="tree blank"></button><a href="../jobautoplan.html">Planificación automática</a></li>
+    <li><button class="tree blank"></button><a href="../jobinteractplan.html">Interactive nesting</a></li>
+    <li><button class="tree blank"></button><a href="../repacking.html">Reempaquetado</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Gestión de anidamientos</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="nestview.html">Vista de disposiciones</a></li>
+      <li><button class="tree blank"></button><a class="active" href="layoutpanel.html">Panel de disposiciones</a></li>
+      <li><button class="tree blank"></button><a href="reportsender.html">Enviador de informes</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../remnantmanagement/index.html">Gestión de retales</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../remnantmanagement/autoremnant.html">Gestión automática de retazos</a></li>
+      <li><button class="tree blank"></button><a href="../remnantmanagement/manualremnant.html">Gestión manual de retales</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../twinlinenesting.html">Anidamiento de línea gemelar</a></li>
+    <li><button class="tree blank"></button><a href="../outdate.html">Desactualizado</a></li>
+    <li><button class="tree blank"></button><a href="../jobfilters.html">Filtros de trabajos</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Extensiones CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Instalación</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Guardar piezas</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Guardar ensamblaje</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Verificar viabilidad</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Configuración de fábrica</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Mejoras diversas</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Aviso legal</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Trabajos</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Gestión de anidamientos</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="layoutpanel.html">Panel de disposiciones</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Panel de disposiciones</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Esta sección explica las acciones relacionadas con disposiciones como
+<strong>Enviar a máquina&#8230;&#8203;</strong>,
+<strong>Solicitar nuevo desde máquina&#8230;&#8203;</strong>,
+<strong>Exportar salidas</strong>,
+<strong>Marcar completo&#8230;&#8203;</strong>, <strong>Añadir piezas&#8230;&#8203;</strong>,
+<strong>Adaptar/Compactar&#8230;&#8203;</strong>,
+<strong>Dividir diseños&#8230;&#8203;</strong>, y otras opciones usadas para gestionar
+instancias de disposiciones.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/layout.png" alt="Panel de disposición" width="181">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Abrir en modo solo lectura para su visualización</strong><br>
+Abre la disposición seleccionada en modo de solo lectura.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Habilita la edición de la disposición seleccionada.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eliminar</strong><br>
+Elimina la disposición seleccionada.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/openreport.png" alt="Report" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ver informe</strong><br>
+Abre el informe de disposición estándar y el informe específico de etiqueta para la
+disposición seleccionada.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sendui.png" alt="Send" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Enviar a máquina&#8230;&#8203;</strong><br>
+Envía la disposición seleccionada a la máquina y exporta los archivos de salida
+(fxlyt, NC, report, csv) a la ubicación de salida del trabajo.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/addui.png" alt="Add" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Añadir piezas&#8230;&#8203;</strong><br>
+Agrega más piezas a una disposición mal empaquetada usando el asistente de reempaquetado de disposición.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/adaptui.png" alt="Adapt" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Adaptar/Compactar&#8230;&#8203;</strong><br>
+Re-anida la disposición seleccionada para compactar las piezas y liberar área utilizable.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/changeui.png" alt="Change" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cambiar TTL&#8230;&#8203;</strong><br>
+Cambia la hoja asignada a la disposición seleccionada.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/splitui.png" alt="Split"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Dividir diseños&#8230;&#8203;</strong><br>
+Divide la disposición seleccionada en dos o más disposiciones separadas.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/renameui.png" alt="RenameUi" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rename layout&#8230;&#8203;</strong><br>
+Renombra la disposición seleccionada.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tarea</strong> / <strong>Prev</strong> / <strong>Siguiente</strong> / <strong>Piezas</strong><br>
+Navega hacia arriba al trabajo padre, a la disposición anterior o siguiente dentro del
+trabajo seleccionado, o hacia abajo a las piezas contenidas en la disposición.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sort.png" alt="Filters" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort and filter</strong><br>
+Use estos filtros para ver otras disposiciones que comparten el mismo atributo que
+la disposición seleccionada: Misma máquina, Mismo material, Mismo LTT, Misma prioridad,
+Mismo estado, Misma hoja, Misma pieza, Mismo estado de retazo, o Misma dirección de
+laminación.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="send-to-machine">Enviar a máquina&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Cuando un anidamiento está listo (lleno o urgentemente necesario), puede enviarlo a la
+máquina.</p>
+</li>
+<li>
+<p>Haga clic derecho en el anidamiento y seleccione <strong>Enviar a máquina&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Se crea una carpeta automáticamente, nombrada según el anidamiento.</p>
+</li>
+<li>
+<p>Los archivos de salida (fxlyt, NC, report, csv) se exportan a la ubicación
+de salida del trabajo.</p>
+</li>
+<li>
+<p>Los anidamientos enviados a la máquina se muestran con una marca de verificación azul.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/sendtomachine.png" alt="Enviar a máquinas" width="1180">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Una vez liberados, esos anidamientos ya no se reintentan para reempaquetado.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_solicitar_nuevo_desde_máquina">Solicitar nuevo desde máquina&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Si la salida necesita validación o una actualización (por ejemplo, agregar más piezas):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Haga clic derecho en la disposición exportada.</p>
+</li>
+<li>
+<p>Seleccione <strong>Solicitar nuevo desde máquina&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Los archivos de salida y la carpeta (fxlyt, NC, report, csv) se eliminan.</p>
+</li>
+<li>
+<p>El anidamiento vuelve a ser editable.</p>
+</li>
+<li>
+<p>Puede hacer cambios y enviarlo a la máquina nuevamente.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/recallfrommachine.png" alt="Recuperar de máquinas" width="1153">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exportar_salidas">Exportar salidas</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Haga clic derecho en cualquier disposición (anidamiento) que haya sido enviada a la máquina y haga clic en
+<strong>Exportar salidas</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput1.png" alt="Exportar salidas" width="447">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>La opción Export Outputs exporta los archivos NC, Report y Layout a las
+carpetas de salida de máquina respectivas.</p>
+</li>
+<li>
+<p>Esta opción regenera el archivo NC con la configuración de unidades actual para la
+disposición.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Export Outputs no está disponible para disposiciones que están completadas y
+disposiciones que están esperando en cola para reempaquetado.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mark-complete">Mark complete</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Una vez que el anidamiento se procesa en la máquina, haga clic derecho en el anidamiento y
+seleccione <strong>Marcar completo&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Puede seleccionar múltiples anidamientos y marcarlos como completos al mismo tiempo.</p>
+</li>
+<li>
+<p>Cuando un anidamiento se marca como completo:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Se pone en gris, se mueve al final de la lista y se muestra con una marca de verificación
+verde.</p>
+</li>
+<li>
+<p>La disposición se elimina de la lista de disposiciones activas.</p>
+</li>
+<li>
+<p>Los estados de pieza y trabajo se actualizan, y las cantidades procesadas se mueven al
+estado completado.</p>
+</li>
+<li>
+<p>Los archivos de salida para esa disposición se eliminan de la ubicación de salida
+de la máquina para evitar uso duplicado.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/markcomplete1.png" alt="Marcar completo" width="1101">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="add-parts">Añadir piezas&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart1.png" alt="Agregar piezas" width="997">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use esta opción para agregar más piezas a una disposición relativamente mal empaquetada. Como
+el anidamiento interactivo, esta es una opción basada en asistente y puede usarse
+en una o múltiples disposiciones al mismo tiempo.</p>
+</li>
+<li>
+<p>TruSmartCAM monta el asistente de reempaquetado de disposición en el área de trabajo principal
+cuando se usa esta opción. Mantenga presionada la tecla <kbd>Ctrl</kbd> y seleccione una o más
+piezas para empaquetar en la(s) disposición(es) y presione <strong>Siguiente</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart2.png" alt="Selección de pieza" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>Las piezas seleccionadas se muestran en el siguiente paso con una
+columna de cantidad editable. Actualice las cantidades de pieza si es necesario en el
+campo <strong>Update Qty</strong>. Haga clic en <strong>Siguiente</strong> para proceder al anidamiento. Tenga en cuenta que
+las cantidades solo pueden aumentarse, no disminuirse.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart3.png" alt="Actualizar cantidad" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>Todas las disposiciones se anidan por separado, y los resultados anidados se muestran
+con las piezas recién empaquetadas colocadas sobre ellas. Seleccionar la disposición muestra todas
+las piezas de disposición existentes. El resultado se descarta automáticamente si no se coloca ninguna pieza nueva
+durante el reempaquetado. Una disposición con múltiples copias puede resultar en
+diferentes patrones después del reempaquetado.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart4.png" alt="Resultado de reempaquetado" width="2200">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="adapt-compact">Adaptar/Compactar&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Este comando basado en asistente se puede usar para adaptar una disposición de una
+máquina a otra cuando la máquina original está fuera de servicio o cuando la carga de trabajo de la máquina
+necesita equilibrarse.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt1.png" alt="Adaptar compactar" width="737">
+</div>
+</div>
+</li>
+<li>
+<p>Se puede usar cuando la hoja planificada está agotada y la disposición
+necesita ser replanificada en otra hoja disponible.</p>
+</li>
+<li>
+<p>Puede fusionar disposiciones empaquetadas en hojas más pequeñas en hojas más grandes para usar
+material de manera más eficiente.</p>
+</li>
+<li>
+<p>Puede dividir disposiciones empaquetadas en hojas más grandes en hojas más pequeñas si no hay existencias
+de hojas grandes disponibles.</p>
+</li>
+<li>
+<p>Puede mejorar la eficiencia de empaquetado de múltiples disposiciones (incluso de
+diferentes máquinas) fusionándolas juntas.</p>
+</li>
+<li>
+<p>Para usarlo, seleccione una o más disposiciones y haga clic en
+<strong>Adaptar/Compactar&#8230;&#8203;</strong> para abrir el asistente en el área de trabajo.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt2.png" alt="Ventana de disposiciones" width="1902">
+</div>
+</div>
+</li>
+<li>
+<p>El panel izquierdo muestra todas las disposiciones seleccionadas y el panel Parts muestra las piezas de
+disposición.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt3.png" alt="Ventana de disposiciones" width="1910">
+</div>
+</div>
+</li>
+<li>
+<p>Seleccione la máquina objetivo y el material de hoja, luego haga clic en
+<strong>Siguiente</strong> para realizar el re-anidamiento.</p>
+</li>
+<li>
+<p>Los nuevos resultados del anidamiento se muestran en el panel de resultados.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt4.png" alt="Ventana de disposiciones" width="1901">
+</div>
+</div>
+</li>
+<li>
+<p>Haga clic en <strong>Siguiente</strong> para guardar la disposición adaptada o compactada.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt5.png" alt="Ventana de disposiciones" width="1902">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dividir_una_disposición">Dividir una disposición</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La opción <strong>Dividir diseños&#8230;&#8203;</strong> le permite dividir
+una disposición existente en múltiples disposiciones modificando cantidades,
+sin necesidad de rehacer herramientas o anidamiento.</p>
+</div>
+<div class="paragraph">
+<p>Esta característica es particularmente útil en los
+siguientes escenarios:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Cuando necesita producir una porción de la cantidad total inmediatamente mientras
+programa la cantidad restante para producción posterior.</p>
+</li>
+<li>
+<p>Cuando los requisitos de producción necesitan distribuirse en múltiples turnos o
+días para optimizar el flujo de trabajo y la utilización de recursos.</p>
+</li>
+<li>
+<p>Cuando una máquina específica está temporalmente no disponible u ocupada, y necesita
+ajustar la disposición para acomodar las restricciones de producción actuales.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Para dividir una disposición, realice los siguientes pasos:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>En la vista Layouts, seleccione la disposición requerida.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/splitlayout.png" alt="Dividir disposición" width="264">
+</div>
+</div>
+</li>
+<li>
+<p>Haga clic en <strong>Dividir diseños&#8230;&#8203;</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/layoutpanel.png" alt="Panel de disposición" width="155">
+</div>
+</div>
+</li>
+<li>
+<p>Ingrese el valor requerido en <strong>Nuevas copias</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/newcopies.png" alt="Nuevas copias" width="389">
+</div>
+</div>
+</li>
+<li>
+<p>Haga clic en <strong>OK</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/twolayout.png" alt="Dos disposiciones" width="547">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>La disposición seleccionada ahora está dividida en dos disposiciones con cantidades ajustadas.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#send-to-machine">Enviar a máquina&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_solicitar_nuevo_desde_máquina">Solicitar nuevo desde máquina&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_exportar_salidas">Exportar salidas</a>
+  </li>
+  <li level="1">
+   <a href="#mark-complete">Mark complete</a>
+  </li>
+  <li level="1">
+   <a href="#add-parts">Añadir piezas&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#adapt-compact">Adaptar/Compactar&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_dividir_una_disposición">Dividir una disposición</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="nestview.html">Vista de disposiciones</a></span>
+ <span class="next"><a href="reportsender.html">Enviador de informes</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

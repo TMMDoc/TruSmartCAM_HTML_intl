@@ -1,0 +1,796 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Panel obrábania</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Vitajte v TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Inštalácia</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardvérové požiadavky</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Podporované formáty súborov</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Predpoklady</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Inštalácia servera</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Inštalácia klienta</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Zmena licencie</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfigurácia</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Pridať/Odstrániť stroj</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Nastavenie náradia</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Konfigurácia používateľov</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Jazyk</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiál</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Pridať nový materiál a hárok</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Export/Import materiálu</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Nahradiť materiál</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mapovanie materiálu</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mapovanie CAM stránok</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mapovanie polí z CAD (vyhľadávacie klúče)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Používateľské rozhranie</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Pracovný postup</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Knižnica</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Otvoriť</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Import dielov</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Import objednávok</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Import úloh</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Import zostáv</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Zobrazenie knižnice</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Diely</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Zostavy</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Stav dielu</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Validácia dielu</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Panel dielu</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Filtre dielov</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Stav obrábania</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="toolingvalidation/index.html">Validácia obrábania</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="toolingvalidation/bendtooling.html">Validácia ohýbacieho obrábania</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/cuttooling.html">Validácia rezacieho obrábania</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/foldtooling.html">Validácia skladacieho obrábania</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a class="active" href="toolingpanel.html">Panel obrábania</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Ukladanie filtrov</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Objednávky</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Zobrazenie objednávok</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Práce</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Vytvorenie práce</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Zobrazenie práce</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Panel práce</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatické plánovanie</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktívne ukladanie</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Prebaľovanie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Správa hniezd</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Zobrazenie rozvrhnutia</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Panel rozvrhnutia</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Odosielateľ správ</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Správa zvyškov</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatická správa zvyškov</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manuálna správa zvyškov</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Dvojlinové ukladanie</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Zastaralé</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtre prác</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD rozšírenia</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Inštalácia</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Uložiť diely</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Uložiť zostavu</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Skontrolovať uskutočniteľnosť</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Nastavenia továrne</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Rôzne vylepšenia</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Knižnica</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Stav obrábania</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="toolingpanel.html">Panel obrábania</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Panel obrábania</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Táto sekcia vysvetľuje akcie súvisiace s obrábaním ako
+<strong>Exportovať výstupy</strong>,
+<strong>Check Tooling</strong>, <strong>Potlačiť obrábanie</strong>,
+<strong>Nastaviť ako základný rozvin&#8230;&#8203;</strong>, <strong>Kopírovať obrábanie&#8230;&#8203;</strong>,
+a ďalšie možnosti používané na správu inštancií obrábania.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/toolingpanel.png" alt="Tooling panel" width="150">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Otvoriť v režime iba na čítanie na zobrazenie</strong><br>
+Otvorí zvolené obrábanie v režime len na čítanie.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Umožní úpravu zvoleného obrábania.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Exportovať výstupy</strong><br>
+Exportuje výstup zvoleného obrábania do nakonfigurovaného cieľa.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/checkui.png" alt="Check Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check Tooling</strong><br>
+Validuje existujúce obrábanie bez vykonania akýchkoľvek zmien a aktualizuje
+jeho stav, ak validácia zlyhá.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/copyui.png" alt="Copy Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kopírovať obrábanie&#8230;&#8203;</strong><br>
+Skopíruje razník, sekvenciu a nastavenie zadného dorazu zo zvoleného
+referenčného obrábania a aplikuje ho na ostatné riešenia, kde je to možné.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/baseui.png" alt="Set as Base-Flat" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Nastaviť ako základný rozvin&#8230;&#8203;</strong><br>
+Označí zvolené ohýbacie alebo skladacie obrábanie ako referenčnú plochú veľkosť pre
+generovanie rezacích riešení.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/retoolui.png" alt="Re-tool" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Re-tool&#8230;&#8203;</strong><br>
+Opätovne spracuje zvolené obrábanie pre diel bez ovplyvnenia ostatných
+obrábaní.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/supressui.png" alt="Suppress Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Potlačiť obrábanie</strong><br>
+Potlačí zvolené obrábanie tak, že je vylúčené z ďalšieho
+spracovania a generovania výstupu.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prevui.png" alt="Prev Next" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Predch.</strong> / <strong>Nasl.</strong> / <strong>Dielec</strong><br>
+Naviguje na predchádzajúce alebo nasledujúce obrábanie alebo späť na rodičovský diel.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sortui.png" alt="Similar Toolings" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort and filter</strong><br>
+Zobrazuje ostatné obrábania, ktoré zdieľajú podobné charakteristiky so
+zvoleným obrábaním pre rýchlu referenciu.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exportovať_výstupy">Exportovať výstupy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Táto možnosť exportuje výstup dielu do cieľa nakonfigurovaného v
+<strong>Pôvodné nastavenia</strong>. (Pozrite si
+<a href="../../factory/settings/bend.html">Bend Settings</a> a
+<a href="../../factory/settings/cut.html">Cut Settings</a>)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingoutput.png" alt="Tooling Output" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Exportujú sa len obrábania priradené k zvolenej operácii obrábania,
+nie celý diel.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Exportované súbory závisia od typu operácie. Pre operácie Bend a
+Fold sú generované súbory NC a správy. Pre operácie Cut a Punch
+sú exportované len súbory dielov.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_check_tooling">Check Tooling</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Ak došlo k zmene v nastaveniach CAM alebo bol stratený ohýbací nástroj, nemusíte
+vykonať Re-tool dielu.</p>
+</li>
+<li>
+<p>Namiesto toho použite Check Tooling na validáciu existujúceho obrábania bez vykonania
+akýchkoľvek zmien.</p>
+</li>
+<li>
+<p>Ak validácia zlyhá, stav obrábania tejto inštancie je aktualizovaný a
+súvisiace výstupné súbory sú odstránené.</p>
+</li>
+<li>
+<p>Check Tooling tiež deteguje diely, kde chyby boli predtým manuálne
+prepísané pomocou <strong>Ignorovať chyby</strong> a aktualizuje ich
+stav na chybu, ak je to potrebné.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/checktooling.png" alt="Check Tooling" width="456">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kopírovať_obrábanie">Kopírovať obrábanie&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kopírovanie obrábania vám umožňuje rýchlo aplikovať ohýbacie obrábanie z jedného riešenia na
+ostatné, čím ušetríte čas a úsilie.</p>
+</div>
+<div class="paragraph">
+<p>Toto skopíruje razník, sekvenciu a nastavenie zadného dorazu zo zvoleného referenčného
+obrábania (riešenia) a pokúsi sa aplikovať rovnaké nastavenia na všetky ostatné riešenia.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ak je skopírované nastavenie realizovateľné pre cieľový stroj, je uložené a použité.</p>
+</li>
+<li>
+<p>Ak nastavenie nie je realizovateľné, pôvodné obrábanie pre tento stroj zostáva
+nezmenené.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Napríklad môžete mať rôzne obrábanie pre rôzne stroje:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tu stroj 5230SX 6A používa razník Gooseneck, stroj 5085X 6A B23 používa
+razník Pointed.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check3.png" alt="Before tooling" width="724">
+</div>
+</div>
+<div class="paragraph">
+<p>Keď použijete <strong>Kopírovať obrábanie&#8230;&#8203;</strong> na stroji 5230SX 6A,
+pokúsi sa skopírovať nastavenie Gooseneck na všetky ostatné stroje.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check4.png" alt="Copy tooling" width="664">
+</div>
+</div>
+<div class="paragraph">
+<p>Ten istý razník, sekvencia a nastavenia zadného dorazu sú aplikované všade, kde je to
+možné. Ak skopírované nastavenie nemôže byť použité, pôvodné obrábanie zostáva
+nezmenené.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/copytooling3.png" alt="After tooling" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>Po aplikovaní kopírovania obrábania bolo nastavenie Gooseneck úspešne aplikované
+na všetky ostatné stroje, kde je to realizovateľné.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nastaviť_ako_základný_rozvin">Nastaviť ako základný rozvin&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Funkcia <strong>Nastaviť ako základný rozvin&#8230;&#8203;</strong> definuje, ktoré ohýbacie alebo skladacie
+obrábanie sa používa ako referenčná plochá veľkosť pre generovanie rezacích riešení.
+Keď je obrábanie označené ako Base-Flat, TruSmartCAM aktualizuje plochú veľkosť dielu
+na základe tohto stroja a regeneruje rezacie riešenia zodpovedajúcim spôsobom. Obrábania Base-Flat
+sú zobrazené s modrým okrajom v užívateľskom rozhraní.</p>
+</div>
+<div class="paragraph">
+<p>Rôzne ohýbacie stroje môžu produkovať mierne variácie v plochej veľkosti pre rovnaký
+diel. Keď nastavíte obrábanie ako Base-Flat, TruSmartCAM použije plochú veľkosť tohto stroja
+ako hlavnú referenciu a automaticky prepočíta rezacie
+riešenia.</p>
+</div>
+<div class="paragraph">
+<p>Tu môžeme vidieť rôzne ploché veľkosti pre rovnaký diel naprieč rôznymi
+strojmi:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat1.png" alt="Base flat1" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>V tomto príklade je obrábanie <strong>5130X 6A B23</strong> nastavené ako Base-Flat a
+aktualizovaná plochá veľkosť je aplikovaná vo vlastnostiach dielu:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat2.png" alt="Base flat2" width="663">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_automatický_výber_base_flat">Automatický výber base flat</h3>
+<div class="paragraph">
+<p>Keď je povoľené továrenské nastavenie
+<strong>Aplikovať korekcie počas ohýbania</strong>:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autobase.png" alt="Auto Base" width="806">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM automaticky nastaví ohýbacie obrábanie (ktoré obsahuje tabuľku max bend
+length) ako Base-Flat počas importu dielu.</p>
+</li>
+<li>
+<p>Ak zvolené ohýbacie obrábanie narazí na chybu alebo nie je realizovateľné,
+TruSmartCAM inteligentne prepne a nastaví iné platné ohýbacie obrábanie ako
+Base-Flat. To zabezpečuje, že referencia plochej veľkosti a rezacie riešenia zostávajú vždy
+konzistentné a platné bez manuálneho zásahu.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_vylepšená_správa_base_flat">Vylepšená správa base flat</h3>
+<div class="paragraph">
+<p>TruSmartCAM poskytuje možnosti Base-Flat v dialógovom okne <strong>Uložiť do Praxis</strong>
+pri ukladaní úprav ohýbacieho alebo skladacieho obrábania. Tieto možnosti sa zobrazujú len pre
+obrábania v stave OK a zabezpečujú, že plochá veľkosť a rezacie riešenia zostávajú
+presné.</p>
+</div>
+<div class="sect3">
+<h4 id="_nastaviť_ako_základný_rozvin_avypočítať_riešenie_rezania">Nastaviť ako základný rozvin a vypočítať riešenie rezania</h4>
+<div class="paragraph">
+<p>Táto možnosť sa používa na označenie obrábania ako Base-Flat po prvýkrát a
+automatické vygenerovanie zodpovedajúceho rezacieho riešenia.</p>
+</div>
+<div class="paragraph">
+<p>Zobrazuje sa keď:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Obrábanie momentálne nie je označené ako Base-Flat.</p>
+</li>
+<li>
+<p>Používateľ vytvoril checkout obrábania na úpravu a ukladá zmeny.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/setbase.png" alt="Set Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>Na použitie tejto možnosti vytvorte checkout ohýbacieho alebo skladacieho obrábania a vykonajte požadované
+úpravy, ako zmeny parametrov ohybu alebo plochej veľkosti. Stlačte
+<span class="keyseq"><kbd>Ctrl</kbd>+<kbd>S</kbd></span> na uloženie zmien. V dialógovom okne <strong>Uložiť do Praxis</strong>
+zvoľte
+<strong>Nastaviť ako základný rozvin a vypočítať riešenie rezania</strong> a
+kliknite na
+<strong>OK</strong>. TruSmartCAM nastaví obrábanie ako Base-Flat a vygeneruje
+rezacie riešenie pomocou aktualizovanej plochej veľkosti.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_aktualizovať_základný_rozvin_aopäť_prepočítať_riešenie_rezania">Aktualizovať základný rozvin a opäť prepočítať riešenie rezania</h4>
+<div class="paragraph">
+<p>Táto možnosť sa používa, keď je obrábanie už označené ako Base-Flat a bolo
+upravené, čo vyžaduje regeneráciu plochej veľkosti a rezacích riešení.</p>
+</div>
+<div class="paragraph">
+<p>Zobrazuje sa keď:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Obrábanie je už označené ako Base-Flat.</p>
+</li>
+<li>
+<p>Používateľ vytvoril checkout, upravil ho a ukladá zmeny.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/updatebase.png" alt="Update Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>Pri úprave existujúceho obrábania Base-Flat aktualizujte parametre ohybu alebo
+geometriu plochej veľkosti podľa potreby. V dialógovom okne <strong>Uložiť do Praxis</strong>
+zvoľte
+<strong>Aktualizovať základný rozvin a opäť prepočítať riešenie rezania</strong>.
+TruSmartCAM potom aktualizuje obrábanie Base-Flat a regeneruje všetky súvisiace
+rezacie riešenia, aby odrážali najnovšie zmeny.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Len jedno ohýbacie obrábanie môže byť nastavené ako Base-Flat naraz.</p>
+</div>
+<div class="paragraph">
+<p>Keď sa zmení Base-Flat, existujúce rezacie riešenia sú automaticky
+opätovne spracované.</p>
+</div>
+<div class="paragraph">
+<p>Táto funkcia je dostupná pre ohýbacie aj skladacie obrábania v TruSmartCAM.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_zmeniť_obrábanie">Zmeniť obrábanie&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Táto možnosť opätovne spracuje zvolené obrábanie pre diel.</p>
+</div>
+<div class="paragraph">
+<p>Kliknite pravým tlačidlom na požadované obrábanie v paneli Tooling a kliknite na
+<strong>Zmeniť obrábanie&#8230;&#8203;</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingretool.png" alt="ToolingRetool" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Pred pokračovaním sa zobrazí dialógové okno potvrdenia.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingconfirm.png" alt="ToolingConfirm" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Kliknite na <strong>Áno</strong> na pokračovanie s opätovným obrábaním alebo na <strong>Nie</strong> na
+zrušenie operácie.</p>
+</div>
+<div class="paragraph">
+<p>Opätovne sa obrába len zvolené obrábanie. Ostatné obrábania priradené k
+dielu nie sú ovplyvnené. Existujúce výstupy súvisiace so zvoleným
+obrábaním sú odstránené a regenerované počas procesu opätovného obrábania.</p>
+</div>
+<div class="paragraph">
+<p>Použite túto možnosť, keď sú dáta obrábania zastarané, nesprávne alebo keď
+sú vykonané zmeny v konfigurácii stroja alebo obrábania.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ignorovať_chyby">Ignorovať chyby</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Ak obrábana inštancia zobrazuje varovanie a stále chcete s ňou pokračovať,
+môžete varovanie prepísať kliknutím na
+<strong>Ignorovať chyby</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/ignore.png" alt="Ignore errors" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To umožní systému exportovať výstupné súbory pre túto
+inštanciu, aj keď existovali problémy s obrábaním.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Použite <strong>Ignore Errors</strong> len keď ste si istí, že varovanie môže byť bezpečne
+ignorované. Prepísanie skutočných chýb môže viesť k poškodeniu stroja alebo bezpečnostným rizikám.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_potlačeniezrušenie_potlačenia_obrábania">Potlačenie/Zrušenie potlačenia obrábania</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Keď je stroj neaktívny alebo nechcete, aby bol špecifický diel spracovaný
+konkrétnym strojom, použite <strong>Potlačiť obrábanie</strong> na vylúčenie
+tohto dielu z ukladania na tomto stroji.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/supress.png" alt="Supress Tooling" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Po potlačení sa pri navedení myšou nad obrábanú inštanciu zobrazí
+správa ako: "Tooling suppressed by &lt;User name&gt; on &lt;Date Time&gt;".</p>
+</li>
+<li>
+<p>Potlačenie obrábania odstráni výstupný súbor pre tento stroj a diel.</p>
+</li>
+<li>
+<p>Použite <strong>Nepotlačiť obrábanie</strong> na obnovenie stavu obrábania
+pre diel na tomto stroji.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unsupress.png" alt="Unsupress Tooling" width="495">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Keď je potlačenie zrušené, príslušný výstupný súbor je znova vygenerovaný.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_exportovať_výstupy">Exportovať výstupy</a>
+  </li>
+  <li level="1">
+   <a href="#_check_tooling">Check Tooling</a>
+  </li>
+  <li level="1">
+   <a href="#_kopírovať_obrábanie">Kopírovať obrábanie&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_nastaviť_ako_základný_rozvin">Nastaviť ako základný rozvin&#8230;&#8203;</a>
+  </li>
+  <li level="2">
+   <a href="#_automatický_výber_base_flat">Automatický výber base flat</a>
+  </li>
+  <li level="2">
+   <a href="#_vylepšená_správa_base_flat">Vylepšená správa base flat</a>
+  </li>
+  <li level="1">
+   <a href="#_zmeniť_obrábanie">Zmeniť obrábanie&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_ignorovať_chyby">Ignorovať chyby</a>
+  </li>
+  <li level="1">
+   <a href="#_potlačeniezrušenie_potlačenia_obrábania">Potlačenie/Zrušenie potlačenia obrábania</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="toolingvalidation/foldtooling.html">Validácia skladacieho obrábania</a></span>
+ <span class="next"><a href="../savingfilters.html">Ukladanie filtrov</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

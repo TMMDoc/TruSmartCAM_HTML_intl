@@ -1,0 +1,641 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>작업 보기</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">TruSmartCAM에 오신 것을 환영합니다</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">설치</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">하드웨어 요구 사항</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">지원되는 파일 형식</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">사전 요구 사항</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">서버 설치</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">클라이언트 설치</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">라이선스 변경</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">구성</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">기계 추가/제거</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">툴링 설정</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">사용자 구성</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">언어</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">재료</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">새 재료 및 시트 추가</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">재료 내보내기/가져오기</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">재료 교체</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">재료 매핑</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">CAM 페이지 매핑</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">CAD에서 필드 매핑 (조회 키)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">사용자 인터페이스</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">워크플로우</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Library</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Tooling panel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">주문</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">주문 보기</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Jobs</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">작업 생성</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobview.html">작업 보기</a></li>
+    <li><button class="tree blank"></button><a href="jobpanel.html">작업 패널</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">자동 계획</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">대화형 네스팅</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">재포장</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">네스트 관리</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">레이아웃 보기</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">레이아웃 패널</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">보고서 발신자</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">잔재 관리</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">자동 잔재 관리</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">수동 잔재 관리</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">트윈라인 네스팅</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">구식</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">작업 필터</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD 확장 기능</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks 추가 기능</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">설치</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">부품 저장</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">어셈블리 저장</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">실행 가능성 확인</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">공장 설정</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">기타 개선 사항</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">법적 고지</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Jobs</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobview.html">작업 보기</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>작업 보기</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>이 섹션에서는 작업, 부품, 네스트, 편집, 시뮬레이션 및 내보내기를 포함하여 작업 보기에서 사용 가능한 다양한 보기에 대해 설명합니다.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_작업">작업</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>통합 작업들</strong> 옵션을 선택하면 소프트웨어에 현재 설정된 모든 작업 목록이 표시됩니다. 작업을 두 번 클릭하여 세부 정보를 보거나 마우스 오른쪽 버튼을 클릭하여 추가 옵션에 액세스할 수 있습니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>작업은 타일 보기로 표시되며, 각 작업은 Job ID, Job Ref, Customer name, Total parts, Due Date, Job status bar 등과 같은 기본 속성과 함께 표시됩니다.</p>
+</li>
+<li>
+<p>각 작업 타일은 스택 카드 형식으로 부품 이미지도 표시합니다. 마우스 휠을 사용하여 작업의 모든 부품을 스크롤할 수 있습니다.<br></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobview1.png" alt="Job Page" width="1489">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_작업_세부_정보">작업 세부 정보</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>타일을 두 번 클릭하거나 타일을 선택한 후 <kbd>Enter</kbd> 키를 누르면 보기가 Detail Mode로 전환됩니다.</p>
+</li>
+<li>
+<p>세부 정보 페이지에는 부품 목록과 네스팅된 시트(레이아웃)(있는 경우)가 표시됩니다.</p>
+</li>
+<li>
+<p>Up/Down 화살표 키를 사용하여 세부 정보 페이지에서 작업 간에 전환합니다.</p>
+</li>
+<li>
+<p>부품 스택 위로 마우스 휠을 스크롤하면 부품 목록과 레이아웃 모두에서 부품이 강조 표시됩니다.</p>
+</li>
+<li>
+<p>레이아웃을 선택하면 부품 목록에서 레이아웃과 네스팅된 모든 부품이 강조 표시됩니다. 강조 표시는 1분 후 자동으로 꺼집니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobview2.png" alt="Job Details" width="1908">
+</div>
+</div>
+</li>
+<li>
+<p><strong>네스팅 요약</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>파트들</strong>: 작업의 총 주문 항목 수와 총 수량을 표시합니다.</p>
+</li>
+<li>
+<p><strong>시트들</strong>: 총 시트 수량과 함께 네스팅된 총 시트 수를 표시합니다.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>작업 단계들</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>벤딩</strong>: 할당된 기계와 처리할 주문 수량을 표시합니다.</p>
+</li>
+<li>
+<p><strong>절단</strong>: 할당된 기계와 처리할 주문 수량을 표시합니다.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_우선_순위">우선 순위</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>먼저 화면 왼쪽의 <strong>Jobs</strong> 아이콘을 클릭하고 편집할 작업을 선택한 다음 화면 오른쪽의 *edit*를 클릭합니다(Jobs 옵션이 선택되어 있는지 확인).</p>
+</li>
+<li>
+<p>또는 선택한 작업을 마우스 오른쪽 버튼으로 클릭하고 <strong>편집을 위한 문서 체크아웃</strong> 아이콘을 클릭합니다.</p>
+</li>
+<li>
+<p>*edit*를 클릭하면 edit job 창이 나타납니다. 이 창에서 작업의 우선 순위를 설정하거나 변경할 수 있습니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/priority1.png" alt="Priority1" width="1207">
+</div>
+</div>
+</li>
+<li>
+<p>작업 부품 우선 순위에 따라 작업 타일의 작업 참조에 색상이 음영 처리됩니다.</p>
+</li>
+<li>
+<p>작업 부품은 먼저 우선 순위별로 정렬된 다음 납기별로 정렬됩니다. 또한 우선 순위에 따라 색상이 음영 처리됩니다.</p>
+</li>
+<li>
+<p>네스팅할 때 <strong>Urgent</strong> 부품이 먼저 고려되고, <strong>High</strong>, <strong>Normal</strong>, 마지막으로 <strong>Low</strong> 우선 순위 부품이 네스트 시트의 나머지 공간에 배치됩니다.</p>
+</li>
+<li>
+<p>네스트 시트도 우선 순위에 따라 정렬되고 색상이 음영 처리됩니다.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Job priority</th>
+<th class="tableblock halign-left valign-top">Color description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/urgent.png" alt="Urgent" width="50"></span> (Orange)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Urgent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/normal1.png" alt="Normal" width="50"></span> (No color)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Normal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/high.png" alt="High" width="50"></span> (Yellow)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">High</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/low.png" alt="Low" width="50"></span> (Dark Grey)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Low</p></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock">
+<div class="content">
+<img src="img/priority2.png" alt="Priority2" width="1158">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_상태">상태</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>작업 상태 표시줄은 색상 코드를 사용하여 처리되거나 남은 수량에 따라 작업의 진행 상황 또는 상태를 나타냅니다.</p>
+</li>
+<li>
+<p>작업 내의 부품과 네스트 시트도 전체 JOB 내에서 개별 상태를 반영하기 위해 일치하는 색상으로 강조 표시됩니다.</p>
+</li>
+<li>
+<p>색상 코딩은 추적을 개선하고 운영자가 생산 상태를 한눈에 쉽게 볼 수 있도록 합니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/status1.png" alt="Job status" width="1114">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/status2.png" alt="Job status" width="1360">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Job Status</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/notready.png" alt="Not Ready" width="100"></span> (Light Grey)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">준비 안 됨</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/nesting.png" alt="Nesting" width="100"></span> (Magenta)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">네스팅</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/ready.png" alt="Ready" width="100"></span> (White)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">준비 완료</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/cuttingqueue.png" alt="Bend planned" width="100"></span> (Light Yellow)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bend Planned</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/sheetmissing.png" alt="Sheet Missing" width="100"></span> (Dark Grey)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">시트 누락</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/bendingqueue.png" alt="Bending Queue" width="100"></span> (Dark Yellow)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">벤딩 대기열</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/bendplanned.png" alt="Bend Planned" width="100"></span> (Yellow)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">절단 대기열</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/completed.png" alt="Completed" width="100"></span> (Dark Green)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">완료</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_부품">부품</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>활성 부품 보기는 활성 작업 내에서 현재 진행 중인 모든 부품을 표시합니다.</p>
+</div>
+<div class="paragraph">
+<p>각 부품은 부품 이름, 치수, 재료, 두께, 수량 및 납기와 같은 주요 세부 정보를 보여주는 타일로 표시됩니다. 부품의 시각적 미리보기도 표시됩니다.</p>
+</div>
+<div class="paragraph">
+<p>이 보기는 사용자가 개별 부품의 처리 상태를 모니터링하고 진행 중인 작업에서 진행 상황을 추적하는 데 도움이 됩니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/activeparts.png" alt="Active">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_네스트">네스트</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>활성 네스트 보기는 활성 작업 내에서 현재 진행 중인 모든 네스트를 표시합니다.</p>
+</div>
+<div class="paragraph">
+<p>각 네스트는 부품 수 및 처리 상태와 같은 관련 세부 정보와 함께 표시됩니다. 네스팅된 부품의 시각적 레이아웃도 표시됩니다.</p>
+</div>
+<div class="paragraph">
+<p>이 보기는 사용자가 네스팅 진행 상황을 모니터링하고 부품이 시트에 배열되고 처리되는 방식을 추적하는 데 도움이 됩니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/activenest.png" alt="Nest">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_편집">편집</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>편집 옵션을 사용하면 선택한 항목을 수정할 수 있습니다.</p>
+</div>
+<div class="paragraph">
+<p>현재 보기에 따라 선택한 인스턴스가 편집을 위해 열립니다:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>작업 보기에서 선택한 작업이 편집을 위해 열립니다.</p>
+</li>
+<li>
+<p>활성 부품 보기에서 선택한 부품이 편집을 위해 열립니다.</p>
+</li>
+<li>
+<p>활성 네스트 보기에서 선택한 네스트가 편집을 위해 열립니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobviewedit.png" alt="Edit" width="980">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_export_csv">Export csv</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>내보내기 옵션을 사용하면 작업 정보를 선택하고 CSV 파일로 내보낼 수 있습니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>jobs</strong> 아이콘을 클릭합니다.</p>
+</li>
+<li>
+<p>화면 오른쪽의 <strong>export</strong> 옵션을 클릭합니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importexport1.png" alt="Export" width="700">
+</div>
+</div>
+</li>
+<li>
+<p>사용 가능한 필드를 보여주는 대화 상자가 나타납니다:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importexport2.png" alt="Export CSV" width="174">
+</div>
+</div>
+</li>
+<li>
+<p>내보낼 필드의 확인란을 선택합니다.</p>
+</li>
+<li>
+<p>선택한 필드별로 데이터를 그룹화하려면 <strong>Group By</strong> 옵션을 사용합니다.</p>
+</li>
+<li>
+<p>Export를 클릭하여 CSV 파일을 생성합니다.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_추가_정보">추가 정보</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>화면 오른쪽에 <strong>시뮬레이션</strong>, <strong>Goto</strong> 및 *뒤로*인 세 가지 추가 아이콘도 있습니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Simulate는 선택한 항목을 더 자세한 보기로 엽니다.</p>
+</li>
+<li>
+<p>Goto는 선택한 부품 또는 네스트에 초점을 전환하고 표시합니다.</p>
+</li>
+<li>
+<p>Back은 현재 위치에서 한 수준 뒤로 이동합니다. 예를 들어 시뮬레이션 중에 *뒤로*을 클릭하면 메인 작업으로 돌아가고 작업에서 클릭하면 메인 작업 표시로 돌아갑니다.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_작업">작업</a>
+  </li>
+  <li level="2">
+   <a href="#_작업_세부_정보">작업 세부 정보</a>
+  </li>
+  <li level="2">
+   <a href="#_우선_순위">우선 순위</a>
+  </li>
+  <li level="2">
+   <a href="#_상태">상태</a>
+  </li>
+  <li level="1">
+   <a href="#_부품">부품</a>
+  </li>
+  <li level="1">
+   <a href="#_네스트">네스트</a>
+  </li>
+  <li level="1">
+   <a href="#_편집">편집</a>
+  </li>
+  <li level="1">
+   <a href="#_export_csv">Export csv</a>
+  </li>
+  <li level="1">
+   <a href="#_추가_정보">추가 정보</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobcreation.html">작업 생성</a></span>
+ <span class="next"><a href="jobpanel.html">작업 패널</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

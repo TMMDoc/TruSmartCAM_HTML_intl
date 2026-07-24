@@ -1,0 +1,407 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Gestione automatica ritagli</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Benvenuti in TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Change license</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configurazione</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Aggiungere/Rimuovere macchina</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Configurare utensili</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Configurare utenti</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Lingua</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiale</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Aggiungere nuovo materiale e foglio</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Esportare/Importare materiale</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Sostituire materiale</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mappare materiale</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mappare pagine CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mappare campi da CAD (chiavi di ricerca)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">L'interfaccia utente</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Flusso di lavoro</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Libreria</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Apri</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Importa pezzi</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Importa ordini</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Importa lavori</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Importa assiemi</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Vista libreria</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Pezzi</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Assieme</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Stato parti</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Convalida parti</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Pannello pezzi</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Filtri pezzi</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Stato attrezzaggio</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Convalida attrezzaggio</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Convalida attrezzaggio piegatura</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Convalida attrezzaggio taglio</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Convalida attrezzaggio piegatubi</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Pannello attrezzaggio</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Salvataggio filtri</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Ordini</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Vista ordini</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Commesse</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../jobcreation.html">Crea commessa</a></li>
+    <li><button class="tree blank"></button><a href="../jobview.html">Vista lavori</a></li>
+    <li><button class="tree blank"></button><a href="../jobpanel.html">Pannello commessa</a></li>
+    <li><button class="tree blank"></button><a href="../jobautoplan.html">Pianificazione automatica</a></li>
+    <li><button class="tree blank"></button><a href="../jobinteractplan.html">Nesting interattivo</a></li>
+    <li><button class="tree blank"></button><a href="../repacking.html">Riconfezionamento</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../layoutcommands/index.html">Gestione nidi</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../layoutcommands/nestview.html">Vista layout</a></li>
+      <li><button class="tree blank"></button><a href="../layoutcommands/layoutpanel.html">Pannello layout</a></li>
+      <li><button class="tree blank"></button><a href="../layoutcommands/reportsender.html">Mittente report</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Gestione ritagli</a>
+     <ul>
+      <li><button class="tree blank"></button><a class="active" href="autoremnant.html">Gestione automatica ritagli</a></li>
+      <li><button class="tree blank"></button><a href="manualremnant.html">Gestione manuale ritagli</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../twinlinenesting.html">Nesting a doppia linea</a></li>
+    <li><button class="tree blank"></button><a href="../outdate.html">Non aggiornato</a></li>
+    <li><button class="tree blank"></button><a href="../jobfilters.html">Filtri lavoro</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Estensioni CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">Componente aggiuntivo SolidWorks</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installazione</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Salvare parti</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Salvare assieme</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Verifica fattibilità</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Impostazioni di fabbrica</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Miglioramenti vari</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Colophon</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Commesse</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Gestione ritagli</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="autoremnant.html">Gestione automatica ritagli</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Gestione automatica ritagli</h1>
+<div class="sect1">
+<h2 id="_abilita_ritaglio">Abilita ritaglio</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TruSmartCAM supporta la creazione automatica di fogli ritaglio da un layout durante il nesting.
+Questa funzione è disponibile solo con le macchine TecZone Laser.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Fare clic su <strong>fabbrica</strong> → <strong>Macchine</strong> →
+<strong>Preimpostazioni macchina&#8230;&#8203;</strong> → <strong>Skeleton cuts</strong>.</p>
+</li>
+<li>
+<p>Selezionare l&#8217;opzione <strong>Slice Sheet Skeleton</strong> &amp; <strong>Create Remainder Sheet</strong> per abilitare
+questa funzione.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Quando abilitata, l&#8217;area rimanente di un foglio nidificato viene tagliata in fogli
+residuali in base al valore minimo del foglio residuo assegnato in X e Y.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/enablerem.png" alt="Create remainder sheet" width="1119">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configura_ritaglio_automatico">Configura ritaglio automatico</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Fare clic su <strong>fabbrica</strong>
+&#8594; <strong>impostazioni</strong>
+ &#8594; <strong>Job</strong>.</p>
+</li>
+<li>
+<p>Selezionare <strong>Aggiornare le giacenze magazzino lamiere al rilascio (o meno) del annidare</strong>
+e <strong>Automatizzare la gestione giacenze dei residui</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autorem.png" alt="Nest settings" width="735">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ritaglio_automatico">Ritaglio automatico</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Quando si nidificano i pezzi, se l&#8217;area del foglio rimanente soddisfa il valore minimo del foglio X
+e Y, TruSmartCAM crea automaticamente un foglio ritaglio dallo spazio rimasto.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nella vista Nesting del lavoro, i nesting che hanno fogli ritaglio sono mostrati con un
+contorno verde e sfondo grigio.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/remnantsheetjob.png" alt="Jobs layout" width="1140">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Fare doppio clic sul nesting per aprire la pagina Dettagli nesting. Le informazioni sul foglio ritaglio
+sono visualizzate con dimensione, quantità e area del foglio ritaglio.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/remnantsheetnest.png" alt="Remnant sheet info" width="939">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Fare clic con il pulsante destro del mouse sul nesting e selezionare Edit per aprirlo in TecZone. Il nesting mostra
+linee di taglio tra i pezzi e linee di taglio scheletro insieme alle dimensioni del ritaglio
+incise. (Materiale, Spessore e Dimensione ritaglio).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Il segno di incisione della dimensione del ritaglio aiuta l&#8217;operatore a prelevare il foglio senza
+misurare, rendendolo facile da usare nei nesting futuri.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/remnantsheetflux.png" alt="Remnant sheet in Flux" width="694">
+</div>
+</div>
+<div class="paragraph">
+<p>Quando si fa clic su <strong>Contrassegna come completo&#8230;&#8203;</strong>, il foglio ritaglio viene
+mostrato con un segno di spunta verde, indicando che il nesting è completato. Un&#8217;icona quadrata
+parzialmente ombreggiata indica che il foglio ritaglio è stato creato e
+aggiornato nell&#8217;inventario dei fogli.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/remnantsheet.png" alt="Layout marked complete" width="1117">
+</div>
+</div>
+<div class="paragraph">
+<p>Il database dei fogli viene aggiornato con la dimensione e la quantità del foglio ritaglio, che
+è identificato con un simbolo asterisco (*) alla fine della dimensione del foglio. I fogli ritaglio hanno un bordo verde.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/remnantsheet1.png" alt="Remnant sheet" width="866">
+</div>
+</div>
+<div class="paragraph">
+<p>Il piano automatico o il piano interattivo di un lavoro considera i fogli ritaglio come alta
+priorità nel piano di nesting, garantendo che vengano utilizzati per primi per mantenere il reparto
+libero da ritagli non utilizzati.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_abilita_ritaglio">Abilita ritaglio</a>
+  </li>
+  <li level="1">
+   <a href="#_configura_ritaglio_automatico">Configura ritaglio automatico</a>
+  </li>
+  <li level="1">
+   <a href="#_ritaglio_automatico">Ritaglio automatico</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">Gestione ritagli</a></span>
+ <span class="next"><a href="manualremnant.html">Gestione manuale ritagli</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

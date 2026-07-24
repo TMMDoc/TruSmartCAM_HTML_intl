@@ -1,0 +1,793 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Πίνακας tooling</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Καλώς ήρθατε στο TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Εγκατάσταση</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Απαιτήσεις υλικού</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Υποστηριζόμενες μορφές αρχείων</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Προαπαιτούμενα</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Εγκατάσταση Server</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Εγκατάσταση Client</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Αλλαγή άδειας χρήσης</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Ρύθμιση Παραμέτρων</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Προσθήκη/Αφαίρεση μηχανής</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Ρύθμιση εργαλείων</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Διαμόρφωση χρηστών</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Γλώσσα</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Υλικό</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Προσθήκη νέου υλικού και φύλλου</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Εξαγωγή/Εισαγωγή υλικού</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Αντικατάσταση υλικού</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Αντιστοίχιση υλικού</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Αντιστοίχιση σελίδων CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Αντιστοίχιση πεδίων από CAD (κλειδιά αναζήτησης)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Η διεπαφή χρήστη</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Ροή εργασίας</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Βιβλιοθήκη</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Εισαγωγή parts</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Εισαγωγή παραγγελιών</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Εισαγωγή jobs</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Προβολή βιβλιοθήκης</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Κατάσταση part</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Επικύρωση part</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Πίνακας part</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Φίλτρα part</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Κατάσταση tooling</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="toolingvalidation/index.html">Επικύρωση tooling</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="toolingvalidation/bendtooling.html">Επικύρωση bend tooling</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/cuttooling.html">Επικύρωση cut tooling</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/foldtooling.html">Επικύρωση fold tooling</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a class="active" href="toolingpanel.html">Πίνακας tooling</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Αποθήκευση φίλτρων</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Παραγγελίες</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Προβολή παραγγελιών</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Εργασίες</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Δημιουργία εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Προβολή εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Πίνακας εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Αυτόματος σχεδιασμός</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Διαδραστική τοποθέτηση</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Επανασυσκευασία</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Διαχείριση τοποθέτησης</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Προβολή διάταξης</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Πίνακας διάταξης</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Αποστολέας αναφοράς</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Διαχείριση υπολειμμάτων</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Αυτόματη διαχείριση υπολειμμάτων</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Χειροκίνητη διαχείριση υπολειμμάτων</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Τοποθέτηση διπλής γραμμής</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Μη ενημερωμένο</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Φίλτρα εργασίας</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Επεκτάσεις CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Εγκατάσταση</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Αποθήκευση εξαρτημάτων</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Αποθήκευση συναρμολόγησης</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Έλεγχος σκοπιμότητας</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Ρυθμίσεις εργοστασίου</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Διάφορες βελτιώσεις</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Βιβλιοθήκη</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Κατάσταση tooling</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="toolingpanel.html">Πίνακας tooling</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Πίνακας tooling</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Αυτή η ενότητα επεξηγεί ενέργειες σχετικές με tooling όπως
+<strong>Εξαγωγή αποτελεσμάτων</strong>,
+<strong>Check Tooling</strong>, <strong>Απόκρυψη εξοπλισμού</strong>,
+<strong>Ορισμός ως επίπεδο στοιχείο βάσης&#8230;&#8203;</strong>, <strong>Αντιγραφή εξοπλισμού&#8230;&#8203;</strong>,
+και άλλες επιλογές που χρησιμοποιούνται για τη διαχείριση στιγμιοτύπων tooling.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/toolingpanel.png" alt="Tooling panel" width="150">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Άνοιγμα σε κατάσταση μόνο για ανάγνωση για προβολή</strong><br>
+Ανοίγει το επιλεγμένο tooling σε λειτουργία μόνο για ανάγνωση.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Ενεργοποιεί την επεξεργασία του επιλεγμένου tooling.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Εξαγωγή αποτελεσμάτων</strong><br>
+Εξάγει την έξοδο επιλεγμένου tooling στον προορισμό που έχει διαμορφωθεί.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/checkui.png" alt="Check Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check Tooling</strong><br>
+Επικυρώνει το υπάρχον tooling χωρίς να κάνει καμία αλλαγή και ενημερώνει
+την κατάστασή του εάν η επικύρωση αποτύχει.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/copyui.png" alt="Copy Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Αντιγραφή εξοπλισμού&#8230;&#8203;</strong><br>
+Αντιγράφει τη διάταξη punch, sequence και back gauge από το επιλεγμένο
+αναφορικό tooling και την εφαρμόζει σε άλλες λύσεις όπου είναι εφικτό.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/baseui.png" alt="Set as Base-Flat" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ορισμός ως επίπεδο στοιχείο βάσης&#8230;&#8203;</strong><br>
+Σημειώνει το επιλεγμένο bend ή fold tooling ως αναφορικό μέγεθος flat για
+τη δημιουργία λύσεων κοπής.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/retoolui.png" alt="Re-tool" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Re-tool&#8230;&#8203;</strong><br>
+Επανεπεξεργάζεται το επιλεγμένο tooling για το part χωρίς να επηρεάσει άλλα
+toolings.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/supressui.png" alt="Suppress Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Απόκρυψη εξοπλισμού</strong><br>
+Καταστέλλει το επιλεγμένο tooling ώστε να εξαιρεθεί από περαιτέρω
+επεξεργασία και δημιουργία εξόδου.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prevui.png" alt="Prev Next" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Προηγ.</strong> / <strong>Επόμενο</strong> / <strong>Εξάρτημα</strong><br>
+Πλοηγεί στο προηγούμενο ή στο επόμενο tooling ή πίσω στο γονικό part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sortui.png" alt="Similar Toolings" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ταξινόμηση και φιλτράρισμα</strong><br>
+Εμφανίζει άλλα toolings που μοιράζονται παρόμοια χαρακτηριστικά με το
+επιλεγμένο tooling για γρήγορη αναφορά.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_εξαγωγή_αποτελεσμάτων">Εξαγωγή αποτελεσμάτων</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Αυτή η επιλογή εξάγει την έξοδο part στον προορισμό που έχει διαμορφωθεί στις
+<strong>Εργοστασιακές ρυθμίσεις</strong>. (Δείτε
+<a href="../../factory/settings/bend.html">Bend Settings</a> και
+<a href="../../factory/settings/cut.html">Cut Settings</a>)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingoutput.png" alt="Tooling Output" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Μόνο τα toolings που σχετίζονται με την επιλεγμένη λειτουργία tooling
+εξάγονται, όχι ολόκληρο το part.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Τα εξαγόμενα αρχεία εξαρτώνται από τον τύπο λειτουργίας. Για λειτουργίες Bend και
+Fold, δημιουργούνται αρχεία NC και αναφορές. Για λειτουργίες Cut και Punch
+, εξάγονται μόνο τα αρχεία part.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_check_tooling">Check Tooling</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Εάν υπάρχει αλλαγή στις ρυθμίσεις CAM ή ένα εργαλείο bend χαθεί, δεν χρειάζεται
+να επανεφοδιάσετε με εργαλεία το part.</p>
+</li>
+<li>
+<p>Αντί αυτού, χρησιμοποιήστε το Check Tooling για να επικυρώσετε το υπάρχον tooling χωρίς να κάνετε
+οποιεσδήποτε αλλαγές.</p>
+</li>
+<li>
+<p>Εάν η επικύρωση αποτύχει, η κατάσταση tooling αυτού του στιγμιοτύπου ενημερώνεται και
+τα σχετικά αρχεία εξόδου αφαιρούνται.</p>
+</li>
+<li>
+<p>Το Check Tooling ανιχνεύει επίσης parts όπου τα σφάλματα είχαν παρακαμφθεί χειροκίνητα
+προηγουμένως χρησιμοποιώντας το <strong>Αγνόηση σφαλμάτων</strong>, και ενημερώνει την
+κατάστασή τους σε σφάλμα εάν χρειάζεται.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/checktooling.png" alt="Check Tooling" width="456">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_αντιγραφή_εξοπλισμού">Αντιγραφή εξοπλισμού&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Η αντιγραφή tooling σας επιτρέπει να εφαρμόσετε γρήγορα bend tooling από μία λύση σε
+άλλες, εξοικονομώντας χρόνο και προσπάθεια.</p>
+</div>
+<div class="paragraph">
+<p>Αυτό αντιγράφει τη διάταξη punch, sequence και back gauge από ένα επιλεγμένο αναφορικό
+tooling (λύση) και προσπαθεί να εφαρμόσει τις ίδιες ρυθμίσεις σε όλες τις άλλες λύσεις.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Εάν η αντιγραμμένη διάταξη είναι εφικτή για μια μηχανή-στόχο, αποθηκεύεται και χρησιμοποιείται.</p>
+</li>
+<li>
+<p>Εάν η διάταξη δεν είναι εφικτή, το αρχικό tooling για αυτή τη μηχανή παραμένει
+αμετάβλητο.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Για παράδειγμα, μπορεί να έχετε διαφορετικό tooling για διαφορετικές μηχανές:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Εδώ, η μηχανή 5230SX 6A χρησιμοποιεί ένα punch Gooseneck, η μηχανή 5085X 6A B23 χρησιμοποιεί ένα
+punch Pointed.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check3.png" alt="Before tooling" width="724">
+</div>
+</div>
+<div class="paragraph">
+<p>Όταν χρησιμοποιείτε το <strong>Αντιγραφή εξοπλισμού&#8230;&#8203;</strong> στη μηχανή 5230SX 6A, αυτό
+προσπαθεί να αντιγράψει τη διάταξη Gooseneck σε όλες τις άλλες μηχανές.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check4.png" alt="Copy tooling" width="664">
+</div>
+</div>
+<div class="paragraph">
+<p>Οι ίδιες ρυθμίσεις punch, sequence και back gauge εφαρμόζονται όπου
+είναι δυνατόν. Εάν η αντιγραμμένη διάταξη δεν μπορεί να χρησιμοποιηθεί, το αρχικό tooling παραμένει
+αμετάβλητο.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/copytooling3.png" alt="After tooling" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>Μετά την εφαρμογή της αντιγραφής tooling, η διάταξη Gooseneck έχει εφαρμοστεί επιτυχώς
+σε όλες τις άλλες μηχανές όπου είναι εφικτό.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ορισμός_ως_επίπεδο_στοιχείο_βάσης">Ορισμός ως επίπεδο στοιχείο βάσης&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Η δυνατότητα <strong>Ορισμός ως επίπεδο στοιχείο βάσης&#8230;&#8203;</strong> ορίζει ποιο bend ή fold
+tooling χρησιμοποιείται ως αναφορικό μέγεθος flat για τη δημιουργία λύσεων κοπής.
+Όταν ένα tooling σημειώνεται ως Base-Flat, το TruSmartCAM ενημερώνει το μέγεθος flat του part
+με βάση αυτή τη μηχανή και αναδημιουργεί τις λύσεις κοπής αναλόγως. Τα toolings Base-Flat
+εμφανίζονται με μπλε περίγραμμα στο UI.</p>
+</div>
+<div class="paragraph">
+<p>Διαφορετικές μηχανές bend μπορεί να παράγουν μικρές παραλλαγές στο μέγεθος flat για το ίδιο
+part. Όταν ορίζετε ένα tooling ως Base-Flat, το TruSmartCAM χρησιμοποιεί το μέγεθος flat αυτής της μηχανής
+ως κύρια αναφορά και αναυπολογίζει αυτόματα τις λύσεις κοπής.</p>
+</div>
+<div class="paragraph">
+<p>Εδώ, μπορούμε να δούμε διαφορετικά μεγέθη flat για το ίδιο part σε διάφορες
+μηχανές:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat1.png" alt="Base flat1" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>Σε αυτό το παράδειγμα, το tooling <strong>5130X 6A B23</strong> ορίζεται ως Base-Flat και το
+ενημερωμένο μέγεθος flat εφαρμόζεται στις ιδιότητες part:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat2.png" alt="Base flat2" width="663">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_αυτόματη_επιλογή_base_flat">Αυτόματη επιλογή base flat</h3>
+<div class="paragraph">
+<p>Όταν η ρύθμιση εργοστασίου
+<strong>Εφαρμογή διόρθωσης επίπεδου στοιχείου κατά την κάμψη</strong> είναι ενεργοποιημένη:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autobase.png" alt="Auto Base" width="806">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Το TruSmartCAM ορίζει αυτόματα το bend tooling (που περιέχει τον πίνακα μέγιστου μήκους bend
+) ως Base-Flat κατά την εισαγωγή part.</p>
+</li>
+<li>
+<p>Εάν το επιλεγμένο bend tooling αντιμετωπίσει σφάλμα ή δεν είναι εφικτό,
+το TruSmartCAM αλλάζει έξυπνα και ορίζει άλλο έγκυρο bend tooling ως
+Base-Flat. Αυτό διασφαλίζει ότι η αναφορά μεγέθους flat και οι λύσεις κοπής παραμένουν πάντα
+συνεπείς και έγκυρες χωρίς χειροκίνητη παρέμβαση.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_βελτιωμένη_διαχείριση_base_flat">Βελτιωμένη διαχείριση base flat</h3>
+<div class="paragraph">
+<p>Το TruSmartCAM παρέχει επιλογές Base-Flat στον διάλογο <strong>Αποθήκευση στο Praxis</strong>
+κατά την αποθήκευση επεξεργασιών bend ή fold tooling. Αυτές οι επιλογές εμφανίζονται μόνο για
+toolings σε κατάσταση OK και διασφαλίζουν ότι το μέγεθος flat και οι λύσεις κοπής παραμένουν
+ακριβείς.</p>
+</div>
+<div class="sect3">
+<h4 id="_ορισμός_ως_επίπεδο_στοιχείο_βάσης_και_υπολογισμός_λύσης_κοπής">Ορισμός ως επίπεδο στοιχείο βάσης και υπολογισμός λύσης κοπής</h4>
+<div class="paragraph">
+<p>Αυτή η επιλογή χρησιμοποιείται για να σημειώσει ένα tooling ως Base-Flat για πρώτη φορά και
+να δημιουργήσει αυτόματα την αντίστοιχη λύση κοπής.</p>
+</div>
+<div class="paragraph">
+<p>Εμφανίζεται όταν:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Το tooling δεν είναι τρέχον σημειωμένο ως Base-Flat.</p>
+</li>
+<li>
+<p>Ο χρήστης έχει κάνει check out το tooling για επεξεργασία και αποθηκεύει τις αλλαγές.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/setbase.png" alt="Set Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>Για να χρησιμοποιήσετε αυτήν την επιλογή, κάντε check out το bend ή fold tooling και κάντε τις απαιτούμενες
+τροποποιήσεις, όπως αλλαγές σε παραμέτρους bend ή μέγεθος flat. Πατήστε
+<span class="keyseq"><kbd>Ctrl</kbd>+<kbd>S</kbd></span> για να αποθηκεύσετε τις αλλαγές. Στον διάλογο <strong>Αποθήκευση στο Praxis</strong>
+, επιλέξτε
+<strong>Ορισμός ως επίπεδο στοιχείο βάσης και υπολογισμός λύσης κοπής</strong> και
+κάντε κλικ στο
+<strong>OK</strong>. Το TruSmartCAM θα ορίσει το tooling ως Base-Flat και θα δημιουργήσει τη
+λύση κοπής χρησιμοποιώντας το ενημερωμένο μέγεθος flat.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ενημέρωση_του_επίπεδου_στοιχείου_βάσης_και_επανυπολογισμός_λύσης_κοπής">Ενημέρωση του επίπεδου στοιχείου βάσης και επανυπολογισμός λύσης κοπής</h4>
+<div class="paragraph">
+<p>Αυτή η επιλογή χρησιμοποιείται όταν το tooling είναι ήδη σημειωμένο ως Base-Flat και έχει
+επεξεργαστεί, απαιτώντας το μέγεθος flat και τις λύσεις κοπής να αναδημιουργηθούν.</p>
+</div>
+<div class="paragraph">
+<p>Εμφανίζεται όταν:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Το tooling είναι ήδη σημειωμένο ως Base-Flat.</p>
+</li>
+<li>
+<p>Ο χρήστης έχει κάνει check out, το έχει επεξεργαστεί και αποθηκεύει τις αλλαγές.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/updatebase.png" alt="Update Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>Κατά την επεξεργασία του υπάρχοντος Base-Flat tooling, ενημερώστε τις παραμέτρους bend ή
+τη γεωμετρία μεγέθους flat όπως απαιτείται. Στον διάλογο <strong>Αποθήκευση στο Praxis</strong>,
+επιλέξτε
+<strong>Ενημέρωση του επίπεδου στοιχείου βάσης και επανυπολογισμός λύσης κοπής</strong>.
+Το TruSmartCAM στη συνέχεια θα ενημερώσει το Base-Flat tooling και θα αναδημιουργήσει όλες τις σχετικές
+λύσεις κοπής για να αντικατοπτρίσει τις τελευταίες αλλαγές.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Μόνο ένα bend tooling μπορεί να οριστεί ως Base-Flat κάθε φορά.</p>
+</div>
+<div class="paragraph">
+<p>Όταν το Base-Flat αλλάζει, οι υπάρχουσες λύσεις κοπής επανεπεξεργάζονται αυτόματα.</p>
+</div>
+<div class="paragraph">
+<p>Αυτή η δυνατότητα είναι διαθέσιμη τόσο για bend όσο και για fold toolings εντός του TruSmartCAM.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_νέος_εξοπλισμός">Νέος εξοπλισμός&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Αυτή η επιλογή επανεπεξεργάζεται το επιλεγμένο tooling για το part.</p>
+</div>
+<div class="paragraph">
+<p>Κάντε δεξί κλικ στο απαιτούμενο tooling στον πίνακα Tooling και κάντε κλικ στο
+<strong>Νέος εξοπλισμός&#8230;&#8203;</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingretool.png" alt="ToolingRetool" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Εμφανίζεται ένας διάλογος επιβεβαίωσης πριν προχωρήσετε.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingconfirm.png" alt="ToolingConfirm" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Κάντε κλικ στο <strong>Ναι</strong> για να συνεχίσετε με την επανεξοπλισμό, ή <strong>Όχι</strong> για
+ακύρωση της λειτουργίας.</p>
+</div>
+<div class="paragraph">
+<p>Μόνο το επιλεγμένο tooling επανεφοδιάζεται με εργαλεία. Άλλα toolings που σχετίζονται με
+το part δεν επηρεάζονται. Οι υπάρχουσες έξοδοι που σχετίζονται με το επιλεγμένο
+tooling αφαιρούνται και αναδημιουργούνται κατά τη διαδικασία επανεξοπλισμού.</p>
+</div>
+<div class="paragraph">
+<p>Χρησιμοποιήστε αυτήν την επιλογή όταν τα δεδομένα tooling είναι ξεπερασμένα, εσφαλμένα ή όταν
+γίνονται αλλαγές στις διαμορφώσεις μηχανής ή tooling.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_αγνόηση_σφαλμάτων">Αγνόηση σφαλμάτων</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Εάν ένα στιγμιότυπο tooled εμφανίζει προειδοποίηση και θέλετε ακόμα να προχωρήσετε με αυτό,
+μπορείτε να παρακάμψετε την προειδοποίηση κάνοντας κλικ στο
+<strong>Αγνόηση σφαλμάτων</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/ignore.png" alt="Ignore errors" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Αυτό θα επιτρέψει στο σύστημα να εξάγει αρχεία εξόδου για αυτό το
+στιγμιότυπο, ακόμα και αν υπήρχαν προβλήματα tooling.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Χρησιμοποιήστε το <strong>Ignore Errors</strong> μόνο όταν είστε σίγουροι ότι η προειδοποίηση μπορεί να αγνοηθεί με ασφάλεια. Η παράκαμψη πραγματικών σφαλμάτων μπορεί να οδηγήσει σε ζημιά μηχανής ή κινδύνους ασφαλείας.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_suppressunsuppress_tooling">Suppress/Unsuppress tooling</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Όταν μια μηχανή είναι ανενεργή ή δεν θέλετε ένα συγκεκριμένο part να επεξεργαστεί από μια
+συγκεκριμένη μηχανή, χρησιμοποιήστε το <strong>Απόκρυψη εξοπλισμού</strong> για να εξαιρέσετε
+το part από το nesting σε αυτή τη μηχανή.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/supress.png" alt="Supress Tooling" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Μετά την καταστολή, το πέρασμα του ποντικιού πάνω από το στιγμιότυπο tooled εμφανίζει ένα
+μήνυμα όπως: "Tooling suppressed by &lt;User name&gt; on &lt;Date Time&gt;".</p>
+</li>
+<li>
+<p>Η καταστολή tooling αφαιρεί το αρχείο εξόδου για αυτή τη μηχανή και το part.</p>
+</li>
+<li>
+<p>Χρησιμοποιήστε το <strong>Κατάργηση απόκρυψης εξοπλισμού</strong> για να αποκαταστήσετε την κατάσταση tooling
+για το part σε αυτή τη μηχανή.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unsupress.png" alt="Unsupress Tooling" width="495">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Όταν αποκατασταθεί, το αντίστοιχο αρχείο εξόδου δημιουργείται ξανά.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_εξαγωγή_αποτελεσμάτων">Εξαγωγή αποτελεσμάτων</a>
+  </li>
+  <li level="1">
+   <a href="#_check_tooling">Check Tooling</a>
+  </li>
+  <li level="1">
+   <a href="#_αντιγραφή_εξοπλισμού">Αντιγραφή εξοπλισμού&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_ορισμός_ως_επίπεδο_στοιχείο_βάσης">Ορισμός ως επίπεδο στοιχείο βάσης&#8230;&#8203;</a>
+  </li>
+  <li level="2">
+   <a href="#_αυτόματη_επιλογή_base_flat">Αυτόματη επιλογή base flat</a>
+  </li>
+  <li level="2">
+   <a href="#_βελτιωμένη_διαχείριση_base_flat">Βελτιωμένη διαχείριση base flat</a>
+  </li>
+  <li level="1">
+   <a href="#_νέος_εξοπλισμός">Νέος εξοπλισμός&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_αγνόηση_σφαλμάτων">Αγνόηση σφαλμάτων</a>
+  </li>
+  <li level="1">
+   <a href="#_suppressunsuppress_tooling">Suppress/Unsuppress tooling</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="toolingvalidation/foldtooling.html">Επικύρωση fold tooling</a></span>
+ <span class="next"><a href="../savingfilters.html">Αποθήκευση φίλτρων</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,678 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Job visning</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Velkommen til TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Hardwarekrav</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Understøttede filformater</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Forudsætninger</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Serverinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Klientinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Skift licens</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Konfiguration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Tilføj/fjern maskine</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Opsæt værktøj</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Konfigurer brugere</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Sprog</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Materiale</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Tilføj nyt materiale og plade</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Eksporter/Importer materiale</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Erstat materiale</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Kortlæg materiale</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Kortlæg CAM-sider</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Kortlæg felter fra CAD (opslagnøgler)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">Brugergrænsefladen</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Arbejdsgang</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Bibliotek</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Åbn</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Importer dele</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Importer ordrer</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Importer jobs</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Importer samlinger</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Biblioteksvisning</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Dele</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Samling</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Delstatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Delvalidering</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Delpanel</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Dele filtre</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Værktøjsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Værktøjsvalidering</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Bukkeværktøjsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Skæreværktøjsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Foldeværktøjsvalidering</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Værktøjspanel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Gem filtre</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Ordrer</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Ordrevisning</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Jobs</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">Opret job</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobview.html">Job visning</a></li>
+    <li><button class="tree blank"></button><a href="jobpanel.html">Job panel</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">Auto plan</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">Interaktiv nesting</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">Ompakning</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">Nest management</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">Layout visning</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">Layout panel</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">Report sender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">Restmaterialestyring</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">Auto restmaterialestyring</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">Manuel restmaterialestyring</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">Twinline nesting</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">Forældet</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">Job filtre</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD-udvidelser</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Gem dele</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Gem samling</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Kontroller gennemførlighed</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Fabriksindstillinger</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Diverse forbedringer</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Jobs</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobview.html">Job visning</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Job visning</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dette afsnit forklarer de forskellige visninger, der er tilgængelige i Job-
+visningen, herunder Jobs, Parts, Nests, Edit, Simulate og Export.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jobs">Jobs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Valg af <strong>jobs</strong> valgmuligheden viser en liste over alle jobs, der
+aktuelt er konfigureret i softwaren. De kan dobbeltklikke på et job for at se
+dets detaljer eller højreklikke for at få adgang til yderligere muligheder.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Jobs vises i flisevisning, hvor hvert job vises med grundlæggende egenskaber
+som Job-ID, Job-reference, kundenavn, samlede dele, leveringsdato,
+jobstatuslinje osv.</p>
+</li>
+<li>
+<p>Hver jobflise viser også delbilleder i et stablet kortformat. De kan rulle
+gennem alle dele i et job ved hjælp af musehjulet.<br></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobview1.png" alt="Job Page" width="1489">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_job_detaljer">Job detaljer</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Dobbeltklik på en flise eller tryk på <kbd>Enter</kbd>-tasten efter at have valgt
+en flise skifter visningen til Detaljetilstand.</p>
+</li>
+<li>
+<p>Detaljsiden viser dellisten sammen med de nestede plader (layouts), hvis
+der er nogen.</p>
+</li>
+<li>
+<p>Brug Op/Ned piletasterne til at skifte mellem jobs på detaljsiden.</p>
+</li>
+<li>
+<p>Rul musehjulet over delstakken fremhæver delen i både dellisten og
+layoutsene.</p>
+</li>
+<li>
+<p>Valg af et layout fremhæver layoutet og alle dele nestet på det i dellisten.
+Fremhævningerne slukkes automatisk efter et minut.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobview2.png" alt="Job Details" width="1908">
+</div>
+</div>
+</li>
+<li>
+<p><strong>Indlejringsresumé</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Dele</strong>: Viser det samlede antal ordreelementer og den
+samlede mængde i jobbet.</p>
+</li>
+<li>
+<p><strong>plader</strong>: Viser det samlede antal nestede plader sammen
+med den samlede plademængde.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Arbejdstrin</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Bukning</strong>: Viser den tildelte maskine og dens ordremængde,
+der skal behandles.</p>
+</li>
+<li>
+<p><strong>Skæring</strong>: Viser den tildelte maskine og dens ordremængde,
+der skal behandles.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_prioritet">Prioritet</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Klik først på ikonet <strong>Jobs</strong> i venstre side af skærmen, vælg det job, De
+ønsker at redigere, og klik derefter på <strong>edit</strong> i højre side af skærmen (sørg
+for, at valgmuligheden Jobs er valgt).</p>
+</li>
+<li>
+<p>Alternativt kan De højreklikke på det valgte job og klikke på ikonet
+<strong>Tjek dokumentet ud til redigering</strong>.</p>
+</li>
+<li>
+<p>Når De klikker på <strong>edit</strong>, vises vinduet edit job. I dette vindue kan De
+indstille eller ændre prioriteten for jobbet.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/priority1.png" alt="Priority1" width="1207">
+</div>
+</div>
+</li>
+<li>
+<p>Baseret på jobdelprioriteten er jobreferencen i jobflisen farveskygget
+tilsvarende.</p>
+</li>
+<li>
+<p>Jobdele sorteres først efter prioritet og derefter efter leveringsdato. De
+er også farveskygget i henhold til deres prioritet.</p>
+</li>
+<li>
+<p>Ved nesting betragtes <strong>Urgent</strong>-dele først, efterfulgt af <strong>High</strong>, derefter
+<strong>Normal</strong>, og endelig placeres <strong>Low</strong>-prioritetsdele i det resterende rum på
+nestpladerne.</p>
+</li>
+<li>
+<p>Nestplader sorteres og farveskygges også i henhold til prioritet.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Job prioritet</th>
+<th class="tableblock halign-left valign-top">Farvebeskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/urgent.png" alt="Urgent" width="50"></span> (Orange)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Urgent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/normal1.png" alt="Normal" width="50"></span> (Ingen farve)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Normal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/high.png" alt="High" width="50"></span> (Gul)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">High</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/low.png" alt="Low" width="50"></span> (Mørkegrå)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Low</p></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock">
+<div class="content">
+<img src="img/priority2.png" alt="Priority2" width="1158">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_status">Status</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Jobstatuslinjen bruger farvekoder til at angive jobbets fremskridt eller
+tilstand baseret på den behandlede eller resterende mængde.</p>
+</li>
+<li>
+<p>Delene i jobbet og nestpladerne fremhæves også med matchende farver for at
+afspejle deres individuelle status inden for det overordnede JOB.</p>
+</li>
+<li>
+<p>Farvekodning forbedrer sporingen og sikrer, at operatørerne nemt kan se
+produktionsstatus med et hurtigt blik.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/status1.png" alt="Job status" width="1114">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/status2.png" alt="Job status" width="1360">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Job Status</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/notready.png" alt="Not Ready" width="100"></span> (Lysegrå)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ikke klar</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/nesting.png" alt="Nesting" width="100"></span> (Magenta)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indlejring</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/ready.png" alt="Ready" width="100"></span> (Hvid)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Klar</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/cuttingqueue.png" alt="Bend planned" width="100"></span> (Lysegul)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bend Planned</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/sheetmissing.png" alt="Sheet Missing" width="100"></span> (Mørkegrå)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Plade mangler</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/bendingqueue.png" alt="Bending Queue" width="100"></span> (Mørkegul)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bukningskø</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/bendplanned.png" alt="Bend Planned" width="100"></span> (Gul)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skærekø</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/completed.png" alt="Completed" width="100"></span> (Mørkegrøn)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Udført</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_parts">Parts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Visningen Active Parts viser alle dele, der aktuelt er under behandling i
+aktive jobs.</p>
+</div>
+<div class="paragraph">
+<p>Hver del repræsenteres som en flise, der viser vigtige detaljer såsom delnavn,
+dimensioner, materiale, tykkelse, mængde og leveringsdato. En visuel
+forhåndsvisning af delen vises også.</p>
+</div>
+<div class="paragraph">
+<p>Denne visning hjælper brugerne med at overvåge behandlingsstatus for
+individuelle dele og spore deres fremskridt på tværs af igangværende jobs.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/activeparts.png" alt="Active">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nests">Nests</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Visningen Active Nests viser alle nests, der aktuelt er under behandling i
+aktive jobs.</p>
+</div>
+<div class="paragraph">
+<p>Hvert nest repræsenteres med relevante detaljer såsom antal dele og
+behandlingsstatus. Et visuelt layout af de nestede dele vises også.</p>
+</div>
+<div class="paragraph">
+<p>Denne visning hjælper brugerne med at overvåge nestingfremskridt og spore,
+hvordan dele arrangeres og behandles på plader.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/activenest.png" alt="Nest">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_edit">Edit</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Valgmuligheden Edit giver Dem mulighed for at ændre det valgte element.</p>
+</div>
+<div class="paragraph">
+<p>Baseret på den aktuelle visning åbnes den valgte forekomst til redigering:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>I Jobs-visningen åbnes det valgte job til redigering.</p>
+</li>
+<li>
+<p>I Active Parts-visningen åbnes den valgte del til redigering.</p>
+</li>
+<li>
+<p>I Active Nests-visningen åbnes det valgte nest til redigering.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobviewedit.png" alt="Edit" width="980">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_export_csv">Export csv</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Valgmuligheden Export giver Dem mulighed for at vælge jobinformation og
+eksportere den til en CSV-fil.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klik på ikonet <strong>jobs</strong>.</p>
+</li>
+<li>
+<p>Klik på valgmuligheden <strong>export</strong> i højre side af skærmen.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importexport1.png" alt="Export" width="700">
+</div>
+</div>
+</li>
+<li>
+<p>En dialogboks vises med tilgængelige felter:</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importexport2.png" alt="Export CSV" width="174">
+</div>
+</div>
+</li>
+<li>
+<p>Vælg afkrydsningsfelterne for de felter, De ønsker at eksportere.</p>
+</li>
+<li>
+<p>Brug valgmuligheden <strong>Group By</strong>, hvis De ønsker at gruppere
+dataene efter et valgt felt.</p>
+</li>
+<li>
+<p>Klik på Export for at generere CSV-filen.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_yderligere_information">Yderligere information</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Der er også tre yderligere ikoner i højre side af skærmen, som er
+<strong>simulér</strong>, <strong>Goto</strong> og <strong>tilbage</strong>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Simulate åbner det valgte element for en mere detaljeret visning.</p>
+</li>
+<li>
+<p>Goto skifter fokus og viser den del eller det nest, der er valgt.</p>
+</li>
+<li>
+<p>Back går et niveau tilbage fra, hvor De aktuelt er, for eksempel at klikke på
+<strong>tilbage</strong> mens De er i simulering, vil tage Dem tilbage til
+hovedjobbet, og fra et job vil det tage Dem tilbage til hovedjobvisningen.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_jobs">Jobs</a>
+  </li>
+  <li level="2">
+   <a href="#_job_detaljer">Job detaljer</a>
+  </li>
+  <li level="2">
+   <a href="#_prioritet">Prioritet</a>
+  </li>
+  <li level="2">
+   <a href="#_status">Status</a>
+  </li>
+  <li level="1">
+   <a href="#_parts">Parts</a>
+  </li>
+  <li level="1">
+   <a href="#_nests">Nests</a>
+  </li>
+  <li level="1">
+   <a href="#_edit">Edit</a>
+  </li>
+  <li level="1">
+   <a href="#_export_csv">Export csv</a>
+  </li>
+  <li level="1">
+   <a href="#_yderligere_information">Yderligere information</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobcreation.html">Opret job</a></span>
+ <span class="next"><a href="jobpanel.html">Job panel</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

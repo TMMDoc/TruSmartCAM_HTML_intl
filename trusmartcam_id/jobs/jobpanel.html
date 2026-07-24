@@ -1,0 +1,540 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Panel pekerjaan</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Selamat Datang di TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Change license</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Konfigurasi</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Tambah/Hapus mesin</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Setup tooling</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Konfigurasi pengguna</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Bahasa</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Tambah material dan sheet baru</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Export/Import material</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Ganti material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Petakan material</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Petakan halaman CAM</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Petakan field dari CAD (lookup keys)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">Antarmuka pengguna</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Perpustakaan</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Impor part</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Impor order</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Impor job</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Impor assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Tampilan perpustakaan</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Bagian</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Rakitan</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Status part</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Validasi part</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Panel part</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Filter part</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Status tooling</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Validasi tooling</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Validasi tooling bend</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Validasi tooling cut</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Validasi tooling fold</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Panel tooling</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Menyimpan filter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Pesanan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Tampilan pesanan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Pekerjaan</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">Buat pekerjaan</a></li>
+    <li><button class="tree blank"></button><a href="jobview.html">Tampilan pekerjaan</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobpanel.html">Panel pekerjaan</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">Rencana otomatis</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">Nesting interaktif</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">Pengepakan ulang</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">Manajemen nest</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">Tampilan tata letak</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">Panel tata letak</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">Pengirim laporan</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">Manajemen sisa</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">Manajemen sisa otomatis</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">Manajemen sisa manual</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">Nesting twinline</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">Kedaluwarsa</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">Filter pekerjaan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">Ekstensi CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Instalasi</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Simpan part</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Simpan assembly</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Periksa kelayakan</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Pengaturan factory</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Peningkatan lain-lain</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Pekerjaan</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobpanel.html">Panel pekerjaan</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Panel pekerjaan</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bagian ini menjelaskan tindakan terkait pekerjaan seperti
+<strong>Export outputs</strong>, <strong>Reset Pekerjaan&#8230;&#8203;</strong>,
+<strong>Tandai sebagai Selesai&#8230;&#8203;</strong>, <strong>Ekspor Pekerjaan&#8230;&#8203;</strong>,
+dan opsi lain yang digunakan untuk mengelola instans pekerjaan.</p>
+</div>
+<table class="tableblock frame-none grid-none fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/jobpanel.png" alt="JobPanel" width="200">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Buka dalam mode dilindungi dari penulisan untuk melihat</strong><br>
+Membuka pekerjaan yang dipilih dalam mode baca-saja.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Mengaktifkan pengeditan pekerjaan yang dipilih.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Hapus</strong><br>
+Menghapus pekerjaan yang dipilih.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/openreport.png" alt="Report" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Lihat Laporan</strong><br>
+Membuka laporan produksi untuk pekerjaan yang dipilih.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ekspor Output</strong><br>
+Mengekspor file output siap mesin (file NC dan laporan) yang dihasilkan
+untuk pekerjaan yang dipilih.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/planui.png" alt="Plan" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Plan job</strong><br>
+Menghasilkan tata letak nested untuk bagian dalam pekerjaan yang dipilih.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/resetui.png" alt="Reset" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Reset Pekerjaan&#8230;&#8203;</strong><br>
+Menghapus semua tata letak yang dihasilkan untuk pekerjaan dan mereset bagiannya ke
+status yang dapat direncanakan.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/markui.png" alt="Mark" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tandai sebagai Selesai&#8230;&#8203;</strong><br>
+Menandai pekerjaan dan semua nest-nya sebagai selesai setelah produksi.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/jobui.png" alt="Job" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ekspor Pekerjaan&#8230;&#8203;</strong><br>
+Mengekspor pekerjaan lengkap sebagai paket yang dapat digunakan kembali atau diimpor ke
+sistem lain.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sebelumnya</strong> / <strong>Berikutnya</strong> / <strong>Rancangan</strong><br>
+Menavigasi ke tata letak sebelumnya atau berikutnya dalam pekerjaan yang dipilih.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sort.png" alt="Filters" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Urutkan dan filter</strong><br>
+Gunakan filter ini untuk melihat pekerjaan lain yang memiliki material, pelanggan,
+tanggal jatuh tempo, atau prioritas yang sama.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ekspor_output">Ekspor Output</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Pilih pekerjaan yang diperlukan.</p>
+</li>
+<li>
+<p>Klik <strong>Ekspor Output</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput.png" alt="Export outputs dialog" width="585">
+</div>
+</div>
+</li>
+<li>
+<p>Ini mengekspor file output siap mesin yang dihasilkan untuk pekerjaan
+yang dipilih.</p>
+</li>
+<li>
+<p>Export Outputs dapat disimpan baik ke lokasi default yang dikonfigurasi di
+<strong>Pengaturan Pabrik</strong> atau ke lokasi kustom dengan menggunakan
+<strong>Telusuri&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Ini hanya mengekspor file output mesin (seperti NC dan laporan) untuk
+pekerjaan.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/output.png" alt="Exported output files" width="725">
+</div>
+</div>
+</li>
+<li>
+<p>File-file ini digunakan langsung untuk produksi dan dapat dikirim ke
+mesin.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reset_pekerjaan">Reset Pekerjaan&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Mereset pekerjaan yang dipilih dengan menghapus semua tata letak yang dihasilkan dan membuat bagian
+tersedia untuk perencanaan lagi.</p>
+</div>
+<div class="paragraph">
+<p>Untuk mereset pekerjaan:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klik kanan pekerjaan dan pilih <strong>Reset Pekerjaan&#8230;&#8203;</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/resetjob1.png" alt="Reset job" width="820">
+</div>
+</div>
+</li>
+<li>
+<p>Ini menghapus semua tata letak nested yang ada untuk pekerjaan yang dipilih dan mereset
+semua bagiannya ke status yang dapat direncanakan.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/resetjob2.png" alt="Reset job" width="820">
+</div>
+</div>
+</li>
+<li>
+<p>Jika tata letak berisi bagian dari pekerjaan lain, bagian tersebut juga direset.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ekspor_pekerjaan">Ekspor Pekerjaan&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Pilih pekerjaan yang diperlukan.</p>
+</li>
+<li>
+<p>Klik <strong>Ekspor Pekerjaan&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Opsi ini mengekspor pekerjaan lengkap sebagai paket yang dapat digunakan kembali atau
+diimpor ke sistem lain.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/outputview.png" alt="Output view" width="785">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Data yang diekspor mencakup semua informasi yang diperlukan untuk membuat ulang pekerjaan:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Detail bagian dan jumlah (file CSV).</p>
+</li>
+<li>
+<p>Data tata letak dan nesting (file CSV / FXYLT).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>File yang diekspor disimpan sebagai folder pekerjaan di lokasi ekspor
+yang dikonfigurasi.</p>
+</li>
+<li>
+<p>Opsi ini digunakan untuk mentransfer, membagikan, atau mencadangkan seluruh pekerjaan.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tandai_sebagai_selesai">Tandai sebagai Selesai&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Setelah pekerjaan diproses pada mesin, buka panel Job dan pilih
+<strong>Tandai sebagai Selesai&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/mark.png" alt="Mark complete dialog" width="845">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ketika pekerjaan ditandai sebagai selesai:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Semua nest di bawah pekerjaan ditandai sebagai selesai.</p>
+</li>
+<li>
+<p>Pekerjaan dibuat abu-abu, dipindahkan ke akhir daftar, dan ditampilkan dengan
+tanda centang hijau.</p>
+</li>
+<li>
+<p>Semua tata letak di bawah pekerjaan dihapus dari daftar tata letak aktif.</p>
+</li>
+<li>
+<p>Status bagian dan pekerjaan diperbarui, dan jumlah yang diproses berpindah ke
+status selesai.</p>
+</li>
+<li>
+<p>File output untuk semua tata letak dalam pekerjaan dihapus dari lokasi
+output mesin untuk menghindari penggunaan duplikat.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_ekspor_output">Ekspor Output</a>
+  </li>
+  <li level="1">
+   <a href="#_reset_pekerjaan">Reset Pekerjaan&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_ekspor_pekerjaan">Ekspor Pekerjaan&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_tandai_sebagai_selesai">Tandai sebagai Selesai&#8230;&#8203;</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobview.html">Tampilan pekerjaan</a></span>
+ <span class="next"><a href="jobautoplan.html">Rencana otomatis</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

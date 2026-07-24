@@ -1,0 +1,795 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Panneau d'outillage</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Bienvenue dans TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Configuration matérielle requise</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Formats de fichiers pris en charge</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Prérequis</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Installation du serveur</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Installation du client</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Changer de licence</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Ajouter/Supprimer une machine</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Configuration de l'outillage</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Configurer les utilisateurs</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Langue</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Matériau</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Ajouter un nouveau matériau et une feuille</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Exporter/Importer le matériau</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Remplacer le matériau</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Associer le matériau</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Associer les pages CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Associer les champs depuis CAD (clés de recherche)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">L'interface utilisateur</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Flux de travail</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Bibliothèque</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Ouvrir</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Importer des pièces</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Importer des commandes</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Importer des tâches</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Importer des assemblages</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Vue de bibliothèque</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Pièces</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assemblage</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Statut de la pièce</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Validation de pi\u00e8ce</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Panneau de pièces</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Filtres de pièces</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Statut de l'outillage</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="toolingvalidation/index.html">Validation d'outillage</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="toolingvalidation/bendtooling.html">Validation d'outillage de pliage</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/cuttooling.html">Validation d'outillage de découpe</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/foldtooling.html">Validation d'outillage de pliure</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a class="active" href="toolingpanel.html">Panneau d'outillage</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Enregistrer les filtres</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Commandes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Vue des commandes</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Travaux</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Créer un travail</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Vue du travail</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Panneau de travail</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Planification automatique</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Imbrication interactive</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Réemballage</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Gestion de l'imbrication</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Vue de mise en page</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Panneau de mise en page</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Expéditeur de rapport</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Gestion des chutes</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Gestion automatique des chutes</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Gestion manuelle des chutes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Imbrication en ligne double</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Obsolète</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtres de travail</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Feuilles</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Utilisateurs</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Modifier</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Clients</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Paramètres</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environnement</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Importation</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Pliage</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Découpe</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Surveillance</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Tâche</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Rapports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Extensions CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">Extension SolidWorks</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Enregistrer les pièces</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Enregistrer l'assemblage</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Vérifier la faisabilité</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Paramètres de l'usine</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Améliorations diverses</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Mentions légales</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Bibliothèque</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Statut de l'outillage</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="toolingpanel.html">Panneau d'outillage</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Panneau d'outillage</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cette section explique les actions liées à l&#8217;outillage telles que
+<strong>Exporter sorties</strong>,
+<strong>Check Tooling</strong>, <strong>Masquer outillage</strong>,
+<strong>Configurer comme méplat de base&#8230;&#8203;</strong>, <strong>Copier montage&#8230;&#8203;</strong>,
+et d&#8217;autres options utilisées pour gérer les instances d&#8217;outillage.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/toolingpanel.png" alt="Tooling panel" width="150">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ouvrir en mode lecture seule pour la visualisation</strong><br>
+Opens the selected tooling in read-only mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Enables editing of the selected tooling.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Exporter sorties</strong><br>
+Exports the selected tooling output to the destination configured.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/checkui.png" alt="Check Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check Tooling</strong><br>
+Validates the existing tooling without making any changes and updates
+its status if the validation fails.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/copyui.png" alt="Copy Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Copier montage&#8230;&#8203;</strong><br>
+Copies the punch, sequence, and back gauge setup from the selected
+reference tooling and applies it to other solutions wherever feasible.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/baseui.png" alt="Set as Base-Flat" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Configurer comme méplat de base&#8230;&#8203;</strong><br>
+Marks the selected bend or fold tooling as the reference flat size for
+generating cutting solutions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/retoolui.png" alt="Re-tool" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Re-tool&#8230;&#8203;</strong><br>
+Reprocesses the selected tooling for the part without affecting other
+toolings.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/supressui.png" alt="Suppress Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Masquer outillage</strong><br>
+Suppresses the selected tooling so that it is excluded from further
+processing and output generation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prevui.png" alt="Prev Next" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Préc</strong> / <strong>Suivant</strong> / <strong>Pièce</strong><br>
+Navigates to the previous or next tooling, or back to the parent part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sortui.png" alt="Similar Toolings" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort and filter</strong><br>
+Displays other toolings that share similar characteristics with the
+selected tooling for quick reference.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exporter_sorties">Exporter sorties</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cette option exporte la sortie de la pièce vers la destination configurée dans
+<strong>Réglages usine</strong>. (Voir
+<a href="../../factory/settings/bend.html">Paramètres de pliage</a> et
+<a href="../../factory/settings/cut.html">Paramètres de coupe</a>)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingoutput.png" alt="Tooling Output" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Seuls les outillages associés à l&#8217;opération d&#8217;outillage sélectionnée sont
+exportés, pas la pièce entière.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Les fichiers exportés dépendent du type d&#8217;opération. Pour les opérations Bend et
+Fold, des fichiers NC et des rapports sont générés. Pour les opérations Cut et Punch,
+seuls les fichiers de pièces sont exportés.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_check_tooling">Check Tooling</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>S&#8217;il y a un changement dans les paramètres CAM ou si un outil de pliage est perdu, vous n&#8217;avez pas besoin
+de réoutiller la pièce.</p>
+</li>
+<li>
+<p>Utilisez plutôt Check Tooling pour valider l&#8217;outillage existant sans effectuer
+de modifications.</p>
+</li>
+<li>
+<p>Si la validation échoue, le statut d&#8217;outillage de cette instance est mis à jour, et
+les fichiers de sortie associés sont supprimés.</p>
+</li>
+<li>
+<p>Check Tooling détecte également les pièces où les erreurs ont été précédemment remplacées manuellement
+utilisant <strong>Ignorer les erreurs</strong>, et met à jour leur
+statut en erreur si nécessaire.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/checktooling.png" alt="Check Tooling" width="456">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_copier_montage">Copier montage&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La copie d&#8217;outillage vous permet d&#8217;appliquer rapidement l&#8217;outillage de pliage d&#8217;une solution à
+d&#8217;autres, ce qui permet de gagner du temps et des efforts.</p>
+</div>
+<div class="paragraph">
+<p>Cela copie le punch, la séquence et la configuration de la butée arrière d&#8217;un outillage de référence
+sélectionné (solution) et tente d&#8217;appliquer les mêmes paramètres à toutes les autres solutions.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Si la configuration copiée est réalisable pour une machine cible, elle est enregistrée et utilisée.</p>
+</li>
+<li>
+<p>Si la configuration n&#8217;est pas réalisable, l&#8217;outillage d&#8217;origine pour cette machine reste
+inchangé.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Par exemple, vous pouvez avoir différents outillages pour différentes machines :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ici, Machine 5230SX 6A utilise un punch Gooseneck, Machine 5085X 6A B23 utilise un punch Pointed.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check3.png" alt="Before tooling" width="724">
+</div>
+</div>
+<div class="paragraph">
+<p>Lorsque vous utilisez <strong>Copier montage&#8230;&#8203;</strong> sur Machine 5230SX 6A, cela
+tente de copier la configuration Gooseneck vers toutes les autres machines.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check4.png" alt="Copy tooling" width="664">
+</div>
+</div>
+<div class="paragraph">
+<p>Le même punch, la même séquence et les mêmes paramètres de butée arrière sont appliqués partout où c&#8217;est
+possible. Si la configuration copiée ne peut pas être utilisée, l&#8217;outillage d&#8217;origine reste
+inchangé.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/copytooling3.png" alt="After tooling" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>Après l&#8217;application de la copie d&#8217;outillage, la configuration Gooseneck a été appliquée avec succès
+à toutes les autres machines où elle est réalisable.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configurer_comme_méplat_de_base">Configurer comme méplat de base&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La fonctionnalité <strong>Configurer comme méplat de base&#8230;&#8203;</strong> définit quel outillage de pliage ou de pliure
+est utilisé comme taille de développé de référence pour générer les solutions de découpe.
+Lorsqu&#8217;un outillage est marqué comme Base-Flat, TruSmartCAM met à jour la taille de développé de la pièce
+en fonction de cette machine et regénère les solutions de découpe en conséquence. Les outillages Base-Flat
+sont affichés avec une bordure bleue dans l&#8217;interface utilisateur.</p>
+</div>
+<div class="paragraph">
+<p>Différentes machines de pliage peuvent produire de légères variations de taille de développé pour la même
+pièce. Lorsque vous définissez un outillage comme Base-Flat, TruSmartCAM utilise la taille de développé de cette machine
+comme référence principale et recalcule automatiquement les solutions de découpe.</p>
+</div>
+<div class="paragraph">
+<p>Ici, nous pouvons voir différentes tailles de développé pour la même pièce sur différentes
+machines :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat1.png" alt="Base flat1" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>Dans cet exemple, l&#8217;outillage <strong>5130X 6A B23</strong> est défini comme Base-Flat, et la
+taille de développé mise à jour est appliquée dans les propriétés de la pièce :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat2.png" alt="Base flat2" width="663">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sélection_automatique_de_base_flat">Sélection automatique de base flat</h3>
+<div class="paragraph">
+<p>Lorsque le paramètre d&#8217;usine
+<strong>Appliquer une correction à plat pendant le pliage</strong> est activé :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autobase.png" alt="Auto Base" width="806">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM définit automatiquement l&#8217;outillage de pliage (qui contient le tableau de longueur de pli max)
+comme Base-Flat lors de l&#8217;importation de la pièce.</p>
+</li>
+<li>
+<p>Si l&#8217;outillage de pliage sélectionné rencontre une erreur ou n&#8217;est pas réalisable,
+TruSmartCAM bascule intelligemment et définit un autre outillage de pliage valide comme
+Base-Flat. Cela garantit que la référence de taille de développé et les solutions de découpe restent toujours
+cohérentes et valides sans intervention manuelle.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gestion_améliorée_de_base_flat">Gestion améliorée de base flat</h3>
+<div class="paragraph">
+<p>TruSmartCAM fournit des options Base-Flat dans la boîte de dialogue <strong>Enregistrer vers Praxis</strong>
+lors de l&#8217;enregistrement des modifications d&#8217;outillage de pliage ou de pliure. Ces options n&#8217;apparaissent que pour
+les outillages dans l&#8217;état OK et garantissent que la taille de développé et les solutions de découpe restent
+précises.</p>
+</div>
+<div class="sect3">
+<h4 id="_configurer_comme_méplat_de_base_et_calculer_le_programme_de_coupe">Configurer comme méplat de base et calculer le programme de coupe</h4>
+<div class="paragraph">
+<p>Cette option est utilisée pour marquer un outillage comme Base-Flat pour la première fois et
+générer automatiquement la solution de découpe correspondante.</p>
+</div>
+<div class="paragraph">
+<p>Apparaît lorsque :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>L&#8217;outillage n&#8217;est actuellement pas marqué comme Base-Flat.</p>
+</li>
+<li>
+<p>L&#8217;utilisateur a extrait l&#8217;outillage pour édition et enregistre les modifications.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/setbase.png" alt="Set Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>Pour utiliser cette option, extrayez l&#8217;outillage de pliage ou de pliure et effectuez les modifications requises,
+telles que des modifications aux paramètres de pliage ou à la taille de développé. Appuyez sur
+<span class="keyseq"><kbd>Ctrl</kbd>+<kbd>S</kbd></span> pour enregistrer les modifications. Dans la boîte de dialogue <strong>Enregistrer vers Praxis</strong>,
+choisissez
+<strong>Configurer comme méplat de base et calculer le programme de coupe</strong> et
+cliquez sur
+<strong>OK</strong>. TruSmartCAM définira l&#8217;outillage comme Base-Flat et générera la
+solution de découpe en utilisant la taille de développé mise à jour.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mettre_à_jour_le_méplat_de_base_et_recalculer_le_programme_de_coupe">Mettre à jour le méplat de base et recalculer le programme de coupe</h4>
+<div class="paragraph">
+<p>Cette option est utilisée lorsque l&#8217;outillage est déjà marqué comme Base-Flat et a
+été édité, nécessitant que la taille de développé et les solutions de découpe soient regénérées.</p>
+</div>
+<div class="paragraph">
+<p>Apparaît lorsque :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>L&#8217;outillage est déjà marqué comme Base-Flat.</p>
+</li>
+<li>
+<p>L&#8217;utilisateur l&#8217;a extrait, édité et enregistre les modifications.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/updatebase.png" alt="Update Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>Lors de l&#8217;édition de l&#8217;outillage Base-Flat existant, mettez à jour les paramètres de pliage ou
+la géométrie de taille de développé selon les besoins. Dans la boîte de dialogue <strong>Enregistrer vers Praxis</strong>,
+choisissez
+<strong>Mettre à jour le méplat de base et recalculer le programme de coupe</strong>.
+TruSmartCAM mettra alors à jour l&#8217;outillage Base-Flat et regénérera toutes les solutions de découpe
+associées pour refléter les dernières modifications.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Un seul outillage de pliage peut être défini comme Base-Flat à la fois.</p>
+</div>
+<div class="paragraph">
+<p>Lorsque le Base-Flat est modifié, les solutions de découpe existantes sont automatiquement
+retraitees.</p>
+</div>
+<div class="paragraph">
+<p>Cette fonctionnalité est disponible pour les outillages de pliage et de pliure dans TruSmartCAM.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_réoutillage">Réoutillage&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cette option retraite l&#8217;outillage sélectionné pour la pièce.</p>
+</div>
+<div class="paragraph">
+<p>Cliquez avec le bouton droit sur l&#8217;outillage requis dans le panneau d&#8217;outillage et cliquez sur
+<strong>Réoutillage&#8230;&#8203;</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingretool.png" alt="ToolingRetool" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Une boîte de dialogue de confirmation est affichée avant de continuer.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingconfirm.png" alt="ToolingConfirm" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Cliquez sur <strong>Oui</strong> pour continuer le réoutillage, ou sur <strong>Non</strong> pour
+annuler l&#8217;opération.</p>
+</div>
+<div class="paragraph">
+<p>Seul l&#8217;outillage sélectionné est réoutillé. Les autres outillages associés à
+la pièce ne sont pas affectés. Les sorties existantes liées à l&#8217;outillage sélectionné
+sont supprimées et regénérées lors du processus de réoutillage.</p>
+</div>
+<div class="paragraph">
+<p>Utilisez cette option lorsque les données d&#8217;outillage sont obsolètes, incorrectes ou lorsque
+des modifications sont apportées aux configurations de machine ou d&#8217;outillage.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ignorer_les_erreurs">Ignorer les erreurs</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Si une instance outillée affiche un avertissement, et que vous souhaitez quand même continuer avec elle,
+vous pouvez remplacer l&#8217;avertissement en cliquant sur
+<strong>Ignorer les erreurs</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/ignore.png" alt="Ignore errors" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Cela permettra au système d&#8217;exporter les fichiers de sortie pour cette
+instance, même s&#8217;il y avait des problèmes d&#8217;outillage.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Utilisez <strong>Ignore Errors</strong> uniquement lorsque vous êtes sûr que l&#8217;avertissement peut être ignoré en toute sécurité.
+Remplacer des erreurs réelles peut entraîner des dommages à la machine ou des risques de sécurité.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_supprimerrétablir_loutillage">Supprimer/Rétablir l&#8217;outillage</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Lorsqu&#8217;une machine est inactive ou que vous ne souhaitez pas qu&#8217;une pièce spécifique soit
+traitée par une
+machine particulière, utilisez <strong>Masquer outillage</strong> pour exclure
+cette pièce de l&#8217;imbrication sur cette machine.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/supress.png" alt="Supress Tooling" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Après la suppression, survoler l&#8217;instance outillée affiche un
+message tel que : "Tooling suppressed by &lt;User name&gt; on &lt;Date Time&gt;".</p>
+</li>
+<li>
+<p>La suppression de l&#8217;outillage supprime le fichier de sortie pour cette machine et cette pièce.</p>
+</li>
+<li>
+<p>Utilisez <strong>Afficher outillage</strong> pour restaurer le statut d&#8217;outillage
+pour la pièce sur cette machine.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unsupress.png" alt="Unsupress Tooling" width="495">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Lorsqu&#8217;il est rétabli, le fichier de sortie respectif est à nouveau généré.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_exporter_sorties">Exporter sorties</a>
+  </li>
+  <li level="1">
+   <a href="#_check_tooling">Check Tooling</a>
+  </li>
+  <li level="1">
+   <a href="#_copier_montage">Copier montage&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_configurer_comme_méplat_de_base">Configurer comme méplat de base&#8230;&#8203;</a>
+  </li>
+  <li level="2">
+   <a href="#_sélection_automatique_de_base_flat">Sélection automatique de base flat</a>
+  </li>
+  <li level="2">
+   <a href="#_gestion_améliorée_de_base_flat">Gestion améliorée de base flat</a>
+  </li>
+  <li level="1">
+   <a href="#_réoutillage">Réoutillage&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_ignorer_les_erreurs">Ignorer les erreurs</a>
+  </li>
+  <li level="1">
+   <a href="#_supprimerrétablir_loutillage">Supprimer/Rétablir l&#8217;outillage</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="toolingvalidation/foldtooling.html">Validation d'outillage de pliure</a></span>
+ <span class="next"><a href="../savingfilters.html">Enregistrer les filtres</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

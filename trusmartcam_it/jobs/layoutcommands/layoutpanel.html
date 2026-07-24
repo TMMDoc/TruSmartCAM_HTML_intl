@@ -1,0 +1,753 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Pannello layout</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Benvenuti in TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Change license</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configurazione</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Aggiungere/Rimuovere macchina</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Configurare utensili</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Configurare utenti</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Lingua</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiale</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Aggiungere nuovo materiale e foglio</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Esportare/Importare materiale</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Sostituire materiale</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mappare materiale</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mappare pagine CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mappare campi da CAD (chiavi di ricerca)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">L'interfaccia utente</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Flusso di lavoro</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Libreria</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Apri</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Importa pezzi</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Importa ordini</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Importa lavori</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Importa assiemi</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Vista libreria</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Pezzi</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Assieme</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Stato parti</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Convalida parti</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Pannello pezzi</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Filtri pezzi</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Stato attrezzaggio</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Convalida attrezzaggio</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Convalida attrezzaggio piegatura</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Convalida attrezzaggio taglio</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Convalida attrezzaggio piegatubi</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Pannello attrezzaggio</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Salvataggio filtri</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Ordini</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Vista ordini</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Commesse</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../jobcreation.html">Crea commessa</a></li>
+    <li><button class="tree blank"></button><a href="../jobview.html">Vista lavori</a></li>
+    <li><button class="tree blank"></button><a href="../jobpanel.html">Pannello commessa</a></li>
+    <li><button class="tree blank"></button><a href="../jobautoplan.html">Pianificazione automatica</a></li>
+    <li><button class="tree blank"></button><a href="../jobinteractplan.html">Nesting interattivo</a></li>
+    <li><button class="tree blank"></button><a href="../repacking.html">Riconfezionamento</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Gestione nidi</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="nestview.html">Vista layout</a></li>
+      <li><button class="tree blank"></button><a class="active" href="layoutpanel.html">Pannello layout</a></li>
+      <li><button class="tree blank"></button><a href="reportsender.html">Mittente report</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../remnantmanagement/index.html">Gestione ritagli</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../remnantmanagement/autoremnant.html">Gestione automatica ritagli</a></li>
+      <li><button class="tree blank"></button><a href="../remnantmanagement/manualremnant.html">Gestione manuale ritagli</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../twinlinenesting.html">Nesting a doppia linea</a></li>
+    <li><button class="tree blank"></button><a href="../outdate.html">Non aggiornato</a></li>
+    <li><button class="tree blank"></button><a href="../jobfilters.html">Filtri lavoro</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Estensioni CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">Componente aggiuntivo SolidWorks</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installazione</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Salvare parti</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Salvare assieme</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Verifica fattibilità</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Impostazioni di fabbrica</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Miglioramenti vari</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Colophon</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Commesse</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Gestione nidi</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="layoutpanel.html">Pannello layout</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Pannello layout</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Questa sezione spiega le azioni relative al layout come
+<strong>Invia alla macchina&#8230;&#8203;</strong>,
+<strong>Richiama dalla macchina&#8230;&#8203;</strong>,
+<strong>Esporta output</strong>,
+<strong>Contrassegna come completo&#8230;&#8203;</strong>, <strong>Aggiungi pezzi&#8230;&#8203;</strong>,
+<strong>Adatta/Compatta&#8230;&#8203;</strong>,
+<strong>Dividi layout&#8230;&#8203;</strong> e altre opzioni utilizzate per gestire
+le istanze di layout.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/layout.png" alt="Layout panel" width="181">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Aprire in modalità di sola lettura per la visualizzazione</strong><br>
+Apre il layout selezionato in modalità di sola lettura.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Abilita la modifica del layout selezionato.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cancella</strong><br>
+Elimina il layout selezionato.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/openreport.png" alt="Report" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Visualizza report</strong><br>
+Apre il report del layout standard e il report specifico dell&#8217;etichetta per il
+layout selezionato.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sendui.png" alt="Send" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Invia alla macchina&#8230;&#8203;</strong><br>
+Invia il layout selezionato alla macchina ed esporta i file di output
+(fxlyt, NC, report, csv) nella posizione di output del lavoro.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/addui.png" alt="Add" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Aggiungi pezzi&#8230;&#8203;</strong><br>
+Aggiunge più pezzi a un layout poco compatto utilizzando la procedura guidata di riconfezionamento del layout.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/adaptui.png" alt="Adapt" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Adatta/Compatta&#8230;&#8203;</strong><br>
+Ri-nidifica il layout selezionato per compattare i pezzi e liberare l&#8217;area utilizzabile.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/changeui.png" alt="Change" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cambia tabella tecnologica laser per il taglio</strong><br>
+Cambia il foglio assegnato al layout selezionato.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/splitui.png" alt="Split"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Dividi layout&#8230;&#8203;</strong><br>
+Divide il layout selezionato in due o più layout separati.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/renameui.png" alt="RenameUi" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rename layout&#8230;&#8203;</strong><br>
+Rinomina il layout selezionato.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Job</strong> / <strong>Prec</strong> / <strong>Succ</strong> / <strong>Pezzi</strong><br>
+Naviga verso l&#8217;alto al lavoro padre, al layout precedente o successivo all&#8217;interno del
+lavoro selezionato, o verso il basso ai pezzi contenuti nel layout.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sort.png" alt="Filters" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ordina e filtra</strong><br>
+Utilizzare questi filtri per visualizzare altri layout che condividono lo stesso attributo del
+layout selezionato: Stessa macchina, Stesso materiale, Stesso LTT, Stessa priorità,
+Stesso stato, Stesso foglio, Stesso pezzo, Stesso stato ritaglio o Stessa direzione
+di laminazione.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="send-to-machine">Invia alla macchina&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Quando un nesting è pronto (riempito o urgentemente necessario), è possibile inviarlo alla
+macchina.</p>
+</li>
+<li>
+<p>Fare clic con il pulsante destro del mouse sul nesting e selezionare <strong>Invia alla macchina&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Viene creata automaticamente una cartella, denominata con il nome del nesting.</p>
+</li>
+<li>
+<p>I file di output (fxlyt, NC, report, csv) vengono esportati nella posizione di
+output del lavoro.</p>
+</li>
+<li>
+<p>I nesting inviati alla macchina sono mostrati con un segno di spunta blu.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/sendtomachine.png" alt="Send to machines" width="1180">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Una volta rilasciati, quei nesting non vengono più ritentati per il riconfezionamento.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_richiama_dalla_macchina">Richiama dalla macchina&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Se l&#8217;output necessita di convalida o di un aggiornamento (ad esempio, aggiungendo più pezzi):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Fare clic con il pulsante destro del mouse sul layout esportato.</p>
+</li>
+<li>
+<p>Selezionare <strong>Richiama dalla macchina&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>I file di output e la cartella (fxlyt, NC, report, csv) vengono eliminati.</p>
+</li>
+<li>
+<p>Il nesting diventa nuovamente modificabile.</p>
+</li>
+<li>
+<p>È possibile apportare modifiche e inviarlo nuovamente alla macchina.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/recallfrommachine.png" alt="Recall from machines" width="1153">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_esporta_output">Esporta output</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Fare clic con il pulsante destro del mouse su qualsiasi layout (nesting) che è stato inviato alla macchina e fare clic su
+<strong>Esporta output</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput1.png" alt="Export outputs" width="447">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>L&#8217;opzione Esporta output esporta i file NC, Report e Layout nelle
+rispettive cartelle di output della macchina.</p>
+</li>
+<li>
+<p>Questa opzione rigenera il file NC con le impostazioni dell&#8217;unità correnti per il
+layout.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Esporta output non è disponibile per i layout completati e
+i layout in attesa in coda per il riconfezionamento.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mark-complete">Segna come completato</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Una volta che il nesting è stato elaborato sulla macchina, fare clic con il pulsante destro del mouse sul nesting e
+selezionare <strong>Contrassegna come completo&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>È possibile selezionare più nesting e segnarli come completati contemporaneamente.</p>
+</li>
+<li>
+<p>Quando un nesting viene contrassegnato come completato:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Viene visualizzato in grigio, spostato alla fine dell&#8217;elenco e mostrato con un segno di spunta
+verde.</p>
+</li>
+<li>
+<p>Il layout viene rimosso dall&#8217;elenco dei layout attivi.</p>
+</li>
+<li>
+<p>Gli stati dei pezzi e dei lavori vengono aggiornati e le quantità elaborate passano allo
+stato completato.</p>
+</li>
+<li>
+<p>I file di output per quel layout vengono rimossi dalla posizione di output
+della macchina per evitare duplicati.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/markcomplete1.png" alt="Mark complete" width="1101">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="add-parts">Aggiungi pezzi&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart1.png" alt="Add parts" width="997">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Utilizzare questa opzione per aggiungere più pezzi a un layout relativamente poco compatto. Come
+il nesting interattivo, questa è un&#8217;opzione guidata da procedura guidata e può essere utilizzata
+su un singolo o più layout contemporaneamente.</p>
+</li>
+<li>
+<p>TruSmartCAM monta la procedura guidata di riconfezionamento del layout nell&#8217;area di lavoro principale
+quando questa opzione viene utilizzata. Tenere premuto il tasto <kbd>Ctrl</kbd> e selezionare uno o più
+pezzi da compattare sul layout e premere <strong>Succ</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart2.png" alt="Part selection" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>I pezzi selezionati vengono visualizzati nel passaggio successivo con una
+colonna di quantità modificabile. Aggiornare le quantità dei pezzi se necessario nel
+campo <strong>Update Qty</strong>. Fare clic su <strong>Succ</strong> per procedere al nesting. Si noti che
+le quantità possono essere solo aumentate, non diminuite.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart3.png" alt="Update quantity" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>Tutti i layout vengono nidificati separatamente e i risultati nidificati vengono visualizzati
+con i pezzi appena compattati posizionati su di essi. Selezionando il layout vengono visualizzati tutti i
+pezzi del layout esistenti. Il risultato viene automaticamente scartato se non viene
+posizionato alcun nuovo pezzo durante il riconfezionamento. Un layout con più copie può risultare in
+modelli diversi dopo il riconfezionamento.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart4.png" alt="Repack result" width="2200">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="adapt-compact">Adatta/Compatta&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Questo comando basato su procedura guidata può essere utilizzato per adattare un layout da una
+macchina a un&#8217;altra quando la macchina originale è fuori servizio o quando il carico di lavoro della macchina
+deve essere bilanciato.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt1.png" alt="Adapt compact" width="737">
+</div>
+</div>
+</li>
+<li>
+<p>Può essere utilizzato quando il foglio pianificato non è disponibile e il layout
+deve essere ripianificato su un altro foglio disponibile.</p>
+</li>
+<li>
+<p>È possibile unire layout compattati su fogli più piccoli su fogli più grandi per utilizzare
+il materiale in modo più efficiente.</p>
+</li>
+<li>
+<p>È possibile dividere layout compattati su fogli più grandi in fogli più piccoli se gli stock di fogli grandi
+non sono disponibili.</p>
+</li>
+<li>
+<p>È possibile migliorare l&#8217;efficienza di compattazione di più layout (anche da
+macchine diverse) unendoli insieme.</p>
+</li>
+<li>
+<p>Per utilizzarlo, selezionare uno o più layout e fare clic su
+<strong>Adatta/Compatta&#8230;&#8203;</strong> per aprire la procedura guidata nell&#8217;area di lavoro.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt2.png" alt="Layouts window" width="1902">
+</div>
+</div>
+</li>
+<li>
+<p>Il riquadro sinistro mostra tutti i layout selezionati e il riquadro Pezzi mostra i pezzi
+del layout.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt3.png" alt="Layouts window" width="1910">
+</div>
+</div>
+</li>
+<li>
+<p>Selezionare la macchina di destinazione e il materiale del foglio, quindi fare clic su
+<strong>Succ</strong> per eseguire il rinesting.</p>
+</li>
+<li>
+<p>I nuovi risultati del nesting vengono mostrati nel riquadro dei risultati.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt4.png" alt="Layouts window" width="1901">
+</div>
+</div>
+</li>
+<li>
+<p>Fare clic su <strong>Succ</strong> per salvare il layout adattato o compattato.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt5.png" alt="Layouts window" width="1902">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_suddivisione_di_un_layout">Suddivisione di un layout</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>L&#8217;opzione <strong>Dividi layout&#8230;&#8203;</strong> consente di dividere
+un layout esistente in più layout modificando le quantità,
+senza la necessità di rifare l&#8217;attrezzaggio o il nesting.</p>
+</div>
+<div class="paragraph">
+<p>Questa funzione è particolarmente utile nei
+seguenti scenari:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Quando è necessario produrre una parte della quantità totale immediatamente mentre si
+programma la quantità rimanente per una produzione successiva.</p>
+</li>
+<li>
+<p>Quando i requisiti di produzione devono essere distribuiti su più turni o
+giorni per ottimizzare il flusso di lavoro e l&#8217;utilizzo delle risorse.</p>
+</li>
+<li>
+<p>Quando una macchina specifica è temporaneamente non disponibile o occupata e è necessario
+regolare il layout per adattarsi ai vincoli di produzione attuali.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Per dividere un layout, eseguire i seguenti passaggi:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nella vista Layout, selezionare il layout richiesto.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/splitlayout.png" alt="Split layout" width="264">
+</div>
+</div>
+</li>
+<li>
+<p>Fare clic su <strong>Dividi layout&#8230;&#8203;</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/layoutpanel.png" alt="Layout panel" width="155">
+</div>
+</div>
+</li>
+<li>
+<p>Immettere il valore richiesto in <strong>Copie nuove</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/newcopies.png" alt="New copies" width="389">
+</div>
+</div>
+</li>
+<li>
+<p>Fare clic su <strong>OK</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/twolayout.png" alt="Two layouts" width="547">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Il layout selezionato è ora diviso in due layout con quantità regolate.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#send-to-machine">Invia alla macchina&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_richiama_dalla_macchina">Richiama dalla macchina&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_esporta_output">Esporta output</a>
+  </li>
+  <li level="1">
+   <a href="#mark-complete">Segna come completato</a>
+  </li>
+  <li level="1">
+   <a href="#add-parts">Aggiungi pezzi&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#adapt-compact">Adatta/Compatta&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_suddivisione_di_un_layout">Suddivisione di un layout</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="nestview.html">Vista layout</a></span>
+ <span class="next"><a href="reportsender.html">Mittente report</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

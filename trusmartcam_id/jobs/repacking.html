@@ -1,0 +1,473 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Pengepakan ulang</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Selamat Datang di TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Change license</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Konfigurasi</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Tambah/Hapus mesin</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Setup tooling</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Konfigurasi pengguna</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Bahasa</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Tambah material dan sheet baru</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Export/Import material</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Ganti material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Petakan material</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Petakan halaman CAM</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Petakan field dari CAD (lookup keys)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">Antarmuka pengguna</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Perpustakaan</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Impor part</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Impor order</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Impor job</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Impor assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Tampilan perpustakaan</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Bagian</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Rakitan</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Status part</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Validasi part</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Panel part</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Filter part</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Status tooling</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Validasi tooling</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Validasi tooling bend</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Validasi tooling cut</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Validasi tooling fold</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Panel tooling</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Menyimpan filter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Pesanan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Tampilan pesanan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Pekerjaan</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">Buat pekerjaan</a></li>
+    <li><button class="tree blank"></button><a href="jobview.html">Tampilan pekerjaan</a></li>
+    <li><button class="tree blank"></button><a href="jobpanel.html">Panel pekerjaan</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">Rencana otomatis</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">Nesting interaktif</a></li>
+    <li><button class="tree blank"></button><a class="active" href="repacking.html">Pengepakan ulang</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">Manajemen nest</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">Tampilan tata letak</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">Panel tata letak</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">Pengirim laporan</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">Manajemen sisa</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">Manajemen sisa otomatis</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">Manajemen sisa manual</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">Nesting twinline</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">Kedaluwarsa</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">Filter pekerjaan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">Ekstensi CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Instalasi</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Simpan part</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Simpan assembly</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Periksa kelayakan</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Pengaturan factory</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Peningkatan lain-lain</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Pekerjaan</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="repacking.html">Pengepakan ulang</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Pengepakan ulang</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>TruSmartCAM tidak memiliki modul Repacking terpisah. Sebaliknya, pengepakan ulang
+ditangani melalui opsi tingkat pekerjaan yang memberikan fleksibilitas dalam bagaimana bagian
+digabungkan.</p>
+</div>
+<div class="paragraph">
+<p>Ada tiga cara di mana pengepakan ulang dapat dilakukan.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pengepakan ulang dengan
+<strong>Gabungkan komponen dari beberapa Pekerjaan</strong>.</p>
+</li>
+<li>
+<p>Pengepakan Ulang Manual Menggunakan Wizard Interaktif <strong>Tambahkan Komponen&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Pengepakan Ulang Manual Menggunakan TecZone.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pengepakan_ulang_dengan_gabungkan_komponen_dari_beberapa_pekerjaan">Pengepakan ulang dengan Gabungkan komponen dari beberapa Pekerjaan</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Untuk mengaktifkan opsi ini, buka <strong>pabrik</strong> &#8594;
+<strong>pengaturan</strong> &#8594; <strong>Pekerjaan</strong> &#8594;
+<strong>Pengaturan nesting</strong> &#8594;
+<strong>Gabungkan komponen dari beberapa Pekerjaan</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/mixparts.png" alt="Mix Parts" width="735">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ketika diaktifkan, opsi ini memungkinkan bagian dari pekerjaan yang berbeda untuk dikelompokkan
+bersama-sama selama auto nesting atau nesting interaktif, menghasilkan
+pengepakan atau nesting gabungan.</p>
+</li>
+<li>
+<p>Misalnya:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Job-1 memiliki 1 bagian, Job-2 memiliki 1 bagian.</p>
+</li>
+<li>
+<p>Dengan <strong>Gabungkan komponen dari beberapa Pekerjaan</strong>
+diaktifkan, TruSmartCAM dapat mengepak ulang 2 bagian ini menjadi satu nest yang dioptimalkan.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/mixnest1.png" alt="Mix Nest1" width="415"></span> <span class="image"><img src="img/mixnest2.png" alt="Mix Nest2" width="400"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tanpa opsi ini, bagian dari setiap pekerjaan tetap terpisah selama
+nesting/pengepakan dengan nama tata letak yang berbeda.</p>
+</li>
+<li>
+<p>Pengepakan ulang juga dapat dilakukan secara manual tanpa mengaktifkan opsi ini.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pengepakan_ulang_manual_menggunakan_wizard_interaktif_add_parts">Pengepakan ulang manual menggunakan wizard interaktif add parts</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Dari tampilan tata letak, pilih bagian yang ingin Anda kemas ulang.</p>
+</li>
+<li>
+<p>Klik kanan bagian dan pilih <strong>Tambahkan Komponen&#8230;&#8203;</strong> dari
+panel tata letak.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/addparts.png" alt="Add Parts" width="740">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ikuti petunjuk dalam wizard untuk menyelesaikan proses pengepakan ulang.</p>
+</li>
+<li>
+<p>Pilih <strong>Tampilkan komponen pekerjaan lainnya</strong> dan tambahkan ke
+pekerjaan saat ini.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/manualrepacking2.png" alt="Manual Repacking2" width="1846">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tinjau perubahan dan konfirmasi pengepakan ulang.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/manualrepacking1.png" alt="Manual Repacking1" width="1846">
+</div>
+</div>
+<div class="paragraph">
+<p>Untuk detail lebih lanjut lihat  <a href="./layoutcommands/layoutpanel.html#add-parts">Add Parts</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pengepakan_ulang_manual_menggunakan_teczone">Pengepakan ulang manual menggunakan TecZone</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Buka TecZone dengan mengklik  <span class="image"><img src="img/editicon.png" alt="Edit" width="18"></span>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/fluxlayout.png" alt="Flux Layout" width="741">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Di antarmuka TecZone, klik Add.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/fluxadd.png" alt="Add" width="544">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Jendela baru muncul di mana Anda dapat memilih bagian yang akan dikemas ulang. Klik
+<strong>Tampilkan&#8230;&#8203;</strong> dan kemudian pilih <strong>Komponen pekerjaan lainnya</strong>.
+Setelah membuat pilihan, klik <strong>_Ambil</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/pick.png" alt="Pick" width="838">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Jendela baru muncul di mana Anda dapat menentukan, di mana bagian perlu dikemas ulang.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/selection.png" alt="Selection" width="408">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klik pada <strong>Simpan perubahan ke Praxis</strong> dan
+tata letak yang dikemas ulang akan tersedia di TruSmartCAM.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/fluxrepack1.png" alt="Flux Repack1" width="410"></span> <span class="image"><img src="img/fluxrepack2.png" alt="Flux Repack2" width="418"></span></p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_pengepakan_ulang_dengan_gabungkan_komponen_dari_beberapa_pekerjaan">Pengepakan ulang dengan Gabungkan komponen dari beberapa Pekerjaan</a>
+  </li>
+  <li level="1">
+   <a href="#_pengepakan_ulang_manual_menggunakan_wizard_interaktif_add_parts">Pengepakan ulang manual menggunakan wizard interaktif add parts</a>
+  </li>
+  <li level="1">
+   <a href="#_pengepakan_ulang_manual_menggunakan_teczone">Pengepakan ulang manual menggunakan TecZone</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobinteractplan.html">Nesting interaktif</a></span>
+ <span class="next"><a href="layoutcommands/index.html">Manajemen nest</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

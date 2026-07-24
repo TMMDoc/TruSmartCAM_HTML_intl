@@ -1,0 +1,704 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>布局面板</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">欢迎使用 TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">安装</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">硬件要求</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">支持的文件格式</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">先决条件</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">客户端安装</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">更改许可证</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">配置</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">添加/删除设备</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">设置工具</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">配置用户</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">语言</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">材料</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">添加新材料和板材</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">导出/导入材料</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">替换材料</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">映射材料</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">映射 CAM 页面</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">从 CAD 映射字段（查找键）</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">用户界面</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">工作流程</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">库</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">打开</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">导入零件</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">导入订单</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">导入作业</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">导入装配体</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">库视图</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">零件</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">装配体</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">零件状态</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">零件验证</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">零件面板</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">零件筛选器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">工装状态</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">工装验证</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">折弯工装验证</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">切割工装验证</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">折边工装验证</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">工装面板</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">保存筛选器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">订单</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">订单视图</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">作业</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../jobcreation.html">创建作业</a></li>
+    <li><button class="tree blank"></button><a href="../jobview.html">作业视图</a></li>
+    <li><button class="tree blank"></button><a href="../jobpanel.html">作业面板</a></li>
+    <li><button class="tree blank"></button><a href="../jobautoplan.html">自动规划</a></li>
+    <li><button class="tree blank"></button><a href="../jobinteractplan.html">交互式排样</a></li>
+    <li><button class="tree blank"></button><a href="../repacking.html">重新打包</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">排样管理</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="nestview.html">布局视图</a></li>
+      <li><button class="tree blank"></button><a class="active" href="layoutpanel.html">布局面板</a></li>
+      <li><button class="tree blank"></button><a href="reportsender.html">报告发送器</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../remnantmanagement/index.html">余料管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../remnantmanagement/autoremnant.html">自动余料管理</a></li>
+      <li><button class="tree blank"></button><a href="../remnantmanagement/manualremnant.html">手动余料管理</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../twinlinenesting.html">双线排样</a></li>
+    <li><button class="tree blank"></button><a href="../outdate.html">过期</a></li>
+    <li><button class="tree blank"></button><a href="../jobfilters.html">作业过滤器</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">工厂</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">路线</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">板材</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">用户</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">编辑</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">客户</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">设置</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">环境</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">导入</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">折弯</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">切割</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">通知</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">监视</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">作业</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">报告</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD 扩展</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks 插件</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">安装</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">保存零件</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">保存装配体</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">检查可行性</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">工厂设置</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">其他增强功能</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">版本说明</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">作业</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">排样管理</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="layoutpanel.html">布局面板</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>布局面板</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>本节介绍与布局相关的操作，如 <strong>发送到机床…</strong>、<strong>从机床调用…</strong>、<strong>导出输出</strong>、<strong>标记完成…</strong>、<strong>添加零件…</strong>、<strong>调整/紧凑…</strong>、<strong>分割布局…</strong> 以及用于管理布局实例的其他选项。</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/layout.png" alt="Layout panel" width="181">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>以只读模式打开查看</strong><br>
+以只读模式打开选定的布局。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>检出文档以进行编辑</strong><br>
+启用选定布局的编辑。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>删除</strong><br>
+删除选定的布局。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/openreport.png" alt="Report" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>查看报告</strong><br>
+打开选定布局的标准布局报告和标签特定报告。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sendui.png" alt="Send" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>发送到机床…</strong><br>
+将选定的布局发送到机床，并将输出文件（fxlyt、NC、报告、csv）导出到作业输出位置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/addui.png" alt="Add" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>添加零件…</strong><br>
+使用布局重新打包向导向打包不佳的布局添加更多零件。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/adaptui.png" alt="Adapt" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>调整/紧凑…</strong><br>
+重新排样选定的布局以压缩零件并释放可用区域。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/changeui.png" alt="Change" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>更改关于切割的激光工艺表…</strong><br>
+更改分配给选定布局的板材。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/splitui.png" alt="Split"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>分割布局…</strong><br>
+将选定的布局拆分为两个或多个单独的布局。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/renameui.png" alt="RenameUi" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>重命名布局&#8230;&#8203;</strong><br>
+重命名选定的布局。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>套料</strong> / <strong>上一个</strong> / <strong>下一页</strong> / <strong>零件</strong><br>
+向上导航到父作业，导航到选定作业中的上一个或下一个布局，或向下导航到布局中包含的零件。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sort.png" alt="Filters" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>排序和过滤</strong><br>
+使用这些过滤器查看与选定布局共享相同属性的其他布局：相同机床、相同材料、相同 LTT、相同优先级、相同状态、相同板材、相同零件、相同余料状态或相同滚动方向。</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="send-to-machine">发送到机床…</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>当排样准备就绪（已填充或急需）时，您可以将其发送到机床。</p>
+</li>
+<li>
+<p>右键单击排样并选择 <strong>发送到机床…</strong>。</p>
+</li>
+<li>
+<p>自动创建以排样命名的文件夹。</p>
+</li>
+<li>
+<p>输出文件（fxlyt、NC、报告、csv）导出到作业输出位置。</p>
+</li>
+<li>
+<p>发送到机床的排样显示蓝色勾号。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/sendtomachine.png" alt="Send to machines" width="1180">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+一旦释放，这些排样不再重试重新打包。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_从机床调用">从机床调用…</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>如果输出需要验证或更新（例如，添加更多零件）：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>右键单击导出的布局。</p>
+</li>
+<li>
+<p>选择 <strong>从机床调用…</strong>。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>输出文件和文件夹（fxlyt、NC、报告、csv）被删除。</p>
+</li>
+<li>
+<p>排样再次变为可编辑状态。</p>
+</li>
+<li>
+<p>您可以进行更改并再次将其发送到机床。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/recallfrommachine.png" alt="Recall from machines" width="1153">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_导出输出">导出输出</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>右键单击已发送到机床的任何布局（排样），然后单击 <strong>导出输出</strong>。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput1.png" alt="Export outputs" width="447">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>导出输出选项将 NC、报告和布局文件导出到相应的机床输出文件夹。</p>
+</li>
+<li>
+<p>此选项使用布局的当前单位设置重新生成 NC 文件。</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+导出输出不适用于已完成的布局和正在队列中等待重新打包的布局。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mark-complete">标记完成</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>一旦排样在机床上处理完成，右键单击排样并选择 <strong>标记完成…</strong>。</p>
+</li>
+<li>
+<p>您可以选择多个排样并同时将它们标记为完成。</p>
+</li>
+<li>
+<p>当排样标记为完成时：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>它变灰，移至列表末尾，并显示绿色勾号。</p>
+</li>
+<li>
+<p>布局从活动布局列表中删除。</p>
+</li>
+<li>
+<p>零件和作业状态已更新，处理的数量移至已完成状态。</p>
+</li>
+<li>
+<p>该布局的输出文件从机床输出位置删除，以避免重复使用。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/markcomplete1.png" alt="Mark complete" width="1101">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="add-parts">添加零件…</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart1.png" alt="Add parts" width="997">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>使用此选项向相对打包不佳的布局添加更多零件。与交互式排样一样，这是一个向导驱动的选项，可以同时用于单个或多个布局。</p>
+</li>
+<li>
+<p>TruSmartCAM 在使用此选项时在主工作区域中安装布局重新打包向导。按住 <kbd>Ctrl</kbd> 键并选择一个或多个要打包到布局上的零件，然后按 <strong>下一页</strong>。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart2.png" alt="Part selection" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>在下一步中显示选定的零件，并带有可编辑的数量列。如果需要，在 <strong>更新数量</strong> 字段中更新零件数量。单击 <strong>下一页</strong> 继续进行排样。请注意，数量只能增加，不能减少。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart3.png" alt="Update quantity" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>所有布局分别排样，并显示排样结果，新打包的零件放置在其上。选择布局会显示所有现有布局零件。如果在重新打包期间没有放置新零件，则结果会自动丢弃。具有多个副本的布局可能会在重新打包后产生不同的模式。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart4.png" alt="Repack result" width="2200">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="adapt-compact">调整/紧凑…</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>当原始机床停机或需要平衡机床工作负载时，可以使用此基于向导的命令将布局从一台机床调整到另一台机床。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt1.png" alt="Adapt compact" width="737">
+</div>
+</div>
+</li>
+<li>
+<p>当计划使用的板材缺货，需要在另一个可用板材上重新规划布局时，可以使用此功能。</p>
+</li>
+<li>
+<p>您可以将打包在较小板材上的布局合并到较大的板材上，以更有效地使用材料。</p>
+</li>
+<li>
+<p>如果没有大板材库存，您可以将打包在较大板材上的布局拆分为较小的板材。</p>
+</li>
+<li>
+<p>您可以通过将多个布局（甚至来自不同的机床）合并在一起来提高打包效率。</p>
+</li>
+<li>
+<p>要使用它，请选择一个或多个布局，然后单击 <strong>调整/紧凑…</strong> 以在工作区域中打开向导。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt2.png" alt="Layouts window" width="1902">
+</div>
+</div>
+</li>
+<li>
+<p>左侧窗格显示所有选定的布局，零件窗格显示布局零件。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt3.png" alt="Layouts window" width="1910">
+</div>
+</div>
+</li>
+<li>
+<p>选择目标机床和板材材料，然后单击 <strong>下一页</strong> 执行重新排样。</p>
+</li>
+<li>
+<p>新的排样结果显示在结果窗格中。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt4.png" alt="Layouts window" width="1901">
+</div>
+</div>
+</li>
+<li>
+<p>单击 <strong>下一页</strong> 保存调整或压缩的布局。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt5.png" alt="Layouts window" width="1902">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_拆分布局">拆分布局</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>分割布局…</strong> 选项允许您通过修改数量将现有布局拆分为多个布局，而无需重做工具或排样。</p>
+</div>
+<div class="paragraph">
+<p>此功能在以下情况下特别有用：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>当您需要立即生产总数量的一部分，同时将剩余数量安排在以后生产时。</p>
+</li>
+<li>
+<p>当生产需求需要分布在多个班次或多天以优化工作流程和资源利用率时。</p>
+</li>
+<li>
+<p>当特定机床暂时不可用或被占用，并且您需要调整布局以适应当前生产约束时。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>要拆分布局，请执行以下步骤：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>在布局视图中，选择所需的布局。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/splitlayout.png" alt="Split layout" width="264">
+</div>
+</div>
+</li>
+<li>
+<p>单击 <strong>分割布局…</strong>。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/layoutpanel.png" alt="Layout panel" width="155">
+</div>
+</div>
+</li>
+<li>
+<p>在 <strong>新副本</strong> 中输入所需的值。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/newcopies.png" alt="New copies" width="389">
+</div>
+</div>
+</li>
+<li>
+<p>单击 <strong>确定</strong>。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/twolayout.png" alt="Two layouts" width="547">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>选定的布局现在拆分为两个调整了数量的布局。</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#send-to-machine">发送到机床…</a>
+  </li>
+  <li level="1">
+   <a href="#_从机床调用">从机床调用…</a>
+  </li>
+  <li level="1">
+   <a href="#_导出输出">导出输出</a>
+  </li>
+  <li level="1">
+   <a href="#mark-complete">标记完成</a>
+  </li>
+  <li level="1">
+   <a href="#add-parts">添加零件…</a>
+  </li>
+  <li level="1">
+   <a href="#adapt-compact">调整/紧凑…</a>
+  </li>
+  <li level="1">
+   <a href="#_拆分布局">拆分布局</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="nestview.html">布局视图</a></span>
+ <span class="next"><a href="reportsender.html">报告发送器</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

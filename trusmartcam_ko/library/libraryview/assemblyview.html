@@ -1,0 +1,581 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Assembly</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">TruSmartCAM에 오신 것을 환영합니다</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">설치</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">하드웨어 요구 사항</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">지원되는 파일 형식</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">사전 요구 사항</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">서버 설치</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">클라이언트 설치</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">라이선스 변경</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">구성</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">기계 추가/제거</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">툴링 설정</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">사용자 구성</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">언어</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">재료</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">새 재료 및 시트 추가</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">재료 내보내기/가져오기</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">재료 교체</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">재료 매핑</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAM 페이지 매핑</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">CAD에서 필드 매핑 (조회 키)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">사용자 인터페이스</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">워크플로우</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Library</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Library view</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a class="active" href="assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Tooling panel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">주문</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">주문 보기</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">작업 생성</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">작업 보기</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">작업 패널</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">자동 계획</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">대화형 네스팅</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">재포장</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">네스트 관리</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">레이아웃 보기</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">레이아웃 패널</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">보고서 발신자</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">잔재 관리</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">자동 잔재 관리</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">수동 잔재 관리</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">트윈라인 네스팅</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">구식</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">작업 필터</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD 확장 기능</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks 추가 기능</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">설치</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">부품 저장</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">어셈블리 저장</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">실행 가능성 확인</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">공장 설정</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">기타 개선 사항</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">법적 고지</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Library</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Library view</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="assemblyview.html">Assembly</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Assembly</h1>
+<div class="sect1">
+<h2 id="_어셈블리에서_정적_네스트_생성">어셈블리에서 정적 네스트 생성</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Interactive nesting wizard를 사용하여 어셈블리에 대한 정적 네스트를 생성할 수 있습니다.
+이러한 네스트는 선택한 어셈블리에만 연결된 고정 레이아웃입니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>조립품들</strong> 보기로 전환합니다.</p>
+</li>
+<li>
+<p>필요한 어셈블리를 마우스 오른쪽 버튼으로 클릭하고
+<strong>네스팅들 생성&#8230;&#8203;</strong> 를 선택합니다.</p>
+</li>
+<li>
+<p>Interactive Nesting wizard가 열립니다.</p>
+</li>
+<li>
+<p>기본적으로 interactive nesting wizard는
+<strong>기계 &amp; 재료 선택</strong> 페이지로 전환됩니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyinteractive.png" alt="Machine and material" width="950">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>기계는 사용 가능한 생산 부하를 나타내는 색상 막대와 함께 표시됩니다:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>녹색 막대: 예약된 시간</p>
+</li>
+<li>
+<p>회색 막대: 사용 가능한 시간(8시간 교대 중)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>각 기계 아래에서 선택한 부품은 Raw-Material로 그룹화됩니다
+(Parts/Total Quantity).</p>
+</li>
+<li>
+<p>부품에 기계에 대한 유효한 툴링 솔루션이 없는 경우 해당 부품과 재료는 주어진 기계의 처리에서 무시됩니다.</p>
+</li>
+<li>
+<p>원자재가 한 기계에 대해 선택되면 다른 기계에는 사용할 수 없습니다.</p>
+</li>
+<li>
+<p>기계 네스트 계획이 설정되면 선호하는 시트를 선택하고
+<strong>우선순위</strong>, <strong>수량</strong>, <strong>시트 가장자리</strong> 등과 같은 시트 매개변수를 재정의합니다.</p>
+</li>
+<li>
+<p>시트를 필터링하여 <strong>모든 시트</strong>,
+<strong>표준 시트들</strong> 또는
+<strong>잔재 시트들</strong> 를 표시할 수 있습니다. <strong>다음</strong> 를 클릭합니다.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+이 단계에서는 수량을 늘릴 수 없습니다. 시트 재고 수량과 동일하게 유지하거나 줄이고 네스팅 결과를 확인할 수 있습니다.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>수량 업데이트</strong> 가 Interactive nesting plan 창에 나타납니다.</p>
+</li>
+<li>
+<p>기본적으로 <strong>모두 선택 (F5)</strong> 는 네스팅을 위한 모든 부품을 포함하거나 수동으로 우선 순위 부품을 선택하고 부품 수량을 조정할 수 있습니다.
+<strong>다음</strong> 를 클릭합니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyquantity.png" alt="Update quantity">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>네스팅이 시작되고 시트에 네스팅된 부품이 파란색 상태로 업데이트됩니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyresult.png" alt="Nesting result">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>기계의 생산 부하는 네스트 결과에 따라 업데이트됩니다.</p>
+</li>
+<li>
+<p>일부 부품이 네스팅되지 않은 상태로 남아 있으면
+<strong>일부 파트는 네스팅되지 않은 상태로 유지됩니다</strong> 메시지가 나타납니다 - 이러한 부품은 원래 작업에 남아 있습니다.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>적절한 시트를 사용할 수 없는 경우 부품이 네스팅되지 않은 상태로 남아 있을 수 있습니다.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>정적 네스트를 편집하여 네스팅되지 않은 부품을 포함할 수 있습니다:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>네스팅되지 않은 부품을 삽입할 레이아웃을 선택하고 편집을 위해 체크 아웃합니다.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblylayout.png" alt="Selected layout">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TecZone이 열립니다. <strong>_Pick</strong> 또는
+<strong>Pick _All</strong> 을 클릭하여 상위 어셈블리에서 네스팅되지 않은 부품을 선택합니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/addnest.png" alt="Add unnested parts" width="864">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>필요에 따라 레이아웃에서 부품을 배치합니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unnest.png" alt="Unnested part placement" width="715">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>생성된 네스트는 쉽게 식별할 수 있도록 상위 어셈블리의 이름을 따라 자동으로 이름이 지정됩니다.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+정적 네스트는 다른 어셈블리의 부품을 포함할 수 없습니다. 혼합 어셈블리 네스트를 허용하면 다른 어셈블리를 릴리스하지 않고 하나의 어셈블리를 릴리스할 수 없으므로 혼합은 설계상 허용되지 않습니다.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_비판금_구성_요소">비판금 구성 요소</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>어셈블리를 가져오면 판금 부품이 추출되어 Part Library의 어셈블리에 추가됩니다.</p>
+</li>
+<li>
+<p>비판금 구성 요소는 분리되어 <strong>부품들</strong> 에 추가됩니다.</p>
+</li>
+<li>
+<p>어셈블리는 Assembly Library에 추가되고 해당 BOM
+(Bill of Materials)에는 부품과 구성 요소가 모두 포함됩니다.</p>
+</li>
+<li>
+<p>부품이 이미 판금 부품으로 가져온 경우 시스템은 기존 항목을 업데이트하고 Part Library에서 중복 항목을 제거합니다.</p>
+</li>
+<li>
+<p>어셈블리를 선택하면 부품과 구성 요소가 모두 표시되며 구성 요소 이미지 아래에 구성 요소 수량이 표시됩니다(선택한 어셈블리 구성 요소 개수 및 총 구성 요소 개수).</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/components.png" alt="Assembly components" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>구성 요소 도구 설명에는 이름, 재료 및 크기가 표시됩니다.
+구성 요소는 생산 중에 제외됩니다 - 네스팅되지 않으며 구성 요소에 대해 시트가 생성되지 않습니다.</p>
+</li>
+<li>
+<p>샘플 어셈블리 및 구성 요소는 다음 위치에서 사용할 수 있습니다:
+C:\Program Files\Metamation\Praxis\Samples\Assys\Components, 구성 요소 가져오기 및 어셈블리 워크플로우를 테스트하는 데 사용할 수 있습니다.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_어셈블리에서_작업_생성">어셈블리에서 작업 생성</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>어셈블리를 마우스 오른쪽 버튼으로 클릭하고 <strong>새로 만들기&#8230;&#8203;</strong> 를 클릭한 다음
+<strong>통합 작업</strong> 을 클릭합니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/newassemblyjob.png" alt="Create new job" width="760">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>New Job 대화 상자에서 어셈블리 개수를 설정하고 <strong>OK</strong> 를 클릭한 다음 필요에 따라 작업 세부 정보(예: 마감일 및 우선 순위)를 업데이트합니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/riegelwindow.png" alt="New job dialog" width="369">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>시스템은 어셈블리에서 작업을 생성하고 정적 네스트를 작업 네스트로 복사하여 시트 개수를 업데이트합니다. 복사된 네스트에는 작업 ID가 접두사로 붙습니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblycreated.png" alt="Assembly job created" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>작업 네스트는 원래 정적 네스트에 영향을 주지 않고 편집하거나 삭제할 수 있습니다.</p>
+</li>
+<li>
+<p>작업 네스트는 <strong>적용/최적화&#8230;&#8203;</strong> 또는
+<strong>파트들 추가&#8230;&#8203;</strong> 를 사용하여 다시 패킹할 수 있습니다.</p>
+</li>
+<li>
+<p>자세한 단계는
+<a href="../../jobs/layoutcommands/layoutpanel.html#adapt-compact">Adapt/Compact</a> 및
+<a href="../../jobs/layoutcommands/layoutpanel.html#add-parts">Add parts</a>를 참조하십시오.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>부품이 네스트에 나타나지 않으면 네스트 편집 대화 상자를 확인하십시오 - 네스팅되지 않은 부품을 수동으로 삽입할 수 있습니다.</p>
+</div>
+<div class="paragraph">
+<p>저장된 검색 및 필터를 사용하여 여러 어셈블리에서 부품을 빠르게 찾습니다.</p>
+</div>
+<div class="paragraph">
+<p>네스트를 작업에 복사할 때 혼동을 피하기 위해 명확하고 설명적인 어셈블리 및 네스트 이름을 사용하십시오.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_어셈블리에서_정적_네스트_생성">어셈블리에서 정적 네스트 생성</a>
+  </li>
+  <li level="1">
+   <a href="#_비판금_구성_요소">비판금 구성 요소</a>
+  </li>
+  <li level="1">
+   <a href="#_어셈블리에서_작업_생성">어셈블리에서 작업 생성</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partview.html">Parts</a></span>
+ <span class="next"><a href="../partstate/index.html">Part status</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

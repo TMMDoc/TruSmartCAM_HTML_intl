@@ -1,0 +1,794 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Szerszámozási panel</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Üdvözöljük a TruSmartCAM rendszerben</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Telepítés</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardverkövetelmények</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Támogatott fájlformátumok</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Előfeltételek</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Szervertelepítés</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Klienstelepítés</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Licenc módosítása</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfiguráció</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Gép hozzáadása/eltávolítása</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Szerszámozás beállítása</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Felhasználók konfigurálása</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Nyelv</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Anyag</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Új anyag és lemez hozzáadása</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Anyag exportálása/importálása</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Anyag cseréje</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Anyag leképezése</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAM oldalak leképezése</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mezők leképezése CAD-ből (keresési kulcsok)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">A felhasználói felület</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Munkafolyamat</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Könyvtár</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Megnyitás</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Alkatrészek importálása</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Rendelések importálása</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Munkák importálása</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Összeszerelések importálása</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Könyvtár nézet</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Alkatrészek</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Összeszerelés</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Alkatrész állapot</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Alkatrész validálás</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Alkatrész panel</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Alkatrész szűrők</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Szerszámozási állapot</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="toolingvalidation/index.html">Szerszámozás validálás</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="toolingvalidation/bendtooling.html">Hajlítási szerszámozás validálás</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/cuttooling.html">Vágási szerszámozás validálás</a></li>
+        <li><button class="tree blank"></button><a href="toolingvalidation/foldtooling.html">Hajtogatási szerszámozás validálás</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a class="active" href="toolingpanel.html">Szerszámozási panel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Szűrők mentése</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Rendelések</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Rendelések nézet</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Munkák</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Munka létrehozása</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Munkanézet</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Munkapanel</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatikus tervezés</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktív fészkelés</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Újracsomagolás</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Fészekkezelés</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Elrendezésnézet</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Elrendezéspanel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Jelentésküldő</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Maradékkezelés</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatikus maradékkezelés</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manuális maradékkezelés</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Ikervonalas fészkelés</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Elavult</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Munka szűrők</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Gyár</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Útvonalak</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Lapok</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Felhasználók</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Szerkesztés</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Ügyfelek</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Beállítások</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Környezet</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Importálás</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Hajlítás</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Vágás</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Értesítések</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Figyelés</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Munkarendelés</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Jelentések</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD bővítmények</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks bővítmény</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Telepítés</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Alkatrészek mentése</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Szerelvény mentése</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Megvalósíthatóság ellenőrzése</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Gyártási beállítások</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Egyéb fejlesztések</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impresszum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Könyvtár</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Szerszámozási állapot</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="toolingpanel.html">Szerszámozási panel</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Szerszámozási panel</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ez a szakasz elmagyarázza a szerszámozással kapcsolatos műveleteket, mint például a
+<strong>Kimenetek exportálása</strong>,
+<strong>Check Tooling</strong>, <strong>Felszerszámozás elrejtése</strong>,
+<strong>Beállítás alap lapos felületként&#8230;&#8203;</strong>, <strong>Felszerszámozás másolása&#8230;&#8203;</strong>,
+és más beállításokat, amelyek a szerszámozási példányok kezeléséhez használatosak.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/toolingpanel.png" alt="Tooling panel" width="150">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Megnyitás csak olvasható módban a megtekintéshez</strong><br>
+Megnyitja a kiválasztott szerszámozást csak olvasható módban.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Engedélyezi a kiválasztott szerszámozás szerkesztését.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kimenetek exportálása</strong><br>
+Exportálja a kiválasztott szerszámozási kimenetet a beállított célhelyre.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/checkui.png" alt="Check Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check Tooling</strong><br>
+Ellenőrzi a meglévő szerszámozást módosítások nélkül, és frissíti
+az állapotát, ha az ellenőrzés sikertelen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/copyui.png" alt="Copy Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Felszerszámozás másolása&#8230;&#8203;</strong><br>
+Átmásolja az ütőbélyeg, sorrend és hátsó ütköző beállításokat a kiválasztott
+referencia szerszámozásból, és alkalmazza más megoldásokra, ahol megvalósítható.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/baseui.png" alt="Set as Base-Flat" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beállítás alap lapos felületként&#8230;&#8203;</strong><br>
+Megjelöli a kiválasztott hajlítási vagy hajtogatási szerszámozást referencia sík méretként
+a vágási megoldások generálásához.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/retoolui.png" alt="Re-tool" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Re-tool&#8230;&#8203;</strong><br>
+Újrafeldolgozza a kiválasztott szerszámozást az alkatrészhez anélkül, hogy
+más szerszámozásokat érintene.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/supressui.png" alt="Suppress Tooling" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Felszerszámozás elrejtése</strong><br>
+Elrejti a kiválasztott szerszámozást, hogy kizárja a további
+feldolgozásból és kimenet generálásból.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prevui.png" alt="Prev Next" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Előző</strong> / <strong>Következő</strong> / <strong>Alkatrész</strong><br>
+Navigál az előző vagy következő szerszámozáshoz, vagy vissza a szülő alkatrészhez.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sortui.png" alt="Similar Toolings" width="140"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rendezés és szűrés</strong><br>
+Megjeleníti a kiválasztott szerszámozáshoz hasonló jellemzőkkel rendelkező
+más szerszámozásokat gyors hivatkozáshoz.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kimenetek_exportálása">Kimenetek exportálása</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ez a beállítás exportálja az alkatrész kimenetet a
+<strong>Gyári beállítások</strong> beállításokban megadott célhelyre. (Lásd
+<a href="../../factory/settings/bend.html">Bend Settings</a> és
+<a href="../../factory/settings/cut.html">Cut Settings</a>)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingoutput.png" alt="Tooling Output" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Csak a kiválasztott szerszámozási művelethez kapcsolódó szerszámozások
+kerülnek exportálásra, nem a teljes alkatrész.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Az exportált fájlok a művelet típusától függenek. Hajlítási és
+hajtogatási műveleteknél NC fájlok és jelentések generálódnak. Vágási és lyukasztási
+műveleteknél csak az alkatrész fájlok kerülnek exportálásra.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_check_tooling">Check Tooling</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Ha változás történik a CAM beállításokban, vagy egy hajlító szerszám elveszik, nincs szükség
+az alkatrész újraszerszámozására.</p>
+</li>
+<li>
+<p>Helyette használja a Check Tooling opciót a meglévő szerszámozás ellenőrzéséhez módosítások nélkül.</p>
+</li>
+<li>
+<p>Ha az ellenőrzés sikertelen, az adott példány szerszámozási állapota frissül, és
+a kapcsolódó kimeneti fájlok törlésre kerülnek.</p>
+</li>
+<li>
+<p>A Check Tooling észleli azokat az alkatrészeket is, ahol a hibák korábban manuálisan
+felülbírálásra kerültek a <strong>Hibák figyelmen kívül hagyása</strong> használatával, és frissíti
+állapotukat hibaállapotra, ha szükséges.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/checktooling.png" alt="Check Tooling" width="456">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_felszerszámozás_másolása">Felszerszámozás másolása&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A szerszámozás másolás lehetővé teszi, hogy gyorsan alkalmazza a hajlító szerszámozást egyik megoldásról
+másokra, időt és erőfeszítést takarítva meg.</p>
+</div>
+<div class="paragraph">
+<p>Ez átmásolja az ütőbélyeget, sorrendet és hátsó ütköző beállítást egy kiválasztott referencia
+szerszámozásból (megoldás), és megpróbálja ugyanazt a beállítást alkalmazni minden más megoldásra.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ha a másolt beállítás megvalósítható egy célgépre, elmentésre és használatra kerül.</p>
+</li>
+<li>
+<p>Ha a beállítás nem megvalósítható, az adott gép eredeti szerszámozása változatlan
+marad.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Például, különböző szerszámozása lehet különböző gépekhez:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Itt a Machine 5230SX 6A Gooseneck ütőbélyeget használ, a Machine 5085X 6A B23 Pointed ütőbélyeget használ.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check3.png" alt="Before tooling" width="724">
+</div>
+</div>
+<div class="paragraph">
+<p>Amikor használja a <strong>Felszerszámozás másolása&#8230;&#8203;</strong> opciót a Machine 5230SX 6A gépen, megpróbálja
+a Gooseneck beállítást másolni minden más gépre.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/check4.png" alt="Copy tooling" width="664">
+</div>
+</div>
+<div class="paragraph">
+<p>Ugyanazt az ütőbélyeget, sorrendet és hátsó ütköző beállításokat alkalmazza, ahol
+lehetőséges. Ha a másolt beállítás nem használható, az eredeti szerszámozás változatlan
+marad.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/copytooling3.png" alt="After tooling" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>A szerszámozás másolás alkalmazása után a Gooseneck beállítás sikeresen alkalmazásra került
+minden más gépre, ahol megvalósítható.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_beállítás_alap_lapos_felületként">Beállítás alap lapos felületként&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <strong>Beállítás alap lapos felületként&#8230;&#8203;</strong> funkció meghatározza, hogy melyik hajlítási vagy hajtogatási
+szerszámozás legyen használva referencia sík méretként a vágási megoldások generálásához.
+Amikor egy szerszámozás Base-Flat-ként van megjelölve, a TruSmartCAM frissíti az alkatrész sík méretét
+az adott gép alapján, és ennek megfelelően újragenerálja a vágási megoldásokat. A Base-Flat
+szerszámozások kék kerettel jelennek meg a felhasználói felületen.</p>
+</div>
+<div class="paragraph">
+<p>A különböző hajlító gépek kis eltéréseket okozhatnak a sík méretben ugyanazon
+alkatrésznél. Amikor beállít egy szerszámozást Base-Flat-ként, a TruSmartCAM az adott gép
+sík méretét használja fő referenciaként, és automatikusan újraszámolja a vágási
+megoldásokat.</p>
+</div>
+<div class="paragraph">
+<p>Itt láthatunk különböző sík méreteket ugyanazon alkatrészhez különböző
+gépeken:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat1.png" alt="Base flat1" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>Ebben a példában a <strong>5130X 6A B23</strong> szerszámozás van beállítva Base-Flat-ként, és a
+frissített sík méret alkalmazásra kerül az alkatrész tulajdonságokban:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/baseflat2.png" alt="Base flat2" width="663">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_automatikus_base_flat_kiválasztás">Automatikus base flat kiválasztás</h3>
+<div class="paragraph">
+<p>Amikor a gyár beállítás
+<strong>Sima korrekció alkalmazása hajlítás közben</strong> engedélyezve van:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autobase.png" alt="Auto Base" width="806">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A TruSmartCAM automatikusan beállítja a hajlító szerszámozást (amely tartalmazza a maximális hajlítási
+hossz táblázatot) Base-Flat-ként az alkatrész importálása során.</p>
+</li>
+<li>
+<p>Ha a kiválasztott hajlító szerszámozás hibát észlel, vagy nem megvalósítható,
+a TruSmartCAM intelligensen átkapcsol és beállít egy másik érvényes hajlító szerszámozást
+Base-Flat-ként. Ez biztosítja, hogy a sík méret referencia és a vágási megoldások mindig
+konzisztensek és érvényesek maradjanak manuális beavatkozás nélkül.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_továbbfejlesztett_base_flat_kezelés">Továbbfejlesztett base flat kezelés</h3>
+<div class="paragraph">
+<p>A TruSmartCAM Base-Flat beállításokat biztosít a <strong>Mentés a Praxis-ba</strong>
+párbeszédablakban hajlítási vagy hajtogatási szerszámozás szerkesztések mentésekor. Ezek a beállítások csak
+OK állapotú szerszámozásoknál jelennek meg, és biztosítják, hogy a sík méret és vágási megoldások pontosak
+maradjanak.</p>
+</div>
+<div class="sect3">
+<h4 id="_beállítás_alap_lapos_felületként_és_vágóprogram_kiszámítása">Beállítás alap lapos felületként és vágóprogram kiszámítása</h4>
+<div class="paragraph">
+<p>Ez a beállítás használatos egy szerszámozás Base-Flat-ként való megjelöléséhez először, és
+automatikusan generálja a megfelelő vágási megoldást.</p>
+</div>
+<div class="paragraph">
+<p>Megjelenik, amikor:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A szerszámozás jelenleg nincs Base-Flat-ként megjelölve.</p>
+</li>
+<li>
+<p>A felhasználó kiadta szerkesztésre a szerszámozást, és menti a módosításokat.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/setbase.png" alt="Set Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>Ennek a beállításnak a használatához adja ki szerkesztésre a hajlítási vagy hajtogatási szerszámozást, és végezze el a szükséges
+módosításokat, mint például hajlítási paraméterek vagy sík méret változtatásait. Nyomja meg a
+<span class="keyseq"><kbd>Ctrl</kbd>+<kbd>S</kbd></span> billentyűket a módosítások mentéséhez. A <strong>Mentés a Praxis-ba</strong>
+párbeszédablakban válassza a
+<strong>Beállítás alap lapos felületként és vágóprogram kiszámítása</strong> opciót, és
+klikkeljen
+az <strong>OK</strong> gombra. A TruSmartCAM beállítja a szerszámozást Base-Flat-ként, és generálja a
+vágási megoldást a frissített sík méret használatával.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_alap_lapos_felület_frissítése_és_vágóprogram_újraszámítása">Alap lapos felület frissítése és vágóprogram újraszámítása</h4>
+<div class="paragraph">
+<p>Ez a beállítás akkor használatos, amikor a szerszámozás már Base-Flat-ként van megjelölve, és
+szerkesztésre került, így a sík méretet és vágási megoldásokat újra kell generálni.</p>
+</div>
+<div class="paragraph">
+<p>Megjelenik, amikor:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A szerszámozás már Base-Flat-ként van megjelölve.</p>
+</li>
+<li>
+<p>A felhasználó kiadta szerkesztésre, szerkesztette, és menti a módosításokat.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/updatebase.png" alt="Update Base" width="432">
+</div>
+</div>
+<div class="paragraph">
+<p>A meglévő Base-Flat szerszámozás szerkesztésekor frissítse a hajlítási paramétereket vagy
+sík méret geometriát, ahogy szükséges. A <strong>Mentés a Praxis-ba</strong> párbeszédablakban
+válassza a
+<strong>Alap lapos felület frissítése és vágóprogram újraszámítása</strong> opciót.
+A TruSmartCAM ezután frissíti a Base-Flat szerszámozást, és újragenerálja az összes kapcsolódó
+vágási megoldást, hogy tükrözze a legújabb módosításokat.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Egyszerre csak egy hajlító szerszámozás állítható be Base-Flat-ként.</p>
+</div>
+<div class="paragraph">
+<p>Amikor a Base-Flat megváltozik, a meglévő vágási megoldások automatikusan
+újrafeldolgozásra kerülnek.</p>
+</div>
+<div class="paragraph">
+<p>Ez a funkció hajlítási és hajtogatási szerszámozásoknál egyaránt elérhető a TruSmartCAM-ben.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_újbóli_felszerszámozás">Újbóli felszerszámozás&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ez a beállítás újrafeldolgozza a kiválasztott szerszámozást az alkatrészhez.</p>
+</div>
+<div class="paragraph">
+<p>Klikkeljen jobb gombbal a szükséges szerszámozásra a Tooling panelen, és klikkeljen
+a <strong>Újbóli felszerszámozás&#8230;&#8203;</strong> opcióra.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingretool.png" alt="ToolingRetool" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Megerősítő párbeszédablak jelenik meg a folytatás előtt.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingconfirm.png" alt="ToolingConfirm" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>Klikkeljen az <strong>igen</strong> gombra az újraszerszámozás folytatásához, vagy a <strong>nem</strong> gombra a
+művelet megszakításához.</p>
+</div>
+<div class="paragraph">
+<p>Csak a kiválasztott szerszámozás kerül újraszerszámozásra. Az alkatrészhez kapcsolódó más
+szerszámozások nem érintettek. A kiválasztott szerszámozáshoz kapcsolódó meglévő
+kimenetek törlésre és újragenerálásra kerülnek az újraszerszámozási folyamat során.</p>
+</div>
+<div class="paragraph">
+<p>Használja ezt az opciót, amikor a szerszámozási adatok elavultak, helytelenek, vagy amikor
+változások történnek a gép vagy szerszámozási konfigurációkban.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hibák_figyelmen_kívül_hagyása">Hibák figyelmen kívül hagyása</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Ha egy szerszámozott példány figyelmeztetést mutat, és Ön mégis folytatni szeretné,
+felülbírálhatja a figyelmeztetést a
+<strong>Hibák figyelmen kívül hagyása</strong> opcióra kattintva.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/ignore.png" alt="Ignore errors" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ez lehetővé teszi a rendszer számára, hogy exportálja a kimeneti fájlokat az adott
+példányhoz, még akkor is, ha szerszámozási problémák voltak.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+A <strong>Ignore Errors</strong> opciót csak akkor használja, ha biztos benne, hogy a figyelmeztetés biztonságosan
+figyelmen kívül hagyható. A tényleges hibák felülbírálása gépi károsodáshoz vagy biztonsági kockázatokhoz vezethet.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_szerszámozás_elrejtésevisszaállítása">Szerszámozás elrejtése/visszaállítása</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Amikor egy gép inaktív, vagy nem szeretné, hogy egy konkrét alkatrész
+egy adott gépen feldolgozásra kerüljön, használja a <strong>Felszerszámozás elrejtése</strong> opciót, hogy
+kizárja az alkatrészt az adott gépen való fészkeltésből.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/supress.png" alt="Supress Tooling" width="456">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Az elrejtés után az egér a szerszámozott példány fölé helyezésekor egy
+üzenet jelenik meg: "Tooling suppressed by &lt;User name&gt; on &lt;Date Time&gt;".</p>
+</li>
+<li>
+<p>A szerszámozás elrejtése eltávolítja a kimeneti fájlt az adott géphez és alkatrészhez.</p>
+</li>
+<li>
+<p>Használja az <strong>Felszerszámozás elrejtésnének megszüntetése</strong> opciót a szerszámozási
+állapot visszaállításához az alkatrészhez az adott gépen.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unsupress.png" alt="Unsupress Tooling" width="495">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Amikor visszaállításra kerül, a megfelelő kimeneti fájl újra generálódik.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_kimenetek_exportálása">Kimenetek exportálása</a>
+  </li>
+  <li level="1">
+   <a href="#_check_tooling">Check Tooling</a>
+  </li>
+  <li level="1">
+   <a href="#_felszerszámozás_másolása">Felszerszámozás másolása&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_beállítás_alap_lapos_felületként">Beállítás alap lapos felületként&#8230;&#8203;</a>
+  </li>
+  <li level="2">
+   <a href="#_automatikus_base_flat_kiválasztás">Automatikus base flat kiválasztás</a>
+  </li>
+  <li level="2">
+   <a href="#_továbbfejlesztett_base_flat_kezelés">Továbbfejlesztett base flat kezelés</a>
+  </li>
+  <li level="1">
+   <a href="#_újbóli_felszerszámozás">Újbóli felszerszámozás&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_hibák_figyelmen_kívül_hagyása">Hibák figyelmen kívül hagyása</a>
+  </li>
+  <li level="1">
+   <a href="#_szerszámozás_elrejtésevisszaállítása">Szerszámozás elrejtése/visszaállítása</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="toolingvalidation/foldtooling.html">Hajtogatási szerszámozás validálás</a></span>
+ <span class="next"><a href="../savingfilters.html">Szűrők mentése</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

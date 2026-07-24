@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Gestion automatique des chutes</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Bienvenue dans TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Configuration matérielle requise</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Formats de fichiers pris en charge</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Prérequis</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Installation du serveur</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Installation du client</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Changer de licence</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Ajouter/Supprimer une machine</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Configuration de l'outillage</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Configurer les utilisateurs</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Langue</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Matériau</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Ajouter un nouveau matériau et une feuille</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Exporter/Importer le matériau</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Remplacer le matériau</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Associer le matériau</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Associer les pages CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Associer les champs depuis CAD (clés de recherche)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">L'interface utilisateur</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Flux de travail</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Bibliothèque</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Ouvrir</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Importer des pièces</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Importer des commandes</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Importer des tâches</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Importer des assemblages</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Vue de bibliothèque</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Pièces</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Assemblage</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Statut de la pièce</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Validation de pi\u00e8ce</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Panneau de pièces</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Filtres de pièces</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Statut de l'outillage</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Validation d'outillage</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Validation d'outillage de pliage</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Validation d'outillage de découpe</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Validation d'outillage de pliure</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Panneau d'outillage</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Enregistrer les filtres</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Commandes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Vue des commandes</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Travaux</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../jobcreation.html">Créer un travail</a></li>
+    <li><button class="tree blank"></button><a href="../jobview.html">Vue du travail</a></li>
+    <li><button class="tree blank"></button><a href="../jobpanel.html">Panneau de travail</a></li>
+    <li><button class="tree blank"></button><a href="../jobautoplan.html">Planification automatique</a></li>
+    <li><button class="tree blank"></button><a href="../jobinteractplan.html">Imbrication interactive</a></li>
+    <li><button class="tree blank"></button><a href="../repacking.html">Réemballage</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../layoutcommands/index.html">Gestion de l'imbrication</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../layoutcommands/nestview.html">Vue de mise en page</a></li>
+      <li><button class="tree blank"></button><a href="../layoutcommands/layoutpanel.html">Panneau de mise en page</a></li>
+      <li><button class="tree blank"></button><a href="../layoutcommands/reportsender.html">Expéditeur de rapport</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Gestion des chutes</a>
+     <ul>
+      <li><button class="tree blank"></button><a class="active" href="autoremnant.html">Gestion automatique des chutes</a></li>
+      <li><button class="tree blank"></button><a href="manualremnant.html">Gestion manuelle des chutes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../twinlinenesting.html">Imbrication en ligne double</a></li>
+    <li><button class="tree blank"></button><a href="../outdate.html">Obsolète</a></li>
+    <li><button class="tree blank"></button><a href="../jobfilters.html">Filtres de travail</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Feuilles</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Utilisateurs</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Modifier</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Clients</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Paramètres</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environnement</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Importation</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Pliage</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Découpe</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Surveillance</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Tâche</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Rapports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Extensions CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">Extension SolidWorks</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Enregistrer les pièces</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Enregistrer l'assemblage</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Vérifier la faisabilité</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Paramètres de l'usine</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Améliorations diverses</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Mentions légales</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Travaux</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Gestion des chutes</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="autoremnant.html">Gestion automatique des chutes</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Gestion automatique des chutes</h1>
+<div class="sect1">
+<h2 id="_activer_les_chutes">Activer les chutes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TruSmartCAM prend en charge la création automatisée de feuilles de chute à partir d&#8217;une mise en page pendant l&#8217;imbrication.
+Cette fonction est disponible uniquement avec les machines TecZone Laser.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Cliquez sur <strong>usine</strong> → <strong>Machines</strong> → <strong>Réglages par défaut de la machine&#8230;&#8203;</strong> → <strong>Skeleton cuts</strong>.</p>
+</li>
+<li>
+<p>Sélectionnez l&#8217;option <strong>Slice Sheet Skeleton</strong> et <strong>Create Remainder Sheet</strong> pour activer cette fonction.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Lorsqu&#8217;elle est activée, la zone restante d&#8217;une feuille imbriquée est découpée en feuilles de reste en fonction de la valeur de feuille de reste minimale assignée en X et Y.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/enablerem.png" alt="Create remainder sheet" width="1119">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configurer_les_chutes_automatiques">Configurer les chutes automatiques</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Cliquez sur <strong>usine</strong> &#8594; <strong>réglages</strong> &#8594; <strong>Tâche</strong>.</p>
+</li>
+<li>
+<p>Sélectionnez <strong>Mise à jour du stock magasin de tôles concernant le (dé)blocage d&#8217;imbrication</strong> et <strong>Automatiser la gestion du stock restant</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autorem.png" alt="Nest settings" width="735">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_chutes_automatiques">Chutes automatiques</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lorsque vous imbriquez des pièces, si la zone de feuille restante répond à la valeur de feuille minimale X et Y, TruSmartCAM crée automatiquement une feuille de chute à partir de l&#8217;espace restant.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Dans la vue Job Nest, les imbrications qui ont des feuilles de chute sont affichées avec un contour de bordure verte et un arrière-plan gris.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/remnantsheetjob.png" alt="Jobs layout" width="1140">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Double-cliquez sur l&#8217;imbrication pour ouvrir la page Détail de l&#8217;imbrication. Les informations sur la feuille de chute sont affichées avec la taille de la feuille de chute, la quantité et la surface.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/remnantsheetnest.png" alt="Remnant sheet info" width="939">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Faites un clic droit sur l&#8217;imbrication et sélectionnez Edit pour l&#8217;ouvrir dans TecZone. L&#8217;imbrication affiche des lignes de tranche entre les pièces et des lignes de tranche de squelette avec les dimensions de chute gravées. (Matériau, Épaisseur et Taille de chute).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>La gravure de dimension de chute Mark aide l&#8217;opérateur à choisir la feuille sans mesurer, ce qui facilite son utilisation dans les futures imbrications.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/remnantsheetflux.png" alt="Remnant sheet in Flux" width="694">
+</div>
+</div>
+<div class="paragraph">
+<p>Lorsque vous cliquez sur <strong>Marquer comme complet&#8230;&#8203;</strong>, la feuille de chute est affichée avec une coche verte, indiquant que l&#8217;imbrication est terminée. Une icône de carré partiellement ombrée indique que la feuille de chute est créée et mise à jour dans l&#8217;inventaire des feuilles.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/remnantsheet.png" alt="Layout marked complete" width="1117">
+</div>
+</div>
+<div class="paragraph">
+<p>La base de données de feuilles est mise à jour avec la taille et la quantité de la feuille de chute, qui est identifiée par un symbole astérisque (*) à la fin de la taille de la feuille. Les feuilles de chute ont une bordure verte.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/remnantsheet1.png" alt="Remnant sheet" width="866">
+</div>
+</div>
+<div class="paragraph">
+<p>La planification automatique ou la planification interactive d&#8217;un travail considère les feuilles de chute comme haute priorité dans le plan d&#8217;imbrication, garantissant qu&#8217;elles sont utilisées en premier pour garder l&#8217;atelier libre de chutes non utilisées.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_activer_les_chutes">Activer les chutes</a>
+  </li>
+  <li level="1">
+   <a href="#_configurer_les_chutes_automatiques">Configurer les chutes automatiques</a>
+  </li>
+  <li level="1">
+   <a href="#_chutes_automatiques">Chutes automatiques</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">Gestion des chutes</a></span>
+ <span class="next"><a href="manualremnant.html">Gestion manuelle des chutes</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

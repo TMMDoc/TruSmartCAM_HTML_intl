@@ -1,0 +1,539 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Πίνακας εργασίας</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Καλώς ήρθατε στο TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Εγκατάσταση</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Απαιτήσεις υλικού</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Υποστηριζόμενες μορφές αρχείων</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Προαπαιτούμενα</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Εγκατάσταση Server</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Εγκατάσταση Client</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Αλλαγή άδειας χρήσης</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Ρύθμιση Παραμέτρων</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Προσθήκη/Αφαίρεση μηχανής</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Ρύθμιση εργαλείων</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Διαμόρφωση χρηστών</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Γλώσσα</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Υλικό</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Προσθήκη νέου υλικού και φύλλου</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Εξαγωγή/Εισαγωγή υλικού</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Αντικατάσταση υλικού</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Αντιστοίχιση υλικού</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Αντιστοίχιση σελίδων CAM</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Αντιστοίχιση πεδίων από CAD (κλειδιά αναζήτησης)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">Η διεπαφή χρήστη</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Ροή εργασίας</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Βιβλιοθήκη</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Εισαγωγή parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Εισαγωγή παραγγελιών</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Εισαγωγή jobs</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Προβολή βιβλιοθήκης</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Κατάσταση part</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Επικύρωση part</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Πίνακας part</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Φίλτρα part</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Κατάσταση tooling</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Επικύρωση tooling</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Επικύρωση bend tooling</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Επικύρωση cut tooling</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Επικύρωση fold tooling</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Πίνακας tooling</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Αποθήκευση φίλτρων</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Παραγγελίες</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Προβολή παραγγελιών</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Εργασίες</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">Δημιουργία εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="jobview.html">Προβολή εργασίας</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobpanel.html">Πίνακας εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">Αυτόματος σχεδιασμός</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">Διαδραστική τοποθέτηση</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">Επανασυσκευασία</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">Διαχείριση τοποθέτησης</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">Προβολή διάταξης</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">Πίνακας διάταξης</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">Αποστολέας αναφοράς</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">Διαχείριση υπολειμμάτων</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">Αυτόματη διαχείριση υπολειμμάτων</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">Χειροκίνητη διαχείριση υπολειμμάτων</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">Τοποθέτηση διπλής γραμμής</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">Μη ενημερωμένο</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">Φίλτρα εργασίας</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">Επεκτάσεις CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Εγκατάσταση</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Αποθήκευση εξαρτημάτων</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Αποθήκευση συναρμολόγησης</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Έλεγχος σκοπιμότητας</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Ρυθμίσεις εργοστασίου</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Διάφορες βελτιώσεις</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Εργασίες</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobpanel.html">Πίνακας εργασίας</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Πίνακας εργασίας</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Αυτή η ενότητα εξηγεί τις ενέργειες που σχετίζονται με τις εργασίες όπως
+<strong>Export outputs</strong>, <strong>Επαναφορά εργασίας&#8230;&#8203;</strong>,
+<strong>Σήμανση ως ολοκληρωμένη&#8230;&#8203;</strong>, <strong>Εξαγωγή εργασίας&#8230;&#8203;</strong>
+και άλλες επιλογές που χρησιμοποιούνται για τη διαχείριση των παρουσιών εργασίας.</p>
+</div>
+<table class="tableblock frame-none grid-none fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/jobpanel.png" alt="JobPanel" width="200">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Άνοιγμα σε κατάσταση μόνο για ανάγνωση για προβολή</strong><br>
+Ανοίγει την επιλεγμένη εργασία σε λειτουργία μόνο για ανάγνωση.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Ενεργοποιεί την επεξεργασία της επιλεγμένης εργασίας.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Διαγραφή</strong><br>
+Διαγράφει την επιλεγμένη εργασία.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/openreport.png" alt="Report" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Προβολή αναφοράς</strong><br>
+Ανοίγει την αναφορά παραγωγής για την επιλεγμένη εργασία.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Εξαγωγή αποτελεσμάτων</strong><br>
+Εξάγει τα έτοιμα για μηχάνημα αρχεία εξόδου (αρχεία NC και αναφορές) που δημιουργήθηκαν
+για την επιλεγμένη εργασία.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/planui.png" alt="Plan" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Plan job</strong><br>
+Δημιουργεί διατάξεις τοποθέτησης για τα εξαρτήματα στην επιλεγμένη εργασία.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/resetui.png" alt="Reset" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Επαναφορά εργασίας&#8230;&#8203;</strong><br>
+Αφαιρεί όλες τις δημιουργημένες διατάξεις για την εργασία και επαναφέρει τα εξαρτήματά της στην
+κατάσταση που μπορούν να σχεδιαστούν.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/markui.png" alt="Mark" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Σήμανση ως ολοκληρωμένη&#8230;&#8203;</strong><br>
+Σημειώνει την εργασία και όλες τις τοποθετήσεις της ως ολοκληρωμένες μετά την παραγωγή.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/jobui.png" alt="Job" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Εξαγωγή εργασίας&#8230;&#8203;</strong><br>
+Εξάγει την πλήρη εργασία ως πακέτο που μπορεί να επαναχρησιμοποιηθεί ή να εισαχθεί σε
+άλλο σύστημα.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Προηγ.</strong> / <strong>Επόμενο</strong> / <strong>Διάταξη</strong><br>
+Πλοηγείται στην προηγούμενη ή την επόμενη διάταξη εντός της επιλεγμένης εργασίας.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sort.png" alt="Filters" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort and filter</strong><br>
+Χρησιμοποιήστε αυτά τα φίλτρα για να δείτε άλλες εργασίες που μοιράζονται το ίδιο υλικό, πελάτη,
+ημερομηνία παράδοσης ή προτεραιότητα.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_εξαγωγή_αποτελεσμάτων">Εξαγωγή αποτελεσμάτων</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Επιλέξτε την απαιτούμενη εργασία.</p>
+</li>
+<li>
+<p>Κάντε κλικ στο <strong>Εξαγωγή αποτελεσμάτων</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput.png" alt="Export outputs dialog" width="585">
+</div>
+</div>
+</li>
+<li>
+<p>Αυτό εξάγει τα έτοιμα για μηχάνημα αρχεία εξόδου που δημιουργήθηκαν για την επιλεγμένη
+εργασία.</p>
+</li>
+<li>
+<p>Τα Export Outputs μπορούν να αποθηκευτούν είτε στην προεπιλεγμένη τοποθεσία που έχει ρυθμιστεί στις
+<strong>Εργοστασιακές ρυθμίσεις</strong> είτε σε προσαρμοσμένη τοποθεσία χρησιμοποιώντας
+<strong>Περιήγηση&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Εξάγει μόνο αρχεία εξόδου μηχανήματος (όπως NC και αναφορές) για την
+εργασία.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/output.png" alt="Exported output files" width="725">
+</div>
+</div>
+</li>
+<li>
+<p>Αυτά τα αρχεία χρησιμοποιούνται απευθείας για παραγωγή και μπορούν να σταλούν στο
+μηχάνημα.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_επαναφορά_εργασίας">Επαναφορά εργασίας&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Επαναφέρει την επιλεγμένη εργασία αφαιρώντας όλες τις δημιουργημένες διατάξεις και καθιστώντας τα εξαρτήματα
+διαθέσιμα για σχεδιασμό ξανά.</p>
+</div>
+<div class="paragraph">
+<p>Για να επαναφέρετε μια εργασία:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Κάντε δεξί κλικ στην εργασία και επιλέξτε <strong>Επαναφορά εργασίας&#8230;&#8203;</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/resetjob1.png" alt="Reset job" width="820">
+</div>
+</div>
+</li>
+<li>
+<p>Αυτό διαγράφει όλες τις υπάρχουσες διατάξεις τοποθέτησης για την επιλεγμένη εργασία και επαναφέρει
+όλα τα εξαρτήματά της στην κατάσταση που μπορούν να σχεδιαστούν.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/resetjob2.png" alt="Reset job" width="820">
+</div>
+</div>
+</li>
+<li>
+<p>Εάν οι διατάξεις περιέχουν εξαρτήματα από άλλες εργασίες, αυτά τα εξαρτήματα επίσης επαναφέρονται.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_εξαγωγή_εργασίας">Εξαγωγή εργασίας&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Επιλέξτε την απαιτούμενη εργασία.</p>
+</li>
+<li>
+<p>Κάντε κλικ στο <strong>Εξαγωγή εργασίας&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Αυτή η επιλογή εξάγει την πλήρη εργασία ως πακέτο που μπορεί να επαναχρησιμοποιηθεί ή να
+εισαχθεί σε άλλο σύστημα.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/outputview.png" alt="Output view" width="785">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Τα εξαγόμενα δεδομένα περιλαμβάνουν όλες τις πληροφορίες που απαιτούνται για την επαναδημιουργία της εργασίας:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Λεπτομέρειες και ποσότητες εξαρτημάτων (αρχεία CSV).</p>
+</li>
+<li>
+<p>Δεδομένα διάταξης και τοποθέτησης (αρχεία CSV / FXYLT).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Τα εξαγόμενα αρχεία αποθηκεύονται ως φάκελος εργασίας στη ρυθμισμένη τοποθεσία εξαγωγής.</p>
+</li>
+<li>
+<p>Αυτή η επιλογή χρησιμοποιείται για τη μεταφορά, την κοινοποίηση ή τη δημιουργία αντιγράφων ασφαλείας ολόκληρης της εργασίας.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_σήμανση_ως_ολοκληρωμένη">Σήμανση ως ολοκληρωμένη&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Μόλις η εργασία υποβληθεί σε επεξεργασία στο μηχάνημα, ανοίξτε τον πίνακα Job και επιλέξτε
+<strong>Σήμανση ως ολοκληρωμένη&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/mark.png" alt="Mark complete dialog" width="845">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Όταν μια εργασία σημειωθεί ως ολοκληρωμένη:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Όλες οι τοποθετήσεις κάτω από την εργασία σημειώνονται ως ολοκληρωμένες.</p>
+</li>
+<li>
+<p>Η εργασία γκριζάρει, μετακινείται στο τέλος της λίστας και εμφανίζεται με ένα
+πράσινο σημάδι ελέγχου.</p>
+</li>
+<li>
+<p>Όλες οι διατάξεις κάτω από την εργασία αφαιρούνται από τη λίστα ενεργών διατάξεων.</p>
+</li>
+<li>
+<p>Οι καταστάσεις εξαρτημάτων και εργασίας ενημερώνονται και οι επεξεργασμένες ποσότητες μετακινούνται στην
+ολοκληρωμένη κατάσταση.</p>
+</li>
+<li>
+<p>Τα αρχεία εξόδου για όλες τις διατάξεις στην εργασία αφαιρούνται από την τοποθεσία εξόδου του μηχανήματος
+για να αποφευχθεί η διπλή χρήση.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_εξαγωγή_αποτελεσμάτων">Εξαγωγή αποτελεσμάτων</a>
+  </li>
+  <li level="1">
+   <a href="#_επαναφορά_εργασίας">Επαναφορά εργασίας&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_εξαγωγή_εργασίας">Εξαγωγή εργασίας&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_σήμανση_ως_ολοκληρωμένη">Σήμανση ως ολοκληρωμένη&#8230;&#8203;</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobview.html">Προβολή εργασίας</a></span>
+ <span class="next"><a href="jobautoplan.html">Αυτόματος σχεδιασμός</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

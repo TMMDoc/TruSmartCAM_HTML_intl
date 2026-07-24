@@ -1,0 +1,698 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Onderdeelpaneel</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Welkom bij TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installatie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardwarevereisten</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Ondersteunde bestandsformaten</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Vereisten</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Serverinstallatie</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Clientinstallatie</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Licentie wijzigen</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configuratie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Machine toevoegen/verwijderen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Gereedschap instellen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Gebruikers configureren</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Taal</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiaal</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Nieuw materiaal en plaat toevoegen</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Materiaal exporteren/importeren</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Materiaal vervangen</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Materiaal toewijzen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAM-pagina's toewijzen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Velden uit CAD toewijzen (zoeksleutels)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">De gebruikersinterface</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Bibliotheek</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Openen</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Onderdelen importeren</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Orders importeren</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Jobs importeren</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Assemblages importeren</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Bibliotheekweergave</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Onderdelen</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assemblage</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Onderdeelstatus</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partvalidation.html">Onderdeelvalidatie</a></li>
+      <li><button class="tree blank"></button><a class="active" href="partpanel.html">Onderdeelpaneel</a></li>
+      <li><button class="tree blank"></button><a href="partfilters.html">Onderdeelfilters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Gereedschapsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Gereedschapsvalidatie</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Buiggereedschapsvalidatie</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Snijgereedschapsvalidatie</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Vouwgereedschapsvalidatie</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Gereedschapspaneel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Filters opslaan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Orders</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Orders weergave</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Job aanmaken</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Job weergave</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Job paneel</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatisch plannen</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interactief nesten</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Opnieuw verpakken</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Nestbeheer</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Layout weergave</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Layout paneel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Rapportverzender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Restmateriaal beheer</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatisch restmateriaal beheer</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Handmatig restmateriaal beheer</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Twinline nesten</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Verouderd</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Job filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD extensies</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installatie</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Onderdelen opslaan</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Assemblage opslaan</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Haalbaarheid controleren</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Fabrieksinstellingen</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Diverse verbeteringen</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Bibliotheek</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Onderdeelstatus</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="partpanel.html">Onderdeelpaneel</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Onderdeelpaneel</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dit gedeelte legt onderdeel-gerelateerde acties uit zoals
+<strong>Opnieuw importeren…</strong>, <strong>Opnieuw uitrusten…</strong>,
+<strong>Naam wijzigen…</strong>, <strong>Uitvoeren exporteren</strong>, enz.,
+gebruikt om onderdeelinstanties te beheren.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/partpanel.png" alt="Part panel" width="150">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Openen in de modus alleen lezen voor weergave</strong><br>
+Opent het geselecteerde onderdeel in alleen-lezen modus.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Schakelt bewerking van het geselecteerde onderdeel in.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Wissen</strong><br>
+Verwijdert het geselecteerde onderdeel.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/newui.png" alt="Read-only" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Nieuw…</strong><br>
+Geselecteerde onderdeel kan worden geconverteerd naar een nieuwe order, job of assemblage.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Uitvoeren exporteren</strong><br>
+Exporteert de onderdeeluitvoer naar de geconfigureerde bestemming.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/importui.png" alt="Import" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Opnieuw importeren…</strong><br>
+Stelt u in staat om het geselecteerde onderdeel opnieuw te importeren.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/toolui.png" alt="Retool" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Opnieuw uitrusten…</strong><br>
+Stelt u in staat om het geselecteerde onderdeel opnieuw te verwerken.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/renameui.png" alt="Rename" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Naam wijzigen…</strong><br>
+Om de naam van het geselecteerde onderdeel te wijzigen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/materialui.png" alt="Material" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Materiaal toewijzen…</strong><br>
+Specificeert het materiaal dat aan het geselecteerde onderdeel is gekoppeld.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/customerui.png" alt="Customer" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Klant toewijzen…</strong><br>
+Specificeert de klant die aan het geselecteerde onderdeel is gekoppeld.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/rollingui.png" alt="Rolling" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Walsrichting</strong><br>
+Definieert de oriëntatie (horizontaal of verticaal) waarlangs het materiaal wordt gerold.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Vorige</strong> / <strong>Volgende</strong> / <strong>Uitrustingen</strong><br>
+Navigeert naar het vorige of volgende onderdeel of gereedschap.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sortui.png" alt="Filters" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort and filter</strong><br>
+Gebruik deze filters om andere onderdelen te bekijken die hetzelfde attribuut delen als het
+geselecteerde onderdeel: Hetzelfde Materiaal, Dezelfde Klant, Hetzelfde Buigaantal, of
+Dezelfde Status.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_opnieuw_importeren">Opnieuw importeren…</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Klik met de rechtermuisknop op een onderdeel en klik op <strong>Opnieuw importeren…</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/reimport.png" alt="Re-import" width="503">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Alle geselecteerde onderdeelgereedschapsinstanties op alle machines worden gewist, inclusief
+automatisch voorzien van gereedschap en handmatig voorzien van gereedschap instanties.</p>
+</li>
+<li>
+<p>Bestaande uitvoerbestanden (CAD, Bend en Cut) worden verwijderd.</p>
+</li>
+<li>
+<p>Onderdelen worden opnieuw geïmporteerd en nieuwe CAD-validatie en gereedschappen worden toegepast voor
+alle machines.</p>
+</li>
+<li>
+<p>Nieuwe uitvoerbestanden worden aangemaakt op basis van het bijgewerkte gereedschapsresultaat.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_opnieuw_uitrusten">Opnieuw uitrusten…</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Klik met de rechtermuisknop op een onderdeel en klik op <strong>Opnieuw uitrusten…</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/retool.png" alt="Re-tool" width="504">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Alle machines zijn standaard aangevinkt en gegroepeerd als Laser, Punch, Panel
+en Persrem.</p>
+</li>
+<li>
+<p>Klik op <strong>OK</strong> om door te gaan. Dit verwijdert zowel automatisch voorzien van gereedschap als handmatig
+voorzien van gereedschap instanties voor de geselecteerde machines en verwijdert gerelateerde uitvoerbestanden.</p>
+</li>
+<li>
+<p>Wanneer het selectievakje <strong>Bestaande uitgangen behouden</strong> is
+geselecteerd, worden alleen onderdelen waarvan de uitvoer eerder is verwijderd opnieuw voorzien van gereedschap,
+andere uitvoer blijft onaangeroerd. Indien uitgevinkt, worden alle uitvoerbestanden voor geselecteerde
+machines verwijderd en opnieuw gegenereerd tijdens het opnieuw voorzien van gereedschap.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Als CAM-instellingen voor een machine zijn gewijzigd, selecteert u die machine en voorziet u de
+onderdelen opnieuw van gereedschap.</p>
+</li>
+<li>
+<p>Als een gereedschap (LTT, punch of bend) is gewijzigd of ontbreekt, werkt u de machine bij en
+voorziet u alleen de getroffen onderdelen opnieuw van gereedschap.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_naam_wijzigen">Naam wijzigen…</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dit gedeelte legt uit hoe u één of meerdere onderdelen in TruSmartCAM kunt hernoemen.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klik met de rechtermuisknop op het onderdeel en klik op <strong>Naam wijzigen…</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/rename1.png" alt="Rename1" width="503">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Een bevestigingsdialoogvenster voor hernoemen verschijnt met de huidige onderdeelnaam.</p>
+</li>
+<li>
+<p>Voer de nieuwe naam in en klik op het vink <strong>✓</strong> pictogram om te bevestigen, of klik op het
+kruis <strong>✗</strong> pictogram om de hernoemingsoperatie te annuleren.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/rename2.png" alt="Rename2" width="451">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Om meerdere onderdelen te hernoemen, selecteert u alle vereiste onderdelen en klikt u met de rechtermuisknop
+op één ervan en klikt u op <strong>Naam wijzigen…</strong>.</p>
+</li>
+<li>
+<p>Een bevestigingsdialoogvenster verschijnt met het totale aantal geselecteerde onderdelen.</p>
+</li>
+<li>
+<p>Voer voor elk onderdeel de nieuwe naam in en klik op het vink <strong>✓</strong> pictogram om
+één voor één te bevestigen.</p>
+</li>
+<li>
+<p>Als een onderdeel per ongeluk is geselecteerd, klikt u op het kruis <strong>✗</strong> pictogram om te annuleren.
+Als alternatief kunt u met de rechtermuisknop op het onderdeel klikken en op
+<strong>Naam wijzigen annuleren</strong> klikken om het hernoemen over te slaan.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uitvoeren_exporteren">Uitvoeren exporteren</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Deze optie exporteert de onderdeeluitvoer naar de bestemming die is geconfigureerd in
+<strong>Fabrieksinstellingen</strong>. (Zie
+<a href="../../factory/settings/bend.html">Bend Settings</a> en
+<a href="../../factory/settings/cut.html">Cut Settings</a>)</p>
+</div>
+<div class="paragraph">
+<p>De uitvoerlocatie wordt afzonderlijk gedefinieerd voor Bend, Fold en Cut in
+hun respectievelijke uitvoerinstellingen. Alle gereedschappen die zijn gekoppeld aan buig-,
+vouw- en snijbewerkingen worden geëxporteerd voor het gehele onderdeel.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput.png" alt="Export Output" width="451">
+</div>
+</div>
+<div class="paragraph">
+<p>Zoals hieronder weergegeven, worden de geëxporteerde bestanden opgeslagen in de opgegeven map
+(bijvoorbeeld <code>C:\PraxData\Out\Reports</code>).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportout.png" alt="Export Output Location" width="451">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+De geëxporteerde bestanden zijn afhankelijk van het bewerkingstype. Voor Bend- en
+Fold-bewerkingen worden NC-bestanden en rapporten gegenereerd. Voor Cut- en Punch-
+bewerkingen worden alleen de onderdeelbestanden geëxporteerd.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_onderdeel_materiaal_toewijzen">Onderdeel materiaal toewijzen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Onderdelen met de status <strong>Materiaal niet toegewezen</strong> moeten worden
+bijgewerkt voordat verdere verwerking plaatsvindt. De onderstaande stappen leggen uit hoe u
+materiaal toewijst.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klik met de rechtermuisknop op het onderdeel dat de status
+<strong>Materiaal niet toegewezen</strong> weergeeft en selecteer
+<strong>Materiaal toewijzen</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/asignmaterial.png" alt="Assign Material" width="442">
+</div>
+</div>
+</li>
+<li>
+<p>Het venster <strong>Materiaal toewijzen</strong> opent.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/dialogue.png" alt="Dialogue" width="600">
+</div>
+</div>
+</li>
+<li>
+<p>Het dialoogvenster heeft vier secties:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Suggesties</strong> - Stelt automatisch grond-
+materialen voor op basis van de dikte van het geïmporteerde onderdeel.</p>
+</li>
+<li>
+<p><strong>Alle materialen</strong> - Geeft alle materiaaltypes weer die in
+TruSmartCAM zijn gedefinieerd.</p>
+</li>
+<li>
+<p><strong>Alle onbewerkte materialen</strong> - Toont alle grondmaterialen
+die beschikbaar zijn in het systeem.</p>
+</li>
+<li>
+<p><strong>Gebruikte onbewerkte materialen</strong> - Toont de meest
+recent gebruikte grondmaterialen voor snelle toegang.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>U kunt het veld <strong>Zoeken… (Ctrl+F)</strong> bovenaan gebruiken om snel
+materialen te vinden. Typ bijvoorbeeld "steel" om alle overeenkomende materialen over
+de drie secties weer te geven.</p>
+</li>
+<li>
+<p>Selecteer uit de gefilterde lijst het vereiste materiaal (bijv. Steel-25) uit
+de Grondmaterialenlijst.</p>
+</li>
+<li>
+<p>Het geselecteerde materiaal wordt toegewezen aan het onderdeel.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_walsrichting">Walsrichting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Walsrichting</strong> verwijst naar de oriëntatie van de
+vezel in een onderdeel, wat kan beïnvloeden hoe het onderdeel wordt gesneden en verwerkt.
+Met deze optie kunt u de
+<strong>Walsrichting</strong> voor een onderdeel in de Onderdelenbibliotheek specificeren.
+Op basis van de geselecteerde
+richting wordt het onderdeel in de juiste oriëntatie geplaatst voor het snijden op de
+beschikbare machines.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klik met de rechtermuisknop op een onderdeeltegel in de Onderdelenbibliotheek of het Jobvenster.</p>
+</li>
+<li>
+<p>Selecteer de gewenste walrichtingr:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Geen</strong></p>
+</li>
+<li>
+<p><strong>Horizontaal</strong></p>
+</li>
+<li>
+<p><strong>Verticaal</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/rollingdirection1.png" alt="Rolling direction" width="514">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Het onderdeel wordt automatisch opnieuw voorzien van gereedschap voor alle beschikbare snijmachines op basis van
+de geselecteerde walrichting.</p>
+</li>
+<li>
+<p>De onderdeeltegel toont de geselecteerde walrichting zoals hieronder weergegeven:</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/none.png" alt="None" width="270"></span> <span class="image"><img src="img/horizontal.png" alt="Horizontal" width="270"></span>
+<span class="image"><img src="img/vertical.png" alt="Vertical" width="270"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_opnieuw_importeren">Opnieuw importeren…</a>
+  </li>
+  <li level="1">
+   <a href="#_opnieuw_uitrusten">Opnieuw uitrusten…</a>
+  </li>
+  <li level="1">
+   <a href="#_naam_wijzigen">Naam wijzigen…</a>
+  </li>
+  <li level="1">
+   <a href="#_uitvoeren_exporteren">Uitvoeren exporteren</a>
+  </li>
+  <li level="1">
+   <a href="#_onderdeel_materiaal_toewijzen">Onderdeel materiaal toewijzen</a>
+  </li>
+  <li level="1">
+   <a href="#_walsrichting">Walsrichting</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partvalidation.html">Onderdeelvalidatie</a></span>
+ <span class="next"><a href="partfilters.html">Onderdeelfilters</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

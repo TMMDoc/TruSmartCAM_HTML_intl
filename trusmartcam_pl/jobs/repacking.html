@@ -1,0 +1,473 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>Przepakowywanie</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Witamy w TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">Instalacja</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">Wymagania sprzętowe</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">Obsługiwane formaty plików</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">Wymagania wstępne</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">Instalacja serwera</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">Instalacja klienta</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">Zmiana licencji</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">Konfiguracja</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">Dodaj/Usuń maszynę</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">Konfiguracja oprzyrządowania</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">Konfiguracja użytkowników</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">Język</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">Materiał</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">Dodawanie nowego materiału i arkusza</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">Eksport/Import materiału</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">Zamiana materiału</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">Mapowanie materiału</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">Mapowanie stron CAM</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">Mapowanie pól z CAD (klucze wyszukiwania)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">Interfejs użytkownika</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Przepływ pracy</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Biblioteka</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Otwórz</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Importuj części</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Importuj zamówienia</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Import zadań</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Importuj zespoły</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Widok biblioteki</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Części</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Zespoły</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Status części</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Walidacja części</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Panel części</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Filtry części</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Status narzędzi</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Walidacja narzędzi</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Walidacja narzędzi do gięcia</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Walidacja narzędzi tnących</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Walidacja narzędzi do składania</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Panel narzędziowania</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Zapisywanie filtrów</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">Zamówienia</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">Widok zamówień</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Zadania</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">Tworzenie zadania</a></li>
+    <li><button class="tree blank"></button><a href="jobview.html">Widok zadania</a></li>
+    <li><button class="tree blank"></button><a href="jobpanel.html">Panel zadania</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">Automatyczne planowanie</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">Interaktywne zagnieżdżanie</a></li>
+    <li><button class="tree blank"></button><a class="active" href="repacking.html">Przepakowywanie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">Zarządzanie układem</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">Widok układu</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">Panel układu</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">Nadawca raportów</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">Zarządzanie resztkami</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">Automatyczne zarządzanie resztkami</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">Ręczne zarządzanie resztkami</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">Zagnieżdżanie dwuliniowe</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">Przestarzałe</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">Filtry zadań</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Fabryka</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Trasy</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Arkusze</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Użytkownicy</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edycja</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Klienci</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Ustawienia</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Powiadomienia</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Raporty</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">Rozszerzenia CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">Instalacja</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">Zapisywanie części</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">Zapisywanie złożenia</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">Sprawdzanie wykonalności</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">Ustawienia fabryki</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">Różne ulepszenia</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Zadania</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="repacking.html">Przepakowywanie</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Przepakowywanie</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>TruSmartCAM nie posiada oddzielnego modułu przepakowywania. Zamiast tego przepakowywanie
+jest obsługiwane za pośrednictwem opcji na poziomie zadania, które zapewniają elastyczność w sposobie
+łączenia części.</p>
+</div>
+<div class="paragraph">
+<p>Istnieją trzy sposoby wykonania przepakowywania.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Przepakowywanie za pomocą
+<strong>Maks. liczba detali z wielu zadań</strong>.</p>
+</li>
+<li>
+<p>Ręczne przepakowywanie za pomocą interaktywnego kreatora <strong>Dodaj detale…</strong>.</p>
+</li>
+<li>
+<p>Ręczne przepakowywanie za pomocą TecZone.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_przepakowywanie_za_pomocą_maks_liczba_detali_z_wielu_zadań">Przepakowywanie za pomocą Maks. liczba detali z wielu zadań</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Aby włączyć tę opcję, przejdź do <strong>fabryka</strong> &#8594;
+<strong>ustawienia</strong> &#8594; <strong>Zadanie</strong> &#8594;
+<strong>Ustawienia układania</strong> &#8594;
+<strong>Maks. liczba detali z wielu zadań</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/mixparts.png" alt="Mix Parts" width="735">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Po włączeniu ta opcja pozwala na grupowanie części z różnych zadań
+podczas automatycznego zagnieżdżania lub interaktywnego zagnieżdżania, co skutkuje połączonym
+pakowaniem lub zagnieżdżeniem.</p>
+</li>
+<li>
+<p>Na przykład:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Zadanie-1 ma 1 część, Zadanie-2 ma 1 część.</p>
+</li>
+<li>
+<p>Z włączonym <strong>Maks. liczba detali z wielu zadań</strong>,
+TruSmartCAM może przepakować te 2 części w jedno zoptymalizowane zagnieżdżenie.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/mixnest1.png" alt="Mix Nest1" width="415"></span> <span class="image"><img src="img/mixnest2.png" alt="Mix Nest2" width="400"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bez tej opcji części z każdego zadania pozostają oddzielone podczas
+zagnieżdżania/pakowania z różnymi nazwami układów.</p>
+</li>
+<li>
+<p>Przepakowywanie może być również wykonane ręcznie bez włączania tej opcji.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ręczne_przepakowywanie_za_pomocą_kreatora_dodawania_części">Ręczne przepakowywanie za pomocą kreatora dodawania części</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Z widoku układu wybierz części, które chcesz przepakować.</p>
+</li>
+<li>
+<p>Kliknij prawym przyciskiem myszy na część i wybierz <strong>Dodaj detale…</strong> z
+panelu układu.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/addparts.png" alt="Add Parts" width="740">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Postępuj zgodnie z instrukcjami w kreatorze, aby zakończyć przepakowywanie.</p>
+</li>
+<li>
+<p>Wybierz <strong>Pokaż inne detale zadania</strong> i dodaj je do
+bieżącego zadania.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/manualrepacking2.png" alt="Manual Repacking2" width="1846">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sprawdź zmiany i potwierdź przepakowywanie.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/manualrepacking1.png" alt="Manual Repacking1" width="1846">
+</div>
+</div>
+<div class="paragraph">
+<p>Aby uzyskać więcej szczegółów, zobacz  <a href="./layoutcommands/layoutpanel.html#add-parts">Add Parts</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ręczne_przepakowywanie_za_pomocą_teczone">Ręczne przepakowywanie za pomocą TecZone</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Otwórz TecZone, klikając  <span class="image"><img src="img/editicon.png" alt="Edit" width="18"></span>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/fluxlayout.png" alt="Flux Layout" width="741">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>W interfejsie TecZone kliknij Add.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/fluxadd.png" alt="Add" width="544">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pojawia się nowe okno, w którym możesz wybrać części do przepakowania. Kliknij
+<strong>Pokaż…</strong>, a następnie wybierz <strong>Inne detale zadania</strong>.
+Po dokonaniu wyboru kliknij <strong>_Wybierz</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/pick.png" alt="Pick" width="838">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pojawia się nowe okno, w którym możesz określić, gdzie część ma zostać przepakowana.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/selection.png" alt="Selection" width="408">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kliknij <strong>Zapisz zmiany w Praxis</strong>, a
+przepakowyny układ będzie dostępny w TruSmartCAM.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/fluxrepack1.png" alt="Flux Repack1" width="410"></span> <span class="image"><img src="img/fluxrepack2.png" alt="Flux Repack2" width="418"></span></p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_przepakowywanie_za_pomocą_maks_liczba_detali_z_wielu_zadań">Przepakowywanie za pomocą Maks. liczba detali z wielu zadań</a>
+  </li>
+  <li level="1">
+   <a href="#_ręczne_przepakowywanie_za_pomocą_kreatora_dodawania_części">Ręczne przepakowywanie za pomocą kreatora dodawania części</a>
+  </li>
+  <li level="1">
+   <a href="#_ręczne_przepakowywanie_za_pomocą_teczone">Ręczne przepakowywanie za pomocą TecZone</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobinteractplan.html">Interaktywne zagnieżdżanie</a></span>
+ <span class="next"><a href="layoutcommands/index.html">Zarządzanie układem</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

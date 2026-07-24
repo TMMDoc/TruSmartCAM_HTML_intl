@@ -1,0 +1,514 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Onderdelen opslaan</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Welkom bij TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installatie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardwarevereisten</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Ondersteunde bestandsformaten</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Vereisten</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Serverinstallatie</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Clientinstallatie</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Licentie wijzigen</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configuratie</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Machine toevoegen/verwijderen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Gereedschap instellen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Gebruikers configureren</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Taal</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiaal</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Nieuw materiaal en plaat toevoegen</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Materiaal exporteren/importeren</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Materiaal vervangen</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Materiaal toewijzen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">CAM-pagina's toewijzen</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Velden uit CAD toewijzen (zoeksleutels)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">De gebruikersinterface</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Bibliotheek</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Openen</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Onderdelen importeren</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Orders importeren</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Jobs importeren</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Assemblages importeren</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Bibliotheekweergave</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Onderdelen</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Assemblage</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Onderdeelstatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Onderdeelvalidatie</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Onderdeelpaneel</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Onderdeelfilters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Gereedschapsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Gereedschapsvalidatie</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Buiggereedschapsvalidatie</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Snijgereedschapsvalidatie</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Vouwgereedschapsvalidatie</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Gereedschapspaneel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Filters opslaan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Orders</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Orders weergave</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Jobs</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Job aanmaken</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Job weergave</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Job paneel</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatisch plannen</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interactief nesten</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Opnieuw verpakken</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Nestbeheer</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Layout weergave</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Layout paneel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Rapportverzender</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Restmateriaal beheer</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatisch restmateriaal beheer</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Handmatig restmateriaal beheer</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Twinline nesten</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Verouderd</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Job filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">CAD extensies</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">SolidWorks addin</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="installationsteps.html">Installatie</a></li>
+      <li><button class="tree blank"></button><a class="active" href="savetopraxis.html">Onderdelen opslaan</a></li>
+      <li><button class="tree blank"></button><a href="saveassembly.html">Assemblage opslaan</a></li>
+      <li><button class="tree blank"></button><a href="partfeasibility.html">Haalbaarheid controleren</a></li>
+      <li><button class="tree blank"></button><a href="factorysettings.html">Fabrieksinstellingen</a></li>
+      <li><button class="tree blank"></button><a href="miscenhancements.html">Diverse verbeteringen</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">CAD extensies</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">SolidWorks addin</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="savetopraxis.html">Onderdelen opslaan</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Onderdelen opslaan</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Start SolidWorks en open een plaatwerk onderdeel (.sldprt).</p>
+</div>
+<div class="paragraph">
+<p>Volg vervolgens deze stappen:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Schakel over naar het TruSmartCAM tabblad in SolidWorks om toegang te krijgen tot de TruSmartCAM werkbalk.</p>
+</li>
+<li>
+<p>Klik op <strong>Opslaan in Praxis</strong> op de <strong>TruSmartCAM</strong> werkbalk.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Selecteer in het <strong>Opslaan in Praxis</strong> dialoogvenster het juiste TruSmartCAM grondmateriaal en
+klik vervolgens op <strong>OK</strong> om het onderdeel te uploaden en op te slaan in de TruSmartCAM onderdelenbibliotheek.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/savepraxis.png" alt="Save Praxis" width="850">
+</div>
+</div>
+<div class="paragraph">
+<p>Het onderdeel is nu opgeslagen in TruSmartCAM.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/part.png" alt="Part" width="372">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+TruSmartCAM bevat enkele voorbeeldonderdelen op de locatie <code>C:\Program
+Files\Metamation\ TruSmartCAM \Samples\Parts</code>. U kunt deze gebruiken voor testdoeleinden indien
+nodig.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_automatische_materiaalherkenning">Automatische materiaalherkenning</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Deze functie converteert automatisch SolidWorks materialen en onderdeeldikte
+waarden naar de bijbehorende TruSmartCAM grondmaterialen tijdens het uploaden.</p>
+</div>
+<div class="paragraph">
+<p>Om materiaalmapping te configureren:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Klik op <strong>Opties</strong> op de <strong>TruSmartCAM</strong> werkbalk om het <strong>Opties</strong> dialoogvenster te openen.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/mapmaterial.png" alt="Map Material" width="850">
+</div>
+</div>
+</li>
+<li>
+<p>Navigeer naar de <strong>Materiaalkoppeling</strong> pagina.</p>
+</li>
+<li>
+<p>Selecteer in het linker paneel een SolidWorks materiaal.</p>
+</li>
+<li>
+<p>Selecteer in het rechter paneel het bijbehorende TruSmartCAM materiaal.</p>
+</li>
+<li>
+<p>Klik op <strong>Koppelen</strong> om de koppeling te maken.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Het gekoppelde paar verschijnt in de koppelingslijst onderaan.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Om een koppeling te verwijderen, selecteert u deze en klikt u op <strong>Ontkoppelen</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dikte_tolerantie_instelling">Dikte tolerantie instelling</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>De dikte tolerantie waarde definieert het tolerantiebereik waarbinnen TruSmartCAM
+de plaatwerk modeldikte van SolidWorks koppelt aan een bestaande grondmateriaal
+dikte in de TruSmartCAM database. Het compenseert voor kleine variaties in
+modeldikte veroorzaakt door ontwerpafronding, eenheidsconversies, enz&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Wanneer de SolidWorks onderdeeldikte niet exact overeenkomt met een materiaal in TruSmartCAM,
+zorgt de tolerantie waarde ervoor dat een dichtstbijzijnd beschikbaar materiaal automatisch
+wordt geselecteerd.</p>
+</div>
+<div class="paragraph">
+<div class="title">Voorbeeld</div>
+<p>Met een nominaal 2.0 mm materiaal en een tolerantie waarde van 0.05 mm:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAM accepteert elke SolidWorks modeldikte tussen 1.95 mm en 2.05 mm als
+een geldige overeenkomst.</p>
+</li>
+<li>
+<p>Afwijkingen buiten dit bereik activeren een handmatige materiaalselectie prompt
+tijdens het uploaden van het onderdeel.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Om de tolerantie waarde te bekijken of te wijzigen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klik op <strong>Opties</strong> op de <strong>TruSmartCAM</strong> werkbalk en navigeer vervolgens naar <strong>Div. instellingen</strong> om
+de tolerantie waarde te bekijken, klik nu op <strong>Opslaan in Praxis</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/thicknessfudge.png" alt="Thickness Fudge" width="850">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klik in het <strong>Opslaan in Praxis</strong> dialoogvenster op <strong>OK</strong>, het onderdeel wordt opgeslagen in TruSmartCAM.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/configuration.png" alt="Configuration" width="428">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aangepaste_onderdeeleigenschappen_lezen">Aangepaste onderdeeleigenschappen lezen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Deze instelling stelt TruSmartCAM in staat om automatisch aangepaste onderdeelinformatie—zoals
+<strong>Material</strong>, <strong>Revision</strong>, en andere door de gebruiker gedefinieerde attributen—rechtstreeks
+uit SolidWorks onderdeelbestanden te lezen.</p>
+</div>
+<div class="paragraph">
+<p>Om dit in te stellen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klik op <strong>Opties</strong> op de <strong>TruSmartCAM</strong> werkbalk om het <strong>Opties</strong> dialoogvenster te openen en
+navigeer vervolgens naar <strong>Aangepaste velden</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/custompart.png" alt="Custom Part" width="850">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Gebruik de <strong>Koppelen</strong> en <strong>Ontkoppelen</strong> knoppen om de vereiste TruSmartCAM velden te koppelen aan de
+bijbehorende SolidWorks Custom of Configuration velden.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+De weergegeven waarden worden geladen uit het momenteel actieve SolidWorks onderdeel.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Zodra de koppeling is voltooid, worden de geselecteerde aangepaste eigenschappen
+automatisch uit SolidWorks gelezen wanneer onderdelen worden geïmporteerd of bijgewerkt in
+TruSmartCAM, klik nu op <strong>Opslaan in Praxis</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+De hier gedefinieerde koppelingen worden opgeslagen in de TruSmartCAM repository en
+automatisch gesynchroniseerd over alle TruSmartCAM SolidWorks installaties binnen
+het netwerk.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klik in het <strong>Opslaan in Praxis</strong> dialoogvenster op <strong>OK</strong>, het onderdeel wordt opgeslagen in TruSmartCAM.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/default.png" alt="Default" width="428">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_automatische_materiaalherkenning">Automatische materiaalherkenning</a>
+  </li>
+  <li level="1">
+   <a href="#_dikte_tolerantie_instelling">Dikte tolerantie instelling</a>
+  </li>
+  <li level="1">
+   <a href="#_aangepaste_onderdeeleigenschappen_lezen">Aangepaste onderdeeleigenschappen lezen</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="installationsteps.html">Installatie</a></span>
+ <span class="next"><a href="saveassembly.html">Assemblage opslaan</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,607 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Zostavy</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Vitajte v TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Inštalácia</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardvérové požiadavky</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Podporované formáty súborov</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Predpoklady</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Inštalácia servera</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Inštalácia klienta</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Zmena licencie</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfigurácia</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Pridať/Odstrániť stroj</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Nastavenie náradia</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Konfigurácia používateľov</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Jazyk</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiál</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Pridať nový materiál a hárok</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Export/Import materiálu</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Nahradiť materiál</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mapovanie materiálu</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mapovanie CAM stránok</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mapovanie polí z CAD (vyhľadávacie klúče)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Používateľské rozhranie</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Pracovný postup</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Knižnica</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Otvoriť</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Import dielov</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Import objednávok</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Import úloh</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Import zostáv</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Zobrazenie knižnice</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partview.html">Diely</a></li>
+      <li><button class="tree blank"></button><a class="active" href="assemblyview.html">Zostavy</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Stav dielu</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Validácia dielu</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Panel dielu</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Filtre dielov</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Stav obrábania</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Validácia obrábania</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Validácia ohýbacieho obrábania</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Validácia rezacieho obrábania</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Validácia skladacieho obrábania</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Panel obrábania</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Ukladanie filtrov</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Objednávky</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Zobrazenie objednávok</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Práce</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Vytvorenie práce</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Zobrazenie práce</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Panel práce</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Automatické plánovanie</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktívne ukladanie</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Prebaľovanie</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Správa hniezd</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Zobrazenie rozvrhnutia</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Panel rozvrhnutia</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Odosielateľ správ</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Správa zvyškov</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatická správa zvyškov</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manuálna správa zvyškov</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Dvojlinové ukladanie</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Zastaralé</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtre prác</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD rozšírenia</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Inštalácia</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Uložiť diely</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Uložiť zostavu</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Skontrolovať uskutočniteľnosť</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Nastavenia továrne</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Rôzne vylepšenia</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Knižnica</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Zobrazenie knižnice</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="assemblyview.html">Zostavy</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Zostavy</h1>
+<div class="sect1">
+<h2 id="_vytvorenie_statických_rozložení_zo_zostavy">Vytvorenie statických rozložení zo zostavy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Statické rozloženia môžu byť vygenerované pre zostavu pomocou interaktívneho
+sprievodcu ukladaním.
+Tieto rozloženia sú pevné layouty priradené len k zvolenej zostave.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Prepnite do zobrazenia <strong>asis.</strong>.</p>
+</li>
+<li>
+<p>Kliknite pravým tlačidlom na požadovanú zostavu a vyberte
+<strong>Vytvoriť rozmiestnenia&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Otvorí sa interaktívny sprievodca ukladaním.</p>
+</li>
+<li>
+<p>Predvolene sa interaktívny sprievodca ukladaním prepne na
+stránku <strong>Zvoliť stroj a materiál</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyinteractive.png" alt="Machine and material" width="950">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Stroje sú zobrazené s farebnými pruhmi indikujúcimi dostupnú výrobnú záťaž:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Zelený pruh: Naplánované hodiny</p>
+</li>
+<li>
+<p>Šedý pruh: Dostupné hodiny (z 8-hodinovej zmeny)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Pod každým strojom sú zvolené diely zoskupené s ich surovým materiálom
+(Diely/Celkové množstvo).</p>
+</li>
+<li>
+<p>Ak diel nemá platné riešenie obrábania pre stroj, tento diel a
+materiál sú ignorované pri spracovaní pre daný stroj.</p>
+</li>
+<li>
+<p>Ak je surový materiál zvolený pre jeden stroj, nebude dostupný pre ostatné
+stroje.</p>
+</li>
+<li>
+<p>Keď je nastavený plán rozloženia stroja, vyberte preferovaný plech a
+prepíšte parametre plechu ako <strong>Priorita</strong>,
+<strong>Množstvo</strong>, <strong>Okraje tabule plechu</strong>, atď.</p>
+</li>
+<li>
+<p>Môžete filtrovať plechy na zobrazenie <strong>Všetky tabule plechu</strong>,
+<strong>Štandardné tabule</strong> alebo
+<strong>Zvyškové tabule</strong>. Kliknite na <strong>Nasl.</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+V tomto štádiu nie je možné zvýšiť množstvá. Môžete
+buď ponechať rovnaké ako množstvo v inventári plechov alebo ho znížiť a
+skontrolovať výsledky ukladania.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Aktualizovať množstvo</strong> sa objaví v okne interaktívneho plánu ukladania.</p>
+</li>
+<li>
+<p>Predvolene <strong>Chytiť všetky (F5)</strong> zahŕňa všetky diely na
+ukladanie, alebo môžete manuálne vybrať prioritné diely a upraviť množstvá dielov.
+Kliknite na <strong>Nasl.</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyquantity.png" alt="Update quantity">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ukladanie sa spustí a diely uložené v plechu sú aktualizované so stavom modrej farby.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblyresult.png" alt="Nesting result">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Výrobná záťaž stroja sa aktualizuje na základe výsledku rozloženia.</p>
+</li>
+<li>
+<p>Ak niektoré diely zostanú neuložené, zobrazí sa správa
+<strong>Niektoré dielce ostali nerozmiestnené</strong> - tieto diely zostávajú
+v pôvodnej úlohe.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Diel môže zostať neuložený, ak nie je k dispozícii vhodný plech.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Statické rozloženia môžu byť upravené na zahrnutie neuložených dielov:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Vyberte rozloženie, kam chcete vložiť neuložené diely, a vytvorte checkout
+pre úpravu.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblylayout.png" alt="Selected layout">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TecZone sa otvorí. Kliknite na <strong>_Chytiť</strong> alebo
+<strong>Chytiť _všetky</strong> na výber neuložených dielov z
+rodičovskej zostavy.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/addnest.png" alt="Add unnested parts" width="864">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Usporiadajte diel v rozložení podľa potreby.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unnest.png" alt="Unnested part placement" width="715">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Vygenerované rozloženia sú automaticky pomenované podľa rodičovskej zostavy pre jednoduchú
+identifikáciu.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Statické rozloženia nemôžu obsahovať diely z iných zostáv. Povolenie zmiešaných
+rozložení zostáv by bránilo uvoľneniu jednej zostavy bez uvoľnenia
+ostatných, takže miešanie je zámerne zakázané.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_neplechtové_komponenty">Neplechtové komponenty</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Keď je zostava importovaná, plechtové diely sú extrahované a pridané do
+zostáv v knižnici dielov.</p>
+</li>
+<li>
+<p>Neplechtové komponenty sú oddelené a pridané do
+<strong>Komponenty</strong>.</p>
+</li>
+<li>
+<p>Zostava je pridaná do knižnice zostáv a jej BOM
+(Bill of Materials) obsahuje diely aj komponenty.</p>
+</li>
+<li>
+<p>Ak bol diel už importovaný ako plechtový diel, systém aktualizuje
+existujúci záznam a odstráni duplikáty z knižnice dielov.</p>
+</li>
+<li>
+<p>Výberom zostavy sa zobrazia diely aj komponenty, s množstvami komponentov
+zobrazených pod obrázkom komponentu (počet komponentov zvolenej zostavy
+a celkový počet komponentov).</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/components.png" alt="Assembly components" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tooltips komponentov zobrazujú názov, materiál a veľkosť.
+Komponenty sú vylúčené počas výroby - nie sú ukladané a žiadne
+plechy nie sú generované pre komponenty.</p>
+</li>
+<li>
+<p>Vzorové zostavy a komponenty sú dostupné na:
+C:\Program Files\Metamation\Praxis\Samples\Assys\Components, ktoré môžu
+byť použité na testovanie importu komponentov a pracovných postupov zostáv.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vytvorenie_úlohy_zo_zostavy">Vytvorenie úlohy zo zostavy</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Kliknite pravým tlačidlom na zostavu, kliknite na <strong>Nová&#8230;&#8203;</strong> a potom
+<strong>Zákazka</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/newassemblyjob.png" alt="Create new job" width="760">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>V dialógovom okne nová úloha nastavte počet zostáv, kliknite na <strong>OK</strong>
+a potom aktualizujte podrobnosti úlohy (ako dátum dodania a priorita) podľa potreby.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/riegelwindow.png" alt="New job dialog" width="369">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Systém vytvorí úlohu zo zostavy a skopíruje statické rozloženia ako
+rozloženia úlohy, aktualizujúc počty plechov. Skopírované rozloženia sú prefixované
+ID úlohy.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/assemblycreated.png" alt="Assembly job created" width="999">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Rozloženia úlohy môžu byť upravené alebo odstránené bez ovplyvnenia pôvodných
+statických rozložení.</p>
+</li>
+<li>
+<p>Rozloženia úlohy môžu byť prepakované pomocou <strong>Prispôsobiť/zlúčiť&#8230;&#8203;</strong> alebo
+<strong>Pridať dielce&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Pre podrobné kroky pozrite si
+<a href="../../jobs/layoutcommands/layoutpanel.html#adapt-compact">Adapt/Compact</a> a
+<a href="../../jobs/layoutcommands/layoutpanel.html#add-parts">Add parts</a>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Ak sa diel neobjaví v rozložení, skontrolujte dialógové okno úpravy rozloženia - môžete
+vložiť neuložené diely manuálne.</p>
+</div>
+<div class="paragraph">
+<p>Použite uložené vyhľadávania a filtre na rýchle nájdenie dielov naprieč viacerými zostavami.</p>
+</div>
+<div class="paragraph">
+<p>Použite jasné, popisné názvy zostáv a rozložení na zabránenie zmätku pri
+kopírovaní rozložení do úloh.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_vytvorenie_statických_rozložení_zo_zostavy">Vytvorenie statických rozložení zo zostavy</a>
+  </li>
+  <li level="1">
+   <a href="#_neplechtové_komponenty">Neplechtové komponenty</a>
+  </li>
+  <li level="1">
+   <a href="#_vytvorenie_úlohy_zo_zostavy">Vytvorenie úlohy zo zostavy</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partview.html">Diely</a></span>
+ <span class="next"><a href="../partstate/index.html">Stav dielu</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

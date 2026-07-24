@@ -1,0 +1,462 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="res/bento.css">
+  <link rel="stylesheet" href="res/site.css">
+  <link rel="stylesheet" href="res/tree.css">
+  <link rel="stylesheet" href="res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="img/praxis-icon.png">
+  <title>Flusso di lavoro</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="index.html">Benvenuti in TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="installation/changelic.html">Change license</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="configuration/index.html">Configurazione</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="configuration/setupmachine.html">Aggiungere/Rimuovere macchina</a></li>
+    <li><button class="tree blank"></button><a href="configuration/setuptooling.html">Configurare utensili</a></li>
+    <li><button class="tree blank"></button><a href="configuration/configureusers.html">Configurare utenti</a></li>
+    <li><button class="tree blank"></button><a href="configuration/language.html">Lingua</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="configuration/addmaterial/index.html">Materiale</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="configuration/addmaterial/addnew.html">Aggiungere nuovo materiale e foglio</a></li>
+      <li><button class="tree blank"></button><a href="configuration/addmaterial/exportimport.html">Esportare/Importare materiale</a></li>
+      <li><button class="tree blank"></button><a href="configuration/addmaterial/replacematerial.html">Sostituire materiale</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="configuration/mapbendpages.html">Mappare materiale</a></li>
+    <li><button class="tree blank"></button><a href="configuration/mapcampages.html">Mappare pagine CAM</a></li>
+    <li><button class="tree blank"></button><a href="configuration/cadmapfields.html">Mappare campi da CAD (chiavi di ricerca)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="userinterface.html">L'interfaccia utente</a></li>
+  <li><button class="tree blank"></button><a class="active" href="workflow.html">Flusso di lavoro</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="library/index.html">Libreria</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/open/index.html">Apri</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="library/open/partimport.html">Importa pezzi</a></li>
+      <li><button class="tree blank"></button><a href="library/open/orderimport.html">Importa ordini</a></li>
+      <li><button class="tree blank"></button><a href="library/open/jobimport.html">Importa lavori</a></li>
+      <li><button class="tree blank"></button><a href="library/open/assembliesimport.html">Importa assiemi</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/libraryview/index.html">Vista libreria</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="library/libraryview/partview.html">Pezzi</a></li>
+      <li><button class="tree blank"></button><a href="library/libraryview/assemblyview.html">Assieme</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/partstate/index.html">Stato parti</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="library/partstate/partvalidation.html">Convalida parti</a></li>
+      <li><button class="tree blank"></button><a href="library/partstate/partpanel.html">Pannello pezzi</a></li>
+      <li><button class="tree blank"></button><a href="library/partstate/partfilters.html">Filtri pezzi</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="library/toolingstatus/index.html">Stato attrezzaggio</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="library/toolingstatus/toolingvalidation/index.html">Convalida attrezzaggio</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="library/toolingstatus/toolingvalidation/bendtooling.html">Convalida attrezzaggio piegatura</a></li>
+        <li><button class="tree blank"></button><a href="library/toolingstatus/toolingvalidation/cuttooling.html">Convalida attrezzaggio taglio</a></li>
+        <li><button class="tree blank"></button><a href="library/toolingstatus/toolingvalidation/foldtooling.html">Convalida attrezzaggio piegatubi</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="library/toolingstatus/toolingpanel.html">Pannello attrezzaggio</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="library/savingfilters.html">Salvataggio filtri</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="orders/index.html">Ordini</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="orders/ordersview.html">Vista ordini</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="jobs/index.html">Commesse</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="jobs/jobcreation.html">Crea commessa</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobview.html">Vista lavori</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobpanel.html">Pannello commessa</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobautoplan.html">Pianificazione automatica</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobinteractplan.html">Nesting interattivo</a></li>
+    <li><button class="tree blank"></button><a href="jobs/repacking.html">Riconfezionamento</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="jobs/layoutcommands/index.html">Gestione nidi</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="jobs/layoutcommands/nestview.html">Vista layout</a></li>
+      <li><button class="tree blank"></button><a href="jobs/layoutcommands/layoutpanel.html">Pannello layout</a></li>
+      <li><button class="tree blank"></button><a href="jobs/layoutcommands/reportsender.html">Mittente report</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="jobs/remnantmanagement/index.html">Gestione ritagli</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="jobs/remnantmanagement/autoremnant.html">Gestione automatica ritagli</a></li>
+      <li><button class="tree blank"></button><a href="jobs/remnantmanagement/manualremnant.html">Gestione manuale ritagli</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="jobs/twinlinenesting.html">Nesting a doppia linea</a></li>
+    <li><button class="tree blank"></button><a href="jobs/outdate.html">Non aggiornato</a></li>
+    <li><button class="tree blank"></button><a href="jobs/jobfilters.html">Filtri lavoro</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="cadextensions/index.html">Estensioni CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="cadextensions/solidworksaddin/index.html">Componente aggiuntivo SolidWorks</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/installationsteps.html">Installazione</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/savetopraxis.html">Salvare parti</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/saveassembly.html">Salvare assieme</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/partfeasibility.html">Verifica fattibilità</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/factorysettings.html">Impostazioni di fabbrica</a></li>
+      <li><button class="tree blank"></button><a href="cadextensions/solidworksaddin/miscenhancements.html">Miglioramenti vari</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="impressum.html">Colophon</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="workflow.html">Flusso di lavoro</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Flusso di lavoro</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>TruSmartCAM è un sistema di esecuzione della produzione (Manufacturing Execution
+System) che gestisce e ottimizza i processi di produzione della lamiera. Un flusso
+di lavoro in TruSmartCAM è costituito da una serie di passaggi da seguire per
+completare un&#8217;attività o un processo specifico. È possibile personalizzare il
+flusso di lavoro per adattarlo a diversi processi di produzione e adattarlo alle
+proprie esigenze specifiche. Il flusso di lavoro in TruSmartCAM include
+tipicamente i seguenti passaggi:</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_configurare_il_sistema">1. Configurare il sistema</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Configurare TruSmartCAM per adattarlo al proprio ambiente di produzione. Questo
+passaggio fondamentale include la definizione delle macchine con le loro capacità
+e parametri, l&#8217;aggiunta dei materiali disponibili e delle gamme di spessore, la
+configurazione delle librerie di attrezzaggio con punzoni e matrici, la creazione
+di fogli di setup per diverse configurazioni di macchine e la gestione degli
+account utente con le autorizzazioni appropriate. Un sistema configurato
+correttamente garantisce un&#8217;elaborazione accurata e previene errori nelle fasi
+successive. Questa configurazione viene generalmente eseguita una volta durante la
+distribuzione iniziale, con aggiornamenti periodici man mano che la fabbrica si
+evolve.</p>
+</div>
+<div class="paragraph">
+<p>Per ulteriori informazioni, vedere <a href="configuration/setupmachine.html">Add/Remove
+machine</a>, <a href="configuration/addmaterial/index.html">Material</a>,
+<a href="factory/sheets.html">Sheets</a>, <a href="configuration/setuptooling.html">Setup
+tooling</a> e <a href="configuration/configureusers.html">Configure users</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/setup.png" alt="Setup" width="817">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_aggiungere_parti_alla_libreria">2. Aggiungere parti alla libreria</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Importare parti CAD 2D o 3D nella Libreria Parti utilizzando formati supportati
+come file DXF, DWG o STEP. Durante l&#8217;importazione, TruSmartCAM analizza
+automaticamente la geometria della parte, convalida la producibilità, assegna la
+tecnologia di lamiera richiesta (laser, punzonatrice o combinazione) e genera
+miniature di anteprima. Le parti importate vengono visualizzate come tessere nella
+vista della libreria, dove le icone con codice colore indicano lo stato della
+parte, il tipo di tecnologia, i requisiti dei materiali e eventuali problemi
+rilevati. Questo sistema visivo consente una rapida valutazione della prontezza
+della parte a colpo d&#8217;occhio.</p>
+</div>
+<div class="paragraph">
+<p>Per ulteriori informazioni, vedere <a href="library/index.html">Library</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/importparts.png" alt="Import" width="476">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_verificare_parti_e_attrezzaggio">3. Verificare parti e attrezzaggio</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Esaminare ogni parte importata per potenziali problemi di produzione. Verificare
+che la geometria della parte sia valida e producibile, che le assegnazioni degli
+attrezzi siano corrette e disponibili, che le selezioni di materiale e spessore
+corrispondano all&#8217;inventario e che le sequenze di piegatura siano definite
+correttamente per le parti formate. Se vengono rilevati problemi, aprire la parte
+in TecZone per modificare la geometria, riassegnare o ottimizzare l&#8217;attrezzaggio,
+regolare i parametri di elaborazione o correggere le specifiche del materiale. La
+risoluzione dei problemi in questa fase previene ritardi di produzione e riduce lo
+scarto durante la produzione.</p>
+</div>
+<div class="paragraph">
+<p>Per ulteriori informazioni, vedere <a href="library/partstate/index.html">Part state</a>
+e <a href="library/toolingstatus/index.html">Tooling status</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingcheck.png" alt="Tooling" width="1078">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_organizzare_le_parti_in_commesse">4. Organizzare le parti in commesse</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Raggruppare le parti convalidate in commesse in base ai requisiti di produzione.
+Una commessa rappresenta un&#8217;unità di produzione logica che può includere parti di
+un singolo ordine cliente, parti che condividono materiali e spessore comuni, parti
+con scadenze di consegna simili o una combinazione basata sulla strategia di
+produzione. Le commesse forniscono un contenitore per la pianificazione, consentono
+l&#8217;elaborazione in batch di parti correlate, permettono un utilizzo efficiente del
+materiale tramite nesting e semplificano il monitoraggio e il reporting. Le
+commesse possono essere create manualmente selezionando le parti o automaticamente
+in base a regole e filtri predefiniti.</p>
+</div>
+<div class="paragraph">
+<p>Per ulteriori informazioni, vedere <a href="jobs/index.html">Jobs</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/jobs.png" alt="Jobs" width="578">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_5_pianificare_le_commesse_per_le_macchine_di_produzione">5. Pianificare le commesse per le macchine di produzione</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Una volta creata una commessa, assegnarla a una macchina di produzione appropriata.
+Considerare le capacità della macchina incluse le tecnologie supportate (laser,
+punzonatrice, torretta), la capacità di materiale e spessore, l&#8217;attrezzaggio
+disponibile e il carico di lavoro corrente. Se esistono più macchine adatte,
+selezionare in base alla priorità di produzione, alla disponibilità della macchina,
+ai requisiti di setup o all&#8217;ottimizzazione dei costi. L&#8217;assegnazione può essere
+manuale per flessibilità o automatica in base a regole preconfigurate e algoritmi
+di pianificazione delle macchine.</p>
+</div>
+<div class="paragraph">
+<p>Per ulteriori informazioni, vedere <a href="jobs/jobautoplan.html">Plan job</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/machineselect.png" alt="MachineSelect" width="695">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_6_rilasciare_nc_per_le_commesse">6. Rilasciare NC per le commesse</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In questa fase vengono generati i layout di taglio. È ancora possibile modificare i
+layout e aggiungere tecnologie di taglio al layout utilizzando TecZone. Quindi,
+esportare l&#8217;output NC e trasferirlo al controller della macchina o a una posizione
+di rete designata. La commessa viene quindi bloccata per impedire ulteriori
+modifiche e il suo stato viene aggiornato a "Rilasciato" per il monitoraggio della
+produzione.</p>
+</div>
+<div class="paragraph">
+<p>Per ulteriori informazioni, vedere <a href="jobs/layoutcommands/layoutpanel.html#send-to-machine">Send/Recall NC</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/production.png" alt="Production" width="444">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_7_completare_la_produzione_e_finalizzare_le_commesse">7. Completare la produzione e finalizzare le commesse</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Eseguire la commessa rilasciata sulla macchina assegnata. Durante la produzione,
+l&#8217;operatore della macchina segue il programma NC, verifica la qualità della parte
+durante il taglio, gestisce il caricamento e lo scaricamento del materiale e
+affronta eventuali allarmi o problemi della macchina. Al termine della produzione,
+contrassegnare singole parti o l&#8217;intera commessa come completata in TruSmartCAM.
+Questo passaggio finale aggiorna i registri di inventario, registra il tempo di
+produzione effettivo e l&#8217;utilizzo del materiale, archivia i dati della commessa per
+il reporting e l&#8217;analisi e completa il ciclo del flusso di lavoro.</p>
+</div>
+<div class="paragraph">
+<p>Per ulteriori informazioni, vedere <a href="jobs/layoutcommands/layoutpanel.html#mark-complete">Mark
+complete</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/complete.png" alt="Complete" width="435">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_1_configurare_il_sistema">1. Configurare il sistema</a>
+  </li>
+  <li level="1">
+   <a href="#_2_aggiungere_parti_alla_libreria">2. Aggiungere parti alla libreria</a>
+  </li>
+  <li level="1">
+   <a href="#_3_verificare_parti_e_attrezzaggio">3. Verificare parti e attrezzaggio</a>
+  </li>
+  <li level="1">
+   <a href="#_4_organizzare_le_parti_in_commesse">4. Organizzare le parti in commesse</a>
+  </li>
+  <li level="1">
+   <a href="#_5_pianificare_le_commesse_per_le_macchine_di_produzione">5. Pianificare le commesse per le macchine di produzione</a>
+  </li>
+  <li level="1">
+   <a href="#_6_rilasciare_nc_per_le_commesse">6. Rilasciare NC per le commesse</a>
+  </li>
+  <li level="1">
+   <a href="#_7_completare_la_produzione_e_finalizzare_le_commesse">7. Completare la produzione e finalizzare le commesse</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="userinterface.html">L'interfaccia utente</a></span>
+ <span class="next"><a href="library/index.html">Libreria</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="res/index.js"></script>
+    <script src="res/files.js"></script>
+    <script src="res/site.js"></script>
+
+    
+</body>
+</html>

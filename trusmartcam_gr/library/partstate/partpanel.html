@@ -1,0 +1,698 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Πίνακας part</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Καλώς ήρθατε στο TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Εγκατάσταση</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Απαιτήσεις υλικού</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Υποστηριζόμενες μορφές αρχείων</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Προαπαιτούμενα</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Εγκατάσταση Server</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Εγκατάσταση Client</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Αλλαγή άδειας χρήσης</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Ρύθμιση Παραμέτρων</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Προσθήκη/Αφαίρεση μηχανής</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Ρύθμιση εργαλείων</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Διαμόρφωση χρηστών</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Γλώσσα</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Υλικό</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Προσθήκη νέου υλικού και φύλλου</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Εξαγωγή/Εισαγωγή υλικού</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Αντικατάσταση υλικού</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Αντιστοίχιση υλικού</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Αντιστοίχιση σελίδων CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Αντιστοίχιση πεδίων από CAD (κλειδιά αναζήτησης)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Η διεπαφή χρήστη</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Ροή εργασίας</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Βιβλιοθήκη</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Εισαγωγή parts</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Εισαγωγή παραγγελιών</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Εισαγωγή jobs</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Προβολή βιβλιοθήκης</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Κατάσταση part</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partvalidation.html">Επικύρωση part</a></li>
+      <li><button class="tree blank"></button><a class="active" href="partpanel.html">Πίνακας part</a></li>
+      <li><button class="tree blank"></button><a href="partfilters.html">Φίλτρα part</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Κατάσταση tooling</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Επικύρωση tooling</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Επικύρωση bend tooling</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Επικύρωση cut tooling</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Επικύρωση fold tooling</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Πίνακας tooling</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Αποθήκευση φίλτρων</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Παραγγελίες</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Προβολή παραγγελιών</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Εργασίες</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Δημιουργία εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Προβολή εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Πίνακας εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Αυτόματος σχεδιασμός</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Διαδραστική τοποθέτηση</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Επανασυσκευασία</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Διαχείριση τοποθέτησης</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Προβολή διάταξης</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Πίνακας διάταξης</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Αποστολέας αναφοράς</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Διαχείριση υπολειμμάτων</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Αυτόματη διαχείριση υπολειμμάτων</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Χειροκίνητη διαχείριση υπολειμμάτων</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Τοποθέτηση διπλής γραμμής</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Μη ενημερωμένο</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Φίλτρα εργασίας</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Επεκτάσεις CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Εγκατάσταση</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Αποθήκευση εξαρτημάτων</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Αποθήκευση συναρμολόγησης</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Έλεγχος σκοπιμότητας</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Ρυθμίσεις εργοστασίου</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Διάφορες βελτιώσεις</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Βιβλιοθήκη</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Κατάσταση part</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="partpanel.html">Πίνακας part</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Πίνακας part</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Αυτή η ενότητα επεξηγεί ενέργειες σχετικές με part όπως
+<strong>Νέα εισαγωγή&#8230;&#8203;</strong>, <strong>Νέος εξοπλισμός&#8230;&#8203;</strong>,
+<strong>Μετονομασία&#8230;&#8203;</strong>, <strong>Εξαγωγή αποτελεσμάτων</strong>, κ.λπ.,
+που χρησιμοποιούνται για τη διαχείριση στιγμιοτύπων part.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/partpanel.png" alt="Part panel" width="150">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Άνοιγμα σε κατάσταση μόνο για ανάγνωση για προβολή</strong><br>
+Ανοίγει το επιλεγμένο part σε λειτουργία μόνο για ανάγνωση.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Ενεργοποιεί την επεξεργασία του επιλεγμένου part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Διαγραφή</strong><br>
+Διαγράφει το επιλεγμένο part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/newui.png" alt="Read-only" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Νέο&#8230;&#8203;</strong><br>
+Το επιλεγμένο part μπορεί να μετατραπεί σε νέα παραγγελία, job ή assembly.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Εξαγωγή αποτελεσμάτων</strong><br>
+Εξάγει την έξοδο part στον προορισμό που έχει διαμορφωθεί.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/importui.png" alt="Import" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Νέα εισαγωγή&#8230;&#8203;</strong><br>
+Επιτρέπει την εισαγωγή του επιλεγμένου part ξανά.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/toolui.png" alt="Retool" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Νέος εξοπλισμός&#8230;&#8203;</strong><br>
+Επιτρέπει την επανεπεξεργασία του επιλεγμένου part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/renameui.png" alt="Rename" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Μετονομασία&#8230;&#8203;</strong><br>
+Για αλλαγή του ονόματος του επιλεγμένου part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/materialui.png" alt="Material" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Αντιστοίχιση υλικού&#8230;&#8203;</strong><br>
+Καθορίζει το υλικό που σχετίζεται με το επιλεγμένο part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/customerui.png" alt="Customer" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Αντιστοίχιση πελάτη&#8230;&#8203;</strong><br>
+Καθορίζει τον πελάτη που σχετίζεται με το επιλεγμένο part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/rollingui.png" alt="Rolling" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Κατεύθυνση κύλισης</strong><br>
+Ορίζει τον προσανατολισμό (οριζόντιο ή κάθετο) κατά μήκος του οποίου κυλάται το υλικό.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Προηγ.</strong> / <strong>Επόμενο</strong> / <strong>Εξοπλισμοί</strong><br>
+Πλοηγεί στο προηγούμενο ή στο επόμενο part ή tooling.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sortui.png" alt="Filters" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ταξινόμηση και φιλτράρισμα</strong><br>
+Χρησιμοποιήστε αυτά τα φίλτρα για να δείτε άλλα parts που μοιράζονται το ίδιο χαρακτηριστικό με το
+επιλεγμένο part: Same Material, Same Customer, Same Bend count, ή
+Same State.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_νέα_εισαγωγή">Νέα εισαγωγή&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Κάντε δεξί κλικ σε οποιοδήποτε part και κάντε κλικ στο <strong>Νέα εισαγωγή&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/reimport.png" alt="Re-import" width="503">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Όλα τα επιλεγμένα στιγμιότυπα tooling part σε όλες τις μηχανές διαγράφονται συμπεριλαμβανομένων
+των αυτόματων και χειροκίνητων στιγμιοτύπων tooling.</p>
+</li>
+<li>
+<p>Τα υπάρχοντα αρχεία εξόδου (CAD, Bend και Cut) αφαιρούνται.</p>
+</li>
+<li>
+<p>Τα parts εισάγονται εκ νέου και εφαρμόζεται νέα επικύρωση CAD και tooling για
+όλες τις μηχανές.</p>
+</li>
+<li>
+<p>Νέα αρχεία εξόδου δημιουργούνται με βάση το ενημερωμένο αποτέλεσμα tooling.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_νέος_εξοπλισμός">Νέος εξοπλισμός&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Κάντε δεξί κλικ σε οποιοδήποτε part και κάντε κλικ στο <strong>Νέος εξοπλισμός&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/retool.png" alt="Re-tool" width="504">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Όλες οι μηχανές είναι επιλεγμένες από προεπιλογή και ομαδοποιούνται ως Laser, Punch, Panel,
+και Press brake.</p>
+</li>
+<li>
+<p>Κάντε κλικ στο <strong>OK</strong> για να προχωρήσετε. Αυτό αφαιρεί τόσο τα αυτόματα όσο και τα χειροκίνητα
+στιγμιότυπα tooling για τις επιλεγμένες μηχανές και διαγράφει τα σχετικά αρχεία εξόδου.</p>
+</li>
+<li>
+<p>Όταν το πλαίσιο ελέγχου <strong>Διατήρηση υφιστάμενων εξόδων</strong> είναι
+επιλεγμένο, μόνο τα parts των οποίων οι έξοδοι αφαιρέθηκαν νωρίτερα θα ξαναεφοδιαστούν με εργαλεία,
+οι άλλες έξοδοι παραμένουν ανεπηρέαστες. Εάν δεν είναι επιλεγμένο, όλα τα αρχεία εξόδου για τις επιλεγμένες
+μηχανές αφαιρούνται και αναδημιουργούνται κατά την επανεξοπλισμό.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Εάν οι ρυθμίσεις CAM άλλαξαν για οποιαδήποτε μηχανή, επιλέξτε αυτή τη μηχανή και επανεφοδιάστε με εργαλεία τα
+parts.</p>
+</li>
+<li>
+<p>Εάν ένα εργαλείο (LTT, punch ή bend) έχει αλλάξει ή λείπει, ενημερώστε τη μηχανή και
+επανεφοδιάστε με εργαλεία μόνο τα επηρεαζόμενα parts.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_μετονομασία">Μετονομασία&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Αυτή η ενότητα επεξηγεί πώς να μετονομάσετε ένα ή πολλαπλά parts στο TruSmartCAM.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Κάντε δεξί κλικ στο part και κάντε κλικ στο <strong>Μετονομασία&#8230;&#8203;</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/rename1.png" alt="Rename1" width="503">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Εμφανίζεται ένας διάλογος επιβεβαίωσης μετονομασίας που εμφανίζει το τρέχον όνομα part.</p>
+</li>
+<li>
+<p>Εισαγάγετε το νέο όνομα και κάντε κλικ στο εικονίδιο σημάδι επιλογής <strong>✓</strong> για επιβεβαίωση ή κάντε κλικ στο
+εικονίδιο σταυρό <strong>✗</strong> για ακύρωση της λειτουργίας μετονομασίας.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/rename2.png" alt="Rename2" width="451">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Για να μετονομάσετε πολλαπλά parts, επιλέξτε όλα τα απαιτούμενα parts, στη συνέχεια κάντε δεξί κλικ
+σε οποιοδήποτε από αυτά και κάντε κλικ στο <strong>Μετονομασία&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Εμφανίζεται ένας διάλογος επιβεβαίωσης με τον συνολικό αριθμό των επιλεγμένων parts.</p>
+</li>
+<li>
+<p>Για κάθε part, εισαγάγετε το νέο όνομα και κάντε κλικ στο εικονίδιο σημάδι επιλογής <strong>✓</strong> για
+επιβεβαίωση ένα προς ένα.</p>
+</li>
+<li>
+<p>Εάν κάποιο part επιλέχθηκε κατά λάθος, κάντε κλικ στο εικονίδιο σταυρού <strong>✗</strong> για ακύρωση.
+Εναλλακτικά, μπορείτε να κάνετε δεξί κλικ στο part και να κάνετε κλικ στο
+<strong>Ακύρωση μετονομασίας</strong> για να παραλείψετε τη μετονομασία.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_εξαγωγή_αποτελεσμάτων">Εξαγωγή αποτελεσμάτων</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Αυτή η επιλογή εξάγει την έξοδο part στον προορισμό που έχει διαμορφωθεί στις
+<strong>Εργοστασιακές ρυθμίσεις</strong>. (Δείτε
+<a href="../../factory/settings/bend.html">Bend Settings</a> και
+<a href="../../factory/settings/cut.html">Cut Settings</a>)</p>
+</div>
+<div class="paragraph">
+<p>Η τοποθεσία εξόδου ορίζεται ξεχωριστά για Bend, Fold και Cut στις
+αντίστοιχες ρυθμίσεις εξόδου τους. Όλα τα toolings που σχετίζονται με λειτουργίες bend,
+fold και cut εξάγονται για ολόκληρο το part.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput.png" alt="Export Output" width="451">
+</div>
+</div>
+<div class="paragraph">
+<p>Όπως φαίνεται παρακάτω, τα εξαγόμενα αρχεία αποθηκεύονται στον καθορισμένο φάκελο
+(για παράδειγμα, <code>C:\PraxData\Out\Reports</code>).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportout.png" alt="Export Output Location" width="451">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Τα εξαγόμενα αρχεία εξαρτώνται από τον τύπο λειτουργίας. Για λειτουργίες Bend και
+Fold, δημιουργούνται αρχεία NC και αναφορές. Για λειτουργίες Cut και Punch
+, εξάγονται μόνο τα αρχεία part.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_εκχώρηση_υλικού_part">Εκχώρηση υλικού part</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Τα parts με την κατάσταση <strong>Το υλικό δεν έχει αντιστοιχιστεί</strong> πρέπει να
+ενημερωθούν πριν από περαιτέρω επεξεργασία. Τα παρακάτω βήματα επεξηγούν πώς να εκχωρήσετε
+υλικό.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Κάντε δεξί κλικ στο part που εμφανίζει την κατάσταση
+<strong>Το υλικό δεν έχει αντιστοιχιστεί</strong> και επιλέξτε
+<strong>Αντιστοίχιση υλικού</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/asignmaterial.png" alt="Assign Material" width="442">
+</div>
+</div>
+</li>
+<li>
+<p>Ανοίγει το παράθυρο <strong>Αντιστοίχιση υλικού</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/dialogue.png" alt="Dialogue" width="600">
+</div>
+</div>
+</li>
+<li>
+<p>Ο διάλογος έχει τέσσερις ενότητες:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Προτάσεις</strong> - Προτείνει αυτόματα raw
+materials με βάση το πάχος του εισαγόμενου part.</p>
+</li>
+<li>
+<p><strong>Όλα τα υλικά</strong> - Παραθέτει όλους τους τύπους υλικού που ορίζονται στο
+TruSmartCAM.</p>
+</li>
+<li>
+<p><strong>Όλες οι πρώτες ύλες</strong> - Εμφανίζει όλα τα raw materials
+διαθέσιμα στο σύστημα.</p>
+</li>
+<li>
+<p><strong>Χρησιμοποιούμενες πρώτες ύλες</strong> - Εμφανίζει τα πιο
+πρόσφατα χρησιμοποιημένα raw materials για γρήγορη πρόσβαση.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Μπορείτε να χρησιμοποιήσετε το πεδίο <strong>Αναζήτηση&#8230;&#8203; (Ctrl+F)</strong> στην κορυφή για να βρείτε γρήγορα
+υλικά. Για παράδειγμα, πληκτρολογήστε "steel" για να εμφανίσετε όλα τα ταιριαστά υλικά σε
+τις τρεις ενότητες.</p>
+</li>
+<li>
+<p>Από τη φιλτραρισμένη λίστα, επιλέξτε το απαιτούμενο υλικό (π.χ., Steel-25) από
+τη λίστα Raw-Material.</p>
+</li>
+<li>
+<p>Το επιλεγμένο υλικό θα εκχωρηθεί στο part.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_κατεύθυνση_κύλισης">Κατεύθυνση κύλισης</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Το <strong>Κατεύθυνση κύλισης</strong> αναφέρεται στον προσανατολισμό του
+grain σε ένα part, το οποίο μπορεί να επηρεάσει τον τρόπο με τον οποίο το part κόβεται και επεξεργάζεται.
+Αυτή η επιλογή σας επιτρέπει να καθορίσετε την
+<strong>Κατεύθυνση κύλισης</strong> για ένα part στη Βιβλιοθήκη Part.
+Με βάση την επιλεγμένη
+κατεύθυνση, το part θα τοποθετηθεί στον σωστό προσανατολισμό για κοπή στις
+διαθέσιμες μηχανές.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Κάντε δεξί κλικ σε οποιοδήποτε πλακίδιο part στη Βιβλιοθήκη Part ή στο παράθυρο Job.</p>
+</li>
+<li>
+<p>Επιλέξτε την προτιμώμενη κατεύθυνση κύλισης:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Καμία</strong></p>
+</li>
+<li>
+<p><strong>Οριζόντια</strong></p>
+</li>
+<li>
+<p><strong>Κατακόρυφα</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/rollingdirection1.png" alt="Rolling direction" width="514">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Το part επανεφοδιάζεται αυτόματα με εργαλεία για όλες τις διαθέσιμες μηχανές κοπής με βάση
+την επιλεγμένη κατεύθυνση κύλισης.</p>
+</li>
+<li>
+<p>Το πλακίδιο part θα εμφανίσει την επιλεγμένη κατεύθυνση κύλισης όπως φαίνεται παρακάτω:</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/none.png" alt="None" width="270"></span> <span class="image"><img src="img/horizontal.png" alt="Horizontal" width="270"></span>
+<span class="image"><img src="img/vertical.png" alt="Vertical" width="270"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_νέα_εισαγωγή">Νέα εισαγωγή&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_νέος_εξοπλισμός">Νέος εξοπλισμός&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_μετονομασία">Μετονομασία&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_εξαγωγή_αποτελεσμάτων">Εξαγωγή αποτελεσμάτων</a>
+  </li>
+  <li level="1">
+   <a href="#_εκχώρηση_υλικού_part">Εκχώρηση υλικού part</a>
+  </li>
+  <li level="1">
+   <a href="#_κατεύθυνση_κύλισης">Κατεύθυνση κύλισης</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partvalidation.html">Επικύρωση part</a></span>
+ <span class="next"><a href="partfilters.html">Φίλτρα part</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

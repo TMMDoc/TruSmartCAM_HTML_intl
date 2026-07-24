@@ -1,0 +1,534 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Importera jobb</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Välkommen till TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hårdvarukrav</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Format som stöds</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Förutsättningar</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Serverinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Klientinstallation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Ändra licens</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfiguration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Lägg till/ta bort maskin</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Ställ in verktyg</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Konfigurera användare</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Språk</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Lägg till nytt material och plåt</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Exportera/importera material</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Ersätt material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mappa material</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mappa CAM-sidor</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mappa fält från CAD (uppslagningsnycklar)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Användargränssnittet</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Arbetsflöde</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Bibliotek</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Öppna</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partimport.html">Importera delar</a></li>
+      <li><button class="tree blank"></button><a href="orderimport.html">Importera order</a></li>
+      <li><button class="tree blank"></button><a class="active" href="jobimport.html">Importera jobb</a></li>
+      <li><button class="tree blank"></button><a href="assembliesimport.html">Importera monteringar</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Biblioteksvy</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Delar</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Montering</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Delstatus</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Delvalidering</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Delpanel</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Delfilter</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Verktygsstatus</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Verktygningsvalidering</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Böjverktygningsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Skärverktygningsvalidering</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Vikverktygningsvalidering</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Verktygspanel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Spara filter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Ordrar</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Ordervyer</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Jobb</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Skapa jobb</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Jobbvy</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Jobbpanel</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Autoplan</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Interaktiv häckning</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Ompackning</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Häckhantering</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Layoutvy</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Layoutpanel</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Rapportavsändare</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Resthantering</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Automatisk resthantering</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Manuell resthantering</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Twinline-häckning</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Inaktuell</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Jobbfilter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">CAD-tillägg</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Spara delar</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Spara sammansättning</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Kontrollera genomförbarhet</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Fabriksinställningar</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Diverse förbättringar</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Bibliotek</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Öppna</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobimport.html">Importera jobb</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Importera jobb</h1>
+<div class="sect1">
+<h2 id="_importera_från_csv_eller_xlsx">Importera från csv eller xlsx</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ni kan också importera jobb i vanliga textformat</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klicka på <strong>File &#8594; Open &#8594; Importera jobb</strong>, dialogrutan
+Öppna katalog visas. Välj <code>C:\Program
+Files\Metamation\Praxis\Samples\Jobs\C0\C0.csv</code>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv.png" alt="CSV import" width="426">
+</div>
+</div>
+</li>
+<li>
+<p>Om alla delar finns i csv-platsen eller i uppslagskataloger visas fönstret
+<strong>Nytt jobb</strong> genom att lista alla delar som matchar csv-fälten.</p>
+</li>
+<li>
+<p>Saknade delar ignoreras och visas inte i fönstret <strong>Nytt jobb</strong>.</p>
+</li>
+<li>
+<p>Inledningsvis är delstatus Nascent.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv2.png" alt="CSV import" width="908">
+</div>
+</div>
+</li>
+<li>
+<p>Klicka på <strong>OK</strong>, nu importeras delarna i delbiblioteket. CAD-
+validering, verktygning för böj- och skärverktygningsinstanser görs vilket kan
+övervakas i <strong>Pmonitor</strong>-skärmen.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv3.png" alt="CSV import" width="1438">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_skapa_en_bockdetalj_för_saknade_cad_filer">Skapa en bockdetalj för saknade CAD-filer</h3>
+<div class="paragraph">
+<p>När ni importerar jobb med hjälp av ett kalkylblad (.csv eller .xlsx) kan ni
+ibland ha rader som refererar till CAD-filer som inte är tillgängliga i
+systemet.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>För att hantera detta, gå till <strong>Fabrik</strong>
+ &#8594; <strong>Inställningar</strong> &#8594; <strong>Jobb</strong>,
+ under <strong>Importera kalkylblad</strong> aktivera
+<strong>Skapa en bockdetalj för saknade CAD-filer</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv6.png" alt="Spreadsheet import" width="801">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>När detta alternativ är valt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Om en CAD-fil saknas för någon rad under jobbimporten kommer systemet
+automatiskt att skapa en tom del i stället för den saknade CAD-filen.</p>
+</li>
+<li>
+<p>I fönstret <strong>Nytt jobb</strong> är dessa saknade delar visuellt
+markerade i gult för att indikera att den associerade CAD-filen saknas.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/csv4.png" alt="Edit jobs" width="578"></span></p>
+</div>
+</li>
+<li>
+<p>Den saknade delen kommer fortfarande att ha sina mappade fält (som delnamn,
+material, tjocklek, kvantitet, etc.) från CSV. Dess delstatus kommer dock att
+visas som Nascent, vilket betyder att det bara är en tom platshållare utan
+faktisk geometri än.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv5.png" alt="Nascent parts" width="1110">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Detta säkerställer att jobbimporten fortfarande kan fortsätta utan fel på grund
+av saknade CAD-filer — ni kan senare uppdatera eller ersätta den tomma delen
+med rätt CAD-fil när den blir tillgänglig.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_visa_inte_dialogen_nya_jobb_om_kalkylbladet_inte_har_några_fel">Visa inte dialogen Nya jobb om kalkylbladet inte har några fel</h3>
+<div class="paragraph">
+<p><strong>Fabrik</strong> &#8594; <strong>Inställningar</strong> &#8594;
+<strong>Jobb</strong> → <strong>Importera kalkylblad</strong>→
+<strong>Visa inte dialogen Nya jobb om kalkylbladet inte har några fel</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>När denna kryssruta är markerad skapar systemet automatiskt det nya jobbet utan
+att visa dialogrutan Nytt jobb om kalkylbladet inte har några fel (inga saknade
+delar, saknade datum eller ogiltiga data).</p>
+</li>
+<li>
+<p>När denna kryssruta är avmarkerad visas alltid dialogrutan Nytt jobb för
+användargranskning och bekräftelse, även om kalkylbladet inte har några fel.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_prefer_raw_material_column_over_material_thickness">Prefer raw-material column over material + thickness</h3>
+<div class="paragraph">
+<p><strong>Fabrik</strong> &#8594; <strong>Inställningar</strong> &#8594;
+<strong>Jobb</strong>→<strong>Prefer Raw-Material column over Material + Thickness</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>När denna kryssruta är markerad förväntar sig systemet att kalkylbladet
+använder kolumnen Råmaterial (till exempel Steel-20). Detta betyder att
+materialtyp och tjocklek ska kombineras i ett enda värde i en kolumn.</p>
+</li>
+<li>
+<p>När denna kryssruta är avmarkerad förväntar sig systemet att kalkylbladet har
+separata kolumner för Material och Tjocklek (till exempel Steel och 2.00).
+Systemet kombinerar dem internt under import.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csvmaterial.png" alt="CSV Raw Material and Material+Thickness">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bevakningskatalog_med_csvxlsx">Bevakningskatalog med CSV/XLSX</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>I <strong>Fabrik</strong> &#8594; <strong>Inställningar</strong>&#8594;
+<strong>Kontrollera</strong> markera <strong>Aktivera 'Livemapp'</strong>
+och <strong>Kontrollera även undermappar</strong>.</p>
+</li>
+<li>
+<p>Ange sökvägen till bevakningskatalogen (UNC eller mappad enhet).</p>
+</li>
+<li>
+<p>I <strong>Importera kalkylblad</strong>, markera
+<strong>Importera kalkylblad från 'Livemapp'</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/watchfolder.png" alt="Watch folder" width="702">
+</div>
+</div>
+</li>
+<li>
+<p>Välj <strong>Importera jobb</strong> från alternativ för kalkylbladsimport.</p>
+</li>
+<li>
+<p>Kopiera <code>C:\Program Files\Metamation\Praxis\Samples\Jobs\C0\C0.csv</code> och klistra
+in det i bevakningskatalogen.</p>
+</li>
+<li>
+<p>Systemet kontrollerar CSV och försöker skapa jobbet automatiskt.</p>
+</li>
+<li>
+<p>Om CAD-filen saknas skapas inget jobb eftersom nödvändig CAD-data inte hittas.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_cad_uppslagskatalog_rekursiv_cad_sökning_inte_konfigurerad">CAD-uppslagskatalog &amp; rekursiv CAD-sökning - inte konfigurerad</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>I <strong>Fabrik</strong> &#8594; <strong>Inställningar</strong> &#8594;
+<strong>Jobb</strong> &#8594; <strong>Importera kalkylblad</strong>,
+om ingen <strong>CAD lookup directories</strong> är inställd
+och <strong>Använd rekursiv CAD-sökning</strong> inte används, söker
+systemet inte efter CAD-filer automatiskt.</p>
+</li>
+<li>
+<p>Om kryssrutan <strong>Skapa en bockdetalj för saknade CAD-filer</strong>
+är markerad kommer jobbet fortfarande att skapas även när CAD-filer saknas.</p>
+</li>
+<li>
+<p>I detta fall kommer alla delar i jobbet att skapas som nascent (tomma) delar —
+vilket betyder att de inte har någon geometri eftersom CAD-filerna inte kunde
+hittas.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/notconfigured.png" alt="Create blank parts" width="867">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cad_uppslagskatalog_rekursiv_cad_sökning_konfigurerad">CAD-uppslagskatalog &amp; rekursiv CAD-sökning - konfigurerad</h3>
+<div class="paragraph">
+<p>När <strong>Kataloger för CAD-sökning</strong> är inställd på
+(C:\Program Files\Metamation\Praxis\Samples) och
+<strong>Använd rekursiv CAD-sökning</strong> är aktiverad under
+<strong>Fabrik</strong> &#8594; <strong>Inställningar</strong> &#8594; <strong>Jobb</strong>
+&#8594; <strong>Importera kalkylblad</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Systemet söker automatiskt i den angivna katalogen och alla dess underkataloger
+efter de nödvändiga CAD-filerna som nämns i kalkylbladet.</p>
+</li>
+<li>
+<p><strong>Skapa en bockdetalj för saknade CAD-filer</strong> är
+också aktiverat, så om någon CAD-fil fortfarande inte hittas kommer systemet
+att skapa en tom del som platshållare.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/configured.png" alt="Create blank parts" width="861">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_importera_från_csv_eller_xlsx">Importera från csv eller xlsx</a>
+  </li>
+  <li level="2">
+   <a href="#_skapa_en_bockdetalj_för_saknade_cad_filer">Skapa en bockdetalj för saknade CAD-filer</a>
+  </li>
+  <li level="2">
+   <a href="#_visa_inte_dialogen_nya_jobb_om_kalkylbladet_inte_har_några_fel">Visa inte dialogen Nya jobb om kalkylbladet inte har några fel</a>
+  </li>
+  <li level="2">
+   <a href="#_prefer_raw_material_column_over_material_thickness">Prefer raw-material column over material + thickness</a>
+  </li>
+  <li level="1">
+   <a href="#_bevakningskatalog_med_csvxlsx">Bevakningskatalog med CSV/XLSX</a>
+  </li>
+  <li level="2">
+   <a href="#_cad_uppslagskatalog_rekursiv_cad_sökning_inte_konfigurerad">CAD-uppslagskatalog &amp; rekursiv CAD-sökning - inte konfigurerad</a>
+  </li>
+  <li level="2">
+   <a href="#_cad_uppslagskatalog_rekursiv_cad_sökning_konfigurerad">CAD-uppslagskatalog &amp; rekursiv CAD-sökning - konfigurerad</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="orderimport.html">Importera order</a></span>
+ <span class="next"><a href="assembliesimport.html">Importera monteringar</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

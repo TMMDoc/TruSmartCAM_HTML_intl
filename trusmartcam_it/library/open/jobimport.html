@@ -1,0 +1,532 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Importa lavori</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Benvenuti in TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Change license</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configurazione</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Aggiungere/Rimuovere macchina</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Configurare utensili</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Configurare utenti</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Lingua</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Materiale</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Aggiungere nuovo materiale e foglio</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Esportare/Importare materiale</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Sostituire materiale</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Mappare materiale</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Mappare pagine CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Mappare campi da CAD (chiavi di ricerca)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">L'interfaccia utente</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Flusso di lavoro</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Libreria</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Apri</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partimport.html">Importa pezzi</a></li>
+      <li><button class="tree blank"></button><a href="orderimport.html">Importa ordini</a></li>
+      <li><button class="tree blank"></button><a class="active" href="jobimport.html">Importa lavori</a></li>
+      <li><button class="tree blank"></button><a href="assembliesimport.html">Importa assiemi</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Vista libreria</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Pezzi</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assieme</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../partstate/index.html">Stato parti</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../partstate/partvalidation.html">Convalida parti</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partpanel.html">Pannello pezzi</a></li>
+      <li><button class="tree blank"></button><a href="../partstate/partfilters.html">Filtri pezzi</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Stato attrezzaggio</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Convalida attrezzaggio</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Convalida attrezzaggio piegatura</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Convalida attrezzaggio taglio</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Convalida attrezzaggio piegatubi</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">Pannello attrezzaggio</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Salvataggio filtri</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Ordini</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Vista ordini</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Commesse</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Crea commessa</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Vista lavori</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Pannello commessa</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Pianificazione automatica</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Nesting interattivo</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Riconfezionamento</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Gestione nidi</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Vista layout</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Pannello layout</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Mittente report</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Gestione ritagli</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Gestione automatica ritagli</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Gestione manuale ritagli</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Nesting a doppia linea</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Non aggiornato</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtri lavoro</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Estensioni CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">Componente aggiuntivo SolidWorks</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installazione</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Salvare parti</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Salvare assieme</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Verifica fattibilità</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Impostazioni di fabbrica</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Miglioramenti vari</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Colophon</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Libreria</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Apri</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobimport.html">Importa lavori</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Importa lavori</h1>
+<div class="sect1">
+<h2 id="_importa_da_csv_o_xlsx">Importa da csv o xlsx</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>È anche possibile importare lavori in formati di testo comuni</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Fare clic su <strong>File &#8594; Open &#8594; Importa job</strong>, viene visualizzata la finestra di dialogo Apri cartella. Selezionare <code>C:\Program
+Files\Metamation\Praxis\Samples\Jobs\C0\C0.csv</code>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv.png" alt="CSV import" width="426">
+</div>
+</div>
+</li>
+<li>
+<p>Se tutti i pezzi esistono nella posizione csv o nelle directory della cartella di ricerca,
+viene visualizzata la finestra <strong>nuovo job</strong> elencando tutti i pezzi corrispondenti ai campi
+csv.</p>
+</li>
+<li>
+<p>I pezzi mancanti vengono ignorati e non appaiono nella finestra <strong>nuovo job</strong>.</p>
+</li>
+<li>
+<p>Inizialmente lo stato del pezzo è Nascent.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv2.png" alt="CSV import" width="908">
+</div>
+</div>
+</li>
+<li>
+<p>Fare clic su <strong>OK</strong>, ora i pezzi vengono importati nella libreria dei pezzi. Viene eseguita la convalida CAD,
+l&#8217;attrezzaggio per l&#8217;istanza di attrezzaggio piegatura e taglio, che può essere
+monitorato nella schermata <strong>Pmonitor</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv3.png" alt="CSV import" width="1438">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_creare_un_pezzo_vuoto_per_i_file_cad_mancanti">Creare un pezzo vuoto per i file CAD mancanti</h3>
+<div class="paragraph">
+<p>Quando si importano lavori utilizzando un foglio di calcolo (.csv o .xlsx), a volte si possono avere
+righe che fanno riferimento a file CAD che non sono disponibili nel sistema.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Per gestire questo, andare su <strong>fabbrica</strong>
+ &#8594; <strong>Impostazioni</strong> &#8594; <strong>Job</strong>,
+ in <strong>Importare fogli di calcolo</strong> abilitare
+<strong>Creare un pezzo vuoto per i file CAD mancanti</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv6.png" alt="Spreadsheet import" width="801">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Quando questa opzione è selezionata:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Se un file CAD manca per qualsiasi riga durante l&#8217;importazione del lavoro, il sistema
+creerà automaticamente un pezzo vuoto al posto del file CAD mancante.</p>
+</li>
+<li>
+<p>Nella finestra <strong>nuovo job</strong>, questi pezzi mancanti sono visivamente
+evidenziati in giallo per indicare che il file CAD associato è mancante.</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/csv4.png" alt="Edit jobs" width="578"></span></p>
+</div>
+</li>
+<li>
+<p>Il pezzo mancante avrà ancora i suoi campi mappati (come nome del pezzo, materiale,
+spessore, quantità, ecc.) dal CSV. Tuttavia, il suo stato del pezzo sarà mostrato
+come Nascent, il che significa che è solo un segnaposto vuoto senza geometria effettiva
+ancora.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csv5.png" alt="Nascent parts" width="1110">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ciò garantisce che l&#8217;importazione del lavoro possa comunque procedere senza errori dovuti a
+file CAD mancanti — è possibile aggiornare o sostituire successivamente il pezzo vuoto con il
+file CAD corretto quando diventa disponibile.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_non_visualizzare_la_finestra_di_dialogo_nuovo_job_se_il_foglio_di_calcolo_non_presenta_errori">Non visualizzare la finestra di dialogo Nuovo job se il foglio di calcolo non presenta errori</h3>
+<div class="paragraph">
+<p><strong>fabbrica</strong> &#8594; <strong>Impostazioni</strong> &#8594;
+<strong>Job</strong> → <strong>Importare fogli di calcolo</strong>→
+<strong>Non visualizzare la finestra di dialogo Nuovo job se il foglio di calcolo non presenta errori</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Quando questa casella di controllo è selezionata, il sistema crea automaticamente il nuovo lavoro senza
+mostrare la finestra di dialogo Nuovo lavoro se il foglio di calcolo non ha errori (nessun pezzo mancante,
+date mancanti o dati non validi).</p>
+</li>
+<li>
+<p>Quando questa casella di controllo è deselezionata, la finestra di dialogo Nuovo lavoro appare sempre per la revisione dell&#8217;utente
+e la conferma, anche se il foglio di calcolo non ha errori.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_prefer_raw_material_column_over_material_thickness">Prefer raw-material column over material + thickness</h3>
+<div class="paragraph">
+<p><strong>fabbrica</strong> &#8594; <strong>Impostazioni</strong> &#8594;
+<strong>Job</strong>→<strong>Prefer Raw-Material column over Material + Thickness</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Quando questa casella di controllo è selezionata, il sistema si aspetta che il foglio di calcolo utilizzi la
+colonna Raw-Material (ad esempio, Steel-20). Ciò significa che il tipo di materiale e
+lo spessore devono essere combinati in un singolo valore in una colonna.</p>
+</li>
+<li>
+<p>Quando questa casella di controllo è deselezionata, il sistema si aspetta che il foglio di calcolo abbia
+colonne separate per materiale e spessore (ad esempio, Steel e 2.00). Il
+sistema le combina internamente durante l&#8217;importazione.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/csvmaterial.png" alt="CSV Raw Material and Material+Thickness">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cartella_di_monitoraggio_utilizzando_csvxlsx">Cartella di monitoraggio utilizzando CSV/XLSX</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>In <strong>fabbrica</strong> &#8594; <strong>Impostazioni</strong>&#8594;
+<strong>Visualizza</strong> selezionare <strong>Abilita 'Cartella Live'</strong>
+e <strong>Visualizza anch sotto-cartelle</strong>.</p>
+</li>
+<li>
+<p>Impostare il percorso della cartella di monitoraggio (UNC o unità mappata).</p>
+</li>
+<li>
+<p>In <strong>Importare fogli di calcolo</strong>, selezionare
+<strong>Importa foglio di calcolo da 'Cartella Live'</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/watchfolder.png" alt="Watch folder" width="702">
+</div>
+</div>
+</li>
+<li>
+<p>Selezionare <strong>Importa job</strong> dalle opzioni Importazione foglio di calcolo.</p>
+</li>
+<li>
+<p>Copiare <code>C:\Program Files\Metamation\Praxis\Samples\Jobs\C0\C0.csv</code> e incollarlo
+nella cartella di monitoraggio.</p>
+</li>
+<li>
+<p>Il sistema controlla il CSV e tenta di creare automaticamente il lavoro.</p>
+</li>
+<li>
+<p>Se il file CAD manca, non viene creato alcun lavoro perché i dati CAD richiesti non vengono trovati.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_directory_di_ricerca_cad_e_ricerca_cad_ricorsiva_non_configurata">Directory di ricerca CAD e ricerca CAD ricorsiva - non configurata</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>In <strong>fabbrica</strong> &#8594; <strong>Impostazioni</strong> &#8594;
+<strong>Job</strong> &#8594; <strong>Importare fogli di calcolo</strong>,
+se non è impostata alcuna <strong>CAD lookup directories</strong> e
+<strong>Utilizzare la ricerca CAD ricorrente</strong> non viene utilizzata, il sistema
+non cerca automaticamente i file CAD.</p>
+</li>
+<li>
+<p>Se è
+selezionata la casella di controllo <strong>Creare un pezzo vuoto per i file CAD mancanti</strong>, il lavoro verrà comunque creato anche quando i file CAD sono mancanti.</p>
+</li>
+<li>
+<p>In questo caso, tutti i pezzi nel lavoro verranno creati come pezzi nascenti (vuoti) —
+il che significa che non hanno geometria perché i file CAD non sono stati trovati.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/notconfigured.png" alt="Create blank parts" width="867">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_directory_di_ricerca_cad_e_ricerca_cad_ricorsiva_configurata">Directory di ricerca CAD e ricerca CAD ricorsiva - configurata</h3>
+<div class="paragraph">
+<p>Quando <strong>Directory di ricerca CAD</strong> è impostato su
+(C:\Program Files\Metamation\Praxis\Samples) e
+<strong>Utilizzare la ricerca CAD ricorrente</strong> è abilitato in
+<strong>fabbrica</strong> &#8594; <strong>Impostazioni</strong> &#8594; <strong>Job</strong>
+&#8594; <strong>Importare fogli di calcolo</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Il sistema cerca automaticamente la cartella specificata e tutte le sue sottocartelle
+per i file CAD richiesti menzionati nel foglio di calcolo.</p>
+</li>
+<li>
+<p>Anche <strong>Creare un pezzo vuoto per i file CAD mancanti</strong> è
+abilitato, quindi se un file CAD non viene ancora trovato, il sistema creerà un
+pezzo vuoto come segnaposto.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/configured.png" alt="Create blank parts" width="861">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_importa_da_csv_o_xlsx">Importa da csv o xlsx</a>
+  </li>
+  <li level="2">
+   <a href="#_creare_un_pezzo_vuoto_per_i_file_cad_mancanti">Creare un pezzo vuoto per i file CAD mancanti</a>
+  </li>
+  <li level="2">
+   <a href="#_non_visualizzare_la_finestra_di_dialogo_nuovo_job_se_il_foglio_di_calcolo_non_presenta_errori">Non visualizzare la finestra di dialogo Nuovo job se il foglio di calcolo non presenta errori</a>
+  </li>
+  <li level="2">
+   <a href="#_prefer_raw_material_column_over_material_thickness">Prefer raw-material column over material + thickness</a>
+  </li>
+  <li level="1">
+   <a href="#_cartella_di_monitoraggio_utilizzando_csvxlsx">Cartella di monitoraggio utilizzando CSV/XLSX</a>
+  </li>
+  <li level="2">
+   <a href="#_directory_di_ricerca_cad_e_ricerca_cad_ricorsiva_non_configurata">Directory di ricerca CAD e ricerca CAD ricorsiva - non configurata</a>
+  </li>
+  <li level="2">
+   <a href="#_directory_di_ricerca_cad_e_ricerca_cad_ricorsiva_configurata">Directory di ricerca CAD e ricerca CAD ricorsiva - configurata</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="orderimport.html">Importa ordini</a></span>
+ <span class="next"><a href="assembliesimport.html">Importa assiemi</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

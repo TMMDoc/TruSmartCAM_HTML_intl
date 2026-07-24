@@ -1,0 +1,530 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>แผงงาน</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">ยินดีต้อนรับสู่ TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">การติดตั้ง</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">ข้อกำหนดฮาร์ดแวร์</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">รูปแบบไฟล์ที่รองรับ</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">ข้อกำหนดเบื้องต้น</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">การติดตั้ง Server</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">การติดตั้ง Client</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">เปลี่ยนใบอนุญาต</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">การกำหนดค่า</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">เพิ่ม/ลบเครื่องจักร</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">ตั้งค่าเครื่องมือ</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">กำหนดค่าผู้ใช้</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">ภาษา</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">วัสดุ</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">เพิ่มวัสดุและแผ่นวัสดุใหม่</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">ส่งออก/นำเข้าวัสดุ</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">แทนที่วัสดุ</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">จับคู่วัสดุ</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">จับคู่หน้า CAM</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">จับคู่ฟิลด์จาก CAD (คีย์การค้นหา)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">อินเทอร์เฟซผู้ใช้งาน</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">ขั้นตอนการทำงาน</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Library</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">แผงเครื่องมือ</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">คำสั่งซื้อ</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">มุมมองคำสั่งซื้อ</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">งาน</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">สร้างงาน</a></li>
+    <li><button class="tree blank"></button><a href="jobview.html">มุมมองงาน</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobpanel.html">แผงงาน</a></li>
+    <li><button class="tree blank"></button><a href="jobautoplan.html">วางแผนอัตโนมัติ</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">การจัดเรียงแบบโต้ตอบ</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">การบรรจุใหม่</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">การจัดการการจัดเรียง</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">มุมมองเลย์เอาต์</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">แผงเลย์เอาต์</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">ผู้ส่งรายงาน</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">การจัดการวัสดุเหลือใช้</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">การจัดการวัสดุเหลือใช้อัตโนมัติ</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">การจัดการวัสดุเหลือใช้ด้วยตนเอง</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">การจัดเรียงแบบเส้นคู่</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">ล้าสมัย</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">ตัวกรองงาน</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">โรงงาน</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">เส้นทาง</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">แผ่นวัสดุ</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">ผู้ใช้</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">แก้ไข</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">ลูกค้า</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">การตั้งค่า</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">สภาพแวดล้อม</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">นำเข้า</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">การงอ</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">การตัด</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">การแจ้งเตือน</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">เฝ้าดู</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">งาน</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">รายงาน</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">ส่วนขยาย CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">การติดตั้ง</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">บันทึกชิ้นส่วน</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">บันทึกแอสเซมบลี</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">ตรวจสอบความเป็นไปได้</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">การตั้งค่าโรงงาน</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">การปรับปรุงอื่นๆ</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">ข้อมูลทางกฎหมาย</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">งาน</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobpanel.html">แผงงาน</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>แผงงาน</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>ส่วนนี้อธิบายการดำเนินการที่เกี่ยวข้องกับงาน เช่น
+<strong>Export outputs</strong>, <strong>รีเซ็ตงาน&#8230;&#8203;</strong>,
+<strong>ทำเครื่องหมายว่าเสร็จสิ้น&#8230;&#8203;</strong>, <strong>ส่งออกงาน&#8230;&#8203;</strong>,
+และตัวเลือกอื่นๆ ที่ใช้สำหรับการจัดการอินสแตนซ์งาน</p>
+</div>
+<table class="tableblock frame-none grid-none fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/jobpanel.png" alt="JobPanel" width="200">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>เปิดในโหมดอ่านอย่างเดียวสำหรับดู</strong><br>
+เปิดงานที่เลือกในโหมดอ่านอย่างเดียว</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+เปิดใช้งานการแก้ไขงานที่เลือก</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ลบ</strong><br>
+ลบงานที่เลือก</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/openreport.png" alt="Report" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ดูรายงาน</strong><br>
+เปิดรายงานการผลิตสำหรับงานที่เลือก</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ส่งออกเอาต์พุต</strong><br>
+ส่งออกไฟล์เอาต์พุตที่พร้อมสำหรับเครื่องจักร (ไฟล์ NC และรายงาน) ที่สร้างขึ้น
+สำหรับงานที่เลือก</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/planui.png" alt="Plan" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Plan job</strong><br>
+สร้างเลย์เอาต์การจัดเรียงสำหรับชิ้นส่วนในงานที่เลือก</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/resetui.png" alt="Reset" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>รีเซ็ตงาน&#8230;&#8203;</strong><br>
+ลบเลย์เอาต์ที่สร้างขึ้นทั้งหมดสำหรับงานและรีเซ็ตชิ้นส่วนไปยังสถานะที่
+สามารถวางแผนได้</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/markui.png" alt="Mark" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ทำเครื่องหมายว่าเสร็จสิ้น&#8230;&#8203;</strong><br>
+ทำเครื่องหมายงานและการจัดเรียงทั้งหมดว่าเสร็จสมบูรณ์หลังจากการผลิต</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/jobui.png" alt="Job" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ส่งออกงาน&#8230;&#8203;</strong><br>
+ส่งออกงานทั้งหมดเป็นแพ็คเกจที่สามารถนำกลับมาใช้ใหม่หรือนำเข้าไปยัง
+ระบบอื่นได้</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ก่อนหน้า</strong> / <strong>ถัดไป</strong> / <strong>เลย์เอาต์</strong><br>
+นำทางไปยังเลย์เอาต์ก่อนหน้าหรือถัดไปภายในงานที่เลือก</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sort.png" alt="Filters" width="180"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Sort and filter</strong><br>
+ใช้ตัวกรองเหล่านี้เพื่อดูงานอื่นๆ ที่มีวัสดุ ลูกค้า
+วันครบกำหนด หรือลำดับความสำคัญเดียวกัน</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ส่งออกเอาต์พุต">ส่งออกเอาต์พุต</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>เลือกงานที่ต้องการ</p>
+</li>
+<li>
+<p>คลิก <strong>ส่งออกเอาต์พุต</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput.png" alt="Export outputs dialog" width="585">
+</div>
+</div>
+</li>
+<li>
+<p>การดำเนินการนี้จะส่งออกไฟล์เอาต์พุตที่พร้อมสำหรับเครื่องจักรที่สร้างขึ้นสำหรับงานที่เลือก</p>
+</li>
+<li>
+<p>Export Outputs สามารถบันทึกได้ทั้งในตำแหน่งเริ่มต้นที่กำหนดค่าไว้ใน
+<strong>การตั้งค่าโรงงาน</strong> หรือในตำแหน่งที่กำหนดเองโดยใช้
+<strong>เรียกดู&#8230;&#8203;</strong></p>
+</li>
+<li>
+<p>จะส่งออกเฉพาะไฟล์เอาต์พุตของเครื่องจักร (เช่น NC และรายงาน) สำหรับงาน</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/output.png" alt="Exported output files" width="725">
+</div>
+</div>
+</li>
+<li>
+<p>ไฟล์เหล่านี้ใช้โดยตรงสำหรับการผลิตและสามารถส่งไปยังเครื่องจักรได้</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_รีเซ็ตงาน">รีเซ็ตงาน&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>รีเซ็ตงานที่เลือกโดยการลบเลย์เอาต์ที่สร้างขึ้นทั้งหมดและทำให้ชิ้นส่วนพร้อมสำหรับการวางแผนอีกครั้ง</p>
+</div>
+<div class="paragraph">
+<p>วิธีรีเซ็ตงาน:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>คลิกขวาที่งานและเลือก <strong>รีเซ็ตงาน&#8230;&#8203;</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/resetjob1.png" alt="Reset job" width="820">
+</div>
+</div>
+</li>
+<li>
+<p>การดำเนินการนี้จะลบเลย์เอาต์การจัดเรียงที่มีอยู่ทั้งหมดสำหรับงานที่เลือกและรีเซ็ตชิ้นส่วนทั้งหมดไปยังสถานะที่สามารถวางแผนได้</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/resetjob2.png" alt="Reset job" width="820">
+</div>
+</div>
+</li>
+<li>
+<p>หากเลย์เอาต์มีชิ้นส่วนจากงานอื่น ชิ้นส่วนเหล่านั้นจะถูกรีเซ็ตด้วย</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ส่งออกงาน">ส่งออกงาน&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>เลือกงานที่ต้องการ</p>
+</li>
+<li>
+<p>คลิก <strong>ส่งออกงาน&#8230;&#8203;</strong></p>
+</li>
+<li>
+<p>ตัวเลือกนี้จะส่งออกงานทั้งหมดเป็นแพ็คเกจที่สามารถนำกลับมาใช้ใหม่หรือนำเข้าไปยังระบบอื่นได้</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/outputview.png" alt="Output view" width="785">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ข้อมูลที่ส่งออกประกอบด้วยข้อมูลทั้งหมดที่จำเป็นในการสร้างงานใหม่:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>รายละเอียดและปริมาณชิ้นส่วน (ไฟล์ CSV)</p>
+</li>
+<li>
+<p>ข้อมูลเลย์เอาต์และการจัดเรียง (ไฟล์ CSV / FXYLT)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ไฟล์ที่ส่งออกจะถูกบันทึกเป็นโฟลเดอร์งานในตำแหน่งส่งออกที่กำหนดค่าไว้</p>
+</li>
+<li>
+<p>ตัวเลือกนี้ใช้สำหรับการถ่ายโอน การแชร์ หรือการสำรองข้อมูลงานทั้งหมด</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ทำเครื่องหมายว่าเสร็จสิ้น">ทำเครื่องหมายว่าเสร็จสิ้น&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>เมื่องานได้รับการประมวลผลบนเครื่องจักรแล้ว ให้เปิดแผงงานและเลือก
+<strong>ทำเครื่องหมายว่าเสร็จสิ้น&#8230;&#8203;</strong></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/mark.png" alt="Mark complete dialog" width="845">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>เมื่องานถูกทำเครื่องหมายว่าเสร็จสมบูรณ์:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>การจัดเรียงทั้งหมดภายใต้งานจะถูกทำเครื่องหมายว่าเสร็จสมบูรณ์</p>
+</li>
+<li>
+<p>งานจะเป็นสีเทา ถูกย้ายไปท้ายรายการ และแสดงด้วยเครื่องหมายถูกสีเขียว</p>
+</li>
+<li>
+<p>เลย์เอาต์ทั้งหมดภายใต้งานจะถูกลบออกจากรายการเลย์เอาต์ที่ใช้งานอยู่</p>
+</li>
+<li>
+<p>สถานะชิ้นส่วนและงานจะได้รับการอัปเดต และปริมาณที่ประมวลผลจะถูกย้ายไปยังสถานะที่เสร็จสมบูรณ์</p>
+</li>
+<li>
+<p>ไฟล์เอาต์พุตสำหรับเลย์เอาต์ทั้งหมดในงานจะถูกลบออกจากตำแหน่งเอาต์พุตของเครื่องจักรเพื่อหลีกเลี่ยงการใช้ซ้ำ</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_ส่งออกเอาต์พุต">ส่งออกเอาต์พุต</a>
+  </li>
+  <li level="1">
+   <a href="#_รีเซ็ตงาน">รีเซ็ตงาน&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_ส่งออกงาน">ส่งออกงาน&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_ทำเครื่องหมายว่าเสร็จสิ้น">ทำเครื่องหมายว่าเสร็จสิ้น&#8230;&#8203;</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobview.html">มุมมองงาน</a></span>
+ <span class="next"><a href="jobautoplan.html">วางแผนอัตโนมัติ</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

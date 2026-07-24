@@ -1,0 +1,412 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Surveillance</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Bienvenue dans TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Configuration matérielle requise</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Formats de fichiers pris en charge</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Prérequis</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Installation du serveur</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Installation du client</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Changer de licence</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Ajouter/Supprimer une machine</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Configuration de l'outillage</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Configurer les utilisateurs</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Langue</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Matériau</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Ajouter un nouveau matériau et une feuille</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Exporter/Importer le matériau</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Remplacer le matériau</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Associer le matériau</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Associer les pages CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Associer les champs depuis CAD (clés de recherche)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">L'interface utilisateur</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Flux de travail</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Bibliothèque</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Ouvrir</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Importer des pièces</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Importer des commandes</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Importer des tâches</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Importer des assemblages</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Vue de bibliothèque</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Pièces</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Assemblage</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Statut de la pièce</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Validation de pi\u00e8ce</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Panneau de pièces</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Filtres de pièces</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Statut de l'outillage</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Validation d'outillage</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Validation d'outillage de pliage</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Validation d'outillage de découpe</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Validation d'outillage de pliure</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Panneau d'outillage</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Enregistrer les filtres</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Commandes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Vue des commandes</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Travaux</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Créer un travail</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Vue du travail</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Panneau de travail</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Planification automatique</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Imbrication interactive</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Réemballage</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Gestion de l'imbrication</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Vue de mise en page</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Panneau de mise en page</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Expéditeur de rapport</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Gestion des chutes</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Gestion automatique des chutes</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Gestion manuelle des chutes</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Imbrication en ligne double</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Obsolète</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Filtres de travail</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Factory</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../sheets.html">Feuilles</a></li>
+    <li><button class="tree blank"></button><a href="../users.html">Utilisateurs</a></li>
+    <li><button class="tree blank"></button><a href="../edit.html">Modifier</a></li>
+    <li><button class="tree blank"></button><a href="../customers.html">Clients</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Paramètres</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="environment.html">Environnement</a></li>
+      <li><button class="tree blank"></button><a href="import.html">Importation</a></li>
+      <li><button class="tree blank"></button><a href="bend.html">Pliage</a></li>
+      <li><button class="tree blank"></button><a href="cut.html">Découpe</a></li>
+      <li><button class="tree blank"></button><a href="notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a class="active" href="watch.html">Surveillance</a></li>
+      <li><button class="tree blank"></button><a href="job.html">Tâche</a></li>
+      <li><button class="tree blank"></button><a href="reports.html">Rapports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Extensions CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">Extension SolidWorks</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Installation</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Enregistrer les pièces</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Enregistrer l'assemblage</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Vérifier la faisabilité</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Paramètres de l'usine</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Améliorations diverses</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Mentions légales</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Factory</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Paramètres</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="watch.html">Surveillance</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Surveillance</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les paramètres de surveillance permettent à TruSmartCAM de surveiller un dossier désigné et d&#8217;importer automatiquement
+des fichiers dans le système. Cela aide à automatiser l&#8217;importation de pièces, tâches,
+assemblages et commandes sans intervention manuelle.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/watch.png" alt="Watch settings" width="814">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_voir_réglages">Voir réglages</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Activer 'Dossier live'</strong> - Active la surveillance automatique du
+dossier spécifié.</p>
+</div>
+<div class="paragraph">
+<p><strong>Voir ce dossier</strong> - Spécifie le dossier à surveiller
+pour les fichiers entrants.</p>
+</div>
+<div class="paragraph">
+<p><strong>Voir également les sous-dossiers</strong> - Inclut tous les sous-dossiers dans le
+processus de surveillance.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_après_importation_du_fichier">Après importation du fichier</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Après importation</strong> - Après l&#8217;importation du fichier, l&#8217;utilisateur a deux
+options. Le fichier peut être supprimé de l&#8217;emplacement ou déplacé vers un emplacement
+différent.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Delete imported file</strong> - Supprime le fichier source après
+une importation réussie.</p>
+</li>
+<li>
+<p><strong>Move imported file</strong> - Déplace le fichier source vers le
+dossier spécifié dans <strong>Move files to this folder</strong> après une importation réussie.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Déplacer les fichiers dans ce dossier</strong> - Spécifie le dossier de destination
+où les fichiers importés avec succès doivent être déplacés lorsque <strong>After import</strong> est défini sur
+<strong>Move imported file</strong>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Déplacer les feuilles de calcul contenant des erreurs dans ce dossier</strong> - Déplace
+les importations échouées vers le dossier d&#8217;erreur spécifié.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_réglages_dimportation_de_feuille_de_calcul">Réglages d&#8217;importation de feuille de calcul</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Importer la feuille de calcul depuis le 'Dossier live'</strong> -
+Importe automatiquement les fichiers de feuille de calcul détectés dans le dossier de surveillance.</p>
+</div>
+<div class="paragraph">
+<p><strong>Ne pas importer la feuille de calcul contenant des erreurs</strong> - Empêche
+les fichiers contenant des erreurs de validation d&#8217;être importés.</p>
+</div>
+<div class="paragraph">
+<p><strong>Option d&#8217;importation de feuille de calcul</strong> - Sélectionne le type de
+données à importer depuis la liste déroulante. Les formats de feuille de calcul pris en charge peuvent inclure
+CSV, XLSX ou XML. Les options disponibles sont :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Importer Tâches</strong> - Importe les données de tâche depuis la feuille de calcul.</p>
+</li>
+<li>
+<p><strong>Importer Ordres</strong> - Importe les données de commande depuis la
+feuille de calcul.</p>
+</li>
+<li>
+<p><strong>Importer Sous-groupes</strong> - Importe les données d&#8217;assemblage depuis
+la feuille de calcul.</p>
+</li>
+<li>
+<p><strong>Importer Pièces</strong> - Importe les données de pièce depuis la
+feuille de calcul.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_informations_supplémentaires">Informations supplémentaires</h2>
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Utilisez un chemin UNC <code>(\\ServerName\FolderPath)</code> ou un lecteur mappé <code>(M:\FolderPath)</code>
+lors de la configuration du dossier de surveillance. N&#8217;utilisez pas de chemins locaux tels que <code>C:\FolderPath</code>.</p>
+</li>
+<li>
+<p>L&#8217;ordinateur exécutant le service TruSmartCAM Engine doit avoir un accès en lecture et écriture
+au dossier de surveillance configuré. Sans autorisations suffisantes, les fichiers peuvent ne pas être
+détectés, importés, déplacés ou supprimés avec succès.</p>
+</li>
+<li>
+<p>Le mappage de feuille de calcul doit être configuré avant d&#8217;activer les paramètres de surveillance.
+Sinon, TruSmartCAM ne pourra pas traiter les fichiers de feuille de calcul détectés dans
+le dossier de surveillance.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_voir_réglages">Voir réglages</a>
+  </li>
+  <li level="1">
+   <a href="#_après_importation_du_fichier">Après importation du fichier</a>
+  </li>
+  <li level="1">
+   <a href="#_réglages_dimportation_de_feuille_de_calcul">Réglages d&#8217;importation de feuille de calcul</a>
+  </li>
+  <li level="1">
+   <a href="#_informations_supplémentaires">Informations supplémentaires</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="notification.html">Notifications</a></span>
+ <span class="next"><a href="job.html">Tâche</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

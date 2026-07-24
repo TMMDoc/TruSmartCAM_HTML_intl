@@ -1,0 +1,698 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Part panel</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">ยินดีต้อนรับสู่ TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">การติดตั้ง</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">ข้อกำหนดฮาร์ดแวร์</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">รูปแบบไฟล์ที่รองรับ</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">ข้อกำหนดเบื้องต้น</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">การติดตั้ง Server</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">การติดตั้ง Client</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">เปลี่ยนใบอนุญาต</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">การกำหนดค่า</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">เพิ่ม/ลบเครื่องจักร</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">ตั้งค่าเครื่องมือ</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">กำหนดค่าผู้ใช้</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">ภาษา</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">วัสดุ</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">เพิ่มวัสดุและแผ่นวัสดุใหม่</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">ส่งออก/นำเข้าวัสดุ</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">แทนที่วัสดุ</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">จับคู่วัสดุ</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">จับคู่หน้า CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">จับคู่ฟิลด์จาก CAD (คีย์การค้นหา)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">อินเทอร์เฟซผู้ใช้งาน</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">ขั้นตอนการทำงาน</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Library</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Part status</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a class="active" href="partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../toolingstatus/toolingpanel.html">แผงเครื่องมือ</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">คำสั่งซื้อ</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">มุมมองคำสั่งซื้อ</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">งาน</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">สร้างงาน</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">มุมมองงาน</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">แผงงาน</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">วางแผนอัตโนมัติ</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">การจัดเรียงแบบโต้ตอบ</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">การบรรจุใหม่</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">การจัดการการจัดเรียง</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">มุมมองเลย์เอาต์</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">แผงเลย์เอาต์</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">ผู้ส่งรายงาน</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">การจัดการวัสดุเหลือใช้</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">การจัดการวัสดุเหลือใช้อัตโนมัติ</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">การจัดการวัสดุเหลือใช้ด้วยตนเอง</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">การจัดเรียงแบบเส้นคู่</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">ล้าสมัย</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">ตัวกรองงาน</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">โรงงาน</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">เส้นทาง</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">แผ่นวัสดุ</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">ผู้ใช้</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">แก้ไข</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">ลูกค้า</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">การตั้งค่า</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">สภาพแวดล้อม</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">นำเข้า</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">การงอ</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">การตัด</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">การแจ้งเตือน</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">เฝ้าดู</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">งาน</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">รายงาน</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">ส่วนขยาย CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">การติดตั้ง</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">บันทึกชิ้นส่วน</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">บันทึกแอสเซมบลี</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">ตรวจสอบความเป็นไปได้</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">การตั้งค่าโรงงาน</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">การปรับปรุงอื่นๆ</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">ข้อมูลทางกฎหมาย</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Library</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Part status</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="partpanel.html">Part panel</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Part panel</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>ส่วนนี้อธิบายการดำเนินการที่เกี่ยวข้องกับชิ้นงาน เช่น
+<strong>นำเข้าอีกครั้ง&#8230;&#8203;</strong>, <strong>กำหนดเครื่องมือใหม่&#8230;&#8203;</strong>,
+<strong>เปลี่ยนชื่อ&#8230;&#8203;</strong>, <strong>ส่งออกเอาต์พุต</strong> ฯลฯ
+ที่ใช้ในการจัดการอินสแตนซ์ชิ้นงาน</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/partpanel.png" alt="Part panel" width="150">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>เปิดในโหมดอ่านอย่างเดียวสำหรับดู</strong><br>
+เปิดชิ้นงานที่เลือกในโหมดอ่านอย่างเดียว</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+เปิดใช้งานการแก้ไขชิ้นงานที่เลือก</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ลบ</strong><br>
+ลบชิ้นงานที่เลือก</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/newui.png" alt="Read-only" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ใหม่&#8230;&#8203;</strong><br>
+ชิ้นงานที่เลือกสามารถแปลงเป็น order, job หรือ assembly ใหม่ได้</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/exportui.png" alt="Export" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ส่งออกเอาต์พุต</strong><br>
+ส่งออกเอาต์พุตชิ้นงานไปยังปลายทางที่กำหนดค่า</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/importui.png" alt="Import" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>นำเข้าอีกครั้ง&#8230;&#8203;</strong><br>
+อนุญาตให้นำเข้าชิ้นงานที่เลือกอีกครั้ง</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/toolui.png" alt="Retool" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>กำหนดเครื่องมือใหม่&#8230;&#8203;</strong><br>
+อนุญาตให้ประมวลผลชิ้นงานที่เลือกใหม่</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/renameui.png" alt="Rename" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>เปลี่ยนชื่อ&#8230;&#8203;</strong><br>
+เปลี่ยนชื่อชิ้นงานที่เลือก</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/materialui.png" alt="Material" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>กำหนดวัสดุ&#8230;&#8203;</strong><br>
+ระบุวัสดุที่เชื่อมโยงกับชิ้นงานที่เลือก</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/customerui.png" alt="Customer" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>กำหนดลูกค้า&#8230;&#8203;</strong><br>
+ระบุลูกค้าที่เชื่อมโยงกับชิ้นงานที่เลือก</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/rollingui.png" alt="Rolling" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ทิศทางการรีด</strong><br>
+กำหนดทิศทาง (แนวนอนหรือแนวตั้ง) ตามที่วัสดุถูกรีด</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ก่อนหน้า</strong> / <strong>ถัดไป</strong> / <strong>เครื่องมือ</strong><br>
+นำทางไปยังชิ้นงานหรือทูลลิงก่อนหน้าหรือถัดไป</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sortui.png" alt="Filters" width="160"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>จัดเรียงและกรอง</strong><br>
+ใช้ฟิลเตอร์เหล่านี้เพื่อดูชิ้นงานอื่นๆ ที่มีคุณลักษณะเดียวกันกับ
+ชิ้นงานที่เลือก: วัสดุเดียวกัน ลูกค้าเดียวกัน จำนวนการดัดเดียวกัน หรือ
+สถานะเดียวกัน</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_นำเข้าอีกครั้ง">นำเข้าอีกครั้ง&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>คลิกขวาที่ชิ้นงานใดก็ได้และคลิก <strong>นำเข้าอีกครั้ง&#8230;&#8203;</strong></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/reimport.png" alt="Re-import" width="503">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>อินสแตนซ์ทูลลิงของชิ้นงานที่เลือกทั้งหมดในทุกเครื่องจักรจะถูกล้าง รวมถึง
+อินสแตนซ์ที่สร้างทูลลิงอัตโนมัติและด้วยตนเอง</p>
+</li>
+<li>
+<p>ไฟล์เอาต์พุตที่มีอยู่ (CAD, Bend และ Cut) จะถูกลบ</p>
+</li>
+<li>
+<p>ชิ้นงานจะถูกนำเข้าใหม่ และการตรวจสอบ CAD และทูลลิงใหม่จะถูกนำมาใช้สำหรับ
+เครื่องจักรทั้งหมด</p>
+</li>
+<li>
+<p>ไฟล์เอาต์พุตใหม่จะถูกสร้างขึ้นตามผลลัพธ์ทูลลิงที่อัปเดต</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_กำหนดเครื่องมือใหม่">กำหนดเครื่องมือใหม่&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>คลิกขวาที่ชิ้นงานใดก็ได้และคลิก <strong>กำหนดเครื่องมือใหม่&#8230;&#8203;</strong></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/retool.png" alt="Re-tool" width="504">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>เครื่องจักรทั้งหมดจะถูกเลือกโดยค่าเริ่มต้นและจัดกลุ่มเป็น Laser, Punch, Panel
+และ Press brake</p>
+</li>
+<li>
+<p>คลิก <strong>ตกลง</strong> เพื่อดำเนินการต่อ สิ่งนี้จะลบทั้งอินสแตนซ์ที่สร้างทูลลิงอัตโนมัติและด้วยตนเอง
+สำหรับเครื่องจักรที่เลือก และลบไฟล์เอาต์พุตที่เกี่ยวข้อง</p>
+</li>
+<li>
+<p>เมื่อเลือกช่องทำเครื่องหมาย <strong>คงเอาต์พุตที่มีอยู่</strong>
+เฉพาะชิ้นงานที่มีเอาต์พุตถูกลบไปก่อนหน้านี้จะถูกสร้างทูลลิงใหม่
+เอาต์พุตอื่นๆ ยังคงไม่ถูกแตะต้อง หากไม่เลือก ไฟล์เอาต์พุตทั้งหมดสำหรับเครื่องจักรที่เลือก
+จะถูกลบและสร้างขึ้นใหม่ระหว่างการสร้างทูลลิงใหม่</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>หากการตั้งค่า CAM เปลี่ยนแปลงสำหรับเครื่องจักรใดก็ตาม ให้เลือกเครื่องจักรนั้นและสร้างทูลลิงใหม่สำหรับ
+ชิ้นงาน</p>
+</li>
+<li>
+<p>หากเครื่องมือ (LTT, punch หรือ bend) ถูกเปลี่ยนหรือขาดหายไป ให้อัปเดตเครื่องจักรและ
+สร้างทูลลิงใหม่เฉพาะชิ้นงานที่ได้รับผลกระทบ</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_เปลี่ยนชื่อ">เปลี่ยนชื่อ&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ส่วนนี้อธิบายวิธีการเปลี่ยนชื่อชิ้นงานหนึ่งชิ้นหรือหลายชิ้นใน TruSmartCAM</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>คลิกขวาที่ชิ้นงานและคลิก <strong>เปลี่ยนชื่อ&#8230;&#8203;</strong></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/rename1.png" alt="Rename1" width="503">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>กล่องโต้ตอบยืนยันการเปลี่ยนชื่อจะปรากฏขึ้นแสดงชื่อชิ้นงานปัจจุบัน</p>
+</li>
+<li>
+<p>ป้อนชื่อใหม่และคลิกไอคอนเครื่องหมายถูก <strong>✓</strong> เพื่อยืนยัน หรือคลิก
+ไอคอนกากบาท <strong>✗</strong> เพื่อยกเลิกการดำเนินการเปลี่ยนชื่อ</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/rename2.png" alt="Rename2" width="451">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>เพื่อเปลี่ยนชื่อหลายชิ้นงาน ให้เลือกชิ้นงานที่ต้องการทั้งหมด จากนั้นคลิกขวา
+ที่ชิ้นงานใดชิ้นหนึ่งและคลิก <strong>เปลี่ยนชื่อ&#8230;&#8203;</strong></p>
+</li>
+<li>
+<p>กล่องโต้ตอบยืนยันจะปรากฏขึ้นพร้อมจำนวนชิ้นงานที่เลือกทั้งหมด</p>
+</li>
+<li>
+<p>สำหรับแต่ละชิ้นงาน ให้ป้อนชื่อใหม่และคลิกไอคอนเครื่องหมายถูก <strong>✓</strong> เพื่อ
+ยืนยันทีละชิ้น</p>
+</li>
+<li>
+<p>หากมีชิ้นงานใดถูกเลือกโดยไม่ตั้งใจ ให้คลิกไอคอนกากบาท <strong>✗</strong> เพื่อยกเลิก
+หรือคุณสามารถคลิกขวาที่ชิ้นงานและคลิก
+<strong>ยกเลิกการเปลี่ยนชื่อ</strong> เพื่อข้ามการเปลี่ยนชื่อ</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ส่งออกเอาต์พุต">ส่งออกเอาต์พุต</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ตัวเลือกนี้จะส่งออกเอาต์พุตชิ้นงานไปยังปลายทางที่กำหนดค่าใน
+<strong>การตั้งค่าโรงงาน</strong> (ดูที่
+<a href="../../factory/settings/bend.html">Bend Settings</a> และ
+<a href="../../factory/settings/cut.html">Cut Settings</a>)</p>
+</div>
+<div class="paragraph">
+<p>ตำแหน่งเอาต์พุตถูกกำหนดแยกสำหรับ Bend, Fold และ Cut ใน
+การตั้งค่าเอาต์พุตที่เกี่ยวข้อง ทูลลิงทั้งหมดที่เชื่อมโยงกับการดัด
+การพับ และการตัดจะถูกส่งออกสำหรับชิ้นงานทั้งหมด</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput.png" alt="Export Output" width="451">
+</div>
+</div>
+<div class="paragraph">
+<p>ตามที่แสดงด้านล่าง ไฟล์ที่ส่งออกจะถูกบันทึกในโฟลเดอร์ที่ระบุ
+(ตัวอย่างเช่น <code>C:\PraxData\Out\Reports</code>)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportout.png" alt="Export Output Location" width="451">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+ไฟล์ที่ส่งออกขึ้นอยู่กับประเภทของการดำเนินการ สำหรับการดำเนินการ Bend และ
+Fold จะสร้างไฟล์ NC และรายงาน สำหรับการดำเนินการ Cut และ Punch
+จะส่งออกเฉพาะไฟล์ชิ้นงานเท่านั้น
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_กำหนดวัสดุของชิ้นงาน">กำหนดวัสดุของชิ้นงาน</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ชิ้นงานที่มีสถานะ <strong>ยังไม่ได้กำหนดวัสดุ</strong> จำเป็นต้อง
+ได้รับการอัปเดตก่อนการประมวลผลต่อไป ขั้นตอนด้านล่างอธิบายวิธีการกำหนด
+วัสดุ</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>คลิกขวาที่ชิ้นงานที่แสดงสถานะ
+<strong>ยังไม่ได้กำหนดวัสดุ</strong> และเลือก
+<strong>กำหนดวัสดุ</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/asignmaterial.png" alt="Assign Material" width="442">
+</div>
+</div>
+</li>
+<li>
+<p>หน้าต่าง <strong>กำหนดวัสดุ</strong> จะเปิดขึ้น</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/dialogue.png" alt="Dialogue" width="600">
+</div>
+</div>
+</li>
+<li>
+<p>กล่องโต้ตอบมีสี่ส่วน:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>คำแนะนำ</strong> - แนะนำวัตถุดิบโดยอัตโนมัติ
+ตามความหนาของชิ้นงานที่นำเข้า</p>
+</li>
+<li>
+<p><strong>วัสดุทั้งหมด</strong> - แสดงรายการประเภทวัสดุทั้งหมดที่กำหนดใน
+TruSmartCAM</p>
+</li>
+<li>
+<p><strong>วัตถุดิบทั้งหมด</strong> - แสดงวัตถุดิบทั้งหมดที่
+มีอยู่ในระบบ</p>
+</li>
+<li>
+<p><strong>วัตถุดิบที่ใช้</strong> - แสดง
+วัตถุดิบที่ใช้ล่าสุดเพื่อการเข้าถึงอย่างรวดเร็ว</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>คุณสามารถใช้ฟิลด์ <strong>ค้นหา&#8230;&#8203; (Ctrl+F)</strong> ที่ด้านบนเพื่อค้นหาอย่างรวดเร็ว
+วัสดุ ตัวอย่างเช่น พิมพ์ "steel" เพื่อแสดงวัสดุที่ตรงกันทั้งหมดใน
+สามส่วน</p>
+</li>
+<li>
+<p>จากรายการที่กรองแล้ว ให้เลือกวัสดุที่ต้องการ (เช่น Steel-25) จาก
+รายการ Raw-Material</p>
+</li>
+<li>
+<p>วัสดุที่เลือกจะถูกกำหนดให้กับชิ้นงาน</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ทิศทางการรีด">ทิศทางการรีด</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>ทิศทางการรีด</strong> หมายถึงทิศทางของ
+เส้นใยในชิ้นงาน ซึ่งอาจส่งผลต่อวิธีที่ชิ้นงานถูกตัดและประมวลผล
+ตัวเลือกนี้ช่วยให้คุณสามารถระบุ
+<strong>ทิศทางการรีด</strong> สำหรับชิ้นงานใน Part Library
+ตามทิศทางที่
+เลือก ชิ้นงานจะถูกวางในการวางแนวที่ถูกต้องสำหรับการตัดบน
+เครื่องจักรที่มีอยู่</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>คลิกขวาที่ไทล์ชิ้นงานใดๆ ใน Part Library หรือหน้าต่าง Job</p>
+</li>
+<li>
+<p>เลือกทิศทางการรีดที่ต้องการ:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>ไม่มี</strong></p>
+</li>
+<li>
+<p><strong>แนวนอน</strong></p>
+</li>
+<li>
+<p><strong>แนวตั้ง</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/rollingdirection1.png" alt="Rolling direction" width="514">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ชิ้นงานจะได้รับการสร้างทูลลิงใหม่โดยอัตโนมัติสำหรับเครื่องจักรตัดที่มีอยู่ทั้งหมดตาม
+ทิศทางการรีดที่เลือก</p>
+</li>
+<li>
+<p>ไทล์ชิ้นงานจะแสดงทิศทางการรีดที่เลือกตามที่แสดงด้านล่าง:</p>
+<div class="paragraph">
+<p><span class="image"><img src="img/none.png" alt="None" width="270"></span> <span class="image"><img src="img/horizontal.png" alt="Horizontal" width="270"></span>
+<span class="image"><img src="img/vertical.png" alt="Vertical" width="270"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_นำเข้าอีกครั้ง">นำเข้าอีกครั้ง&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_กำหนดเครื่องมือใหม่">กำหนดเครื่องมือใหม่&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_เปลี่ยนชื่อ">เปลี่ยนชื่อ&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_ส่งออกเอาต์พุต">ส่งออกเอาต์พุต</a>
+  </li>
+  <li level="1">
+   <a href="#_กำหนดวัสดุของชิ้นงาน">กำหนดวัสดุของชิ้นงาน</a>
+  </li>
+  <li level="1">
+   <a href="#_ทิศทางการรีด">ทิศทางการรีด</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partvalidation.html">Part validation</a></span>
+ <span class="next"><a href="partfilters.html">Part filters</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

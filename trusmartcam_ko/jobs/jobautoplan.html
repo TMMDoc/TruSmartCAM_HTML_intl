@@ -1,0 +1,411 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>자동 계획</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">TruSmartCAM에 오신 것을 환영합니다</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../installation/index.html">설치</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../installation/hardwarerequirement.html">하드웨어 요구 사항</a></li>
+    <li><button class="tree blank"></button><a href="../installation/importformats.html">지원되는 파일 형식</a></li>
+    <li><button class="tree blank"></button><a href="../installation/prerequisites.html">사전 요구 사항</a></li>
+    <li><button class="tree blank"></button><a href="../installation/serverinstallation.html">서버 설치</a></li>
+    <li><button class="tree blank"></button><a href="../installation/clientinstallation.html">클라이언트 설치</a></li>
+    <li><button class="tree blank"></button><a href="../installation/changelic.html">라이선스 변경</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">구성</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">기계 추가/제거</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">툴링 설정</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">사용자 구성</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">언어</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">재료</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">새 재료 및 시트 추가</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">재료 내보내기/가져오기</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">재료 교체</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">재료 매핑</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">CAM 페이지 매핑</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">CAD에서 필드 매핑 (조회 키)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">사용자 인터페이스</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">워크플로우</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Library</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">Part panel</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">Tooling panel</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">주문</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">주문 보기</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Jobs</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="jobcreation.html">작업 생성</a></li>
+    <li><button class="tree blank"></button><a href="jobview.html">작업 보기</a></li>
+    <li><button class="tree blank"></button><a href="jobpanel.html">작업 패널</a></li>
+    <li><button class="tree blank"></button><a class="active" href="jobautoplan.html">자동 계획</a></li>
+    <li><button class="tree blank"></button><a href="jobinteractplan.html">대화형 네스팅</a></li>
+    <li><button class="tree blank"></button><a href="repacking.html">재포장</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="layoutcommands/index.html">네스트 관리</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="layoutcommands/nestview.html">레이아웃 보기</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/layoutpanel.html">레이아웃 패널</a></li>
+      <li><button class="tree blank"></button><a href="layoutcommands/reportsender.html">보고서 발신자</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="remnantmanagement/index.html">잔재 관리</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="remnantmanagement/autoremnant.html">자동 잔재 관리</a></li>
+      <li><button class="tree blank"></button><a href="remnantmanagement/manualremnant.html">수동 잔재 관리</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="twinlinenesting.html">트윈라인 네스팅</a></li>
+    <li><button class="tree blank"></button><a href="outdate.html">구식</a></li>
+    <li><button class="tree blank"></button><a href="jobfilters.html">작업 필터</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD 확장 기능</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks 추가 기능</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">설치</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">부품 저장</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">어셈블리 저장</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">실행 가능성 확인</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">공장 설정</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">기타 개선 사항</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">법적 고지</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Jobs</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="jobautoplan.html">자동 계획</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>자동 계획</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>자동 계획은 벤딩 및 절단 작업의 계획 프로세스를 자동화합니다.
+기계 사용을 최적화하고 재료 낭비를 줄이며 작업 우선 순위를 효율적으로 관리하는 데 도움이 됩니다.</p>
+</div>
+<div class="paragraph">
+<p>일반적인 워크플로우는 먼저 벤딩 기계용 부품을 계획한 다음 절단 기계용 부품을 계획하는 것입니다.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_벤딩_계획">벤딩 계획</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>벤딩 계획은 사용 가능한 벤딩 기계에 부품을 분배하는 방법을 정의합니다.</p>
+</div>
+<div class="paragraph">
+<p>예시: 5개 부품(각 10개 단위)에 대한 벤딩 계획.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>통합 작업 계획&#8230;&#8203;</strong> 옵션을 클릭합니다.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>5개 부품(50개 단위)이 TBC-5030 B27에 할당됩니다</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>계획 후 작업 상태는 총 50개 단위에 대해 Bend Planned로 업데이트됩니다. 작업 단계는 할당된 벤딩 기계 및 부품 수량으로 업데이트됩니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autoplan1.png" alt="Plan job for bending" width="1469">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autoplan2.png" alt="Plan job for bending" width="1483">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_절단_계획_네스팅">절단 계획 - 네스팅</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>벤딩 계획 후 적절한 절단 기계에 부품을 네스팅하여 절단 계획이 생성됩니다. 네스팅하는 방법에는 두 가지가 있습니다:</p>
+</div>
+<div class="sect2">
+<h3 id="_네스트를_위한_작업_계획_작업">네스트를 위한 작업 계획 - 작업</h3>
+<div class="paragraph">
+<p>*통합 작업 계획&#8230;&#8203;*을 사용하여 작업의 모든 부품을 함께 네스팅합니다. 네스팅 엔진은 작업 우선 순위, 납기 및 재료를 기반으로 모든 부품을 자동으로 처리합니다. 이것은 전체 작업을 한 번에 네스팅하고 절단 대기열로 보내려는 경우에 이상적입니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>*통합 작업 계획&#8230;&#8203;*을 클릭하고 기계를 선택합니다.</p>
+</li>
+<li>
+<p>Pmonitor 엔진이 네스팅 작업을 시작합니다.</p>
+</li>
+<li>
+<p>엔진은 시트 사용을 최대화하기 위해 필요에 따라 작업을 분할합니다.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+특정 재료를 특정 기계에 할당하여 네스팅할 수 없습니다. 예를 들어, 동일한 작업에서 _Material1_을 _Machine1_에, _Material2_를 _Machine2_에 네스팅할 수 없습니다.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autoplan3.png" alt="Plan job for cutting" width="1404">
+</div>
+</div>
+<div class="paragraph">
+<p>여기서 전체 작업은 L49-3kw의 5개 네스트로 네스팅됩니다. 작업 상태는 50 : Cutting Queue로 업데이트됩니다.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_네스트를_위한_부품_계획_주문">네스트를 위한 부품 계획 - 주문</h3>
+<div class="paragraph">
+<p>주문 수준 네스팅, 즉 작업에서 선택한 부품만 네스팅하려면 Plan Part를 사용합니다. 일반적으로 부품을 마우스 오른쪽 버튼으로 클릭하고 *Same Material*을 선택하므로 동일한 재료의 부품만 함께 그룹화되고 네스팅됩니다.</p>
+</div>
+<div class="paragraph">
+<p>이것은 네스팅할 부품을 제어하려는 경우에 유용합니다. 예를 들어 동일한 재료의 부품 또는 특정 배치입니다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autoplan4.png" alt="Plan job for cutting" width="831">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autoplan5.png" alt="Plan job for cutting" width="885">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Job Detail 페이지에서 부품을 마우스 오른쪽 버튼으로 클릭하고 Same Material을 선택합니다. 동일한 재료의 모든 부품이 선택됩니다.</p>
+</li>
+<li>
+<p>*Plan Part&#8230;&#8203;*를 클릭하고 네스팅할 기계를 선택합니다.</p>
+</li>
+<li>
+<p>엔진은 선택한 부품만 처리하고 네스트를 생성합니다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/autoplan6.png" alt="Plan job for cutting" width="1418">
+</div>
+</div>
+<div class="paragraph">
+<p>여기서 steel-25는 Mits ML3015에 네스팅됩니다.</p>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_벤딩_계획">벤딩 계획</a>
+  </li>
+  <li level="1">
+   <a href="#_절단_계획_네스팅">절단 계획 - 네스팅</a>
+  </li>
+  <li level="2">
+   <a href="#_네스트를_위한_작업_계획_작업">네스트를 위한 작업 계획 - 작업</a>
+  </li>
+  <li level="2">
+   <a href="#_네스트를_위한_부품_계획_주문">네스트를 위한 부품 계획 - 주문</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="jobpanel.html">작업 패널</a></span>
+ <span class="next"><a href="jobinteractplan.html">대화형 네스팅</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

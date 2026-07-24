@@ -1,0 +1,847 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../img/praxis-icon.png">
+  <title>サーバーインストール</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">TruSmartCAMへようこそ</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">インストール</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="hardwarerequirement.html">ハードウェア要件</a></li>
+    <li><button class="tree blank"></button><a href="importformats.html">サポートされているファイル形式</a></li>
+    <li><button class="tree blank"></button><a href="prerequisites.html">前提条件</a></li>
+    <li><button class="tree blank"></button><a class="active" href="serverinstallation.html">サーバーインストール</a></li>
+    <li><button class="tree blank"></button><a href="clientinstallation.html">クライアントインストール</a></li>
+    <li><button class="tree blank"></button><a href="changelic.html">ライセンスの変更</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../configuration/index.html">設定</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../configuration/setupmachine.html">機械の追加/削除</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/setuptooling.html">工具設定</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/configureusers.html">ユーザー設定</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/language.html">言語</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../configuration/addmaterial/index.html">材料</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/addnew.html">新しい材料とシートの追加</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/exportimport.html">材料のエクスポート/インポート</a></li>
+      <li><button class="tree blank"></button><a href="../configuration/addmaterial/replacematerial.html">材料の置換</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../configuration/mapbendpages.html">材料のマッピング</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/mapcampages.html">CAMページのマッピング</a></li>
+    <li><button class="tree blank"></button><a href="../configuration/cadmapfields.html">CADからのフィールドマッピング（検索キー）</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../userinterface.html">ユーザーインターフェース</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">ワークフロー</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../library/index.html">Library</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/open/partimport.html">Import parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/orderimport.html">Import orders</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/jobimport.html">Import jobs</a></li>
+      <li><button class="tree blank"></button><a href="../library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/libraryview/index.html">Library view</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/partstate/index.html">Part status</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../library/partstate/partvalidation.html">Part validation</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partpanel.html">パートパネル</a></li>
+      <li><button class="tree blank"></button><a href="../library/partstate/partfilters.html">Part filters</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../library/toolingstatus/index.html">Tooling status</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../library/toolingstatus/toolingvalidation/index.html">Tooling validation</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/bendtooling.html">Bend tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/cuttooling.html">Cut tooling validation</a></li>
+        <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingvalidation/foldtooling.html">Fold tooling validation</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../library/toolingstatus/toolingpanel.html">ツーリングパネル</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../library/savingfilters.html">Saving filters</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../orders/index.html">注文</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../orders/ordersview.html">注文ビュー</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../jobs/index.html">ジョブ</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../jobs/jobcreation.html">ジョブの作成</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobview.html">ジョブビュー</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobpanel.html">ジョブパネル</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobautoplan.html">自動計画</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobinteractplan.html">インタラクティブネスティング</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/repacking.html">リパッキング</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/layoutcommands/index.html">ネスト管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/nestview.html">レイアウトビュー</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/layoutpanel.html">レイアウトパネル</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/layoutcommands/reportsender.html">レポート送信者</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../jobs/remnantmanagement/index.html">端材管理</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/autoremnant.html">自動端材管理</a></li>
+      <li><button class="tree blank"></button><a href="../jobs/remnantmanagement/manualremnant.html">手動端材管理</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../jobs/twinlinenesting.html">ツインラインネスティング</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/outdate.html">期限切れ</a></li>
+    <li><button class="tree blank"></button><a href="../jobs/jobfilters.html">ジョブフィルター</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../cadextensions/index.html">CAD拡張機能</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/installationsteps.html">インストール</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/savetopraxis.html">パーツの保存</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/saveassembly.html">アセンブリの保存</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/partfeasibility.html">実行可能性の確認</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/factorysettings.html">工場設定</a></li>
+      <li><button class="tree blank"></button><a href="../cadextensions/solidworksaddin/miscenhancements.html">その他の機能強化</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../impressum.html">奥付</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">インストール</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="serverinstallation.html">サーバーインストール</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>サーバーインストール</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>SQLとともにTruSmartCAMサーバーインストールを行うには、以下の手順に従ってください。</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">管理者権限</div>
+<div class="paragraph">
+<p><strong>このインストールを実行するには、ユーザーは管理者権限を持っている必要があります。</strong></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>*Setup.TruSmartCAM.&lt;version&gt;.exe*を実行してインストールを開始します。</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Versionは数字です。
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ライセンス契約を読み、*I accept the agreement*を選択してから、次へをクリックします。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s02praxislicenseagreement.png" alt="Praxis License Agreement">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ステップ1インストール場所">ステップ1：インストール場所</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>インストールディレクトリを指定するか、デフォルトの`C:\Program Files\Metamation\Praxis`を受け入れて、次へをクリックします。</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>C:\Program Files\Metamation\Praxis</code> - インストールフォルダーには、Bin、MetaCAM、Samples、Trackerのフォルダーが含まれます。</p>
+</li>
+<li>
+<p><code>C:\Program Data\Metamation</code> - データフォルダーには、TruSmartCAM、TecZone、MetaCAMのフォルダーが含まれます。</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s03installationpath.png" alt="Installation Path">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ステップ2コンポーネントの選択">ステップ2：コンポーネントの選択</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">インストールタイプ</th>
+<th class="tableblock halign-left valign-top">コンポーネント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Full</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Desktop client + Engine</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Client</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Desktop Client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server + Desktop client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Station</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TecZone、MetaCAM、RightAngle（曲げコントローラー）、Vulcan（レーザー機械コントローラー）などのすべてのステーション端末を選択</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ユーザーの選択により選択</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Fullインストールを選択します。TruSmartCAMツールから*Code Senders*と*Bend Code Senders*を選択します。これで、インストールタイプが*カスタム*に変わります。次へをクリックします。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s04serverinstallation.png" alt="Server Installation">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ステップ3sql_serverのインストールを選択">ステップ3：SQL Serverのインストールを選択</h2>
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>SQL Express 2022のインストールは、TruSmartCAMサーバーにのみ必要です。このオプションは、ClientおよびSyncインストールでは使用できません。また、これは初回時にチェックONでインストールされ、それ以降は無視できます。TruSmartCAMサーバーにすでにSQLがインストールされている場合、ユーザーはステップ3を無視できます。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select Additional Tasksで：*Install SQL Express*をクリックし、次へをクリックします。</p>
+</li>
+<li>
+<p>Ready to Installで：すべてのインストール機能の概要を確認し、Installをクリックします。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s05sqlinstall.png" alt="Install SQL">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ステップ4sql_serverのインストール">ステップ4：SQL Serverのインストール</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TruSmartCAMコンポーネントがインストールされると、インストーラーはSQLサーバーのインストールに進みます。ライセンス契約を受け入れて続行し、デフォルトのオプションでSQL expressをインストールします。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s06sqlserver.png" alt="SQLServer Install">
+</div>
+</div>
+<div class="paragraph">
+<p>インストールが完了したら、Closeをクリックしてインストールを完了します。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s07sqlservercomplete.png" alt="SQL Server Complete">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Windowsのバージョンによっては、SQLインストールを閉じると再起動を促す場合があります。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ステップ5windowsデスクトップショートカット">ステップ5：Windowsデスクトップショートカット</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>SQLインストール後、システムが再起動しない場合は、*Launch TruSmartCAM*チェックボックスを選択し、*Finish*をクリックします。</p>
+</li>
+<li>
+<p>システムが再起動した場合は、デスクトップのTruSmartCAMショートカットアイコンを起動するか、WindowsスタートプログラムでPraxisと入力し、*管理者として実行*します。</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<em>サーバーインストール</em>：TruSmartCAMとTruSmartCAM Licenseのショートカットアイコンがデスクトップに表示されます。+ <em>Client/SYNCインストール</em>：TruSmartCAMショートカットアイコンのみがデスクトップに表示されます。
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s08launchpraxis.png" alt="Launch TruSmartCAM">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ステップ6ライセンス登録">ステップ6：ライセンス登録</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><em>Serial Number_フィールドに、Trumpf Metamation Serviceチームから提供された</em>TruSmartCAM Serial key_を入力します。"Registered to"フィールドに*&lt;Company Name&gt;*とE-Mailを入力します。*OK*をクリックします。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s09praxisregister.png" alt="TruSmartCAM Register">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>ネットワークファイアウォールがライセンス登録をブロックする場合、またはTruSmartCAMサーバーPCにインターネットがない場合、TruSmartCAMライセンスはオフラインアクティベーションで行われます。<em>C:\ProgramData\Metamation\Praxis_フォルダーから*_Prax.request</em>*をTrumpf Metamation Serviceチームにメールで送信します。Trumpf Metamationチームが*<em>Prax.lock</em>*を提供しますので、このフォルダーにドロップする必要があります。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ステップ7初回の1回限りの構成">ステップ7：初回の1回限りの構成</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>データベース名を入力し、データストレージの場所を設定します。SQL Serverを使用するチェックボックスを選択し、データベースに接続するSQLサーバー名を選択します。*OK*をクリックします。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s10usedatabase.png" alt="Use Database">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAMデスクトップクライアントが開き、下部に*Database Connection Succeeded*が表示されます。</p>
+</li>
+<li>
+<p>TruSmartCAM、TecZone、MetaCAMの構成ファイルが、デフォルトの構成マシンまたはTruSmartCAMライセンスマシンに対して作成されました。同じ構成がすべてのTruSmartCAMクライアント間で共有されます。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s11databaseconnectionsuccess.png" alt="Database Connection Success">
+</div>
+</div>
+<div class="paragraph">
+<p>Windowsユーザーログイン名がTruSmartCAMログインおよび名前として表示されるウェルカム画面が表示されます。最初のTruSmartCAMユーザーは*サイト管理者*と見なされます。メールとパスワードを入力します。*OK*をクリックします。</p>
+</div>
+<div class="paragraph">
+<p>*記憶する*チェックボックスを選択して、次回のためにログイン資格情報を保存します。
+*記憶する*チェックボックスをクリアすると、TruSmartCAMアプリケーションが起動されるたびにログインとパスワードのダイアログが表示されます。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s12welcomepraxis.png" alt="Welcome TruSmartCAM">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ステップ8trusmartcamサインイン">ステップ8：TruSmartCAMサインイン</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAMを閉じて再度開きます。システムはTruSmartCAMログイン資格情報の入力を求めるプロンプトを表示します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/signprompt.png" alt="Sign Prompt" width="450">
+</div>
+</div>
+</li>
+<li>
+<p>ログインしたユーザー名は、TruSmartCAMアプリケーションヘッダーのユーザーアイコンの横に表示されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/userid.png" alt="User ID" width="228">
+</div>
+</div>
+</li>
+<li>
+<p>ユーザーアイコンにマウスを合わせると、システムは以下を表示します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/hover.png" alt="Hover" width="108">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ユーザーロール（例：Programmer、Admin）。</p>
+</li>
+<li>
+<p>ログアウトのショートカット：<span class="keyseq"><kbd>Ctrl</kbd>+<kbd>L</kbd></span>。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ユーザーアイコンをクリックすると、以下を実行できるメニューが開きます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/information.png" alt="Information" width="160">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>情報の編集…</strong> - プロフィールの詳細を更新します。</p>
+</li>
+<li>
+<p><strong>パスワードの変更…</strong> - アカウントのパスワードを変更します。</p>
+</li>
+<li>
+<p><strong>サインアウト</strong> - アプリケーションからサインアウトします。</p>
+</li>
+<li>
+<p><strong>キャンセル</strong> - 変更を加えずにメニューを閉じます。</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ステップ9ファクトリーマシン構成">ステップ9：ファクトリーマシン構成</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAMライセンス[すべてのマシンでライセンスビットが有効]：デフォルトのTruSmartCAMマシンとマテリアルがファクトリー構成と見なされます。</p>
+</li>
+<li>
+<p>TruSmartCAMライセンス[デモなしで、いくつかのマシンビットが有効]：それらのいくつかのマシンとデフォルトのマテリアルがファクトリー構成と見なされます。</p>
+</li>
+<li>
+<p>`C:\Program Files\Metamation\Praxis\Samples\Parts`から新しいパーツを（開く &#8594; インポート）し、パーツが正常にインポートされたことを確認します。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s14praxiswelcomescreen.png" alt="Praxis Welcome screen">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_注1trusmartcam_monitor">注1：TruSmartCAM Monitor</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>エンジンインストール付きTruSmartCAM Monitor（サイト管理者権限）：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>サイト管理者TruSmartCAM権限を持つエンジン付きTruSmartCAM Monitorには、以下のオプションがあります。</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>すべてのTruSmartCAMクライアントにTruSmartCAM構成、TecZone、MetaCAM構成をプッシュします。また、新しいTruSmartCAMユーザーログインを作成する権限があります。</p>
+</li>
+<li>
+<p>Show Agentsは、TruSmartCAMライセンスに対して自動化タスクを実行するために利用可能な合計エンジンを表示します。</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s15pmonitor.png" alt="Praxis Monitor Status">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>エンジンインストールなしTruSmartCAM Monitor（サイト管理者権限）：</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s16pmonitorwithoutengine.png" alt="Praxis Monitor without Engine">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>エンジンインストールなしTruSmartCAM Monitor（非サイト管理者権限）：</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s17pmonitorwithprogrammerlogin.png" alt="Praxis with Progrmmer login">
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>TruSmartCAMアプリケーションを実行するPCには、エンジンTruSmartCAMコンポーネントがインストールされている必要があります[サーバーPCまたは任意のクライアントインストール]。エンジンTruSmartCAMコンポーネントがインストールされているPCは、すべての自動化タスクを実行するために24時間365日稼働している必要があります。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_注2lock_tracker">注2：Lock Tracker</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAMサーバーデスクトップで利用可能な*TruSmartCAM License*ショートカットをクリックします。または、任意のWebブラウザーでhttp://localhost:7171/metamation/locktrack URLを開きます。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>これにより、ライセンス情報、TruSmartCAM現在のセッション情報、およびログを持つLock Trackerモジュールが開きます。</p>
+</div>
+<div class="paragraph">
+<p>LockTracker HOMEページ：TruSmartCAMシリアル番号、シリアル有効期限情報、およびシリアルビット利用可能情報が表示されます。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s18locktrack01.png" alt="Lock Track License Home page">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker SESSIONSページ：TruSmartCAMデスクトップクライアントPC、PMonitor、PEngineステータスなどの現在のTruSmartCAMサーバー接続情報。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s19locktrack02.png" alt="Lock Track Session information">
+</div>
+</div>
+<div class="paragraph">
+<p>LockTracker LOGsページ：TruSmartCAMクライアントの開始とログオフ | Pmonitorの開始およびPEngineの接続/切断ステータスなどは、このLogsページで確認できます。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s20locktrack03.png" alt="Praxis Monitor Status">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_注3opengl">注3：OpenGL</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>TruSmartCAMアプリケーションを開くとすぐに閉じられ、タスクバーにpmonitorも表示されません。</p>
+</li>
+<li>
+<p>これはOpenGLの問題を表しています。</p>
+</li>
+<li>
+<p>これを確認する別の方法：C:\Program Files\Metamation\Praxis\Bin\Flux.exeを開くと、OpenGLの問題に関するエラーダイアログが表示されます。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/s21opengl.png" alt="OpenGL Issue">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>_C:\ProgramData\Metamation\Praxis\Prax.ini_のoptionsセクションを*GLVersion=1*で更新すると、TruSmartCAMアプリケーションが正常に開きます。</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ini hljs" data-lang="ini">[Options]
+GLVersion=1.0</code></pre>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_ステップ1インストール場所">ステップ1：インストール場所</a>
+  </li>
+  <li level="1">
+   <a href="#_ステップ2コンポーネントの選択">ステップ2：コンポーネントの選択</a>
+  </li>
+  <li level="1">
+   <a href="#_ステップ3sql_serverのインストールを選択">ステップ3：SQL Serverのインストールを選択</a>
+  </li>
+  <li level="1">
+   <a href="#_ステップ4sql_serverのインストール">ステップ4：SQL Serverのインストール</a>
+  </li>
+  <li level="1">
+   <a href="#_ステップ5windowsデスクトップショートカット">ステップ5：Windowsデスクトップショートカット</a>
+  </li>
+  <li level="1">
+   <a href="#_ステップ6ライセンス登録">ステップ6：ライセンス登録</a>
+  </li>
+  <li level="1">
+   <a href="#_ステップ7初回の1回限りの構成">ステップ7：初回の1回限りの構成</a>
+  </li>
+  <li level="1">
+   <a href="#_ステップ8trusmartcamサインイン">ステップ8：TruSmartCAMサインイン</a>
+  </li>
+  <li level="1">
+   <a href="#_ステップ9ファクトリーマシン構成">ステップ9：ファクトリーマシン構成</a>
+  </li>
+  <li level="1">
+   <a href="#_注1trusmartcam_monitor">注1：TruSmartCAM Monitor</a>
+  </li>
+  <li level="1">
+   <a href="#_注2lock_tracker">注2：Lock Tracker</a>
+  </li>
+  <li level="1">
+   <a href="#_注3opengl">注3：OpenGL</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="prerequisites.html">前提条件</a></span>
+ <span class="next"><a href="clientinstallation.html">クライアントインストール</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>
+    if (!hljs.initHighlighting.called) {
+      hljs.initHighlighting.called = true
+      ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+    }
+  </script>
+</body>
+</html>

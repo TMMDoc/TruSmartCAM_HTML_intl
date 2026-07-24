@@ -1,0 +1,753 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Panel tata letak</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Selamat Datang di TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Hardware requirement</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Supported file formats</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Server installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Client installation</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Change license</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Konfigurasi</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Tambah/Hapus mesin</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Setup tooling</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Konfigurasi pengguna</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Bahasa</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Material</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Tambah material dan sheet baru</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Export/Import material</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Ganti material</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Petakan material</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Petakan halaman CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Petakan field dari CAD (lookup keys)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Antarmuka pengguna</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Workflow</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Perpustakaan</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Impor part</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Impor order</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Impor job</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Impor assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Tampilan perpustakaan</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Bagian</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Rakitan</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Status part</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Validasi part</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Panel part</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Filter part</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Status tooling</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Validasi tooling</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Validasi tooling bend</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Validasi tooling cut</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Validasi tooling fold</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Panel tooling</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Menyimpan filter</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Pesanan</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Tampilan pesanan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Pekerjaan</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../jobcreation.html">Buat pekerjaan</a></li>
+    <li><button class="tree blank"></button><a href="../jobview.html">Tampilan pekerjaan</a></li>
+    <li><button class="tree blank"></button><a href="../jobpanel.html">Panel pekerjaan</a></li>
+    <li><button class="tree blank"></button><a href="../jobautoplan.html">Rencana otomatis</a></li>
+    <li><button class="tree blank"></button><a href="../jobinteractplan.html">Nesting interaktif</a></li>
+    <li><button class="tree blank"></button><a href="../repacking.html">Pengepakan ulang</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Manajemen nest</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="nestview.html">Tampilan tata letak</a></li>
+      <li><button class="tree blank"></button><a class="active" href="layoutpanel.html">Panel tata letak</a></li>
+      <li><button class="tree blank"></button><a href="reportsender.html">Pengirim laporan</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../remnantmanagement/index.html">Manajemen sisa</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../remnantmanagement/autoremnant.html">Manajemen sisa otomatis</a></li>
+      <li><button class="tree blank"></button><a href="../remnantmanagement/manualremnant.html">Manajemen sisa manual</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../twinlinenesting.html">Nesting twinline</a></li>
+    <li><button class="tree blank"></button><a href="../outdate.html">Kedaluwarsa</a></li>
+    <li><button class="tree blank"></button><a href="../jobfilters.html">Filter pekerjaan</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../factory/index.html">Factory</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../factory/routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../../factory/customers.html">Customers</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../factory/settings/index.html">Settings</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../factory/settings/environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="../../factory/settings/reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Ekstensi CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Instalasi</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Simpan part</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Simpan assembly</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Periksa kelayakan</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Pengaturan factory</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Peningkatan lain-lain</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Pekerjaan</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Manajemen nest</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="layoutpanel.html">Panel tata letak</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Panel tata letak</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bagian ini menjelaskan tindakan terkait tata letak seperti
+<strong>Kirim ke Mesin&#8230;&#8203;</strong>,
+<strong>Tarik balik dari Mesin…</strong>,
+<strong>Ekspor Output</strong>,
+<strong>Tandai sebagai Selesai&#8230;&#8203;</strong>, <strong>Tambahkan Komponen&#8230;&#8203;</strong>,
+<strong>Adaptasi/Padatkan&#8230;&#8203;</strong>,
+<strong>Rancangan Terpisah&#8230;&#8203;</strong>, dan opsi lain yang digunakan untuk mengelola
+instans tata letak.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/layout.png" alt="Layout panel" width="181">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/document.png" alt="Read-only" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Buka dalam mode dilindungi dari penulisan untuk melihat</strong><br>
+Membuka tata letak yang dipilih dalam mode baca-saja.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/editicon.png" alt="Edit" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Check-out the document for editing</strong><br>
+Mengaktifkan pengeditan tata letak yang dipilih.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/trash.png" alt="Delete" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Hapus</strong><br>
+Menghapus tata letak yang dipilih.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/openreport.png" alt="Report" width="24"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Lihat Laporan</strong><br>
+Membuka laporan tata letak standar dan laporan khusus label untuk
+tata letak yang dipilih.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sendui.png" alt="Send" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kirim ke Mesin&#8230;&#8203;</strong><br>
+Mengirim tata letak yang dipilih ke mesin dan mengekspor file output
+(fxlyt, NC, report, csv) ke lokasi output pekerjaan.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/addui.png" alt="Add" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tambahkan Komponen&#8230;&#8203;</strong><br>
+Menambahkan lebih banyak bagian ke tata letak yang dikemas dengan buruk menggunakan wizard repack tata letak.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/adaptui.png" alt="Adapt" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Adaptasi/Padatkan&#8230;&#8203;</strong><br>
+Re-nest tata letak yang dipilih untuk memampatkan bagian dan membebaskan area yang dapat digunakan.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/changeui.png" alt="Change" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ganti LTT&#8230;&#8203;</strong><br>
+Mengubah lembaran yang ditetapkan ke tata letak yang dipilih.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/splitui.png" alt="Split"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rancangan Terpisah&#8230;&#8203;</strong><br>
+Membagi tata letak yang dipilih menjadi dua atau lebih tata letak terpisah.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/renameui.png" alt="RenameUi" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rename layout&#8230;&#8203;</strong><br>
+Mengubah nama tata letak yang dipilih.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/prev.png" alt="Prev Next" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Pekerjaan</strong> / <strong>Sebelumnya</strong> / <strong>Berikutnya</strong> / <strong>Komponen</strong><br>
+Menavigasi ke atas ke pekerjaan induk, ke tata letak sebelumnya atau berikutnya dalam
+pekerjaan yang dipilih, atau turun ke bagian yang terkandung dalam tata letak.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/sort.png" alt="Filters" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Urutkan dan filter</strong><br>
+Gunakan filter ini untuk melihat tata letak lain yang berbagi atribut yang sama dengan
+tata letak yang dipilih: Same Machine, Same Material, Same LTT, Same Priority,
+Same State, Same Sheet, Same Part, Same Remnant State, atau Same Rolling
+direction.</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="send-to-machine">Kirim ke Mesin&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Ketika nest siap (terisi atau sangat diperlukan), Anda dapat mengirimnya ke
+mesin.</p>
+</li>
+<li>
+<p>Klik kanan nest dan pilih <strong>Kirim ke Mesin&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Folder dibuat secara otomatis, dinamai sesuai nest.</p>
+</li>
+<li>
+<p>File output (fxlyt, NC, report, csv) diekspor ke lokasi
+output JOB.</p>
+</li>
+<li>
+<p>Nest yang dikirim ke mesin ditampilkan dengan tanda centang biru.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/sendtomachine.png" alt="Send to machines" width="1180">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Setelah dirilis, nest tersebut tidak lagi dicoba untuk pengepakan ulang.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tarik_balik_dari_mesin">Tarik balik dari Mesin…</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Jika output perlu validasi atau pembaruan (misalnya, menambahkan lebih banyak bagian):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Klik kanan tata letak yang diekspor.</p>
+</li>
+<li>
+<p>Pilih <strong>Tarik balik dari Mesin…</strong>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>File output dan folder (fxlyt, NC, report, csv) dihapus.</p>
+</li>
+<li>
+<p>Nest menjadi dapat diedit lagi.</p>
+</li>
+<li>
+<p>Anda dapat membuat perubahan dan mengirimnya ke mesin lagi.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/recallfrommachine.png" alt="Recall from machines" width="1153">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ekspor_output">Ekspor Output</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Klik kanan tata letak (nest) mana pun yang telah dikirim ke mesin dan klik
+<strong>Ekspor Output</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/exportoutput1.png" alt="Export outputs" width="447">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Opsi Export Outputs mengekspor file NC, Report, dan Layout ke
+folder output mesin yang bersangkutan.</p>
+</li>
+<li>
+<p>Opsi ini menghasilkan ulang file NC dengan pengaturan unit saat ini untuk
+tata letak.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Export Outputs tidak tersedia untuk Tata Letak yang Completed dan
+Tata Letak yang menunggu dalam antrian untuk pengepakan ulang.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mark-complete">Mark complete</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Setelah nest diproses pada mesin, klik kanan nest dan
+pilih <strong>Tandai sebagai Selesai&#8230;&#8203;</strong>.</p>
+</li>
+<li>
+<p>Anda dapat memilih beberapa nest dan menandainya sebagai selesai pada waktu yang sama.</p>
+</li>
+<li>
+<p>Ketika nest ditandai sebagai selesai:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Itu dibuat abu-abu, dipindahkan ke akhir daftar, dan ditampilkan dengan tanda centang
+hijau.</p>
+</li>
+<li>
+<p>Tata letak dihapus dari daftar tata letak aktif.</p>
+</li>
+<li>
+<p>Status bagian dan pekerjaan diperbarui, dan jumlah yang diproses berpindah ke
+status selesai.</p>
+</li>
+<li>
+<p>File output untuk tata letak tersebut dihapus dari lokasi output
+mesin untuk menghindari penggunaan duplikat.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/markcomplete1.png" alt="Mark complete" width="1101">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="add-parts">Tambahkan Komponen&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart1.png" alt="Add parts" width="997">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Gunakan opsi ini untuk menambahkan lebih banyak bagian ke tata letak yang relatif dikemas dengan buruk. Seperti
+Nesting Interaktif, ini adalah opsi berbasis wizard dan dapat digunakan
+pada satu atau beberapa tata letak pada waktu yang sama.</p>
+</li>
+<li>
+<p>TruSmartCAM memasang wizard repack Tata Letak di area kerja utama
+ketika opsi ini digunakan. Tahan tombol <kbd>Ctrl</kbd> dan pilih satu atau lebih
+bagian untuk dikemas pada tata letak dan tekan <strong>Berikutnya</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart2.png" alt="Part selection" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>Bagian yang dipilih ditampilkan di langkah berikutnya dengan kolom
+jumlah yang dapat diedit. Perbarui jumlah bagian jika diperlukan di
+field <strong>Update Qty</strong>. Klik <strong>Berikutnya</strong> untuk melanjutkan ke nesting. Perhatikan bahwa
+jumlah hanya dapat ditingkatkan, tidak dikurangi.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart3.png" alt="Update quantity" width="2200">
+</div>
+</div>
+</li>
+<li>
+<p>Semua tata letak dinesting secara terpisah, dan hasil nested ditampilkan
+dengan bagian yang baru dikemas ditempatkan di atasnya. Memilih tata letak menampilkan semua
+bagian tata letak yang ada. Hasil secara otomatis dibuang jika tidak ada bagian baru yang
+ditempatkan selama pengepakan ulang. Tata letak dengan beberapa salinan dapat menghasilkan
+pola yang berbeda setelah pengepakan ulang.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/addpart4.png" alt="Repack result" width="2200">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="adapt-compact">Adaptasi/Padatkan&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Perintah berbasis wizard ini dapat digunakan untuk mengadaptasi tata letak dari satu
+mesin ke mesin lain ketika mesin asli sedang down atau ketika beban kerja
+mesin perlu diseimbangkan.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt1.png" alt="Adapt compact" width="737">
+</div>
+</div>
+</li>
+<li>
+<p>Ini dapat digunakan ketika lembaran yang direncanakan habis stoknya dan tata letak
+perlu direncanakan ulang pada lembaran lain yang tersedia.</p>
+</li>
+<li>
+<p>Anda dapat menggabungkan tata letak yang dikemas pada lembaran yang lebih kecil ke lembaran yang lebih besar untuk menggunakan
+material lebih efisien.</p>
+</li>
+<li>
+<p>Anda dapat membagi tata letak yang dikemas pada lembaran yang lebih besar menjadi lembaran yang lebih kecil jika stok
+lembaran besar tidak tersedia.</p>
+</li>
+<li>
+<p>Anda dapat meningkatkan efisiensi pengepakan beberapa tata letak (bahkan dari
+mesin yang berbeda) dengan menggabungkannya bersama-sama.</p>
+</li>
+<li>
+<p>Untuk menggunakannya, pilih satu atau lebih tata letak dan klik
+<strong>Adaptasi/Padatkan&#8230;&#8203;</strong> untuk membuka wizard di area kerja.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt2.png" alt="Layouts window" width="1902">
+</div>
+</div>
+</li>
+<li>
+<p>Panel kiri menampilkan semua tata letak yang dipilih dan panel Parts menampilkan bagian
+tata letak.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt3.png" alt="Layouts window" width="1910">
+</div>
+</div>
+</li>
+<li>
+<p>Pilih mesin target dan material lembaran, lalu klik
+<strong>Berikutnya</strong> untuk melakukan renesting.</p>
+</li>
+<li>
+<p>Hasil nest baru ditampilkan di panel hasil.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt4.png" alt="Layouts window" width="1901">
+</div>
+</div>
+</li>
+<li>
+<p>Klik <strong>Berikutnya</strong> untuk menyimpan tata letak yang diadaptasi atau dipadatkan.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/adapt5.png" alt="Layouts window" width="1902">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_membagi_tata_letak">Membagi tata letak</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Opsi <strong>Rancangan Terpisah&#8230;&#8203;</strong> memungkinkan Anda membagi
+tata letak yang ada menjadi beberapa tata letak dengan memodifikasi jumlah,
+tanpa perlu mengulang tooling atau nesting.</p>
+</div>
+<div class="paragraph">
+<p>Fitur ini sangat berguna dalam
+skenario berikut:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ketika Anda perlu memproduksi sebagian dari jumlah total segera sambil
+menjadwalkan jumlah yang tersisa untuk produksi nanti.</p>
+</li>
+<li>
+<p>Ketika kebutuhan produksi perlu didistribusikan di beberapa shift atau
+hari untuk mengoptimalkan alur kerja dan pemanfaatan sumber daya.</p>
+</li>
+<li>
+<p>Ketika mesin tertentu sementara tidak tersedia atau sedang sibuk, dan Anda perlu
+menyesuaikan tata letak untuk mengakomodasi kendala produksi saat ini.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Untuk membagi tata letak, lakukan langkah-langkah berikut:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Dalam tampilan Layouts, pilih tata letak yang diperlukan.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/splitlayout.png" alt="Split layout" width="264">
+</div>
+</div>
+</li>
+<li>
+<p>Klik <strong>Rancangan Terpisah&#8230;&#8203;</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/layoutpanel.png" alt="Layout panel" width="155">
+</div>
+</div>
+</li>
+<li>
+<p>Masukkan nilai yang diperlukan di <strong>Salinan Baru</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/newcopies.png" alt="New copies" width="389">
+</div>
+</div>
+</li>
+<li>
+<p>Klik <strong>OK</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/twolayout.png" alt="Two layouts" width="547">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Tata letak yang dipilih sekarang dibagi menjadi dua tata letak dengan jumlah yang disesuaikan.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#send-to-machine">Kirim ke Mesin&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_tarik_balik_dari_mesin">Tarik balik dari Mesin…</a>
+  </li>
+  <li level="1">
+   <a href="#_ekspor_output">Ekspor Output</a>
+  </li>
+  <li level="1">
+   <a href="#mark-complete">Mark complete</a>
+  </li>
+  <li level="1">
+   <a href="#add-parts">Tambahkan Komponen&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#adapt-compact">Adaptasi/Padatkan&#8230;&#8203;</a>
+  </li>
+  <li level="1">
+   <a href="#_membagi_tata_letak">Membagi tata letak</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="nestview.html">Tampilan tata letak</a></span>
+ <span class="next"><a href="reportsender.html">Pengirim laporan</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../../img/praxis-icon.png">
+  <title>Import</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="120" height="34" /></div>
+        <div><p>TruSmartCAM Reference Manual</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Καλώς ήρθατε στο TruSmartCAM</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../installation/index.html">Εγκατάσταση</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../installation/hardwarerequirement.html">Απαιτήσεις υλικού</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/importformats.html">Υποστηριζόμενες μορφές αρχείων</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/prerequisites.html">Προαπαιτούμενα</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/serverinstallation.html">Εγκατάσταση Server</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/clientinstallation.html">Εγκατάσταση Client</a></li>
+    <li><button class="tree blank"></button><a href="../../installation/changelic.html">Αλλαγή άδειας χρήσης</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../configuration/index.html">Ρύθμιση Παραμέτρων</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../configuration/setupmachine.html">Προσθήκη/Αφαίρεση μηχανής</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/setuptooling.html">Ρύθμιση εργαλείων</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/configureusers.html">Διαμόρφωση χρηστών</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/language.html">Γλώσσα</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../configuration/addmaterial/index.html">Υλικό</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/addnew.html">Προσθήκη νέου υλικού και φύλλου</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/exportimport.html">Εξαγωγή/Εισαγωγή υλικού</a></li>
+      <li><button class="tree blank"></button><a href="../../configuration/addmaterial/replacematerial.html">Αντικατάσταση υλικού</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapbendpages.html">Αντιστοίχιση υλικού</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/mapcampages.html">Αντιστοίχιση σελίδων CAM</a></li>
+    <li><button class="tree blank"></button><a href="../../configuration/cadmapfields.html">Αντιστοίχιση πεδίων από CAD (κλειδιά αναζήτησης)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../userinterface.html">Η διεπαφή χρήστη</a></li>
+  <li><button class="tree blank"></button><a href="../../workflow.html">Ροή εργασίας</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../library/index.html">Βιβλιοθήκη</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/open/index.html">Open</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/open/partimport.html">Εισαγωγή parts</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/orderimport.html">Εισαγωγή παραγγελιών</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/jobimport.html">Εισαγωγή jobs</a></li>
+      <li><button class="tree blank"></button><a href="../../library/open/assembliesimport.html">Import assemblies</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/libraryview/index.html">Προβολή βιβλιοθήκης</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/libraryview/partview.html">Parts</a></li>
+      <li><button class="tree blank"></button><a href="../../library/libraryview/assemblyview.html">Assembly</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/partstate/index.html">Κατάσταση part</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../library/partstate/partvalidation.html">Επικύρωση part</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partpanel.html">Πίνακας part</a></li>
+      <li><button class="tree blank"></button><a href="../../library/partstate/partfilters.html">Φίλτρα part</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../library/toolingstatus/index.html">Κατάσταση tooling</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../library/toolingstatus/toolingvalidation/index.html">Επικύρωση tooling</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/bendtooling.html">Επικύρωση bend tooling</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/cuttooling.html">Επικύρωση cut tooling</a></li>
+        <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingvalidation/foldtooling.html">Επικύρωση fold tooling</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../../library/toolingstatus/toolingpanel.html">Πίνακας tooling</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../library/savingfilters.html">Αποθήκευση φίλτρων</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../orders/index.html">Παραγγελίες</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../orders/ordersview.html">Προβολή παραγγελιών</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../jobs/index.html">Εργασίες</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../jobs/jobcreation.html">Δημιουργία εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobview.html">Προβολή εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobpanel.html">Πίνακας εργασίας</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobautoplan.html">Αυτόματος σχεδιασμός</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobinteractplan.html">Διαδραστική τοποθέτηση</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/repacking.html">Επανασυσκευασία</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/layoutcommands/index.html">Διαχείριση τοποθέτησης</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/nestview.html">Προβολή διάταξης</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/layoutpanel.html">Πίνακας διάταξης</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/layoutcommands/reportsender.html">Αποστολέας αναφοράς</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../jobs/remnantmanagement/index.html">Διαχείριση υπολειμμάτων</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/autoremnant.html">Αυτόματη διαχείριση υπολειμμάτων</a></li>
+      <li><button class="tree blank"></button><a href="../../jobs/remnantmanagement/manualremnant.html">Χειροκίνητη διαχείριση υπολειμμάτων</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../jobs/twinlinenesting.html">Τοποθέτηση διπλής γραμμής</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/outdate.html">Μη ενημερωμένο</a></li>
+    <li><button class="tree blank"></button><a href="../../jobs/jobfilters.html">Φίλτρα εργασίας</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Factory</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../routes.html">Routes</a></li>
+    <li><button class="tree blank"></button><a href="../sheets.html">Sheets</a></li>
+    <li><button class="tree blank"></button><a href="../users.html">Users</a></li>
+    <li><button class="tree blank"></button><a href="../edit.html">Edit</a></li>
+    <li><button class="tree blank"></button><a href="../customers.html">Customers</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Settings</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="environment.html">Environment</a></li>
+      <li><button class="tree blank"></button><a class="active" href="import.html">Import</a></li>
+      <li><button class="tree blank"></button><a href="bend.html">Bend</a></li>
+      <li><button class="tree blank"></button><a href="cut.html">Cut</a></li>
+      <li><button class="tree blank"></button><a href="notification.html">Notifications</a></li>
+      <li><button class="tree blank"></button><a href="watch.html">Watch</a></li>
+      <li><button class="tree blank"></button><a href="job.html">Job</a></li>
+      <li><button class="tree blank"></button><a href="reports.html">Reports</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../cadextensions/index.html">Επεκτάσεις CAD</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../cadextensions/solidworksaddin/index.html">SolidWorks addin</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/installationsteps.html">Εγκατάσταση</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/savetopraxis.html">Αποθήκευση εξαρτημάτων</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/saveassembly.html">Αποθήκευση συναρμολόγησης</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/partfeasibility.html">Έλεγχος σκοπιμότητας</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/factorysettings.html">Ρυθμίσεις εργοστασίου</a></li>
+      <li><button class="tree blank"></button><a href="../../cadextensions/solidworksaddin/miscenhancements.html">Διάφορες βελτιώσεις</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../impressum.html">Impressum</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Factory</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Settings</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="import.html">Import</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Import</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/import.png" alt="Import settings" width="814">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ρυθμίσεις_εξόδου">Ρυθμίσεις εξόδου</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Αποθήκευση επίπεδου μοτίβου</strong> - Ενεργοποιήστε αυτήν την επιλογή για να αποθηκευτεί το επίπεδο μοτίβο
+ενός εισαγόμενου εξαρτήματος.</p>
+</div>
+<div class="paragraph">
+<p><strong>Μορφή για επίπεδο μοτίβο</strong> - Αυτή η επιλογή χρησιμοποιείται για να επιλέξετε
+είτε μορφές αρχείων DXF είτε GEO.</p>
+</div>
+<div class="paragraph">
+<p><strong>Προορισμός επίπεδου μοτίβου</strong> - Αυτή είναι η τοποθεσία όπου
+θα αποθηκευτεί το επίπεδο μοτίβο.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ρυθμίσεις_εισαγωγής">Ρυθμίσεις εισαγωγής</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Μονάδες για αρχεία DXF</strong> - Αυτή είναι η μονάδα μέτρησης με την οποία θα
+εισαχθεί ένα αρχείο DXF, ο χρήστης μπορεί να επιλέξει μεταξύ mm ή inch.</p>
+</div>
+<div class="paragraph">
+<p><strong>Πλήκτρα αναζήτησης υλικού</strong> - Πολλαπλές καταχωρίσεις αναζήτησης μπορούν να
+ανατεθούν χρησιμοποιώντας διαχωριστικό κόμμα μεταξύ τους. Όταν εισάγεται ένα εξάρτημα, το TruSmartCAM
+χρησιμοποιεί αυτά τα κλειδιά για να αναζητήσει τιμές υλικών. Οι τιμές που αναζητήθηκαν χρησιμοποιούνται στη συνέχεια
+για την επίλυση της πρώτης ύλης. Οι αρχικές τιμές αποθηκεύονται στις
+Διάφορες Ιδιότητες του εξαρτήματος.</p>
+</div>
+<div class="paragraph">
+<p><strong>Πλήκτρα αναζήτησης αναθεωρήσεων</strong> - Όταν εισάγεται ένα εξάρτημα, η
+τιμή αναθεώρησης από το πρωτότυπο αρχείο εξαρτήματος (το αρχείο εξαρτήματος που εισάγεται) συγκρίνεται
+με την υπάρχουσα τιμή αναθεώρησης στο αποθετήριο. Η εισαγωγή
+εγκαταλείπεται εάν η αναθεώρηση είναι η ίδια. Η αντιστοίχιση προσαρμοσμένων πεδίων υποστηρίζεται πλέον και για τα αρχεία DXF. Για τα αρχεία DXF, τα δεδομένα προσαρμοσμένων πεδίων εξάγονται
+από το επίπεδο κειμένου στο σχέδιο ή ένα συνημμένο PPI.</p>
+</div>
+<div class="paragraph">
+<p><strong>Χρήση σύγκρισης γεωμετρίας στην ίδια αναθεώρηση CAD</strong> -
+Συγκρίνει τη γεωμετρία κατά την εισαγωγή ενός εξαρτήματος με την ίδια αναθεώρηση CAD και ζητά
+από τον χρήστη να αντικαταστήσει ή να παραλείψει την εισαγωγή εάν εντοπιστούν διαφορές, Δείτε
+<a href="../../library/open/partimport.html#import-configuration">Import configuration</a>
+για περισσότερες λεπτομέρειες.</p>
+</div>
+<div class="paragraph">
+<p><strong>Πλήκτρα ονομασίας εξαρτημάτων</strong> - Αυτή η επιλογή λειτουργεί παρόμοια με το
+υλικό και τα Πλήκτρα αναζήτησης αναθεωρήσεων. Ορίστε ένα ή περισσότερα
+Πλήκτρα ονομασίας εξαρτημάτων για να χρησιμοποιήσετε το PPI Ονομασία εξαρτήματος
+αντί για το όνομα αρχείου ως όνομα εξαρτήματος.</p>
+</div>
+<div class="paragraph">
+<p><strong>Πλήκτρα αναζήτησης πάχους</strong> - Πολλαπλές καταχωρίσεις αναζήτησης μπορούν να
+ανατεθούν χρησιμοποιώντας διαχωριστικό κόμμα μεταξύ τους. Όταν εισάγεται ένα εξάρτημα, το TruSmartCAM
+χρησιμοποιεί αυτά τα κλειδιά για να αναζητήσει τιμές πάχους. Οι τιμές που αναζητήθηκαν χρησιμοποιούνται στη συνέχεια
+για την επίλυση του πάχους. Οι αρχικές τιμές αποθηκεύονται στις Διάφορες
+Ιδιότητες του εξαρτήματος.</p>
+</div>
+<div class="paragraph">
+<p><strong>Απόκλιση σύγκρισης πάχους</strong> - Χρησιμοποιείται για την αναζήτηση
+της πρώτης ύλης όταν εισάγεται ένα εξάρτημα. Το TruSmartCAM προσπαθεί να επιλύσει την πρώτη
+ύλη αφού αναλυθούν το όνομα υλικού και το πάχος. Για περισσότερες
+πληροφορίες, ανατρέξτε στο θέμα <a href="#_thickness_fudge">Thickness fudge</a> παρακάτω.</p>
+</div>
+<div class="paragraph">
+<p><strong>Προσδιορισμός σχημάτων μετά την εισαγωγή ενός επίπεδου στοιχείου</strong> - Όταν εισάγεται
+ένα εξάρτημα, τα εσωτερικά σχήματα μέσα στο εξάρτημα μπορούν να αναγνωριστούν αυτόματα
+και να ταυτοποιηθούν.</p>
+</div>
+<div class="paragraph">
+<p><strong>Απόκλιση προσδιορισμού σχήματος</strong> - Η τιμή fudge αναγνώρισης σχήματος μπορεί να οριστεί σε:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Καθολικό επίπεδο</strong> - Αυτή η τιμή χρησιμοποιείται ως προεπιλογή για όλα τα σχήματα.</p>
+</li>
+<li>
+<p><strong>Επίπεδο μεμονωμένου σχήματος</strong> - Η προεπιλεγμένη τιμή μπορεί να παρακαμφθεί ορίζοντας την
+τιμή fudge στο επίπεδο μεμονωμένου σχήματος. Η επιλογή του σχήματος στο διάλογο
+Βιβλιοθήκης Σχημάτων εμφανίζει την τιμή fudge. Από προεπιλογή, αυτή ορίζεται σε 0 και
+η προεπιλεγμένη καθολική τιμή χρησιμοποιείται για τέτοια σχήματα.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Περιστροφή επίπεδου στοιχείου οριζόντια</strong> - Γενικά οι τραπέζια μηχανών κοπής
+είναι ορθογώνια και πιο φαρδιά. Για να ενισχυθεί η εφικτότητα εργαλειοποίησης, περιστρέψτε
+το εξάρτημα κατά μήκος του πλάτους του εξαρτήματος αφού εισαχθεί το εξάρτημα.</p>
+</div>
+<div class="paragraph">
+<p><strong>Όριο περιστροφής εξαρτήματος</strong> - Ορίστε αυτό ως τον ελάχιστο αριθμό
+για να επιτραπεί η περιστροφή. Οποιοδήποτε εξάρτημα μικρότερο από την τιμή που ορίστηκε δεν θα
+περιστραφεί.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_διάφ_ρυθμίσεις">Διάφ. ρυθμίσεις</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Ενεργοποίηση εκ τω προτέρων εισαγωγής εξωτερικών εργαλείων</strong> - Ενεργοποιήστε την
+επιλογή εισαγωγής εξωτερικών εργαλείων προ-εισαγωγής για να ενεργοποιήσετε το Creo Reader. Το TruSmartCAM ανεβάζει
+τις προ-εξαχθείσες περιπτώσεις οικογένειας του εξαρτήματος που απορρίφθηκε. Σημειώστε ότι η
+εξαγωγή περιπτώσεων εκτελείται κατά τη μεταφόρτωση του εξαρτήματος (ως λειτουργία προ-εισαγωγής),
+επομένως το λογισμικό Creo πρέπει να είναι εγκατεστημένο στον υπολογιστή από όπου
+μεταφορτώνεται το εξάρτημα.</p>
+</div>
+<div class="paragraph">
+<p><strong>Αγνόηση χρωμάτων σχεδίων σε συντομεύσεις επίπεδων στοιχείων για σαφήνεια</strong> -
+Ενεργοποιήστε αυτήν την επιλογή για να δημιουργήσετε πιο ευκρινείς μικρογραφίες σε κλίμακα του γκρι.
+Τα χρώματα επιπέδων και οι οντότητες κειμένου αγνοούνται για χάρη της ευκρίνειας της εικόνας.</p>
+</div>
+<div class="paragraph">
+<p><strong>Χρήση μίας μόνο μηχανής για όλες τις εργασίες εισαγωγής</strong> -
+Όταν είναι ενεργοποιημένο, χρησιμοποιείται μόνο ένας πυρήνας engine για σημαντικές εργασίες.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_thickness_fudge">Thickness fudge</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Το <strong>Απόκλιση σύγκρισης πάχους</strong> επιλέγει την πλησιέστερη
+τιμή πάχους φύλλου όταν δεν είναι διαθέσιμη η επιθυμητή τιμή πάχους φύλλου στο
+απόθεμα συγκρίνοντας την τιμή πάχους των φύλλων στο απόθεμα.</p>
+</div>
+<div class="paragraph">
+<p>Για παράδειγμα, ας υποθέσουμε τα εξής:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Έχουμε ένα εξάρτημα με πάχος φύλλου 1,6 mm και υλικό χάλυβα.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/importsheet.png" alt="ImportSheet" width="310">
+</div>
+</div>
+</li>
+<li>
+<p>Η τιμή <strong>Απόκλιση σύγκρισης πάχους</strong> είναι 0,1 mm.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/thickcomfudge.png" alt="Thickness comparison fudge" width="821">
+</div>
+</div>
+</li>
+<li>
+<p>Το απόθεμα έχει φύλλα χάλυβα με πάχος 1,5 mm, 1,55 mm και 1,7 mm.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/sheetthickness.png" alt="Sheet inventory" width="621">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Το TruSmartCAM επιλέγει ένα φύλλο με την πλησιέστερη τιμή πάχους αφού συγκρίνει την
+τιμή <strong>Απόκλιση σύγκρισης πάχους</strong> (0,1 mm) με το
+εισαγόμενο στοιχείο (με μέτρηση 1,6 mm). Σε αυτή την περίπτωση, θα είναι επιλογή τα 1,55 mm.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/fudgeimport.png" alt="Import part" width="347">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_ρυθμίσεις_εξόδου">Ρυθμίσεις εξόδου</a>
+  </li>
+  <li level="1">
+   <a href="#_ρυθμίσεις_εισαγωγής">Ρυθμίσεις εισαγωγής</a>
+  </li>
+  <li level="1">
+   <a href="#_διάφ_ρυθμίσεις">Διάφ. ρυθμίσεις</a>
+  </li>
+  <li level="1">
+   <a href="#_thickness_fudge">Thickness fudge</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="environment.html">Environment</a></span>
+ <span class="next"><a href="bend.html">Bend</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF SE + Co.KG. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>
